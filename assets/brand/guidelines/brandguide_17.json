@@ -1,0 +1,253 @@
+{
+    "page": {
+      "number": 17,
+      "title": "Mobile Interaction Rules",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the mobile interaction behaviors, touch principles, gesture rules, responsive usability standards, and conversion-focused mobile UX patterns for SIPANEL interfaces.",
+    "mobile_philosophy": {
+      "statement": "Mobile interactions must feel fast, controlled, predictable, and engineered for real industrial users in active working environments.",
+      "core_principles": [
+        "Touch-first usability",
+        "Fast access to key actions",
+        "Minimal cognitive load",
+        "Engineering clarity",
+        "Predictable interaction behavior",
+        "Performance-first interaction design"
+      ]
+    },
+    "mobile_environment_assumptions": {
+      "user_contexts": [
+        "Construction sites",
+        "Industrial environments",
+        "Outdoor conditions",
+        "Field engineering review",
+        "Procurement communication",
+        "On-site technical verification"
+      ],
+      "design_implications": [
+        "High readability required",
+        "Large touch targets required",
+        "Fast access to information",
+        "Reduced interaction complexity",
+        "Support for one-handed use"
+      ]
+    },
+    "touch_target_rules": {
+      "minimum_touch_target": "48px",
+      "preferred_touch_target": "56px",
+      "minimum_spacing_between_targets": "8px",
+      "rules": [
+        "Interactive elements must remain thumb-friendly.",
+        "Avoid crowded touch zones.",
+        "Critical actions require larger touch areas.",
+        "Technical controls must remain accessible outdoors."
+      ]
+    },
+    "navigation_behavior": {
+      "mobile_navigation": {
+        "type": "Drawer or slide menu",
+        "rules": [
+          "Menu icon top-right or top-left depending on direction.",
+          "Keep navigation shallow and scannable.",
+          "Primary CTA visible without opening menu.",
+          "Language selector accessible inside menu."
+        ]
+      },
+      "sticky_navigation": {
+        "enabled": true,
+        "rules": [
+          "Sticky header should reduce size after scroll.",
+          "Avoid blocking content.",
+          "Maintain visible access to CTA."
+        ]
+      }
+    },
+    "scroll_behavior": {
+      "rules": [
+        "Scrolling must feel smooth and native.",
+        "Avoid scroll hijacking.",
+        "Keep major CTAs visible every 2-3 sections.",
+        "Preserve strong vertical content rhythm.",
+        "Avoid long uninterrupted technical blocks."
+      ],
+      "section_behavior": [
+        "One primary message per viewport.",
+        "Proof before deep explanation.",
+        "Use accordions for technical depth."
+      ]
+    },
+    "gesture_rules": {
+      "approved_gestures": [
+        "Tap",
+        "Swipe",
+        "Pinch-to-zoom",
+        "Drag-to-pan",
+        "Accordion expand/collapse"
+      ],
+      "forbidden_gestures": [
+        "Hidden gesture-only navigation",
+        "Complex multi-touch interactions",
+        "Gesture-dependent critical actions"
+      ],
+      "case_study_swipe_behavior": {
+        "enabled": true,
+        "rules": [
+          "Show card peek to indicate swipe.",
+          "Snap scrolling required.",
+          "Prevent accidental swipe conflict."
+        ]
+      }
+    },
+    "cta_behavior": {
+      "primary_cta_rules": [
+        "Primary CTA visible above fold.",
+        "Sticky CTA appears after hero section.",
+        "CTA must remain thumb-accessible.",
+        "Avoid excessive CTA repetition."
+      ],
+      "approved_mobile_ctas": [
+        "Get Free Engineering Review",
+        "Request Technical Consultation",
+        "Request Project Cost Check"
+      ],
+      "quick_actions": [
+        "WhatsApp",
+        "Phone call",
+        "RFQ start",
+        "Resource download"
+      ]
+    },
+    "form_interaction_rules": {
+      "mobile_form_behavior": [
+        "Use step-based forms when possible.",
+        "Limit visible fields per screen.",
+        "Support autofill and native keyboards.",
+        "Reduce typing effort."
+      ],
+      "field_rules": [
+        "Minimum input height 48px.",
+        "Visible focus states required.",
+        "Clear validation feedback.",
+        "Use mobile-optimized input types."
+      ],
+      "upload_behavior": [
+        "Allow mobile file uploads.",
+        "Support PDF and image upload.",
+        "Show upload progress clearly."
+      ]
+    },
+    "technical_content_behavior": {
+      "diagram_interaction": {
+        "preview_mode": [
+          "Show simplified preview.",
+          "Limit annotation density.",
+          "Tap opens fullscreen."
+        ],
+        "fullscreen_mode": [
+          "Enable pinch-to-zoom.",
+          "Enable drag-to-pan.",
+          "Maintain annotation readability."
+        ]
+      },
+      "table_behavior": [
+        "Allow horizontal scroll only when necessary.",
+        "Freeze important labels when possible.",
+        "Prioritize simplified mobile summaries."
+      ]
+    },
+    "feedback_and_states": {
+      "tap_feedback": [
+        "Immediate visual response required.",
+        "Use subtle scale or color transitions.",
+        "Avoid delayed feedback."
+      ],
+      "loading_states": [
+        "Show lightweight progress indicators.",
+        "Avoid blocking full-screen loaders unless necessary."
+      ],
+      "error_states": [
+        "Use concise error messaging.",
+        "Clearly explain correction steps.",
+        "Maintain visibility in outdoor conditions."
+      ]
+    },
+    "accessibility_rules": {
+      "rules": [
+        "Maintain WCAG AA contrast.",
+        "Support screen readers.",
+        "Avoid motion-heavy interactions.",
+        "Preserve keyboard compatibility where applicable.",
+        "Support reduced-motion settings."
+      ],
+      "focus_behavior": [
+        "Visible focus states required.",
+        "Do not rely only on color for interaction feedback."
+      ]
+    },
+    "rtl_mobile_rules": {
+      "supported_languages": [
+        "Persian",
+        "Arabic"
+      ],
+      "rules": [
+        "Mirror swipe directions when appropriate.",
+        "Flip directional icons.",
+        "Preserve touch accessibility in RTL layouts.",
+        "Use logical spacing properties."
+      ]
+    },
+    "performance_interaction_rules": {
+      "requirements": [
+        "Interactions should feel immediate.",
+        "Avoid animation jank.",
+        "Delay heavy technical assets until interaction.",
+        "Optimize all touch interactions for low-latency response."
+      ]
+    },
+    "forbidden_mobile_patterns": [
+      "Tiny touch targets",
+      "Hover-only interaction",
+      "Dense desktop tables",
+      "Hidden CTA actions",
+      "Heavy modal stacking",
+      "Auto-playing video backgrounds",
+      "Long unbroken technical paragraphs",
+      "Complex gesture dependency"
+    ],
+    "approved_mobile_characteristics": [
+      "Fast",
+      "Readable",
+      "Touch-friendly",
+      "Structured",
+      "Technical",
+      "Minimal",
+      "Conversion-accessible"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Mobile interaction philosophy",
+        "Touch target system",
+        "Navigation and gesture rules",
+        "CTA behavior",
+        "Form interaction examples",
+        "Technical content interaction",
+        "Correct vs incorrect mobile patterns"
+      ],
+      "visual_direction": [
+        "Mobile wireframe examples",
+        "Thumb-zone diagrams",
+        "Gesture interaction previews",
+        "Sticky CTA examples",
+        "Technical diagram mobile behavior"
+      ]
+    },
+    "implementation_notes": [
+      "All mobile interactions must be tested on real devices.",
+      "Industrial usability and outdoor readability should guide mobile UX decisions.",
+      "Touch-first behavior is mandatory across all SIPANEL mobile interfaces.",
+      "Performance and clarity must always take priority over decorative interaction effects."
+    ]
+  }

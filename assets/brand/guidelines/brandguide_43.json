@@ -1,0 +1,387 @@
+{
+    "page": {
+      "number": 43,
+      "title": "Analytics & Tracking System",
+      "section": "Implementation & Governance",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the analytics framework, conversion events, tracking parameters, funnel structure, reporting cadence, and optimization standards for SIPANEL digital experiences.",
+    "analytics_philosophy": {
+      "statement": "SIPANEL analytics must measure real business behavior: qualified leads, engineering engagement, technical proof interaction, and conversion quality.",
+      "core_principles": [
+        "Track meaningful actions",
+        "Measure engineering engagement",
+        "Prioritize lead quality",
+        "Connect analytics to optimization",
+        "Avoid vanity metrics only",
+        "Maintain privacy-aware tracking"
+      ]
+    },
+    "required_tools": {
+      "core_tools": [
+        "Google Analytics 4",
+        "Google Search Console",
+        "Google Tag Manager"
+      ],
+      "recommended_tools": [
+        "Microsoft Clarity",
+        "Hotjar",
+        "CRM lead tracking",
+        "Meta Pixel if ads are used"
+      ]
+    },
+    "primary_conversion_goals": [
+      "rfq_submit",
+      "engineering_review_request",
+      "phone_click",
+      "whatsapp_click"
+    ],
+    "secondary_conversion_goals": [
+      "resource_download",
+      "case_study_view",
+      "diagram_zoom",
+      "service_page_click",
+      "technical_resource_view"
+    ],
+    "required_common_parameters": [
+      "page_url",
+      "page_title",
+      "device_type",
+      "viewport_width",
+      "traffic_source",
+      "language"
+    ],
+    "component_parameters": [
+      "component_id",
+      "component_name",
+      "section_id",
+      "cta_text",
+      "interaction_type"
+    ],
+    "lead_parameters": [
+      "lead_type",
+      "project_type",
+      "form_step",
+      "submission_method",
+      "has_file_upload"
+    ],
+    "technical_parameters": [
+      "diagram_type",
+      "resource_type",
+      "case_study_name",
+      "engineering_topic"
+    ],
+    "event_categories": {
+      "navigation": [
+        "mobile_menu_open",
+        "mobile_menu_item_click",
+        "language_switcher_open",
+        "language_change",
+        "technical_quick_access_click"
+      ],
+      "hero": [
+        "hero_primary_cta_click",
+        "hero_secondary_cta_click",
+        "hero_visibility_duration"
+      ],
+      "trust_and_proof": [
+        "trust_bar_view",
+        "proof_card_expand",
+        "proof_diagram_zoom"
+      ],
+      "case_studies": [
+        "case_study_view",
+        "case_study_swipe",
+        "case_study_expand",
+        "case_study_cta_click"
+      ],
+      "technical_engagement": [
+        "diagram_open",
+        "diagram_zoom",
+        "diagram_close",
+        "accordion_expand",
+        "resource_filter_use"
+      ],
+      "lead_generation": [
+        "sticky_cta_click",
+        "sticky_call_click",
+        "sticky_whatsapp_click",
+        "rfq_start",
+        "rfq_step_complete",
+        "rfq_submit",
+        "rfq_abandon",
+        "resource_download_start",
+        "resource_download_complete"
+      ],
+      "contact": [
+        "phone_click",
+        "whatsapp_click",
+        "email_click",
+        "map_click"
+      ],
+      "seo_content": [
+        "blog_card_click",
+        "internal_link_click",
+        "faq_expand",
+        "landing_page_cta_click"
+      ],
+      "scroll_depth": [
+        "scroll_25",
+        "scroll_50",
+        "scroll_75",
+        "scroll_100"
+      ]
+    },
+    "primary_funnels": {
+      "mobile_lead_funnel": [
+        "hero_view",
+        "trust_bar_view",
+        "proof_card_expand",
+        "sticky_cta_click",
+        "rfq_start",
+        "rfq_submit"
+      ],
+      "technical_engagement_funnel": [
+        "proof_card_expand",
+        "diagram_open",
+        "diagram_zoom",
+        "resource_download_start",
+        "resource_download_complete"
+      ],
+      "case_study_conversion_funnel": [
+        "case_study_view",
+        "case_study_expand",
+        "case_study_cta_click",
+        "rfq_start",
+        "rfq_submit"
+      ],
+      "seo_conversion_funnel": [
+        "seo_landing_page_view",
+        "faq_expand",
+        "technical_diagram_open",
+        "cta_click",
+        "rfq_start",
+        "rfq_submit"
+      ]
+    },
+    "success_kpis": {
+      "conversion": [
+        "mobile_rfq_conversion_rate",
+        "sticky_cta_click_rate",
+        "phone_and_whatsapp_click_rate",
+        "resource_download_conversion_rate",
+        "landing_page_conversion_rate"
+      ],
+      "engagement": [
+        "case_study_interaction_rate",
+        "diagram_zoom_rate",
+        "technical_accordion_expand_rate",
+        "average_scroll_depth",
+        "resource_engagement_rate"
+      ],
+      "performance": [
+        "mobile_lcp",
+        "mobile_cls",
+        "mobile_inp",
+        "mobile_page_load_time"
+      ],
+      "seo": [
+        "organic_sessions",
+        "keyword_rankings",
+        "landing_page_clicks",
+        "blog_to_service_clicks",
+        "resource_center_organic_entries"
+      ],
+      "lead_quality": [
+        "qualified_rfq_rate",
+        "project_type_distribution",
+        "file_upload_rate",
+        "engineering_review_follow_up_rate"
+      ]
+    },
+    "rfq_tracking_rules": {
+      "required_events": [
+        "rfq_start",
+        "rfq_step_complete",
+        "rfq_file_upload_start",
+        "rfq_file_upload_complete",
+        "rfq_validation_error",
+        "rfq_submit",
+        "rfq_success",
+        "rfq_abandon"
+      ],
+      "required_parameters": [
+        "entry_point",
+        "form_step",
+        "project_type",
+        "has_file_upload",
+        "device_type",
+        "language",
+        "submission_method"
+      ]
+    },
+    "diagram_tracking_rules": {
+      "required_events": [
+        "diagram_preview_view",
+        "diagram_open",
+        "diagram_zoom",
+        "diagram_pan",
+        "annotation_tap",
+        "diagram_close",
+        "diagram_cta_click"
+      ],
+      "required_parameters": [
+        "diagram_type",
+        "diagram_id",
+        "section_id",
+        "zoom_level",
+        "device_type",
+        "language"
+      ]
+    },
+    "resource_tracking_rules": {
+      "required_events": [
+        "resource_center_view",
+        "resource_filter_use",
+        "resource_card_click",
+        "resource_preview_open",
+        "resource_download_start",
+        "resource_download_complete",
+        "resource_cta_click"
+      ],
+      "required_parameters": [
+        "resource_type",
+        "resource_title",
+        "category",
+        "device_type",
+        "language",
+        "lead_source"
+      ]
+    },
+    "language_tracking_rules": {
+      "required_events": [
+        "language_switcher_open",
+        "language_change"
+      ],
+      "required_parameters": [
+        "previous_language",
+        "selected_language",
+        "page_url",
+        "device_type"
+      ]
+    },
+    "reporting_frequency": {
+      "weekly": [
+        "traffic",
+        "cta_clicks",
+        "rfq_submissions",
+        "phone_clicks",
+        "whatsapp_clicks",
+        "top_landing_pages"
+      ],
+      "monthly": [
+        "seo_growth",
+        "conversion_rate",
+        "case_study_performance",
+        "resource_downloads",
+        "mobile_performance",
+        "lead_quality"
+      ],
+      "quarterly": [
+        "content performance review",
+        "SEO landing page expansion planning",
+        "conversion optimization review",
+        "technical engagement analysis"
+      ]
+    },
+    "privacy_and_data_rules": [
+      "Do not track sensitive personal data inside event names or URLs.",
+      "Avoid storing full message content in analytics events.",
+      "Use CRM for lead details instead of analytics platforms.",
+      "Follow applicable privacy and cookie consent requirements.",
+      "Anonymize or limit user-identifiable tracking where required."
+    ],
+    "dashboard_recommendations": {
+      "executive_dashboard": [
+        "Total leads",
+        "Qualified RFQs",
+        "Top traffic sources",
+        "Conversion rate",
+        "SEO growth"
+      ],
+      "marketing_dashboard": [
+        "Landing page performance",
+        "CTA click rate",
+        "Resource downloads",
+        "Case study engagement",
+        "Blog-to-service clicks"
+      ],
+      "engineering_content_dashboard": [
+        "Diagram opens",
+        "Diagram zooms",
+        "Technical resource downloads",
+        "Case study interactions",
+        "FAQ expansions"
+      ],
+      "mobile_ux_dashboard": [
+        "Sticky CTA clicks",
+        "Mobile RFQ completion",
+        "Mobile abandonment",
+        "Mobile performance metrics",
+        "Viewport-based engagement"
+      ]
+    },
+    "optimization_rules": [
+      "Use analytics to identify weak conversion points.",
+      "Review RFQ abandonment by step.",
+      "Compare mobile and desktop conversion behavior.",
+      "Track whether technical proof improves conversion.",
+      "Use resource downloads to identify high-intent topics.",
+      "Improve SEO pages based on search queries and conversion quality."
+    ],
+    "forbidden_patterns": [
+      "Tracking only page views",
+      "No CTA event tracking",
+      "No RFQ funnel tracking",
+      "No language tracking",
+      "No diagram engagement tracking",
+      "Unclear event naming",
+      "Duplicate events for the same interaction",
+      "Tracking personal message content in analytics"
+    ],
+    "approved_characteristics": [
+      "Actionable",
+      "Structured",
+      "Privacy-aware",
+      "Conversion-focused",
+      "Engineering-engagement-aware",
+      "SEO-connected",
+      "Optimization-ready"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Analytics philosophy",
+        "Required tools",
+        "Event taxonomy",
+        "Conversion funnels",
+        "KPI framework",
+        "Tracking parameter system",
+        "Reporting dashboard examples",
+        "Correct vs incorrect tracking patterns"
+      ],
+      "visual_direction": [
+        "Event taxonomy map",
+        "RFQ funnel diagram",
+        "Technical engagement funnel",
+        "Analytics dashboard mockup",
+        "KPI cards"
+      ]
+    },
+    "implementation_notes": [
+      "Analytics must be implemented before launch, not added later.",
+      "Every major CTA, RFQ step, technical diagram, resource download, and language change must be tracked.",
+      "Tracking should help SIPANEL improve lead quality, technical communication, and conversion performance.",
+      "Analytics naming must follow the SIPANEL component naming and event naming conventions."
+    ]
+  }

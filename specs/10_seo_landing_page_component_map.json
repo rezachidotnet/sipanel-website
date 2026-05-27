@@ -1,0 +1,274 @@
+{
+    "seo_landing_page_component_map": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "purpose": "Define reusable SEO landing page structure for SIPANEL industrial keywords, services, and application pages.",
+  
+      "global_seo_rules": {
+        "one_primary_keyword_per_page": true,
+        "primary_keyword_required_in": [
+          "url",
+          "title_tag",
+          "meta_description",
+          "h1",
+          "first_100_words",
+          "image_alt_text"
+        ],
+        "internal_links_required": true,
+        "multilanguage_seo": {
+          "hreflang_required": true,
+          "localized_urls_required": true,
+          "canonical_per_language": true,
+          "translated_meta_required": true,
+          "translated_h1_required": true,
+          "multilingual_sitemap_required": true,
+
+          "supported_languages": [
+            "en",
+            "fa",
+            "ar",
+            "ru"
+          ]
+        },      
+        "faq_required": true,
+        "case_study_link_required": true,
+        "cta_required": true
+      },
+  
+      "landing_page_template": {
+        "component_order": [
+          "seo_hero",
+          "problem_context",
+          "sipanel_solution",
+          "technical_proof",
+          "application_or_service_details",
+          "case_study_links",
+          "faq_section",
+          "conversion_cta"
+        ],
+  
+        "seo_hero": {
+          "objective": "Match search intent immediately and introduce SIPANEL engineering value.",
+          "required_elements": [
+            "h1",
+            "short_intro",
+            "primary_cta",
+            "trust_microcopy"
+          ],
+          "content_rules": {
+            "h1_include_primary_keyword": true,
+            "intro_max_lines_mobile": 4
+          }
+        },
+  
+        "problem_context": {
+          "objective": "Explain the risk or pain behind the search query.",
+          "required_elements": [
+            "problem_headline",
+            "3_to_5_problem_cards"
+          ],
+          "content_rules": {
+            "connect_problem_to_cost_delay_waste_or_leakage": true
+          }
+        },
+  
+        "sipanel_solution": {
+          "objective": "Show how SIPANEL solves the problem through engineering workflow.",
+          "required_elements": [
+            "engineering_design",
+            "smart_procurement",
+            "controlled_installation"
+          ]
+        },
+  
+        "technical_proof": {
+          "objective": "Provide visual and technical credibility.",
+          "required_elements": [
+            "diagram_or_shop_drawing",
+            "short_explanation",
+            "risk_reduction_point"
+          ],
+          "interaction_rules": {
+            "mobile_zoom_enabled": true,
+            "preview_before_fullscreen": true
+          }
+        },
+  
+        "application_or_service_details": {
+          "objective": "Give page-specific technical depth.",
+          "required_elements": [
+            "technical_features",
+            "material_logic",
+            "installation_considerations",
+            "quality_checkpoints"
+          ]
+        },
+  
+        "case_study_links": {
+          "objective": "Connect SEO page to real project proof.",
+          "required_elements": [
+            "related_project_cards",
+            "project_area",
+            "challenge",
+            "result"
+          ],
+          "minimum_related_projects": 1
+        },
+  
+        "faq_section": {
+          "objective": "Capture long-tail search queries and reduce buyer hesitation.",
+          "minimum_questions": 3,
+          "maximum_questions": 6,
+          "schema": "FAQPage"
+        },
+  
+        "conversion_cta": {
+          "objective": "Convert search visitors into project inquiries.",
+          "primary_cta": "Get Free Engineering Review",
+          "secondary_cta": "Request Project Cost Check"
+        }
+      },
+  
+      "page_definitions": {
+        "cold_storage_panels": {
+          "url": "/cold-storage-panels",
+          "primary_keyword": "cold storage sandwich panels",
+          "search_intent": "Find suitable insulated panels for cold storage projects.",
+          "priority_components": [
+            "thermal_continuity",
+            "airtightness",
+            "moisture_prevention",
+            "installation_precision"
+          ],
+          "recommended_case_studies": [
+            "cold_storage_projects_if_available"
+          ]
+        },
+  
+        "factory_panel_systems": {
+          "url": "/factory-panel-systems",
+          "primary_keyword": "factory sandwich panel systems",
+          "search_intent": "Find panel systems for factory buildings.",
+          "priority_components": [
+            "roof_wall_systems",
+            "fast_installation",
+            "material_optimization",
+            "industrial_durability"
+          ]
+        },
+  
+        "industrial_roof_panels": {
+          "url": "/industrial-roof-panels",
+          "primary_keyword": "industrial roof sandwich panels",
+          "search_intent": "Find reliable roof panel systems for industrial projects.",
+          "priority_components": [
+            "drainage_logic",
+            "roof_slope",
+            "waterproofing",
+            "flashing_details"
+          ]
+        },
+  
+        "waterproofing_panel_roofs": {
+          "url": "/waterproofing-panel-roofs",
+          "primary_keyword": "sandwich panel roof waterproofing",
+          "search_intent": "Prevent leakage in sandwich panel roofs.",
+          "priority_components": [
+            "overlap_details",
+            "flashing",
+            "gutter_design",
+            "sealing_and_foam"
+          ]
+        },
+  
+        "warehouse_panel_systems": {
+          "url": "/warehouse-panel-systems",
+          "primary_keyword": "warehouse sandwich panel systems",
+          "search_intent": "Find fast and reliable panel systems for warehouses.",
+          "priority_components": [
+            "fast_track_installation",
+            "large_span_roofing",
+            "thermal_performance",
+            "cost_control"
+          ]
+        },
+  
+        "sandwich_panel_shop_drawings": {
+          "url": "/sandwich-panel-shop-drawings",
+          "primary_keyword": "shop drawing sandwich panels",
+          "search_intent": "Understand or request shop drawings for sandwich panel projects.",
+          "priority_components": [
+            "panel_layout",
+            "BOM_MTO",
+            "drainage_routes",
+            "flashing_details",
+            "installation_sequence"
+          ]
+        },
+  
+        "panel_installation_services": {
+          "url": "/panel-installation-services",
+          "primary_keyword": "sandwich panel installation services",
+          "search_intent": "Find professional sandwich panel installation service.",
+          "priority_components": [
+            "installation_sequence",
+            "alignment_control",
+            "sealing",
+            "quality_control"
+          ]
+        },
+  
+        "industrial_panel_waterproofing": {
+          "url": "/industrial-panel-waterproofing",
+          "primary_keyword": "industrial roof waterproofing systems",
+          "search_intent": "Find waterproofing systems for industrial roofs.",
+          "priority_components": [
+            "water_flow_logic",
+            "flashing",
+            "sealant",
+            "inspection_checkpoints"
+          ]
+        },
+  
+        "sandwich_panel_cost_optimization": {
+          "url": "/sandwich-panel-cost-optimization",
+          "primary_keyword": "reduce sandwich panel project cost",
+          "search_intent": "Reduce waste, rework, and hidden costs in sandwich panel projects.",
+          "priority_components": [
+            "shop_drawing_optimization",
+            "material_takeoff",
+            "procurement_accuracy",
+            "rework_prevention"
+          ]
+        },
+  
+        "industrial_panel_engineering": {
+          "url": "/industrial-panel-engineering",
+          "primary_keyword": "industrial panel engineering services",
+          "search_intent": "Find engineering support for industrial panel projects.",
+          "priority_components": [
+            "engineering_design",
+            "technical_review",
+            "execution_planning",
+            "quality_validation"
+          ]
+        }
+      },
+  
+      "schema_requirements": {
+        "homepage": ["Organization", "LocalBusiness", "WebSite"],
+        "service_pages": ["Service", "FAQPage", "BreadcrumbList"],
+        "case_studies": ["Project", "CaseStudy", "ImageObject"],
+        "blog_articles": ["Article", "BlogPosting", "FAQPage"]
+      },
+  
+      "internal_linking_rules": {
+        "service_to_case_study": true,
+        "blog_to_service": true,
+        "landing_page_to_resources": true,
+        "case_study_to_contact": true,
+        "minimum_internal_links_per_page": 4
+      }
+    }
+  }

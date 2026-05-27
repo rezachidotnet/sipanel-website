@@ -1,0 +1,240 @@
+{
+    "metrics_and_proof_library": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "purpose": "Create a structured library of measurable proof, trust signals, case-study evidence, and performance claims for website and marketing use.",
+  
+      "proof_rules": {
+        "real_data_only": true,
+        "fake_metrics_forbidden": true,
+        "estimated_metrics_must_be_labeled": true,
+        "proof_should_support": [
+          "risk reduction",
+          "cost control",
+          "speed",
+          "waterproofing quality",
+          "material optimization",
+          "execution accuracy",
+          "project reliability"
+        ]
+      },
+
+      "multilanguage_proof_rules": {
+        "translate_case_studies": true,
+        "translate_metrics_labels": true,
+        "preserve_original_numbers": true,
+        "rtl_supported_languages": [
+          "fa",
+          "ar"
+        ],
+        "required_languages": [
+          "en",
+          "fa",
+          "ar",
+          "ru"
+        ],
+        "rules": [
+          "Do not translate technical units incorrectly.",
+          "Keep measurement formats consistent.",
+          "Preserve engineering terminology accuracy.",
+          "Avoid machine-translated proof text without review."
+        ]
+      },    
+  
+      "global_trust_metrics": {
+        "years_experience": {
+          "value": "30+",
+          "label": "Years of Industrial Experience",
+          "verification_status": "needs_internal_confirmation"
+        },
+        "projects_completed": {
+          "value": "400+",
+          "label": "Industrial Projects",
+          "verification_status": "needs_internal_confirmation"
+        },
+        "executed_panel_area": {
+          "value": "10,000,000+ m²",
+          "label": "Executed Panel Area",
+          "verification_status": "needs_internal_confirmation"
+        }
+      },
+  
+      "case_study_metric_template": {
+        "project_name": "",
+        "location": "",
+        "area_m2": "",
+        "duration_days": "",
+        "project_type": "",
+        "main_challenge": "",
+        "engineering_decision": "",
+        "measured_result": "",
+        "risk_prevented": "",
+        "proof_assets": [
+          "project_image",
+          "shop_drawing",
+          "drainage_detail",
+          "installation_photo"
+        ],
+        "verification_status": "pending"
+      },
+  
+      "recommended_measurable_fields": {
+        "execution_speed": [
+          "planned_duration_days",
+          "actual_duration_days",
+          "delay_reduction_days",
+          "delivery_speed_note"
+        ],
+        "material_optimization": [
+          "estimated_panel_area",
+          "optimized_panel_area",
+          "waste_reduction_percent",
+          "procurement_savings_note"
+        ],
+        "waterproofing": [
+          "drainage_points_count",
+          "gutter_length_m",
+          "downspout_count",
+          "leakage_test_result",
+          "post_rain_inspection_result"
+        ],
+        "quality_control": [
+          "inspection_checkpoints_count",
+          "rework_items_prevented",
+          "final_approval_status",
+          "warranty_issued"
+        ],
+        "technical_complexity": [
+          "curved_surface_area_m2",
+          "custom_flashing_count",
+          "shop_drawing_pages",
+          "unique_connection_details"
+        ]
+      },
+  
+      "proof_phrase_library": {
+        "strong_phrases": [
+          "Completed X m² of roof and wall panel installation in X days.",
+          "Reduced material waste by X% through optimized shop drawings.",
+          "Prevented drainage failure by redesigning gutter slope and downspout routing.",
+          "Reduced rework by coordinating panel layout before procurement.",
+          "Verified sealing and foam continuity before final handover.",
+          "Delivered project with documented inspection checkpoints."
+        ],
+        "weak_phrases_to_avoid": [
+          "High quality execution",
+          "Fast delivery",
+          "Best performance",
+          "Excellent service",
+          "Professional work"
+        ]
+      },
+  
+      "proof_asset_requirements": {
+        "project_images": {
+          "required": true,
+          "rules": [
+            "Use real project photos",
+            "Show scale clearly",
+            "Avoid low-resolution images",
+            "Avoid fake renders"
+          ]
+        },
+        "engineering_visuals": {
+          "preferred": true,
+          "types": [
+            "shop_drawing_snippet",
+            "drainage_diagram",
+            "waterproofing_detail",
+            "BOM_MTO_sample",
+            "installation_sequence"
+          ]
+        },
+        "certificates": {
+          "allowed": true,
+          "rules": [
+            "Use real certificates only",
+            "Blur sensitive data if required",
+            "Show certificate title clearly"
+          ]
+        },
+        "client_logos": {
+          "allowed": true,
+          "rules": [
+            "Use only approved logos",
+            "Use grayscale display",
+            "Avoid overcrowding"
+          ]
+        }
+      },
+  
+      "website_usage_mapping": {
+        "hero": [
+          "years_experience",
+          "projects_completed",
+          "executed_panel_area"
+        ],
+        "trust_bar": [
+          "years_experience",
+          "projects_completed",
+          "executed_panel_area",
+          "certificates",
+          "client_logos"
+        ],
+        "projects_section": [
+          "area_m2",
+          "duration_days",
+          "risk_prevented",
+          "measured_result"
+        ],
+        "proof_snapshot": [
+          "shop_drawing_snippet",
+          "drainage_detail",
+          "BOM_MTO_sample"
+        ],
+        "resources_section": [
+          "technical_checklist_downloads",
+          "guide_downloads",
+          "resource_conversion_rate"
+        ]
+      },
+  
+      "sample_case_study_metric_format": {
+        "project_name": "Tabas Railway Facility",
+        "location": "Tabas, Iran",
+        "area_m2": "10,000",
+        "duration_days": "unknown",
+        "project_type": "Large-scale double-curved railway structure",
+        "main_challenge": "Double-curved structure requiring advanced panel coordination.",
+        "engineering_decision": "Custom panel detailing and structural coordination based on shop drawings.",
+        "measured_result": "10,000 m² executed with coordinated panel layout.",
+        "risk_prevented": [
+          "structural misalignment",
+          "drainage failure",
+          "installation inaccuracy"
+        ],
+        "proof_assets": [
+          ".projects/tabas/main.jpg",
+          "shop_drawing_if_available",
+          "drainage_detail_if_available"
+        ],
+        "missing_data_to_collect": [
+          "actual_duration_days",
+          "number_of_shop_drawing_pages",
+          "gutter_length_m",
+          "inspection_checkpoints_count"
+        ]
+      },
+  
+      "data_collection_checklist": [
+        "Confirm all global metrics are accurate.",
+        "Collect real duration for each project.",
+        "Collect before/after or execution photos where possible.",
+        "Collect shop drawing snippets for at least 3 projects.",
+        "Collect drainage/waterproofing details where available.",
+        "Record inspection checkpoints and warranty status.",
+        "Do not publish unverified numbers."
+      ]
+    }
+  }

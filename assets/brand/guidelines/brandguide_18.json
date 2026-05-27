@@ -1,0 +1,236 @@
+{
+    "page": {
+      "number": 18,
+      "title": "Accessibility Standards",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define accessibility requirements for SIPANEL digital interfaces, content, technical diagrams, forms, navigation, multilingual layouts, and interactive components.",
+    "accessibility_philosophy": {
+      "statement": "SIPANEL interfaces must remain clear, readable, usable, and technically accessible for all users across industrial, mobile, desktop, and multilingual contexts.",
+      "core_principles": [
+        "Clarity for every user",
+        "Readable technical information",
+        "Accessible interaction states",
+        "Keyboard and screen reader support",
+        "High contrast visual hierarchy",
+        "Reduced cognitive load"
+      ]
+    },
+    "compliance_target": {
+      "standard": "WCAG 2.2 AA",
+      "minimum_requirement": "WCAG AA compliance across all public-facing digital interfaces",
+      "priority": "critical"
+    },
+    "color_and_contrast": {
+      "minimum_contrast_ratios": {
+        "normal_text": "4.5:1",
+        "large_text": "3:1",
+        "ui_components": "3:1",
+        "focus_indicators": "3:1"
+      },
+      "rules": [
+        "Do not use low-contrast gray text.",
+        "Do not rely on color alone to communicate meaning.",
+        "Use orange primarily for emphasis, actions, and focus states.",
+        "Ensure dark sections maintain strong readability."
+      ]
+    },
+    "typography_accessibility": {
+      "rules": [
+        "Body text should remain readable on mobile and desktop.",
+        "Avoid very small technical labels.",
+        "Maintain sufficient line height.",
+        "Use clear heading hierarchy.",
+        "Avoid dense uninterrupted paragraphs."
+      ],
+      "minimum_sizes": {
+        "body_mobile": "16px",
+        "caption_mobile": "12px minimum",
+        "technical_annotation": "12px minimum"
+      }
+    },
+    "keyboard_navigation": {
+      "required": true,
+      "rules": [
+        "All interactive elements must be keyboard accessible.",
+        "Tab order must follow visual reading order.",
+        "Focus states must be visible.",
+        "Modals must trap focus while open.",
+        "Users must be able to close overlays with keyboard controls."
+      ]
+    },
+    "focus_state_rules": {
+      "focus_style": {
+        "outline": "2px solid #FF6A00",
+        "offset": "2px"
+      },
+      "rules": [
+        "Focus indicators must be visible on light and dark backgrounds.",
+        "Do not remove browser focus outlines without replacing them.",
+        "Focus states must not rely only on subtle color changes."
+      ]
+    },
+    "screen_reader_support": {
+      "rules": [
+        "Use semantic HTML wherever possible.",
+        "Provide meaningful alt text for images.",
+        "Use aria-labels for icon-only buttons.",
+        "Mark decorative icons as aria-hidden.",
+        "Use proper form labels and error descriptions.",
+        "Announce dynamic content changes when necessary."
+      ]
+    },
+    "image_and_media_accessibility": {
+      "alt_text_rules": [
+        "Project photos must describe the project context.",
+        "Technical diagrams must describe the engineering purpose.",
+        "Decorative images should use empty alt text.",
+        "Avoid embedding critical text inside images without accessible alternatives."
+      ],
+      "video_rules": [
+        "Avoid autoplay video on mobile.",
+        "Provide captions when speech is used.",
+        "Avoid flashing or rapidly changing visuals."
+      ]
+    },
+    "technical_diagram_accessibility": {
+      "rules": [
+        "Provide text summaries for technical diagrams.",
+        "Use readable annotations.",
+        "Allow fullscreen viewing and zoom.",
+        "Avoid tiny labels in preview mode.",
+        "Do not use color alone to identify technical risk points."
+      ],
+      "required_features": [
+        "Diagram title",
+        "Short explanation",
+        "Accessible text summary",
+        "Zoomable view",
+        "Keyboard-close behavior for modal viewer"
+      ]
+    },
+    "form_accessibility": {
+      "rules": [
+        "Every input must have a visible label.",
+        "Required fields must be clearly identified.",
+        "Validation errors must explain the issue clearly.",
+        "Do not rely on placeholder text as labels.",
+        "Input focus states must be visible.",
+        "Error messages must be connected to fields programmatically."
+      ],
+      "mobile_rules": [
+        "Use proper input types for phone, email, and file upload.",
+        "Keep tap targets at least 48px.",
+        "Reduce typing where possible."
+      ]
+    },
+    "touch_and_mobile_accessibility": {
+      "minimum_touch_target": "48px",
+      "preferred_touch_target": "56px",
+      "rules": [
+        "Avoid tightly grouped controls.",
+        "Keep sticky CTAs accessible without blocking content.",
+        "Support one-handed mobile use.",
+        "Avoid hover-only behavior."
+      ]
+    },
+    "motion_accessibility": {
+      "prefers_reduced_motion_supported": true,
+      "rules": [
+        "Respect user reduced-motion preferences.",
+        "Disable decorative motion when reduced motion is enabled.",
+        "Avoid scroll-jacking.",
+        "Avoid motion that interrupts technical reading.",
+        "Keep interaction feedback available without animation."
+      ]
+    },
+    "language_and_rtl_accessibility": {
+      "supported_languages": [
+        "English",
+        "Persian",
+        "Arabic",
+        "Russian"
+      ],
+      "rules": [
+        "Set correct HTML lang attribute.",
+        "Set correct HTML dir attribute for RTL languages.",
+        "Mirror directional icons for RTL.",
+        "Preserve reading order across translations.",
+        "Ensure translated text does not break layout."
+      ]
+    },
+    "navigation_accessibility": {
+      "rules": [
+        "Navigation landmarks must be semantic.",
+        "Mobile menus must be keyboard accessible.",
+        "Menu state must be announced to assistive technologies.",
+        "Skip links should be available for main content.",
+        "Current page or active section should be clearly indicated."
+      ]
+    },
+    "table_accessibility": {
+      "rules": [
+        "Use table headers correctly.",
+        "Provide captions or summaries for complex data.",
+        "Avoid image-based tables.",
+        "Ensure horizontal scrolling tables remain usable on mobile.",
+        "Keep technical data readable and structured."
+      ]
+    },
+    "content_accessibility": {
+      "rules": [
+        "Use plain technical language where possible.",
+        "Explain technical terms when necessary.",
+        "Use headings, bullets, and short sections.",
+        "Avoid overly dense technical paragraphs.",
+        "Provide context before technical detail."
+      ]
+    },
+    "forbidden_accessibility_patterns": [
+      "Low-contrast text",
+      "Icon-only actions without labels",
+      "Placeholder-only form labels",
+      "Hover-only interactions",
+      "Unlabeled diagrams",
+      "Text embedded inside images without alternatives",
+      "Motion-heavy interactions without reduced-motion support",
+      "Keyboard traps",
+      "Modal overlays without focus management"
+    ],
+    "accessibility_qa_checklist": [
+      "All text meets WCAG AA contrast.",
+      "All controls are keyboard accessible.",
+      "All forms have visible labels.",
+      "All images have appropriate alt text.",
+      "All modals manage focus correctly.",
+      "All mobile touch targets meet minimum size.",
+      "All RTL layouts preserve reading order.",
+      "Reduced motion is supported.",
+      "Technical diagrams have text summaries."
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Accessibility philosophy",
+        "WCAG compliance target",
+        "Contrast and typography standards",
+        "Keyboard and screen reader rules",
+        "Form and diagram accessibility",
+        "Mobile and RTL accessibility",
+        "Accessibility QA checklist"
+      ],
+      "visual_direction": [
+        "Contrast examples",
+        "Focus state samples",
+        "Accessible form examples",
+        "Diagram accessibility mockups",
+        "Correct vs incorrect accessibility patterns"
+      ]
+    },
+    "implementation_notes": [
+      "Accessibility must be treated as a production requirement, not an optional enhancement.",
+      "All SIPANEL interfaces should be tested with keyboard navigation, screen readers, mobile devices, and RTL layouts.",
+      "Technical clarity and accessibility must work together across all brand and website experiences."
+    ]
+  }

@@ -1,0 +1,394 @@
+{
+    "page": "about_sipanel",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "company_about_page",
+    "purpose": "Create a high-trust industrial company page that positions SIPANEL as an engineering-first industrial envelope systems company.",
+    "route": {
+      "en": "/en/about",
+      "fa": "/fa/about",
+      "ar": "/ar/about",
+      "ru": "/ru/about"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": ["en", "fa", "ar", "ru"],
+      "rtl": ["fa", "ar"],
+      "requirements": [
+        "localized content",
+        "localized metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Build trust and authority for SIPANEL.",
+      "secondary": "Explain the engineering-first execution philosophy.",
+      "conversion": "Encourage technical consultation and RFQ initiation."
+    },
+    "brand_positioning": {
+      "core_message": "SIPANEL reduces industrial project risk through engineering review, smart procurement, and controlled execution.",
+      "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+      "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION",
+      "do_not_position_as": [
+        "generic panel supplier",
+        "marketing-first construction brand",
+        "decorative architecture studio",
+        "cheap installer"
+      ]
+    },
+    "seo": {
+      "primary_keyword": "industrial envelope engineering company",
+      "secondary_keywords": [
+        "industrial panel engineering",
+        "standing seam roofing company",
+        "industrial cladding systems",
+        "engineering-controlled execution",
+        "industrial waterproof roofing",
+        "sandwich panel systems company"
+      ],
+      "title": "About SIPANEL | Industrial Envelope Engineering & Controlled Execution",
+      "meta_description": "Learn how SIPANEL helps industrial projects reduce execution risk through engineering review, smart procurement, waterproofing logic, and controlled installation systems.",
+      "h1": "Engineering-Controlled Industrial Envelope Systems.",
+      "schema": [
+        "Organization",
+        "BreadcrumbList",
+        "AboutPage"
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "authoritative",
+        "industrial",
+        "technical",
+        "trustworthy",
+        "structured",
+        "experienced"
+      ],
+      "visual_rules": [
+        "Use real industrial imagery if available.",
+        "Use diagrams, project visuals, technical overlays, and engineering references.",
+        "Avoid lifestyle branding.",
+        "Avoid startup aesthetics.",
+        "Avoid fake corporate culture visuals.",
+        "Avoid stock office people photography."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "about_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_60_40"
+        },
+        "content": {
+          "eyebrow": "About SIPANEL",
+          "h1": "Engineering-Controlled Industrial Envelope Systems.",
+          "subheadline": "SIPANEL helps industrial projects reduce leakage risk, material waste, coordination errors, and execution uncertainty through engineering review, smart procurement, and controlled installation.",
+          "primary_cta": "Request Technical Consultation",
+          "secondary_cta": "Explore Systems",
+          "trust_microcopy": "Built around industrial execution control, not just material supply."
+        },
+        "visual": {
+          "type": "industrial_execution_collage_or_project_visual",
+          "preferred_assets": [
+            "industrial roofing",
+            "panel installation",
+            "shop drawing preview",
+            "facade system",
+            "engineering coordination image"
+          ],
+          "fallback": "structured industrial composition using SIPANEL design system"
+        }
+      },
+      {
+        "id": "company_positioning",
+        "priority": "critical",
+        "title": "More Than Material Supply.",
+        "layout": {
+          "mobile": "stacked_cards",
+          "desktop": "3_column_cards"
+        },
+        "cards": [
+          {
+            "title": "Engineering Review",
+            "description": "SIPANEL reviews system logic, drainage, layout, waterproofing, and installation conditions before procurement and execution."
+          },
+          {
+            "title": "Smart Procurement",
+            "description": "Quantities, accessories, flashings, trims, and materials are coordinated to reduce waste and avoid site delays."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execution follows technical details, sequencing logic, inspection checkpoints, and engineering coordination."
+          }
+        ]
+      },
+      {
+        "id": "company_story",
+        "priority": "high",
+        "title": "Why SIPANEL Exists",
+        "layout": {
+          "mobile": "single_column",
+          "desktop": "split_text_visual"
+        },
+        "content_rules": [
+          "Focus on industrial execution problems.",
+          "Explain why engineering review matters before installation.",
+          "Avoid emotional startup storytelling.",
+          "Use direct professional tone."
+        ],
+        "content_structure": [
+          "problem_in_market",
+          "why_execution_fails",
+          "why_engineering_matters",
+          "how_sipanel_approaches_projects"
+        ],
+        "approved_topics": [
+          "roof leakage risk",
+          "material waste",
+          "weak coordination",
+          "incorrect system selection",
+          "poor installation sequencing",
+          "lack of technical review"
+        ]
+      },
+      {
+        "id": "core_principles",
+        "priority": "high",
+        "title": "Core Execution Principles",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "2x3_principles_grid"
+        },
+        "principles": [
+          {
+            "title": "Engineering Before Installation",
+            "description": "Project risk should be reviewed before site execution begins."
+          },
+          {
+            "title": "Waterproofing Logic Matters",
+            "description": "Drainage, flashings, overlaps, seams, and penetrations determine long-term roof performance."
+          },
+          {
+            "title": "Layout Controls Quality",
+            "description": "Panel rhythm, facade alignment, and quantity planning affect execution quality and waste."
+          },
+          {
+            "title": "Execution Needs Coordination",
+            "description": "Installation quality depends on sequencing, drawings, procurement, and inspection checkpoints."
+          },
+          {
+            "title": "Technical Proof Over Claims",
+            "description": "Real details, diagrams, and execution proof matter more than marketing language."
+          },
+          {
+            "title": "Industrial Projects Need Control",
+            "description": "Large industrial systems require planning, verification, and engineering discipline."
+          }
+        ]
+      },
+      {
+        "id": "systems_overview",
+        "priority": "critical",
+        "title": "Industrial Envelope Systems",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_column_grid"
+        },
+        "systems": [
+          {
+            "title": "Sandwich Panel Systems",
+            "description": "Panel layout, insulation systems, accessories, flashing coordination, and installation control.",
+            "cta": "Explore Panel Systems"
+          },
+          {
+            "title": "Standing Seam & ZIP Tech Roofing",
+            "description": "Waterproof roofing systems designed around drainage logic, concealed fastening, and controlled execution.",
+            "cta": "Explore Roofing Systems"
+          },
+          {
+            "title": "Aluminium Cladding & Covering",
+            "description": "Industrial facade systems coordinated through layout control, fixing logic, and precise execution.",
+            "cta": "Explore Cladding Systems"
+          }
+        ]
+      },
+      {
+        "id": "technical_proof_snapshot",
+        "priority": "high",
+        "title": "Engineering Proof Snapshot",
+        "layout": {
+          "mobile": "swipeable_cards",
+          "desktop": "4_column_technical_grid"
+        },
+        "items": [
+          {
+            "title": "Shop Drawing Coordination",
+            "description": "Layout, accessories, and sequencing reviewed before installation.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Roof Waterproofing Logic",
+            "description": "Drainage, flashing, and penetration details engineered before execution.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Material Optimization",
+            "description": "Procurement quantities planned to reduce waste and delays.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Inspection-Based Execution",
+            "description": "Quality checkpoints integrated during installation.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          }
+        ]
+      },
+      {
+        "id": "workflow_process",
+        "priority": "high",
+        "title": "How SIPANEL Approaches Industrial Projects",
+        "layout": {
+          "mobile": "vertical_steps",
+          "desktop": "horizontal_process_flow"
+        },
+        "steps": [
+          {
+            "title": "Project Review",
+            "description": "Review project conditions, system requirements, and execution risks."
+          },
+          {
+            "title": "Technical Coordination",
+            "description": "Coordinate drawings, drainage logic, details, accessories, and procurement planning."
+          },
+          {
+            "title": "Execution Planning",
+            "description": "Define installation sequencing, inspection points, and quality control flow."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execute according to technical standards, coordination logic, and engineering review."
+          }
+        ]
+      },
+      {
+        "id": "metrics_strip",
+        "priority": "medium",
+        "title": "Industrial Experience Snapshot",
+        "layout": {
+          "mobile": "2x2_grid",
+          "desktop": "horizontal_metrics_strip"
+        },
+        "metrics": [
+          {
+            "label": "Years of Experience",
+            "value": "pending_verified_data"
+          },
+          {
+            "label": "Industrial Projects",
+            "value": "pending_verified_data"
+          },
+          {
+            "label": "Executed Area",
+            "value": "pending_verified_data"
+          },
+          {
+            "label": "Systems Delivered",
+            "value": "pending_verified_data"
+          }
+        ],
+        "rules": [
+          "Do not invent metrics.",
+          "If data is missing, keep structured placeholders.",
+          "No animated counters unless verified."
+        ]
+      },
+      {
+        "id": "related_resources",
+        "priority": "medium",
+        "title": "Engineering Resources",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_card_grid"
+        },
+        "resources": [
+          {
+            "title": "Roof Leakage Prevention Checklist",
+            "cta": "Download Resource"
+          },
+          {
+            "title": "Sandwich Panel Selection Guide",
+            "cta": "Download Resource"
+          },
+          {
+            "title": "Shop Drawing Review Guide",
+            "cta": "Download Resource"
+          }
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline": "Reduce Execution Risk Before Construction Begins.",
+        "text": "Request a technical consultation for your industrial panel, roofing, or cladding project.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info"
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Technical Consultation",
+      "secondary_action": "WhatsApp",
+      "visibility": "after_hero_scroll"
+    },
+    "analytics_events": [
+      "about_page_view",
+      "hero_primary_cta_click",
+      "hero_secondary_cta_click",
+      "system_card_click",
+      "technical_proof_open",
+      "resource_click",
+      "consultation_cta_click",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "content_governance": {
+      "tone": [
+        "professional",
+        "technical",
+        "trustworthy",
+        "direct",
+        "measured"
+      ],
+      "avoid": [
+        "marketing hype",
+        "startup storytelling",
+        "luxury branding language",
+        "fake metrics",
+        "unsupported claims"
+      ]
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the About SIPANEL page according to this JSON specification.",
+      "rules": [
+        "Use the existing SIPANEL design system and global components.",
+        "Use Next.js App Router, TypeScript, Tailwind CSS, next-intl, and minimal Framer Motion.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use real industrial assets if available.",
+        "If metrics or assets are missing, create structured placeholders instead of fake content.",
+        "Do not invent company statistics.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if verified business data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  }

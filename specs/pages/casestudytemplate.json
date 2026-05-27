@@ -1,0 +1,362 @@
+{
+    "page_group": "case_study_pages",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "purpose": "Define reusable case study pages that convert SIPANEL project history into measurable engineering proof.",
+    "global_rules": {
+      "positioning": "Case studies must prove SIPANEL engineering control, not just display project photos.",
+      "tone": "measured, technical, proof-driven, direct",
+      "visual_style": "technical_clean_industrial",
+      "supported_languages": ["en", "fa", "ar", "ru"],
+      "rtl_languages": ["fa", "ar"],
+      "content_rules": [
+        "Use real project data only.",
+        "Do not invent metrics.",
+        "If a metric is missing, mark it as pending.",
+        "Every case study must follow challenge → engineering decision → execution detail → measured result → risk prevented.",
+        "Use real project photography when available.",
+        "Prefer technical proof over marketing claims."
+      ]
+    },
+    "page_template": {
+      "route_pattern": {
+        "en": "/en/projects/[slug]",
+        "fa": "/fa/projects/[slug]",
+        "ar": "/ar/projects/[slug]",
+        "ru": "/ru/projects/[slug]"
+      },
+      "section_order": [
+        "case_study_hero",
+        "project_snapshot",
+        "challenge_section",
+        "engineering_decision_section",
+        "execution_detail_section",
+        "technical_proof_gallery",
+        "measured_result_section",
+        "risk_prevented_section",
+        "related_services",
+        "related_case_studies",
+        "conversion_cta"
+      ]
+    },
+    "case_study_hero": {
+      "layout": {
+        "mobile": "stacked",
+        "desktop": "split_55_45_text_left_image_right"
+      },
+      "required_fields": [
+        "project_name",
+        "project_type",
+        "location",
+        "main_service",
+        "hero_image",
+        "short_summary"
+      ],
+      "content_rules": [
+        "Hero headline must be project-specific.",
+        "Do not use exaggerated claims.",
+        "Show service category clearly.",
+        "Use real industrial project image."
+      ],
+      "cta": {
+        "primary": "Request Similar Project Review",
+        "secondary": "Explore Related Systems"
+      }
+    },
+    "project_snapshot": {
+      "layout": {
+        "mobile": "2_column_compact_grid",
+        "desktop": "horizontal_metric_strip"
+      },
+      "fields": [
+        {
+          "key": "location",
+          "label": "Location",
+          "required": true
+        },
+        {
+          "key": "area_m2",
+          "label": "Project Area",
+          "required": false,
+          "missing_behavior": "hide_or_mark_pending"
+        },
+        {
+          "key": "duration_days",
+          "label": "Execution Duration",
+          "required": false,
+          "missing_behavior": "hide_or_mark_pending"
+        },
+        {
+          "key": "system_type",
+          "label": "System Type",
+          "required": true
+        },
+        {
+          "key": "scope",
+          "label": "SIPANEL Scope",
+          "required": true
+        }
+      ],
+      "rules": [
+        "No fake counters.",
+        "No animated metrics unless verified.",
+        "Preserve original measurement units."
+      ]
+    },
+    "challenge_section": {
+      "title": "Project Challenge",
+      "purpose": "Explain the real risk, complexity, or execution problem.",
+      "content_structure": [
+        "short_problem_summary",
+        "3_to_5_challenge_points",
+        "business_or_execution_risk"
+      ],
+      "approved_topics": [
+        "leakage risk",
+        "material waste",
+        "tight installation sequence",
+        "complex geometry",
+        "coordination issue",
+        "cold room insulation requirement",
+        "large-span roofing condition",
+        "facade alignment challenge"
+      ]
+    },
+    "engineering_decision_section": {
+      "title": "Engineering Decision",
+      "purpose": "Show how SIPANEL solved the project before or during execution.",
+      "content_structure": [
+        "decision_summary",
+        "technical_reasoning",
+        "selected_system_logic",
+        "coordination_or_shop_drawing_note"
+      ],
+      "rules": [
+        "Explain why the decision reduced project risk.",
+        "Use technical clarity, not jargon-heavy explanation.",
+        "Connect decision to measurable or practical outcome."
+      ]
+    },
+    "execution_detail_section": {
+      "title": "Controlled Execution",
+      "purpose": "Show how SIPANEL managed installation and delivery.",
+      "content_structure": [
+        "installation_sequence",
+        "procurement_control",
+        "quality_checkpoints",
+        "coordination_with_site_team"
+      ],
+      "quality_checkpoints_examples": [
+        "panel alignment",
+        "flashing installation",
+        "roof drainage detail",
+        "fastener placement",
+        "joint overlap",
+        "edge condition",
+        "final inspection"
+      ]
+    },
+    "technical_proof_gallery": {
+      "title": "Technical Proof",
+      "layout": {
+        "mobile": "swipeable_cards_with_zoom",
+        "desktop": "grid_with_fullscreen_viewer"
+      },
+      "asset_types": [
+        "project_image",
+        "shop_drawing",
+        "drainage_detail",
+        "installation_photo",
+        "before_after",
+        "BOM_MTO_preview",
+        "inspection_photo"
+      ],
+      "interaction": {
+        "fullscreen_viewer": true,
+        "zoom_enabled": true,
+        "keyboard_accessible": true,
+        "mobile_pinch_zoom": true
+      },
+      "rules": [
+        "Use real proof assets when available.",
+        "Do not use decorative stock photos.",
+        "Every asset must have alt text.",
+        "Technical assets should include short explanation."
+      ]
+    },
+    "measured_result_section": {
+      "title": "Measured Result",
+      "purpose": "Present verified results without exaggeration.",
+      "result_fields": [
+        {
+          "key": "completed_area_m2",
+          "label": "Completed Area",
+          "verification": "required"
+        },
+        {
+          "key": "duration_days",
+          "label": "Completed In",
+          "verification": "required_if_shown"
+        },
+        {
+          "key": "waste_reduction_percent",
+          "label": "Waste Reduction",
+          "verification": "required_if_shown"
+        },
+        {
+          "key": "rework_reduced",
+          "label": "Rework Reduced",
+          "verification": "required_if_shown"
+        },
+        {
+          "key": "leakage_test_result",
+          "label": "Leakage Test Result",
+          "verification": "required_if_shown"
+        }
+      ],
+      "missing_data_behavior": [
+        "Do not fabricate.",
+        "Show qualitative result only if numeric result is not verified.",
+        "Mark internal data as pending if needed."
+      ]
+    },
+    "risk_prevented_section": {
+      "title": "Risk Prevented",
+      "purpose": "Connect the project result to SIPANEL positioning.",
+      "risk_categories": [
+        "leakage risk",
+        "material waste",
+        "hidden cost",
+        "installation delay",
+        "coordination error",
+        "rework",
+        "poor system selection"
+      ],
+      "content_rule": "Each risk prevented must explain what could have gone wrong and how SIPANEL reduced that risk."
+    },
+    "related_services": {
+      "title": "Related Systems",
+      "links": [
+        "Sandwich Panel Systems",
+        "Standing Seam & ZIP Tech Roofing",
+        "Aluminium Cladding & Covering"
+      ],
+      "rules": [
+        "Link only to relevant service pages.",
+        "Use internal links for SEO."
+      ]
+    },
+    "related_case_studies": {
+      "title": "Related Projects",
+      "layout": {
+        "mobile": "horizontal_swipe_cards",
+        "desktop": "3_card_grid"
+      },
+      "minimum": 2,
+      "maximum": 3
+    },
+    "conversion_cta": {
+      "headline": "Need This Level of Control for Your Project?",
+      "text": "Request an engineering review before procurement and installation.",
+      "primary_cta": "Get Free Engineering Review",
+      "secondary_cta": "Request Project Cost Check"
+    },
+    "seo": {
+      "schema": [
+        "Article",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "metadata_rules": [
+        "Title must include project type and SIPANEL.",
+        "Meta description must include challenge, system type, and engineering result if verified.",
+        "Use project image as Open Graph image.",
+        "Add localized metadata for en/fa/ar/ru.",
+        "Add canonical per language.",
+        "Add hreflang for all languages."
+      ],
+      "internal_linking": [
+        "Link to related system page.",
+        "Link to RFQ/contact page.",
+        "Link to related case studies.",
+        "Link to relevant technical resource."
+      ]
+    },
+    "analytics_events": [
+      "case_study_view",
+      "case_study_gallery_open",
+      "case_study_image_zoom",
+      "case_study_cta_click",
+      "related_service_click",
+      "related_case_study_click",
+      "rfq_start",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "responsive_rules": {
+      "mobile": [
+        "Use concise project snapshot.",
+        "Use swipe gallery.",
+        "Avoid dense technical paragraphs.",
+        "CTA must be repeated after proof section.",
+        "Touch targets minimum 48px."
+      ],
+      "desktop": [
+        "Use 12-column layout.",
+        "Use strong hierarchy.",
+        "Use technical proof gallery near top.",
+        "Keep project metrics visible above first scroll."
+      ]
+    },
+    "sample_case_study_data_template": {
+      "slug": "",
+      "project_name": "",
+      "project_type": "",
+      "location": "",
+      "main_service": "",
+      "system_type": "",
+      "scope": "",
+      "area_m2": "",
+      "duration_days": "",
+      "hero_image": "",
+      "short_summary": "",
+      "challenge": {
+        "summary": "",
+        "points": []
+      },
+      "engineering_decision": {
+        "summary": "",
+        "technical_reasoning": "",
+        "selected_system_logic": ""
+      },
+      "execution_detail": {
+        "installation_sequence": "",
+        "procurement_control": "",
+        "quality_checkpoints": []
+      },
+      "technical_assets": [],
+      "measured_result": {
+        "completed_area_m2": "",
+        "duration_days": "",
+        "waste_reduction_percent": "",
+        "leakage_test_result": "",
+        "verification_status": "pending"
+      },
+      "risk_prevented": [],
+      "related_services": [],
+      "related_case_studies": []
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement reusable localized case study pages based on this JSON specification.",
+      "rules": [
+        "Build a reusable CaseStudyPage component powered by case study data.",
+        "Do not invent project data or metrics.",
+        "If real data is missing, create the structure and mark fields as pending.",
+        "Use real assets from project folders when available.",
+        "Implement fullscreen technical proof viewer.",
+        "Implement localized routes for EN, FA, AR, RU.",
+        "Preserve RTL layout for FA and AR.",
+        "Do not ask approval for normal implementation decisions."
+      ]
+    }
+  }

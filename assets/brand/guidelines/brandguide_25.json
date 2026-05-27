@@ -1,0 +1,272 @@
+{
+    "page": {
+      "number": 25,
+      "title": "Modal & Overlay System",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the structure, behavior, accessibility, motion, responsive rules, and technical use cases for SIPANEL modals, overlays, drawers, and fullscreen viewers.",
+    "modal_philosophy": {
+      "statement": "Modals and overlays must focus user attention without interrupting technical clarity or creating interaction friction.",
+      "core_principles": [
+        "Purposeful interruption only",
+        "Clear user control",
+        "Accessible focus behavior",
+        "Mobile-friendly layout",
+        "Fast technical inspection",
+        "Minimal visual distraction"
+      ]
+    },
+    "overlay_types": {
+      "standard_modal": {
+        "purpose": "Focused content, confirmations, form steps, and short contextual actions.",
+        "usage": [
+          "RFQ confirmation",
+          "Resource download form",
+          "Contact confirmation",
+          "Short technical explanation"
+        ]
+      },
+      "fullscreen_viewer": {
+        "purpose": "Detailed inspection of technical diagrams, shop drawings, project images, and engineering visuals.",
+        "usage": [
+          "Diagram viewer",
+          "Shop drawing preview",
+          "Waterproofing detail inspection",
+          "Case study image gallery"
+        ]
+      },
+      "side_drawer": {
+        "purpose": "Navigation, filters, technical resource menus, or contextual panels.",
+        "usage": [
+          "Mobile menu",
+          "Resource filters",
+          "Technical quick access",
+          "Language selector"
+        ]
+      },
+      "bottom_sheet": {
+        "purpose": "Mobile-first actions and short decision panels.",
+        "usage": [
+          "Sticky CTA expansion",
+          "Quick contact options",
+          "Mobile resource actions"
+        ]
+      }
+    },
+    "visual_structure": {
+      "overlay_background": {
+        "color": "rgba(5,6,7,0.72)",
+        "rules": [
+          "Dim background clearly.",
+          "Avoid heavy blur on mobile.",
+          "Do not reduce modal readability."
+        ]
+      },
+      "modal_surface": {
+        "background": "#FFFFFF",
+        "dark_surface": "#0F1113",
+        "border_radius": "12px",
+        "shadow": "0 24px 80px rgba(0,0,0,0.35)",
+        "padding_mobile": "20px",
+        "padding_desktop": "32px"
+      },
+      "close_button": {
+        "required": true,
+        "minimum_touch_target": "48px",
+        "position": "top_right_ltr_top_left_rtl"
+      }
+    },
+    "behavior_rules": {
+      "opening": [
+        "Open only after direct user intent.",
+        "Avoid automatic aggressive popups.",
+        "Preserve scroll position.",
+        "Focus should move into modal."
+      ],
+      "closing": [
+        "Allow close button.",
+        "Allow ESC key on desktop.",
+        "Allow tapping overlay for non-critical modals.",
+        "Return focus to triggering element."
+      ],
+      "scrolling": [
+        "Prevent background scroll while modal is open.",
+        "Allow internal modal scroll when content exceeds viewport.",
+        "Keep close action visible."
+      ]
+    },
+    "motion_rules": {
+      "open_transition": {
+        "type": "fade_overlay_and_subtle_scale",
+        "duration": "250ms-300ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "close_transition": {
+        "type": "fade_out",
+        "duration": "150ms-200ms"
+      },
+      "rules": [
+        "No bounce effects.",
+        "No excessive zoom.",
+        "Respect prefers-reduced-motion.",
+        "Technical viewers should prioritize responsiveness over animation."
+      ]
+    },
+    "responsive_rules": {
+      "mobile": [
+        "Use fullscreen or bottom sheet when content is complex.",
+        "Maintain 20px safe padding.",
+        "Keep close button thumb-accessible.",
+        "Avoid stacked modals.",
+        "Technical diagrams should open fullscreen."
+      ],
+      "tablet": [
+        "Use centered modal or side drawer depending on content.",
+        "Preserve touch-friendly controls."
+      ],
+      "desktop": [
+        "Use centered modal for focused tasks.",
+        "Use fullscreen viewer for complex diagrams.",
+        "Limit modal width for reading comfort."
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "Trap focus inside modal while open.",
+        "Return focus after closing.",
+        "Use aria-modal='true'.",
+        "Use role='dialog' or role='alertdialog' where appropriate.",
+        "Modal title must be programmatically associated.",
+        "Close button must have accessible label.",
+        "Keyboard navigation required."
+      ],
+      "focus_rules": [
+        "Initial focus should move to modal title or first actionable element.",
+        "Do not focus destructive actions first.",
+        "Focus outline must remain visible."
+      ]
+    },
+    "technical_viewer_rules": {
+      "diagram_viewer": {
+        "required_features": [
+          "Fullscreen mode",
+          "Pinch-to-zoom",
+          "Drag-to-pan",
+          "Reset zoom",
+          "Visible close button",
+          "Readable annotations"
+        ],
+        "rules": [
+          "Load high-resolution asset only after interaction.",
+          "Avoid PDF embeds on mobile.",
+          "Use optimized image or SVG previews.",
+          "Do not obstruct technical details with CTA overlays."
+        ]
+      },
+      "annotation_behavior": [
+        "Show limited callouts in preview.",
+        "Allow expanded callouts in fullscreen.",
+        "Keep labels short and readable.",
+        "Use orange only for critical technical emphasis."
+      ]
+    },
+    "form_modal_rules": {
+      "usage": [
+        "Resource download forms",
+        "Short RFQ steps",
+        "Callback request",
+        "Contact confirmation"
+      ],
+      "rules": [
+        "Keep forms short.",
+        "Avoid long multi-field modal forms on mobile.",
+        "Use step-based flow when more detail is required.",
+        "Show success confirmation clearly."
+      ]
+    },
+    "overlay_content_rules": {
+      "rules": [
+        "Use clear title and purpose.",
+        "Avoid dense paragraphs.",
+        "Use short sections and bullets.",
+        "Place primary action at bottom.",
+        "Avoid multiple competing actions."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Mirror close button position.",
+        "Align content based on language direction.",
+        "Use logical spacing.",
+        "Allow title and CTA text expansion.",
+        "Flip directional controls when required."
+      ]
+    },
+    "analytics_tracking": {
+      "required_events": [
+        "modal_open",
+        "modal_close",
+        "modal_cta_click",
+        "overlay_dismiss",
+        "diagram_open",
+        "diagram_zoom",
+        "diagram_close",
+        "resource_modal_submit"
+      ],
+      "tracked_parameters": [
+        "modal_type",
+        "modal_id",
+        "trigger_source",
+        "device_type",
+        "language",
+        "interaction_type"
+      ]
+    },
+    "forbidden_patterns": [
+      "Automatic popups before trust is built",
+      "Stacked modals",
+      "Tiny close buttons",
+      "Modal without keyboard escape",
+      "Background scroll while modal is open",
+      "Unreadable mobile modal content",
+      "Heavy blur effects on mobile",
+      "Fullscreen diagram viewer without zoom",
+      "CTA overlay blocking technical visuals"
+    ],
+    "approved_characteristics": [
+      "Focused",
+      "Accessible",
+      "Controlled",
+      "Technical",
+      "Mobile-friendly",
+      "Readable",
+      "Purpose-driven"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Modal philosophy",
+        "Overlay type overview",
+        "Visual structure and states",
+        "Responsive modal behavior",
+        "Technical diagram viewer rules",
+        "Accessibility requirements",
+        "Correct vs incorrect overlay examples"
+      ],
+      "visual_direction": [
+        "Modal anatomy diagram",
+        "Desktop and mobile overlay examples",
+        "Fullscreen diagram viewer mockup",
+        "Bottom sheet interaction preview",
+        "Focus management diagram"
+      ]
+    },
+    "implementation_notes": [
+      "Modals must be used only when they improve focus or technical inspection.",
+      "Accessibility and focus management are mandatory.",
+      "Mobile diagram viewing must use fullscreen behavior with zoom support.",
+      "Avoid interruptive modal patterns that weaken trust or conversion quality."
+    ]
+  }

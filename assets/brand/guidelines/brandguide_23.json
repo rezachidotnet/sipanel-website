@@ -1,0 +1,281 @@
+{
+    "page": {
+      "number": 23,
+      "title": "Card System",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the structure, hierarchy, interaction behavior, spacing, responsive adaptation, and usage rules for SIPANEL card components.",
+    "card_philosophy": {
+      "statement": "Cards should organize technical information into structured, readable, and scalable content units.",
+      "core_principles": [
+        "Clear hierarchy",
+        "Strong readability",
+        "Structured information grouping",
+        "Minimal visual noise",
+        "Consistent spacing rhythm",
+        "Responsive modularity"
+      ]
+    },
+    "card_system_goals": [
+      {
+        "goal": "Improve Content Scanning",
+        "description": "Help users quickly understand technical services, proof, and project information."
+      },
+      {
+        "goal": "Support Modular Design",
+        "description": "Enable scalable layouts and reusable interface structures."
+      },
+      {
+        "goal": "Preserve Technical Clarity",
+        "description": "Prevent dense engineering information from becoming visually overwhelming."
+      }
+    ],
+    "card_types": {
+      "service_card": {
+        "purpose": "Present SIPANEL services and engineering capabilities.",
+        "content_structure": [
+          "Icon",
+          "Headline",
+          "Short explanation",
+          "Optional CTA"
+        ]
+      },
+      "proof_card": {
+        "purpose": "Display measurable proof, metrics, or technical validation.",
+        "content_structure": [
+          "Metric",
+          "Supporting explanation",
+          "Optional proof reference"
+        ]
+      },
+      "case_study_card": {
+        "purpose": "Present project examples and engineering outcomes.",
+        "content_structure": [
+          "Project image",
+          "Project title",
+          "Challenge summary",
+          "Result highlight",
+          "CTA"
+        ]
+      },
+      "resource_card": {
+        "purpose": "Organize downloadable technical content and resources.",
+        "content_structure": [
+          "Resource type",
+          "Title",
+          "Short description",
+          "Download action"
+        ]
+      },
+      "technical_card": {
+        "purpose": "Display technical details, diagrams, or engineering explanations.",
+        "content_structure": [
+          "Diagram or image",
+          "Technical label",
+          "Explanation",
+          "Optional annotation"
+        ]
+      }
+    },
+    "card_structure_rules": {
+      "padding": {
+        "mobile": "20px",
+        "desktop": "24px"
+      },
+      "border_radius": "8px",
+      "border": "1px solid #D9DADD",
+      "background": "#FFFFFF",
+      "shadow": "0 4px 12px rgba(0,0,0,0.06)",
+      "rules": [
+        "Use consistent internal spacing.",
+        "Avoid overcrowded content.",
+        "Keep one primary purpose per card.",
+        "Preserve readable visual hierarchy."
+      ]
+    },
+    "spacing_and_layout": {
+      "vertical_spacing": {
+        "headline_to_body": "12px",
+        "body_to_cta": "20px",
+        "card_gap_mobile": "16px",
+        "card_gap_desktop": "24px"
+      },
+      "layout_rules": [
+        "Align content consistently.",
+        "Use grid-based placement.",
+        "Preserve equal visual rhythm.",
+        "Avoid uneven card heights when possible."
+      ]
+    },
+    "interaction_behavior": {
+      "hover": {
+        "desktop": [
+          "Subtle elevation increase",
+          "Slight border emphasis",
+          "Optional CTA highlight"
+        ]
+      },
+      "active": {
+        "motion": "scale(0.99)",
+        "duration": "100ms"
+      },
+      "focus": {
+        "outline": "2px solid #FF6A00",
+        "required": true
+      },
+      "rules": [
+        "Interactions should remain subtle.",
+        "Avoid aggressive motion.",
+        "Cards should feel stable and controlled."
+      ]
+    },
+    "responsive_behavior": {
+      "mobile": {
+        "layout": "single_column_or_horizontal_swipe",
+        "rules": [
+          "Preserve readable spacing.",
+          "Use swipe patterns for case studies when necessary.",
+          "Avoid dense multi-column layouts."
+        ]
+      },
+      "tablet": {
+        "layout": "2-column grid"
+      },
+      "desktop": {
+        "layout": "2-4 column grid depending on content density"
+      }
+    },
+    "content_rules": {
+      "headline_rules": [
+        "Keep headlines concise.",
+        "Use technical and direct wording.",
+        "Avoid vague marketing language."
+      ],
+      "body_rules": [
+        "Use short readable paragraphs.",
+        "Limit technical density.",
+        "Prefer bullet summaries when needed."
+      ],
+      "image_rules": [
+        "Use real industrial imagery.",
+        "Maintain consistent aspect ratios.",
+        "Avoid decorative stock visuals."
+      ]
+    },
+    "technical_card_rules": {
+      "diagram_behavior": [
+        "Use simplified previews.",
+        "Allow modal expansion for detailed views.",
+        "Limit visible annotations in preview mode."
+      ],
+      "annotation_rules": [
+        "Use orange only for key highlights.",
+        "Avoid annotation overload.",
+        "Maintain mobile readability."
+      ]
+    },
+    "cta_rules": {
+      "rules": [
+        "Use context-specific CTA labels.",
+        "Place CTA consistently within card layouts.",
+        "Avoid multiple competing actions inside one card."
+      ],
+      "approved_examples": [
+        "View Technical Details",
+        "Explore Project",
+        "Download Resource",
+        "Request Engineering Review"
+      ]
+    },
+    "dark_surface_behavior": {
+      "background": "#0F1113",
+      "border": "1px solid rgba(255,255,255,0.12)",
+      "text": "#FFFFFF",
+      "rules": [
+        "Maintain contrast accessibility.",
+        "Reduce shadow intensity on dark backgrounds.",
+        "Use subtle surface layering."
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "Cards must remain keyboard accessible when interactive.",
+        "Focus states required.",
+        "Maintain WCAG AA contrast.",
+        "Avoid hover-only communication."
+      ],
+      "touch_targets": [
+        "Interactive card actions must meet 48px minimum touch size."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Mirror content alignment in RTL layouts.",
+        "Allow text expansion across languages.",
+        "Flip directional icons.",
+        "Preserve card hierarchy consistency."
+      ]
+    },
+    "analytics_tracking": {
+      "required_events": [
+        "card_click",
+        "case_study_open",
+        "resource_download_click",
+        "technical_card_expand",
+        "proof_card_interaction"
+      ],
+      "tracked_parameters": [
+        "card_type",
+        "card_title",
+        "page_location",
+        "device_type",
+        "language"
+      ]
+    },
+    "forbidden_card_patterns": [
+      "Overcrowded content",
+      "Inconsistent spacing",
+      "Decorative visual effects",
+      "Multiple competing CTAs",
+      "Uneven layout rhythm",
+      "Heavy shadows",
+      "Tiny mobile touch targets",
+      "Dense technical walls inside cards"
+    ],
+    "approved_card_characteristics": [
+      "Structured",
+      "Readable",
+      "Technical",
+      "Modular",
+      "Scalable",
+      "Industrial",
+      "Minimal"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Card philosophy",
+        "Card type overview",
+        "Spacing and structure rules",
+        "Interaction behavior",
+        "Responsive card layouts",
+        "Technical card examples",
+        "Correct vs incorrect usage"
+      ],
+      "visual_direction": [
+        "Card component grid",
+        "Responsive card layout examples",
+        "Dark and light card previews",
+        "Case study card showcase",
+        "Technical card interaction examples"
+      ]
+    },
+    "implementation_notes": [
+      "All cards must map directly to design tokens and reusable frontend components.",
+      "Cards should support modular scalability across the SIPANEL ecosystem.",
+      "Technical readability and conversion clarity must always remain prioritized over decorative styling.",
+      "Responsive card behavior must be tested across mobile, tablet, desktop, and RTL layouts."
+    ]
+  }

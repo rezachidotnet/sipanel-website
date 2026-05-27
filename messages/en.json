@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "title": "SIPANEL | Industrial Building Envelope Engineering",
+    "description": "Engineering-first industrial envelope systems with controlled design, procurement, and installation."
+  },
+  "nav": {
+    "home": "Home",
+    "systems": "Systems",
+    "projects": "Projects",
+    "process": "Process",
+    "about": "About",
+    "resources": "Resources",
+    "contact": "Contact"
+  },
+  "header": {
+    "selectLanguage": "Select language",
+    "menu": "Menu",
+    "phone": "+98 31 3675 1101",
+    "email": "info@sipanelco.ir",
+    "cta": "Get Free Engineering Review"
+  },
+  "footer": {
+    "navigationLabel": "Footer navigation",
+    "systems": "Systems",
+    "projects": "Projects",
+    "resources": "Resources",
+    "company": "Company",
+    "contact": "Contact"
+  },
+  "trustBar": {
+    "ariaLabel": "SIPANEL project proof metrics",
+    "metrics": {
+      "yearsExperience": {
+        "value": "30+",
+        "label": "Years of Industrial Experience"
+      },
+      "industrialProjects": {
+        "value": "400+",
+        "label": "Industrial Projects"
+      },
+      "executedPanelArea": {
+        "value": "10,000,000+ m²",
+        "label": "Executed Panel Area"
+      }
+    }
+  },
+  "proofSnapshot": {
+    "eyebrow": "Engineering Proof",
+    "title": "Technical control before execution",
+    "description": "Before procurement and installation, shop drawings, waterproofing logic, and material quantities are reviewed to reduce project execution risk.",
+    "actionLabel": "View technical details",
+    "closeLabel": "Close",
+    "backdropCloseLabel": "Close technical viewer",
+    "zoomInLabel": "Zoom in",
+    "zoomOutLabel": "Fit view",
+    "riskStripLabel": "Pre-execution risk reduction outcomes",
+    "riskStrip": {
+      "installationError": "Reduced installation error",
+      "materialWaste": "Reduced material waste",
+      "rework": "Reduced rework",
+      "waterIngress": "Reduced water ingress risk"
+    },
+    "cards": {
+      "shopDrawing": {
+        "title": "Shop Drawing Precision",
+        "proof": "Panel layout, installation direction, overlap locations, and connection points are reviewed before execution to reduce installation error, material waste, and rework.",
+        "alt": "Shop drawing preview showing panel layout, installation direction, and connection points"
+      },
+      "waterproofing": {
+        "title": "Waterproofing and Flashing Logic",
+        "proof": "Water path, roof slope, flashing, overlaps, and gutters are checked before installation to reduce water ingress and structural damage risk.",
+        "alt": "Technical waterproofing diagram showing flashing, water path, roof slope, and gutter logic"
+      },
+      "materialOptimization": {
+        "title": "BOM / MTO Control",
+        "proof": "Quantities, lengths, connections, and consumables are checked before procurement to reduce material shortages, overbuying, and execution stoppage.",
+        "alt": "BOM and MTO preview showing quantities, lengths, connections, and consumables"
+      }
+    }
+  },
+  "stickyCta": {
+    "label": "Mobile project action",
+    "primary": "Get Engineering Review",
+    "whatsapp": "WhatsApp"
+  },
+  "process": {
+    "title": "Engineering → Procurement → Execution",
+    "steps": {
+      "engineeringReview": {
+        "title": "Engineering Review",
+        "description": "Project drawings, site constraints, system requirements, and leakage risks are reviewed before supply."
+      },
+      "smartProcurement": {
+        "title": "Smart Procurement",
+        "description": "Panel quantities, accessories, flashings, and project materials are planned to reduce waste and delays."
+      },
+      "controlledInstallation": {
+        "title": "Controlled Installation",
+        "description": "Execution follows coordinated sequences, technical details, and inspection-based quality control."
+      },
+      "finalVerification": {
+        "title": "Final Verification",
+        "description": "The delivered system is checked against execution quality, waterproofing details, and project requirements."
+      }
+    }
+  },
+  "caseStudies": {
+    "eyebrow": "Project Proof",
+    "title": "Case studies with measurable engineering context",
+    "cta": "Explore Proven Projects",
+    "challenge": "Challenge",
+    "engineeringDecision": "Engineering Decision",
+    "measuredResult": "Measured Result"
+  },
+  "comparison": {
+    "eyebrow": "Smart Comparison",
+    "title": "Supply-Only vs Engineering-Controlled Execution",
+    "intro": "The right covering decision directly affects execution quality, project cost, schedule, and risk.",
+    "columns": {
+      "supplyOnly": "Typical Supply-Only Approach",
+      "sipanel": "SIPANEL Engineering-Controlled Approach"
+    },
+    "mobile": {
+      "ariaLabel": "Comparison of typical execution and engineered installation",
+      "engineered": "Engineered installation",
+      "normal": "Typical execution",
+      "note": {
+        "title": "Smart selection, controlled execution",
+        "text": "Reduce project risk by choosing SIPANEL's engineered covering approach."
+      },
+      "points": {
+        "coverSelection": {
+          "label": "Covering selection",
+          "engineered": "Selected by project needs, building use, and detailed calculations",
+          "normal": "Selected by availability or price, with risk of error and hidden cost"
+        },
+        "executionQuality": {
+          "label": "Execution quality",
+          "engineered": "Controlled across design, procurement, and project execution",
+          "normal": "Dependent on site execution and non-specialized labor"
+        },
+        "waterproofingInsulation": {
+          "label": "Waterproofing and insulation",
+          "engineered": "Standardized, coordinated, and controllable execution details",
+          "normal": "Risk of water ingress, corrosion, and damage to the structure"
+        },
+        "finalCost": {
+          "label": "Final cost",
+          "engineered": "Lower rework cost and better execution efficiency",
+          "normal": "Repairs, rework, and later damage costs"
+        },
+        "executionSchedule": {
+          "label": "Execution schedule",
+          "engineered": "Precise planning and project management control",
+          "normal": "Dependent on site conditions and unexpected execution problems"
+        }
+      }
+    },
+    "points": {
+      "panelSelection": {
+        "label": "Panel selection",
+        "typical": "Panel type may be selected mainly from availability or price, with limited review of site constraints.",
+        "sipanel": "Panel selection is checked against building use, roof geometry, insulation needs, and execution risk."
+      },
+      "waterproofingResponsibility": {
+        "label": "Waterproofing responsibility",
+        "typical": "Waterproofing details may be left to site interpretation during installation.",
+        "sipanel": "Drainage, flashing, overlap, and sealing logic are coordinated before execution to reduce leakage risk."
+      },
+      "materialWaste": {
+        "label": "Material waste",
+        "typical": "Quantities can be ordered before panel layout and accessory coordination are fully resolved.",
+        "sipanel": "Procurement follows coordinated layouts and material planning to support waste control."
+      },
+      "installationCoordination": {
+        "label": "Installation coordination",
+        "typical": "Installers may resolve sequence and alignment issues directly on site.",
+        "sipanel": "Installation follows planned sequencing, alignment checkpoints, and coordinated technical details."
+      },
+      "riskBeforeConstruction": {
+        "label": "Risk before construction",
+        "typical": "Project risks often become visible after materials arrive or installation starts.",
+        "sipanel": "Key risks are reviewed before procurement so decisions can be controlled earlier."
+      },
+      "technicalDocumentation": {
+        "label": "Technical documentation",
+        "typical": "Documentation may be limited to product information and basic installation guidance.",
+        "sipanel": "Shop drawings, details, and procurement logic support clearer responsibility during execution."
+      }
+    }
+  },
+  "resourcesPreview": {
+    "title": "Technical Resources for Better Project Decisions",
+    "cta": "Download Engineering Resource",
+    "pending": "Resource file pending",
+    "types": {
+      "guide": "Guide",
+      "checklist": "Checklist"
+    },
+    "cards": {
+      "panelSelection": {
+        "title": "Panel Selection Guide",
+        "description": "Understand panel type, core selection, thickness, joint logic, insulation needs, and project conditions before procurement."
+      },
+      "roofLeakage": {
+        "title": "Roof Leakage Prevention Checklist",
+        "description": "Review slope, drainage, flashings, penetrations, gutters, and installation risk before roofing starts."
+      },
+      "shopDrawing": {
+        "title": "Shop Drawing Review Guide",
+        "description": "Check panel layout, accessories, flashing logic, quantities, and execution coordination before installation."
+      }
+    }
+  },
+  "rfq": {
+    "eyebrow": "Request Engineering Review",
+    "title": "Start Your Project With Confidence.",
+    "intro": "Send the project details SIPANEL needs to review envelope scope, system selection, procurement risk, and execution requirements.",
+    "backendPending": "Backend integration pending",
+    "backendReady": "Secure backend submission is active",
+    "quickMicrocopy": "You can submit only your name and phone number for a quick consultation.",
+    "stepsLabel": "RFQ form steps",
+    "steps": {
+      "0": "Contact Details",
+      "1": "Project Scope",
+      "2": "Technical Details"
+    },
+    "fields": {
+      "name": "Full Name",
+      "company": "Company",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "project_type": "Project Type",
+      "project_location": "Project Location",
+      "estimated_area": "Estimated Area",
+      "project_stage": "Project Stage",
+      "main_concern": "Main Concern",
+      "message": "Project Details",
+      "optional_file_upload": "Upload Drawing or Project File"
+    },
+    "projectTypes": {
+      "sandwichPanel": "Sandwich Panel Systems",
+      "standingSeam": "Standing Seam & ZIP Tech Roofing",
+      "aluminiumCladding": "Aluminium Cladding & Covering",
+      "fullEnvelope": "Full Industrial Envelope",
+      "technicalReview": "Technical Review / Consultation",
+      "other": "Other"
+    },
+    "placeholders": {
+      "select": "Select project type"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address.",
+      "message": "Add a short technical project description.",
+      "fileSize": "Maximum file size is 10MB.",
+      "fileType": "Allowed formats: PDF, JPG, PNG, DWG.",
+      "spam": "Spam protection check failed."
+    },
+    "contact": {
+      "title": "SIPANEL contact information",
+      "note": "Contact details are shown only from configured production contact information."
+    },
+    "fileHelp": "Optional. PDF, JPG, PNG, or DWG up to 10MB.",
+    "requiredIndicator": "Required",
+    "optionalIndicator": "Optional",
+    "spamPlaceholder": "Spam protection placeholder enabled.",
+    "privacy": "Your project details are used only for engineering review and follow-up.",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Request Technical Consultation",
+    "submitting": "Sending Request...",
+    "sent": "Request sent",
+    "success": "Your request has been received. SIPANEL will review the project details and contact you through the provided information.",
+    "error": "The request could not be sent safely. Please review the fields and try again."
+  },
+  "hero": {
+    "eyebrow": "Engineering Power. Controlled Execution.",
+    "headline": "Reduce Project Risk Before Construction Begins.",
+    "subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
+    "primaryCta": "Get Free Engineering Review",
+    "secondaryCta": "Request Project Cost Check",
+    "visualAlt": "SIPANEL industrial building envelope project with engineered roof and facade systems"
+  }
+}

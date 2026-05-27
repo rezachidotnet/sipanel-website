@@ -1,0 +1,45 @@
+{
+              "project_name": "Shahr Babak Stadium Entrance",
+              "slug": "shahr-babak-stadium-entrance",
+              "location": "Shahr Babak, Kerman, Iran",
+              "category": "Sports & Aluminium Cladding Structures",
+              "project_type": "Curved architectural stadium entrance facade",
+              "system_type": "Aluminium Cladding System",
+              "status": "Completed",
+              "area": "700 m²",
+              "challenge": "Execution of a complex curved architectural stadium entrance requiring precise aluminium cladding detailing, adaptable surface coordination, waterproofing continuity, and visually seamless facade integration across multiple curved geometries.",
+              "sipanel_solution": "SIPANEL developed a customized aluminium cladding and flashing system using coordinated covering solutions specifically optimized for curved architectural geometry and structural integration.",
+              "engineering_decision": "Engineering teams combined multiple aluminium cladding methods, curved flashing details, and installation sequencing strategies to maintain architectural continuity, structural durability, drainage control, and precise facade alignment.",
+              "execution_detail": "Execution followed precision shop drawings, curvature alignment checkpoints, controlled installation sequencing, and coordinated sealing workflows to ensure smooth surface transitions and reliable weather protection.",
+              "measured_result": "Successful delivery of a visually distinctive aluminium-clad stadium entrance with precise architectural finishing, controlled facade integration, and long-term weather-resistant performance.",
+              "risk_prevented": [
+                "Facade alignment errors",
+                "Water penetration at curved transitions",
+                "Surface waviness",
+                "Flashing inconsistencies",
+                "Improper curvature coordination",
+                "Long-term facade maintenance issues"
+              ],
+              "primary_message": "Precision-engineered aluminium cladding systems designed for complex curved architectural sports structures.",
+              "proof_points": [
+                "Curved aluminium facade execution",
+                "Custom flashing integration",
+                "Architectural continuity control",
+                "Controlled installation sequencing",
+                "Weather-resistant facade detailing"
+              ],
+              "metrics": {
+                "project_area": "700 m²",
+                "facility_type": "Sports stadium entrance",
+                "system_type": "Aluminium cladding facade system",
+                "execution_focus": "Curved geometry precision and waterproof facade integration"
+              },
+              "images": {
+                "hero_desktop": "./projects/babak_sardarb/babak-sardarb-hero-desktop.webp",
+                "hero_mobile": "./projects/babak_sardarb/babak-sardarb-hero-mobile.webp",
+                "card": "./projects/babak_sardarb/babak-sardarb-card.webp",
+                "gallery_large": "./projects/babak_sardarb/babak-sardarb-gallery-large.webp",
+                "installation": "./projects/babak_sardarb/babak-sardarb-installation.webp",
+                "technical_detail": "./projects/babak_sardarb/babak-sardarb-technical-detail.webp"
+              }
+            }

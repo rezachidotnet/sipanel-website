@@ -1,0 +1,258 @@
+{
+    "page": {
+      "number": 15,
+      "title": "Motion Principles",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the motion philosophy, transition behavior, interaction feedback, animation timing, and performance rules for SIPANEL digital experiences.",
+    "motion_philosophy": {
+      "statement": "Motion in SIPANEL interfaces should communicate clarity, responsiveness, and controlled engineering behavior — never decoration or distraction.",
+      "core_principles": [
+        "Function before spectacle",
+        "Subtle over dramatic",
+        "Responsive feedback",
+        "Performance-first motion",
+        "Predictable transitions",
+        "Accessibility-aware behavior"
+      ]
+    },
+    "motion_personality": {
+      "characteristics": [
+        "Controlled",
+        "Technical",
+        "Smooth",
+        "Minimal",
+        "Purposeful",
+        "Structured"
+      ],
+      "avoid_characteristics": [
+        "Playful",
+        "Elastic",
+        "Chaotic",
+        "Flashy",
+        "Over-animated",
+        "Game-like"
+      ]
+    },
+    "animation_goals": [
+      {
+        "goal": "Guide Attention",
+        "description": "Use motion to direct focus toward important actions, proof, or technical information."
+      },
+      {
+        "goal": "Provide Feedback",
+        "description": "Help users understand interaction states and system responses."
+      },
+      {
+        "goal": "Improve Spatial Understanding",
+        "description": "Support transitions between interface states and layouts."
+      },
+      {
+        "goal": "Reinforce Structure",
+        "description": "Motion should strengthen the feeling of engineering precision and interface consistency."
+      }
+    ],
+    "motion_rules": {
+      "general": [
+        "Use subtle movement only when it improves usability.",
+        "Animations should never delay task completion.",
+        "Avoid unnecessary motion in technical workflows.",
+        "Keep transitions predictable and consistent."
+      ],
+      "performance": [
+        "Prioritize GPU-accelerated transforms.",
+        "Avoid layout-shifting animations.",
+        "Minimize animation repaint cost.",
+        "Keep interactions responsive under load."
+      ]
+    },
+    "timing_system": {
+      "fast": {
+        "duration": "150ms",
+        "usage": [
+          "Hover states",
+          "Button feedback",
+          "Icon transitions"
+        ]
+      },
+      "standard": {
+        "duration": "250ms",
+        "usage": [
+          "Dropdowns",
+          "Cards",
+          "Accordion transitions",
+          "Page section reveals"
+        ]
+      },
+      "slow": {
+        "duration": "400ms",
+        "usage": [
+          "Modal entry",
+          "Fullscreen technical viewers",
+          "Major layout transitions"
+        ]
+      }
+    },
+    "easing_curves": {
+      "standard": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "usage": "Default interface motion"
+      },
+      "emphasized": {
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "usage": "Large transitions and overlays"
+      },
+      "linear": {
+        "value": "linear",
+        "usage": "Technical indicators and loaders"
+      }
+    },
+    "approved_motion_patterns": {
+      "fade_in": {
+        "usage": [
+          "Section appearance",
+          "Image loading",
+          "Proof reveals"
+        ]
+      },
+      "slide_up": {
+        "usage": [
+          "Cards",
+          "Modal content",
+          "Mobile drawers"
+        ]
+      },
+      "accordion_expand": {
+        "usage": [
+          "Technical details",
+          "FAQ sections",
+          "Mobile content blocks"
+        ]
+      },
+      "micro_interaction": {
+        "usage": [
+          "Buttons",
+          "Icons",
+          "Hover states",
+          "Navigation feedback"
+        ]
+      }
+    },
+    "forbidden_motion_patterns": [
+      "Bounce animations",
+      "Elastic movement",
+      "Parallax-heavy effects",
+      "Auto-playing decorative motion",
+      "Rotating UI elements",
+      "Flash transitions",
+      "Distracting scroll animations",
+      "Overlapping motion chaos"
+    ],
+    "component_motion_rules": {
+      "buttons": {
+        "hover": "Subtle background and elevation transition",
+        "active": "Quick press feedback",
+        "duration": "150ms"
+      },
+      "cards": {
+        "hover": "Minimal elevation or border emphasis",
+        "movement_limit": "4px maximum"
+      },
+      "navigation": {
+        "mobile_menu": "Slide and fade combination",
+        "dropdowns": "Fast fade and slight vertical motion"
+      },
+      "modals": {
+        "entry": "Fade + slight upward motion",
+        "exit": "Fade only"
+      },
+      "technical_diagrams": {
+        "zoom": "Smooth hardware-accelerated scaling",
+        "annotations": "Minimal fade or line reveal"
+      }
+    },
+    "scroll_behavior": {
+      "rules": [
+        "Preserve smooth but controlled scrolling.",
+        "Avoid scroll hijacking.",
+        "Use scroll-triggered animation sparingly.",
+        "Ensure motion does not interfere with technical readability."
+      ]
+    },
+    "responsive_motion_rules": {
+      "mobile": [
+        "Reduce motion intensity.",
+        "Prioritize responsiveness over visual effect.",
+        "Avoid heavy layered animations."
+      ],
+      "desktop": [
+        "Allow richer transitions only when performance remains high.",
+        "Preserve structured interaction flow."
+      ]
+    },
+    "accessibility_rules": {
+      "prefers_reduced_motion": {
+        "supported": true,
+        "rules": [
+          "Disable non-essential animation.",
+          "Reduce transition duration.",
+          "Preserve usability without motion."
+        ]
+      },
+      "focus_visibility": [
+        "Focus states must remain visible even without animation.",
+        "Motion cannot replace accessibility indicators."
+      ]
+    },
+    "technical_motion_guidelines": {
+      "diagram_interactions": [
+        "Use smooth zoom transitions.",
+        "Maintain annotation readability during movement.",
+        "Avoid sudden viewport jumps."
+      ],
+      "data_visualization": [
+        "Use restrained animation for metrics and technical data.",
+        "Do not animate numbers excessively."
+      ]
+    },
+    "approved_motion_characteristics": [
+      "Subtle",
+      "Controlled",
+      "Predictable",
+      "Responsive",
+      "Technical",
+      "Minimal"
+    ],
+    "incorrect_motion_characteristics": [
+      "Distracting",
+      "Overly playful",
+      "Slow",
+      "Chaotic",
+      "Decorative-only",
+      "Performance-heavy"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Motion philosophy",
+        "Timing and easing system",
+        "Approved motion patterns",
+        "Component interaction examples",
+        "Accessibility behavior",
+        "Correct vs incorrect motion examples"
+      ],
+      "visual_direction": [
+        "Motion timing charts",
+        "Transition diagrams",
+        "Interaction sequence illustrations",
+        "Component animation previews"
+      ]
+    },
+    "implementation_notes": [
+      "All motion values should map directly to frontend motion tokens.",
+      "Motion should improve usability and technical clarity, not visual entertainment.",
+      "Performance optimization is mandatory for all animated behavior.",
+      "Maintain consistent interaction behavior across all SIPANEL interfaces."
+    ]
+  }

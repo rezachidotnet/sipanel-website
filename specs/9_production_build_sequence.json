@@ -1,0 +1,142 @@
+{
+    "production_build_sequence": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "purpose": "Define the correct build order for turning SIPANEL strategy into a production website.",
+  
+      "phase_1_foundation": {
+        "goal": "Create brand-consistent technical foundation.",
+        "steps": [
+          "Validate all JSON files.",
+          "Set design tokens.",
+          "Create responsive grid system.",
+          "Prepare logo and brand assets.",
+          "Prepare image folders."
+        ],
+        "output": [
+          "design system ready",
+          "asset library ready",
+          "component rules ready"
+        ]
+      },
+      "phase_1_multilanguage_setup": {
+        "goal": "Prepare multilingual infrastructure and RTL support.",
+        "steps": [
+          "Configure supported languages.",
+          "Configure RTL support for Persian and Arabic.",
+          "Implement language switcher.",
+          "Prepare translated navigation labels.",
+          "Configure hreflang tags.",
+          "Configure localized routes.",
+          "Test responsive RTL layouts.",
+          "Validate multilingual SEO metadata."
+        ],
+        "priority": "critical"
+      },    
+  
+      "phase_2_core_homepage": {
+        "goal": "Build high-conversion homepage structure.",
+        "steps": [
+          "Build header.",
+          "Build hero section.",
+          "Build trust bar.",
+          "Build proof snapshot.",
+          "Build sticky mobile CTA.",
+          "Build RFQ form."
+        ],
+        "priority": "critical"
+      },
+  
+      "phase_3_engineering_proof": {
+        "goal": "Make SIPANEL engineering authority visible.",
+        "steps": [
+          "Build technical diagram viewer.",
+          "Build shop drawing preview.",
+          "Build drainage/waterproofing proof cards.",
+          "Build BOM/MTO preview.",
+          "Build comparison section."
+        ],
+        "priority": "critical"
+      },
+  
+      "phase_4_case_studies": {
+        "goal": "Convert project history into measurable proof.",
+        "steps": [
+          "Build swipeable mobile project cards.",
+          "Build desktop case study grid.",
+          "Add real project images.",
+          "Add challenge-solution-result structure.",
+          "Add measurable proof fields."
+        ],
+        "priority": "high"
+      },
+  
+      "phase_5_resources_and_leads": {
+        "goal": "Generate qualified technical leads.",
+        "steps": [
+          "Build resource cards.",
+          "Build download forms.",
+          "Build lead magnet flow.",
+          "Connect resource downloads to analytics.",
+          "Connect resource downloads to CRM or email."
+        ],
+        "priority": "high"
+      },
+  
+      "phase_6_seo_expansion": {
+        "goal": "Build landing pages for organic growth.",
+        "steps": [
+          "Create service pages.",
+          "Create industry landing pages.",
+          "Create waterproofing and shop drawing pages.",
+          "Add FAQ schema.",
+          "Add internal links."
+        ],
+        "priority": "high"
+      },
+  
+      "phase_7_tracking_and_optimization": {
+        "goal": "Measure behavior and improve conversion.",
+        "steps": [
+          "Install GA4.",
+          "Install Google Tag Manager.",
+          "Track CTA clicks.",
+          "Track RFQ funnel.",
+          "Track diagram interactions.",
+          "Track resource downloads.",
+          "Review first 30 days of data."
+        ],
+        "priority": "critical"
+      },
+  
+      "phase_8_final_quality_assurance": {
+        "goal": "Verify production readiness.",
+        "steps": [
+          "Run mobile QA.",
+          "Run desktop QA.",
+          "Run Lighthouse tests.",
+          "Check SEO metadata.",
+          "Check form submission.",
+          "Check WhatsApp and phone links.",
+          "Check all analytics events.",
+          "Check all claims and metrics."
+        ],
+        "priority": "critical"
+      },
+  
+      "launch_readiness_gate": {
+        "must_pass": [
+          "No JSON syntax issues.",
+          "No distorted logo.",
+          "Mobile CTA works.",
+          "RFQ form works.",
+          "Hero loads fast.",
+          "Proof appears early.",
+          "All fake or unverified metrics removed.",
+          "Analytics events working.",
+          "SEO basics implemented."
+        ]
+      }
+    }
+  }

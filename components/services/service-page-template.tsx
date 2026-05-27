@@ -1,0 +1,458 @@
+'use client';
+
+import Image, {type StaticImageData} from 'next/image';
+import {Link, type Locale, getDirection, locales} from '@/i18n/routing';
+import {
+  buildBreadcrumbListSchema,
+  buildFaqPageSchema,
+  buildOrganizationSchema as buildSharedOrganizationSchema,
+  buildServiceSchema as buildSharedServiceSchema
+} from '@/lib/seo/schema';
+import {trackCaseStudyEvent, trackEvent, trackFaqEvent, trackProofEvent, trackRfqEvent} from '@/lib/analytics/events';
+
+type LocalizedRoutes = Record<Locale, string>;
+
+type ServiceStep = {
+  title: string;
+  description: string;
+};
+
+type ServiceTechnicalAsset = {
+  title: string;
+  description?: string;
+  image?: StaticImageData;
+  alt?: string;
+  assetStatus?: 'available' | 'pending';
+};
+
+type ServiceCaseStudy = {
+  projectName: string;
+  location: string;
+  projectType?: string;
+  areaM2?: string;
+  challenge: string;
+  measuredResult: string;
+  href?: string;
+  image?: StaticImageData;
+  assetStatus?: 'available' | 'pending';
+};
+
+type ServiceFaq = {
+  question: string;
+  answer: string;
+};
+
+export type ServicePageTemplateData = {
+  id: string;
+  routes: LocalizedRoutes;
+  seo: {
+    primaryKeyword: string;
+    title: string;
+    metaDescription: string;
+  };
+  hero: {
+    eyebrow: string;
+    h1: string;
+    subheadline: string;
+    primaryCta: string;
+    secondaryCta?: string;
+    visualDirection: string;
+    visual?: StaticImageData;
+    visualAlt?: string;
+    trustMicrocopy?: string;
+  };
+  problemContext: {
+    title: string;
+    cards: string[];
+  };
+  engineeringApproach: {
+    title: string;
+    steps: ServiceStep[];
+  };
+  systemApplications: {
+    title: string;
+    applications: string[];
+  };
+  technicalProof: {
+    title: string;
+    description: string;
+    requiredVisuals: string[];
+    assets?: ServiceTechnicalAsset[];
+  };
+  processWorkflow: {
+    title: string;
+    steps: ServiceStep[];
+  };
+  qualityCheckpoints: {
+    title: string;
+    checkpoints: string[];
+  };
+  relatedCaseStudies: {
+    title: string;
+    cases?: ServiceCaseStudy[];
+  };
+  faq: {
+    title: string;
+    items: ServiceFaq[];
+  };
+  conversionCta: {
+    headline: string;
+    text: string;
+    button: string;
+    secondaryButton?: string;
+  };
+  breadcrumbs?: Array<{
+    label: string;
+    href: string;
+  }>;
+  schemas?: {
+    organization?: boolean;
+  };
+};
+
+type ServicePageTemplateProps = {
+  locale: Locale;
+  page: ServicePageTemplateData;
+};
+
+const pendingAssetStatus = 'pending_real_technical_asset';
+const pendingProjectStatus = 'pending_project_proof';
+
+function SchemaPlaceholder({schema}: {schema: unknown}) {
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />;
+}
+
+function buildServiceSchema(locale: Locale, page: ServicePageTemplateData) {
+  return buildSharedServiceSchema(locale, `${page.routes[locale]}#service`, {
+    name: page.hero.h1,
+    description: page.seo.metaDescription,
+    serviceType: page.seo.primaryKeyword,
+    url: page.routes[locale]
+  });
+}
+
+function buildFaqSchema(locale: Locale, page: ServicePageTemplateData) {
+  return buildFaqPageSchema(locale, `${page.routes[locale]}#faq`, page.faq.items);
+}
+
+function buildBreadcrumbSchema(locale: Locale, page: ServicePageTemplateData) {
+  const breadcrumbs = page.breadcrumbs ?? [
+    {label: 'Home', href: `/${locale}`},
+    {label: 'Systems', href: `/${locale}/systems`},
+    {label: page.hero.h1, href: page.routes[locale]}
+  ];
+
+  return buildBreadcrumbListSchema(
+    locale,
+    `${page.routes[locale]}#breadcrumb`,
+    breadcrumbs.map((item) => ({name: item.label, item: item.href}))
+  );
+}
+
+function buildOrganizationSchema(locale: Locale, page: ServicePageTemplateData) {
+  return buildSharedOrganizationSchema(locale, `${page.routes[locale]}#organization`);
+}
+
+export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
+  const dir = getDirection(locale);
+  const hasTechnicalAssets = Boolean(page.technicalProof.assets?.length);
+  const hasCaseStudies = Boolean(page.relatedCaseStudies.cases?.length);
+  const technicalAssets: ServiceTechnicalAsset[] = page.technicalProof.assets?.length
+    ? page.technicalProof.assets
+    : page.technicalProof.requiredVisuals.map((visual) => ({
+        title: visual,
+        assetStatus: 'pending'
+      }));
+
+  return (
+    <article className="service-page-template" data-service-id={page.id} dir={dir}>
+      <SchemaPlaceholder schema={buildServiceSchema(locale, page)} />
+      <SchemaPlaceholder schema={buildFaqSchema(locale, page)} />
+      <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, page)} />
+      <SchemaPlaceholder schema={buildOrganizationSchema(locale, page)} />
+
+      <section className="service-hero" data-section="service_hero" aria-labelledby="service-page-title">
+        <div className="container-shell service-hero__inner">
+          <div className="service-hero__copy">
+            <p className="service-eyebrow">{page.hero.eyebrow}</p>
+            <h1 id="service-page-title">{page.hero.h1}</h1>
+            <p>{page.hero.subheadline}</p>
+            {page.hero.trustMicrocopy ? <span>{page.hero.trustMicrocopy}</span> : null}
+            <div className="service-hero__actions">
+              {/* track: service_primary_cta_click */}
+              {/* track: hero_primary_cta_click */}
+              <Link href="/#rfq" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: page.id})}>
+                {page.hero.primaryCta}
+              </Link>
+              {page.hero.secondaryCta ? (
+                <>
+                  {/* track: service_secondary_cta_click */}
+                  {/* track: hero_secondary_cta_click */}
+                  <Link href="#service-related-case-studies" className="button-secondary" onClick={() => trackCaseStudyEvent('case_study_view', {component_id: page.id})}>
+                    {page.hero.secondaryCta}
+                  </Link>
+                </>
+              ) : null}
+            </div>
+          </div>
+
+          <div
+            className="service-hero__visual"
+            data-asset-status={page.hero.visual ? 'available' : pendingAssetStatus}
+          >
+            {page.hero.visual ? (
+              <Image
+                src={page.hero.visual}
+                alt={page.hero.visualAlt ?? page.hero.visualDirection}
+                fill
+                priority
+                sizes="(max-width: 767px) 100vw, (max-width: 1024px) 90vw, 45vw"
+              />
+            ) : (
+              <div className="service-technical-placeholder" aria-label={page.hero.visualDirection} role="img">
+                <span />
+                <span />
+                <span />
+                <em>{page.hero.visualDirection}</em>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="service-section service-section--light"
+        data-section="problem_context"
+        aria-labelledby="service-problem-title"
+      >
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-problem-title">{page.problemContext.title}</h2>
+          </header>
+          <div className="service-card-grid service-card-grid--problem">
+            {page.problemContext.cards.map((problem) => (
+              <article className="service-card" key={problem}>
+                <p>{problem}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-section" data-section="sipanel_engineering_approach" aria-labelledby="service-approach-title">
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-approach-title">{page.engineeringApproach.title}</h2>
+          </header>
+          <div className="service-step-grid">
+            {page.engineeringApproach.steps.map((step, index) => (
+              <article className="service-step" key={step.title}>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="service-section service-section--light"
+        data-section="system_applications"
+        aria-labelledby="service-applications-title"
+      >
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-applications-title">{page.systemApplications.title}</h2>
+          </header>
+          <div className="service-swipe-list">
+            {page.systemApplications.applications.map((application) => (
+              <article className="service-pill-card" key={application}>
+                {application}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="service-section service-technical-proof"
+        data-section="technical_proof"
+        aria-labelledby="service-proof-title"
+      >
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-proof-title">{page.technicalProof.title}</h2>
+            <p>{page.technicalProof.description}</p>
+          </header>
+          <div className="service-proof-grid" data-asset-status={hasTechnicalAssets ? 'available' : pendingAssetStatus}>
+            {technicalAssets.map((asset) => (
+              <article
+                className="service-proof-card"
+                key={asset.title}
+                onClick={() => trackProofEvent('technical_proof_open', {component_id: page.id, diagram_type: asset.title})}
+              >
+                <div className="service-proof-card__preview">
+                  {asset.image ? (
+                    <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 84vw, 30vw" />
+                  ) : (
+                    <div className="service-technical-placeholder" aria-label={asset.title} role="img">
+                      <span />
+                      <span />
+                      <span />
+                      <em>{asset.title}</em>
+                    </div>
+                  )}
+                </div>
+                <h3>{asset.title}</h3>
+                {asset.description ? <p>{asset.description}</p> : <p data-asset-status={pendingAssetStatus}>Pending real technical asset.</p>}
+                {/* track: technical_proof_open */}
+                {/* track: technical_proof_zoom */}
+                {/* track: diagram_zoom */}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="service-section service-section--light"
+        data-section="process_workflow"
+        aria-labelledby="service-process-title"
+      >
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-process-title">{page.processWorkflow.title}</h2>
+          </header>
+          <div className="service-process-list">
+            {page.processWorkflow.steps.map((step, index) => (
+              <article className="service-process-item" key={step.title}>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-section" data-section="quality_checkpoints" aria-labelledby="service-quality-title">
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-quality-title">{page.qualityCheckpoints.title}</h2>
+          </header>
+          <ul className="service-checklist">
+            {page.qualityCheckpoints.checkpoints.map((checkpoint) => (
+              <li key={checkpoint}>{checkpoint}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="service-related-case-studies"
+        className="service-section service-section--light"
+        data-section="related_case_studies"
+        aria-labelledby="service-cases-title"
+      >
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-cases-title">{page.relatedCaseStudies.title}</h2>
+          </header>
+          <div className="service-case-grid" data-asset-status={hasCaseStudies ? 'available' : pendingProjectStatus}>
+            {hasCaseStudies ? (
+              page.relatedCaseStudies.cases?.map((project) => (
+                <article className="service-case-card" key={project.projectName}>
+                  <div className="service-case-card__media" data-asset-status={project.image ? 'available' : pendingProjectStatus}>
+                    {project.image ? (
+                      <Image src={project.image} alt={`${project.projectName} real project photography`} fill sizes="(max-width: 767px) 84vw, 30vw" />
+                    ) : (
+                      <div className="service-technical-placeholder" aria-label={project.projectName} role="img">
+                        <span />
+                        <span />
+                        <span />
+                        <em>{project.projectName}</em>
+                      </div>
+                    )}
+                  </div>
+                  <h3>{project.projectName}</h3>
+                  <p>{project.location}</p>
+                  <dl>
+                    <dt>Challenge</dt>
+                    <dd>{project.challenge}</dd>
+                    <dt>Result</dt>
+                    <dd>{project.measuredResult}</dd>
+                  </dl>
+                  {/* track: related_case_study_click */}
+                  {project.href ? (
+                    <Link href={project.href} onClick={() => trackCaseStudyEvent('related_case_study_click', {component_id: page.id, case_study_name: project.projectName})}>
+                      {project.projectType ?? project.projectName}
+                    </Link>
+                  ) : null}
+                </article>
+              ))
+            ) : (
+              <article className="service-card service-card--pending">
+                <p data-asset-status={pendingProjectStatus}>Pending verified related case studies for this service.</p>
+              </article>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-section" data-section="faq_section" aria-labelledby="service-faq-title">
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-faq-title">{page.faq.title}</h2>
+          </header>
+          <div className="service-faq-list">
+            {page.faq.items.map((item) => (
+              <details className="service-faq-item" key={item.question} onToggle={(event) => {
+                if (event.currentTarget.open) {
+                  trackFaqEvent('faq_expand', {component_id: page.id, component_name: item.question});
+                }
+              }}>
+                {/* track: faq_expand */}
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-conversion-cta" data-section="conversion_cta" aria-labelledby="service-conversion-title">
+        <div className="container-shell service-conversion-cta__inner">
+          <div>
+            <h2 id="service-conversion-title">{page.conversionCta.headline}</h2>
+            <p>{page.conversionCta.text}</p>
+          </div>
+          <div className="service-conversion-cta__actions">
+            {/* track: rfq_start */}
+            {/* track: roof_review_cta_click */}
+            <Link href="/#rfq" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: `${page.id}_conversion_cta`})}>
+              {page.conversionCta.button}
+            </Link>
+            {/* track: whatsapp_click */}
+            {/* track: phone_click */}
+            {page.conversionCta.secondaryButton ? (
+              <Link href="/contact#rfq-form" className="button-secondary" onClick={() => trackEvent('service_page_click', {component_id: `${page.id}_conversion_cta`, cta_text: page.conversionCta.secondaryButton})}>
+                {page.conversionCta.secondaryButton}
+              </Link>
+            ) : null}
+          </div>
+        </div>
+      </section>
+
+      <nav className="service-locale-routes" aria-label="Localized service routes">
+        {locales.map((itemLocale) => (
+          <a key={itemLocale} href={page.routes[itemLocale]} hrefLang={itemLocale}>
+            {itemLocale.toUpperCase()}
+          </a>
+        ))}
+      </nav>
+    </article>
+  );
+}

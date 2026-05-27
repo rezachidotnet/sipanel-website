@@ -1,0 +1,45 @@
+{
+              "project_name": "Parand City Entrance Gate",
+              "slug": "parand-city-entrance",
+              "location": "Parand, Tehran, Iran",
+              "category": "Architectural & Aluminium Cladding Structures",
+              "project_type": "Architectural city entrance facade",
+              "system_type": "Aluminium Cladding System",
+              "status": "Completed",
+              "area": "500 m²",
+              "challenge": "Execution of a special architectural city entrance structure requiring customized aluminium cladding coordination, precision detailing, curved geometry control, waterproofing continuity, and accurate architectural finishing.",
+              "sipanel_solution": "SIPANEL developed a customized aluminium cladding and structural coordination system specifically engineered for the project’s architectural geometry, curved transitions, and facade integration requirements.",
+              "engineering_decision": "Engineering teams designed curved transition details, edge coordination systems, structural alignment strategies, and sealing workflows to preserve architectural consistency and long-term facade durability.",
+              "execution_detail": "Installation followed controlled sequencing procedures, detailed engineering drawings, alignment verification checkpoints, and coordinated sealing execution to ensure accurate geometry and clean architectural integration.",
+              "measured_result": "Successful delivery of a durable and visually distinctive aluminium-clad city entrance structure with precise geometry execution and reliable weather-resistant performance.",
+              "risk_prevented": [
+                "Dimensional inconsistencies",
+                "Facade sealing failures",
+                "Curved alignment errors",
+                "Surface waviness",
+                "Execution delays",
+                "Long-term facade maintenance issues"
+              ],
+              "primary_message": "Precision-engineered aluminium cladding systems designed for complex architectural entrance structures.",
+              "proof_points": [
+                "Customized aluminium facade execution",
+                "Curved transition coordination",
+                "Controlled installation sequencing",
+                "Architectural geometry precision",
+                "Weather-resistant facade detailing"
+              ],
+              "metrics": {
+                "project_area": "500 m²",
+                "facility_type": "City entrance gate",
+                "system_type": "Aluminium cladding facade system",
+                "execution_focus": "Architectural precision and facade durability"
+              },
+              "images": {
+                "hero_desktop": "./projects/parand/parand-hero-desktop.webp",
+                "hero_mobile": "./projects/parand/parand-hero-mobile.webp",
+                "card": "./projects/parand/parand-card.webp",
+                "gallery_large": "./projects/parand/parand-gallery-large.webp",
+                "installation": "./projects/parand/parand-installation.webp",
+                "technical_detail": "./projects/parand/parand-technical-detail.webp"
+              }
+            }

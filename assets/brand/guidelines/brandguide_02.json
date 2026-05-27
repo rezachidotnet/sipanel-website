@@ -1,0 +1,230 @@
+{
+    "page": {
+      "number": 2,
+      "title": "Logo Usage Rules",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the correct usage, spacing, sizing, placement, and protection rules for the SIPANEL logo across digital and print environments.",
+    "logo_overview": {
+      "primary_logo": {
+        "name": "SIPANEL Primary Logo",
+        "usage": "Default logo for all primary brand applications.",
+        "background_preference": [
+          "White",
+          "Black",
+          "Deep black"
+        ]
+      },
+      "logo_philosophy": "The SIPANEL logo represents engineering precision, controlled execution, and industrial reliability. It must always remain clear, structured, and uncompromised."
+    },
+    "approved_logo_versions": {
+      "primary_full_color": {
+        "usage": "Default usage for websites, presentations, and marketing materials.",
+        "backgrounds": [
+          "White",
+          "Light gray",
+          "Neutral surfaces"
+        ]
+      },
+      "white_logo": {
+        "usage": "Use on dark backgrounds and industrial photography.",
+        "backgrounds": [
+          "Black",
+          "Dark technical surfaces",
+          "Industrial imagery"
+        ]
+      },
+      "black_logo": {
+        "usage": "Use when monochrome application is required.",
+        "backgrounds": [
+          "White",
+          "Light backgrounds"
+        ]
+      },
+      "icon_only": {
+        "usage": "Only for favicon, app icon, or highly constrained spaces.",
+        "approval_required": true
+      }
+    },
+    "minimum_size_rules": {
+      "digital": {
+        "minimum_width": "120px",
+        "recommended_width": "160px+"
+      },
+      "mobile": {
+        "minimum_width": "120px"
+      },
+      "print": {
+        "minimum_width": "35mm"
+      }
+    },
+    "clear_space_rules": {
+      "rule": "Maintain clear space around the logo equal to the height of the 'S' character in the logo.",
+      "purpose": "Ensure visibility, readability, and brand integrity.",
+      "intrusion_forbidden": true
+    },
+    "background_rules": {
+      "approved_backgrounds": [
+        "White",
+        "Black",
+        "Deep black",
+        "Neutral industrial surfaces",
+        "Low-noise photography"
+      ],
+      "forbidden_backgrounds": [
+        "Busy textures",
+        "Low-contrast surfaces",
+        "Bright gradients",
+        "Complex imagery behind logo",
+        "Cluttered technical diagrams"
+      ]
+    },
+    "color_rules": {
+      "approved_colors": {
+        "orange": "#FF6A00",
+        "black": "#0F1113",
+        "deep_black": "#050607",
+        "white": "#FFFFFF"
+      },
+      "rules": [
+        "Do not alter logo colors.",
+        "Do not apply gradients.",
+        "Do not apply shadows or effects.",
+        "Do not recolor the symbol independently."
+      ]
+    },
+    "incorrect_usage": [
+      {
+        "rule": "Do not stretch or distort the logo.",
+        "severity": "critical"
+      },
+      {
+        "rule": "Do not rotate the logo.",
+        "severity": "critical"
+      },
+      {
+        "rule": "Do not change logo colors.",
+        "severity": "critical"
+      },
+      {
+        "rule": "Do not place logo on low-contrast backgrounds.",
+        "severity": "high"
+      },
+      {
+        "rule": "Do not add shadows, outlines, or glow effects.",
+        "severity": "high"
+      },
+      {
+        "rule": "Do not place logo inside decorative shapes.",
+        "severity": "medium"
+      },
+      {
+        "rule": "Do not compress logo proportions.",
+        "severity": "critical"
+      },
+      {
+        "rule": "Do not use outdated logo versions.",
+        "severity": "critical"
+      }
+    ],
+    "placement_rules": {
+      "website_header": {
+        "preferred_position": "top_left",
+        "mobile_position": "top_left",
+        "clear_space_required": true
+      },
+      "footer": {
+        "preferred_background": "dark",
+        "minimum_contrast": "AA"
+      },
+      "documents": {
+        "preferred_position": "top_left_or_bottom_left"
+      },
+      "technical_drawings": {
+        "allowed": true,
+        "rule": "Logo must remain secondary to technical content."
+      }
+    },
+    "responsive_rules": {
+      "mobile": {
+        "minimum_touch_safe_area": "48px",
+        "maintain_readability": true,
+        "avoid_overcrowding": true
+      },
+      "desktop": {
+        "preserve_clear_space": true
+      }
+    },
+    "multilingual_rules": {
+      "rtl_languages_supported": [
+        "fa",
+        "ar"
+      ],
+      "logo_flip_allowed": false,
+      "wordmark_direction_change_allowed": false,
+      "coexistence_with_language_switcher": {
+        "minimum_spacing": "16px"
+      }
+    },
+    "accessibility_rules": {
+      "minimum_contrast_compliance": "WCAG AA",
+      "alt_text_required": true,
+      "recommended_alt_text": "SIPANEL logo"
+    },
+    "file_format_rules": {
+      "preferred_formats": [
+        "SVG",
+        "PDF",
+        "PNG"
+      ],
+      "avoid_formats": [
+        "Low-resolution JPG",
+        "Screenshots"
+      ],
+      "svg_required_for_web": true
+    },
+    "production_rules": {
+      "print": [
+        "Use vector formats only.",
+        "Preserve aspect ratio.",
+        "Confirm color accuracy before production."
+      ],
+      "digital": [
+        "Optimize SVG for performance.",
+        "Avoid raster scaling artifacts.",
+        "Maintain responsive clarity."
+      ]
+    },
+    "approval_rules": {
+      "required_for": [
+        "Partner co-branding",
+        "Large-scale signage",
+        "Vehicle branding",
+        "Trade show applications"
+      ]
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Primary logo presentation",
+        "Approved logo variations",
+        "Clear space diagram",
+        "Minimum size examples",
+        "Background usage examples",
+        "Correct vs incorrect usage grid"
+      ],
+      "visual_direction": [
+        "Technical annotation style",
+        "Measurement indicators",
+        "Grid alignment overlays",
+        "Industrial presentation aesthetic"
+      ]
+    },
+    "implementation_notes": [
+      "Always use the original approved logo files.",
+      "Never recreate the logo manually.",
+      "Logo integrity is mandatory across all digital and physical applications.",
+      "All external partners must follow these rules without modification."
+    ]
+  }

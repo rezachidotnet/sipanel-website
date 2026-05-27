@@ -1,0 +1,10 @@
+.next
+.next*
+node_modules
+private/rfq-uploads
+private/rfq-submissions
+.env
+.env*.local
+.DS_Store
+*.log
+tsconfig.tsbuildinfo

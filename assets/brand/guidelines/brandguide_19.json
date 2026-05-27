@@ -1,0 +1,244 @@
+{
+    "page": {
+      "number": 19,
+      "title": "RTL & Multilingual Rules",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the multilingual behavior, RTL adaptation rules, layout mirroring principles, typography behavior, and localization standards for SIPANEL digital experiences.",
+    "multilingual_philosophy": {
+      "statement": "SIPANEL multilingual experiences must preserve engineering clarity, visual consistency, and technical professionalism across all supported languages.",
+      "core_principles": [
+        "Consistency across languages",
+        "RTL-native behavior",
+        "Engineering terminology accuracy",
+        "Readable multilingual typography",
+        "Responsive localization",
+        "Accessible multilingual UX"
+      ]
+    },
+    "supported_languages": {
+      "ltr_languages": [
+        {
+          "language": "English",
+          "code": "en"
+        },
+        {
+          "language": "Russian",
+          "code": "ru"
+        }
+      ],
+      "rtl_languages": [
+        {
+          "language": "Persian",
+          "code": "fa"
+        },
+        {
+          "language": "Arabic",
+          "code": "ar"
+        }
+      ]
+    },
+    "layout_direction_rules": {
+      "ltr_behavior": [
+        "Navigation flows left to right.",
+        "Primary CTA typically aligned right.",
+        "Icons and directional indicators follow LTR logic."
+      ],
+      "rtl_behavior": [
+        "Entire interface flow mirrors horizontally.",
+        "Navigation aligns right to left.",
+        "Content alignment mirrors appropriately.",
+        "Directional icons must flip."
+      ],
+      "rules": [
+        "Use logical CSS properties instead of hardcoded left/right values.",
+        "All layouts must support dynamic direction switching.",
+        "Avoid partial RTL implementation."
+      ]
+    },
+    "typography_rules": {
+      "english": {
+        "preferred_fonts": [
+          "Inter",
+          "Sora"
+        ],
+        "style": "Technical and structured"
+      },
+      "persian": {
+        "preferred_fonts": [
+          "Vazirmatn",
+          "IRANSansX"
+        ],
+        "style": "Formal industrial Persian",
+        "rules": [
+          "Increase line-height slightly for Persian readability.",
+          "Avoid tight character spacing."
+        ]
+      },
+      "arabic": {
+        "preferred_fonts": [
+          "IBM Plex Sans Arabic",
+          "Cairo"
+        ],
+        "style": "Professional technical Arabic",
+        "rules": [
+          "Maintain balanced letter spacing.",
+          "Preserve readable heading hierarchy."
+        ]
+      },
+      "russian": {
+        "preferred_fonts": [
+          "Inter"
+        ],
+        "style": "Structured technical typography"
+      }
+    },
+    "navigation_behavior": {
+      "rtl_navigation": [
+        "Menu alignment flips horizontally.",
+        "Drawer menus open from opposite side.",
+        "Breadcrumb direction mirrors.",
+        "Chevron and directional icons reverse."
+      ],
+      "language_switcher_rules": [
+        "Language switcher must remain globally accessible.",
+        "Use native language names when possible.",
+        "Avoid flag-only language selectors."
+      ]
+    },
+    "spacing_and_alignment": {
+      "rules": [
+        "Use logical padding and margin properties.",
+        "Mirror layout spacing automatically.",
+        "Preserve equal visual rhythm across languages.",
+        "Avoid manually duplicated RTL layouts."
+      ],
+      "alignment_behavior": {
+        "headings": "Align according to content direction",
+        "body_text": "Align naturally per language",
+        "technical_labels": "May remain LTR when using engineering standards"
+      }
+    },
+    "component_rules": {
+      "buttons": [
+        "Icon direction flips in RTL when directional.",
+        "Text alignment follows language direction.",
+        "Padding mirrors automatically."
+      ],
+      "forms": [
+        "Input alignment follows language.",
+        "Validation messages align to reading direction.",
+        "Phone and email inputs may remain LTR."
+      ],
+      "cards": [
+        "Card layout mirrors horizontally.",
+        "Maintain consistent spacing and hierarchy."
+      ],
+      "tables": [
+        "Technical data may remain LTR if industry-standard.",
+        "General content tables should support RTL alignment."
+      ]
+    },
+    "technical_content_rules": {
+      "engineering_terms": [
+        "Maintain standardized engineering terminology.",
+        "Avoid inaccurate literal translations.",
+        "Use industry-recognized technical language."
+      ],
+      "mixed_language_behavior": [
+        "English technical abbreviations may remain LTR.",
+        "BOM, CAD, RFQ, MTO and similar terms remain untranslated where appropriate."
+      ],
+      "diagram_rules": [
+        "Annotations should adapt to reading direction.",
+        "Technical arrows flip only when directional meaning changes.",
+        "Measurement units remain consistent globally."
+      ]
+    },
+    "responsive_multilingual_behavior": {
+      "mobile_rules": [
+        "Allow additional space for translated text expansion.",
+        "Prevent CTA wrapping where possible.",
+        "Maintain readable line lengths."
+      ],
+      "tablet_and_desktop_rules": [
+        "Preserve balanced layouts despite language length differences.",
+        "Avoid fixed-width text containers."
+      ]
+    },
+    "seo_and_url_rules": {
+      "rules": [
+        "Use language-specific URLs.",
+        "Implement hreflang correctly.",
+        "Preserve metadata translation consistency.",
+        "Localize SEO keywords per region."
+      ],
+      "url_examples": [
+        "/en/",
+        "/fa/",
+        "/ar/",
+        "/ru/"
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "Set correct lang attribute.",
+        "Set correct dir attribute.",
+        "Ensure screen readers recognize language correctly.",
+        "Preserve keyboard navigation order in RTL.",
+        "Maintain WCAG AA contrast across all languages."
+      ]
+    },
+    "content_localization_rules": {
+      "rules": [
+        "Do not directly machine-translate engineering content without review.",
+        "Preserve brand voice across all languages.",
+        "Adapt messaging naturally to business culture.",
+        "Avoid culturally inappropriate imagery or wording."
+      ]
+    },
+    "forbidden_patterns": [
+      "Partial RTL layouts",
+      "Unflipped directional icons",
+      "Broken alignment in translated layouts",
+      "Hardcoded left/right spacing",
+      "Mixed language hierarchy inconsistency",
+      "Unreadable multilingual typography",
+      "Literal translation of engineering terminology without validation"
+    ],
+    "approved_multilingual_characteristics": [
+      "Consistent",
+      "Readable",
+      "Technically accurate",
+      "Direction-aware",
+      "Responsive",
+      "Accessible",
+      "Professional"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Multilingual philosophy",
+        "Supported language overview",
+        "RTL layout behavior",
+        "Typography adaptation rules",
+        "Component mirroring examples",
+        "Technical content localization",
+        "Correct vs incorrect RTL patterns"
+      ],
+      "visual_direction": [
+        "LTR vs RTL comparisons",
+        "Mirrored navigation examples",
+        "Multilingual typography specimens",
+        "Responsive localization examples",
+        "Technical diagram localization previews"
+      ]
+    },
+    "implementation_notes": [
+      "RTL support must be built into the system architecture from the beginning.",
+      "All layouts, components, and interactions must support dynamic direction switching.",
+      "Localization quality is critical for technical trust and engineering credibility.",
+      "Multilingual consistency must be preserved across website, documentation, forms, and technical diagrams."
+    ]
+  }

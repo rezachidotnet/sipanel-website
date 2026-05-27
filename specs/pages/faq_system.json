@@ -1,0 +1,375 @@
+{
+    "page": "faq_system",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "faq_and_knowledge_system",
+    "purpose": "Create a scalable FAQ system for SEO, buyer education, technical clarity, and RFQ conversion.",
+    "route": {
+      "en": "/en/faq",
+      "fa": "/fa/faq",
+      "ar": "/ar/faq",
+      "ru": "/ru/faq"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": ["en", "fa", "ar", "ru"],
+      "rtl": ["fa", "ar"],
+      "requirements": [
+        "localized FAQ questions and answers",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Answer buyer and technical questions before RFQ.",
+      "secondary": "Support SEO with structured FAQ content.",
+      "conversion": "Move visitors toward engineering review, RFQ, phone, or WhatsApp contact."
+    },
+    "seo": {
+      "primary_keyword": "industrial panel systems FAQ",
+      "secondary_keywords": [
+        "sandwich panel questions",
+        "standing seam roofing FAQ",
+        "industrial roof leakage questions",
+        "aluminium cladding FAQ",
+        "panel installation FAQ",
+        "industrial envelope questions"
+      ],
+      "title": "FAQ | SIPANEL Industrial Panel, Roofing & Cladding Questions",
+      "meta_description": "Find answers about SIPANEL sandwich panel systems, standing seam roofing, aluminium cladding, waterproofing, shop drawings, procurement, and industrial envelope execution.",
+      "h1": "Industrial Panel, Roofing & Cladding Questions.",
+      "schema": [
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "clear",
+        "structured",
+        "technical",
+        "educational",
+        "trust-building"
+      ],
+      "rules": [
+        "Use accordion layout for mobile.",
+        "Use category sidebar or filter tabs on desktop.",
+        "Avoid dense text blocks.",
+        "Use orange only for active category, CTA, and highlights.",
+        "Answers must be direct and technically useful.",
+        "Do not use marketing hype."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "faq_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_60_40"
+        },
+        "content": {
+          "eyebrow": "Technical FAQ",
+          "h1": "Industrial Panel, Roofing & Cladding Questions.",
+          "subheadline": "Clear answers about sandwich panel systems, Standing Seam and ZIP Tech roofing, aluminium cladding, waterproofing logic, shop drawings, procurement, and controlled industrial execution.",
+          "primary_cta": "Request Technical Consultation",
+          "secondary_cta": "Explore Systems"
+        }
+      },
+      {
+        "id": "faq_search_and_filters",
+        "priority": "critical",
+        "layout": {
+          "mobile": "search_then_horizontal_filters",
+          "desktop": "search_with_category_sidebar"
+        },
+        "features": [
+          "FAQ search input",
+          "category filters",
+          "URL query update",
+          "keyboard accessible accordion",
+          "expand/collapse all on desktop"
+        ],
+        "categories": [
+          {
+            "id": "general",
+            "label": "General"
+          },
+          {
+            "id": "sandwich_panels",
+            "label": "Sandwich Panels"
+          },
+          {
+            "id": "roofing_waterproofing",
+            "label": "Roofing & Waterproofing"
+          },
+          {
+            "id": "aluminium_cladding",
+            "label": "Aluminium Cladding"
+          },
+          {
+            "id": "engineering_process",
+            "label": "Engineering Process"
+          },
+          {
+            "id": "procurement_cost",
+            "label": "Procurement & Cost"
+          },
+          {
+            "id": "rfq_contact",
+            "label": "RFQ & Contact"
+          }
+        ],
+        "tracking_events": [
+          "faq_search",
+          "faq_category_filter",
+          "faq_expand"
+        ]
+      },
+      {
+        "id": "faq_items",
+        "priority": "critical",
+        "layout": {
+          "mobile": "accordion_list",
+          "desktop": "category_grouped_accordion"
+        },
+        "items": [
+          {
+            "id": "what_does_sipanel_do",
+            "category": "general",
+            "question": "What does SIPANEL do?",
+            "answer": "SIPANEL engineers and executes industrial envelope systems, including sandwich panel systems, Standing Seam and ZIP Tech roofing, aluminium cladding, and related technical coordination. The focus is not only supply, but also risk reduction through precise design, smart procurement, and engineered installation.",
+            "related_links": [
+              "/systems/sandwich-panel-systems",
+              "/systems/standing-seam-zip-tech-roofing",
+              "/systems/aluminium-cladding-covering"
+            ]
+          },
+          {
+            "id": "is_sipanel_only_panel_supplier",
+            "category": "general",
+            "question": "Is SIPANEL only a sandwich panel supplier?",
+            "answer": "No. SIPANEL should be positioned as an engineering-first industrial envelope company. Sandwich panels are one part of the system, alongside waterproof roofing, aluminium cladding, shop drawing coordination, procurement planning, and controlled installation.",
+            "related_links": [
+              "/about",
+              "/systems"
+            ]
+          },
+          {
+            "id": "what_is_engineering_control",
+            "category": "engineering_process",
+            "question": "What does engineering-controlled execution mean?",
+            "answer": "Engineering-controlled execution means reviewing the system before installation: drawings, quantities, accessories, waterproofing details, installation sequence, and quality checkpoints. This helps reduce leakage risk, material waste, delays, rework, and hidden cost.",
+            "related_links": [
+              "/resources",
+              "/contact"
+            ]
+          },
+          {
+            "id": "how_reduce_project_risk",
+            "category": "engineering_process",
+            "question": "How does SIPANEL reduce project risk?",
+            "answer": "SIPANEL reduces risk by reviewing project conditions early, coordinating technical details, planning procurement accurately, and controlling installation through execution logic and inspection checkpoints.",
+            "related_links": [
+              "/solutions/industrial-envelope-systems"
+            ]
+          },
+          {
+            "id": "what_are_sandwich_panels",
+            "category": "sandwich_panels",
+            "question": "What are sandwich panel systems used for?",
+            "answer": "Sandwich panel systems are used for industrial walls, roofs, cold rooms, warehouses, factories, logistics centers, and insulated building envelopes. Their performance depends on panel selection, joint logic, accessories, flashing details, and installation quality.",
+            "related_links": [
+              "/systems/sandwich-panel-systems"
+            ]
+          },
+          {
+            "id": "how_choose_panel_type",
+            "category": "sandwich_panels",
+            "question": "How should the correct sandwich panel type be selected?",
+            "answer": "Panel type should be selected based on building use, insulation requirements, environmental conditions, fire considerations, panel thickness, joint type, project geometry, and installation conditions. SIPANEL reviews these factors before procurement.",
+            "related_links": [
+              "/resources",
+              "/contact"
+            ]
+          },
+          {
+            "id": "how_reduce_panel_waste",
+            "category": "sandwich_panels",
+            "question": "How can panel material waste be reduced?",
+            "answer": "Panel waste can be reduced through layout review, quantity planning, cutting logic, accessory coordination, and shop drawing review before ordering materials.",
+            "related_links": [
+              "/solutions/panel-material-optimization"
+            ]
+          },
+          {
+            "id": "why_shop_drawings_matter",
+            "category": "engineering_process",
+            "question": "Why are shop drawings important for panel projects?",
+            "answer": "Shop drawings clarify panel layout, dimensions, accessories, flashing logic, joint details, quantities, and installation sequence before site execution. They help reduce coordination errors and rework.",
+            "related_links": [
+              "/solutions/shop-drawing-review-panel-projects",
+              "/resources"
+            ]
+          },
+          {
+            "id": "what_is_standing_seam_roofing",
+            "category": "roofing_waterproofing",
+            "question": "What is Standing Seam roofing?",
+            "answer": "Standing Seam roofing is a metal roofing system with raised seams and concealed fastening. When designed correctly, it supports stronger waterproofing behavior for industrial roofs by reducing direct fastener exposure and improving seam control.",
+            "related_links": [
+              "/systems/standing-seam-zip-tech-roofing"
+            ]
+          },
+          {
+            "id": "what_is_zip_tech_roofing",
+            "category": "roofing_waterproofing",
+            "question": "What is ZIP Tech roofing?",
+            "answer": "ZIP Tech roofing refers to a concealed fastening roof system approach used for industrial waterproof roofing applications. The final performance depends on drainage planning, seam coordination, flashing detail, and controlled installation.",
+            "related_links": [
+              "/systems/standing-seam-zip-tech-roofing"
+            ]
+          },
+          {
+            "id": "why_industrial_roofs_leak",
+            "category": "roofing_waterproofing",
+            "question": "Why do industrial roofs leak?",
+            "answer": "Industrial roof leakage often comes from weak drainage planning, incorrect slope, poor flashing coordination, uncontrolled penetrations, exposed fastener issues, or installation sequence errors.",
+            "related_links": [
+              "/solutions/industrial-roof-leakage-prevention"
+            ]
+          },
+          {
+            "id": "how_prevent_roof_leakage",
+            "category": "roofing_waterproofing",
+            "question": "How can roof leakage risk be reduced before installation?",
+            "answer": "Leakage risk can be reduced by reviewing roof slope, drainage paths, gutters, downspouts, flashings, overlaps, penetrations, edge details, and installation sequence before roofing starts.",
+            "related_links": [
+              "/systems/standing-seam-zip-tech-roofing",
+              "/resources"
+            ]
+          },
+          {
+            "id": "what_is_aluminium_cladding",
+            "category": "aluminium_cladding",
+            "question": "What is aluminium cladding used for?",
+            "answer": "Aluminium cladding is used for industrial facades, factory exteriors, architectural metal coverings, entrance volumes, and exterior renovation projects. Quality depends on layout control, fixing details, edge conditions, and installation accuracy.",
+            "related_links": [
+              "/systems/aluminium-cladding-covering"
+            ]
+          },
+          {
+            "id": "why_cladding_layout_matters",
+            "category": "aluminium_cladding",
+            "question": "Why does facade layout matter in cladding projects?",
+            "answer": "Facade layout controls panel rhythm, joint alignment, opening coordination, edge details, visual consistency, and material waste. Weak layout control can create visible quality problems and execution delays.",
+            "related_links": [
+              "/systems/aluminium-cladding-covering"
+            ]
+          },
+          {
+            "id": "what_affects_cladding_cost",
+            "category": "procurement_cost",
+            "question": "What affects aluminium cladding cost?",
+            "answer": "Cladding cost depends on material type, panel size, fixing system, facade geometry, openings, edge details, waste percentage, substructure needs, and installation complexity.",
+            "related_links": [
+              "/contact"
+            ]
+          },
+          {
+            "id": "how_request_quote",
+            "category": "rfq_contact",
+            "question": "How can I request a quotation or technical consultation?",
+            "answer": "You can use the RFQ form, call SIPANEL, send an email, or contact the team through WhatsApp. It is best to include project type, location, estimated area, project stage, and any drawings if available.",
+            "related_links": [
+              "/contact"
+            ]
+          },
+          {
+            "id": "what_info_for_rfq",
+            "category": "rfq_contact",
+            "question": "What information should I send for RFQ?",
+            "answer": "Send your name, company, phone, project type, location, estimated area, project stage, main concern, and any available drawings or files. This helps the engineering team review the request more accurately.",
+            "related_links": [
+              "/contact"
+            ]
+          },
+          {
+            "id": "can_upload_drawings",
+            "category": "rfq_contact",
+            "question": "Can I send drawings or project files?",
+            "answer": "Yes. The RFQ form can support optional uploads such as PDF, JPG, PNG, and DWG files if backend file upload is enabled securely.",
+            "related_links": [
+              "/contact"
+            ]
+          }
+        ],
+        "rules": [
+          "Do not invent technical claims.",
+          "Keep answers direct and useful.",
+          "Add related internal links.",
+          "Support FAQPage schema.",
+          "Localize all questions and answers.",
+          "Preserve engineering terminology accurately."
+        ]
+      },
+      {
+        "id": "faq_cta_band",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline": "Didn’t Find the Technical Answer You Need?",
+        "text": "Send your project details and SIPANEL can review the system, risk points, procurement needs, or execution conditions.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info"
+      }
+    ],
+    "data_model": {
+      "faq_item": {
+        "id": "string",
+        "category": "string",
+        "question": "localized_string",
+        "answer": "localized_string",
+        "related_links": "array",
+        "schema_enabled": "boolean",
+        "priority": "critical | high | medium"
+      },
+      "category": {
+        "id": "string",
+        "label": "localized_string",
+        "description": "localized_string_optional"
+      }
+    },
+    "analytics_events": [
+      "faq_page_view",
+      "faq_search",
+      "faq_category_filter",
+      "faq_expand",
+      "faq_related_link_click",
+      "faq_cta_click",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the SIPANEL FAQ system according to this JSON specification.",
+      "rules": [
+        "Create a reusable FAQ data model.",
+        "Create localized FAQ pages for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Implement search and category filtering.",
+        "Implement accessible accordions.",
+        "Add FAQPage schema from the FAQ data.",
+        "Add related internal links.",
+        "Use existing SIPANEL design system.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if conflicting specifications, destructive commands, paid services, or missing verified business data are involved."
+      ]
+    }
+  }

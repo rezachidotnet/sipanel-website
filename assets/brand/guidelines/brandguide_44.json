@@ -1,0 +1,347 @@
+{
+  "page": {
+    "number": 44,
+    "title": "Performance Standards",
+    "section": "Implementation & Governance",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define SIPANEL website performance standards, Core Web Vitals targets, engineering-asset optimization rules, technical diagram loading systems, multilingual delivery strategy, and production-grade frontend performance requirements for industrial envelope digital experiences.",
+  "performance_philosophy": {
+    "statement": "Performance is part of SIPANEL's engineering credibility. Every interface must feel fast, stable, controlled, and technically reliable across mobile, desktop, multilingual, and industrial field-use environments.",
+    "core_principles": [
+      "Speed supports trust",
+      "Mobile performance first",
+      "Stable layouts",
+      "Optimized technical visuals",
+      "Minimal blocking resources",
+      "Performance-aware design decisions",
+      "Progressive engineering content loading",
+      "Scalable asset delivery",
+      "Consultant-grade responsiveness"
+    ]
+  },
+  "core_web_vitals_targets": {
+    "lcp": {
+      "target": "under 2.5 seconds",
+      "priority": "critical"
+    },
+    "cls": {
+      "target": "0.1 or lower",
+      "priority": "critical"
+    },
+    "inp": {
+      "target": "under 200ms",
+      "priority": "critical"
+    },
+    "ttfb": {
+      "target": "under 800ms",
+      "priority": "high"
+    }
+  },
+  "lighthouse_targets": {
+    "mobile_performance": "90+",
+    "desktop_performance": "95+",
+    "accessibility": "95+",
+    "best_practices": "95+",
+    "seo": "95+"
+  },
+  "mobile_performance_rules": {
+    "targets": {
+      "initial_load": "under 3 seconds",
+      "initial_payload": "under 2MB",
+      "hero_image": "under 250KB when possible",
+      "interaction_feedback": "under 100ms"
+    },
+    "rules": [
+      "Use mobile-optimized assets.",
+      "Preload only critical hero assets.",
+      "Lazy-load below-the-fold images.",
+      "Avoid autoplay video backgrounds.",
+      "Delay heavy technical diagrams until user interaction.",
+      "Reduce engineering content density during initial mobile load.",
+      "Optimize field usability under slow mobile networks."
+    ]
+  },
+  "image_optimization_rules": {
+    "preferred_formats": [
+      "WebP",
+      "AVIF",
+      "SVG for logos and icons"
+    ],
+    "rules": [
+      "Use responsive image srcsets.",
+      "Define width and height to prevent layout shift.",
+      "Compress all project photography.",
+      "Use mobile-specific crops.",
+      "Avoid uncompressed JPG or PNG assets.",
+      "Serve façade and roofing photography progressively.",
+      "Use modern image delivery pipelines."
+    ],
+    "recommended_widths": {
+      "mobile": "480px",
+      "tablet": "900px",
+      "desktop": "1600px",
+      "large_desktop": "2200px"
+    }
+  },
+  "engineering_visual_performance": {
+    "supported_visual_types": [
+      "shop_drawings",
+      "waterproofing_details",
+      "drainage_diagrams",
+      "acp_sections",
+      "standing_seam_details",
+      "thermal_bridge_diagrams",
+      "envelope_transition_details",
+      "rainscreen_details"
+    ],
+    "rules": [
+      "Use lightweight preview assets.",
+      "Load high-resolution diagrams only after interaction.",
+      "Avoid loading multiple heavy technical assets simultaneously.",
+      "Progressively load façade and roofing visuals.",
+      "Use SVG where diagrams remain lightweight and readable.",
+      "Use optimized preview crops before fullscreen loading.",
+      "Preserve engineering readability during compression."
+    ]
+  },
+  "technical_diagram_performance": {
+    "rules": [
+      "Use lightweight preview images.",
+      "Load high-resolution diagrams only after user opens viewer.",
+      "Avoid embedding heavy PDFs on mobile.",
+      "Use SVG where diagrams remain readable and lightweight.",
+      "Cache frequently used technical visuals.",
+      "Use progressive enhancement for fullscreen diagram inspection."
+    ],
+    "loading_sequence": [
+      "Placeholder",
+      "Optimized preview",
+      "Interactive preview",
+      "High-resolution fullscreen asset"
+    ]
+  },
+  "javascript_performance_rules": {
+    "rules": [
+      "Keep JavaScript bundles small.",
+      "Use code splitting for heavy components.",
+      "Lazy-load modal viewers, resource filters, and diagram tools.",
+      "Avoid unnecessary third-party scripts.",
+      "Defer non-critical analytics and marketing scripts.",
+      "Use route-level code splitting.",
+      "Avoid unnecessary hydration overhead.",
+      "Optimize animation runtime performance."
+    ],
+    "priority_components": [
+      "Hero section",
+      "Navigation",
+      "Primary CTA",
+      "RFQ form entry",
+      "Sticky mobile CTA",
+      "Language switcher"
+    ]
+  },
+  "css_performance_rules": {
+    "rules": [
+      "Use critical CSS for above-the-fold content.",
+      "Remove unused CSS.",
+      "Avoid large animation-heavy stylesheets.",
+      "Use design tokens consistently.",
+      "Avoid layout-shifting style changes after load.",
+      "Minimize CSS specificity complexity.",
+      "Use logical properties for RTL efficiency."
+    ]
+  },
+  "font_performance_rules": {
+    "rules": [
+      "Use font-display swap.",
+      "Preload critical font weights only.",
+      "Avoid loading unnecessary font families.",
+      "Use system fallback fonts when needed.",
+      "Subset multilingual fonts where possible.",
+      "Optimize Arabic and Persian font delivery.",
+      "Prevent CLS caused by late font loading."
+    ],
+    "critical_weights": [
+      "400",
+      "600",
+      "700"
+    ]
+  },
+  "motion_performance_rules": {
+    "rules": [
+      "Animate transform and opacity only when possible.",
+      "Avoid heavy blur effects on mobile.",
+      "Avoid parallax-heavy sections.",
+      "Limit simultaneous mobile animations.",
+      "Respect prefers-reduced-motion.",
+      "Avoid decorative motion that does not support engineering UX.",
+      "Reduce GPU-intensive rendering effects."
+    ]
+  },
+  "third_party_script_rules": {
+    "allowed_when_needed": [
+      "Google Analytics 4",
+      "Google Tag Manager",
+      "Google Search Console",
+      "Microsoft Clarity or Hotjar",
+      "CRM tracking"
+    ],
+    "rules": [
+      "Audit third-party script impact.",
+      "Load non-critical scripts after interaction or idle time.",
+      "Avoid duplicate analytics scripts.",
+      "Remove unused marketing pixels.",
+      "Prevent script conflicts affecting Core Web Vitals."
+    ]
+  },
+  "rfq_form_performance": {
+    "rules": [
+      "RFQ form must load quickly on mobile.",
+      "Do not delay form interaction with heavy validation scripts.",
+      "File upload should not block form progression.",
+      "Show upload progress clearly.",
+      "Prevent duplicate submissions.",
+      "Optimize mobile keyboard interactions.",
+      "Load upload services asynchronously."
+    ]
+  },
+  "seo_performance_rules": {
+    "rules": [
+      "All SEO landing pages must meet mobile performance targets.",
+      "Images and diagrams must not slow indexable content.",
+      "Use structured data without blocking rendering.",
+      "Avoid JavaScript-only content for critical SEO text.",
+      "Preserve crawlability of engineering content.",
+      "Ensure technical diagrams do not block content indexing."
+    ]
+  },
+  "rtl_and_multilingual_performance": {
+    "rules": [
+      "Do not load all language bundles by default.",
+      "Load only active language content.",
+      "Optimize RTL fonts and script-specific assets.",
+      "Prevent layout shifts caused by translated text expansion.",
+      "Preserve performance consistency across all supported languages.",
+      "Avoid duplicate resource loading during language switching."
+    ]
+  },
+  "caching_and_delivery_rules": {
+    "rules": [
+      "Use CDN delivery for static assets.",
+      "Cache images, fonts, icons, and diagrams.",
+      "Use long-term caching for versioned assets.",
+      "Compress text assets with Brotli or Gzip.",
+      "Serve assets from fast regional infrastructure where possible.",
+      "Use edge delivery for critical global regions."
+    ]
+  },
+  "resource_center_performance_rules": {
+    "rules": [
+      "Do not preload downloadable PDFs.",
+      "Lazy-load technical previews.",
+      "Load resource filters progressively.",
+      "Optimize downloadable specification previews.",
+      "Avoid resource grids with excessive simultaneous asset loading."
+    ]
+  },
+  "case_study_performance_rules": {
+    "rules": [
+      "Use progressive project photography loading.",
+      "Lazy-load below-the-fold case study assets.",
+      "Avoid loading all project galleries initially.",
+      "Optimize façade photography separately from mobile crops.",
+      "Compress industrial visuals aggressively without losing engineering readability."
+    ]
+  },
+  "performance_monitoring": {
+    "required_metrics": [
+      "LCP",
+      "CLS",
+      "INP",
+      "TTFB",
+      "Mobile page load time",
+      "JavaScript bundle size",
+      "Image weight",
+      "RFQ form completion latency",
+      "Diagram viewer interaction latency",
+      "Language-switch performance"
+    ],
+    "tools": [
+      "Google PageSpeed Insights",
+      "Lighthouse",
+      "Google Search Console Core Web Vitals",
+      "WebPageTest",
+      "Real User Monitoring if available",
+      "Chrome UX Report"
+    ]
+  },
+  "performance_qa_checklist": [
+    "Mobile Lighthouse score is 90+.",
+    "LCP is under 2.5 seconds.",
+    "CLS is minimal.",
+    "INP is under 200ms.",
+    "Hero image is optimized and preloaded.",
+    "Below-the-fold images are lazy-loaded.",
+    "Technical diagrams load progressively.",
+    "No heavy PDFs are embedded on mobile.",
+    "Third-party scripts are audited.",
+    "RFQ form interaction is fast.",
+    "ACP and façade visuals are optimized.",
+    "Standing seam technical diagrams load progressively.",
+    "RTL layouts maintain performance targets."
+  ],
+  "forbidden_patterns": [
+    "Large uncompressed hero images",
+    "Heavy autoplay background videos",
+    "PDF embeds on mobile",
+    "Loading all high-resolution diagrams on page load",
+    "Excessive JavaScript bundles",
+    "Multiple duplicate tracking scripts",
+    "Heavy parallax or scroll-jacking",
+    "Layout shifts caused by late-loading assets",
+    "Full-resolution façade galleries on initial load",
+    "Unoptimized engineering PDFs"
+  ],
+  "approved_characteristics": [
+    "Fast",
+    "Stable",
+    "Mobile-first",
+    "Optimized",
+    "Lightweight",
+    "Reliable",
+    "Engineering-grade",
+    "Scalable",
+    "Field-ready"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Performance philosophy",
+      "Core Web Vitals targets",
+      "Mobile performance standards",
+      "Engineering visual optimization",
+      "Image and diagram optimization",
+      "JavaScript and CSS rules",
+      "Multilingual performance strategy",
+      "Monitoring tools",
+      "Performance QA checklist"
+    ],
+    "visual_direction": [
+      "Performance KPI cards",
+      "Asset loading flow diagram",
+      "Diagram loading sequence",
+      "Mobile optimization checklist",
+      "Core Web Vitals dashboard mockup",
+      "Engineering visual loading architecture",
+      "Progressive diagram delivery flow"
+    ]
+  },
+  "implementation_notes": [
+    "Performance must be planned during design and development, not fixed only after launch.",
+    "Technical visuals are critical trust assets but must be delivered progressively.",
+    "Mobile speed directly affects trust, SEO, consultant engagement, and RFQ conversion.",
+    "Performance standards must support sandwich panels, ACP façades, standing seam roofing, ZIP systems, and industrial envelope engineering equally.",
+    "Performance governance should be reviewed before every major production release."
+  ]
+}

@@ -1,0 +1,260 @@
+{
+    "page": {
+      "number": 7,
+      "title": "Industrial Photography Standards",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the visual standards, composition rules, technical requirements, and usage principles for SIPANEL industrial photography across digital, print, and technical environments.",
+    "photography_philosophy": {
+      "statement": "SIPANEL photography must communicate engineering confidence, execution quality, industrial scale, and technical realism.",
+      "core_principles": [
+        "Real projects over staged marketing imagery",
+        "Engineering clarity over artistic decoration",
+        "Industrial realism over lifestyle aesthetics",
+        "Technical detail visibility over visual effects",
+        "Execution proof over abstract branding"
+      ]
+    },
+    "visual_characteristics": {
+      "approved_style": [
+        "Industrial",
+        "Structured",
+        "Technical",
+        "Clean",
+        "Authentic",
+        "Documentary-inspired",
+        "Architectural"
+      ],
+      "avoid_style": [
+        "Lifestyle photography",
+        "Overly cinematic visuals",
+        "Heavy color grading",
+        "Artificial HDR effects",
+        "Generic construction stock imagery",
+        "Decorative visual treatment"
+      ]
+    },
+    "approved_photography_categories": [
+      {
+        "category": "Industrial Project Photography",
+        "description": "Real completed or in-progress industrial panel projects.",
+        "priority": "critical"
+      },
+      {
+        "category": "Installation Process",
+        "description": "Panel installation, waterproofing execution, fastening, and coordination workflow.",
+        "priority": "high"
+      },
+      {
+        "category": "Technical Detail Photography",
+        "description": "Drainage systems, flashing details, overlaps, sealing, and engineering solutions.",
+        "priority": "high"
+      },
+      {
+        "category": "Engineering Documentation Context",
+        "description": "Shop drawings, technical review meetings, engineering coordination.",
+        "priority": "medium"
+      },
+      {
+        "category": "Industrial Scale Imagery",
+        "description": "Wide-angle visuals showing project scale and execution scope.",
+        "priority": "high"
+      }
+    ],
+    "composition_rules": {
+      "framing": [
+        "Use strong architectural alignment.",
+        "Preserve structural geometry.",
+        "Maintain clean horizon lines.",
+        "Use depth to communicate scale."
+      ],
+      "focus_points": [
+        "Panel systems",
+        "Roof structures",
+        "Drainage details",
+        "Engineering execution",
+        "Industrial scale",
+        "Technical craftsmanship"
+      ],
+      "camera_angles": {
+        "preferred": [
+          "Wide industrial perspectives",
+          "Low-angle structural shots",
+          "Straight-on technical framing",
+          "Detail close-ups with context"
+        ],
+        "avoid": [
+          "Overly dramatic cinematic angles",
+          "Tilted framing",
+          "Lifestyle-style portrait angles"
+        ]
+      }
+    },
+    "lighting_rules": {
+      "preferred_lighting": [
+        "Natural daylight",
+        "Soft industrial ambient lighting",
+        "Balanced exposure",
+        "Realistic environmental conditions"
+      ],
+      "avoid_lighting": [
+        "Heavy studio effects",
+        "Overexposed highlights",
+        "Extreme shadows",
+        "Artificial dramatic lighting"
+      ]
+    },
+    "color_treatment_rules": {
+      "approved_treatment": [
+        "Neutral industrial tones",
+        "Controlled contrast",
+        "Natural material representation",
+        "Realistic whites and grays"
+      ],
+      "forbidden_treatment": [
+        "Oversaturation",
+        "Extreme teal-orange grading",
+        "Heavy Instagram-style filters",
+        "Artificial neon tones"
+      ],
+      "orange_usage_rule": "Brand orange should appear naturally only through branding elements, annotations, or controlled UI overlays."
+    },
+    "human_presence_rules": {
+      "allowed": true,
+      "preferred_usage": [
+        "Engineering teams in technical context",
+        "Installation crews during execution",
+        "Scale reference within industrial environment"
+      ],
+      "rules": [
+        "People must appear purposeful and professional.",
+        "Avoid posed corporate-style smiles.",
+        "Avoid lifestyle-oriented staging.",
+        "Humans should support technical realism, not dominate the frame."
+      ],
+      "forbidden": [
+        "Generic office handshakes",
+        "Lifestyle business scenes",
+        "Fake construction posing",
+        "Overly staged teamwork photography"
+      ]
+    },
+    "technical_detail_rules": {
+      "focus_areas": [
+        "Waterproofing details",
+        "Flashing systems",
+        "Panel overlaps",
+        "Drainage logic",
+        "Installation sequencing",
+        "Fastening systems"
+      ],
+      "requirements": [
+        "Details must remain readable on mobile.",
+        "Avoid visual clutter.",
+        "Support photography with annotations when necessary.",
+        "Use close-ups selectively."
+      ]
+    },
+    "image_quality_standards": {
+      "minimum_resolution": {
+        "web": "1600px wide",
+        "print": "300 DPI"
+      },
+      "required_formats": [
+        "WebP",
+        "AVIF",
+        "PNG",
+        "TIFF for print"
+      ],
+      "forbidden_quality_issues": [
+        "Blur",
+        "Compression artifacts",
+        "Low dynamic range",
+        "Pixelation",
+        "Over-sharpening"
+      ]
+    },
+    "website_usage_rules": {
+      "hero_images": {
+        "requirements": [
+          "Communicate industrial scale immediately",
+          "Support headline readability",
+          "Avoid excessive visual noise",
+          "Preserve fast loading performance"
+        ]
+      },
+      "case_studies": {
+        "requirements": [
+          "Use real project imagery only",
+          "Show challenge and execution context",
+          "Include technical detail when possible"
+        ]
+      },
+      "technical_sections": {
+        "requirements": [
+          "Support engineering explanations",
+          "Highlight execution quality",
+          "Use annotations sparingly"
+        ]
+      }
+    },
+    "multilingual_visual_rules": {
+      "requirements": [
+        "Photography must remain culturally neutral and globally professional.",
+        "Text inside photography should support multilingual adaptation when possible.",
+        "Avoid embedded text that cannot be localized."
+      ]
+    },
+    "forbidden_photography_examples": [
+      "Generic stock office teams",
+      "Lifestyle marketing photography",
+      "Artificial industrial renders",
+      "Fake construction scenes",
+      "Heavy cinematic editing",
+      "Overly dramatic emotional storytelling",
+      "Decorative visual effects",
+      "Non-industrial imagery"
+    ],
+    "approved_photography_characteristics": [
+      "Real industrial execution",
+      "Visible engineering logic",
+      "Architectural structure",
+      "Material realism",
+      "Technical clarity",
+      "Controlled composition",
+      "Execution authenticity"
+    ],
+    "annotation_integration_rules": {
+      "allowed": true,
+      "rules": [
+        "Use minimal technical annotations.",
+        "Use orange only for key callouts.",
+        "Avoid excessive overlay graphics.",
+        "Maintain readability and image integrity."
+      ]
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Photography philosophy",
+        "Approved photography categories",
+        "Composition examples",
+        "Lighting and color examples",
+        "Technical detail standards",
+        "Approved vs forbidden comparisons"
+      ],
+      "visual_direction": [
+        "Full-width industrial imagery",
+        "Technical framing overlays",
+        "Annotated comparison layouts",
+        "Grid-based presentation system"
+      ]
+    },
+    "implementation_notes": [
+      "Always prioritize real project photography over stock imagery.",
+      "Photography should support technical credibility and industrial trust.",
+      "Every image must reinforce SIPANEL's engineering-first positioning.",
+      "Maintain visual consistency across web, print, and presentation environments."
+    ]
+  }

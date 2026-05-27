@@ -1,0 +1,419 @@
+{
+  "page": {
+    "number": 29,
+    "title": "Technical Writing Guidelines",
+    "section": "Content & Conversion System",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define how SIPANEL communicates industrial envelope engineering information clearly, professionally, and persuasively across websites, proposals, technical resources, case studies, façade systems, ZIP roofing systems, and engineering content.",
+  "writing_philosophy": {
+    "statement": "SIPANEL technical writing must simplify industrial envelope engineering complexity without losing technical accuracy, architectural credibility, or professional trust.",
+    "core_principles": [
+      "Clarity over jargon",
+      "Engineering accuracy",
+      "Structured explanation",
+      "Problem-solution communication",
+      "Concise professional tone",
+      "Proof-based messaging",
+      "Envelope-system clarity",
+      "Consultant-grade communication",
+      "Architectural credibility",
+      "Engineering-first positioning"
+    ]
+  },
+  "primary_writing_goals": [
+    {
+      "goal": "Improve Technical Understanding",
+      "description": "Help industrial clients, consultants, architects, and contractors quickly understand engineering logic, façade coordination, roofing systems, risks, and solutions."
+    },
+    {
+      "goal": "Build Engineering Trust",
+      "description": "Demonstrate industrial envelope engineering authority through structured, accurate, and technically grounded communication."
+    },
+    {
+      "goal": "Support Conversion",
+      "description": "Use technical clarity to reduce hesitation and increase qualified RFQ, consultation, and engineering review actions."
+    },
+    {
+      "goal": "Position SIPANEL Beyond Sandwich Panels",
+      "description": "Ensure all writing supports SIPANEL as a multi-system industrial envelope engineering company."
+    }
+  ],
+  "tone_and_style": {
+    "voice_characteristics": [
+      "Technical",
+      "Professional",
+      "Structured",
+      "Confident",
+      "Clear",
+      "Practical",
+      "Engineering-first",
+      "Consultative",
+      "Architecturally credible",
+      "Industrial",
+      "Measured",
+      "Specification-aware"
+    ],
+    "avoid_characteristics": [
+      "Sales-heavy",
+      "Overly corporate",
+      "Emotional exaggeration",
+      "Marketing fluff",
+      "Complex jargon overload",
+      "Aggressive persuasion",
+      "Contractor cliché language",
+      "Low-end construction wording",
+      "Generic supplier positioning"
+    ]
+  },
+  "writing_structure_rules": {
+    "recommended_structure": [
+      "Problem or challenge",
+      "Engineering explanation",
+      "SIPANEL solution",
+      "Proof or technical benefit",
+      "Next action or recommendation"
+    ],
+    "rules": [
+      "Start with the real engineering issue.",
+      "Use short structured sections.",
+      "Break down complex ideas progressively.",
+      "Use headings and bullets frequently.",
+      "Avoid long dense paragraphs.",
+      "Explain engineering reasoning before presenting the solution.",
+      "Use system-specific technical context.",
+      "Separate façade, roofing, and envelope-system explanations clearly."
+    ]
+  },
+  "sentence_guidelines": {
+    "preferred_sentence_length": "12-22 words",
+    "rules": [
+      "Use direct sentence structure.",
+      "Prefer active voice.",
+      "Avoid unnecessary filler words.",
+      "Use one idea per sentence when possible.",
+      "Keep technical explanations readable.",
+      "Avoid excessive contractor shorthand.",
+      "Use measurable and technically grounded wording."
+    ]
+  },
+  "paragraph_guidelines": {
+    "maximum_lines_mobile": 4,
+    "maximum_lines_desktop": 5,
+    "rules": [
+      "Use whitespace generously.",
+      "Break technical explanations into sections.",
+      "Use bullets for process or specification details.",
+      "Avoid uninterrupted technical walls of text.",
+      "Separate engineering analysis from proof visually.",
+      "Use concise consultant-friendly formatting."
+    ]
+  },
+  "technical_language_rules": {
+    "approved_language": [
+      "Engineering terminology",
+      "Execution terminology",
+      "Construction system terminology",
+      "Technical risk explanation",
+      "Measurement-based communication",
+      "Envelope-system terminology",
+      "Façade engineering terminology",
+      "Standing seam roofing terminology",
+      "Thermal performance terminology",
+      "Coordination and detailing terminology"
+    ],
+    "rules": [
+      "Use industry-recognized engineering terms.",
+      "Explain specialized terminology when necessary.",
+      "Preserve technical accuracy.",
+      "Avoid vague claims without explanation.",
+      "Use consultant-grade engineering terminology.",
+      "Support architectural and façade communication.",
+      "Use technical specificity without unnecessary complexity.",
+      "Maintain terminology consistency across systems."
+    ],
+    "approved_technical_terms": [
+      "Industrial envelope systems",
+      "ACP façade systems",
+      "Standing seam roofing",
+      "ZIP roofing systems",
+      "Rainscreen cladding",
+      "Thermal bridge mitigation",
+      "Envelope continuity",
+      "Roof-to-wall transition",
+      "Concealed fastening",
+      "Substructure coordination",
+      "Thermal movement",
+      "Expansion joint detailing",
+      "Envelope coordination"
+    ],
+    "forbidden_language": [
+      "Buzzwords without meaning",
+      "Fake innovation language",
+      "Exaggerated marketing phrases",
+      "Unverified technical promises",
+      "Cheap contractor positioning",
+      "Generic roofing-only terminology",
+      "Overly simplified engineering claims"
+    ]
+  },
+  "proof_based_writing": {
+    "rules": [
+      "Support claims with measurable proof.",
+      "Use project examples whenever possible.",
+      "Reference execution logic and engineering process.",
+      "Show cause and effect relationships clearly.",
+      "Use technical proof to support envelope-system claims.",
+      "Connect engineering analysis to measurable outcomes."
+    ],
+    "approved_proof_examples": [
+      "Reduced waterproofing risk",
+      "Lower material waste",
+      "Faster installation coordination",
+      "Improved drainage performance",
+      "Reduced project delays",
+      "Improved façade alignment precision",
+      "Reduced thermal bridge exposure",
+      "Improved standing seam movement control",
+      "Enhanced envelope continuity",
+      "Improved roof-to-façade coordination"
+    ]
+  },
+  "website_content_rules": {
+    "homepage": [
+      "Focus on industrial envelope engineering outcomes.",
+      "Communicate value within first screen.",
+      "Use concise headlines.",
+      "Support claims with proof.",
+      "Balance sandwich panel, cladding, and ZIP roofing representation."
+    ],
+    "service_pages": [
+      "Explain process clearly.",
+      "Show engineering methodology.",
+      "Use technical diagrams where useful.",
+      "Include FAQ and proof.",
+      "Use system-specific engineering terminology."
+    ],
+    "case_studies": [
+      "Describe challenge first.",
+      "Explain technical solution.",
+      "Present measurable outcomes.",
+      "Use real project context.",
+      "Support façade and roofing coordination storytelling."
+    ],
+    "resource_pages": [
+      "Use educational tone.",
+      "Simplify technical complexity.",
+      "Guide users toward deeper technical understanding.",
+      "Support consultant-grade technical education."
+    ],
+    "façade_pages": [
+      "Use façade engineering terminology.",
+      "Explain ACP systems and rainscreen logic clearly.",
+      "Support architectural credibility."
+    ],
+    "zip_roofing_pages": [
+      "Use standing seam terminology correctly.",
+      "Explain thermal movement and concealed fastening logic.",
+      "Support long-span roofing engineering communication."
+    ]
+  },
+  "seo_writing_rules": {
+    "rules": [
+      "Write naturally for humans first.",
+      "Integrate keywords without forcing them.",
+      "Use keyword-rich headings carefully.",
+      "Avoid repetitive keyword stuffing.",
+      "Use industrial envelope terminology naturally.",
+      "Support consultant and architect search intent.",
+      "Use specification-oriented language where relevant."
+    ],
+    "content_structure": [
+      "H1 with primary keyword",
+      "Clear H2 hierarchy",
+      "Technical explanation",
+      "Supporting FAQ",
+      "Contextual CTA"
+    ],
+    "recommended_keyword_groups": [
+      "Industrial envelope systems",
+      "Aluminum cladding systems",
+      "ACP façade engineering",
+      "Standing seam roofing",
+      "ZIP roofing systems",
+      "Industrial façade coordination",
+      "Thermal envelope systems",
+      "Roof and façade transitions"
+    ]
+  },
+  "cta_writing_rules": {
+    "approved_cta_style": [
+      "Action-oriented",
+      "Engineering-focused",
+      "Clear outcome",
+      "Consultative",
+      "Low-friction"
+    ],
+    "approved_examples": [
+      "Get Free Engineering Review",
+      "Request Technical Consultation",
+      "Request Project Cost Check",
+      "Download Engineering Resource",
+      "Discuss Cladding System",
+      "Review ZIP Roofing Solution",
+      "Request Envelope Engineering Review"
+    ],
+    "forbidden_examples": [
+      "Buy Now",
+      "Act Fast",
+      "Limited Time Offer",
+      "Click Here",
+      "Best Deal",
+      "Lowest Price Guaranteed"
+    ]
+  },
+  "multilingual_writing_rules": {
+    "supported_languages": [
+      "English",
+      "Persian",
+      "Arabic",
+      "Russian"
+    ],
+    "rules": [
+      "Preserve engineering meaning across translations.",
+      "Avoid direct literal translation when unnatural.",
+      "Maintain consistent terminology.",
+      "Adapt sentence flow to local language structure.",
+      "Preserve façade and roofing terminology consistency.",
+      "Validate standing seam and ACP terminology carefully."
+    ],
+    "technical_terms": [
+      "BOM",
+      "MTO",
+      "RFQ",
+      "CAD",
+      "PU",
+      "PIR",
+      "ACP",
+      "ZIP Roofing",
+      "Standing Seam",
+      "Rainscreen",
+      "Thermal Bridge"
+    ]
+  },
+  "readability_rules": {
+    "rules": [
+      "Use scannable formatting.",
+      "Prefer short headings.",
+      "Use bullets for lists.",
+      "Highlight key metrics carefully.",
+      "Keep mobile readability high.",
+      "Use structured technical hierarchy.",
+      "Avoid consultant-unfriendly formatting."
+    ],
+    "mobile_priority": [
+      "Short paragraphs",
+      "Clear spacing",
+      "One idea per section",
+      "Visible CTA placement",
+      "Readable technical terminology"
+    ]
+  },
+  "engineering_storytelling_rules": {
+    "recommended_flow": [
+      "Project challenge",
+      "Technical risk",
+      "Engineering analysis",
+      "SIPANEL solution",
+      "Execution outcome",
+      "Measured result"
+    ],
+    "rules": [
+      "Use real industrial context.",
+      "Focus on technical logic.",
+      "Avoid emotional exaggeration.",
+      "Keep storytelling grounded in engineering reality.",
+      "Explain envelope coordination clearly.",
+      "Support façade and roofing narratives equally.",
+      "Use measurable engineering outcomes."
+    ]
+  },
+  "consultant_and_architect_communication_rules": {
+    "rules": [
+      "Use specification-aware communication.",
+      "Avoid contractor-sales language.",
+      "Support architectural coordination discussions.",
+      "Use structured technical reasoning.",
+      "Demonstrate engineering discipline.",
+      "Communicate technical process maturity."
+    ]
+  },
+  "forbidden_writing_patterns": [
+    "Generic marketing copy",
+    "Overly emotional language",
+    "Buzzword-heavy paragraphs",
+    "Unsupported technical claims",
+    "Dense unreadable technical blocks",
+    "Excessive passive voice",
+    "Keyword stuffing",
+    "Contractor cliché language",
+    "Roof-only technical positioning",
+    "Generic supplier messaging",
+    "Low-end construction terminology"
+  ],
+  "approved_writing_characteristics": [
+    "Clear",
+    "Technical",
+    "Structured",
+    "Credible",
+    "Concise",
+    "Industrial",
+    "Proof-driven",
+    "Consultative",
+    "Envelope-focused",
+    "Architecturally credible",
+    "Engineering-first",
+    "Specification-aware"
+  ],
+  "content_qa_checklist": [
+    "Content explains real engineering value.",
+    "Technical claims are accurate.",
+    "Paragraphs remain readable on mobile.",
+    "Headings follow clear hierarchy.",
+    "CTA matches page intent.",
+    "Proof supports claims.",
+    "No unnecessary jargon overload.",
+    "Multilingual terminology remains consistent.",
+    "Writing supports sandwich panels, cladding, ZIP roofing, and envelope systems appropriately.",
+    "Tone positions SIPANEL as an industrial envelope engineering partner."
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Writing philosophy",
+      "Technical writing structure",
+      "Sentence and paragraph rules",
+      "Proof-based writing examples",
+      "SEO writing standards",
+      "Engineering storytelling examples",
+      "Consultant communication standards",
+      "Correct vs incorrect writing samples"
+    ],
+    "visual_direction": [
+      "Structured text layouts",
+      "Readable paragraph examples",
+      "Technical storytelling flow diagrams",
+      "SEO content examples",
+      "CTA copy examples",
+      "Envelope-system terminology maps",
+      "Consultant-grade writing examples"
+    ]
+  },
+  "implementation_notes": [
+    "All SIPANEL content must communicate engineering clarity before marketing messaging.",
+    "Technical writing should reduce confusion and increase trust.",
+    "Content consistency across website, resources, proposals, and multilingual experiences is mandatory.",
+    "Every technical explanation should help users make better engineering decisions.",
+    "Writing systems must support sandwich panels, aluminum cladding, ZIP roofing systems, façade engineering, and industrial envelope coordination equally."
+  ]
+}

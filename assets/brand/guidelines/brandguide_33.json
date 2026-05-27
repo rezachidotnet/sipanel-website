@@ -1,0 +1,490 @@
+{
+  "page": {
+    "number": 33,
+    "title": "Engineering Storytelling Framework",
+    "section": "Content & Conversion System",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define how SIPANEL communicates engineering expertise through structured storytelling that explains technical problems, envelope-system logic, execution control, and measurable industrial outcomes across sandwich panels, aluminum cladding, ZIP roofing, and industrial building envelope systems.",
+  "storytelling_philosophy": {
+    "statement": "SIPANEL storytelling should educate, clarify, and build trust through engineering thinking rather than promotional marketing language.",
+    "core_principles": [
+      "Engineering-first narrative",
+      "Problem-to-solution logic",
+      "Real-world execution focus",
+      "Proof-driven communication",
+      "Technical clarity",
+      "Structured storytelling flow",
+      "Envelope-system storytelling",
+      "Façade engineering clarity",
+      "Roofing and cladding coordination",
+      "Multi-system industrial envelope credibility"
+    ]
+  },
+  "primary_storytelling_goals": [
+    {
+      "goal": "Build Technical Trust",
+      "description": "Demonstrate engineering expertise through structured explanation, system logic, and execution control."
+    },
+    {
+      "goal": "Simplify Complex Systems",
+      "description": "Help industrial clients understand technical risks and solutions across roofing, cladding, sandwich panel, and envelope systems without overwhelming detail."
+    },
+    {
+      "goal": "Support Conversion",
+      "description": "Use engineering clarity and measurable proof to reduce project hesitation and guide users toward qualified consultation."
+    },
+    {
+      "goal": "Position SIPANEL as an Industrial Envelope Partner",
+      "description": "Avoid sandwich-panel-only positioning by communicating capability across sandwich panels, aluminum cladding, ZIP roofing, and envelope coordination."
+    }
+  ],
+  "core_storytelling_structure": {
+    "step_1": {
+      "title": "Industrial Context",
+      "purpose": "Establish the project environment, industry type, operational conditions, and envelope system category.",
+      "required_content": [
+        "Project type",
+        "Industrial use case",
+        "Environmental conditions",
+        "Operational requirements",
+        "Envelope system type",
+        "Relevant system category: sandwich panel, aluminum cladding, ZIP roofing, or mixed envelope"
+      ]
+    },
+    "step_2": {
+      "title": "Engineering Problem",
+      "purpose": "Clearly explain the technical challenge, risk, or execution issue.",
+      "required_content": [
+        "Waterproofing risk",
+        "Drainage issue",
+        "Coordination challenge",
+        "Material waste risk",
+        "Installation complexity",
+        "Façade alignment risk",
+        "Thermal bridge risk",
+        "Standing seam thermal movement",
+        "Cladding substructure coordination",
+        "Roof-to-façade transition risk",
+        "Wind-load coordination"
+      ]
+    },
+    "step_3": {
+      "title": "Technical Analysis",
+      "purpose": "Demonstrate engineering reasoning, root-cause logic, and system evaluation.",
+      "required_content": [
+        "Technical review",
+        "Root-cause explanation",
+        "Engineering observations",
+        "System analysis",
+        "Envelope continuity review",
+        "Façade attachment logic",
+        "Standing seam movement analysis",
+        "Thermal bridge evaluation",
+        "Substructure tolerance review"
+      ]
+    },
+    "step_4": {
+      "title": "SIPANEL Engineering Approach",
+      "purpose": "Present the technical strategy and engineered solution.",
+      "required_content": [
+        "Design methodology",
+        "Shop drawing strategy",
+        "Drainage solution",
+        "Panel coordination",
+        "Waterproofing logic",
+        "Aluminum cladding detailing",
+        "ACP façade engineering",
+        "ZIP roofing methodology",
+        "Standing seam detailing",
+        "Concealed fastener coordination",
+        "Envelope transition detailing",
+        "Thermal movement strategy"
+      ]
+    },
+    "step_5": {
+      "title": "Execution Process",
+      "purpose": "Show implementation discipline, technical workflow, and execution control.",
+      "required_content": [
+        "Installation process",
+        "Inspection logic",
+        "Coordination workflow",
+        "Execution control",
+        "Cladding alignment control",
+        "Standing seam installation sequence",
+        "Façade substructure installation",
+        "Roof and façade transition execution",
+        "Envelope QA checkpoints"
+      ]
+    },
+    "step_6": {
+      "title": "Measured Results",
+      "purpose": "Present proof-backed engineering outcomes.",
+      "required_content": [
+        "Reduced leakage risk",
+        "Waste optimization",
+        "Faster installation",
+        "Improved coordination",
+        "Execution quality improvements",
+        "Improved façade alignment",
+        "Reduced thermal bridge risk",
+        "Improved envelope continuity",
+        "Controlled standing seam movement",
+        "Verified cladding execution quality"
+      ]
+    }
+  },
+  "engineering_narrative_rules": {
+    "rules": [
+      "Start with the engineering problem, not the product.",
+      "Explain technical reasoning clearly.",
+      "Use practical industrial examples.",
+      "Focus on execution quality and risk reduction.",
+      "Connect every solution to measurable value.",
+      "Represent SIPANEL as an industrial envelope engineering partner, not only a sandwich panel provider.",
+      "Match the narrative to the correct system category: sandwich panel, aluminum cladding, ZIP roofing, or mixed envelope system.",
+      "Avoid forcing roof waterproofing language into façade or cladding stories when it is not technically relevant."
+    ]
+  },
+  "approved_storytelling_topics": {
+    "sandwich_panel_stories": [
+      "Roof waterproofing failures",
+      "Drainage coordination",
+      "Panel optimization",
+      "Material waste reduction",
+      "Installation sequencing",
+      "Cold storage performance",
+      "Industrial execution control",
+      "Project coordination complexity"
+    ],
+    "aluminum_cladding_stories": [
+      "Aluminum cladding alignment control",
+      "ACP façade detailing",
+      "Façade substructure coordination",
+      "Rainscreen cladding performance",
+      "Thermal bridge reduction",
+      "Wind-load façade coordination",
+      "Façade expansion movement",
+      "Industrial façade execution quality"
+    ],
+    "zip_roofing_stories": [
+      "ZIP roofing system coordination",
+      "Standing seam thermal movement",
+      "Concealed fastener detailing",
+      "Long-span roof movement control",
+      "Standing seam waterproofing logic",
+      "Seam-lock detailing",
+      "Industrial metal roof execution",
+      "Roof edge and parapet detailing"
+    ],
+    "industrial_envelope_stories": [
+      "Roof-to-façade transition detailing",
+      "Mixed-system envelope coordination",
+      "Envelope continuity",
+      "Thermal envelope optimization",
+      "Façade and roofing integration",
+      "Industrial building envelope risk reduction",
+      "Substructure and roofing interface coordination"
+    ]
+  },
+  "technical_explanation_rules": {
+    "rules": [
+      "Use plain engineering language where possible.",
+      "Break complex systems into smaller explanations.",
+      "Support explanations with diagrams and visuals.",
+      "Avoid unnecessary jargon overload.",
+      "Preserve technical accuracy.",
+      "Explain façade attachment logic when discussing cladding systems.",
+      "Explain standing seam movement behavior when discussing ZIP roofing.",
+      "Support thermal bridge analysis with simple diagrams.",
+      "Explain envelope transition conditions clearly.",
+      "Use consultant-level terminology where needed, but explain it for broader industrial audiences."
+    ],
+    "preferred_supporting_elements": [
+      "Annotated diagrams",
+      "Comparison visuals",
+      "Execution photos",
+      "Step-by-step explanation",
+      "Technical tables",
+      "Façade section diagrams",
+      "Standing seam details",
+      "Cladding substructure diagrams",
+      "Envelope transition visuals",
+      "Thermal bridge diagrams"
+    ]
+  },
+  "proof_integration_rules": {
+    "requirements": [
+      "Every engineering story must include proof.",
+      "Use real project outcomes.",
+      "Show measurable improvements.",
+      "Support claims with technical visuals.",
+      "Use system-specific proof for sandwich panels, aluminum cladding, ZIP roofing, and envelope systems.",
+      "Support cladding narratives with façade details and execution photography.",
+      "Support ZIP roofing narratives with standing seam sections and movement logic.",
+      "Support envelope narratives with transition diagrams and mixed-system case studies."
+    ],
+    "approved_proof_types": [
+      "Project metrics",
+      "Execution photography",
+      "Drainage diagrams",
+      "Shop drawing previews",
+      "Material optimization examples",
+      "ACP façade details",
+      "Aluminum cladding substructure diagrams",
+      "Standing seam roof details",
+      "ZIP roofing installation photos",
+      "Envelope transition diagrams",
+      "Thermal bridge visuals",
+      "Façade alignment proof",
+      "Inspection checkpoint records"
+    ]
+  },
+  "content_structure_rules": {
+    "rules": [
+      "Use strong section hierarchy.",
+      "Keep paragraphs concise.",
+      "Use bullets for technical detail.",
+      "Maintain mobile readability.",
+      "Separate explanation from proof visually.",
+      "Use system labels where needed to clarify whether the story is about sandwich panels, cladding, ZIP roofing, or envelope coordination.",
+      "Avoid mixing too many technical systems in one section unless the story is specifically about envelope integration."
+    ],
+    "recommended_section_length": {
+      "mobile": "2-4 short paragraphs",
+      "desktop": "3-5 structured blocks"
+    }
+  },
+  "visual_storytelling_rules": {
+    "preferred_visuals": [
+      "Industrial execution photography",
+      "Technical diagrams",
+      "Shop drawing snapshots",
+      "Process visuals",
+      "Before-and-after comparisons",
+      "Aluminum cladding façade photography",
+      "ACP attachment details",
+      "Standing seam roof sections",
+      "ZIP roofing execution visuals",
+      "Roof-to-façade transition details",
+      "Thermal bridge diagrams",
+      "Rainscreen façade diagrams"
+    ],
+    "rules": [
+      "Visuals should explain engineering logic.",
+      "Avoid decorative imagery.",
+      "Use annotations carefully.",
+      "Keep visuals technically relevant.",
+      "Use façade visuals for cladding stories.",
+      "Use seam and movement details for ZIP roofing stories.",
+      "Use transition diagrams for envelope coordination stories."
+    ]
+  },
+  "tone_of_voice_rules": {
+    "approved_tone": [
+      "Technical",
+      "Professional",
+      "Structured",
+      "Confident",
+      "Educational",
+      "Architecturally credible",
+      "Consultant-aware"
+    ],
+    "forbidden_tone": [
+      "Overly emotional",
+      "Sales-heavy",
+      "Exaggerated",
+      "Corporate jargon-heavy",
+      "Contractor-only language",
+      "Product-only promotion"
+    ]
+  },
+  "seo_storytelling_rules": {
+    "rules": [
+      "Align storytelling with industrial search intent.",
+      "Use technical keywords naturally.",
+      "Structure stories for scannability.",
+      "Support long-tail engineering searches.",
+      "Use cladding, façade, standing seam, ZIP roofing, and envelope terminology on relevant pages.",
+      "Do not use one roofing-focused narrative template for every SEO page."
+    ],
+    "recommended_sections": [
+      "Challenge",
+      "Engineering analysis",
+      "Solution",
+      "Result",
+      "FAQ"
+    ],
+    "system_specific_story_keywords": {
+      "sandwich_panel": [
+        "sandwich panel installation",
+        "panel layout optimization",
+        "industrial roof waterproofing",
+        "BOM/MTO coordination"
+      ],
+      "aluminum_cladding": [
+        "aluminum cladding systems",
+        "ACP façade detailing",
+        "rainscreen cladding",
+        "façade substructure"
+      ],
+      "zip_roofing": [
+        "ZIP roofing systems",
+        "standing seam roofing",
+        "concealed fastener roofing",
+        "thermal movement"
+      ],
+      "industrial_envelope": [
+        "industrial envelope systems",
+        "building envelope engineering",
+        "roof and façade coordination",
+        "envelope continuity"
+      ]
+    }
+  },
+  "conversion_storytelling_rules": {
+    "rules": [
+      "Use engineering clarity to reduce hesitation.",
+      "Place CTA after proof sections.",
+      "Use consultation-focused CTA language.",
+      "Support CTA with measurable trust.",
+      "Match CTA language to the system category and story context."
+    ],
+    "approved_ctas": [
+      "Get Free Engineering Review",
+      "Request Technical Consultation",
+      "Explore Similar Projects",
+      "Download Engineering Resource",
+      "Request Cladding Consultation",
+      "Review ZIP Roofing System",
+      "Request Envelope Engineering Review",
+      "Discuss Your Industrial Envelope Project"
+    ]
+  },
+  "responsive_behavior": {
+    "mobile": [
+      "Use short storytelling blocks.",
+      "Break technical sections into accordions when needed.",
+      "Prioritize proof visibility.",
+      "Use swipeable visual galleries.",
+      "Use one system focus per viewport where possible.",
+      "Avoid stacking too many technical systems in one mobile section."
+    ],
+    "desktop": [
+      "Allow side-by-side storytelling layouts.",
+      "Support technical visual integration.",
+      "Use split layouts for problem-analysis-solution storytelling.",
+      "Allow larger diagrams for façade, standing seam, and envelope transition explanations."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "Maintain readable contrast.",
+      "Provide alt text for all visuals.",
+      "Use semantic heading structure.",
+      "Keep technical explanations readable for assistive technologies.",
+      "Provide accessible summaries for diagrams explaining cladding, ZIP roofing, and envelope transitions."
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Preserve storytelling flow across languages.",
+      "Maintain engineering terminology consistency.",
+      "Allow layout adaptation for translated content.",
+      "Mirror directional diagrams where necessary.",
+      "Validate façade, cladding, ZIP roofing, and envelope terminology in every supported language.",
+      "Keep technical abbreviations such as ACP, ZIP, CAD, BOM, MTO, and RFQ consistent where appropriate."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "story_section_view",
+      "technical_diagram_expand",
+      "case_study_scroll_depth",
+      "proof_interaction",
+      "engineering_cta_click"
+    ],
+    "tracked_parameters": [
+      "story_type",
+      "section_name",
+      "device_type",
+      "language",
+      "interaction_depth",
+      "system_type",
+      "envelope_category",
+      "cladding_type",
+      "roofing_type"
+    ]
+  },
+  "qa_checklist": [
+    "Engineering problem is clearly explained.",
+    "Technical reasoning is understandable.",
+    "Proof supports the narrative.",
+    "Visuals reinforce engineering logic.",
+    "Story remains readable on mobile.",
+    "CTA placement feels contextual.",
+    "No exaggerated claims are used.",
+    "The system category is clear: sandwich panel, aluminum cladding, ZIP roofing, or envelope engineering.",
+    "The story does not position SIPANEL as sandwich-panel-only.",
+    "Cladding and ZIP roofing terminology is accurate where used.",
+    "Technical visuals match the story topic."
+  ],
+  "forbidden_patterns": [
+    "Marketing-heavy storytelling",
+    "No technical explanation",
+    "Emotion-first narrative",
+    "Unverified engineering claims",
+    "Decorative storytelling without proof",
+    "Dense unreadable technical blocks",
+    "Roof-only engineering storytelling",
+    "Waterproofing-only narratives",
+    "Sandwich-panel-only positioning",
+    "Missing façade or cladding context on relevant pages",
+    "Using the same story structure for all systems without technical adaptation"
+  ],
+  "approved_characteristics": [
+    "Technical",
+    "Structured",
+    "Educational",
+    "Industrial",
+    "Proof-driven",
+    "Readable",
+    "Engineering-focused",
+    "Envelope-engineering-focused",
+    "Façade-aware",
+    "Multi-system",
+    "Architecturally credible",
+    "Consultant-level"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Storytelling philosophy",
+      "Engineering storytelling framework",
+      "Narrative structure examples",
+      "Proof integration examples",
+      "Visual storytelling system",
+      "Conversion storytelling rules",
+      "Correct vs incorrect storytelling examples",
+      "System-specific storytelling examples"
+    ],
+    "visual_direction": [
+      "Engineering story flow diagrams",
+      "Case study storytelling layouts",
+      "Technical explanation examples",
+      "Proof integration mockups",
+      "Responsive storytelling examples",
+      "Façade engineering story examples",
+      "Standing seam roofing story examples",
+      "Envelope transition storytelling diagrams"
+    ]
+  },
+  "implementation_notes": [
+    "Engineering storytelling is a core SIPANEL differentiation strategy.",
+    "Stories must educate and build trust through technical clarity and measurable execution quality.",
+    "Every engineering narrative should connect problem, analysis, execution, and proof.",
+    "Storytelling systems should integrate with SEO, case studies, conversion flows, and technical resource content.",
+    "Storytelling must represent SIPANEL as an industrial envelope engineering partner across sandwich panels, aluminum cladding, ZIP roofing, and coordinated envelope systems."
+  ]
+}

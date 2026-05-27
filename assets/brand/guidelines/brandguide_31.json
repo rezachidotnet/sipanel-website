@@ -1,0 +1,410 @@
+{
+  "page": {
+    "number": 31,
+    "title": "Proof & Metrics Framework",
+    "section": "Content & Conversion System",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define how SIPANEL presents proof, industrial envelope credibility, measurable engineering outcomes, technical validation, façade coordination quality, and project metrics across digital experiences and sales communication.",
+  "proof_philosophy": {
+    "statement": "Proof should demonstrate industrial envelope engineering capability through measurable execution, technical clarity, façade and roofing coordination, and real project outcomes.",
+    "core_principles": [
+      "Proof before persuasion",
+      "Real metrics only",
+      "Engineering-first credibility",
+      "Structured technical validation",
+      "Context-driven storytelling",
+      "Visible execution quality",
+      "Envelope-system proof",
+      "Architectural credibility",
+      "Consultant-grade technical communication",
+      "Multi-system industrial validation"
+    ]
+  },
+  "primary_goals": [
+    {
+      "goal": "Build Technical Trust",
+      "description": "Demonstrate SIPANEL's engineering capability through real execution evidence across sandwich panels, aluminum cladding, ZIP roofing, and industrial envelope systems."
+    },
+    {
+      "goal": "Reduce Client Risk Perception",
+      "description": "Show how SIPANEL reduces leakage, thermal bridge risk, façade coordination failures, movement stress, material waste, delays, and envelope integration problems."
+    },
+    {
+      "goal": "Support Conversion Decisions",
+      "description": "Help industrial decision-makers justify engineering, façade coordination, procurement, and envelope-system choices."
+    },
+    {
+      "goal": "Position SIPANEL as an Industrial Envelope Specialist",
+      "description": "Use measurable proof to reinforce industrial envelope engineering authority beyond sandwich-panel-only positioning."
+    }
+  ],
+  "proof_categories": {
+    "project_metrics": {
+      "purpose": "Demonstrate execution scale and engineering capability.",
+      "approved_metrics": [
+        "Total executed area",
+        "Number of industrial projects",
+        "Years of engineering experience",
+        "Project completion duration",
+        "Installation speed",
+        "Material optimization percentage",
+        "ACP façade installation area",
+        "Standing seam roof coverage",
+        "Envelope coordination accuracy",
+        "Thermal bridge reduction performance",
+        "Mixed-system envelope project count",
+        "Façade alignment precision"
+      ]
+    },
+    "technical_proof": {
+      "purpose": "Show engineering depth, envelope coordination, and technical methodology.",
+      "approved_content": [
+        "Shop drawing previews",
+        "Waterproofing details",
+        "Drainage diagrams",
+        "BOM / MTO examples",
+        "Installation sequencing",
+        "Technical comparison tables",
+        "ACP façade sections",
+        "Standing seam roof details",
+        "Envelope transition diagrams",
+        "Thermal bridge visuals",
+        "Façade substructure coordination",
+        "Concealed fastening systems",
+        "Rainscreen airflow diagrams",
+        "Roof-to-wall transition details"
+      ]
+    },
+    "case_study_proof": {
+      "purpose": "Show real industrial envelope engineering and execution outcomes.",
+      "approved_content": [
+        "Challenge explanation",
+        "Engineering solution",
+        "Execution visuals",
+        "Before/after comparison",
+        "Measured results",
+        "Envelope-system coordination",
+        "Façade engineering analysis",
+        "Standing seam detailing proof",
+        "Thermal continuity validation"
+      ]
+    },
+    "process_proof": {
+      "purpose": "Demonstrate structured engineering and envelope coordination workflow.",
+      "approved_content": [
+        "Review process",
+        "Coordination logic",
+        "Inspection workflow",
+        "Technical validation process",
+        "Façade detailing review",
+        "Standing seam movement analysis",
+        "Envelope transition validation",
+        "Thermal movement coordination",
+        "Substructure inspection checkpoints"
+      ]
+    },
+    "system_specific_proof": {
+      "sandwich_panel_systems": [
+        "Panel layout optimization",
+        "Drainage coordination",
+        "Cold storage detailing",
+        "Material optimization proof"
+      ],
+      "aluminum_cladding_systems": [
+        "ACP façade detailing",
+        "Façade alignment precision",
+        "Rainscreen coordination",
+        "Substructure engineering proof"
+      ],
+      "zip_roofing_systems": [
+        "Standing seam movement control",
+        "Concealed fastening validation",
+        "Long-span roofing performance",
+        "Seam-lock detailing"
+      ],
+      "industrial_envelope_systems": [
+        "Roof-to-façade transitions",
+        "Envelope continuity",
+        "Thermal bridge mitigation",
+        "Mixed-system integration proof"
+      ]
+    }
+  },
+  "metrics_rules": {
+    "requirements": [
+      "All metrics must be verifiable.",
+      "Avoid estimated values unless clearly labeled.",
+      "Provide context for every metric.",
+      "Do not exaggerate performance claims.",
+      "Use measurable engineering outcomes.",
+      "Use system-specific proof where possible.",
+      "Separate façade metrics from roofing metrics when necessary.",
+      "Support envelope-system claims with technical context."
+    ],
+    "preferred_format": [
+      "Metric value",
+      "Context",
+      "Technical meaning",
+      "Project or process connection"
+    ]
+  },
+  "approved_metric_examples": [
+    {
+      "metric": "250,000+ m²",
+      "context": "Industrial roof systems engineered and coordinated"
+    },
+    {
+      "metric": "18% material waste reduction",
+      "context": "Through optimized panel layout planning"
+    },
+    {
+      "metric": "30% faster installation coordination",
+      "context": "Using structured shop drawing workflows"
+    },
+    {
+      "metric": "85,000+ m²",
+      "context": "ACP façade systems coordinated and installed"
+    },
+    {
+      "metric": "120,000+ m²",
+      "context": "Standing seam and ZIP roofing systems executed"
+    },
+    {
+      "metric": "Reduced thermal bridge risk",
+      "context": "Through coordinated envelope detailing strategy"
+    }
+  ],
+  "forbidden_metrics": [
+    "Fake counters",
+    "Unverified numbers",
+    "Vague performance claims",
+    "Misleading percentages",
+    "Unsupported guarantees",
+    "Inflated project totals",
+    "Roof-only metrics for all projects",
+    "Non-contextual engineering claims"
+  ],
+  "technical_proof_rules": {
+    "rules": [
+      "Use real engineering visuals.",
+      "Explain technical significance clearly.",
+      "Support diagrams with concise annotations.",
+      "Avoid overwhelming users with raw CAD complexity.",
+      "Use façade sections for cladding proof.",
+      "Use standing seam sections for ZIP roofing proof.",
+      "Use transition diagrams for envelope proof.",
+      "Explain engineering reasoning behind the detail."
+    ],
+    "diagram_requirements": [
+      "Readable labels",
+      "Visible engineering logic",
+      "Responsive zoom support",
+      "Short technical explanation",
+      "System-category identification",
+      "Thermal movement indicators",
+      "Envelope transition clarity"
+    ]
+  },
+  "proof_hierarchy": {
+    "homepage": [
+      "High-level metrics",
+      "Execution scale",
+      "Project credibility",
+      "Quick technical snapshots",
+      "Envelope-system diversity"
+    ],
+    "service_pages": [
+      "Technical process proof",
+      "System diagrams",
+      "Performance comparison",
+      "Engineering methodology",
+      "System-specific validation"
+    ],
+    "case_studies": [
+      "Project challenge",
+      "Technical solution",
+      "Execution visuals",
+      "Measured outcomes",
+      "Envelope coordination proof"
+    ],
+    "resource_pages": [
+      "Educational technical proof",
+      "Downloadable examples",
+      "Engineering guidance",
+      "Technical references"
+    ]
+  },
+  "visual_display_rules": {
+    "metrics_blocks": [
+      "Large readable numbers",
+      "Short supporting explanation",
+      "Consistent spacing",
+      "Strong contrast",
+      "System-specific metric labeling"
+    ],
+    "proof_cards": [
+      "One key proof per card",
+      "Use industrial imagery",
+      "Avoid visual clutter",
+      "Show façade and roofing diversity"
+    ],
+    "comparison_tables": [
+      "Use engineering criteria",
+      "Avoid marketing-style exaggeration",
+      "Highlight technical advantage carefully",
+      "Support cladding and standing seam comparisons"
+    ]
+  },
+  "content_rules": {
+    "approved_language": [
+      "Measured engineering outcomes",
+      "Execution improvements",
+      "Risk reduction explanation",
+      "Technical validation",
+      "Envelope coordination quality",
+      "Thermal performance optimization",
+      "Façade alignment accuracy"
+    ],
+    "forbidden_language": [
+      "Best in the world",
+      "Guaranteed perfection",
+      "Unlimited performance claims",
+      "Aggressive sales hype",
+      "Contractor-only positioning",
+      "Roof-only technical positioning"
+    ]
+  },
+  "case_study_proof_structure": {
+    "recommended_flow": [
+      "Project context",
+      "Engineering challenge",
+      "Technical analysis",
+      "SIPANEL solution",
+      "Execution process",
+      "Measured result",
+      "Envelope-system validation"
+    ]
+  },
+  "responsive_rules": {
+    "mobile": [
+      "Show one proof focus per viewport.",
+      "Simplify metric displays.",
+      "Use swipeable proof cards when necessary.",
+      "Collapse dense technical proof into expandable sections.",
+      "Prioritize readability for façade and standing seam details."
+    ],
+    "desktop": [
+      "Allow side-by-side comparison layouts.",
+      "Use larger proof grids where appropriate.",
+      "Support high-detail envelope diagrams.",
+      "Allow mixed-system proof presentation."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "Metrics must remain readable.",
+      "Maintain WCAG AA contrast.",
+      "Do not use color alone to communicate proof.",
+      "Technical diagrams require accessible explanation.",
+      "Provide accessible summaries for façade and roofing proof visuals."
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror layout alignment appropriately.",
+      "Preserve metric readability.",
+      "Allow text expansion across languages.",
+      "Keep engineering abbreviations consistent globally.",
+      "Maintain façade and standing seam terminology consistency."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "proof_card_view",
+      "metric_interaction",
+      "diagram_expand",
+      "case_study_open",
+      "comparison_table_view",
+      "resource_download",
+      "system_specific_proof_interaction"
+    ],
+    "tracked_parameters": [
+      "proof_type",
+      "metric_name",
+      "page_location",
+      "device_type",
+      "language",
+      "system_category",
+      "roofing_type",
+      "cladding_type",
+      "envelope_type"
+    ]
+  },
+  "qa_checklist": [
+    "All metrics are verified.",
+    "Technical proof is understandable.",
+    "Proof supports engineering credibility.",
+    "No exaggerated claims are used.",
+    "Responsive readability is preserved.",
+    "Proof aligns with conversion intent.",
+    "Technical visuals include explanation.",
+    "Proof supports sandwich panels, aluminum cladding, ZIP roofing, and envelope systems appropriately.",
+    "The proof structure does not position SIPANEL as sandwich-panel-only."
+  ],
+  "forbidden_patterns": [
+    "Fake animated counters",
+    "Generic trust badges without meaning",
+    "Stock-image proof",
+    "Unverified project claims",
+    "Overwhelming technical complexity",
+    "Decorative proof sections without substance",
+    "Roof-only proof hierarchy",
+    "Missing façade or cladding proof",
+    "Single-system industrial positioning"
+  ],
+  "approved_characteristics": [
+    "Credible",
+    "Measured",
+    "Technical",
+    "Structured",
+    "Proof-driven",
+    "Industrial",
+    "Trustworthy",
+    "Envelope-engineering-focused",
+    "Architecturally credible",
+    "Consultant-grade",
+    "Multi-system"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Proof philosophy",
+      "Proof category overview",
+      "Metric system examples",
+      "Technical proof examples",
+      "Case study proof structure",
+      "Responsive proof behavior",
+      "Correct vs incorrect proof patterns",
+      "Envelope-system proof hierarchy"
+    ],
+    "visual_direction": [
+      "Metric cards",
+      "Proof hierarchy diagrams",
+      "Technical comparison examples",
+      "Case study proof blocks",
+      "Industrial execution visuals",
+      "ACP façade proof examples",
+      "Standing seam roof proof sections",
+      "Envelope transition proof visuals"
+    ]
+  },
+  "implementation_notes": [
+    "Proof is one of SIPANEL's strongest conversion assets and must remain consistent across all platforms.",
+    "Every proof element should reinforce engineering credibility, façade coordination quality, and execution discipline.",
+    "Metrics and technical proof must always remain verifiable and contextually meaningful.",
+    "Proof systems should integrate directly with analytics, SEO, technical storytelling, and conversion strategy.",
+    "Proof architecture must support sandwich panels, aluminum cladding, ZIP roofing systems, and industrial envelope engineering equally."
+  ]
+}

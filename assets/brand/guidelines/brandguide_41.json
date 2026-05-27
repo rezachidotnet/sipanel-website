@@ -1,0 +1,344 @@
+{
+  "page": {
+    "number": 41,
+    "title": "Component Naming Convention",
+    "section": "Implementation & Governance",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define scalable naming rules for SIPANEL components, sections, envelope systems, technical modules, design tokens, CMS structures, analytics events, and frontend implementation patterns across sandwich panels, ACP cladding, standing seam roofing, and industrial envelope systems.",
+  "naming_philosophy": {
+    "statement": "Component names must be clear, scalable, technical, system-oriented, and understandable for designers, developers, engineers, content teams, and analytics workflows.",
+    "core_principles": [
+      "Clarity over cleverness",
+      "Consistent structure",
+      "System scalability",
+      "Developer readability",
+      "Design-to-code alignment",
+      "No ambiguous naming",
+      "Envelope-system organization",
+      "Cross-platform consistency",
+      "Engineering-aware semantics"
+    ]
+  },
+  "global_naming_rules": [
+    "Use lowercase snake_case for internal identifiers.",
+    "Use descriptive names that explain functional purpose.",
+    "Avoid vague names like block_1, section_new, card_final.",
+    "Keep names stable after implementation.",
+    "Use the same naming logic across design files, frontend, CMS, and analytics.",
+    "Use engineering-aware terminology where appropriate.",
+    "Organize components by system category when needed.",
+    "Avoid business-logic ambiguity in naming."
+  ],
+  "component_naming_format": {
+    "recommended_format": "category_component_variant",
+    "examples": [
+      "hero_section_primary",
+      "cta_button_primary",
+      "case_study_card_featured",
+      "diagram_viewer_fullscreen",
+      "rfq_form_step_based",
+      "resource_card_download",
+      "cladding_system_card",
+      "standing_seam_detail_modal",
+      "envelope_transition_diagram",
+      "façade_proof_section"
+    ]
+  },
+  "section_naming_rules": {
+    "format": "section_purpose",
+    "examples": [
+      "hero_section",
+      "trust_bar",
+      "proof_snapshot",
+      "engineering_value",
+      "projects_case_studies",
+      "resources_section",
+      "rfq_section",
+      "footer_section",
+      "envelope_systems_section",
+      "cladding_engineering_section",
+      "standing_seam_showcase"
+    ],
+    "rules": [
+      "Section names must describe content purpose.",
+      "Use names consistently across design, frontend, CMS, and analytics.",
+      "Avoid renaming sections after analytics implementation begins.",
+      "Use system-specific naming where technical separation is needed."
+    ]
+  },
+  "component_category_prefixes": {
+    "layout": [
+      "header",
+      "footer",
+      "section",
+      "container",
+      "grid",
+      "layout"
+    ],
+    "ui": [
+      "button",
+      "card",
+      "modal",
+      "drawer",
+      "accordion",
+      "tabs",
+      "tooltip"
+    ],
+    "forms": [
+      "form",
+      "input",
+      "select",
+      "upload",
+      "checkbox",
+      "rfq"
+    ],
+    "content": [
+      "hero",
+      "proof",
+      "metric",
+      "case_study",
+      "resource",
+      "faq"
+    ],
+    "technical": [
+      "diagram",
+      "annotation",
+      "viewer",
+      "table",
+      "spec",
+      "detail",
+      "drawing"
+    ],
+    "systems": [
+      "sandwich_panel",
+      "cladding",
+      "standing_seam",
+      "zip_roof",
+      "envelope",
+      "waterproofing",
+      "drainage",
+      "thermal"
+    ]
+  },
+  "system_specific_naming_rules": {
+    "rules": [
+      "Use system prefixes for envelope-specific components.",
+      "Separate roofing components from façade components.",
+      "Preserve engineering-system clarity in naming.",
+      "Avoid mixing unrelated systems in one identifier."
+    ],
+    "examples": [
+      "cladding_attachment_detail",
+      "standing_seam_animation",
+      "zip_roof_spec_table",
+      "sandwich_panel_layout_viewer",
+      "envelope_transition_detail",
+      "thermal_bridge_diagram"
+    ]
+  },
+  "variant_naming_rules": {
+    "format": "component_variant_state",
+    "examples": [
+      "button_primary_default",
+      "button_primary_hover",
+      "button_secondary_disabled",
+      "card_project_featured",
+      "modal_diagram_fullscreen",
+      "form_rfq_step_01",
+      "cladding_card_expanded",
+      "diagram_viewer_zoomed"
+    ],
+    "rules": [
+      "Use variant names only when visual or behavioral differences exist.",
+      "Do not create unnecessary variants.",
+      "Keep variant naming consistent across Figma and frontend.",
+      "Use readable state definitions."
+    ]
+  },
+  "file_naming_rules": {
+    "recommended_format": "section-or-component-name-version",
+    "examples": [
+      "hero-section-primary-v1",
+      "rfq-form-mobile-v1",
+      "diagram-viewer-fullscreen-v1",
+      "case-study-card-featured-v1",
+      "cladding-system-showcase-v1",
+      "standing-seam-detail-viewer-v1"
+    ],
+    "rules": [
+      "Use hyphen-case for exported file names.",
+      "Avoid spaces in filenames.",
+      "Avoid final_final or new_new suffixes.",
+      "Use version numbers when needed.",
+      "Keep filenames readable for engineers and developers."
+    ]
+  },
+  "design_token_naming_rules": {
+    "format": "category-purpose-variant",
+    "examples": [
+      "color-primary-orange",
+      "color-bg-dark",
+      "space-section-desktop",
+      "font-body-mobile",
+      "radius-card",
+      "shadow-modal",
+      "border-cladding-detail",
+      "space-envelope-section"
+    ],
+    "rules": [
+      "Token names must describe usage, not only appearance.",
+      "Avoid arbitrary values in token names.",
+      "Keep naming reusable across components.",
+      "Separate system-level tokens from component-level tokens."
+    ]
+  },
+  "analytics_event_naming_rules": {
+    "format": "component_action_context",
+    "examples": [
+      "hero_primary_cta_click",
+      "sticky_cta_click",
+      "rfq_start",
+      "rfq_submit",
+      "diagram_zoom",
+      "case_study_view",
+      "resource_download_complete",
+      "language_change",
+      "cladding_detail_open",
+      "standing_seam_diagram_expand",
+      "envelope_resource_download"
+    ],
+    "rules": [
+      "Use lowercase snake_case.",
+      "Event names must describe user action clearly.",
+      "Avoid duplicate event names for different actions.",
+      "Use consistent parameters across related events.",
+      "Separate system-specific interactions when needed."
+    ]
+  },
+  "cms_field_naming_rules": {
+    "format": "content_type_field_name",
+    "examples": [
+      "case_study_project_name",
+      "case_study_location",
+      "case_study_area",
+      "resource_download_url",
+      "landing_page_primary_keyword",
+      "seo_meta_description",
+      "cladding_system_type",
+      "standing_seam_profile_type",
+      "envelope_transition_detail"
+    ],
+    "rules": [
+      "Field names must be understandable without documentation.",
+      "Use consistent field names across templates.",
+      "Avoid vague fields like text_1 or image_2.",
+      "Use engineering-aware terminology where applicable."
+    ]
+  },
+  "frontend_architecture_naming": {
+    "react_component_names": [
+      "HeroSection",
+      "TrustBar",
+      "ProofSnapshot",
+      "CaseStudyCard",
+      "DiagramViewer",
+      "RFQForm",
+      "ResourceCard",
+      "CladdingSystemSection",
+      "StandingSeamDetailViewer",
+      "EnvelopeTransitionDiagram"
+    ],
+    "css_class_examples": [
+      "sipanel-hero-section",
+      "sipanel-proof-card",
+      "sipanel-rfq-form",
+      "sipanel-diagram-viewer",
+      "sipanel-cladding-system",
+      "sipanel-standing-seam-detail"
+    ],
+    "rules": [
+      "Use PascalCase for React components.",
+      "Use kebab-case for CSS class names.",
+      "Use system prefixes consistently.",
+      "Avoid deeply nested naming complexity."
+    ]
+  },
+  "multilingual_naming_rules": {
+    "rules": [
+      "Keep internal component names in English.",
+      "Do not localize code or token names.",
+      "Localize only user-facing labels and content.",
+      "Preserve consistent component identifiers across languages.",
+      "Keep engineering terminology standardized globally."
+    ]
+  },
+  "forbidden_naming_patterns": [
+    "component1",
+    "new_section",
+    "final_card",
+    "button_orange_big",
+    "text_block_2",
+    "random_feature",
+    "homepage_part_a",
+    "copy_final_final",
+    "roof_widget",
+    "misc_component",
+    "custom_new_v2"
+  ],
+  "approved_naming_characteristics": [
+    "Clear",
+    "Stable",
+    "Descriptive",
+    "Scalable",
+    "Technical",
+    "Consistent",
+    "Implementation-ready",
+    "System-oriented",
+    "Engineering-aware"
+  ],
+  "governance_rules": [
+    "Naming changes must be approved before development handoff.",
+    "Analytics event names must not change after launch without migration planning.",
+    "Design tokens must remain synchronized between design and code.",
+    "CMS field names must remain stable to protect content integrity.",
+    "System-category naming must remain consistent across all departments.",
+    "Envelope-system terminology must align with engineering documentation."
+  ],
+  "design_dev_alignment_rules": {
+    "requirements": [
+      "Figma naming must match frontend implementation naming.",
+      "CMS structures must reflect frontend component hierarchy.",
+      "Analytics naming must map directly to component naming.",
+      "System naming should support scalable design systems.",
+      "Naming should support multilingual expansion safely."
+    ]
+  },
+  "page_layout_recommendation": {
+    "structure": [
+      "Naming philosophy",
+      "Global naming rules",
+      "System-specific naming architecture",
+      "Component naming examples",
+      "Token naming examples",
+      "Analytics event naming",
+      "CMS field naming",
+      "Correct vs incorrect naming examples"
+    ],
+    "visual_direction": [
+      "Naming structure diagrams",
+      "Component hierarchy tables",
+      "Token naming examples",
+      "Analytics event flow maps",
+      "Developer handoff reference blocks",
+      "Envelope-system naming hierarchy"
+    ]
+  },
+  "implementation_notes": [
+    "Naming consistency is critical for long-term scalability and maintainability.",
+    "Design, frontend, CMS, analytics, and engineering naming should follow one unified logic.",
+    "Clear naming reduces handoff errors, implementation confusion, and future technical debt.",
+    "Naming systems must support sandwich panels, ACP cladding, standing seam roofing, ZIP systems, and industrial envelope engineering equally."
+  ]
+}

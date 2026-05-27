@@ -1,0 +1,215 @@
+{
+    "developer_handoff_checklist": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "purpose": "Final production checklist for developers before implementation starts.",
+  
+      "required_files": [
+        "Sipanel_website_merged_2.json",
+        "component_implementation_map.json",
+        "design_tokens.json",
+        "responsive_layout_rules.json",
+        "animation_behavior_map.json",
+        "analytics_tracking_system.json",
+        "content_governance_rules.json",
+        "metrics_and_proof_library.json",
+        "seo_landing_page_component_map.json"
+      ],
+  
+      "pre_build_checks": {
+        "json_validation": [
+          "Validate all JSON files with no syntax errors.",
+          "Confirm all component names use snake_case.",
+          "Remove duplicate conflicting rules.",
+          "Confirm every referenced component exists."
+        ],
+        "asset_validation": [
+          "Confirm logo file is original.",
+          "Confirm all project images exist.",
+          "Confirm engineering visuals exist or mark as pending.",
+          "Confirm certificates and client logos are approved."
+        ],
+        "content_validation": [
+          "Confirm all numbers are real.",
+          "Remove unverified metrics.",
+          "Confirm case studies have real project data.",
+          "Confirm CTA response time is operationally true."
+        ]
+      },
+  
+      "build_priorities": {
+        "phase_1_core_conversion": [
+          "header",
+          "hero_section",
+          "trust_bar",
+          "proof_snapshot",
+          "sticky_mobile_cta",
+          "rfq_form"
+        ],
+        "phase_2_proof_and_authority": [
+          "projects_case_studies",
+          "technical_diagram_viewer",
+          "comparison_section",
+          "resources_section"
+        ],
+        "phase_3_seo_and_scale": [
+          "seo_landing_pages",
+          "engineering_insights",
+          "resource_hub",
+          "case_study_pages"
+        ]
+      },
+  
+      "frontend_requirements": {
+        "responsive": [
+          "Mobile-first implementation.",
+          "No desktop grid below 768px.",
+          "All CTAs minimum 48px height on mobile.",
+          "Hero CTA visible above fold.",
+          "Sticky CTA does not block content."
+        ],
+        "performance": [
+          "Use WebP or AVIF images.",
+          "Preload hero image.",
+          "Lazy load below-the-fold visuals.",
+          "Do not embed heavy PDFs on mobile.",
+          "Keep LCP under 2.5 seconds."
+        ],
+        "accessibility": [
+          "Use semantic HTML.",
+          "Add alt text for all images.",
+          "Ensure AA contrast minimum.",
+          "Support keyboard navigation.",
+          "Support prefers-reduced-motion."
+        ],
+        "interaction": [
+          "Support mobile accordions.",
+          "Support swipeable case studies.",
+          "Support fullscreen diagram viewer.",
+          "Support pinch zoom on technical visuals.",
+          "Avoid hover-only interactions."
+        ]
+      },
+  
+      "backend_requirements": {
+        "forms": [
+          "Secure form submission.",
+          "Spam protection.",
+          "Input validation.",
+          "Lead notification to internal team.",
+          "Success message after submission."
+        ],
+        "file_upload": [
+          "Optional drawing upload for RFQ.",
+          "File size limits.",
+          "Allowed formats: PDF, JPG, PNG, DWG if supported.",
+          "Secure storage."
+        ],
+        "lead_routing": [
+          "RFQ submissions go to sales/engineering team.",
+          "WhatsApp and phone clicks tracked.",
+          "Resource downloads captured as leads."
+        ]
+      },
+  
+      "analytics_requirements": {
+        "must_track": [
+          "hero_primary_cta_click",
+          "sticky_cta_click",
+          "phone_click",
+          "whatsapp_click",
+          "rfq_start",
+          "rfq_submit",
+          "rfq_abandon",
+          "case_study_view",
+          "diagram_zoom",
+          "resource_download_complete"
+        ],
+        "tools": [
+          "Google Analytics 4",
+          "Google Tag Manager",
+          "Google Search Console"
+        ]
+      },
+  
+      "seo_requirements": {
+        "technical": [
+          "Clean URL structure.",
+          "XML sitemap.",
+          "Robots.txt.",
+          "Canonical tags.",
+          "Schema markup.",
+          "Breadcrumb navigation."
+        ],
+        "on_page": [
+          "One H1 per page.",
+          "Primary keyword in title, H1, URL, meta description.",
+          "Internal links between service pages, resources, blogs, and case studies.",
+          "FAQ schema on landing pages."
+        ]
+      },
+      
+      "multilanguage_requirements": {
+        "supported_languages": [
+          "en",
+          "fa",
+          "ar",
+          "ru"
+        ],
+        "checks": [
+          "Language switcher works on desktop and mobile.",
+          "RTL layout works correctly for Persian and Arabic.",
+          "HTML lang attribute updates correctly.",
+          "HTML dir attribute updates correctly.",
+          "No layout breaking in RTL mode.",
+          "Translated navigation labels exist.",
+          "Localized routes work correctly.",
+          "hreflang tags implemented.",
+          "Fonts render correctly for Arabic and Russian.",
+          "Language selection persists after refresh."
+        ]
+      },
+  
+      "acceptance_criteria": {
+        "mobile": [
+          "CTA visible above fold.",
+          "Sticky CTA works correctly.",
+          "No horizontal overflow.",
+          "Case studies swipe smoothly.",
+          "Technical diagrams open fullscreen.",
+          "Forms are easy to complete."
+        ],
+        "desktop": [
+          "Layout follows 12-column grid.",
+          "Hero has strong visual hierarchy.",
+          "Trust and proof appear early.",
+          "Case studies show measurable project proof."
+        ],
+        "performance": [
+          "Mobile Lighthouse Performance target: 90+.",
+          "LCP under 2.5s.",
+          "CLS minimal.",
+          "Images optimized."
+        ],
+        "content": [
+          "No fake metrics.",
+          "No unsupported claims.",
+          "Engineering proof is visible.",
+          "CTA language is consistent."
+        ]
+      },
+  
+      "final_approval_checklist": [
+        "Brand colors match SIPANEL tokens.",
+        "Logo is not distorted.",
+        "Hero communicates value within 3 seconds.",
+        "Proof appears before heavy explanation.",
+        "Mobile UX is shorter and clearer than desktop.",
+        "All forms work.",
+        "All analytics events fire.",
+        "All SEO basics are implemented.",
+        "All project claims are verified."
+      ]
+    }
+  }

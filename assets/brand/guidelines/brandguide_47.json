@@ -1,0 +1,311 @@
+{
+  "page": {
+    "number": 47,
+    "title": "Brand Consistency Checklist",
+    "section": "Implementation & Governance",
+    "version": "2.0",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Provide a unified operational checklist to verify that all SIPANEL digital experiences, technical content, visual systems, frontend implementations, and conversion flows remain aligned with approved engineering, branding, accessibility, and performance standards.",
+  "checklist_philosophy": {
+    "statement": "Consistency across visuals, engineering communication, proof systems, and interaction behavior is essential for maintaining SIPANEL's industrial credibility and technical trust.",
+    "core_principles": [
+      "One system across all touchpoints",
+      "Engineering-first communication",
+      "Proof-driven consistency",
+      "Mobile-first quality assurance",
+      "Readable technical presentation",
+      "Controlled implementation standards",
+      "Cross-team alignment"
+    ]
+  },
+  "primary_goals": [
+    {
+      "goal": "Protect Brand Integrity",
+      "description": "Ensure all visual and communication outputs follow the approved SIPANEL system."
+    },
+    {
+      "goal": "Maintain Engineering Credibility",
+      "description": "Preserve technical clarity, proof quality, and industrial positioning across all channels."
+    },
+    {
+      "goal": "Reduce Production Errors",
+      "description": "Identify inconsistencies, accessibility issues, performance risks, and implementation failures before release."
+    }
+  ],
+  "brand_identity_checklist": {
+    "logo_usage": [
+      "Approved logo version is used.",
+      "Logo proportions are preserved.",
+      "Required clear space is maintained.",
+      "Logo contrast remains readable.",
+      "No unauthorized effects or recoloring are applied.",
+      "SVG logo is used for web implementation."
+    ],
+    "brand_colors": [
+      "Approved color palette is followed.",
+      "Orange is reserved for CTA and technical emphasis.",
+      "Neutral surfaces remain visually consistent.",
+      "Dark backgrounds preserve readability.",
+      "No unapproved accent colors appear."
+    ],
+    "typography": [
+      "Approved typography scale is implemented.",
+      "Heading hierarchy is consistent.",
+      "Paragraph width remains readable.",
+      "Typography spacing follows token system.",
+      "Mobile text remains legible without zoom."
+    ]
+  },
+  "visual_system_checklist": {
+    "layout_and_spacing": [
+      "Grid alignment is consistent.",
+      "Spacing follows approved tokens.",
+      "Vertical rhythm is visually balanced.",
+      "No overcrowded sections exist.",
+      "Section hierarchy is visually clear."
+    ],
+    "imagery": [
+      "Industrial photography is authentic.",
+      "No irrelevant stock photography is used.",
+      "Images support technical storytelling.",
+      "All images are optimized for performance.",
+      "Visuals remain consistent across languages and devices."
+    ],
+    "technical_diagrams": [
+      "Diagrams remain readable at all sizes.",
+      "Annotations are minimal and purposeful.",
+      "Fullscreen interaction functions correctly.",
+      "Mobile zoom support exists.",
+      "Technical visuals communicate real engineering logic."
+    ]
+  },
+  "ui_component_checklist": {
+    "buttons_and_cta": [
+      "CTA hierarchy is visually clear.",
+      "Primary CTA styling is consistent.",
+      "All button states are implemented correctly.",
+      "CTA copy follows approved tone guidelines.",
+      "CTA placement supports conversion flow."
+    ],
+    "forms_and_rfq": [
+      "RFQ flow follows approved structure.",
+      "Validation behavior is consistent.",
+      "File upload functions correctly.",
+      "Required fields are minimized appropriately.",
+      "Success and error states are visible and clear."
+    ],
+    "navigation": [
+      "Navigation hierarchy is intuitive.",
+      "Mobile menu behavior is consistent.",
+      "Sticky CTA functions correctly.",
+      "Language switcher works across routes.",
+      "Header and footer behavior remain stable."
+    ],
+    "modals_and_overlays": [
+      "Modal spacing follows design system.",
+      "Overlay contrast remains accessible.",
+      "Fullscreen technical viewer works correctly.",
+      "Focus trapping and close behavior function properly."
+    ]
+  },
+  "content_and_messaging_checklist": {
+    "tone_of_voice": [
+      "Content sounds technical and professional.",
+      "Marketing exaggeration is avoided.",
+      "Engineering language remains understandable.",
+      "Messaging supports trust and clarity.",
+      "Technical terminology remains consistent."
+    ],
+    "seo_content": [
+      "Pages target clear industrial search intent.",
+      "Heading hierarchy is semantic.",
+      "Technical proof supports content claims.",
+      "Internal linking is implemented correctly.",
+      "FAQ and schema opportunities are included where relevant."
+    ],
+    "case_studies": [
+      "Engineering challenge is explained clearly.",
+      "Measured outcomes are included.",
+      "Execution visuals are present.",
+      "Storytelling remains technical and structured.",
+      "CTA connects proof to consultation."
+    ],
+    "resource_center": [
+      "Resources provide practical engineering value.",
+      "Download previews are visible.",
+      "Resource categories are organized clearly.",
+      "Lead capture flow functions properly.",
+      "Technical diagrams and previews remain readable."
+    ]
+  },
+  "responsive_experience_checklist": {
+    "mobile": [
+      "Layouts stack correctly.",
+      "Touch targets meet minimum size.",
+      "Sticky CTA remains accessible.",
+      "Technical diagrams support zoom.",
+      "Typography remains readable.",
+      "Forms support one-handed interaction."
+    ],
+    "tablet": [
+      "Adaptive layouts function correctly.",
+      "Navigation transitions smoothly.",
+      "Forms remain usable.",
+      "Technical visuals scale properly."
+    ],
+    "desktop": [
+      "Desktop grid alignment is correct.",
+      "Technical visuals scale correctly.",
+      "Conversion flow remains visible.",
+      "No excessive whitespace or clutter exists."
+    ]
+  },
+  "accessibility_checklist": {
+    "requirements": [
+      "WCAG AA contrast is maintained.",
+      "Keyboard navigation works correctly.",
+      "Focus states remain visible.",
+      "Meaningful visuals include alt text.",
+      "Technical diagrams include accessible summaries.",
+      "Reduced-motion preference is respected.",
+      "Color is not the only communication method."
+    ]
+  },
+  "rtl_and_multilingual_checklist": {
+    "requirements": [
+      "RTL layouts mirror correctly.",
+      "Translated text does not break layouts.",
+      "Language switcher functions properly.",
+      "Localized metadata exists.",
+      "Technical terminology remains consistent.",
+      "Directional icons flip correctly where required."
+    ]
+  },
+  "performance_checklist": {
+    "requirements": [
+      "Images are optimized.",
+      "Below-the-fold assets are lazy-loaded.",
+      "Technical diagrams load progressively.",
+      "No heavy unused scripts exist.",
+      "Core Web Vitals targets are met.",
+      "Mobile performance remains prioritized."
+    ]
+  },
+  "analytics_and_tracking_checklist": {
+    "requirements": [
+      "CTA clicks are tracked.",
+      "RFQ funnel events are tracked.",
+      "Resource downloads are tracked.",
+      "Diagram interactions are tracked.",
+      "Language changes are tracked.",
+      "Analytics naming conventions are followed.",
+      "No duplicate events are firing."
+    ]
+  },
+  "seo_technical_checklist": {
+    "requirements": [
+      "Title tag exists.",
+      "Meta description exists.",
+      "One H1 is implemented.",
+      "Semantic heading hierarchy is correct.",
+      "Schema markup is implemented.",
+      "Canonical tags are correct.",
+      "Hreflang tags exist where needed."
+    ]
+  },
+  "frontend_and_code_checklist": {
+    "requirements": [
+      "Design tokens are implemented correctly.",
+      "Component naming follows conventions.",
+      "Responsive behavior is tested.",
+      "No hardcoded visual values exist.",
+      "Reusable component architecture is maintained.",
+      "Console errors are resolved before release."
+    ]
+  },
+  "asset_and_export_checklist": {
+    "requirements": [
+      "Assets use approved export formats.",
+      "File naming follows conventions.",
+      "Responsive image variants exist.",
+      "SVG logos and icons are optimized.",
+      "PDF resources are compressed and accessible.",
+      "All exported assets are traceable to approved source files."
+    ]
+  },
+  "qa_review_workflow": {
+    "design_review": [
+      "Visual consistency validation",
+      "Responsive layout review",
+      "Brand system compliance"
+    ],
+    "content_review": [
+      "Tone and messaging review",
+      "Technical accuracy review",
+      "SEO structure review"
+    ],
+    "development_review": [
+      "Frontend implementation validation",
+      "Accessibility testing",
+      "Performance testing",
+      "Analytics verification"
+    ]
+  },
+  "approval_requirements": [
+    "Brand review approved",
+    "Content review approved",
+    "Responsive QA completed",
+    "Accessibility QA completed",
+    "Performance validation completed",
+    "Analytics verified",
+    "SEO review completed",
+    "Stakeholder approval received"
+  ],
+  "forbidden_patterns": [
+    "Inconsistent spacing",
+    "Unapproved typography",
+    "Broken mobile layouts",
+    "Unreadable technical visuals",
+    "Generic stock imagery",
+    "Missing proof-based communication",
+    "Missing analytics tracking",
+    "Unoptimized assets",
+    "Broken RTL layouts",
+    "Inconsistent CTA behavior"
+  ],
+  "approved_characteristics": [
+    "Consistent",
+    "Technical",
+    "Readable",
+    "Optimized",
+    "Structured",
+    "Engineering-focused",
+    "Production-ready",
+    "Scalable"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Checklist philosophy",
+      "Brand identity validation",
+      "UI and component checklist",
+      "Content and SEO checklist",
+      "Responsive and accessibility checklist",
+      "Frontend and analytics checklist",
+      "QA approval workflow"
+    ],
+    "visual_direction": [
+      "Checklist dashboard",
+      "QA workflow diagram",
+      "Responsive testing matrix",
+      "Validation status cards",
+      "Correct vs incorrect implementation examples"
+    ]
+  },
+  "implementation_notes": [
+    "This checklist should be used before every SIPANEL release, landing page launch, campaign rollout, or major update.",
+    "The checklist applies to design, frontend, SEO, content, engineering, and analytics teams.",
+    "Consistency is an operational discipline and must be maintained continuously across all touchpoints.",
+    "All validation systems should scale with future multilingual expansion, resource growth, and technical content development."
+  ]
+}

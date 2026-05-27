@@ -1,0 +1,421 @@
+{
+  "page": {
+    "number": 37,
+    "title": "RFQ Flow Showcase",
+    "section": "Experience Showcases",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Show how SIPANEL's RFQ and engineering consultation flow captures qualified industrial envelope project inquiries through a low-friction, consultant-grade, engineering-first, and mobile-friendly submission experience.",
+  "rfq_philosophy": {
+    "statement": "The RFQ flow should feel like the beginning of a professional engineering consultation and envelope-system review, not a generic sales form.",
+    "core_principles": [
+      "Low friction",
+      "Engineering-first language",
+      "Progressive information collection",
+      "Mobile-first usability",
+      "Optional technical upload",
+      "Clear next-step communication",
+      "Consultative interaction",
+      "Envelope-system alignment",
+      "Technical trust building",
+      "Multi-system project support"
+    ]
+  },
+  "primary_goals": [
+    {
+      "goal": "Increase Qualified Leads",
+      "description": "Collect enough project information for SIPANEL to evaluate industrial envelope requirements accurately."
+    },
+    {
+      "goal": "Reduce Form Abandonment",
+      "description": "Keep the flow short, clear, and easy to complete across mobile and desktop devices."
+    },
+    {
+      "goal": "Support Engineering Review",
+      "description": "Allow users to submit drawings, façade details, roofing information, and technical context when available."
+    },
+    {
+      "goal": "Support Multi-System Consultation",
+      "description": "Allow users to request consultation for sandwich panels, ACP cladding, ZIP roofing, façade systems, and industrial envelope coordination."
+    }
+  ],
+  "rfq_entry_points": [
+    {
+      "source": "Hero Section",
+      "cta": "Get Free Engineering Review"
+    },
+    {
+      "source": "Case Studies",
+      "cta": "Discuss Similar Project"
+    },
+    {
+      "source": "Technical Sections",
+      "cta": "Request Technical Consultation"
+    },
+    {
+      "source": "Resource Center",
+      "cta": "Download + Talk to Engineer"
+    },
+    {
+      "source": "Sticky Mobile CTA",
+      "cta": "Free Engineering Review"
+    },
+    {
+      "source": "Cladding Pages",
+      "cta": "Discuss ACP Façade System"
+    },
+    {
+      "source": "ZIP Roofing Pages",
+      "cta": "Review ZIP Roofing Solution"
+    },
+    {
+      "source": "Envelope Engineering Pages",
+      "cta": "Request Envelope Consultation"
+    }
+  ],
+  "recommended_rfq_steps": {
+    "step_1": {
+      "title": "Project Category",
+      "purpose": "Understand the project and envelope-system type quickly.",
+      "fields": [
+        "Factory",
+        "Warehouse",
+        "Cold storage",
+        "Commercial façade",
+        "Industrial roof",
+        "Mixed envelope project",
+        "Other"
+      ],
+      "interaction": "quick_select_buttons"
+    },
+    "step_2": {
+      "title": "System Requirement",
+      "purpose": "Identify the primary engineering or system need.",
+      "fields": [
+        "Sandwich panels",
+        "ACP cladding",
+        "ZIP roofing",
+        "Standing seam roofing",
+        "Envelope engineering",
+        "Waterproofing",
+        "Thermal optimization",
+        "Façade coordination"
+      ],
+      "interaction": "multi_select_buttons"
+    },
+    "step_3": {
+      "title": "Project Size & Location",
+      "purpose": "Collect basic project scale and geographic context.",
+      "fields": [
+        "Estimated area",
+        "Project location",
+        "Project stage"
+      ],
+      "interaction": "short_input_fields"
+    },
+    "step_4": {
+      "title": "Main Requirement",
+      "purpose": "Identify the primary project goal, challenge, or risk.",
+      "fields": [
+        "Engineering review",
+        "Shop drawing",
+        "Panel supply",
+        "Installation",
+        "Envelope coordination",
+        "Waterproofing",
+        "Thermal movement analysis",
+        "Cost optimization",
+        "Façade detailing"
+      ],
+      "interaction": "multi_select_buttons"
+    },
+    "step_5": {
+      "title": "Upload Technical Files",
+      "purpose": "Allow users to provide drawings, façade sections, roofing details, and technical documents.",
+      "fields": [
+        "Drawing upload",
+        "Project files",
+        "Site image",
+        "Specification document",
+        "Façade detail",
+        "Roof detail"
+      ],
+      "interaction": "optional_file_upload"
+    },
+    "step_6": {
+      "title": "Contact Information",
+      "purpose": "Collect minimum information required for engineering follow-up.",
+      "fields": [
+        "Full name",
+        "Phone number",
+        "Company name",
+        "Email",
+        "Preferred contact method"
+      ],
+      "interaction": "minimal_contact_form"
+    }
+  },
+  "desktop_rfq_layout": {
+    "recommended_layout": "split_form_and_trust_panel",
+    "left_column": [
+      "RFQ form",
+      "Step progress",
+      "Field guidance",
+      "System-category selector"
+    ],
+    "right_column": [
+      "Engineering review explanation",
+      "Trust points",
+      "Relevant project proof",
+      "Contact alternatives",
+      "Envelope-system examples",
+      "Technical consultation messaging"
+    ],
+    "rules": [
+      "Keep form visually compact.",
+      "Show progress clearly.",
+      "Avoid overwhelming users with too many fields at once.",
+      "Support consultant-grade presentation.",
+      "Use proof near high-commitment steps."
+    ]
+  },
+  "mobile_rfq_layout": {
+    "recommended_layout": "step_based_single_column",
+    "rules": [
+      "Show 1-2 inputs per screen.",
+      "Use large touch-friendly controls.",
+      "Keep progress indicator visible.",
+      "Allow users to skip optional upload.",
+      "Keep WhatsApp and phone options accessible.",
+      "Support quick engineering consultation flow.",
+      "Allow fast mobile file upload."
+    ]
+  },
+  "field_rules": {
+    "required_fields": [
+      "Full name",
+      "Phone number",
+      "Project category"
+    ],
+    "optional_fields": [
+      "Email",
+      "Company name",
+      "Project details",
+      "Drawing upload",
+      "System requirement",
+      "Project timeline"
+    ],
+    "rules": [
+      "Do not make technical upload mandatory.",
+      "Do not require long descriptions before submission.",
+      "Use dropdowns and quick selections where possible.",
+      "Support native mobile keyboards.",
+      "Use engineering terminology carefully.",
+      "Allow incomplete submissions for early consultation."
+    ]
+  },
+  "file_upload_rules": {
+    "allowed_formats": [
+      "PDF",
+      "DWG",
+      "DXF",
+      "JPG",
+      "PNG",
+      "ZIP",
+      "DOCX",
+      "XLSX"
+    ],
+    "rules": [
+      "Make upload optional.",
+      "Show upload progress.",
+      "Validate file type and size clearly.",
+      "Allow mobile camera and file selection.",
+      "Explain that incomplete drawings are acceptable.",
+      "Support large technical files carefully.",
+      "Allow façade and roofing detail uploads."
+    ],
+    "supporting_microcopy": "Upload any drawing, façade section, roofing detail, sketch, or site image if available. SIPANEL engineering team can review incomplete project information."
+  },
+  "copy_guidelines": {
+    "headline_examples": [
+      "Start Your Engineering Review",
+      "Tell Us About Your Project",
+      "Request Project Cost & Technical Review",
+      "Request Envelope Engineering Consultation",
+      "Discuss Your Cladding or Roofing System"
+    ],
+    "supporting_microcopy": [
+      "No obligation. Reviewed by SIPANEL engineering team.",
+      "You can submit basic information first and share drawings later.",
+      "Our team will help identify the best technical path for your project.",
+      "Engineering guidance available before procurement and execution.",
+      "Consult with façade and roofing specialists."
+    ],
+    "button_copy": [
+      "Continue",
+      "Upload Drawing",
+      "Submit for Engineering Review",
+      "Send Project Request",
+      "Request Consultation",
+      "Review Envelope System"
+    ]
+  },
+  "validation_and_feedback": {
+    "validation_rules": [
+      "Use inline validation.",
+      "Explain errors clearly.",
+      "Preserve user input after errors.",
+      "Prevent duplicate submissions.",
+      "Use human-readable engineering terminology.",
+      "Avoid technical confusion during validation."
+    ],
+    "success_state": {
+      "title": "Request Received",
+      "message": "Thank you. SIPANEL engineering team will review your project details and contact you shortly regarding the best technical approach for your envelope system.",
+      "next_actions": [
+        "Call SIPANEL",
+        "Send more files on WhatsApp",
+        "Explore related projects",
+        "Review technical resources",
+        "Discuss project with engineering team"
+      ]
+    }
+  },
+  "trust_support_elements": [
+    "Reviewed by engineering team",
+    "No obligation consultation",
+    "Project information used only for communication",
+    "Optional drawing upload",
+    "Technical guidance available before procurement",
+    "Support for incomplete project documentation",
+    "Envelope engineering consultation available",
+    "Façade and roofing specialists available"
+  ],
+  "conversion_architecture": {
+    "primary_conversion_paths": [
+      "Engineering review",
+      "Envelope consultation",
+      "RFQ submission",
+      "Cladding consultation",
+      "ZIP roofing evaluation"
+    ],
+    "secondary_conversion_paths": [
+      "WhatsApp engineering support",
+      "Technical resource exploration",
+      "Case study review",
+      "Drawing review request"
+    ],
+    "rules": [
+      "Use low-friction consultation entry points.",
+      "Allow users to engage before procurement readiness.",
+      "Support technical evaluation workflows.",
+      "Reduce pressure during early-stage project inquiry."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "Visible labels for all fields",
+      "Keyboard-accessible form steps",
+      "Clear focus states",
+      "Accessible validation messages",
+      "Minimum 48px touch targets",
+      "WCAG AA contrast",
+      "Readable technical terminology",
+      "Accessible file upload flow"
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror step layout in RTL.",
+      "Keep phone and email inputs LTR.",
+      "Allow translated labels to expand.",
+      "Preserve form progress clarity.",
+      "Maintain engineering terminology consistency.",
+      "Support façade and roofing terminology translations."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "rfq_start",
+      "rfq_step_complete",
+      "rfq_file_upload_start",
+      "rfq_file_upload_complete",
+      "rfq_validation_error",
+      "rfq_submit",
+      "rfq_success",
+      "rfq_abandon",
+      "consultation_type_selection",
+      "system_category_selection"
+    ],
+    "tracked_parameters": [
+      "entry_point",
+      "form_step",
+      "project_type",
+      "system_category",
+      "has_file_upload",
+      "device_type",
+      "language",
+      "submission_method",
+      "roofing_type",
+      "cladding_type",
+      "consultation_type"
+    ]
+  },
+  "forbidden_patterns": [
+    "Long mandatory forms",
+    "Required file upload",
+    "Hidden validation errors",
+    "Placeholder-only labels",
+    "No progress indicator",
+    "Unclear success message",
+    "Sales-heavy language",
+    "Too many fields on mobile",
+    "Contractor-style RFQ wording",
+    "Roof-only project categorization",
+    "Aggressive lead-capture patterns"
+  ],
+  "approved_characteristics": [
+    "Low-friction",
+    "Engineering-focused",
+    "Mobile-friendly",
+    "Clear",
+    "Supportive",
+    "Trust-building",
+    "Conversion-ready",
+    "Consultative",
+    "Envelope-focused",
+    "Professional",
+    "Industrial"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "RFQ flow philosophy",
+      "Entry point map",
+      "Step-by-step RFQ journey",
+      "Desktop RFQ layout",
+      "Mobile RFQ layout",
+      "Validation and success states",
+      "System-specific consultation flows",
+      "Correct vs incorrect RFQ patterns"
+    ],
+    "visual_direction": [
+      "RFQ flow diagram",
+      "Mobile step screens",
+      "Desktop split-form mockup",
+      "File upload interface",
+      "Success confirmation screen",
+      "System-category selector UI",
+      "Engineering consultation layouts",
+      "Envelope-system RFQ examples"
+    ]
+  },
+  "implementation_notes": [
+    "The RFQ flow is a critical conversion system and must function as an engineering support and consultation experience.",
+    "Mobile RFQ completion should be prioritized during testing.",
+    "The flow should allow users to submit incomplete information and continue the conversation later.",
+    "All RFQ interactions must connect to analytics and internal lead routing.",
+    "RFQ architecture must support sandwich panels, aluminum cladding, ZIP roofing systems, façade engineering, and industrial envelope coordination equally."
+  ]
+}

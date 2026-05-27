@@ -1,0 +1,45 @@
+{
+              "project_name": "Absaar Water Park",
+              "slug": "absaar-water-park",
+              "location": "Iran",
+              "category": "Recreational & Hybrid Roofing Systems",
+              "project_type": "Water park roofing and daylight integration system",
+              "system_type": "Hybrid ZIP, Polycarbonate & Sandwich Panel Roofing System",
+              "status": "Completed",
+              "area": "12,000 m²",
+              "challenge": "Execution of a large recreational roofing system requiring balanced daylight transmission, controlled indoor ventilation, waterproof roof integration, and coordinated installation between transparent roofing sections, operable roof openings, and insulated sandwich panel areas.",
+              "sipanel_solution": "SIPANEL engineered a hybrid roofing solution combining transparent daylight-transmitting roof sections, automated operable ventilation openings, and insulated sandwich panel systems to optimize thermal performance, indoor comfort, and architectural integration.",
+              "engineering_decision": "Engineering teams developed coordinated roof zoning strategies, automatic ventilation opening integration details, waterproofing transitions between transparent and insulated sections, and structural support layouts to ensure reliable long-term performance and environmental control.",
+              "execution_detail": "Installation teams executed phased coordination procedures for transparent roof panels, automated opening systems, drainage continuity, waterproof sealing, and sandwich panel integration while maintaining alignment precision and operational testing standards.",
+              "measured_result": "Successful delivery of an integrated recreational roofing system providing controlled natural daylight, reliable automated roof ventilation, thermal insulation efficiency, and long-term waterproof performance.",
+              "risk_prevented": [
+                "Ventilation system malfunction",
+                "Water penetration at opening sections",
+                "Thermal imbalance",
+                "Condensation issues",
+                "Roof transition failures",
+                "Structural coordination conflicts"
+              ],
+              "primary_message": "Integrated hybrid roofing systems combining daylight control, automated ventilation, and insulated sandwich panel performance.",
+              "proof_points": [
+                "Automatic roof ventilation integration",
+                "Transparent daylight roofing sections",
+                "Hybrid roof system coordination",
+                "Waterproof transition detailing",
+                "Thermal and environmental control"
+              ],
+              "metrics": {
+                "project_area": "12,000 m²",
+                "facility_type": "Indoor water park",
+                "system_type": "Hybrid roofing system",
+                "execution_focus": "Daylight integration and automated ventilation performance"
+              },
+              "images": {
+                "hero_desktop": "./projects/absaar-water-park/absaar-water-park-hero-desktop.webp",
+                "hero_mobile": "./projects/absaar-water-park/absaar-water-park-hero-mobile.webp",
+                "card": "./projects/absaar-water-park/absaar-water-park-card.webp",
+                "gallery_large": "./projects/absaar-water-park/absaar-water-park-gallery-large.webp",
+                "installation": "./projects/absaar-water-park/absaar-water-park-installation.webp",
+                "technical_detail": "./projects/absaar-water-park/absaar-water-park-technical-detail.webp"
+              }
+            }

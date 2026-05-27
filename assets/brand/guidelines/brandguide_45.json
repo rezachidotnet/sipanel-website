@@ -1,0 +1,443 @@
+{
+  "page": {
+    "number": 45,
+    "title": "Asset Export Guidelines",
+    "section": "Implementation & Governance",
+    "version": "2.0",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define how SIPANEL brand, UI, industrial photography, technical diagrams, façade engineering visuals, ZIP roofing assets, BIM/CAD exports, and frontend production assets must be exported, optimized, versioned, localized, and governed for scalable production deployment.",
+  "asset_export_philosophy": {
+    "statement": "SIPANEL assets must function as production-grade engineering media systems that preserve technical clarity, brand consistency, performance efficiency, multilingual readiness, and long-term maintainability.",
+    "core_principles": [
+      "Export only approved assets",
+      "Preserve engineering accuracy",
+      "Optimize for performance",
+      "Maintain brand consistency",
+      "Support responsive delivery",
+      "Enable multilingual scalability",
+      "Prepare assets for technical inspection",
+      "Maintain revision traceability",
+      "Support future BIM and engineering workflows"
+    ]
+  },
+  "asset_categories": {
+    "logo_assets": {
+      "formats": [
+        "SVG",
+        "PDF",
+        "PNG"
+      ],
+      "rules": [
+        "SVG required for web implementation.",
+        "PDF required for print and documentation.",
+        "PNG allowed only for raster fallback use.",
+        "Never distort, recolor, or redraw logos.",
+        "Preserve clear space and original proportions.",
+        "Export from approved master source only."
+      ]
+    },
+    "icon_assets": {
+      "formats": [
+        "SVG"
+      ],
+      "rules": [
+        "Use consistent stroke system.",
+        "Export icons on clean artboards.",
+        "Remove hidden layers and metadata.",
+        "Use currentColor-compatible SVG setup.",
+        "Avoid raster icon exports unless explicitly required."
+      ]
+    },
+    "industrial_photography_assets": {
+      "formats": [
+        "WebP",
+        "AVIF",
+        "JPG fallback"
+      ],
+      "rules": [
+        "Use responsive image variants.",
+        "Compress without visible technical quality loss.",
+        "Preserve industrial realism.",
+        "Avoid aggressive filters and artificial HDR.",
+        "Use approved project photography only.",
+        "Prioritize envelope systems, installation details, façade systems, roofing systems, and engineering execution."
+      ]
+    },
+    "technical_diagram_assets": {
+      "formats": [
+        "SVG",
+        "WebP",
+        "AVIF",
+        "PDF"
+      ],
+      "rules": [
+        "Use SVG when engineering line clarity is critical.",
+        "Use optimized raster previews for web delivery.",
+        "Export fullscreen inspection versions separately.",
+        "Avoid heavy PDF embeds on mobile.",
+        "Preserve annotation readability.",
+        "Preserve measurement accuracy.",
+        "Support mobile zoom inspection."
+      ]
+    },
+    "facade_and_zip_system_assets": {
+      "formats": [
+        "SVG",
+        "WebP",
+        "AVIF",
+        "PDF"
+      ],
+      "required_assets": [
+        "ACP façade sections",
+        "Standing seam lock details",
+        "ZIP roofing assemblies",
+        "Thermal movement diagrams",
+        "Expansion joints",
+        "Rainscreen airflow diagrams",
+        "Façade attachment systems",
+        "Envelope transition details",
+        "Concealed fastener systems"
+      ],
+      "rules": [
+        "Preserve engineering detail clarity.",
+        "Export simplified previews for mobile.",
+        "Support fullscreen technical inspection.",
+        "Separate public previews from editable engineering source files."
+      ]
+    },
+    "cad_and_bim_assets": {
+      "formats": [
+        "DWG",
+        "DXF",
+        "RVT",
+        "IFC",
+        "PDF"
+      ],
+      "rules": [
+        "Keep editable engineering files separate from web assets.",
+        "Strip confidential metadata before external delivery.",
+        "Use lightweight previews for browser display.",
+        "Preserve engineering layer hierarchy in documentation exports.",
+        "Archive revision history for technical coordination."
+      ]
+    },
+    "document_assets": {
+      "formats": [
+        "PDF"
+      ],
+      "rules": [
+        "Optimize file size.",
+        "Use selectable text where possible.",
+        "Include metadata and document title.",
+        "Avoid scanned-image-only PDFs.",
+        "Use brand-consistent cover pages.",
+        "Use accessible heading structure.",
+        "Compress embedded imagery carefully."
+      ]
+    }
+  },
+  "file_naming_rules": {
+    "recommended_format": "brand-category-description-device-version-language",
+    "examples": [
+      "sipanel-logo-primary-v1.svg",
+      "sipanel-icon-waterproofing-24-v1.svg",
+      "sipanel-project-tabas-hero-desktop-v1.webp",
+      "sipanel-diagram-drainage-preview-mobile-v1.webp",
+      "sipanel-facade-expansion-detail-desktop-v2-en.svg",
+      "sipanel-zip-roof-locking-detail-mobile-v1-ar.webp",
+      "sipanel-resource-waterproofing-checklist-v1.pdf"
+    ],
+    "rules": [
+      "Use lowercase filenames.",
+      "Use hyphen-case only.",
+      "Avoid spaces and vague names.",
+      "Do not use final-final naming.",
+      "Include usage or device context when relevant.",
+      "Use version identifiers for engineering assets.",
+      "Use language suffixes for localized exports."
+    ]
+  },
+  "responsive_image_exports": {
+    "mobile": {
+      "width": "480px",
+      "formats": [
+        "AVIF",
+        "WebP"
+      ]
+    },
+    "tablet": {
+      "width": "900px",
+      "formats": [
+        "AVIF",
+        "WebP"
+      ]
+    },
+    "desktop": {
+      "width": "1600px",
+      "formats": [
+        "AVIF",
+        "WebP"
+      ]
+    },
+    "rules": [
+      "Export separate crops when focal point changes.",
+      "Do not rely on desktop crops for mobile.",
+      "Use mobile-focused engineering previews.",
+      "Define dimensions in implementation to prevent layout shift.",
+      "Lazy-load below-the-fold assets.",
+      "Optimize previews for low-bandwidth field environments."
+    ]
+  },
+  "mobile_technical_preview_rules": {
+    "rules": [
+      "Use focused engineering crop areas.",
+      "Limit preview annotations.",
+      "Ensure visibility under outdoor glare conditions.",
+      "Support high-quality pinch-to-zoom.",
+      "Prioritize one technical message per preview.",
+      "Avoid unreadable engineering density."
+    ]
+  },
+  "image_compression_rules": {
+    "hero_image_target": "250KB-400KB",
+    "standard_section_image_target": "150KB-300KB",
+    "thumbnail_target": "50KB-120KB",
+    "rules": [
+      "Compress aggressively while preserving engineering clarity.",
+      "Avoid artifacts on industrial surfaces and line diagrams.",
+      "Use AVIF where supported.",
+      "Provide WebP fallback.",
+      "Preserve façade material textures and technical line visibility."
+    ]
+  },
+  "technical_diagram_export_rules": {
+    "preview_exports": {
+      "purpose": "Fast-loading engineering previews",
+      "recommended_format": "WebP or AVIF",
+      "rules": [
+        "Limit visible annotations.",
+        "Use readable engineering crop areas.",
+        "Keep file size lightweight.",
+        "Prioritize technical focus area."
+      ]
+    },
+    "fullscreen_exports": {
+      "purpose": "Detailed engineering inspection",
+      "recommended_format": "SVG or high-resolution WebP",
+      "rules": [
+        "Load only after interaction.",
+        "Preserve line and annotation clarity.",
+        "Maintain readable measurements.",
+        "Support consultant-grade inspection."
+      ]
+    },
+    "documentation_exports": {
+      "purpose": "Print and engineering reference",
+      "recommended_format": "PDF",
+      "rules": [
+        "Preserve engineering scale accuracy.",
+        "Use vector exports when possible.",
+        "Avoid destructive compression.",
+        "Maintain revision identifiers."
+      ]
+    }
+  },
+  "logo_export_rules": {
+    "required_versions": [
+      "primary_full_color",
+      "white_logo",
+      "black_logo",
+      "icon_only"
+    ],
+    "rules": [
+      "Export from approved master source only.",
+      "Do not recreate logo manually.",
+      "Do not flatten vector assets unnecessarily.",
+      "Do not modify brand colors.",
+      "Avoid unnecessary transparent padding."
+    ]
+  },
+  "icon_export_rules": {
+    "required_sizes": [
+      "16px",
+      "20px",
+      "24px",
+      "32px",
+      "48px"
+    ],
+    "rules": [
+      "Export as SVG.",
+      "Use consistent viewBox setup.",
+      "Remove unnecessary metadata.",
+      "Keep stroke weights consistent.",
+      "Support currentColor inheritance."
+    ]
+  },
+  "pdf_export_rules": {
+    "use_cases": [
+      "Engineering guides",
+      "Technical resources",
+      "Installation manuals",
+      "Case study downloads",
+      "BOM/MTO references",
+      "Waterproofing details",
+      "Brand guideline documents"
+    ],
+    "rules": [
+      "Optimize PDF file size.",
+      "Use selectable text.",
+      "Use accessible heading structure.",
+      "Compress imagery appropriately.",
+      "Avoid scanned-only documentation.",
+      "Preserve engineering readability."
+    ]
+  },
+  "seo_asset_rules": {
+    "requirements": [
+      "Use descriptive filenames.",
+      "Generate localized alt text.",
+      "Optimize Open Graph preview assets.",
+      "Use structured metadata when applicable.",
+      "Optimize technical diagrams for image indexing.",
+      "Support fast image rendering."
+    ]
+  },
+  "asset_lifecycle_management": {
+    "stages": [
+      "draft",
+      "review",
+      "approved",
+      "production",
+      "archived"
+    ],
+    "rules": [
+      "Only approved assets may enter production.",
+      "Archive outdated engineering diagrams.",
+      "Track revision history.",
+      "Document ownership and approval status.",
+      "Retain previous engineering references where required."
+    ]
+  },
+  "technical_versioning_rules": {
+    "rules": [
+      "Technical diagrams must include revision identifiers.",
+      "Façade and roofing details require version tracking.",
+      "Export versions must match engineering issue dates.",
+      "Archive outdated technical details.",
+      "Maintain engineering traceability."
+    ]
+  },
+  "source_file_organization": {
+    "recommended_folders": [
+      "01_brand_assets",
+      "02_ui_system",
+      "03_industrial_photography",
+      "04_sandwich_panel_systems",
+      "05_cladding_systems",
+      "06_zip_roofing_systems",
+      "07_technical_diagrams",
+      "08_bim_cad_exports",
+      "09_resources",
+      "10_case_studies",
+      "11_localized_assets",
+      "12_archive"
+    ],
+    "rules": [
+      "Separate source files from production exports.",
+      "Archive outdated assets instead of deleting.",
+      "Track engineering revisions.",
+      "Maintain shared source-of-truth storage.",
+      "Document export ownership and approval."
+    ]
+  },
+  "quality_control_checklist": [
+    "Asset uses approved brand colors.",
+    "Engineering detail remains readable.",
+    "Logo proportions are preserved.",
+    "Image is optimized for target device.",
+    "Filename follows naming standards.",
+    "Responsive variants exist where needed.",
+    "No unnecessary metadata remains.",
+    "Asset includes correct version identifier.",
+    "Localized variants are accurate.",
+    "Alt text or technical summary exists."
+  ],
+  "accessibility_rules": {
+    "requirements": [
+      "Prepare alt text for meaningful visuals.",
+      "Provide technical summaries for diagrams.",
+      "Avoid image-only text when possible.",
+      "Use selectable text in documents.",
+      "Support accessible engineering inspection workflows."
+    ]
+  },
+  "rtl_and_multilingual_asset_rules": {
+    "rules": [
+      "Avoid embedding untranslated text inside visuals.",
+      "Generate localized asset variants when required.",
+      "Use language suffixes consistently.",
+      "Preserve engineering units globally.",
+      "Support RTL annotation layouts when applicable."
+    ],
+    "language_suffix_examples": [
+      "-en",
+      "-fa",
+      "-ar",
+      "-ru"
+    ]
+  },
+  "forbidden_export_patterns": [
+    "Low-resolution logos",
+    "Raw AutoCAD screenshots",
+    "Low-quality WhatsApp images",
+    "Screenshots used as production assets",
+    "Uncompressed project photography",
+    "Heavy PDF embeds on mobile",
+    "Final-final filename patterns",
+    "Flattened inaccessible engineering text",
+    "Recolored logo exports",
+    "Oversized non-responsive assets",
+    "Unapproved supplier visuals",
+    "Visible software UI inside engineering exports"
+  ],
+  "approved_characteristics": [
+    "Optimized",
+    "Production-ready",
+    "Engineering-grade",
+    "Accessible",
+    "Responsive",
+    "Localized",
+    "Technically accurate",
+    "Performance-aware",
+    "Traceable"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Asset export philosophy",
+      "Industrial asset categories",
+      "File naming standards",
+      "Responsive export system",
+      "Technical diagram exports",
+      "BIM and CAD asset handling",
+      "Performance and SEO optimization",
+      "Asset lifecycle governance",
+      "Quality assurance checklist"
+    ],
+    "visual_direction": [
+      "Asset pipeline diagram",
+      "Responsive image export matrix",
+      "Technical diagram export flow",
+      "Localized asset examples",
+      "Correct vs incorrect engineering exports",
+      "BIM/CAD export structure"
+    ]
+  },
+  "implementation_notes": [
+    "Asset export standards must be followed before development handoff.",
+    "Engineering clarity and performance optimization must coexist.",
+    "All production assets should remain traceable to approved master files.",
+    "Asset systems must support sandwich panels, aluminum cladding, standing seam roofing, façade systems, and future BIM workflows.",
+    "No unapproved, unoptimized, or non-versioned assets may enter production deployment."
+  ]
+}

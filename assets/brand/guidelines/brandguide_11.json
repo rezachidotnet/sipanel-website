@@ -1,0 +1,294 @@
+{
+    "page": {
+      "number": 11,
+      "title": "Color System",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the complete SIPANEL color architecture, usage hierarchy, accessibility rules, semantic behavior, and implementation standards across digital, industrial, and technical environments.",
+    "color_philosophy": {
+      "statement": "The SIPANEL color system communicates engineering precision, industrial confidence, and controlled execution through restrained, high-contrast visual structure.",
+      "core_principles": [
+        "Function before decoration",
+        "Controlled use of accent colors",
+        "High readability and contrast",
+        "Industrial neutrality",
+        "Consistent hierarchy",
+        "Accessibility-first usage"
+      ]
+    },
+    "brand_palette": {
+      "primary_orange": {
+        "name": "SIPANEL Orange",
+        "hex": "#FF6A00",
+        "rgb": "255, 106, 0",
+        "usage": [
+          "Primary CTAs",
+          "Engineering highlights",
+          "Technical annotations",
+          "Active states",
+          "Key metrics"
+        ],
+        "usage_limit": "10%-15% per composition"
+      },
+      "black": {
+        "name": "Industrial Black",
+        "hex": "#0F1113",
+        "rgb": "15, 17, 19",
+        "usage": [
+          "Primary dark surfaces",
+          "Header backgrounds",
+          "Technical sections",
+          "Footer areas"
+        ]
+      },
+      "deep_black": {
+        "name": "Deep Technical Black",
+        "hex": "#050607",
+        "rgb": "5, 6, 7",
+        "usage": [
+          "Premium dark sections",
+          "Hero overlays",
+          "Diagram viewer backgrounds"
+        ]
+      },
+      "white": {
+        "name": "Pure White",
+        "hex": "#FFFFFF",
+        "rgb": "255, 255, 255",
+        "usage": [
+          "Backgrounds",
+          "Text on dark surfaces",
+          "Spacing and visual breathing"
+        ]
+      },
+      "light_gray": {
+        "name": "Industrial Light Gray",
+        "hex": "#F5F6F7",
+        "rgb": "245, 246, 247",
+        "usage": [
+          "Section backgrounds",
+          "Card surfaces",
+          "Form backgrounds"
+        ]
+      },
+      "medium_gray": {
+        "name": "Neutral Gray",
+        "hex": "#68686B",
+        "rgb": "104, 104, 107",
+        "usage": [
+          "Secondary text",
+          "Dividers",
+          "Support labels",
+          "Inactive states"
+        ]
+      }
+    },
+    "semantic_colors": {
+      "success": {
+        "hex": "#1E8E5A",
+        "usage": [
+          "Completed states",
+          "Validation indicators",
+          "Approved engineering checks"
+        ]
+      },
+      "warning": {
+        "hex": "#D98E04",
+        "usage": [
+          "Risk indicators",
+          "Attention notices",
+          "Inspection warnings"
+        ]
+      },
+      "error": {
+        "hex": "#C62828",
+        "usage": [
+          "Validation errors",
+          "Critical technical issues",
+          "Failed states"
+        ]
+      },
+      "info": {
+        "hex": "#1976D2",
+        "usage": [
+          "Technical information",
+          "Neutral notices",
+          "Diagram references"
+        ]
+      }
+    },
+    "color_hierarchy": {
+      "primary": [
+        "#FF6A00",
+        "#0F1113"
+      ],
+      "secondary": [
+        "#050607",
+        "#68686B"
+      ],
+      "neutral": [
+        "#FFFFFF",
+        "#F5F6F7"
+      ],
+      "rules": [
+        "Orange must remain the strongest visual accent.",
+        "Dark surfaces should communicate technical authority.",
+        "Neutral backgrounds should support readability and structure."
+      ]
+    },
+    "usage_rules": {
+      "orange_usage": {
+        "allowed_for": [
+          "Primary actions",
+          "Key technical highlights",
+          "Interactive states",
+          "Engineering emphasis",
+          "Important data points"
+        ],
+        "forbidden_for": [
+          "Large paragraph text",
+          "Full-page backgrounds",
+          "Decorative overuse",
+          "Long UI sections"
+        ],
+        "guideline": "Orange should guide attention, not dominate the interface."
+      },
+      "dark_surface_usage": {
+        "allowed_for": [
+          "Hero sections",
+          "Technical proof sections",
+          "Footers",
+          "Industrial overlays"
+        ],
+        "rules": [
+          "Maintain strong text contrast.",
+          "Avoid excessive visual heaviness.",
+          "Balance with light content sections."
+        ]
+      },
+      "light_background_usage": {
+        "allowed_for": [
+          "Content-heavy sections",
+          "Forms",
+          "Tables",
+          "Technical documentation"
+        ],
+        "rules": [
+          "Prioritize readability.",
+          "Preserve visual spacing.",
+          "Avoid excessive border noise."
+        ]
+      }
+    },
+    "gradient_rules": {
+      "allowed": false,
+      "exception_cases": [
+        "Very subtle dark overlays",
+        "Controlled hero image shading"
+      ],
+      "forbidden_gradients": [
+        "Bright marketing gradients",
+        "Multi-color gradients",
+        "Decorative neon gradients"
+      ]
+    },
+    "contrast_and_accessibility": {
+      "minimum_contrast": {
+        "normal_text": "4.5:1",
+        "large_text": "3:1"
+      },
+      "rules": [
+        "All UI elements must meet WCAG AA standards.",
+        "Avoid low-contrast gray text.",
+        "Do not place orange text on white backgrounds for long-form content.",
+        "Ensure mobile readability in outdoor industrial conditions."
+      ]
+    },
+    "responsive_color_behavior": {
+      "mobile_rules": [
+        "Increase contrast for smaller screens.",
+        "Reduce decorative dark overlays.",
+        "Preserve CTA visibility above fold."
+      ],
+      "dark_mode_behavior": [
+        "Maintain engineering clarity.",
+        "Avoid pure black text backgrounds for long reading.",
+        "Use layered dark surfaces carefully."
+      ]
+    },
+    "technical_diagram_color_rules": {
+      "approved_colors": [
+        "#FF6A00",
+        "#0F1113",
+        "#68686B",
+        "#FFFFFF"
+      ],
+      "annotation_behavior": [
+        "Use orange for critical engineering points only.",
+        "Use gray for secondary technical guidance.",
+        "Maintain minimal visual clutter."
+      ]
+    },
+    "multilingual_color_rules": {
+      "rtl_support": true,
+      "rules": [
+        "Color hierarchy must remain identical across all languages.",
+        "Do not introduce regional color variations.",
+        "Maintain accessibility standards in all localized interfaces."
+      ]
+    },
+    "forbidden_color_usage": [
+      "Overuse of orange",
+      "Neon effects",
+      "Decorative rainbow palettes",
+      "Consumer-tech gradients",
+      "Low-contrast interfaces",
+      "Overly colorful UI systems",
+      "Heavy glow effects"
+    ],
+    "approved_color_characteristics": [
+      "Industrial",
+      "Controlled",
+      "Technical",
+      "Minimal",
+      "High-contrast",
+      "Structured"
+    ],
+    "token_mapping": {
+      "color_primary": "#FF6A00",
+      "color_background_dark": "#0F1113",
+      "color_background_light": "#F5F6F7",
+      "color_text_primary": "#0F1113",
+      "color_text_inverse": "#FFFFFF",
+      "color_border": "#D9DADD",
+      "color_success": "#1E8E5A",
+      "color_warning": "#D98E04",
+      "color_error": "#C62828"
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Color philosophy",
+        "Primary palette overview",
+        "Semantic color system",
+        "Usage hierarchy",
+        "Accessibility examples",
+        "Technical diagram examples",
+        "Correct vs incorrect usage"
+      ],
+      "visual_direction": [
+        "Large color swatches",
+        "Token labels",
+        "Dark and light interface examples",
+        "Industrial UI previews",
+        "Technical annotation demonstrations"
+      ]
+    },
+    "implementation_notes": [
+      "All colors must map directly to frontend design tokens.",
+      "Maintain strict consistency across web, print, presentations, and technical diagrams.",
+      "Color should support hierarchy and engineering clarity, never visual decoration.",
+      "Accessibility compliance is mandatory across all SIPANEL interfaces."
+    ]
+  }

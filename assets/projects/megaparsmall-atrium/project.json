@@ -1,0 +1,45 @@
+{
+              "project_name": "Megapars Mall Atrium",
+              "slug": "megaparsmall-atrium",
+              "location": "Iran",
+              "category": "Commercial & Architectural Roofing Systems",
+              "project_type": "Atrium roofing structure",
+              "system_type": "ZIP Roofing System",
+              "status": "Completed",
+              "area": "4,500 m²",
+              "challenge": "Execution of a large-span commercial atrium roofing system requiring precise curved ZIP panel coordination, waterproofing integrity, thermal movement control, and clean architectural integration across the exposed roof geometry.",
+              "sipanel_solution": "SIPANEL engineered a coordinated ZIP roofing solution optimized for the atrium structure, including standing seam layout coordination, waterproofing detailing, and structural integration for long-span architectural performance.",
+              "engineering_decision": "Engineering teams prepared detailed ZIP panel layouts, expansion movement studies, drainage coordination details, and installation sequencing plans to ensure geometric precision, waterproofing continuity, and long-term roof stability.",
+              "execution_detail": "Installation teams followed controlled ZIP system installation procedures, alignment verification checkpoints, waterproofing inspections, and fastening coordination workflows throughout execution to maintain architectural quality and roof performance.",
+              "measured_result": "Successful delivery of a visually integrated atrium roofing system with reliable waterproofing performance, precise standing seam execution, and controlled long-span installation quality.",
+              "risk_prevented": [
+                "Water penetration",
+                "Thermal expansion stress",
+                "Roof alignment deviations",
+                "Standing seam installation errors",
+                "Drainage coordination failures",
+                "Long-term maintenance issues"
+              ],
+              "primary_message": "Engineered ZIP roofing systems designed for complex architectural atrium structures.",
+              "proof_points": [
+                "Long-span ZIP roof coordination",
+                "Standing seam precision",
+                "Waterproofing continuity",
+                "Thermal movement control",
+                "Architectural roof integration"
+              ],
+              "metrics": {
+                "project_area": "4,500 m²",
+                "facility_type": "Commercial atrium",
+                "system_type": "ZIP roofing system",
+                "execution_focus": "Architectural precision and waterproofing control"
+              },
+              "images": {
+                "hero_desktop": "./projects/megaparsmall-atrium/megaparsmall-atrium-hero-desktop.webp",
+                "hero_mobile": "./projects/megaparsmall-atrium/megaparsmall-atrium-hero-mobile.webp",
+                "card": "./projects/megaparsmall-atrium/megaparsmall-atrium-card.webp",
+                "gallery_large": "./projects/megaparsmall-atrium/megaparsmall-atrium-gallery-large.webp",
+                "installation": "./projects/megaparsmall-atrium/megaparsmall-atrium-installation.webp",
+                "technical_detail": "./projects/megaparsmall-atrium/megaparsmall-atrium-technical-detail.webp"
+              }
+            }

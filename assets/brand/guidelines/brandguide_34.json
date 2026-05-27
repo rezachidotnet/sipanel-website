@@ -1,0 +1,506 @@
+{
+  "page": {
+    "number": 34,
+    "title": "Homepage Experience Architecture",
+    "section": "Experience Showcases",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define the structural architecture, content hierarchy, technical storytelling flow, conversion placement, SEO hierarchy, and responsive experience strategy for the SIPANEL homepage across sandwich panels, aluminum cladding, ZIP roofing systems, and industrial envelope engineering.",
+  "homepage_philosophy": {
+    "statement": "The SIPANEL homepage should immediately communicate industrial envelope engineering credibility, technical capability, and execution confidence.",
+    "core_principles": [
+      "Engineering-first communication",
+      "Proof before persuasion",
+      "Fast value recognition",
+      "Clear conversion flow",
+      "Technical storytelling",
+      "Mobile-first usability",
+      "Envelope-system positioning",
+      "Architectural credibility",
+      "Consultant-grade technical authority",
+      "Multi-system industrial communication"
+    ]
+  },
+  "primary_homepage_goals": [
+    {
+      "goal": "Establish Technical Trust",
+      "description": "Show SIPANEL as a professional engineering, façade, roofing, and industrial envelope execution partner."
+    },
+    {
+      "goal": "Communicate Industrial Envelope Expertise",
+      "description": "Demonstrate specialization in sandwich panel systems, aluminum cladding, ACP façades, ZIP roofing systems, standing seam systems, waterproofing, façade engineering, and industrial envelope coordination."
+    },
+    {
+      "goal": "Generate Qualified RFQs",
+      "description": "Guide serious industrial users toward engineering consultation, envelope review, and project evaluation."
+    },
+    {
+      "goal": "Position SIPANEL Beyond Sandwich Panels",
+      "description": "Ensure homepage architecture clearly represents SIPANEL as a multi-system industrial envelope engineering company."
+    }
+  ],
+  "homepage_structure": {
+    "section_1": {
+      "name": "Hero Section",
+      "purpose": "Communicate industrial envelope engineering value immediately.",
+      "required_elements": [
+        "Primary headline",
+        "Engineering-focused subheadline",
+        "Primary CTA",
+        "Secondary CTA",
+        "Trust microcopy",
+        "Industrial hero visual",
+        "Envelope engineering positioning",
+        "Cladding and roofing system messaging",
+        "System-category overview"
+      ],
+      "recommended_headline_examples": [
+        "Industrial Envelope Engineering Solutions",
+        "Sandwich Panel, Aluminum Cladding & ZIP Roofing Systems",
+        "Engineered Industrial Cladding & Roofing Systems",
+        "Precision Envelope Design & Installation"
+      ],
+      "recommended_ctas": [
+        "Get Free Engineering Review",
+        "Request Envelope Consultation",
+        "Discuss Your Cladding or Roofing System"
+      ]
+    },
+    "section_2": {
+      "name": "Proof & Metrics Strip",
+      "purpose": "Establish credibility through measurable engineering and execution proof.",
+      "required_elements": [
+        "Project area metrics",
+        "Industrial project count",
+        "Years of experience",
+        "Execution statistics",
+        "Façade installation metrics",
+        "Standing seam roofing metrics",
+        "Envelope coordination metrics",
+        "Thermal optimization proof"
+      ],
+      "approved_metrics": [
+        "Total industrial envelope area",
+        "ACP façade square meters",
+        "Standing seam roof coverage",
+        "Industrial projects completed",
+        "Envelope-system coordination accuracy",
+        "Material optimization savings",
+        "Thermal bridge reduction performance"
+      ]
+    },
+    "section_3": {
+      "name": "Industrial Challenges",
+      "purpose": "Present real engineering, façade, roofing, and envelope coordination problems.",
+      "required_elements": [
+        "Leakage risks",
+        "Drainage failures",
+        "Coordination complexity",
+        "Material waste",
+        "Execution delays",
+        "Thermal bridge risks",
+        "Façade expansion movement",
+        "Standing seam thermal movement",
+        "Wind-load coordination",
+        "Façade-to-roof transition failures",
+        "Rainscreen ventilation issues",
+        "ACP alignment tolerances",
+        "Envelope continuity problems",
+        "Substructure coordination failures",
+        "Concealed fastener complications"
+      ]
+    },
+    "section_4": {
+      "name": "Engineering Solutions",
+      "purpose": "Explain SIPANEL methodology and industrial envelope systems.",
+      "required_elements": [
+        "Shop drawing process",
+        "Waterproofing logic",
+        "Drainage coordination",
+        "Installation methodology",
+        "Optimization workflow",
+        "Aluminum cladding engineering",
+        "Standing seam roofing systems",
+        "Façade substructure coordination",
+        "Thermal movement strategy",
+        "Envelope transition detailing",
+        "Rainscreen façade systems",
+        "Concealed fastener coordination",
+        "ACP detailing methodology",
+        "Envelope continuity planning",
+        "Thermal bridge mitigation",
+        "Mixed-system engineering coordination"
+      ]
+    },
+    "section_5": {
+      "name": "Technical Diagram Showcase",
+      "purpose": "Visualize engineering capability and technical thinking.",
+      "required_elements": [
+        "Annotated diagrams",
+        "Waterproofing details",
+        "Panel coordination visuals",
+        "Execution logic previews",
+        "ACP façade sections",
+        "Standing seam roof details",
+        "Thermal break diagrams",
+        "Façade attachment systems",
+        "Envelope transition details",
+        "Expansion joint diagrams",
+        "Rainscreen airflow diagrams",
+        "Concealed fastening details",
+        "Roof-to-wall transitions",
+        "Parapet details"
+      ],
+      "diagram_categories": [
+        "Sandwich panel systems",
+        "Aluminum cladding systems",
+        "ZIP roofing systems",
+        "Envelope transition systems",
+        "Thermal envelope systems"
+      ]
+    },
+    "section_6": {
+      "name": "Case Study Showcase",
+      "purpose": "Present real industrial envelope execution proof.",
+      "required_elements": [
+        "Featured projects",
+        "Measured outcomes",
+        "Industrial photography",
+        "Engineering challenge summaries",
+        "Cladding project showcase",
+        "Standing seam roofing projects",
+        "Envelope engineering projects",
+        "Façade coordination case studies",
+        "Mixed-envelope project showcase"
+      ],
+      "recommended_filters": [
+        "System Type",
+        "Envelope Category",
+        "Cladding Type",
+        "Roofing Type",
+        "Industry",
+        "Technical Challenge"
+      ]
+    },
+    "section_7": {
+      "name": "Process Workflow",
+      "purpose": "Explain how SIPANEL executes projects systematically.",
+      "required_elements": [
+        "Project evaluation",
+        "Technical review",
+        "Engineering coordination",
+        "Execution support",
+        "Inspection process",
+        "Façade engineering review",
+        "Cladding detailing",
+        "Standing seam detailing",
+        "Envelope coordination",
+        "Thermal movement analysis",
+        "Substructure coordination",
+        "Transition detailing review"
+      ]
+    },
+    "section_8": {
+      "name": "Resource & Knowledge Center",
+      "purpose": "Support SEO, education, engineering trust, and consultant engagement.",
+      "required_elements": [
+        "Technical resources",
+        "Guides",
+        "Drawings",
+        "Comparison articles",
+        "Installation insights",
+        "Cladding engineering guides",
+        "Standing seam roofing resources",
+        "Envelope detailing references",
+        "ACP installation resources",
+        "Thermal bridge references",
+        "Façade QA checklists",
+        "Roof-to-wall transition references",
+        "Envelope coordination checklists"
+      ]
+    },
+    "section_9": {
+      "name": "Final Conversion Block",
+      "purpose": "Guide users toward consultation or RFQ submission.",
+      "required_elements": [
+        "Strong CTA",
+        "Trust reinforcement",
+        "Quick contact options",
+        "WhatsApp and phone access",
+        "Envelope engineering CTA",
+        "Cladding consultation CTA",
+        "Roof system review CTA",
+        "RFQ shortcut",
+        "System-specific consultation path"
+      ],
+      "approved_ctas": [
+        "Request Envelope Engineering Review",
+        "Discuss Your Cladding System",
+        "Review ZIP Roofing Solution",
+        "Request Technical Consultation",
+        "Start Your Industrial RFQ"
+      ]
+    }
+  },
+  "content_hierarchy_rules": {
+    "rules": [
+      "Communicate value within first viewport.",
+      "Use proof before deep technical explanation.",
+      "Present one major idea per section.",
+      "Use progressive technical disclosure.",
+      "Preserve strong visual rhythm.",
+      "Expose all core systems early in the homepage flow.",
+      "Balance roofing, façade, and envelope-system representation equally."
+    ]
+  },
+  "homepage_storytelling_flow": {
+    "recommended_sequence": [
+      "Industrial envelope engineering value",
+      "Proof and trust",
+      "Industrial challenges",
+      "Technical solutions",
+      "Envelope engineering systems",
+      "Cladding and roofing coordination",
+      "Execution proof",
+      "Engineering workflow",
+      "Educational resources",
+      "Conversion action"
+    ]
+  },
+  "hero_section_rules": {
+    "headline_rules": [
+      "Focus on engineering outcomes.",
+      "Avoid generic marketing language.",
+      "Keep headline concise and powerful.",
+      "Include broader envelope engineering positioning.",
+      "Avoid roof-only or waterproofing-only framing.",
+      "Support sandwich panels, cladding, and ZIP systems equally.",
+      "Position SIPANEL as a technical industrial partner rather than a general contractor."
+    ],
+    "visual_rules": [
+      "Use real industrial photography or engineering visuals.",
+      "Avoid abstract hero graphics.",
+      "Preserve technical realism.",
+      "Use aluminum cladding visuals.",
+      "Include façade engineering imagery.",
+      "Show standing seam roofing systems.",
+      "Use mixed-envelope industrial projects.",
+      "Show architectural-scale industrial projects.",
+      "Include envelope transition details where possible."
+    ],
+    "cta_rules": [
+      "Primary CTA above fold required.",
+      "Secondary CTA optional.",
+      "Use engineering-focused language.",
+      "Avoid aggressive sales-oriented CTA wording."
+    ]
+  },
+  "proof_and_metrics_rules": {
+    "rules": [
+      "Use real measurable metrics only.",
+      "Show execution scale clearly.",
+      "Support metrics with industrial context.",
+      "Avoid fake animated counters.",
+      "Balance façade, roofing, and envelope proof categories.",
+      "Show measurable engineering outcomes beyond waterproofing."
+    ]
+  },
+  "technical_visual_rules": {
+    "approved_visuals": [
+      "Waterproofing diagrams",
+      "Shop drawings",
+      "Drainage systems",
+      "Installation visuals",
+      "Industrial photography",
+      "ACP façade sections",
+      "Standing seam roof details",
+      "Envelope transition diagrams",
+      "Cladding attachment details",
+      "Thermal break visuals",
+      "Façade engineering drawings",
+      "Concealed fastener systems",
+      "Rainscreen airflow diagrams",
+      "Substructure coordination details"
+    ],
+    "rules": [
+      "Technical visuals must remain readable.",
+      "Use annotations carefully.",
+      "Avoid visual overload.",
+      "Use façade visuals for cladding storytelling.",
+      "Use standing seam sections for ZIP roofing storytelling.",
+      "Support envelope coordination with transition diagrams."
+    ]
+  },
+  "conversion_architecture": {
+    "primary_conversion": "Engineering consultation or RFQ",
+    "secondary_conversion": [
+      "Resource download",
+      "Case study exploration",
+      "Discuss Cladding System",
+      "Review ZIP Roofing Solution",
+      "Request Envelope Consultation",
+      "Download Technical Detail"
+    ],
+    "conversion_rules": [
+      "CTA should appear every 2-3 sections.",
+      "Support CTA with proof and trust.",
+      "Reduce friction before conversion.",
+      "Use consultation-focused messaging.",
+      "Match CTA wording to the system category being discussed."
+    ]
+  },
+  "mobile_architecture_rules": {
+    "rules": [
+      "Use single-column layouts.",
+      "Preserve sticky CTA access.",
+      "Reduce technical density.",
+      "Use swipeable proof and case study sections.",
+      "Keep hero content concise.",
+      "Use fullscreen interaction for technical diagrams.",
+      "Prioritize readability for façade and standing seam details.",
+      "Avoid overly dense engineering sections on small screens."
+    ]
+  },
+  "desktop_architecture_rules": {
+    "rules": [
+      "Use split-layout hero.",
+      "Allow larger technical diagrams.",
+      "Use multi-column proof sections carefully.",
+      "Preserve strong grid alignment.",
+      "Support side-by-side engineering storytelling.",
+      "Allow detailed envelope-system visuals.",
+      "Support architectural-scale industrial photography."
+    ]
+  },
+  "seo_architecture_rules": {
+    "requirements": [
+      "Clear H1 hierarchy",
+      "Keyword-aligned section structure",
+      "Internal links to services and resources",
+      "Technical FAQ section",
+      "Optimized industrial imagery",
+      "Envelope engineering keyword coverage",
+      "Cladding and ZIP roofing SEO hierarchy",
+      "Structured internal linking between systems"
+    ],
+    "homepage_keyword_clusters": [
+      "industrial envelope systems",
+      "aluminum cladding systems",
+      "ACP façade systems",
+      "standing seam roofing",
+      "ZIP roofing systems",
+      "industrial façade engineering",
+      "roof and façade coordination",
+      "industrial cladding systems"
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "WCAG AA contrast compliance",
+      "Keyboard-accessible navigation",
+      "Accessible CTA labels",
+      "Technical diagrams with summaries",
+      "Readable mobile typography",
+      "Support envelope engineering keyword coverage.",
+      "Expose cladding and ZIP system hierarchy clearly.",
+      "Provide accessible summaries for technical façade and roofing visuals."
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror layouts correctly in RTL.",
+      "Preserve engineering hierarchy across languages.",
+      "Allow translated content expansion.",
+      "Maintain CTA readability.",
+      "Preserve façade and ZIP roofing terminology consistency.",
+      "Maintain technical diagram readability after RTL transformation."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "hero_cta_click",
+      "proof_section_view",
+      "technical_diagram_expand",
+      "case_study_click",
+      "resource_interaction",
+      "homepage_scroll_depth",
+      "rfq_start",
+      "system_category_interaction",
+      "technical_visual_zoom"
+    ],
+    "tracked_parameters": [
+      "section_name",
+      "device_type",
+      "language",
+      "interaction_type",
+      "scroll_depth",
+      "system_category",
+      "roofing_type",
+      "cladding_type",
+      "envelope_type"
+    ]
+  },
+  "forbidden_patterns": [
+    "Generic corporate homepage structure",
+    "Marketing-heavy hero copy",
+    "No technical proof",
+    "Overloaded hero section",
+    "Hidden conversion path",
+    "Stock-photo-heavy layouts",
+    "Dense technical walls",
+    "Weak mobile hierarchy",
+    "Homepage positioning limited only to sandwich panels",
+    "Roof-only engineering narrative",
+    "Missing façade/cladding representation",
+    "Single-system industrial positioning",
+    "Contractor-only visual identity",
+    "Waterproofing-only homepage storytelling"
+  ],
+  "approved_characteristics": [
+    "Industrial",
+    "Technical",
+    "Structured",
+    "Proof-driven",
+    "Readable",
+    "Conversion-focused",
+    "Engineering-first",
+    "Envelope-focused",
+    "Architecturally credible",
+    "Façade-engineering-aware",
+    "Multi-system industrial",
+    "Consultant-grade",
+    "Enterprise-positioned"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Homepage philosophy",
+      "Homepage architecture map",
+      "Section-by-section framework",
+      "Technical storytelling flow",
+      "Conversion placement system",
+      "Responsive homepage behavior",
+      "Correct vs incorrect homepage patterns",
+      "Envelope-system homepage hierarchy"
+    ],
+    "visual_direction": [
+      "Homepage wireframe",
+      "Content hierarchy diagrams",
+      "Hero section showcase",
+      "Conversion flow visualization",
+      "Responsive homepage layouts",
+      "ACP façade showcase",
+      "Standing seam roofing visuals",
+      "Envelope transition diagrams",
+      "Industrial architectural photography"
+    ]
+  },
+  "implementation_notes": [
+    "The homepage is SIPANEL's primary industrial envelope engineering credibility platform and must prioritize trust, technical authority, and clarity.",
+    "Every homepage section should support engineering storytelling, proof, SEO positioning, or conversion.",
+    "Homepage architecture must integrate tightly with SEO, analytics, case studies, technical resources, and RFQ flows.",
+    "Mobile usability and performance are critical for industrial field users.",
+    "Homepage storytelling and visuals must represent sandwich panels, aluminum cladding, ZIP roofing systems, and industrial envelope engineering equally where relevant."
+  ]
+}

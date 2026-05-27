@@ -1,0 +1,256 @@
+{
+    "page": {
+      "number": 8,
+      "title": "Photography Direction",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the artistic direction, emotional atmosphere, visual storytelling style, and image selection strategy for SIPANEL photography across all brand and digital experiences.",
+    "creative_direction": {
+      "statement": "SIPANEL photography should feel engineered, controlled, industrial, and trustworthy — never decorative or emotionally exaggerated.",
+      "visual_mood": [
+        "Industrial",
+        "Technical",
+        "Architectural",
+        "Structured",
+        "Purposeful",
+        "Modern",
+        "Confident"
+      ],
+      "emotional_goal": "Create confidence through visible engineering discipline and execution realism."
+    },
+    "visual_storytelling_principles": [
+      {
+        "title": "Show Execution Reality",
+        "description": "Photography should document real engineering and industrial activity instead of staged marketing scenes."
+      },
+      {
+        "title": "Reveal Technical Logic",
+        "description": "Images should help explain systems, coordination, waterproofing, and installation quality."
+      },
+      {
+        "title": "Communicate Scale",
+        "description": "Use framing and perspective to demonstrate industrial project size and complexity."
+      },
+      {
+        "title": "Highlight Control",
+        "description": "Visuals should feel organized, disciplined, and engineered."
+      },
+      {
+        "title": "Support Proof-Based Communication",
+        "description": "Photography should reinforce measurable project credibility and execution quality."
+      }
+    ],
+    "image_selection_strategy": {
+      "priorities": [
+        "Real industrial projects",
+        "Installation process documentation",
+        "Technical detail photography",
+        "Waterproofing and drainage systems",
+        "Panel coordination visuals",
+        "Large-scale industrial structures"
+      ],
+      "selection_criteria": [
+        "Clear engineering relevance",
+        "Strong composition",
+        "Visible technical execution",
+        "Authentic industrial environment",
+        "High image quality",
+        "Minimal visual clutter"
+      ]
+    },
+    "preferred_subjects": {
+      "industrial_structures": [
+        "Factory buildings",
+        "Industrial roofs",
+        "Cold storage facilities",
+        "Warehouse systems",
+        "Large-span structures"
+      ],
+      "technical_elements": [
+        "Panel systems",
+        "Flashing details",
+        "Drainage paths",
+        "Fastening systems",
+        "Waterproofing details",
+        "Installation sequencing"
+      ],
+      "human_elements": [
+        "Engineers reviewing plans",
+        "Installation teams during execution",
+        "Technical coordination meetings",
+        "Workers interacting with industrial systems"
+      ]
+    },
+    "composition_direction": {
+      "preferred_compositions": [
+        "Architectural symmetry",
+        "Structured framing",
+        "Strong horizontal and vertical lines",
+        "Wide-angle industrial context",
+        "Detail close-ups with engineering relevance"
+      ],
+      "visual_balance_rules": [
+        "Preserve negative space for overlays and typography.",
+        "Avoid overcrowded compositions.",
+        "Maintain clean visual hierarchy.",
+        "Support responsive cropping behavior."
+      ],
+      "camera_behavior": {
+        "preferred": [
+          "Stable framing",
+          "Documentary-style perspective",
+          "Technical composition",
+          "Measured depth"
+        ],
+        "avoid": [
+          "Handheld chaos",
+          "Extreme cinematic distortion",
+          "Overly artistic framing",
+          "Fashion-style photography"
+        ]
+      }
+    },
+    "lighting_and_environment": {
+      "preferred_conditions": [
+        "Natural daylight",
+        "Overcast industrial atmosphere",
+        "Controlled interior lighting",
+        "Real working environments"
+      ],
+      "environmental_characteristics": [
+        "Industrial realism",
+        "Clean technical environments",
+        "Visible structural context",
+        "Authentic project conditions"
+      ],
+      "avoid_conditions": [
+        "Overly polished showroom visuals",
+        "Artificial studio environments",
+        "Highly stylized color effects"
+      ]
+    },
+    "color_and_tone_direction": {
+      "palette_behavior": [
+        "Neutral industrial tones",
+        "Controlled contrast",
+        "Natural material colors",
+        "Balanced whites and grays"
+      ],
+      "orange_accent_usage": {
+        "allowed": true,
+        "rules": [
+          "Use orange subtly through branding, PPE, annotations, or equipment.",
+          "Avoid overwhelming orange dominance.",
+          "Maintain technical visual balance."
+        ]
+      },
+      "forbidden_treatments": [
+        "Heavy saturation",
+        "Extreme HDR",
+        "Aggressive cinematic grading",
+        "Neon visual effects"
+      ]
+    },
+    "website_photography_direction": {
+      "homepage": {
+        "goal": "Communicate industrial capability and engineering confidence immediately.",
+        "preferred_images": [
+          "Large industrial structures",
+          "Roof systems",
+          "Execution process",
+          "Wide engineering visuals"
+        ]
+      },
+      "case_studies": {
+        "goal": "Support measurable proof and technical storytelling.",
+        "preferred_images": [
+          "Project scale",
+          "Technical challenges",
+          "Execution details",
+          "Completed outcomes"
+        ]
+      },
+      "technical_sections": {
+        "goal": "Visualize engineering concepts clearly.",
+        "preferred_images": [
+          "Diagram-supported photography",
+          "Close-up technical details",
+          "Drainage systems",
+          "Waterproofing execution"
+        ]
+      }
+    },
+    "cropping_and_responsive_behavior": {
+      "desktop": {
+        "preferred": "Wide cinematic industrial framing"
+      },
+      "tablet": {
+        "preferred": "Balanced crop with structural focus"
+      },
+      "mobile": {
+        "preferred": "Readable focal points with minimal clutter"
+      },
+      "rules": [
+        "Protect critical technical details during responsive cropping.",
+        "Avoid losing engineering context on mobile.",
+        "Preserve readability for overlays and annotations."
+      ]
+    },
+    "overlay_and_ui_integration": {
+      "allowed": [
+        "Subtle dark overlays",
+        "Technical callouts",
+        "Minimal orange highlights",
+        "Grid-aligned captions"
+      ],
+      "forbidden": [
+        "Heavy gradients",
+        "Decorative overlays",
+        "Aggressive blur effects",
+        "Excessive UI layering"
+      ]
+    },
+    "forbidden_visual_direction": [
+      "Lifestyle branding aesthetics",
+      "Playful startup visuals",
+      "Generic construction advertising",
+      "Decorative visual abstraction",
+      "Emotion-first storytelling",
+      "Artificial industrial scenes",
+      "Corporate stock photography"
+    ],
+    "approved_visual_keywords": [
+      "Engineered",
+      "Controlled",
+      "Industrial",
+      "Architectural",
+      "Precise",
+      "Technical",
+      "Structural",
+      "Execution-focused"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Creative direction statement",
+        "Visual storytelling principles",
+        "Preferred composition examples",
+        "Lighting and color direction",
+        "Website photography examples",
+        "Approved vs forbidden visual comparisons"
+      ],
+      "visual_direction": [
+        "Large industrial hero imagery",
+        "Annotated composition examples",
+        "Responsive crop demonstrations",
+        "Technical overlay previews"
+      ]
+    },
+    "implementation_notes": [
+      "Photography direction should remain consistent across web, presentations, proposals, and technical materials.",
+      "All photography must reinforce SIPANEL's engineering-first identity.",
+      "Use photography to support technical trust, not emotional marketing.",
+      "Visual consistency across multilingual implementations is mandatory."
+    ]
+  }

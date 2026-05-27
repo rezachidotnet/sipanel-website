@@ -1,0 +1,237 @@
+{
+    "page": {
+      "number": 20,
+      "title": "Interface Design Principles",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the foundational UI design principles that guide all SIPANEL digital interfaces, user flows, technical interactions, and conversion experiences.",
+    "design_philosophy": {
+      "statement": "SIPANEL interfaces must feel engineered, structured, predictable, and technically trustworthy.",
+      "core_principles": [
+        "Clarity before decoration",
+        "Engineering-first communication",
+        "Functional hierarchy",
+        "Fast decision support",
+        "Minimal interaction friction",
+        "Consistent system behavior"
+      ]
+    },
+    "interface_personality": {
+      "characteristics": [
+        "Industrial",
+        "Technical",
+        "Controlled",
+        "Professional",
+        "Minimal",
+        "Confident",
+        "Structured"
+      ],
+      "avoid_characteristics": [
+        "Playful",
+        "Consumer-tech flashy",
+        "Overly corporate",
+        "Decorative",
+        "Chaotic",
+        "Trend-driven"
+      ]
+    },
+    "primary_interface_goals": [
+      {
+        "goal": "Communicate Value Quickly",
+        "description": "Users should understand SIPANEL's engineering value within the first few seconds."
+      },
+      {
+        "goal": "Reduce Cognitive Load",
+        "description": "Interfaces should simplify technical understanding and guide decision-making."
+      },
+      {
+        "goal": "Support Technical Trust",
+        "description": "Every interface should reinforce engineering credibility and execution control."
+      },
+      {
+        "goal": "Enable Fast Conversion",
+        "description": "RFQ, consultation, and contact flows should remain frictionless and accessible."
+      }
+    ],
+    "visual_hierarchy_rules": {
+      "rules": [
+        "One primary message per viewport.",
+        "Use typography and spacing before color for hierarchy.",
+        "Reserve orange for actions and important emphasis.",
+        "Maintain strong visual rhythm between sections.",
+        "Avoid competing focal points."
+      ],
+      "content_priority_order": [
+        "Primary headline",
+        "Supporting explanation",
+        "Proof or metrics",
+        "Primary CTA",
+        "Secondary details"
+      ]
+    },
+    "layout_principles": {
+      "rules": [
+        "Use structured grid alignment.",
+        "Maintain generous whitespace.",
+        "Keep layouts modular and scalable.",
+        "Avoid visual clutter.",
+        "Prioritize readability over density."
+      ],
+      "responsive_behavior": [
+        "Design mobile-first.",
+        "Simplify layouts progressively on smaller screens.",
+        "Preserve CTA visibility across devices."
+      ]
+    },
+    "interaction_principles": {
+      "rules": [
+        "Interactions must feel predictable and responsive.",
+        "Use subtle feedback for actions.",
+        "Avoid hidden interactions.",
+        "Reduce unnecessary clicks or taps.",
+        "Support touch and keyboard navigation equally."
+      ],
+      "feedback_behavior": [
+        "Immediate interaction response",
+        "Visible hover and focus states",
+        "Clear loading indicators",
+        "Action confirmation when needed"
+      ]
+    },
+    "technical_content_principles": {
+      "rules": [
+        "Explain engineering concepts visually when possible.",
+        "Use progressive disclosure for complex information.",
+        "Break technical content into readable sections.",
+        "Support diagrams with concise annotations.",
+        "Avoid exposing dense technical data all at once."
+      ],
+      "preferred_patterns": [
+        "Accordion systems",
+        "Technical callouts",
+        "Layered detail reveal",
+        "Diagram previews",
+        "Structured comparison tables"
+      ]
+    },
+    "conversion_principles": {
+      "rules": [
+        "CTAs should remain visible and contextually relevant.",
+        "Reduce form complexity.",
+        "Present proof before asking for action.",
+        "Use engineering value as conversion driver.",
+        "Support WhatsApp and direct contact access."
+      ],
+      "preferred_cta_flow": [
+        "Problem awareness",
+        "Engineering explanation",
+        "Proof and trust",
+        "Low-friction CTA"
+      ]
+    },
+    "card_and_component_behavior": {
+      "rules": [
+        "Components must remain visually consistent.",
+        "Use modular reusable patterns.",
+        "Avoid unnecessary variation.",
+        "Maintain scalable spacing and hierarchy.",
+        "Support dark and light surfaces consistently."
+      ]
+    },
+    "navigation_principles": {
+      "rules": [
+        "Navigation should remain simple and predictable.",
+        "Expose primary services early.",
+        "Avoid deep menu nesting.",
+        "Preserve mobile accessibility.",
+        "Support multilingual navigation cleanly."
+      ]
+    },
+    "performance_principles": {
+      "rules": [
+        "Performance is part of the interface experience.",
+        "Prioritize fast rendering and interaction.",
+        "Avoid heavy visual effects.",
+        "Optimize media delivery.",
+        "Preserve responsiveness under load."
+      ]
+    },
+    "accessibility_principles": {
+      "rules": [
+        "Interfaces must meet WCAG AA standards.",
+        "Preserve readability and contrast.",
+        "Support keyboard navigation.",
+        "Use semantic structure.",
+        "Avoid motion dependency."
+      ]
+    },
+    "motion_principles": {
+      "rules": [
+        "Motion should support usability.",
+        "Avoid decorative animation.",
+        "Use subtle transitions only.",
+        "Respect reduced-motion preferences.",
+        "Preserve engineering clarity."
+      ]
+    },
+    "multilingual_principles": {
+      "rules": [
+        "Support LTR and RTL equally.",
+        "Preserve layout consistency across languages.",
+        "Allow flexible text expansion.",
+        "Maintain technical terminology accuracy."
+      ]
+    },
+    "industrial_ux_principles": {
+      "rules": [
+        "Design for users in industrial and outdoor environments.",
+        "Prioritize mobile readability.",
+        "Support quick access during project execution.",
+        "Keep technical workflows simple and fast."
+      ]
+    },
+    "forbidden_interface_patterns": [
+      "Overly decorative UI",
+      "Dense information walls",
+      "Complex hidden navigation",
+      "Heavy animations",
+      "Unclear CTA hierarchy",
+      "Inconsistent spacing",
+      "Consumer-tech visual gimmicks",
+      "Overloaded dashboards"
+    ],
+    "approved_interface_characteristics": [
+      "Structured",
+      "Minimal",
+      "Technical",
+      "Scalable",
+      "Readable",
+      "Industrial",
+      "Conversion-focused"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Design philosophy",
+        "Primary interface goals",
+        "Hierarchy principles",
+        "Interaction principles",
+        "Technical content handling",
+        "Conversion design principles",
+        "Correct vs incorrect interface examples"
+      ],
+      "visual_direction": [
+        "Grid-aligned layouts",
+        "Hierarchy diagrams",
+        "UI flow examples",
+        "Component behavior previews",
+        "Responsive comparison layouts"
+      ]
+    },
+    "implementation_notes": [
+      "All SIPANEL interfaces must follow these principles before visual styling decisions are made.",
+      "The interface system should reinforce engineering trust and execution clarity at every interaction point.",
+      "Every UI decision should support usability, technical understanding, and scalable implementation."
+    ]
+  }

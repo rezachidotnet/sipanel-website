@@ -1,0 +1,192 @@
+{
+    "responsive_layout_rules": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "breakpoints": {
+        "small_mobile": "320px-480px",
+        "standard_mobile": "481px-767px",
+        "tablet": "768px-1024px",
+        "desktop": "1025px+"
+      },
+  
+      "global_rules": {
+        "mobile_first": true,
+        "mobile_layout": "single_column",
+        "tablet_layout": "adaptive_2_column",
+        "desktop_layout": "12_column_grid",
+        "container_max_width": "1200px",
+        "mobile_padding": "20px",
+        "tablet_padding": "32px",
+        "desktop_padding": "40px"
+      },
+  
+      "component_layouts": {
+        "header": {
+          "mobile": "logo_left_menu_icon_right",
+          "tablet": "logo_left_collapsed_menu_cta_right",
+          "language_switcher": {
+            "mobile": {
+              "placement": "inside_mobile_menu_top",
+              "layout": "full_width_dropdown",
+              "item_height": "48px",
+              "full_width": true
+            },
+            "tablet": {
+              "placement": "right_of_navigation",
+              "layout": "inline_tabs"
+            },
+            "desktop": {
+              "placement": "right_side_header",
+              "layout": "horizontal_inline"
+            },
+            "rtl_behavior": {
+              "mirror_alignment": true,
+              "move_to_left_in_rtl": true
+            }
+          }
+,        
+          "desktop": "logo_left_menu_center_cta_right"
+        },
+  
+        "hero_section": {
+          "mobile": {
+            "layout": "stacked",
+            "order": ["headline", "subheadline", "cta_group", "trust_items", "visual"],
+            "hero_height": "auto",
+            "cta_above_fold": true
+          },
+          "tablet": {
+            "layout": "stacked_or_split",
+            "visual_position": "below_or_right"
+          },
+          "desktop": {
+            "layout": "split_55_45",
+            "text_position": "left",
+            "visual_position": "right"
+          }
+        },
+  
+        "trust_bar": {
+          "mobile": "horizontal_scroll_metrics",
+          "tablet": "2x2_grid",
+          "desktop": "horizontal_strip"
+        },
+  
+        "proof_snapshot": {
+          "mobile": "accordion_cards",
+          "tablet": "2_column_cards",
+          "desktop": "3_card_grid"
+        },
+  
+        "comparison_section": {
+          "mobile": "stacked_comparison_cards",
+          "tablet": "two_column_comparison",
+          "desktop": "two_column_table"
+        },
+  
+        "services_cards": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "4_card_grid"
+        },
+  
+        "projects_case_studies": {
+          "mobile": {
+            "layout": "horizontal_swipe_cards",
+            "visible_cards": 1,
+            "card_peek": true,
+            "snap_scroll": true
+          },
+          "tablet": {
+            "layout": "2_column_grid"
+          },
+          "desktop": {
+            "layout": "case_study_grid_or_slider",
+            "visible_cards": 3
+          }
+        },
+  
+        "process_section": {
+          "mobile": "vertical_accordion_steps",
+          "tablet": "vertical_timeline",
+          "desktop": "horizontal_steps"
+        },
+  
+        "resources_section": {
+          "mobile": "expandable_resource_cards",
+          "tablet": "2_column_grid",
+          "desktop": "4_card_grid"
+        },
+  
+        "rfq_form": {
+          "mobile": "step_based_form",
+          "tablet": "compact_form_card",
+          "desktop": "short_form_inline_or_card"
+        },
+  
+        "technical_diagram_viewer": {
+          "mobile": "preview_then_fullscreen",
+          "tablet": "preview_modal",
+          "desktop": "inline_preview_with_modal"
+        },
+  
+        "footer": {
+          "mobile": "stacked_footer",
+          "tablet": "2_column_footer",
+          "desktop": "multi_column_footer"
+        }
+      },
+  
+      "mobile_rules": {
+        "headline_max_lines": 3,
+        "paragraph_max_lines": 4,
+        "max_visible_cards_before_interaction": 3,
+        "minimum_touch_target": "48px",
+        "preferred_touch_target": "56px",
+        "cta_every_scroll_sections": "2-3",
+        "avoid_side_by_side_below": "768px",
+        "avoid_hover_only_interactions": true
+      },
+  
+      "tablet_rules": {
+        "allow_2_column_layouts": true,
+        "avoid_dense_3_column_content": true,
+        "keep_cta_visible_after_major_sections": true
+      },
+  
+      "desktop_rules": {
+        "use_12_column_grid": true,
+        "max_content_width": "1200px",
+        "preserve_large_visual_hierarchy": true
+      },
+  
+      "image_responsiveness": {
+        "mobile": {
+          "preferred_width": "480px",
+          "format": "webp_or_avif",
+          "lazy_load_below_fold": true
+        },
+        "tablet": {
+          "preferred_width": "900px",
+          "format": "webp_or_avif"
+        },
+        
+        "desktop": {
+          "preferred_width": "1600px",
+          "format": "webp_or_avif"
+        }
+      },
+  
+      "failure_prevention": {
+        "prevent": [
+          "desktop_grid_on_mobile",
+          "tiny_diagram_text",
+          "cta_below_first_mobile_scroll",
+          "large_uncompressed_images",
+          "multi_column_mobile_sections",
+          "hover_only_controls"
+        ]
+      }
+    }
+  }

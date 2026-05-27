@@ -1,0 +1,463 @@
+{
+  "page": {
+    "number": 36,
+    "title": "Desktop Experience Showcase",
+    "section": "Experience Showcases",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Show how the SIPANEL desktop experience applies industrial envelope branding, engineering storytelling, technical proof systems, consultant-grade UX, conversion architecture, and scalable UI systems across large-screen layouts.",
+  "showcase_philosophy": {
+    "statement": "The SIPANEL desktop experience should feel structured, technical, premium, architecturally credible, and authoritative while giving users deep access to engineering proof, façade systems, technical diagrams, case studies, and consultation pathways.",
+    "core_principles": [
+      "Strong visual hierarchy",
+      "Engineering-first layout",
+      "Large-scale proof visibility",
+      "Clear conversion paths",
+      "Structured technical storytelling",
+      "Grid-based precision",
+      "Consultant-grade presentation",
+      "Envelope-system clarity",
+      "Architectural credibility",
+      "Technical inspection readiness"
+    ]
+  },
+  "desktop_experience_goals": [
+    {
+      "goal": "Build Engineering Authority",
+      "description": "Use large layouts, façade visuals, technical diagrams, and structured proof sections to communicate industrial envelope expertise."
+    },
+    {
+      "goal": "Support Deep Technical Review",
+      "description": "Allow consultants, architects, contractors, and industrial decision-makers to inspect diagrams, case studies, façade systems, roofing systems, and technical details."
+    },
+    {
+      "goal": "Increase Qualified Conversion",
+      "description": "Guide users toward engineering review, RFQ submission, façade consultation, ZIP roofing evaluation, and technical resource downloads."
+    },
+    {
+      "goal": "Position SIPANEL as an Industrial Envelope Engineering Platform",
+      "description": "Ensure desktop experience reflects a multi-system industrial envelope engineering company rather than a contractor-style service website."
+    }
+  ],
+  "desktop_layout_system": {
+    "grid": {
+      "type": "12-column grid",
+      "container_max_width": "1440px",
+      "content_max_width": "1280px",
+      "gutter": "24px",
+      "rules": [
+        "Use strong alignment across all sections.",
+        "Preserve consistent vertical rhythm.",
+        "Avoid random spacing and uneven layout blocks.",
+        "Support technical comparison layouts.",
+        "Allow wide engineering visuals.",
+        "Use modular consultant-grade spacing systems."
+      ]
+    },
+    "section_spacing": {
+      "default": "96px",
+      "large_visual_sections": "140px",
+      "compact_sections": "64px",
+      "technical_sections": "120px"
+    }
+  },
+  "desktop_homepage_flow": {
+    "section_1": {
+      "name": "Desktop Hero",
+      "layout": "split_55_45",
+      "required_elements": [
+        "Engineering-focused H1",
+        "Clear subheadline",
+        "Primary CTA",
+        "Secondary CTA",
+        "Trust microcopy",
+        "Industrial or technical hero visual",
+        "Envelope engineering positioning",
+        "Multi-system industrial messaging"
+      ],
+      "rules": [
+        "Text left, visual right.",
+        "Primary CTA visible above fold.",
+        "Hero visual must support engineering proof.",
+        "Avoid roof-only positioning.",
+        "Support sandwich panels, cladding, and ZIP systems equally."
+      ],
+      "recommended_headline_examples": [
+        "Industrial Envelope Engineering Systems",
+        "Sandwich Panels, ACP Cladding & ZIP Roofing Solutions",
+        "Engineering-Led Industrial Envelope Coordination"
+      ]
+    },
+    "section_2": {
+      "name": "Trust & Metrics Strip",
+      "layout": "horizontal_metric_strip",
+      "required_elements": [
+        "Verified project metrics",
+        "Industrial experience",
+        "Executed area",
+        "Client or certificate proof",
+        "Envelope-system diversity"
+      ],
+      "approved_metrics": [
+        "Industrial envelope area",
+        "ACP façade coverage",
+        "Standing seam roofing projects",
+        "Mixed-system coordination projects",
+        "Thermal optimization improvements"
+      ]
+    },
+    "section_3": {
+      "name": "Engineering Proof Snapshot",
+      "layout": "3_card_grid",
+      "required_elements": [
+        "Shop drawing preview",
+        "Waterproofing logic",
+        "Material optimization",
+        "ACP façade section",
+        "Standing seam detail",
+        "Envelope transition detail"
+      ],
+      "rules": [
+        "Support technical interaction.",
+        "Use engineering annotations carefully.",
+        "Allow modal expansion for detailed review."
+      ]
+    },
+    "section_4": {
+      "name": "Problem vs SIPANEL System",
+      "layout": "two_column_comparison",
+      "required_elements": [
+        "Typical project risks",
+        "SIPANEL engineering control",
+        "Risk-reduction explanation",
+        "Envelope-system coordination logic",
+        "Thermal movement strategy"
+      ],
+      "comparison_categories": [
+        "Roof leakage risk",
+        "Façade alignment issues",
+        "Standing seam expansion movement",
+        "Thermal bridge exposure",
+        "Envelope transition failures",
+        "Rainscreen ventilation issues"
+      ]
+    },
+    "section_5": {
+      "name": "Technical Diagram Section",
+      "layout": "split_visual_explanation",
+      "required_elements": [
+        "Large technical visual",
+        "Annotation callouts",
+        "Short explanation",
+        "Fullscreen viewer action",
+        "System-category selector"
+      ],
+      "approved_visuals": [
+        "ACP façade sections",
+        "Standing seam roof details",
+        "Envelope transition diagrams",
+        "Thermal bridge visuals",
+        "Substructure coordination diagrams",
+        "Rainscreen airflow systems"
+      ]
+    },
+    "section_6": {
+      "name": "Case Study Grid",
+      "layout": "3_card_case_study_grid",
+      "required_elements": [
+        "Project image",
+        "Project name",
+        "Location",
+        "Area",
+        "Challenge",
+        "Measured result",
+        "CTA",
+        "System category"
+      ],
+      "rules": [
+        "Balance façade, roofing, and mixed-envelope projects.",
+        "Support technical storytelling.",
+        "Use measurable engineering outcomes."
+      ]
+    },
+    "section_7": {
+      "name": "Process Workflow",
+      "layout": "horizontal_steps",
+      "required_elements": [
+        "Project analysis",
+        "Engineering design",
+        "Procurement control",
+        "Installation",
+        "Testing and delivery",
+        "Envelope coordination review",
+        "Thermal movement analysis",
+        "Façade detailing validation"
+      ]
+    },
+    "section_8": {
+      "name": "Resource Center Preview",
+      "layout": "4_card_resource_grid",
+      "required_elements": [
+        "Technical guides",
+        "Checklist previews",
+        "Download CTAs",
+        "Engineering resource categories",
+        "Specification resources",
+        "CAD and PDF references"
+      ],
+      "resource_categories": [
+        "Sandwich panel systems",
+        "ACP cladding systems",
+        "Standing seam roofing",
+        "Envelope engineering",
+        "Thermal bridge mitigation",
+        "Façade coordination"
+      ]
+    },
+    "section_9": {
+      "name": "Final RFQ Conversion Block",
+      "layout": "split_form_and_trust",
+      "required_elements": [
+        "Engineering review message",
+        "Short RFQ form",
+        "Phone and WhatsApp options",
+        "Trust reinforcement",
+        "System-category selector",
+        "Consultation type selection"
+      ],
+      "conversion_options": [
+        "Engineering consultation",
+        "Envelope review",
+        "Cladding consultation",
+        "ZIP roofing evaluation",
+        "Technical coordination request"
+      ]
+    }
+  },
+  "desktop_visual_hierarchy_rules": {
+    "rules": [
+      "Use large headlines for strategic messages.",
+      "Use section spacing to create premium rhythm.",
+      "Use orange only for CTAs and critical technical emphasis.",
+      "Place proof sections before long explanations.",
+      "Keep technical visuals dominant where proof is required.",
+      "Use calm consultant-grade layouts.",
+      "Avoid excessive decorative effects.",
+      "Use architectural visual rhythm."
+    ]
+  },
+  "technical_visual_behavior": {
+    "rules": [
+      "Desktop may show larger inline diagrams.",
+      "Dense diagrams should still support modal expansion.",
+      "Annotations must remain readable.",
+      "Avoid decorative technical graphics.",
+      "Use real engineering visuals where possible.",
+      "Support consultant-level technical inspection.",
+      "Allow layered engineering detail exploration."
+    ],
+    "approved_visuals": [
+      "Shop drawing previews",
+      "Drainage diagrams",
+      "Waterproofing detail visuals",
+      "BOM / MTO samples",
+      "Installation sequence imagery",
+      "ACP façade sections",
+      "Standing seam roof details",
+      "Envelope transition diagrams",
+      "Substructure coordination visuals",
+      "Thermal bridge diagrams",
+      "Façade attachment systems"
+    ]
+  },
+  "desktop_conversion_architecture": {
+    "primary_conversion": "Get Free Engineering Review",
+    "secondary_conversions": [
+      "Request Project Cost Check",
+      "Download Engineering Resource",
+      "View Technical Proof",
+      "Explore Proven Projects",
+      "Discuss Cladding System",
+      "Review ZIP Roofing Solution",
+      "Request Envelope Consultation"
+    ],
+    "rules": [
+      "CTA must appear in hero, proof sections, case studies, resources, and final block.",
+      "Do not overload sections with competing CTAs.",
+      "Use context-specific CTA language.",
+      "Support every CTA with proof or technical value.",
+      "Support low-friction technical consultation pathways."
+    ]
+  },
+  "desktop_interaction_patterns": {
+    "approved_patterns": [
+      "Hover state feedback",
+      "Card expansion",
+      "Diagram modal viewer",
+      "Resource filtering",
+      "Case study detail modal",
+      "Smooth section navigation",
+      "Technical comparison tabs",
+      "System-category filters",
+      "Expandable engineering references"
+    ],
+    "rules": [
+      "Interactions should remain subtle.",
+      "Avoid heavy motion.",
+      "Preserve keyboard accessibility.",
+      "Do not rely only on hover for important content.",
+      "Use restrained premium animation.",
+      "Support engineering inspection workflows."
+    ]
+  },
+  "desktop_content_rules": {
+    "rules": [
+      "Use concise sections with strong headings.",
+      "Allow more technical depth than mobile.",
+      "Use diagrams and tables to support engineering explanations.",
+      "Break long content into modular blocks.",
+      "Maintain clear reading flow.",
+      "Use consultant-grade formatting.",
+      "Separate façade and roofing content clearly when necessary."
+    ]
+  },
+  "desktop_comparison_systems": {
+    "supported_comparisons": [
+      "PU vs PIR vs Rockwool",
+      "ACP vs traditional cladding",
+      "Standing seam vs exposed fastener roofing",
+      "Envelope-system performance comparisons",
+      "Thermal performance comparisons",
+      "Drainage and waterproofing comparisons"
+    ],
+    "rules": [
+      "Use engineering criteria only.",
+      "Avoid exaggerated marketing claims.",
+      "Support comparisons with technical proof.",
+      "Use readable specification-style tables."
+    ]
+  },
+  "desktop_accessibility_rules": {
+    "requirements": [
+      "Keyboard-accessible navigation",
+      "Visible focus states",
+      "WCAG AA contrast",
+      "Semantic section hierarchy",
+      "Accessible modal behavior",
+      "Alt text for all technical visuals",
+      "Accessible technical comparison tables",
+      "Readable engineering terminology"
+    ]
+  },
+  "rtl_and_multilingual_desktop_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror split layouts correctly.",
+      "Flip directional icons.",
+      "Allow text expansion without layout breaking.",
+      "Preserve grid rhythm across languages.",
+      "Maintain technical terminology accuracy.",
+      "Support façade and standing seam terminology consistency."
+    ]
+  },
+  "desktop_performance_rules": {
+    "targets": {
+      "lcp": "under 2.5 seconds",
+      "cls": "minimal",
+      "interaction_latency": "under 100ms"
+    },
+    "rules": [
+      "Preload hero imagery.",
+      "Lazy-load below-the-fold visuals.",
+      "Load high-resolution technical diagrams only when needed.",
+      "Avoid heavy background video.",
+      "Optimize all project photography.",
+      "Use progressive diagram loading.",
+      "Optimize fullscreen technical inspection performance."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "desktop_hero_cta_click",
+      "trust_metric_view",
+      "proof_card_interaction",
+      "diagram_expand",
+      "case_study_click",
+      "resource_download_start",
+      "rfq_start",
+      "rfq_submit",
+      "comparison_interaction",
+      "system_category_interaction"
+    ],
+    "tracked_parameters": [
+      "section_id",
+      "component_type",
+      "cta_text",
+      "device_type",
+      "language",
+      "interaction_type",
+      "system_category",
+      "roofing_type",
+      "cladding_type",
+      "envelope_type"
+    ]
+  },
+  "forbidden_desktop_patterns": [
+    "Generic corporate layouts",
+    "Excessive empty decoration",
+    "No visible technical proof",
+    "Overloaded multi-column sections",
+    "Heavy animations",
+    "Stock-photo hero visuals",
+    "Hidden CTA paths",
+    "Unreadable technical diagrams",
+    "Roof-only storytelling",
+    "Contractor-style presentation",
+    "Weak architectural credibility",
+    "Missing façade engineering representation"
+  ],
+  "approved_desktop_characteristics": [
+    "Structured",
+    "Premium",
+    "Technical",
+    "Proof-driven",
+    "Grid-aligned",
+    "Conversion-aware",
+    "Engineering-focused",
+    "Consultant-grade",
+    "Architecturally credible",
+    "Envelope-focused",
+    "Enterprise-ready"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Desktop showcase philosophy",
+      "Desktop homepage flow",
+      "Grid and hierarchy rules",
+      "Technical diagram behavior",
+      "Desktop conversion architecture",
+      "Technical comparison systems",
+      "Interaction examples",
+      "Correct vs incorrect desktop patterns"
+    ],
+    "visual_direction": [
+      "Desktop homepage wireframe",
+      "Hero split-layout example",
+      "Technical proof grid",
+      "Case study grid mockup",
+      "Desktop RFQ section preview",
+      "ACP façade detail showcase",
+      "Standing seam comparison layout",
+      "Envelope transition viewer",
+      "Specification-style comparison tables"
+    ]
+  },
+  "implementation_notes": [
+    "The desktop experience should communicate SIPANEL's industrial envelope engineering authority through structure, proof, technical clarity, and consultant-grade presentation.",
+    "Large-screen layouts must not become visually crowded or overly decorative.",
+    "Desktop should provide deeper technical access while preserving conversion simplicity.",
+    "Every desktop section should support brand trust, technical understanding, or qualified lead generation.",
+    "Desktop architecture must support sandwich panels, aluminum cladding, ZIP roofing systems, façade engineering, and industrial envelope coordination equally."
+  ]
+}

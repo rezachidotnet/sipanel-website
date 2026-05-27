@@ -1,0 +1,50 @@
+{
+              "project_name": "Shahr Babak Wrestling Hall",
+              "slug": "shahre-babak-hall",
+              "location": "Shahr Babak, Kerman, Iran",
+              "category": "Sports & ZIP Panel Structures",
+              "project_type": "Multi-dome wrestling sports complex",
+              "system_type": "ZIP Panel Roofing System",
+              "status": "Completed",
+              "number_of_halls": 3,
+              "structure_geometry": "Dome-shaped roof structures",
+              "area_per_hall": "300 m²",
+              "total_area": "900 m²",
+              "challenge": "Execution of multiple dome-shaped sports halls requiring accurate curved ZIP panel coordination, structural alignment, waterproofing continuity, and visually consistent architectural finishing across all roof structures.",
+              "sipanel_solution": "SIPANEL developed an engineered ZIP panel roofing system optimized for curved dome geometry, waterproofing integration, and multi-structure installation coordination.",
+              "engineering_decision": "Engineering teams prepared coordinated shop drawings, curved ZIP panel layouts, waterproofing details, and installation sequencing strategies to maintain dome symmetry, drainage continuity, and installation precision across all three halls.",
+              "execution_detail": "Installation followed controlled curved-surface execution procedures, alignment checkpoints, fastening verification, and coordinated sealing workflows to ensure accurate dome geometry and long-term weather protection.",
+              "measured_result": "Successful delivery of three structurally coordinated dome-shaped wrestling halls with reliable ZIP panel roof performance, clean architectural integration, and controlled installation quality.",
+              "risk_prevented": [
+                "Curved roof alignment errors",
+                "Water penetration at dome transitions",
+                "ZIP panel deformation",
+                "Structural inconsistency between halls",
+                "Installation sequencing conflicts",
+                "Long-term waterproofing failures"
+              ],
+              "primary_message": "Engineered ZIP panel roofing systems designed for curved sports structures and long-term waterproof performance.",
+              "proof_points": [
+                "Multi-dome ZIP panel coordination",
+                "Curved roof execution precision",
+                "Waterproofing continuity",
+                "Controlled installation sequencing",
+                "Sports facility architectural integration"
+              ],
+              "metrics": {
+                "number_of_halls": 3,
+                "area_per_hall": "300 m²",
+                "total_project_area": "900 m²",
+                "structure_type": "Dome-shaped wrestling halls",
+                "system_type": "ZIP panel roofing system",
+                "execution_focus": "Curved geometry precision and waterproofing control"
+              },
+              "images": {
+                "hero_desktop": "./projects/shahre-babak-hall/shahre-babak-hall-hero-desktop.webp",
+                "hero_mobile": "./projects/shahre-babak-hall/shahre-babak-hall-hero-mobile.webp",
+                "card": "./projects/shahre-babak-hall/shahre-babak-hall-card.webp",
+                "gallery_large": "./projects/shahre-babak-hall/shahre-babak-hall-gallery-large.webp",
+                "installation": "./projects/shahre-babak-hall/shahre-babak-hall-installation.webp",
+                "technical_detail": "./projects/shahre-babak-hall/shahre-babak-hall-technical-detail.webp"
+              }
+            }

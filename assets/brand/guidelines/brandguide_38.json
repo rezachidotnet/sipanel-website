@@ -1,0 +1,376 @@
+{
+  "page": {
+    "number": 38,
+    "title": "Diagram Viewer Showcase",
+    "section": "Experience Showcases",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Show how SIPANEL technical diagrams, façade sections, shop drawings, waterproofing details, drainage visuals, standing seam details, envelope-system transitions, and engineering annotations are displayed, inspected, and interacted with across mobile and desktop experiences.",
+  "viewer_philosophy": {
+    "statement": "The Diagram Viewer should make complex industrial envelope engineering visuals readable, interactive, consultant-grade, and trustworthy without overwhelming the user.",
+    "core_principles": [
+      "Preview before detail",
+      "Fullscreen technical inspection",
+      "Readable annotations",
+      "Mobile zoom support",
+      "Controlled visual hierarchy",
+      "Engineering proof visibility",
+      "Consultant-grade presentation",
+      "Envelope-system clarity",
+      "Progressive technical disclosure",
+      "Technical inspection readiness"
+    ]
+  },
+  "primary_goals": [
+    {
+      "goal": "Demonstrate Engineering Proof",
+      "description": "Show real technical thinking through shop drawings, façade sections, drainage logic, waterproofing systems, standing seam details, and envelope coordination."
+    },
+    {
+      "goal": "Improve Technical Understanding",
+      "description": "Allow users to inspect diagrams progressively instead of exposing dense technical content at once."
+    },
+    {
+      "goal": "Support Consultant & Contractor Review",
+      "description": "Make technical visuals usable for architects, consultants, engineers, contractors, and industrial site teams."
+    },
+    {
+      "goal": "Support Multi-System Envelope Engineering",
+      "description": "Present sandwich panels, ACP cladding, ZIP roofing systems, façade engineering, and thermal movement systems within a unified technical viewer."
+    }
+  ],
+  "viewer_entry_points": [
+    "Proof Snapshot",
+    "Engineering Value Section",
+    "Case Studies",
+    "Resource Center",
+    "SEO Landing Pages",
+    "Technical Articles",
+    "Cladding Service Pages",
+    "ZIP Roofing Pages",
+    "Envelope Engineering Sections"
+  ],
+  "supported_diagram_types": {
+    "shop_drawing_preview": {
+      "purpose": "Show panel layout, cutting plan, drainage routes, flashing details, façade coordination, and BOM/MTO logic.",
+      "priority": "critical"
+    },
+    "waterproofing_detail": {
+      "purpose": "Explain sealing points, overlaps, flashing, foam continuity, leakage prevention, and envelope continuity.",
+      "priority": "critical"
+    },
+    "drainage_diagram": {
+      "purpose": "Show gutter logic, slope direction, downspout routing, and water flow control.",
+      "priority": "critical"
+    },
+    "installation_sequence": {
+      "purpose": "Show step-by-step execution logic and quality-control checkpoints.",
+      "priority": "high"
+    },
+    "bom_mto_sample": {
+      "purpose": "Show material optimization, quantity control, and procurement accuracy.",
+      "priority": "medium"
+    },
+    "acp_facade_section": {
+      "purpose": "Show façade attachment systems, rainscreen buildup, substructure coordination, and ACP panel alignment.",
+      "priority": "critical"
+    },
+    "standing_seam_detail": {
+      "purpose": "Show clip systems, thermal expansion strategy, seam locking, and waterproofing coordination.",
+      "priority": "critical"
+    },
+    "envelope_transition_detail": {
+      "purpose": "Explain roof-to-façade transitions, waterproofing continuity, thermal breaks, and movement control.",
+      "priority": "critical"
+    },
+    "thermal_bridge_diagram": {
+      "purpose": "Visualize insulation continuity, thermal separation, and heat-transfer control.",
+      "priority": "high"
+    },
+    "rainscreen_airflow_diagram": {
+      "purpose": "Show cavity ventilation logic and façade airflow management.",
+      "priority": "medium"
+    }
+  },
+  "viewer_modes": {
+    "preview_mode": {
+      "purpose": "Provide fast engineering proof without overwhelming users.",
+      "visible_elements": [
+        "Diagram title",
+        "Cropped technical preview",
+        "1-line engineering summary",
+        "Maximum 3 annotations",
+        "Tap to inspect detail label",
+        "System category label"
+      ],
+      "rules": [
+        "Never show full complex CAD content in preview.",
+        "Use cropped focus areas.",
+        "Show one technical message per preview.",
+        "Keep annotation labels short.",
+        "Prioritize façade and transition readability.",
+        "Use envelope-system categorization."
+      ]
+    },
+    "fullscreen_mode": {
+      "purpose": "Allow consultant-grade technical inspection.",
+      "visible_elements": [
+        "Full diagram",
+        "Zoom controls",
+        "Pan interaction",
+        "Annotation details",
+        "Close button",
+        "Reset zoom action",
+        "Diagram metadata",
+        "Layer visibility controls"
+      ],
+      "rules": [
+        "Support pinch-to-zoom.",
+        "Support drag-to-pan.",
+        "Keep close button visible.",
+        "Preserve scroll position after closing.",
+        "Do not obstruct critical diagram details.",
+        "Support high-resolution façade details.",
+        "Allow layered engineering review."
+      ]
+    }
+  },
+  "mobile_viewer_behavior": {
+    "rules": [
+      "Open diagrams in fullscreen modal.",
+      "Enable pinch-to-zoom and drag-to-pan.",
+      "Use high-resolution asset only after interaction.",
+      "Keep close button thumb-accessible.",
+      "Avoid tiny labels in preview mode.",
+      "Use mobile-safe overlay controls.",
+      "Prioritize façade and standing seam readability.",
+      "Support fast engineering inspection in field conditions."
+    ],
+    "interaction_controls": [
+      "Tap to open",
+      "Pinch to zoom",
+      "Drag to pan",
+      "Double-tap to reset",
+      "Close",
+      "Toggle annotations"
+    ]
+  },
+  "desktop_viewer_behavior": {
+    "rules": [
+      "Allow inline preview with modal expansion.",
+      "Support large technical viewer layout.",
+      "Use side annotation panel when useful.",
+      "Support keyboard close with Escape.",
+      "Allow zoom controls and pan where needed.",
+      "Support consultant-level technical inspection.",
+      "Allow multi-layer engineering viewing.",
+      "Enable side-by-side detail comparison."
+    ]
+  },
+  "annotation_system": {
+    "annotation_types": [
+      "Risk marker",
+      "Water flow arrow",
+      "Sealing point",
+      "Overlap detail",
+      "Material optimization note",
+      "Execution checkpoint",
+      "Thermal movement indicator",
+      "Expansion joint note",
+      "Façade attachment marker",
+      "Thermal break indicator",
+      "Rainscreen airflow path"
+    ],
+    "rules": [
+      "Use orange only for critical engineering emphasis.",
+      "Limit preview annotations to 3.",
+      "Reveal additional details in fullscreen mode.",
+      "Each annotation must explain risk reduction or performance value.",
+      "Avoid annotation clutter.",
+      "Use engineering terminology consistently.",
+      "Support façade and roofing coordination explanation."
+    ],
+    "label_rules": {
+      "max_words": 6,
+      "font_size_mobile": "12px-14px",
+      "font_size_desktop": "14px-16px",
+      "font_weight": 600
+    }
+  },
+  "visual_style_rules": {
+    "colors": {
+      "primary_line": "#0F1113",
+      "secondary_line": "#68686B",
+      "highlight": "#FF6A00",
+      "background_light": "#F5F6F7",
+      "background_dark": "#050607"
+    },
+    "rules": [
+      "Keep diagrams visually clean.",
+      "Avoid decorative effects.",
+      "Preserve strong line contrast.",
+      "Use SVG or high-resolution WebP/AVIF where possible.",
+      "Avoid heavy PDF embeds on mobile.",
+      "Maintain consultant-grade technical clarity.",
+      "Use restrained industrial visual styling."
+    ]
+  },
+  "technical_inspection_features": {
+    "supported_features": [
+      "Layer visibility toggle",
+      "Annotation visibility toggle",
+      "Fullscreen inspection",
+      "Zoom level persistence",
+      "Side annotation panel",
+      "Detail comparison mode",
+      "Measurement visibility",
+      "System-category filter"
+    ],
+    "rules": [
+      "Do not overload interface controls.",
+      "Keep technical interaction intuitive.",
+      "Support both quick review and deep inspection.",
+      "Preserve performance during technical interaction."
+    ]
+  },
+  "performance_rules": {
+    "loading_sequence": [
+      "Placeholder",
+      "Low-resolution preview",
+      "Interaction-ready preview",
+      "High-resolution fullscreen asset"
+    ],
+    "rules": [
+      "Lazy-load below-the-fold diagrams.",
+      "Load high-resolution assets only on interaction.",
+      "Prevent layout shift.",
+      "Compress previews aggressively.",
+      "Avoid loading multiple high-resolution diagrams at once.",
+      "Optimize façade and standing seam detail rendering.",
+      "Use progressive diagram loading."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "Provide diagram title.",
+      "Provide accessible text summary.",
+      "Close button must have aria-label.",
+      "Fullscreen modal must trap focus.",
+      "Keyboard close support required.",
+      "Do not rely on color alone for technical meaning.",
+      "Accessible annotation reading order.",
+      "Readable engineering terminology."
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror directional annotations only when technical meaning requires it.",
+      "Keep measurement units consistent.",
+      "Allow translated annotation labels to expand.",
+      "Maintain diagram readability across languages.",
+      "Preserve façade and roofing terminology consistency.",
+      "Support multilingual technical notation."
+    ]
+  },
+  "conversion_integration": {
+    "contextual_ctas": [
+      "Request Technical Review",
+      "Talk to Engineering Team",
+      "Download Technical Package",
+      "Discuss Your Project",
+      "Request Envelope Consultation",
+      "Review Cladding Detail",
+      "Discuss ZIP Roofing System"
+    ],
+    "rules": [
+      "Place CTA after diagram interaction, not over the diagram.",
+      "Use technical-interest-based CTA copy.",
+      "Avoid blocking fullscreen inspection.",
+      "Support consultant-style technical inquiry.",
+      "Use low-friction engineering consultation pathways."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "diagram_preview_view",
+      "diagram_open",
+      "diagram_zoom",
+      "diagram_pan",
+      "annotation_tap",
+      "diagram_close",
+      "diagram_cta_click",
+      "layer_toggle",
+      "annotation_toggle",
+      "system_category_interaction"
+    ],
+    "tracked_parameters": [
+      "diagram_type",
+      "diagram_id",
+      "section_id",
+      "zoom_level",
+      "device_type",
+      "language",
+      "system_category",
+      "roofing_type",
+      "cladding_type",
+      "viewer_mode"
+    ]
+  },
+  "forbidden_patterns": [
+    "Unreadable CAD screenshots",
+    "Full complex diagram shown in small preview",
+    "No zoom support on mobile",
+    "CTA blocking diagram details",
+    "Too many annotations in preview",
+    "Low-resolution technical visuals",
+    "Heavy PDF embeds on mobile",
+    "Close button hidden or too small",
+    "Roof-only diagram representation",
+    "Decorative engineering styling",
+    "Contractor-style visual presentation"
+  ],
+  "approved_characteristics": [
+    "Readable",
+    "Technical",
+    "Interactive",
+    "Zoomable",
+    "Proof-driven",
+    "Mobile-friendly",
+    "Engineering-focused",
+    "Consultant-grade",
+    "Envelope-focused",
+    "Architecturally credible"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Diagram viewer philosophy",
+      "Supported diagram types",
+      "Preview mode showcase",
+      "Fullscreen mode showcase",
+      "Annotation system examples",
+      "Technical inspection features",
+      "Mobile and desktop viewer behavior",
+      "Correct vs incorrect diagram viewer examples"
+    ],
+    "visual_direction": [
+      "Mobile fullscreen viewer mockup",
+      "Desktop expanded diagram layout",
+      "Annotation callout examples",
+      "Zoom interaction diagram",
+      "Preview-to-fullscreen flow",
+      "ACP façade detail viewer",
+      "Standing seam detail inspection",
+      "Envelope transition viewer",
+      "Layer visibility interaction"
+    ]
+  },
+  "implementation_notes": [
+    "The Diagram Viewer is a core SIPANEL proof and trust mechanism.",
+    "Mobile fullscreen zoom support is mandatory.",
+    "Technical clarity should always be prioritized over decorative presentation.",
+    "Diagram interactions should connect to analytics and contextual conversion logic.",
+    "Viewer architecture must support sandwich panels, ACP cladding, ZIP roofing systems, façade engineering, and industrial envelope coordination equally."
+  ]
+}

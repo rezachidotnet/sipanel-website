@@ -1,0 +1,239 @@
+{
+    "design_tokens": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "colors": {
+        "orange": {
+          "primary": "#FF6A00",
+          "hover": "#E85F00",
+          "soft": "rgba(255,106,0,0.12)"
+        },
+        "black": {
+          "primary": "#0F1113",
+          "deep": "#050607",
+          "secondary": "#1A1D21"
+        },
+        "gray": {
+          "dark": "#555555",
+          "medium": "#68686B",
+          "light": "#E5E7EB",
+          "background": "#F5F6F7"
+        },
+        "white": "#FFFFFF",
+        "text": {
+          "primary": "#111111",
+          "secondary": "#555555",
+          "inverse": "#FFFFFF",
+          "muted": "#8A8A8A"
+        }
+      },
+  
+      "locale_typography": {
+        "fa": {
+          "recommended_fonts": ["Vazirmatn", "IRANSansX"]
+        },
+        "ar": {
+          "recommended_fonts": ["Cairo", "IBM Plex Sans Arabic"]
+        },
+        "ru": {
+          "recommended_fonts": ["Inter", "Montserrat"]
+        }
+      },
+      "typography": {
+        "font_families": {
+          "primary": ["Inter", "Sora", "Montserrat", "Arial", "sans-serif"],
+          "body": ["Inter", "Roboto", "Arial", "sans-serif"]
+        },
+        "desktop": {
+          "h1": {
+            "size": "48px",
+            "line_height": "1.05",
+            "weight": "800",
+            "letter_spacing": "-0.02em"
+          },
+          "h2": {
+            "size": "36px",
+            "line_height": "1.15",
+            "weight": "750"
+          },
+          "h3": {
+            "size": "24px",
+            "line_height": "1.25",
+            "weight": "700"
+          },
+          "body": {
+            "size": "16px",
+            "line_height": "1.6",
+            "weight": "400"
+          }
+        },
+        "mobile": {
+          "h1": {
+            "size": "32px",
+            "line_height": "1.08",
+            "weight": "800",
+            "max_lines": 3
+          },
+          "h2": {
+            "size": "26px",
+            "line_height": "1.15",
+            "weight": "750"
+          },
+          "h3": {
+            "size": "20px",
+            "line_height": "1.25",
+            "weight": "700"
+          },
+          "body": {
+            "size": "15px",
+            "line_height": "1.55",
+            "max_paragraph_lines": 4
+          }
+        }
+      },
+
+      "locale_formatting": {
+        "en": {
+          "number_format": "1,234.56",
+          "direction": "ltr"
+        },
+        "fa": {
+          "number_format": "1,234.56",
+          "direction": "rtl",
+          "digits": "persian_optional"
+        },
+        "ar": {
+          "number_format": "1,234.56",
+          "direction": "rtl",
+          "digits": "arabic_optional"
+        },
+        "ru": {
+          "number_format": "1 234,56",
+          "direction": "ltr"
+        }
+      },
+  
+      "spacing": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "40px",
+        "xxl": "64px",
+        "section_desktop": "96px",
+        "section_mobile": "56px",
+        "mobile_page_padding": "20px",
+        "desktop_container_max": "1200px"
+      },
+  
+      "radius": {
+        "sm": "4px",
+        "md": "6px",
+        "lg": "8px",
+        "xl": "12px",
+        "card": "8px",
+        "button": "6px"
+      },
+  
+      "shadows": {
+        "none": "none",
+        "subtle": "0 4px 16px rgba(0,0,0,0.06)",
+        "card": "0 8px 24px rgba(0,0,0,0.08)",
+        "modal": "0 24px 80px rgba(0,0,0,0.35)"
+      },
+  
+      "borders": {
+        "default": "1px solid #E5E7EB",
+        "orange": "1px solid #FF6A00",
+        "dark": "1px solid rgba(255,255,255,0.14)"
+      },
+  
+      "buttons": {
+        "primary": {
+          "background": "#FF6A00",
+          "color": "#FFFFFF",
+          "height_mobile": "48px",
+          "height_desktop": "46px",
+          "padding": "12px 24px",
+          "radius": "6px"
+        },
+        "secondary": {
+          "background": "transparent",
+          "color": "#111111",
+          "border": "1px solid #111111",
+          "height_mobile": "48px",
+          "height_desktop": "46px"
+        }
+      },
+      "language_switcher": {
+        "background": {
+          "default": "transparent",
+          "dropdown": "#0F1113"
+        },
+        "text": {
+          "default": "#68686B",
+          "active": "#FF6A00",
+          "hover": "#E85F00",
+          "inverse": "#FFFFFF"
+        },
+        "border": {
+          "default": "1px solid rgba(255,255,255,0.14)",
+          "active": "1px solid #FF6A00"
+        },
+        "radius": {
+          "button": "6px",
+          "dropdown": "8px"
+        },
+        "spacing": {
+          "gap": "8px",
+          "padding_x": "12px",
+          "padding_y": "8px"
+        },
+        "font": {
+          "desktop_size": "14px",
+          "mobile_size": "15px",
+          "weight": "600"
+        },
+        "rtl_support": {
+          "rtl_languages": ["fa", "ar"],
+          "text_align": "right"
+        },
+        "transition": {
+          "duration": "150ms",
+          "easing": "ease-out"
+        }
+      },    
+  
+      "touch_targets": {
+        "minimum": "48px",
+        "preferred": "56px",
+        "spacing_between_targets": "12px"
+      },
+  
+      "motion": {
+        "duration_fast": "150ms",
+        "duration_standard": "240ms",
+        "duration_slow": "350ms",
+        "easing": "ease-out",
+        "reduced_motion_supported": true
+      },
+  
+      "z_index": {
+        "base": 1,
+        "sticky_header": 100,
+        "sticky_mobile_cta": 200,
+        "modal_overlay": 900,
+        "fullscreen_diagram": 1000
+      },
+  
+      "brand_rules": {
+        "orange_usage_limit": "10%",
+        "dark_section_usage_limit": "20%",
+        "light_section_usage_target": "70%",
+        "logo_modification_allowed": false,
+        "use_real_industrial_images": true,
+        "avoid_stock_people_images": true
+      }
+    }
+  }

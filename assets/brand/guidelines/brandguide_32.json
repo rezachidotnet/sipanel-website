@@ -1,0 +1,316 @@
+{
+    "page": {
+      "number": 32,
+      "title": "Case Study Structure",
+      "section": "Content & Conversion System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the structure, storytelling framework, technical proof presentation, and conversion strategy for SIPANEL case studies.",
+    "case_study_philosophy": {
+      "statement": "SIPANEL case studies should demonstrate engineering thinking, execution discipline, and measurable industrial outcomes.",
+      "core_principles": [
+        "Challenge-first storytelling",
+        "Engineering-focused narrative",
+        "Proof-driven communication",
+        "Real execution visibility",
+        "Technical clarity",
+        "Conversion support through credibility"
+      ]
+    },
+    "primary_goals": [
+      {
+        "goal": "Demonstrate Technical Capability",
+        "description": "Show SIPANEL's engineering process, problem-solving, and execution quality."
+      },
+      {
+        "goal": "Build Industrial Trust",
+        "description": "Help clients understand SIPANEL's real-world project performance."
+      },
+      {
+        "goal": "Support Sales Conversion",
+        "description": "Use proof and measurable outcomes to reduce hesitation and increase qualified inquiries."
+      }
+    ],
+    "recommended_case_study_structure": {
+      "section_1": {
+        "title": "Project Overview",
+        "purpose": "Introduce the project quickly and establish industrial context.",
+        "required_content": [
+          "Project name",
+          "Location",
+          "Industry type",
+          "Project size",
+          "Service scope",
+          "Completion status"
+        ]
+      },
+      "section_2": {
+        "title": "Engineering Challenge",
+        "purpose": "Explain the technical risk, operational issue, or execution complexity.",
+        "required_content": [
+          "Project constraints",
+          "Waterproofing risks",
+          "Coordination issues",
+          "Installation complexity",
+          "Material optimization challenges"
+        ]
+      },
+      "section_3": {
+        "title": "Technical Analysis",
+        "purpose": "Demonstrate engineering thinking and evaluation process.",
+        "required_content": [
+          "Engineering review",
+          "System analysis",
+          "Drainage evaluation",
+          "Execution planning",
+          "Technical logic explanation"
+        ]
+      },
+      "section_4": {
+        "title": "SIPANEL Solution",
+        "purpose": "Present the engineered solution and implementation strategy.",
+        "required_content": [
+          "Shop drawing approach",
+          "Panel coordination",
+          "Drainage solution",
+          "Waterproofing system",
+          "Optimization strategy"
+        ]
+      },
+      "section_5": {
+        "title": "Execution Process",
+        "purpose": "Show real project implementation and engineering control.",
+        "required_content": [
+          "Installation process",
+          "Coordination workflow",
+          "Inspection process",
+          "Execution imagery",
+          "Technical supervision"
+        ]
+      },
+      "section_6": {
+        "title": "Measured Outcomes",
+        "purpose": "Present proof-backed engineering results.",
+        "required_content": [
+          "Reduced leakage risk",
+          "Material optimization results",
+          "Installation improvements",
+          "Execution speed",
+          "Technical performance improvements"
+        ]
+      },
+      "section_7": {
+        "title": "Technical Proof Gallery",
+        "purpose": "Visualize engineering quality and execution detail.",
+        "required_content": [
+          "Industrial photography",
+          "Diagram previews",
+          "Shop drawing snapshots",
+          "Waterproofing details",
+          "Execution photos"
+        ]
+      },
+      "section_8": {
+        "title": "Related Engineering CTA",
+        "purpose": "Guide users toward consultation or project evaluation.",
+        "required_content": [
+          "Engineering review CTA",
+          "Technical consultation CTA",
+          "Resource or project exploration"
+        ]
+      }
+    },
+    "storytelling_rules": {
+      "rules": [
+        "Focus on engineering logic instead of marketing storytelling.",
+        "Explain the technical problem before presenting the solution.",
+        "Use measurable outcomes instead of generic claims.",
+        "Keep narrative structured and scannable.",
+        "Avoid emotional exaggeration."
+      ]
+    },
+    "technical_content_rules": {
+      "approved_content": [
+        "Shop drawings",
+        "Drainage systems",
+        "Panel optimization",
+        "Waterproofing logic",
+        "Execution sequencing",
+        "Inspection workflows"
+      ],
+      "rules": [
+        "Technical diagrams must remain readable.",
+        "Explain engineering significance clearly.",
+        "Avoid dense unexplained CAD visuals.",
+        "Use annotations carefully."
+      ]
+    },
+    "proof_and_metrics_rules": {
+      "approved_metrics": [
+        "Project area",
+        "Material savings",
+        "Installation duration",
+        "Waste reduction",
+        "Inspection checkpoints",
+        "Leakage prevention measures"
+      ],
+      "rules": [
+        "All metrics must be verifiable.",
+        "Provide context for every metric.",
+        "Avoid inflated claims.",
+        "Connect metrics to engineering value."
+      ]
+    },
+    "visual_rules": {
+      "preferred_visuals": [
+        "Industrial photography",
+        "Execution process imagery",
+        "Technical diagrams",
+        "Waterproofing details",
+        "Installation snapshots"
+      ],
+      "forbidden_visuals": [
+        "Generic stock photos",
+        "Decorative abstract imagery",
+        "Low-quality site images",
+        "Over-processed photography"
+      ]
+    },
+    "content_formatting_rules": {
+      "rules": [
+        "Use short readable sections.",
+        "Use headings and subheadings.",
+        "Use bullet points for technical detail.",
+        "Break long content into digestible blocks.",
+        "Prioritize mobile readability."
+      ]
+    },
+    "seo_rules": {
+      "requirements": [
+        "Case study must target one clear industrial search intent.",
+        "Use location and project type keywords naturally.",
+        "Include internal links to related systems and resources.",
+        "Use optimized image alt text."
+      ],
+      "recommended_keywords": [
+        "industrial roof waterproofing project",
+        "sandwich panel installation case study",
+        "industrial cold storage panel project",
+        "warehouse panel engineering"
+      ]
+    },
+    "conversion_rules": {
+      "rules": [
+        "Place CTA after proof sections.",
+        "Use engineering-focused CTA language.",
+        "Keep consultation actions visible.",
+        "Support CTA with trust and proof."
+      ],
+      "approved_ctas": [
+        "Get Free Engineering Review",
+        "Request Technical Consultation",
+        "Review Similar Projects",
+        "Download Engineering Resource"
+      ]
+    },
+    "responsive_behavior": {
+      "mobile": [
+        "Use stacked content sections.",
+        "Use swipeable image galleries.",
+        "Collapse technical depth into accordions when needed.",
+        "Prioritize proof visibility."
+      ],
+      "desktop": [
+        "Allow side-by-side layouts.",
+        "Use technical gallery grids.",
+        "Support larger diagram previews."
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "All images require descriptive alt text.",
+        "Maintain WCAG AA contrast.",
+        "Technical diagrams require accessible summaries.",
+        "Case study navigation must be keyboard accessible."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Preserve storytelling structure across languages.",
+        "Allow translated technical terms where appropriate.",
+        "Mirror layouts correctly in RTL.",
+        "Keep metrics and units readable globally."
+      ]
+    },
+    "analytics_tracking": {
+      "required_events": [
+        "case_study_open",
+        "gallery_interaction",
+        "diagram_expand",
+        "technical_resource_click",
+        "case_study_cta_click",
+        "related_project_click"
+      ],
+      "tracked_parameters": [
+        "project_name",
+        "industry_type",
+        "case_study_section",
+        "device_type",
+        "language"
+      ]
+    },
+    "qa_checklist": [
+      "Challenge is clearly explained.",
+      "Technical logic is understandable.",
+      "Metrics are verified.",
+      "Visuals support engineering credibility.",
+      "CTA is contextually relevant.",
+      "Content is readable on mobile.",
+      "SEO structure is implemented.",
+      "Proof supports claims."
+    ],
+    "forbidden_patterns": [
+      "Generic marketing storytelling",
+      "No measurable outcomes",
+      "Unverified claims",
+      "Stock-image-heavy case studies",
+      "Overwhelming technical density",
+      "Weak engineering explanation",
+      "No clear conversion path"
+    ],
+    "approved_characteristics": [
+      "Technical",
+      "Structured",
+      "Proof-driven",
+      "Industrial",
+      "Readable",
+      "Credible",
+      "Execution-focused"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Case study philosophy",
+        "Recommended case study framework",
+        "Engineering storytelling flow",
+        "Proof and metrics examples",
+        "Technical gallery behavior",
+        "Conversion integration",
+        "Correct vs incorrect case study examples"
+      ],
+      "visual_direction": [
+        "Case study wireframes",
+        "Proof section examples",
+        "Technical gallery layouts",
+        "Engineering storytelling diagrams",
+        "Responsive case study layouts"
+      ]
+    },
+    "implementation_notes": [
+      "Case studies are one of SIPANEL's strongest trust and conversion assets.",
+      "Every case study should demonstrate engineering thinking and measurable execution quality.",
+      "Technical clarity and proof are more important than promotional storytelling.",
+      "Case studies should integrate tightly with SEO, conversion flows, and resource systems."
+    ]
+  }

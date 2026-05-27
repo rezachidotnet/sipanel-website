@@ -1,0 +1,45 @@
+{
+              "project_name": "Tiran Gas Station",
+              "slug": "tiran-gas-station",
+              "location": "Isfahan, Iran",
+              "category": "Commercial & Sandwich Panel Structures",
+              "project_type": "Gas station roofing system",
+              "system_type": "Sandwich Panel Roofing System",
+              "status": "Completed",
+              "area": "600 m²",
+              "challenge": "Execution of a fast-track public gas station facility requiring durable sandwich panel roofing, efficient installation sequencing, waterproofing reliability, and clean architectural finishing under accelerated project timelines.",
+              "sipanel_solution": "SIPANEL supplied and coordinated an engineered sandwich panel roofing system optimized for rapid installation, structural integration, waterproof sealing continuity, and long-term weather resistance.",
+              "engineering_decision": "Engineering teams optimized sandwich panel layouts, structural coordination details, fastening strategies, and drainage integration to improve execution speed, installation accuracy, and roof durability.",
+              "execution_detail": "Installation followed controlled sequencing procedures, precise panel alignment checkpoints, fastening verification workflows, and coordinated sealing execution to ensure reliable roof performance and clean finishing quality.",
+              "measured_result": "Successful fast-track completion of a durable sandwich panel roofing system with reliable weather protection, modern architectural appearance, and controlled installation quality.",
+              "risk_prevented": [
+                "Roof leakage",
+                "Installation alignment errors",
+                "Premature material deterioration",
+                "Improper sealing execution",
+                "Drainage inconsistencies",
+                "Long-term maintenance issues"
+              ],
+              "primary_message": "Engineered sandwich panel roofing systems optimized for fast-track public facility execution.",
+              "proof_points": [
+                "Rapid sandwich panel installation",
+                "Controlled roof alignment",
+                "Reliable waterproofing integration",
+                "Fast-track project coordination",
+                "Durable commercial roof performance"
+              ],
+              "metrics": {
+                "project_area": "600 m²",
+                "facility_type": "Gas station",
+                "system_type": "Sandwich panel roofing system",
+                "execution_focus": "Fast installation and long-term weather protection"
+              },
+              "images": {
+                "hero_desktop": "./projects/pomp_tiran/pomp-tiran-hero-desktop.webp",
+                "hero_mobile": "./projects/pomp_tiran/pomp-tiran-hero-mobile.webp",
+                "card": "./projects/pomp_tiran/pomp-tiran-card.webp",
+                "gallery_large": "./projects/pomp_tiran/pomp-tiran-gallery-large.webp",
+                "installation": "./projects/pomp_tiran/pomp-tiran-installation.webp",
+                "technical_detail": "./projects/pomp_tiran/pomp-tiran-technical-detail.webp"
+              }
+            }

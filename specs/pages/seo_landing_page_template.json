@@ -1,0 +1,428 @@
+{
+    "page_group": "seo_landing_pages",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "reusable_seo_landing_page_template",
+    "purpose": "Create scalable SEO landing pages for industrial panel, roofing, cladding, waterproofing, and engineering-control keywords.",
+    "global_rules": {
+      "positioning": "Every SEO page must position SIPANEL as an engineering-first industrial envelope systems company, not a generic supplier.",
+      "tone": "technical, educational, clear, proof-driven, conversion-focused",
+      "visual_style": "technical_clean_industrial",
+      "supported_languages": ["en", "fa", "ar", "ru"],
+      "rtl_languages": ["fa", "ar"],
+      "content_rules": [
+        "One primary keyword per page.",
+        "Do not create thin SEO content.",
+        "Do not keyword-stuff.",
+        "Explain technical value clearly.",
+        "Connect every topic to risk reduction, leakage prevention, material optimization, or controlled execution.",
+        "Include internal links to services, case studies, resources, and RFQ.",
+        "Use real proof only.",
+        "Do not invent case studies or metrics."
+      ]
+    },
+    "route_pattern": {
+      "en": "/en/solutions/[slug]",
+      "fa": "/fa/solutions/[slug]",
+      "ar": "/ar/solutions/[slug]",
+      "ru": "/ru/solutions/[slug]"
+    },
+    "seo_requirements": {
+      "one_primary_keyword_per_page": true,
+      "primary_keyword_required_in": [
+        "url_slug",
+        "title_tag",
+        "meta_description",
+        "h1",
+        "first_100_words",
+        "image_alt_text",
+        "faq_question_when_natural"
+      ],
+      "technical_seo": [
+        "localized metadata for all languages",
+        "hreflang for en/fa/ar/ru",
+        "canonical per language",
+        "BreadcrumbList schema",
+        "FAQPage schema",
+        "Service schema when relevant",
+        "Article schema when educational",
+        "internal links required",
+        "optimized Open Graph data"
+      ],
+      "quality_rules": [
+        "Minimum 900 words equivalent for full SEO page when content is available.",
+        "Use short paragraphs and technical cards instead of dense text.",
+        "Every section must answer search intent.",
+        "Avoid repetitive generic content across pages.",
+        "Each page must include a unique angle, unique examples, and relevant CTAs."
+      ]
+    },
+    "page_template": {
+      "section_order": [
+        "seo_hero",
+        "search_intent_problem",
+        "technical_context",
+        "sipanel_solution",
+        "engineering_workflow",
+        "technical_proof",
+        "application_details",
+        "quality_checkpoints",
+        "related_case_studies",
+        "related_resources",
+        "faq_section",
+        "conversion_cta"
+      ]
+    },
+    "sections": [
+      {
+        "id": "seo_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_content_first",
+          "desktop": "split_60_40"
+        },
+        "required_fields": [
+          "primary_keyword",
+          "h1",
+          "short_intro",
+          "primary_cta",
+          "secondary_cta",
+          "trust_microcopy",
+          "hero_visual"
+        ],
+        "content_rules": [
+          "H1 must include the primary keyword naturally.",
+          "Intro must mention SIPANEL engineering control within the first 100 words.",
+          "CTA must be visible above fold on mobile.",
+          "Hero visual should be technical, industrial, and relevant to the keyword."
+        ],
+        "cta_options": [
+          "Get Free Engineering Review",
+          "Request Project Cost Check",
+          "Request Technical Consultation"
+        ]
+      },
+      {
+        "id": "search_intent_problem",
+        "priority": "critical",
+        "title_pattern": "The Real Risk Behind [PRIMARY_KEYWORD]",
+        "purpose": "Explain why the search topic matters in industrial projects.",
+        "layout": {
+          "mobile": "accordion_problem_cards",
+          "desktop": "3_to_5_card_grid"
+        },
+        "content_rules": [
+          "Connect the keyword to a real industrial problem.",
+          "Mention cost, leakage, delay, waste, coordination, or performance risk when relevant.",
+          "Avoid generic marketing language."
+        ],
+        "card_count": "3_to_5"
+      },
+      {
+        "id": "technical_context",
+        "priority": "high",
+        "title_pattern": "What [PRIMARY_KEYWORD] Requires Technically",
+        "purpose": "Educate the visitor with technical clarity.",
+        "layout": {
+          "mobile": "short_sections",
+          "desktop": "two_column_explanation"
+        },
+        "content_rules": [
+          "Explain system logic in plain technical language.",
+          "Use diagrams or visual callouts before long explanation.",
+          "Avoid jargon unless explained."
+        ]
+      },
+      {
+        "id": "sipanel_solution",
+        "priority": "critical",
+        "title": "How SIPANEL Reduces Project Risk",
+        "layout": {
+          "mobile": "numbered_steps",
+          "desktop": "horizontal_process_cards"
+        },
+        "required_solution_pillars": [
+          {
+            "title": "Precise Design",
+            "description": "Review system requirements, layout, details, and execution conditions before procurement."
+          },
+          {
+            "title": "Smart Procurement",
+            "description": "Plan materials, accessories, quantities, flashings, and project needs to reduce waste and delays."
+          },
+          {
+            "title": "Engineered Installation",
+            "description": "Execute with technical sequencing, inspection checkpoints, and controlled installation logic."
+          }
+        ]
+      },
+      {
+        "id": "engineering_workflow",
+        "priority": "high",
+        "title_pattern": "Engineering Workflow for [PRIMARY_KEYWORD]",
+        "layout": {
+          "mobile": "vertical_timeline",
+          "desktop": "timeline_or_flow"
+        },
+        "steps": [
+          "Project condition review",
+          "System selection logic",
+          "Technical detail coordination",
+          "Material and accessory planning",
+          "Installation sequencing",
+          "Inspection and final verification"
+        ]
+      },
+      {
+        "id": "technical_proof",
+        "priority": "critical",
+        "title": "Technical Proof Before Execution",
+        "layout": {
+          "mobile": "swipeable_cards_with_zoom",
+          "desktop": "technical_gallery_grid"
+        },
+        "asset_types": [
+          "shop_drawing",
+          "drainage_detail",
+          "flashing_detail",
+          "panel_layout",
+          "facade_grid",
+          "BOM_MTO_preview",
+          "installation_photo"
+        ],
+        "rules": [
+          "Use real assets when available.",
+          "If assets are missing, show structured pending placeholders.",
+          "Do not fake technical drawings.",
+          "Enable fullscreen viewer and zoom.",
+          "Add alt text using the primary keyword naturally."
+        ]
+      },
+      {
+        "id": "application_details",
+        "priority": "high",
+        "title_pattern": "Where [PRIMARY_KEYWORD] Is Used",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_column_application_grid"
+        },
+        "content_rules": [
+          "List industrial applications relevant to the keyword.",
+          "Each application should include one technical consideration.",
+          "Link to related service pages when relevant."
+        ]
+      },
+      {
+        "id": "quality_checkpoints",
+        "priority": "high",
+        "title_pattern": "[PRIMARY_KEYWORD] Quality Checkpoints",
+        "layout": {
+          "mobile": "checklist_accordion",
+          "desktop": "two_column_checklist"
+        },
+        "checkpoint_categories": [
+          "design_review",
+          "procurement_review",
+          "installation_review",
+          "waterproofing_review",
+          "final_inspection"
+        ],
+        "rules": [
+          "Use practical checkpoints.",
+          "Avoid vague quality claims.",
+          "Connect checkpoints to risk reduction."
+        ]
+      },
+      {
+        "id": "related_case_studies",
+        "priority": "high",
+        "title": "Related Project Proof",
+        "layout": {
+          "mobile": "horizontal_swipe_cards",
+          "desktop": "3_card_grid"
+        },
+        "rules": [
+          "Use related real projects only.",
+          "If no project exists, show pending proof state instead of fake case studies.",
+          "Each card must include challenge, engineering decision, and result when available."
+        ]
+      },
+      {
+        "id": "related_resources",
+        "priority": "medium",
+        "title": "Related Engineering Resources",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_card_grid"
+        },
+        "resource_types": [
+          "guide",
+          "checklist",
+          "technical_note",
+          "worksheet"
+        ],
+        "rules": [
+          "Link to resource hub.",
+          "Use lead capture for downloadable resources.",
+          "Track resource clicks."
+        ]
+      },
+      {
+        "id": "faq_section",
+        "priority": "critical",
+        "title_pattern": "[PRIMARY_KEYWORD] Questions",
+        "schema": "FAQPage",
+        "rules": [
+          "Minimum 4 questions.",
+          "Maximum 7 questions.",
+          "Questions should match real search intent.",
+          "Answers must be clear, technical, and non-promotional.",
+          "At least one FAQ should connect to consultation or project review naturally."
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline_pattern": "Review [PRIMARY_KEYWORD] Before Execution Starts.",
+        "text_pattern": "SIPANEL can review your project conditions, technical details, procurement needs, and installation risks before site execution.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info"
+      }
+    ],
+    "recommended_landing_pages": [
+      {
+        "id": "industrial_sandwich_panel_installation",
+        "primary_keyword": "industrial sandwich panel installation",
+        "route_slug": "industrial-sandwich-panel-installation",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors looking for installation quality, contractor capability, and execution risk reduction.",
+        "unique_angle": "Controlled installation through layout coordination, accessory planning, and inspection checkpoints."
+      },
+      {
+        "id": "sandwich_panel_for_factory_buildings",
+        "primary_keyword": "sandwich panel for factory buildings",
+        "route_slug": "sandwich-panel-for-factory-buildings",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors comparing panel systems for factories.",
+        "unique_angle": "Panel system selection based on insulation, durability, installation, and project conditions."
+      },
+      {
+        "id": "standing_seam_roofing_for_industrial_buildings",
+        "primary_keyword": "standing seam roofing for industrial buildings",
+        "route_slug": "standing-seam-roofing-industrial-buildings",
+        "related_service": "standing_seam_zip_tech_roofing",
+        "search_intent": "Visitors evaluating waterproof roofing systems.",
+        "unique_angle": "Leakage prevention through drainage logic, concealed fastening, and flashing coordination."
+      },
+      {
+        "id": "industrial_roof_leakage_prevention",
+        "primary_keyword": "industrial roof leakage prevention",
+        "route_slug": "industrial-roof-leakage-prevention",
+        "related_service": "standing_seam_zip_tech_roofing",
+        "search_intent": "Visitors dealing with or trying to avoid roof leakage.",
+        "unique_angle": "Leakage risk reduction before installation through slope, drainage, flashing, and penetration review."
+      },
+      {
+        "id": "aluminium_cladding_for_industrial_facades",
+        "primary_keyword": "aluminium cladding for industrial facades",
+        "route_slug": "aluminium-cladding-industrial-facades",
+        "related_service": "aluminium_cladding_covering",
+        "search_intent": "Visitors looking for industrial facade cladding solutions.",
+        "unique_angle": "Facade quality through layout control, fixing logic, material optimization, and edge detailing."
+      },
+      {
+        "id": "shop_drawing_review_for_panel_projects",
+        "primary_keyword": "shop drawing review for panel projects",
+        "route_slug": "shop-drawing-review-panel-projects",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors needing technical review before panel procurement or installation.",
+        "unique_angle": "Risk reduction through layout review, quantity control, accessory coordination, and installation sequencing."
+      },
+      {
+        "id": "industrial_envelope_systems",
+        "primary_keyword": "industrial envelope systems",
+        "route_slug": "industrial-envelope-systems",
+        "related_service": "all_systems",
+        "search_intent": "Visitors searching for complete envelope solutions.",
+        "unique_angle": "Integrated panel, roofing, and cladding execution under engineering control."
+      },
+      {
+        "id": "panel_material_optimization",
+        "primary_keyword": "panel material optimization",
+        "route_slug": "panel-material-optimization",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors concerned about waste, cost, and procurement planning.",
+        "unique_angle": "Material waste reduction through MTO, layout logic, and procurement coordination."
+      }
+    ],
+    "content_data_model": {
+      "required_fields_per_page": [
+        "id",
+        "primary_keyword",
+        "route_slug",
+        "localized_title",
+        "localized_meta_description",
+        "localized_h1",
+        "search_intent",
+        "problem_cards",
+        "technical_context",
+        "solution_points",
+        "workflow_steps",
+        "applications",
+        "quality_checkpoints",
+        "faqs",
+        "related_service",
+        "related_resources",
+        "related_case_studies"
+      ],
+      "optional_fields": [
+        "technical_assets",
+        "verified_metrics",
+        "downloadable_resource",
+        "project_examples"
+      ],
+      "missing_data_behavior": [
+        "Do not invent data.",
+        "Use pending states for missing real project proof.",
+        "Use educational content when case study proof is unavailable.",
+        "Keep CTA active even if proof assets are pending."
+      ]
+    },
+    "analytics_events": [
+      "seo_landing_page_view",
+      "seo_primary_cta_click",
+      "seo_secondary_cta_click",
+      "technical_proof_open",
+      "diagram_zoom",
+      "faq_expand",
+      "related_service_click",
+      "related_resource_click",
+      "related_case_study_click",
+      "rfq_start",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement a reusable SEO landing page system based on this JSON specification.",
+      "rules": [
+        "Create one reusable SEO landing page template powered by page data.",
+        "Create initial pages from recommended_landing_pages.",
+        "Generate localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use next-intl for localized content.",
+        "Use generateMetadata for localized SEO metadata.",
+        "Add hreflang and canonical logic.",
+        "Add FAQ schema and BreadcrumbList schema.",
+        "Use real assets when available.",
+        "Do not invent metrics or case studies.",
+        "If data is missing, use pending proof states.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if verified project data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  }

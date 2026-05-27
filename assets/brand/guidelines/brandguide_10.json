@@ -1,0 +1,322 @@
+{
+    "page": {
+      "number": 10,
+      "title": "Typography System",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the typography hierarchy, font system, sizing scale, readability rules, multilingual support, and responsive behavior for the SIPANEL digital and brand ecosystem.",
+    "typography_philosophy": {
+      "statement": "Typography should communicate engineering precision, industrial clarity, and controlled hierarchy.",
+      "core_principles": [
+        "Clarity over decoration",
+        "Strong hierarchy",
+        "Technical readability",
+        "Consistent spacing rhythm",
+        "Responsive readability",
+        "Multilingual compatibility"
+      ]
+    },
+    "font_system": {
+      "primary_font_family": {
+        "name": "Inter",
+        "usage": [
+          "UI interfaces",
+          "Body text",
+          "Forms",
+          "Tables",
+          "Technical content"
+        ],
+        "characteristics": [
+          "Highly readable",
+          "Modern",
+          "Technical",
+          "Neutral",
+          "Responsive-friendly"
+        ]
+      },
+      "secondary_font_family": {
+        "name": "Sora",
+        "usage": [
+          "Headlines",
+          "Hero sections",
+          "Key statements",
+          "Technical highlights"
+        ],
+        "characteristics": [
+          "Strong geometry",
+          "Industrial feel",
+          "Modern technical personality"
+        ]
+      },
+      "fallback_fonts": [
+        "Arial",
+        "Helvetica",
+        "sans-serif"
+      ]
+    },
+    "font_weights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extra_bold": 800,
+      "rules": [
+        "Avoid excessive weight variation.",
+        "Use semibold and bold for hierarchy emphasis.",
+        "Reserve extra bold for hero statements only."
+      ]
+    },
+    "type_scale": {
+      "desktop": {
+        "display": {
+          "size": "72px",
+          "line_height": "80px",
+          "weight": 800
+        },
+        "h1": {
+          "size": "56px",
+          "line_height": "64px",
+          "weight": 700
+        },
+        "h2": {
+          "size": "40px",
+          "line_height": "48px",
+          "weight": 700
+        },
+        "h3": {
+          "size": "32px",
+          "line_height": "40px",
+          "weight": 600
+        },
+        "h4": {
+          "size": "24px",
+          "line_height": "32px",
+          "weight": 600
+        },
+        "body_large": {
+          "size": "20px",
+          "line_height": "32px",
+          "weight": 400
+        },
+        "body": {
+          "size": "18px",
+          "line_height": "30px",
+          "weight": 400
+        },
+        "body_small": {
+          "size": "16px",
+          "line_height": "26px",
+          "weight": 400
+        },
+        "caption": {
+          "size": "14px",
+          "line_height": "22px",
+          "weight": 400
+        }
+      },
+      "mobile": {
+        "display": {
+          "size": "42px",
+          "line_height": "48px",
+          "weight": 800
+        },
+        "h1": {
+          "size": "36px",
+          "line_height": "42px",
+          "weight": 700
+        },
+        "h2": {
+          "size": "30px",
+          "line_height": "38px",
+          "weight": 700
+        },
+        "h3": {
+          "size": "24px",
+          "line_height": "32px",
+          "weight": 600
+        },
+        "h4": {
+          "size": "20px",
+          "line_height": "28px",
+          "weight": 600
+        },
+        "body_large": {
+          "size": "18px",
+          "line_height": "28px",
+          "weight": 400
+        },
+        "body": {
+          "size": "16px",
+          "line_height": "26px",
+          "weight": 400
+        },
+        "body_small": {
+          "size": "14px",
+          "line_height": "22px",
+          "weight": 400
+        },
+        "caption": {
+          "size": "12px",
+          "line_height": "18px",
+          "weight": 400
+        }
+      }
+    },
+    "hierarchy_rules": {
+      "headline_rules": [
+        "Headlines must remain short and direct.",
+        "Prefer engineering-focused wording.",
+        "Avoid decorative or poetic language.",
+        "Maintain strong contrast and spacing."
+      ],
+      "body_rules": [
+        "Keep paragraphs short and structured.",
+        "Prefer one idea per paragraph.",
+        "Use bullet lists for technical readability.",
+        "Avoid dense text blocks."
+      ],
+      "technical_text_rules": [
+        "Use monospace only for code or data references.",
+        "Preserve alignment in tables and technical labels.",
+        "Use semibold for technical emphasis."
+      ]
+    },
+    "spacing_rules": {
+      "letter_spacing": {
+        "headlines": "-1% to -2%",
+        "body": "0%",
+        "captions": "0% to 1%"
+      },
+      "paragraph_spacing": {
+        "default": "1.5x line height"
+      },
+      "heading_spacing": {
+        "above": "48px",
+        "below": "20px"
+      },
+      "rules": [
+        "Typography spacing should feel structured and disciplined.",
+        "Avoid inconsistent rhythm between sections."
+      ]
+    },
+    "responsive_typography_rules": {
+      "principles": [
+        "Scale typography proportionally.",
+        "Protect readability on mobile.",
+        "Avoid oversized desktop typography on tablets.",
+        "Reduce text density on smaller screens."
+      ],
+      "mobile_rules": [
+        "Maximum 3 headline lines.",
+        "Maximum 4 paragraph lines before spacing break.",
+        "Increase spacing around CTAs and forms."
+      ]
+    },
+    "multilingual_typography_rules": {
+      "supported_languages": [
+        "English",
+        "Persian",
+        "Arabic",
+        "Russian"
+      ],
+      "rtl_support": {
+        "enabled": true,
+        "rules": [
+          "Maintain visual hierarchy in RTL layouts.",
+          "Preserve spacing consistency.",
+          "Ensure alignment remains balanced."
+        ]
+      },
+      "language_specific_rules": {
+        "english": {
+          "style": "Clean technical B2B typography"
+        },
+        "persian": {
+          "style": "Formal industrial Persian typography",
+          "preferred_fonts": [
+            "Vazirmatn",
+            "IRANSansX"
+          ]
+        },
+        "arabic": {
+          "style": "Professional technical Arabic typography",
+          "preferred_fonts": [
+            "Cairo",
+            "IBM Plex Sans Arabic"
+          ]
+        },
+        "russian": {
+          "style": "Structured technical typography"
+        }
+      }
+    },
+    "contrast_and_accessibility_rules": {
+      "minimum_contrast": "WCAG AA",
+      "body_text_contrast": "4.5:1 minimum",
+      "large_text_contrast": "3:1 minimum",
+      "rules": [
+        "Never place low-contrast text over busy imagery.",
+        "Avoid light gray body text.",
+        "Maintain readability in dark sections."
+      ]
+    },
+    "approved_typography_characteristics": [
+      "Structured",
+      "Industrial",
+      "Technical",
+      "Readable",
+      "Confident",
+      "Minimal",
+      "Controlled"
+    ],
+    "forbidden_typography_characteristics": [
+      "Decorative fonts",
+      "Playful typography",
+      "Overly condensed fonts",
+      "Script fonts",
+      "Excessive italics",
+      "Inconsistent hierarchy",
+      "Crowded line spacing"
+    ],
+    "technical_ui_usage": {
+      "tables": {
+        "preferred_size": "14px-16px",
+        "weight": 500,
+        "alignment": "Left aligned"
+      },
+      "annotations": {
+        "preferred_size": "12px-14px",
+        "weight": 600
+      },
+      "buttons": {
+        "preferred_weight": 600,
+        "uppercase_allowed": false
+      }
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Typography philosophy",
+        "Font family overview",
+        "Type scale system",
+        "Hierarchy examples",
+        "Responsive typography examples",
+        "Multilingual typography examples",
+        "Correct vs incorrect usage"
+      ],
+      "visual_direction": [
+        "Structured typography specimens",
+        "Grid-aligned hierarchy previews",
+        "Technical layout demonstrations",
+        "Dark and light theme examples"
+      ]
+    },
+    "implementation_notes": [
+      "Typography must remain consistent across website, presentations, technical documentation, and marketing materials.",
+      "Responsive readability is mandatory across all devices.",
+      "Typography hierarchy should communicate engineering structure and visual clarity immediately.",
+      "All typography values should map directly to design tokens and frontend implementation standards."
+    ]
+  }

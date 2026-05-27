@@ -1,0 +1,399 @@
+{
+  "page": {
+    "number": 42,
+    "title": "Frontend Implementation Principles",
+    "section": "Implementation & Governance",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define the frontend architecture standards, engineering-grade implementation principles, responsive behavior, accessibility systems, performance governance, component scalability, and production deployment requirements for SIPANEL industrial envelope digital platforms.",
+  "frontend_philosophy": {
+    "statement": "SIPANEL frontend implementation must transform the industrial envelope brand system into fast, scalable, accessible, technically credible, and production-grade digital experiences.",
+    "core_principles": [
+      "Design-to-code consistency",
+      "Mobile-first implementation",
+      "Reusable component architecture",
+      "Performance-first development",
+      "Accessibility by default",
+      "Multilingual and RTL readiness",
+      "Engineering-grade presentation",
+      "System scalability",
+      "Envelope-system consistency",
+      "Consultant-grade usability"
+    ]
+  },
+  "implementation_goals": [
+    {
+      "goal": "Preserve Brand Consistency",
+      "description": "Ensure typography, colors, spacing, diagrams, technical visuals, components, and interaction behaviors match the approved SIPANEL design system."
+    },
+    {
+      "goal": "Support Scalable Development",
+      "description": "Build reusable architecture that supports sandwich panels, ACP cladding, standing seam systems, ZIP roofing, resources, RFQ flows, and future industrial modules."
+    },
+    {
+      "goal": "Deliver Production Performance",
+      "description": "Keep interfaces fast, stable, responsive, and optimized across industrial desktop and field-mobile environments."
+    },
+    {
+      "goal": "Protect Engineering Credibility",
+      "description": "Ensure frontend implementation preserves technical clarity, consultant-grade presentation, and engineering-system consistency."
+    }
+  ],
+  "architecture_rules": {
+    "requirements": [
+      "Use reusable components.",
+      "Separate layout, content, and presentation logic.",
+      "Use design tokens instead of hardcoded values.",
+      "Create scalable folder and naming structure.",
+      "Avoid duplicate component logic.",
+      "Keep components modular and testable.",
+      "Separate system-specific modules cleanly.",
+      "Preserve scalability for future engineering services."
+    ],
+    "recommended_structure": [
+      "components",
+      "layouts",
+      "sections",
+      "systems",
+      "tokens",
+      "utilities",
+      "content",
+      "hooks",
+      "analytics",
+      "locales",
+      "services",
+      "schemas"
+    ]
+  },
+  "system_architecture_rules": {
+    "supported_systems": [
+      "sandwich_panels",
+      "acp_cladding",
+      "standing_seam",
+      "zip_roofing",
+      "waterproofing",
+      "envelope_engineering",
+      "drainage_systems"
+    ],
+    "rules": [
+      "Separate roofing and façade systems architecturally.",
+      "Avoid hardcoded roof-only assumptions.",
+      "Allow future expansion for new envelope systems.",
+      "Preserve reusable engineering modules."
+    ]
+  },
+  "design_token_rules": {
+    "requirements": [
+      "Use approved color tokens.",
+      "Use approved typography tokens.",
+      "Use approved spacing tokens.",
+      "Use approved radius, shadow, and motion tokens.",
+      "Do not introduce unofficial values without approval.",
+      "Keep tokens synchronized between design and frontend."
+    ],
+    "examples": [
+      "color-primary-orange",
+      "color-bg-dark",
+      "space-section-desktop",
+      "font-body-mobile",
+      "radius-card",
+      "motion-standard",
+      "border-technical-detail",
+      "space-envelope-section"
+    ]
+  },
+  "component_implementation_rules": {
+    "rules": [
+      "Each component must have clear props and variants.",
+      "Component states must be implemented consistently.",
+      "Avoid one-off styling unless approved.",
+      "Support responsive behavior inside components.",
+      "Document component purpose and usage.",
+      "Support technical-content scalability.",
+      "Preserve engineering readability across breakpoints."
+    ],
+    "required_component_states": [
+      "default",
+      "hover",
+      "active",
+      "focus",
+      "disabled",
+      "loading",
+      "error where applicable"
+    ]
+  },
+  "responsive_implementation_rules": {
+    "breakpoints": {
+      "small_mobile": "320px-480px",
+      "standard_mobile": "481px-767px",
+      "tablet": "768px-1024px",
+      "desktop": "1025px-1440px",
+      "large_desktop": "1441px+"
+    },
+    "rules": [
+      "Build mobile-first.",
+      "Do not use desktop grids below 768px.",
+      "Use single-column layouts on mobile.",
+      "Use adaptive 2-column layouts on tablet.",
+      "Use 12-column grid on desktop.",
+      "Prevent horizontal overflow.",
+      "Prioritize field usability on mobile devices.",
+      "Preserve technical readability across all breakpoints."
+    ]
+  },
+  "engineering_visual_implementation_rules": {
+    "requirements": [
+      "Technical diagrams must remain readable.",
+      "Support fullscreen diagram viewing.",
+      "Support pinch-to-zoom on mobile.",
+      "Use progressive loading for large engineering visuals.",
+      "Support annotation layering cleanly.",
+      "Avoid unreadable embedded CAD screenshots.",
+      "Preserve façade and roofing detail visibility."
+    ],
+    "supported_visual_types": [
+      "shop_drawings",
+      "waterproofing_details",
+      "drainage_diagrams",
+      "acp_sections",
+      "standing_seam_details",
+      "thermal_bridge_diagrams",
+      "envelope_transition_details"
+    ]
+  },
+  "accessibility_implementation_rules": {
+    "requirements": [
+      "Use semantic HTML.",
+      "Maintain WCAG AA contrast.",
+      "Ensure keyboard navigation.",
+      "Provide visible focus states.",
+      "Use labels for form fields.",
+      "Use aria-labels for icon-only buttons.",
+      "Support prefers-reduced-motion.",
+      "Provide alt text for images.",
+      "Provide accessible summaries for diagrams.",
+      "Support screen-reader-friendly technical content."
+    ]
+  },
+  "performance_implementation_rules": {
+    "requirements": [
+      "Optimize images using WebP or AVIF.",
+      "Preload hero image only when critical.",
+      "Lazy-load below-the-fold visuals.",
+      "Code-split heavy components.",
+      "Avoid heavy PDFs on mobile.",
+      "Load high-resolution technical diagrams only after user interaction.",
+      "Audit third-party scripts.",
+      "Reduce animation overhead.",
+      "Optimize technical visual delivery."
+    ],
+    "targets": {
+      "mobile_lighthouse": "90+",
+      "lcp": "under 2.5 seconds",
+      "cls": "minimal",
+      "inp": "under 200ms",
+      "initial_payload": "under 2MB"
+    }
+  },
+  "technical_diagram_implementation": {
+    "requirements": [
+      "Use optimized preview assets.",
+      "Support fullscreen viewer.",
+      "Support pinch-to-zoom on mobile.",
+      "Support drag-to-pan.",
+      "Keep close button visible.",
+      "Avoid PDF embeds on mobile.",
+      "Load high-resolution versions on demand.",
+      "Support annotation overlays cleanly."
+    ]
+  },
+  "rfq_and_form_implementation": {
+    "requirements": [
+      "Use secure form submission.",
+      "Validate inputs client-side and server-side.",
+      "Support optional file upload.",
+      "Show upload progress.",
+      "Prevent duplicate submissions.",
+      "Show success and error states clearly.",
+      "Route leads to internal team or CRM.",
+      "Support mobile-first RFQ usability."
+    ]
+  },
+  "multilingual_and_rtl_implementation": {
+    "supported_languages": [
+      "en",
+      "fa",
+      "ar",
+      "ru"
+    ],
+    "requirements": [
+      "Use locale-based routing.",
+      "Update HTML lang attribute.",
+      "Update HTML dir attribute.",
+      "Support RTL for Persian and Arabic.",
+      "Use logical CSS properties.",
+      "Flip directional icons in RTL.",
+      "Preserve same route when switching language.",
+      "Persist selected language where appropriate.",
+      "Maintain engineering terminology consistency."
+    ]
+  },
+  "seo_implementation_rules": {
+    "requirements": [
+      "Use one H1 per page.",
+      "Implement title tags and meta descriptions.",
+      "Add canonical tags.",
+      "Add hreflang tags.",
+      "Generate XML sitemap.",
+      "Use schema markup.",
+      "Use semantic heading structure.",
+      "Optimize image alt text.",
+      "Implement breadcrumb markup where required.",
+      "Support envelope-engineering SEO architecture."
+    ]
+  },
+  "analytics_implementation_rules": {
+    "requirements": [
+      "Implement GA4 events through Google Tag Manager where possible.",
+      "Track all primary CTA clicks.",
+      "Track RFQ funnel steps.",
+      "Track diagram interactions.",
+      "Track resource downloads.",
+      "Track language changes.",
+      "Use consistent event naming.",
+      "Track system-category interactions."
+    ],
+    "core_events": [
+      "hero_primary_cta_click",
+      "sticky_cta_click",
+      "phone_click",
+      "whatsapp_click",
+      "rfq_start",
+      "rfq_submit",
+      "diagram_zoom",
+      "resource_download_complete",
+      "cladding_system_interaction",
+      "standing_seam_detail_view",
+      "envelope_resource_download"
+    ]
+  },
+  "security_and_backend_rules": {
+    "requirements": [
+      "Validate all form inputs.",
+      "Sanitize uploaded files.",
+      "Use spam protection.",
+      "Limit upload file size.",
+      "Restrict allowed file types.",
+      "Protect API endpoints.",
+      "Avoid exposing sensitive configuration keys.",
+      "Secure engineering file uploads."
+    ]
+  },
+  "code_quality_rules": {
+    "requirements": [
+      "Use consistent naming conventions.",
+      "Avoid duplicated logic.",
+      "Use linting and formatting tools.",
+      "Keep components readable.",
+      "Document complex logic.",
+      "Remove unused code before production.",
+      "Test key flows before launch.",
+      "Maintain scalable architecture standards."
+    ]
+  },
+  "browser_and_device_testing": {
+    "required_tests": [
+      "Mobile iOS Safari",
+      "Mobile Chrome Android",
+      "Tablet viewport",
+      "Desktop Chrome",
+      "Desktop Safari",
+      "Desktop Firefox",
+      "RTL language layouts",
+      "Slow network simulation",
+      "Large engineering diagram rendering",
+      "Mobile fullscreen diagram interaction"
+    ]
+  },
+  "governance_and_qa_rules": {
+    "requirements": [
+      "Validate design-token consistency.",
+      "Validate responsive layouts.",
+      "Validate multilingual behavior.",
+      "Validate engineering diagram quality.",
+      "Validate façade and roofing balance.",
+      "Validate analytics event accuracy.",
+      "Validate accessibility compliance.",
+      "Validate technical terminology consistency."
+    ]
+  },
+  "deployment_readiness_checklist": [
+    "Design tokens implemented.",
+    "Responsive layouts tested.",
+    "RTL layouts tested.",
+    "Forms submit successfully.",
+    "File uploads work securely.",
+    "Analytics events fire correctly.",
+    "SEO metadata implemented.",
+    "Core Web Vitals targets met.",
+    "Accessibility QA completed.",
+    "No fake or unverified content published.",
+    "Engineering diagrams verified.",
+    "Envelope-system representation balanced."
+  ],
+  "forbidden_patterns": [
+    "Hardcoded colors and spacing",
+    "Desktop-first implementation",
+    "Non-semantic HTML",
+    "Hover-only interactions",
+    "Unoptimized images",
+    "Heavy PDFs embedded on mobile",
+    "Missing analytics events",
+    "Broken RTL behavior",
+    "Inconsistent component variants",
+    "Untested RFQ flow",
+    "Roof-only implementation assumptions",
+    "Unreadable technical visuals"
+  ],
+  "approved_characteristics": [
+    "Scalable",
+    "Fast",
+    "Accessible",
+    "Mobile-first",
+    "Token-based",
+    "RTL-ready",
+    "Production-ready",
+    "Engineering-grade",
+    "Envelope-aware",
+    "Consultant-friendly"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Frontend philosophy",
+      "Architecture rules",
+      "System architecture",
+      "Token implementation",
+      "Responsive and accessibility standards",
+      "Performance and SEO requirements",
+      "Analytics implementation",
+      "Governance and QA rules",
+      "Deployment checklist"
+    ],
+    "visual_direction": [
+      "Frontend architecture diagram",
+      "Component implementation flow",
+      "Token-to-code examples",
+      "Responsive testing matrix",
+      "Deployment readiness checklist",
+      "Envelope-system architecture map",
+      "Diagram rendering workflow"
+    ]
+  },
+  "implementation_notes": [
+    "Frontend implementation must follow the SIPANEL design system as the single source of truth.",
+    "The codebase should remain scalable enough to support future landing pages, resources, case studies, façade systems, and multilingual expansion.",
+    "Performance, accessibility, SEO, analytics, and RTL support must be treated as core implementation requirements.",
+    "All frontend implementation must preserve SIPANEL’s engineering credibility, consultant-grade presentation, and industrial envelope positioning."
+  ]
+}

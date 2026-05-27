@@ -1,0 +1,523 @@
+{
+    "page": "homepage",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "language_system": {
+      "default": "en",
+      "supported": ["en", "fa", "ar", "ru"],
+      "rtl": ["fa", "ar"],
+      "routes": ["/en", "/fa", "/ar", "/ru"],
+      "requirements": [
+        "localized content",
+        "localized metadata",
+        "hreflang",
+        "rtl mirrored layout",
+        "language switcher in header"
+      ]
+    },
+    "page_goal": {
+      "primary": "Generate qualified B2B industrial project leads",
+      "secondary": "Position SIPANEL as an engineering-first industrial envelope execution company",
+      "conversion": "Request engineering review or project cost check"
+    },
+    "brand_positioning": {
+      "core_message": "SIPANEL reduces industrial panel project risk through precise design, smart procurement, and engineered installation.",
+      "hero_h1": "Reduce Project Risk Before Construction Begins.",
+      "hero_subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
+      "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+      "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION"
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "avoid": [
+        "generic startup landing page",
+        "playful SaaS visuals",
+        "heavy gradients",
+        "glassmorphism",
+        "fake metrics",
+        "decorative animation",
+        "stock people photography"
+      ],
+      "must_feel": [
+        "engineering-first",
+        "industrial",
+        "precise",
+        "structured",
+        "trustworthy",
+        "premium B2B"
+      ]
+    },
+    "design_tokens": {
+      "colors": {
+        "primary_orange": "#FF6A00",
+        "orange_hover": "#E85F00",
+        "black": "#0F1113",
+        "deep_black": "#050607",
+        "dark_section": "#1A1D21",
+        "light_background": "#F5F6F7",
+        "white": "#FFFFFF",
+        "text_primary": "#111111",
+        "text_secondary": "#555555",
+        "border": "#E5E7EB"
+      },
+      "color_usage": {
+        "light_sections": "70%",
+        "dark_sections": "20%",
+        "orange_accent": "10%",
+        "orange_rule": "Use orange only for CTA, key metrics, technical emphasis, and active states."
+      },
+      "typography": {
+        "latin_headline": ["Inter", "Sora", "Montserrat"],
+        "latin_body": ["Inter", "Roboto"],
+        "persian": ["Vazirmatn", "IRANSansX"],
+        "arabic": ["Cairo", "IBM Plex Sans Arabic"],
+        "russian": ["Inter", "Montserrat"],
+        "desktop": {
+          "h1": "48px / 1.05 / 800",
+          "h2": "36px / 1.15 / 750",
+          "h3": "24px / 1.25 / 700",
+          "body": "16px / 1.6 / 400"
+        },
+        "mobile": {
+          "h1": "32px / 1.08 / 800",
+          "h2": "26px / 1.15 / 750",
+          "h3": "20px / 1.25 / 700",
+          "body": "15px / 1.55 / 400"
+        }
+      },
+      "layout": {
+        "container_max_width": "1200px",
+        "desktop_grid": "12 columns",
+        "desktop_padding": "40px",
+        "tablet_padding": "32px",
+        "mobile_padding": "20px",
+        "section_padding_desktop": "96px",
+        "section_padding_mobile": "56px"
+      }
+    },
+    "page_sections": [
+      {
+        "id": "header",
+        "priority": "critical",
+        "layout": {
+          "desktop": "logo_left_menu_center_cta_language_right",
+          "mobile": "logo_left_menu_icon_right"
+        },
+        "content": {
+          "nav_items": [
+            "Home",
+            "Systems",
+            "Projects",
+            "Process",
+            "Resources",
+            "Contact"
+          ],
+          "primary_cta": "Get Free Engineering Review",
+          "language_switcher": ["EN", "FA", "AR", "RU"]
+        },
+        "rules": [
+          "Use original SIPANEL logo only",
+          "Logo minimum width 120px",
+          "Sticky header with subtle background transition",
+          "No heavy shadow",
+          "Mobile menu must include language switcher at top",
+          "CTA must remain visible on desktop"
+        ]
+      },
+      {
+        "id": "hero_section",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_55_45_text_left_visual_right"
+        },
+        "content": {
+          "eyebrow": "Industrial Envelope Engineering",
+          "h1": "Reduce Project Risk Before Construction Begins.",
+          "subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
+          "primary_cta": "Get Free Engineering Review",
+          "secondary_cta": "Request Project Cost Check",
+          "trust_microcopy": "Engineering-led review for industrial panel, roofing, and cladding projects."
+        },
+        "visual": {
+          "type": "industrial_project_image_or_technical_composite",
+          "requirements": [
+            "real industrial roofing/facade/panel application",
+            "technical grid overlay allowed",
+            "no generic people stock photo",
+            "no excessive effects"
+          ]
+        },
+        "rules": [
+          "Communicate value within 3 seconds",
+          "CTA must be above fold on mobile",
+          "Mention risk reduction, engineering control, and execution clarity",
+          "Do not use brand slogan as H1"
+        ]
+      },
+      {
+        "id": "trust_bar",
+        "priority": "critical",
+        "layout": {
+          "mobile": "horizontal_scroll_metrics",
+          "tablet": "2x2_grid",
+          "desktop": "horizontal_strip"
+        },
+        "content": {
+          "metrics": [
+            {
+              "label": "Years of Industrial Experience",
+              "value": "30+",
+              "verification": "needs_internal_confirmation"
+            },
+            {
+              "label": "Industrial Projects",
+              "value": "400+",
+              "verification": "needs_internal_confirmation"
+            },
+            {
+              "label": "Executed Panel Area",
+              "value": "10,000,000+ m²",
+              "verification": "needs_internal_confirmation"
+            }
+          ]
+        },
+        "rules": [
+          "Use only verified or clearly marked metrics",
+          "Do not create fake counters",
+          "No animated number counting unless data is verified"
+        ]
+      },
+      {
+        "id": "systems_overview",
+        "priority": "critical",
+        "purpose": "Show SIPANEL is not only a sandwich panel supplier.",
+        "layout": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Sandwich Panel Systems",
+            "description": "Coordinated wall, roof, cold room, and insulated envelope systems with engineering-controlled layout and execution.",
+            "cta": "Explore Panel Systems"
+          },
+          {
+            "title": "Standing Seam & ZIP Tech Roofing",
+            "description": "Industrial waterproof roofing systems designed around drainage logic, concealed fastening, and controlled installation.",
+            "cta": "Explore Roofing Systems"
+          },
+          {
+            "title": "Aluminium Cladding & Covering",
+            "description": "Facade and exterior metal covering systems for industrial and architectural envelope performance.",
+            "cta": "Explore Cladding Systems"
+          }
+        ]
+      },
+      {
+        "id": "engineering_proof_snapshot",
+        "priority": "critical",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Shop Drawing Precision",
+            "proof": "Panel layout, connection logic, and installation sequencing are reviewed before execution.",
+            "visual": "shop_drawing_preview"
+          },
+          {
+            "title": "Waterproofing Logic",
+            "proof": "Drainage, flashing, overlap, and roof details are engineered to reduce leakage risk.",
+            "visual": "drainage_detail_preview"
+          },
+          {
+            "title": "Material Optimization",
+            "proof": "Procurement is planned around accurate quantities, reduced waste, and controlled project cost.",
+            "visual": "bom_mto_preview"
+          }
+        ],
+        "rules": [
+          "Show proof visually before long explanation",
+          "Use diagrams or technical previews",
+          "Enable fullscreen viewer for technical visuals"
+        ]
+      },
+      {
+        "id": "process_section",
+        "priority": "high",
+        "title": "Engineering → Procurement → Execution",
+        "layout": {
+          "mobile": "accordion_steps",
+          "desktop": "horizontal_process"
+        },
+        "steps": [
+          {
+            "title": "Engineering Review",
+            "description": "Project drawings, site constraints, system requirements, and leakage risks are reviewed before supply."
+          },
+          {
+            "title": "Smart Procurement",
+            "description": "Panel quantities, accessories, flashings, and project materials are planned to reduce waste and delays."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execution follows coordinated sequences, technical details, and inspection-based quality control."
+          },
+          {
+            "title": "Final Verification",
+            "description": "The delivered system is checked against execution quality, waterproofing details, and project requirements."
+          }
+        ]
+      },
+      {
+        "id": "case_studies_preview",
+        "priority": "high",
+        "layout": {
+          "mobile": "horizontal_swipe_cards",
+          "desktop": "3_card_grid"
+        },
+        "content_rules": [
+          "Use real project photography",
+          "Use challenge → engineering decision → result",
+          "Do not invent project metrics",
+          "If data is missing, mark as pending"
+        ],
+        "card_structure": [
+          "project_name",
+          "location",
+          "project_type",
+          "area_m2",
+          "challenge",
+          "engineering_decision",
+          "measured_result",
+          "cta"
+        ],
+        "cta": "Explore Proven Projects"
+      },
+      {
+        "id": "comparison_section",
+        "priority": "medium",
+        "title": "Supply-Only vs Engineering-Controlled Execution",
+        "layout": {
+          "mobile": "stacked_comparison_cards",
+          "desktop": "two_column_table"
+        },
+        "columns": [
+          "Typical Supply-Only Approach",
+          "SIPANEL Engineering-Controlled Approach"
+        ],
+        "comparison_points": [
+          "Panel selection",
+          "Waterproofing responsibility",
+          "Material waste",
+          "Installation coordination",
+          "Risk before construction",
+          "Technical documentation"
+        ]
+      },
+      {
+        "id": "resources_preview",
+        "priority": "medium",
+        "title": "Technical Resources for Better Project Decisions",
+        "cards": [
+          {
+            "title": "Panel Selection Guide",
+            "type": "download_or_article"
+          },
+          {
+            "title": "Roof Leakage Prevention Checklist",
+            "type": "download_or_article"
+          },
+          {
+            "title": "Shop Drawing Review Guide",
+            "type": "download_or_article"
+          }
+        ],
+        "cta": "Download Engineering Resource",
+        "rules": [
+          "Connect downloads to lead capture",
+          "Track resource_download event"
+        ]
+      },
+      {
+        "id": "rfq_section",
+        "priority": "critical",
+        "title": "Start Your Project With Confidence.",
+        "layout": {
+          "mobile": "step_based_form",
+          "desktop": "two_column_form_and_contact"
+        },
+        "form_fields": [
+          "name",
+          "company",
+          "phone",
+          "whatsapp",
+          "email",
+          "project_type",
+          "project_location",
+          "estimated_area",
+          "message",
+          "optional_file_upload"
+        ],
+        "cta": "Request Technical Consultation",
+        "contact_source": "production_contact_info",
+        "rules": [
+          "Use real contact data only from production_contact_info",
+          "Do not invent contact data",
+          "Add spam protection",
+          "Validate fields with Zod",
+          "Track rfq_submit event"
+        ]
+      },
+      {
+        "id": "footer",
+        "priority": "critical",
+        "layout": "dark_industrial_footer",
+        "content": {
+          "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+          "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION",
+          "contact": "Use production_contact_info only",
+          "columns": [
+            "Systems",
+            "Projects",
+            "Resources",
+            "Company",
+            "Contact"
+          ]
+        }
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Get Engineering Review",
+      "secondary_action": "WhatsApp",
+      "rules": [
+        "Minimum height 48px",
+        "Do not block important content",
+        "Visible after hero scroll",
+        "Track sticky_mobile_cta_click"
+      ]
+    },
+    "seo": {
+      "title": "SIPANEL | Industrial Panel, Roofing & Cladding Engineering",
+      "meta_description": "SIPANEL reduces industrial panel project risk through precise shop drawings, smart procurement, and engineered installation for panel, roofing, and cladding systems.",
+      "primary_keywords": [
+        "industrial panel systems",
+        "sandwich panel systems",
+        "standing seam roofing",
+        "industrial cladding",
+        "panel installation engineering",
+        "industrial envelope systems"
+      ],
+      "schema": [
+        "Organization",
+        "LocalBusiness",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "requirements": [
+        "localized title and meta for all languages",
+        "hreflang for en/fa/ar/ru",
+        "canonical per language",
+        "internal links to service pages",
+        "FAQ section included or linked"
+      ]
+    },
+    "analytics_events": [
+      "hero_primary_cta_click",
+      "hero_secondary_cta_click",
+      "language_change",
+      "trust_bar_view",
+      "proof_card_expand",
+      "diagram_open",
+      "diagram_zoom",
+      "case_study_view",
+      "case_study_expand",
+      "resource_download",
+      "rfq_start",
+      "rfq_submit",
+      "phone_click",
+      "whatsapp_click",
+      "sticky_mobile_cta_click"
+    ],
+    "animation_rules": {
+      "principle": "Motion must support clarity, engineering confidence, and usability.",
+      "allowed": [
+        "subtle fade",
+        "subtle slide",
+        "opacity",
+        "transform",
+        "small hover elevation"
+      ],
+      "forbidden": [
+        "heavy parallax",
+        "scroll jacking",
+        "infinite decorative animation",
+        "bounce effects",
+        "cinematic delays"
+      ],
+      "must_support": [
+        "prefers-reduced-motion",
+        "pause hidden animations"
+      ]
+    },
+    "responsive_rules": {
+      "mobile_first": true,
+      "small_mobile": "320px-480px",
+      "standard_mobile": "481px-767px",
+      "tablet": "768px-1024px",
+      "desktop": "1025px+",
+      "mobile_requirements": [
+        "single column layout",
+        "CTA above fold",
+        "sticky mobile CTA",
+        "horizontal swipe for case studies",
+        "accordion for proof cards",
+        "minimum touch target 48px"
+      ]
+    },
+    "content_governance": {
+      "tone": [
+        "professional",
+        "technical",
+        "confident",
+        "clear",
+        "direct"
+      ],
+      "avoid": [
+        "marketing hype",
+        "fake urgency",
+        "unsupported claims",
+        "overly emotional language",
+        "unverified numbers"
+      ],
+      "approved_ctas": [
+        "Get Free Engineering Review",
+        "Request Project Cost Check",
+        "Request Technical Consultation",
+        "Explore Proven Projects",
+        "Download Engineering Resource"
+      ],
+      "forbidden_ctas": [
+        "Buy Now",
+        "Click Here",
+        "Limited Time Offer",
+        "Best Price Guaranteed"
+      ]
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement this homepage exactly according to the JSON specification.",
+      "rules": [
+        "Read existing global SIPANEL JSON files first",
+        "Do not overwrite stronger rules from source-design",
+        "Use reusable components",
+        "Use Next.js App Router, TypeScript, Tailwind, next-intl, Framer Motion only where needed",
+        "Build English master content first, then localize FA, AR, RU",
+        "Do not ask for approval for normal implementation decisions",
+        "Ask only if real business data, destructive commands, paid services, or conflicting specs are involved"
+      ]
+    }
+  }

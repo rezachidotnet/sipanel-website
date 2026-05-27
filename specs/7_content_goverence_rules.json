@@ -1,0 +1,245 @@
+{
+    "content_governance_rules": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "purpose": "Control website copy quality, technical clarity, proof consistency, CTA language, and mobile readability.",
+  
+      "brand_voice": {
+        "tone": [
+          "professional",
+          "technical",
+          "confident",
+          "clear",
+          "direct"
+        ],
+        "avoid": [
+          "marketing hype",
+          "fake urgency",
+          "unsupported claims",
+          "overly emotional wording",
+          "complex jargon without explanation"
+        ]
+      },
+  
+      "global_copy_rules": {
+        "core_message": "SIPANEL reduces industrial panel project risk through precise design, smart procurement, and engineered installation.",
+        "primary_value_terms": [
+          "risk reduction",
+          "engineering control",
+          "material optimization",
+          "waterproofing logic",
+          "controlled execution",
+          "project responsibility"
+        ],
+        "forbidden_claims": [
+          "best in the world",
+          "guaranteed cheapest",
+          "zero risk",
+          "perfect forever",
+          "unverified performance numbers"
+        ]
+      },
+  
+      "headline_rules": {
+        "desktop_max_words": 14,
+        "mobile_max_words": 10,
+        "mobile_max_lines": 3,
+        "style": "bold_clear_engineering_focused",
+        "must_include_when_relevant": [
+          "risk",
+          "engineering",
+          "control",
+          "execution",
+          "performance"
+        ]
+      },
+  
+      "paragraph_rules": {
+        "desktop_max_lines": 4,
+        "mobile_max_lines": 3,
+        "prefer_bullets": true,
+        "one_paragraph_one_idea": true,
+        "avoid_dense_technical_blocks": true
+      },
+  
+      "cta_language_rules": {
+        "primary_ctas": [
+          "Get Free Engineering Review",
+          "Request Project Cost Check",
+          "Request Technical Consultation"
+        ],
+        "secondary_ctas": [
+          "Explore Proven Projects",
+          "Download Engineering Resource",
+          "View Technical Proof"
+        ],
+        "avoid_ctas": [
+          "Buy Now",
+          "Limited Time Offer",
+          "Click Here",
+          "Best Price Guaranteed"
+        ],
+        "cta_microcopy_rules": [
+          "Mention no obligation when appropriate",
+          "Mention engineering team review",
+          "Mention response time only if operationally true",
+          "Avoid pressure-based sales language"
+        ]
+      },
+  
+      "case_study_rules": {
+        "required_structure": [
+          "project_name",
+          "location",
+          "area",
+          "challenge",
+          "engineering_decision",
+          "execution_detail",
+          "measured_result",
+          "risk_prevented",
+          "real_image"
+        ],
+        "measurable_proof_preferred": true,
+        "fake_metrics_forbidden": true,
+        "result_language": {
+          "weak": [
+            "good result",
+            "high quality",
+            "fast delivery"
+          ],
+          "strong": [
+            "reduced material waste by X%",
+            "completed in X days",
+            "covered X m²",
+            "prevented drainage failure",
+            "reduced rework"
+          ]
+        }
+      },
+  
+      "technical_content_rules": {
+        "principles": [
+          "Explain technical value in plain language",
+          "Use diagrams before long explanations",
+          "Connect each technical detail to risk reduction",
+          "Use short labels for diagram callouts",
+          "Avoid raw CAD-style complexity for general users"
+        ],
+        "diagram_callout_rules": {
+          "preview_max_callouts": 3,
+          "callout_label_max_words": 6,
+          "each_callout_must_explain": [
+            "risk reduction",
+            "waterproofing",
+            "drainage",
+            "material optimization",
+            "execution quality"
+          ]
+        }
+      },
+  
+      "trust_content_rules": {
+        "allowed_trust_elements": [
+          "real project images",
+          "real client logos",
+          "certificates",
+          "years of experience",
+          "completed project count",
+          "executed panel area",
+          "technical documentation",
+          "case studies"
+        ],
+        "rules": [
+          "Use only verifiable numbers",
+          "Avoid fake counters",
+          "Avoid fake testimonials",
+          "Prefer engineering proof over marketing badges"
+        ]
+      },
+  
+      "seo_content_rules": {
+        "rules": [
+          "One primary keyword per page",
+          "Use keyword in H1, title, URL, and meta description",
+          "Write for humans first",
+          "Use internal links to service pages, case studies, and resources",
+          "Use FAQ blocks on landing pages",
+          "Avoid keyword stuffing"
+        ],
+        "blog_article_structure": [
+          "Problem",
+          "Engineering cause",
+          "SIPANEL solution logic",
+          "Technical diagram or example",
+          "CTA"
+        ]
+      },
+  
+      "mobile_content_rules": {
+        "reduce_desktop_text_by": "40%-50%",
+        "one_primary_message_per_viewport": true,
+        "show_proof_before_long_explanation": true,
+        "collapse_secondary_details": true,
+        "use_accordions_for_technical_depth": true
+      },
+  
+      "language_rules": {
+        "english": {
+          "style": "clear_b2b_engineering_english",
+          "avoid": [
+            "too much sales language",
+            "overly poetic language"
+          ]
+        },
+        "persian": {
+          "style": "formal_professional_industrial_persian",
+          "avoid": [
+            "overly casual tone",
+            "inflated advertising language"
+          ]
+        }
+        ,
+        "arabic": {
+          "style": "formal_professional_industrial_arabic",
+          "direction": "rtl",
+          "avoid": [
+            "overly poetic language",
+            "casual slang",
+            "marketing exaggeration"
+          ]
+        },
+        "russian": {
+          "style": "clear_technical_b2b_russian",
+          "direction": "ltr",
+          "avoid": [
+            "literal machine translation",
+            "overly complex engineering jargon",
+            "aggressive sales tone"
+          ]
+        },
+        "translation_governance": {
+          "fallback_language": "en",
+          "technical_review_required": true,
+          "native_review_required": true,
+          "engineering_terms_must_be_verified": true,
+          "machine_translation_without_review_forbidden": true,
+          "translation_update_process": {
+            "source_language": "en",
+            "approval_required_before_publish": true
+          }
+        }
+      },
+  
+      "review_checklist": [
+        "Does every claim have proof or clear logic?",
+        "Is the mobile version shorter than desktop?",
+        "Does each section have one clear purpose?",
+        "Is CTA language engineering-first?",
+        "Are case studies measurable where possible?",
+        "Are technical terms explained clearly?",
+        "Are fake metrics avoided?",
+        "Does content support trust before conversion?"
+      ]
+    }
+  }

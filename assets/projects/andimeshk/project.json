@@ -1,0 +1,45 @@
+{
+              "project_name": "Andimeshk Stadium",
+              "slug": "andimeshk-stadium",
+              "location": "Andimeshk, Khuzestan, Iran",
+              "category": "Sports & Sandwich Panel Structures",
+              "project_type": "Double-curved stadium roofing system",
+              "system_type": "Sandwich Panel Roofing System",
+              "status": "Completed",
+              "area": "6,000 m²",
+              "challenge": "Execution of a large-scale double-curved stadium structure requiring precise sandwich panel coordination, structural alignment accuracy, waterproofing continuity, and controlled installation across complex arched roof geometry.",
+              "sipanel_solution": "SIPANEL engineered a coordinated sandwich panel roofing system specifically optimized for the stadium’s double-arched structure, including panel layout optimization, waterproofing integration, and structural coordination.",
+              "engineering_decision": "Engineering teams prepared detailed structural alignment studies, sandwich panel layout drawings, drainage coordination details, and installation sequencing strategies to ensure geometric precision and long-term roof performance.",
+              "execution_detail": "Installation teams followed engineered sequencing procedures, controlled fastening coordination, structural alignment checkpoints, and sealing verification workflows throughout execution to maintain roof accuracy and waterproofing continuity.",
+              "measured_result": "Successful delivery of a durable and visually integrated stadium facility with reliable sandwich panel roof performance, accurate curved geometry execution, and controlled installation quality.",
+              "risk_prevented": [
+                "Sandwich panel deformation",
+                "Drainage failures",
+                "Structural misalignment",
+                "Water penetration",
+                "Installation sequencing conflicts",
+                "Long-term roof maintenance issues"
+              ],
+              "primary_message": "Engineered sandwich panel roofing systems designed for complex large-span sports structures.",
+              "proof_points": [
+                "Double-curved roof coordination",
+                "Large-span sandwich panel execution",
+                "Waterproofing continuity",
+                "Controlled installation sequencing",
+                "Structural alignment precision"
+              ],
+              "metrics": {
+                "project_area": "6,000 m²",
+                "facility_type": "Sports stadium",
+                "system_type": "Sandwich panel roofing system",
+                "execution_focus": "Curved roof precision and waterproofing control"
+              },
+              "images": {
+                "hero_desktop": "./projects/andimeshk/andimeshk-hero-desktop.webp",
+                "hero_mobile": "./projects/andimeshk/andimeshk-hero-mobile.webp",
+                "card": "./projects/andimeshk/andimeshk-card.webp",
+                "gallery_large": "./projects/andimeshk/andimeshk-gallery-large.webp",
+                "installation": "./projects/andimeshk/andimeshk-installation.webp",
+                "technical_detail": "./projects/andimeshk/andimeshk-technical-detail.webp"
+              }
+            }

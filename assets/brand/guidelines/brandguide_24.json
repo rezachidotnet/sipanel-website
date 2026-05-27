@@ -1,0 +1,309 @@
+{
+    "page": {
+      "number": 24,
+      "title": "Navigation System",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define SIPANEL navigation structure, header behavior, mobile menu rules, language switching, sticky actions, accessibility, and responsive navigation patterns.",
+    "navigation_philosophy": {
+      "statement": "SIPANEL navigation must provide fast access to engineering proof, services, projects, resources, and conversion actions without creating complexity.",
+      "core_principles": [
+        "Simple structure",
+        "Fast technical access",
+        "Visible conversion path",
+        "Mobile-first usability",
+        "Clear active states",
+        "Multilingual consistency"
+      ]
+    },
+    "primary_navigation_structure": {
+      "required_items": [
+        "Home",
+        "Systems",
+        "Projects",
+        "Process",
+        "About",
+        "Contact"
+      ],
+      "maximum_items": 6,
+      "rules": [
+        "Keep primary navigation short.",
+        "Avoid deep menu nesting.",
+        "Prioritize engineering and conversion pages.",
+        "Use clear labels instead of marketing-style names."
+      ]
+    },
+    "systems_navigation_structure": {
+      "main_systems": [
+        {
+          "label": "Sandwich Panel Systems",
+          "url": "/sandwich-panel-systems"
+        },
+        {
+          "label": "ZIP Tech / Standing Seam Roofing",
+          "url": "/zip-tech-standing-seam-roofing"
+        },
+        {
+          "label": "Aluminium Cladding & Covering",
+          "url": "/aluminium-cladding-covering"
+        }
+      ],
+      "rules": [
+        "Systems menu must represent all core SIPANEL service categories.",
+        "Do not position SIPANEL as a sandwich-panel-only company.",
+        "Use Systems as the parent navigation label instead of Products.",
+        "Keep top-level navigation short and expose service categories inside Systems dropdown or drawer."
+      ]
+    },
+    "header_layout": {
+      "desktop": {
+        "layout": "logo_left_menu_center_cta_language_right",
+        "height": "80px-88px",
+        "behavior": "sticky_on_scroll"
+      },
+      "tablet": {
+        "layout": "logo_left_compact_menu_cta_right",
+        "behavior": "adaptive_collapsed_navigation"
+      },
+      "mobile": {
+        "layout": "logo_left_menu_icon_right",
+        "behavior": "sticky_header_with_bottom_cta"
+      }
+    },
+    "sticky_behavior": {
+      "enabled": true,
+      "rules": [
+        "Header remains visible during scroll.",
+        "Background may become solid after scroll.",
+        "Use subtle shadow only when needed.",
+        "Do not reduce logo clarity.",
+        "Avoid blocking important content."
+      ]
+    },
+    "mobile_navigation": {
+      "menu_type": "slide_panel_or_fullscreen_drawer",
+      "rules": [
+        "Large touch targets required.",
+        "Language selector appears near top.",
+        "Primary CTA remains visible.",
+        "Navigation depth should remain shallow.",
+        "Close menu after navigation selection."
+      ],
+      "minimum_touch_target": "48px"
+    },
+    "language_switcher": {
+      "enabled": true,
+      "supported_languages": [
+        {
+          "code": "en",
+          "label": "EN",
+          "direction": "ltr"
+        },
+        {
+          "code": "fa",
+          "label": "FA",
+          "direction": "rtl"
+        },
+        {
+          "code": "ar",
+          "label": "AR",
+          "direction": "rtl"
+        },
+        {
+          "code": "ru",
+          "label": "RU",
+          "direction": "ltr"
+        }
+      ],
+      "desktop_behavior": "inline_tabs_or_dropdown",
+      "mobile_behavior": "inside_mobile_menu_top",
+      "rules": [
+        "Persist selected language.",
+        "Update HTML lang attribute.",
+        "Update HTML dir attribute.",
+        "Preserve current route when switching language.",
+        "Avoid flag-only selectors."
+      ]
+    },
+    "active_state_rules": {
+      "desktop": [
+        "Use orange accent for active navigation item.",
+        "Avoid heavy underline decoration.",
+        "Maintain readable contrast."
+      ],
+      "mobile": [
+        "Show clear active item state.",
+        "Use background or border accent.",
+        "Do not rely on color alone."
+      ]
+    },
+    "cta_navigation_rules": {
+      "primary_header_cta": "Get Free Engineering Review",
+      "mobile_sticky_cta": "Free Engineering Review",
+      "secondary_mobile_actions": [
+        "Call",
+        "WhatsApp"
+      ],
+      "rules": [
+        "Primary CTA must remain accessible from navigation.",
+        "CTA should not compete with menu readability.",
+        "Use engineering-first CTA language."
+      ]
+    },
+    "contact_data_rules": {
+      "source_of_truth": "production_contact_config",
+      "hardcoded_contact_values_forbidden": true,
+      "allowed_placeholders": [
+        "[PHONE_NUMBER]",
+        "[WHATSAPP_NUMBER]",
+        "[EMAIL_ADDRESS]"
+      ],
+      "rules": [
+        "Do not use realistic demo phone numbers in navigation examples.",
+        "Do not copy phone numbers from mockup images into production UI.",
+        "Header, mobile drawer, sticky CTA, footer, and contact buttons must read contact data only from production_contact_config.",
+        "If production contact data is missing, display CTA labels only, not fake numbers."
+      ],
+      "fallback_labels": {
+        "phone": "Call Us",
+        "whatsapp": "WhatsApp",
+        "email": "Email Us"
+      }
+    },
+    "technical_quick_access": {
+      "enabled": true,
+      "recommended_items": [
+        "Sandwich Panel Details",
+        "ZIP Tech Roofing Details",
+        "Standing Seam Waterproofing",
+        "Aluminium Cladding Details",
+        "Shop Drawings",
+        "BOM / MTO"
+      ],
+      "rules": [
+        "Keep technical resources reachable within 1-2 taps.",
+        "Avoid hiding key engineering content.",
+        "Use contextual shortcuts where useful."
+      ]
+    },
+    "breadcrumbs": {
+      "enabled": true,
+      "usage": [
+        "SEO landing pages",
+        "Case studies",
+        "Resource pages",
+        "Blog articles"
+      ],
+      "rules": [
+        "Use semantic breadcrumb markup.",
+        "Keep hierarchy short.",
+        "Support RTL direction."
+      ]
+    },
+    "footer_navigation": {
+      "required_sections": [
+        "Company",
+        "Services",
+        "Resources",
+        "Contact"
+      ],
+      "rules": [
+        "Repeat important links.",
+        "Use dark background preferred.",
+        "Keep footer clean and structured.",
+        "Include contact details clearly."
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "Navigation must use semantic HTML.",
+        "Mobile menu must be keyboard accessible.",
+        "Focus states required.",
+        "Menu open and close states must be announced.",
+        "Skip link to main content recommended."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Mirror navigation alignment in RTL.",
+        "Flip directional icons.",
+        "Use logical spacing properties.",
+        "Preserve menu order clarity across languages."
+      ]
+    },
+    "motion_rules": {
+      "desktop": [
+        "Use subtle hover transitions.",
+        "Avoid animated navigation clutter."
+      ],
+      "mobile": [
+        "Drawer transition duration 200ms-250ms.",
+        "No bounce effects.",
+        "Respect reduced-motion preferences."
+      ]
+    },
+    "analytics_tracking": {
+      "required_events": [
+        "mobile_menu_open",
+        "mobile_menu_item_click",
+        "header_cta_click",
+        "language_switcher_open",
+        "language_change",
+        "technical_quick_access_click",
+        "footer_link_click"
+      ],
+      "tracked_parameters": [
+        "nav_item",
+        "cta_text",
+        "language",
+        "device_type",
+        "page_url"
+      ]
+    },
+    "forbidden_navigation_patterns": [
+      "Too many menu items",
+      "Deep nested menus",
+      "Hidden primary CTA",
+      "Hover-only navigation",
+      "Unclear active state",
+      "Tiny mobile menu items",
+      "Broken RTL menu alignment",
+      "Flag-only language selector"
+    ],
+    "approved_navigation_characteristics": [
+      "Simple",
+      "Technical",
+      "Fast",
+      "Accessible",
+      "Mobile-first",
+      "Conversion-aware",
+      "Multilingual-ready"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Navigation philosophy",
+        "Header layout rules",
+        "Desktop navigation example",
+        "Mobile menu example",
+        "Language switcher behavior",
+        "Technical quick access system",
+        "Correct vs incorrect navigation patterns"
+      ],
+      "visual_direction": [
+        "Header layout mockups",
+        "Mobile drawer wireframes",
+        "Sticky CTA examples",
+        "RTL navigation comparison",
+        "Active state samples"
+      ]
+    },
+    "implementation_notes": [
+      "Navigation must be implemented mobile-first and tested across all supported languages.",
+      "Primary conversion access must remain visible without overwhelming the interface.",
+      "Technical resource access is a key SIPANEL differentiator and should never feel buried.",
+      "Navigation must support SEO, accessibility, analytics, and RTL behavior from the beginning."
+    ]
+  }

@@ -1,0 +1,398 @@
+{
+  "page": {
+    "number": 35,
+    "title": "Mobile Experience Showcase",
+    "section": "Experience Showcases",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Show how the SIPANEL mobile experience applies industrial envelope branding, UX, engineering storytelling, technical interaction rules, conversion systems, and consultant-grade usability in a mobile-first industrial browsing environment.",
+  "showcase_philosophy": {
+    "statement": "The SIPANEL mobile experience must feel fast, clear, technical, consultant-grade, and conversion-ready for industrial users working in real field conditions.",
+    "core_principles": [
+      "Immediate value clarity",
+      "Thumb-friendly interaction",
+      "Proof before long explanation",
+      "Reduced technical density",
+      "Sticky conversion access",
+      "Fast technical resource retrieval",
+      "Envelope-system clarity",
+      "Field-ready usability",
+      "Consultative mobile interaction",
+      "Engineering-first communication"
+    ]
+  },
+  "mobile_experience_goals": [
+    {
+      "goal": "Communicate Trust Quickly",
+      "description": "Show industrial envelope engineering value, technical proof, and CTA access within the first mobile viewport."
+    },
+    {
+      "goal": "Reduce Field Friction",
+      "description": "Support users browsing during site visits, façade inspections, procurement review, envelope coordination, or technical consultation."
+    },
+    {
+      "goal": "Improve Mobile Conversion",
+      "description": "Make RFQ, WhatsApp, phone, engineering consultation, and technical resource actions easy to access."
+    },
+    {
+      "goal": "Support Multi-System Engineering Access",
+      "description": "Ensure users can quickly access sandwich panel, aluminum cladding, ZIP roofing, façade, and envelope engineering content from mobile."
+    }
+  ],
+  "mobile_homepage_flow": {
+    "section_1": {
+      "name": "Mobile Hero",
+      "required_elements": [
+        "Short engineering headline",
+        "Concise subheadline",
+        "Primary CTA",
+        "Trust microcopy",
+        "Industrial visual preview",
+        "Envelope engineering positioning",
+        "System-category preview"
+      ],
+      "rules": [
+        "Headline maximum 3 lines.",
+        "CTA visible above fold.",
+        "Avoid visual overcrowding.",
+        "Support sandwich panels, cladding, and ZIP systems equally.",
+        "Avoid roof-only positioning."
+      ],
+      "recommended_headline_examples": [
+        "Industrial Envelope Engineering Solutions",
+        "Sandwich Panel, Cladding & ZIP Roofing Systems",
+        "Engineering-Led Industrial Envelope Systems"
+      ]
+    },
+    "section_2": {
+      "name": "Trust Snapshot",
+      "required_elements": [
+        "Verified metrics",
+        "Project scale",
+        "Industrial proof",
+        "Envelope-system diversity"
+      ],
+      "rules": [
+        "Use compact metric cards.",
+        "Avoid fake counters.",
+        "Keep proof readable.",
+        "Show façade and roofing proof equally."
+      ],
+      "approved_metrics": [
+        "Industrial envelope area",
+        "ACP façade coverage",
+        "Standing seam roofing projects",
+        "Engineering coordination metrics",
+        "Material optimization results"
+      ]
+    },
+    "section_3": {
+      "name": "Engineering Proof Cards",
+      "required_elements": [
+        "Shop drawing preview",
+        "Waterproofing logic",
+        "Material optimization",
+        "ACP façade section",
+        "Standing seam detail",
+        "Envelope transition diagram"
+      ],
+      "rules": [
+        "Use accordion or swipe behavior.",
+        "Limit visible technical detail.",
+        "Allow tap-to-expand.",
+        "Support fullscreen technical viewing.",
+        "Use envelope-system categorization."
+      ]
+    },
+    "section_4": {
+      "name": "Case Study Swipe",
+      "required_elements": [
+        "Project image",
+        "Project name",
+        "Location",
+        "Challenge",
+        "Result",
+        "CTA",
+        "System type"
+      ],
+      "rules": [
+        "One card visible at a time.",
+        "Use horizontal snap scroll.",
+        "CTA after every second case study.",
+        "Balance roofing, façade, and mixed-envelope projects.",
+        "Show engineering challenge summaries clearly."
+      ]
+    },
+    "section_5": {
+      "name": "Technical Resource Access",
+      "required_elements": [
+        "Resource cards",
+        "Download CTA",
+        "Technical previews",
+        "System-category filters",
+        "Engineering references"
+      ],
+      "rules": [
+        "Use expandable cards.",
+        "Avoid dense resource descriptions.",
+        "Keep download action clear.",
+        "Support consultant and architect access.",
+        "Provide quick access to façade and roofing details."
+      ]
+    },
+    "section_6": {
+      "name": "Mobile RFQ Entry",
+      "required_elements": [
+        "Step-based form",
+        "Quick contact options",
+        "File upload",
+        "Confirmation message",
+        "System-category selector",
+        "Consultation intent selection"
+      ],
+      "rules": [
+        "Limit visible inputs per step.",
+        "Support phone and WhatsApp actions.",
+        "Make project details optional when possible.",
+        "Support engineering consultation requests.",
+        "Allow drawing and PDF upload from mobile."
+      ]
+    }
+  },
+  "sticky_mobile_cta": {
+    "enabled": true,
+    "position": "bottom_safe_zone",
+    "primary_action": "Free Engineering Review",
+    "secondary_actions": [
+      "Call",
+      "WhatsApp",
+      "Envelope Consultation"
+    ],
+    "rules": [
+      "Minimum height 48px.",
+      "Do not block content.",
+      "Hide or reduce near footer.",
+      "Keep actions thumb-accessible.",
+      "Support fast engineering communication.",
+      "Use consultation-focused language."
+    ]
+  },
+  "mobile_interaction_patterns": {
+    "approved_patterns": [
+      "Tap-to-expand cards",
+      "Swipeable case studies",
+      "Fullscreen diagram viewer",
+      "Step-based RFQ form",
+      "Sticky CTA",
+      "Quick access bar",
+      "System-category selector",
+      "Expandable engineering sections",
+      "Swipeable façade and roofing galleries"
+    ],
+    "rules": [
+      "Avoid hover-dependent behavior.",
+      "Use immediate tap feedback.",
+      "Keep gestures discoverable.",
+      "Avoid complex nested interactions.",
+      "Support engineering resource navigation.",
+      "Prioritize field usability."
+    ]
+  },
+  "technical_diagram_mobile_behavior": {
+    "preview_mode": [
+      "Show cropped diagram preview.",
+      "Use maximum 3 annotations.",
+      "Include tap-to-view-detail label.",
+      "Use simplified engineering overlays.",
+      "Prioritize façade and transition readability."
+    ],
+    "fullscreen_mode": [
+      "Support pinch-to-zoom.",
+      "Support drag-to-pan.",
+      "Keep close button visible.",
+      "Preserve scroll position after closing.",
+      "Support high-resolution façade and standing seam diagrams.",
+      "Allow annotation visibility toggle."
+    ]
+  },
+  "mobile_content_rules": {
+    "rules": [
+      "Reduce desktop text by 40%-50%.",
+      "Use one primary message per viewport.",
+      "Prefer bullets over long paragraphs.",
+      "Collapse secondary technical details.",
+      "Show proof before explanation.",
+      "Use progressive technical disclosure.",
+      "Prioritize engineering clarity over marketing copy."
+    ],
+    "typography": {
+      "headline_max_lines": 3,
+      "paragraph_max_lines": 4,
+      "minimum_body_size": "16px",
+      "minimum_button_text_size": "15px"
+    }
+  },
+  "mobile_visual_rules": {
+    "rules": [
+      "Use mobile-optimized image crops.",
+      "Avoid desktop-wide visuals on mobile.",
+      "Compress images using WebP or AVIF.",
+      "Lazy-load below-the-fold assets.",
+      "Preserve technical detail readability.",
+      "Use façade and standing seam imagery.",
+      "Avoid roof-only visual storytelling.",
+      "Use consultant-grade technical imagery."
+    ],
+    "preferred_visuals": [
+      "ACP façade sections",
+      "Standing seam details",
+      "Envelope transition diagrams",
+      "Industrial façade photography",
+      "Technical coordination visuals",
+      "Rainscreen airflow diagrams"
+    ]
+  },
+  "mobile_performance_targets": {
+    "lcp": "under 2.5 seconds",
+    "load_time": "under 3 seconds",
+    "cls": "minimal",
+    "initial_payload": "under 2MB",
+    "rules": [
+      "Preload hero image.",
+      "Delay heavy diagrams until interaction.",
+      "Avoid autoplay video backgrounds.",
+      "Reduce animation complexity.",
+      "Prioritize visible engineering proof loading.",
+      "Optimize fullscreen diagram performance."
+    ]
+  },
+  "mobile_accessibility_rules": {
+    "requirements": [
+      "Minimum touch target 48px.",
+      "WCAG AA contrast.",
+      "Visible focus states.",
+      "Readable typography.",
+      "Accessible form labels.",
+      "Reduced-motion support.",
+      "Accessible engineering diagram summaries.",
+      "Readable technical terminology."
+    ]
+  },
+  "rtl_and_multilingual_mobile_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror mobile menu layout.",
+      "Flip directional icons.",
+      "Allow CTA text expansion.",
+      "Preserve touch accessibility in RTL.",
+      "Keep language switcher inside mobile menu.",
+      "Preserve technical terminology consistency.",
+      "Support façade and roofing terminology translation."
+    ]
+  },
+  "mobile_conversion_architecture": {
+    "primary_conversion_paths": [
+      "Engineering consultation",
+      "RFQ submission",
+      "Envelope review",
+      "Cladding consultation",
+      "ZIP roofing review"
+    ],
+    "secondary_conversion_paths": [
+      "Resource download",
+      "Case study exploration",
+      "Technical detail review",
+      "WhatsApp engineering discussion"
+    ],
+    "rules": [
+      "Reduce friction before RFQ.",
+      "Support low-commitment technical interaction.",
+      "Expose WhatsApp consultation clearly.",
+      "Allow fast system-specific engagement."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "mobile_hero_cta_click",
+      "sticky_cta_click",
+      "sticky_call_click",
+      "sticky_whatsapp_click",
+      "mobile_case_study_swipe",
+      "mobile_diagram_open",
+      "mobile_rfq_start",
+      "mobile_rfq_submit",
+      "mobile_resource_download",
+      "system_category_interaction"
+    ],
+    "tracked_parameters": [
+      "device_type",
+      "viewport_width",
+      "language",
+      "section_id",
+      "cta_text",
+      "interaction_type",
+      "system_category",
+      "roofing_type",
+      "cladding_type",
+      "envelope_type"
+    ]
+  },
+  "forbidden_mobile_patterns": [
+    "Desktop layout forced onto mobile",
+    "CTA below first mobile scroll",
+    "Tiny touch targets",
+    "Dense technical text blocks",
+    "Unreadable diagrams",
+    "Hover-only interactions",
+    "Heavy animation",
+    "Large uncompressed images",
+    "Long multi-field forms",
+    "Roof-only mobile storytelling",
+    "Missing façade or cladding representation",
+    "Contractor-style mobile UX"
+  ],
+  "approved_mobile_characteristics": [
+    "Fast",
+    "Readable",
+    "Technical",
+    "Thumb-friendly",
+    "Proof-driven",
+    "Conversion-ready",
+    "Field-usable",
+    "Envelope-focused",
+    "Consultant-grade",
+    "Engineering-first",
+    "Architecturally credible"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Mobile showcase philosophy",
+      "Mobile homepage flow",
+      "Sticky CTA behavior",
+      "Interaction patterns",
+      "Diagram viewer behavior",
+      "Mobile RFQ flow",
+      "Envelope-system mobile architecture",
+      "Correct vs incorrect mobile examples"
+    ],
+    "visual_direction": [
+      "Mobile screen mockups",
+      "Scroll flow map",
+      "Sticky CTA preview",
+      "Swipe card example",
+      "Fullscreen diagram viewer example",
+      "Mobile RFQ step screens",
+      "ACP façade mobile preview",
+      "Standing seam diagram interaction",
+      "Envelope transition mobile layouts"
+    ]
+  },
+  "implementation_notes": [
+    "The mobile experience must be treated as the primary SIPANEL digital experience.",
+    "Mobile proof, CTA access, and technical readability directly affect conversion quality.",
+    "All mobile showcases should be tested on real devices and across RTL languages.",
+    "Mobile UX must support both marketing browsing and real industrial field usage.",
+    "Mobile architecture must support sandwich panels, aluminum cladding, ZIP roofing systems, façade engineering, and industrial envelope coordination equally."
+  ]
+}

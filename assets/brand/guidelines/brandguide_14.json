@@ -1,0 +1,277 @@
+{
+    "page": {
+      "number": 14,
+      "title": "Design Tokens",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the foundational design tokens used across SIPANEL digital products, frontend systems, UI components, and responsive experiences.",
+    "token_philosophy": {
+      "statement": "Design tokens create consistency, scalability, and engineering-grade implementation accuracy across all SIPANEL interfaces.",
+      "core_principles": [
+        "Single source of truth",
+        "System consistency",
+        "Frontend scalability",
+        "Responsive predictability",
+        "Multilingual adaptability",
+        "Maintainable implementation"
+      ]
+    },
+    "color_tokens": {
+      "color_primary": {
+        "value": "#FF6A00",
+        "usage": "Primary CTA and engineering emphasis"
+      },
+      "color_black": {
+        "value": "#0F1113",
+        "usage": "Primary dark surfaces"
+      },
+      "color_black_deep": {
+        "value": "#050607",
+        "usage": "Premium dark sections"
+      },
+      "color_white": {
+        "value": "#FFFFFF",
+        "usage": "Primary light background and inverse text"
+      },
+      "color_gray_100": {
+        "value": "#F5F6F7",
+        "usage": "Light backgrounds"
+      },
+      "color_gray_300": {
+        "value": "#D9DADD",
+        "usage": "Borders and dividers"
+      },
+      "color_gray_500": {
+        "value": "#68686B",
+        "usage": "Secondary text"
+      },
+      "color_success": {
+        "value": "#1E8E5A",
+        "usage": "Success states"
+      },
+      "color_warning": {
+        "value": "#D98E04",
+        "usage": "Warning states"
+      },
+      "color_error": {
+        "value": "#C62828",
+        "usage": "Error states"
+      }
+    },
+    "typography_tokens": {
+      "font_primary": {
+        "value": "Inter, Arial, sans-serif"
+      },
+      "font_secondary": {
+        "value": "Sora, Inter, sans-serif"
+      },
+      "font_mono": {
+        "value": "JetBrains Mono, monospace"
+      },
+      "font_weight_regular": {
+        "value": 400
+      },
+      "font_weight_medium": {
+        "value": 500
+      },
+      "font_weight_semibold": {
+        "value": 600
+      },
+      "font_weight_bold": {
+        "value": 700
+      }
+    },
+    "font_size_tokens": {
+      "font_display": {
+        "desktop": "72px",
+        "mobile": "42px"
+      },
+      "font_h1": {
+        "desktop": "56px",
+        "mobile": "36px"
+      },
+      "font_h2": {
+        "desktop": "40px",
+        "mobile": "30px"
+      },
+      "font_h3": {
+        "desktop": "32px",
+        "mobile": "24px"
+      },
+      "font_h4": {
+        "desktop": "24px",
+        "mobile": "20px"
+      },
+      "font_body_large": {
+        "desktop": "20px",
+        "mobile": "18px"
+      },
+      "font_body": {
+        "desktop": "18px",
+        "mobile": "16px"
+      },
+      "font_body_small": {
+        "desktop": "16px",
+        "mobile": "14px"
+      },
+      "font_caption": {
+        "desktop": "14px",
+        "mobile": "12px"
+      }
+    },
+    "spacing_tokens": {
+      "space_xs": "4px",
+      "space_sm": "8px",
+      "space_md": "16px",
+      "space_lg": "24px",
+      "space_xl": "40px",
+      "space_xxl": "64px",
+      "space_section_mobile": "56px",
+      "space_section_desktop": "96px"
+    },
+    "layout_tokens": {
+      "container_max_width": "1200px",
+      "container_padding_mobile": "20px",
+      "container_padding_tablet": "32px",
+      "container_padding_desktop": "40px",
+      "grid_gutter": "24px",
+      "grid_columns_desktop": 12,
+      "grid_columns_tablet": 6,
+      "grid_columns_mobile": 1
+    },
+    "radius_tokens": {
+      "radius_sm": "4px",
+      "radius_md": "8px",
+      "radius_lg": "12px",
+      "radius_xl": "16px",
+      "rules": [
+        "Avoid overly rounded playful UI.",
+        "Maintain industrial precision."
+      ]
+    },
+    "shadow_tokens": {
+      "shadow_sm": "0 2px 6px rgba(0,0,0,0.08)",
+      "shadow_md": "0 6px 16px rgba(0,0,0,0.12)",
+      "shadow_lg": "0 12px 32px rgba(0,0,0,0.16)",
+      "rules": [
+        "Use shadows subtly.",
+        "Avoid decorative glow effects.",
+        "Support hierarchy, not decoration."
+      ]
+    },
+    "border_tokens": {
+      "border_default": "1px solid #D9DADD",
+      "border_dark": "1px solid rgba(255,255,255,0.12)",
+      "border_focus": "2px solid #FF6A00"
+    },
+    "motion_tokens": {
+      "duration_fast": "150ms",
+      "duration_standard": "250ms",
+      "duration_slow": "400ms",
+      "easing_standard": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "easing_emphasized": "cubic-bezier(0.2, 0, 0, 1)",
+      "rules": [
+        "Avoid excessive motion.",
+        "Prioritize responsive interaction.",
+        "Respect prefers-reduced-motion."
+      ]
+    },
+    "z_index_tokens": {
+      "base": 1,
+      "dropdown": 100,
+      "sticky": 200,
+      "overlay": 500,
+      "modal": 1000,
+      "toast": 1200
+    },
+    "breakpoint_tokens": {
+      "mobile_small": "320px",
+      "mobile_standard": "480px",
+      "tablet": "768px",
+      "desktop": "1024px",
+      "desktop_large": "1440px"
+    },
+    "component_tokens": {
+      "button_height": {
+        "mobile": "48px",
+        "desktop": "52px"
+      },
+      "input_height": {
+        "mobile": "48px",
+        "desktop": "52px"
+      },
+      "navbar_height": {
+        "mobile": "72px",
+        "desktop": "88px"
+      },
+      "card_padding": {
+        "mobile": "20px",
+        "desktop": "24px"
+      }
+    },
+    "technical_diagram_tokens": {
+      "annotation_line_width": "2px",
+      "annotation_color": "#FF6A00",
+      "diagram_grid_opacity": "0.08",
+      "callout_radius": "6px",
+      "callout_padding": "12px"
+    },
+    "rtl_tokens": {
+      "rtl_enabled": true,
+      "logical_spacing_required": true,
+      "mirrored_directional_icons": true,
+      "rules": [
+        "Use logical CSS properties.",
+        "Avoid hardcoded left/right spacing.",
+        "Support dynamic layout direction."
+      ]
+    },
+    "accessibility_tokens": {
+      "minimum_touch_target": "48px",
+      "focus_outline": "2px solid #FF6A00",
+      "focus_outline_offset": "2px",
+      "minimum_contrast_ratio": "4.5:1"
+    },
+    "implementation_rules": [
+      "All frontend components must use tokens instead of hardcoded values.",
+      "Do not introduce unofficial spacing or colors.",
+      "All tokens must remain synchronized between design and code.",
+      "Use semantic token naming conventions.",
+      "Maintain responsive token behavior across devices."
+    ],
+    "token_naming_convention": {
+      "format": "category-purpose-variant",
+      "examples": [
+        "color-primary",
+        "space-section-desktop",
+        "font-body-large",
+        "shadow-md",
+        "radius-lg"
+      ]
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Token philosophy",
+        "Color token table",
+        "Typography tokens",
+        "Spacing and layout tokens",
+        "Motion and interaction tokens",
+        "Responsive breakpoint tokens",
+        "Implementation examples"
+      ],
+      "visual_direction": [
+        "Token specimen grids",
+        "Responsive token diagrams",
+        "Frontend variable examples",
+        "Dark and light UI demonstrations"
+      ]
+    },
+    "implementation_notes": [
+      "Design tokens are the foundation of SIPANEL's frontend consistency and scalability.",
+      "Every design decision should map back to a reusable token.",
+      "Tokens must be synchronized across Figma, frontend frameworks, and documentation.",
+      "Avoid introducing custom values outside the approved token system."
+    ]
+  }

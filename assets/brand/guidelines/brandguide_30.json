@@ -1,0 +1,419 @@
+{
+  "page": {
+    "number": 30,
+    "title": "CTA Copy Guidelines",
+    "section": "Content & Conversion System",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define how SIPANEL writes engineering-focused CTA copy that supports industrial envelope credibility, reduces friction, and guides qualified users toward consultation, technical evaluation, RFQ submission, and system-specific engagement.",
+  "cta_philosophy": {
+    "statement": "SIPANEL CTA copy should feel clear, professional, technically relevant, consultative, and action-oriented without using aggressive sales language.",
+    "core_principles": [
+      "Clarity before persuasion",
+      "Engineering-first wording",
+      "Low-friction communication",
+      "Outcome-focused language",
+      "Trust-driven conversion",
+      "Contextual relevance",
+      "Consultative positioning",
+      "Envelope-system alignment",
+      "Professional technical guidance",
+      "Multi-system conversion architecture"
+    ]
+  },
+  "primary_cta_goals": [
+    {
+      "goal": "Encourage Qualified RFQs",
+      "description": "Guide serious industrial clients toward engineering consultation, façade coordination review, roofing evaluation, and project planning."
+    },
+    {
+      "goal": "Reduce User Hesitation",
+      "description": "Use technically supportive language that feels consultative instead of sales-driven."
+    },
+    {
+      "goal": "Support Technical Trust",
+      "description": "Reinforce SIPANEL as an industrial envelope engineering partner rather than a generic supplier or contractor."
+    },
+    {
+      "goal": "Support Multi-System Consultation",
+      "description": "Allow users to engage based on sandwich panels, aluminum cladding, ZIP roofing, façade systems, or industrial envelope engineering needs."
+    }
+  ],
+  "cta_voice_characteristics": {
+    "approved_characteristics": [
+      "Professional",
+      "Technical",
+      "Clear",
+      "Helpful",
+      "Confident",
+      "Practical",
+      "Consultative",
+      "Engineering-focused",
+      "Industrial",
+      "Trustworthy"
+    ],
+    "forbidden_characteristics": [
+      "Pushy",
+      "Urgent sales pressure",
+      "Overly emotional",
+      "Generic marketing language",
+      "Consumer-commerce style",
+      "Contractor-only wording",
+      "Aggressive lead capture"
+    ]
+  },
+  "cta_structure_rules": {
+    "recommended_formula": [
+      "Action",
+      "Technical value",
+      "Clear outcome"
+    ],
+    "rules": [
+      "Keep CTA labels short.",
+      "Use strong verbs.",
+      "Communicate the expected outcome.",
+      "Avoid vague actions.",
+      "Match CTA wording to page intent.",
+      "Use engineering consultation language where appropriate.",
+      "Align CTA wording with the relevant system category.",
+      "Avoid overly generic RFQ language on technical pages."
+    ]
+  },
+  "primary_cta_examples": {
+    "approved": [
+      "Get Free Engineering Review",
+      "Request Technical Consultation",
+      "Request Project Cost Check",
+      "Start Project Evaluation",
+      "Review Technical Solution",
+      "Request Envelope Engineering Review",
+      "Discuss Cladding System",
+      "Review ZIP Roofing Solution",
+      "Request Façade Consultation",
+      "Request Standing Seam Review",
+      "Request Technical Coordination",
+      "Evaluate Industrial Envelope System"
+    ],
+    "system_specific_examples": {
+      "sandwich_panel_systems": [
+        "Optimize Panel Layout",
+        "Review Sandwich Panel System",
+        "Request Cold Storage Evaluation"
+      ],
+      "aluminum_cladding_systems": [
+        "Discuss ACP Façade System",
+        "Request Cladding Engineering Review",
+        "Review Façade Coordination"
+      ],
+      "zip_roofing_systems": [
+        "Review Standing Seam Roof",
+        "Request ZIP Roofing Consultation",
+        "Analyze Roof Expansion Strategy"
+      ],
+      "industrial_envelope_systems": [
+        "Request Envelope Engineering Review",
+        "Evaluate Roof-to-Façade Coordination",
+        "Review Thermal Envelope Strategy"
+      ]
+    },
+    "usage": [
+      "Hero sections",
+      "RFQ flows",
+      "Sticky mobile CTA",
+      "Technical landing pages",
+      "Service pages",
+      "Envelope engineering pages",
+      "Façade and roofing system pages"
+    ]
+  },
+  "secondary_cta_examples": {
+    "approved": [
+      "Explore Proven Projects",
+      "View Technical Proof",
+      "Download Engineering Resource",
+      "Review Case Study",
+      "View Shop Drawing Example",
+      "Explore Installation Process",
+      "View ACP Detail",
+      "Explore Standing Seam System",
+      "Download Envelope Guide",
+      "Review Technical Diagram",
+      "Explore Similar Envelope Projects"
+    ],
+    "usage": [
+      "Case studies",
+      "Resource sections",
+      "Technical explanation areas",
+      "Supportive conversion paths",
+      "Façade system sections",
+      "ZIP roofing resources",
+      "Envelope engineering content"
+    ]
+  },
+  "micro_cta_examples": {
+    "approved": [
+      "Learn More",
+      "View Details",
+      "Open Diagram",
+      "Expand Technical View",
+      "See Full Specification",
+      "View Section Detail",
+      "Compare Systems",
+      "View Transition Detail",
+      "Review Engineering Note"
+    ],
+    "usage": [
+      "Cards",
+      "Tables",
+      "Technical diagrams",
+      "Expandable sections",
+      "Engineering references",
+      "Comparison modules"
+    ]
+  },
+  "forbidden_cta_examples": [
+    "Buy Now",
+    "Act Fast",
+    "Limited Offer",
+    "Click Here",
+    "Best Deal",
+    "Order Today",
+    "Guaranteed Lowest Price",
+    "Instant Purchase",
+    "Cheap Roofing",
+    "Lowest Cost Cladding",
+    "Best Contractor"
+  ],
+  "contextual_cta_rules": {
+    "homepage": [
+      "Focus on engineering consultation.",
+      "Use proof-driven wording.",
+      "Avoid high-pressure conversion language.",
+      "Expose cladding, roofing, and envelope consultation paths clearly."
+    ],
+    "service_pages": [
+      "Connect CTA to technical solution.",
+      "Emphasize engineering review or consultation.",
+      "Use system-specific wording."
+    ],
+    "case_studies": [
+      "Encourage users to explore similar solutions.",
+      "Connect proof to next action.",
+      "Use engineering-focused follow-up CTAs."
+    ],
+    "resource_pages": [
+      "Focus on educational value.",
+      "Use download-oriented CTAs.",
+      "Encourage technical consultation after educational engagement."
+    ],
+    "technical_pages": [
+      "Use technical evaluation language.",
+      "Connect CTA to engineering inspection or review.",
+      "Avoid generic RFQ wording."
+    ],
+    "façade_pages": [
+      "Use façade engineering consultation language.",
+      "Support ACP and cladding coordination workflows."
+    ],
+    "zip_roofing_pages": [
+      "Use standing seam and movement-analysis terminology.",
+      "Support roofing coordination consultation."
+    ]
+  },
+  "mobile_cta_rules": {
+    "rules": [
+      "Keep labels concise.",
+      "Ensure CTA readability within thumb zones.",
+      "Use one dominant CTA per viewport.",
+      "Avoid stacked competing CTAs.",
+      "Use fast-access engineering communication methods.",
+      "Support mobile RFQ uploads."
+    ],
+    "sticky_cta_examples": [
+      "Free Engineering Review",
+      "Call Engineering Team",
+      "WhatsApp Consultation",
+      "Request Envelope Review",
+      "Discuss Cladding System"
+    ]
+  },
+  "cta_positioning_rules": {
+    "rules": [
+      "Place CTA after value explanation.",
+      "Use proof before high-commitment actions.",
+      "Repeat CTA contextually every 2-3 sections.",
+      "Avoid CTA overload.",
+      "Match CTA intensity to user intent.",
+      "Use educational CTAs before RFQ CTAs where appropriate."
+    ],
+    "hero_rules": [
+      "Primary CTA above fold.",
+      "Secondary CTA optional.",
+      "Trust microcopy near CTA preferred.",
+      "Support multi-system consultation pathways."
+    ]
+  },
+  "trust_support_microcopy": {
+    "approved_examples": [
+      "Reviewed by experienced engineering specialists",
+      "Technical review tailored to your project",
+      "No obligation engineering consultation",
+      "Response within one business day",
+      "Engineering guidance for industrial envelope systems",
+      "Consult with façade and roofing specialists",
+      "Technical coordination support available"
+    ],
+    "rules": [
+      "Keep supporting text concise.",
+      "Reduce perceived friction.",
+      "Reinforce professionalism.",
+      "Support engineering credibility.",
+      "Avoid sales-heavy reassurance language."
+    ]
+  },
+  "conversion_intent_categories": [
+    "RFQ submission",
+    "Engineering consultation",
+    "Envelope review",
+    "Cladding consultation",
+    "ZIP roofing evaluation",
+    "Technical coordination",
+    "Specification review",
+    "Resource download",
+    "Case study exploration",
+    "Diagram inspection",
+    "Thermal envelope consultation"
+  ],
+  "multilingual_cta_rules": {
+    "supported_languages": [
+      "English",
+      "Persian",
+      "Arabic",
+      "Russian"
+    ],
+    "rules": [
+      "Preserve action clarity across translations.",
+      "Avoid literal translation when unnatural.",
+      "Allow CTA width expansion.",
+      "Maintain concise structure.",
+      "Preserve technical terminology consistency.",
+      "Validate façade and standing seam terminology in translations."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "CTA text must remain readable.",
+      "Buttons must meet WCAG AA contrast.",
+      "Touch targets minimum 48px.",
+      "CTA meaning must remain clear without surrounding context.",
+      "Preserve readability across multilingual layouts."
+    ]
+  },
+  "conversion_psychology_rules": {
+    "approved_patterns": [
+      "Engineering support",
+      "Technical guidance",
+      "Risk reduction",
+      "Project clarity",
+      "Consultative language",
+      "Envelope-system evaluation",
+      "Technical collaboration"
+    ],
+    "forbidden_patterns": [
+      "Fear-based urgency",
+      "Manipulative scarcity",
+      "Aggressive pressure tactics",
+      "Fake guarantees",
+      "Sales-heavy contractor messaging"
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "hero_cta_click",
+      "sticky_cta_click",
+      "resource_cta_click",
+      "technical_cta_click",
+      "rfq_start",
+      "consultation_request",
+      "system_specific_cta_click",
+      "resource_download_cta"
+    ],
+    "tracked_parameters": [
+      "cta_text",
+      "cta_type",
+      "page_location",
+      "device_type",
+      "language",
+      "system_category",
+      "conversion_intent",
+      "roofing_type",
+      "cladding_type",
+      "envelope_type"
+    ]
+  },
+  "content_qa_checklist": [
+    "CTA clearly communicates action.",
+    "CTA matches page intent.",
+    "Language feels technical and professional.",
+    "No aggressive sales wording used.",
+    "CTA supports engineering trust.",
+    "CTA remains readable on mobile.",
+    "Primary CTA hierarchy is clear.",
+    "CTA supports sandwich panels, aluminum cladding, ZIP roofing, and envelope systems appropriately.",
+    "CTA positioning matches user intent stage."
+  ],
+  "forbidden_patterns": [
+    "Too many CTAs in one section",
+    "Vague CTA labels",
+    "Consumer e-commerce language",
+    "Fake urgency",
+    "Overly emotional persuasion",
+    "Long CTA text",
+    "Unclear outcome wording",
+    "Roof-only CTA system",
+    "Contractor-only CTA language",
+    "Missing façade/cladding consultation pathways"
+  ],
+  "approved_characteristics": [
+    "Clear",
+    "Technical",
+    "Professional",
+    "Helpful",
+    "Trustworthy",
+    "Conversion-focused",
+    "Industrial",
+    "Engineering-first",
+    "Consultative",
+    "Envelope-focused",
+    "Architecturally credible"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "CTA philosophy",
+      "CTA hierarchy system",
+      "Primary and secondary CTA examples",
+      "System-specific CTA architecture",
+      "Contextual CTA rules",
+      "Mobile CTA behavior",
+      "Trust-support microcopy",
+      "Correct vs incorrect CTA examples"
+    ],
+    "visual_direction": [
+      "CTA hierarchy layouts",
+      "Button copy examples",
+      "Sticky mobile CTA showcase",
+      "Hero CTA structure",
+      "Trust microcopy examples",
+      "System-specific CTA examples",
+      "Engineering consultation flows"
+    ]
+  },
+  "implementation_notes": [
+    "CTA copy should always support engineering credibility, technical trust, and industrial professionalism.",
+    "The primary goal of CTA language is reducing friction while guiding qualified users toward engineering consultation and project evaluation.",
+    "CTA consistency across website, RFQ flow, technical resources, and multilingual experiences is mandatory.",
+    "All CTA behavior should integrate with analytics, SEO strategy, and conversion tracking systems.",
+    "CTA architecture must support sandwich panels, aluminum cladding, ZIP roofing systems, and industrial envelope engineering equally."
+  ]
+}

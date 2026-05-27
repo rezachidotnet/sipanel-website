@@ -1,0 +1,414 @@
+{
+  "page": {
+    "number": 27,
+    "title": "Technical Diagram & Annotation System",
+    "section": "UI Component System",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define the visual structure, annotation behavior, interaction rules, readability standards, and responsive presentation system for SIPANEL technical diagrams, shop drawings, façade details, ZIP roofing systems, aluminum cladding systems, and industrial envelope engineering visuals.",
+  "diagram_philosophy": {
+    "statement": "Technical diagrams should transform complex engineering and envelope-system information into structured, readable, and trustworthy visual explanations.",
+    "core_principles": [
+      "Clarity over complexity",
+      "Engineering accuracy",
+      "Controlled annotation density",
+      "Responsive readability",
+      "Visual proof of expertise",
+      "Scalable technical storytelling",
+      "Envelope-system clarity",
+      "Architectural credibility",
+      "Consultant-grade technical visualization",
+      "Multi-system engineering communication"
+    ]
+  },
+  "diagram_system_goals": [
+    {
+      "goal": "Support Engineering Understanding",
+      "description": "Help users quickly understand roofing, cladding, envelope coordination, waterproofing, drainage, thermal movement, and installation logic."
+    },
+    {
+      "goal": "Demonstrate Technical Authority",
+      "description": "Show real engineering capability through structured technical visuals across sandwich panels, aluminum cladding, ZIP roofing, and industrial envelope systems."
+    },
+    {
+      "goal": "Improve Technical Communication",
+      "description": "Reduce confusion in RFQ, execution, envelope coordination, façade detailing, and project implementation."
+    },
+    {
+      "goal": "Support Industrial Envelope Positioning",
+      "description": "Visually position SIPANEL as an industrial envelope engineering partner rather than a sandwich-panel-only contractor."
+    }
+  ],
+  "diagram_types": {
+    "shop_drawing": {
+      "purpose": "Execution and coordination documentation",
+      "usage": [
+        "Case studies",
+        "Engineering proof",
+        "RFQ support",
+        "Resource center"
+      ]
+    },
+    "waterproofing_detail": {
+      "purpose": "Explain drainage paths, sealing, overlaps, and waterproofing risk reduction."
+    },
+    "installation_sequence": {
+      "purpose": "Show structured installation flow and assembly logic."
+    },
+    "technical_cutaway": {
+      "purpose": "Visualize hidden system layers and engineering relationships."
+    },
+    "material_optimization_diagram": {
+      "purpose": "Explain waste reduction and material efficiency."
+    },
+    "aluminum_cladding_detail": {
+      "purpose": "Explain ACP façade systems, cladding attachment methods, rainscreen logic, and façade coordination."
+    },
+    "standing_seam_roof_detail": {
+      "purpose": "Explain ZIP roofing systems, standing seam joints, concealed fastening, and thermal movement control."
+    },
+    "envelope_transition_detail": {
+      "purpose": "Visualize roof-to-façade transitions, parapet conditions, thermal continuity, and mixed-system coordination."
+    },
+    "thermal_bridge_diagram": {
+      "purpose": "Explain thermal transfer conditions, insulation continuity, and thermal bridge mitigation."
+    },
+    "façade_substructure_diagram": {
+      "purpose": "Explain bracket systems, alignment tolerances, façade anchoring, and structural coordination."
+    }
+  },
+  "visual_structure_rules": {
+    "background": {
+      "preferred": [
+        "#FFFFFF",
+        "#F5F6F7",
+        "#0F1113"
+      ],
+      "rules": [
+        "Preserve strong contrast.",
+        "Avoid decorative backgrounds.",
+        "Use clean technical surfaces.",
+        "Use neutral backgrounds for façade and standing seam section clarity.",
+        "Avoid gradient-heavy engineering presentations."
+      ]
+    },
+    "line_styles": {
+      "primary": {
+        "color": "#0F1113",
+        "width": "2px"
+      },
+      "secondary": {
+        "color": "#68686B",
+        "width": "1px"
+      },
+      "highlight": {
+        "color": "#FF6A00",
+        "width": "2px"
+      },
+      "thermal": {
+        "color": "#D94F00",
+        "width": "2px"
+      },
+      "airflow": {
+        "color": "#4A90E2",
+        "width": "1.5px"
+      },
+      "movement": {
+        "color": "#FF6A00",
+        "style": "dashed",
+        "width": "2px"
+      }
+    },
+    "spacing_rules": [
+      "Maintain breathing room around diagrams.",
+      "Avoid annotation overlap.",
+      "Preserve label readability.",
+      "Separate structural and waterproofing annotations visually.",
+      "Avoid overcrowding façade details.",
+      "Preserve clear visual hierarchy between roofing and cladding systems."
+    ]
+  },
+  "annotation_system": {
+    "annotation_types": [
+      "Callout labels",
+      "Directional arrows",
+      "Measurement indicators",
+      "Risk markers",
+      "Flow arrows",
+      "Step indicators",
+      "Thermal movement indicators",
+      "Wind-load indicators",
+      "Airflow indicators",
+      "Envelope transition markers",
+      "Structural coordination indicators"
+    ],
+    "annotation_rules": [
+      "Keep labels concise.",
+      "Use orange only for critical emphasis.",
+      "Avoid cluttering diagrams.",
+      "Limit preview annotations on mobile.",
+      "Align annotations to structural grid.",
+      "Separate thermal, airflow, and waterproofing annotations visually.",
+      "Use directional indicators for façade ventilation and standing seam expansion.",
+      "Preserve readability during zoom interaction."
+    ],
+    "maximum_preview_annotations": {
+      "mobile": 3,
+      "tablet": 5,
+      "desktop": 6
+    }
+  },
+  "technical_label_rules": {
+    "font_family": "Inter",
+    "font_size_mobile": "12px",
+    "font_size_desktop": "14px",
+    "font_weight": 600,
+    "rules": [
+      "Labels must remain readable at all zoom levels.",
+      "Use consistent terminology.",
+      "Avoid excessive abbreviations.",
+      "Preserve contrast on dark and light diagrams.",
+      "Use standardized terminology for façade, ZIP roofing, sandwich panel, and envelope systems.",
+      "Avoid unclear contractor shorthand.",
+      "Keep ACP, ZIP, BOM, MTO, and RFQ abbreviations consistent."
+    ]
+  },
+  "diagram_interaction_behavior": {
+    "preview_mode": {
+      "rules": [
+        "Show simplified annotated preview.",
+        "Reduce technical density.",
+        "Encourage fullscreen inspection.",
+        "Use system-specific previews for façade, roofing, and transition diagrams.",
+        "Preserve critical technical callouts in previews."
+      ]
+    },
+    "fullscreen_viewer": {
+      "required_features": [
+        "Pinch-to-zoom",
+        "Drag-to-pan",
+        "Reset zoom",
+        "Fullscreen mode",
+        "Close control",
+        "High-resolution asset loading",
+        "Annotation layer toggle",
+        "Diagram category metadata"
+      ],
+      "rules": [
+        "Maintain smooth performance.",
+        "Preserve annotation clarity.",
+        "Prevent accidental zoom conflicts.",
+        "Load high-resolution diagrams progressively.",
+        "Support detailed façade inspection.",
+        "Support standing seam detail inspection.",
+        "Keep close button visible at all zoom levels."
+      ]
+    }
+  },
+  "responsive_behavior": {
+    "mobile": {
+      "rules": [
+        "Show cropped technical preview.",
+        "Use fullscreen interaction for detail.",
+        "Limit simultaneous callouts.",
+        "Avoid tiny unreadable labels.",
+        "Reduce façade annotation density.",
+        "Prioritize transition details and critical movement indicators.",
+        "Use progressive detail disclosure for complex diagrams."
+      ]
+    },
+    "tablet": {
+      "rules": [
+        "Allow inline diagram preview.",
+        "Enable expanded view for dense content.",
+        "Support medium-density façade and roofing details."
+      ]
+    },
+    "desktop": {
+      "rules": [
+        "Allow larger inline diagrams.",
+        "Support detailed engineering inspection.",
+        "Enable side-by-side explanation layouts.",
+        "Support high-detail envelope sections.",
+        "Allow simultaneous diagram and annotation inspection."
+      ]
+    }
+  },
+  "diagram_content_rules": {
+    "approved_content": [
+      "Drainage flow",
+      "Panel coordination",
+      "Fastening systems",
+      "Waterproofing logic",
+      "Execution sequencing",
+      "Thermal performance explanation",
+      "Installation details",
+      "ACP façade sections",
+      "Standing seam roof details",
+      "Concealed fastening systems",
+      "Envelope transition details",
+      "Thermal bridge diagrams",
+      "Rainscreen airflow systems",
+      "Façade substructure coordination",
+      "Expansion joint details",
+      "Roof-to-wall transitions",
+      "Parapet detailing"
+    ],
+    "forbidden_content": [
+      "Unreadable CAD screenshots",
+      "Overloaded engineering layers",
+      "Decorative visual effects",
+      "Dense unexplained technical complexity",
+      "Stock illustration style diagrams",
+      "Roof-only visualization systems",
+      "Unlabeled façade details",
+      "Tiny unreadable standing seam details",
+      "Overly decorative architectural renders without engineering explanation"
+    ]
+  },
+  "color_usage_rules": {
+    "primary_colors": [
+      "#0F1113",
+      "#FFFFFF",
+      "#68686B",
+      "#FF6A00"
+    ],
+    "semantic_colors": {
+      "waterproofing": "#4A90E2",
+      "thermal_bridge": "#D94F00",
+      "airflow": "#5AA9E6",
+      "movement": "#FF6A00",
+      "structural": "#0F1113"
+    },
+    "rules": [
+      "Orange reserved for critical highlights.",
+      "Avoid colorful engineering diagrams.",
+      "Use neutral technical palette.",
+      "Preserve readability in dark mode.",
+      "Use semantic color meaning consistently.",
+      "Do not rely only on color for technical explanation."
+    ]
+  },
+  "technical_storytelling_rules": {
+    "recommended_structure": [
+      "Problem or risk",
+      "Technical explanation",
+      "Diagram annotation",
+      "SIPANEL solution",
+      "Result or performance benefit"
+    ],
+    "rules": [
+      "Use diagrams to explain engineering value.",
+      "Avoid diagrams without context.",
+      "Support technical visuals with concise explanation.",
+      "Explain façade engineering clearly.",
+      "Support ZIP roofing movement explanation visually.",
+      "Use transition diagrams for envelope continuity storytelling.",
+      "Use annotations to explain engineering reasoning rather than decoration."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "Provide accessible text summary.",
+      "Allow zoom interaction.",
+      "Maintain WCAG AA contrast.",
+      "Do not rely on color alone.",
+      "Ensure fullscreen modal accessibility.",
+      "Provide accessible summaries for façade and roofing diagrams.",
+      "Support keyboard navigation in fullscreen viewer."
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Mirror directional annotations when appropriate.",
+      "Preserve engineering reading logic.",
+      "Allow multilingual annotation expansion.",
+      "Keep measurements and units consistent globally.",
+      "Validate engineering terminology across all languages.",
+      "Preserve diagram readability after RTL mirroring."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "diagram_view",
+      "diagram_expand",
+      "diagram_zoom",
+      "diagram_pan",
+      "annotation_interaction",
+      "fullscreen_diagram_open",
+      "fullscreen_diagram_close",
+      "diagram_category_filter",
+      "high_resolution_asset_load"
+    ],
+    "tracked_parameters": [
+      "diagram_type",
+      "project_id",
+      "device_type",
+      "language",
+      "zoom_level",
+      "system_category",
+      "envelope_type",
+      "diagram_complexity"
+    ]
+  },
+  "forbidden_patterns": [
+    "Unreadable technical screenshots",
+    "Excessive annotation density",
+    "Tiny labels",
+    "Decorative CAD styling",
+    "Color-heavy diagrams",
+    "No zoom support on mobile",
+    "Complex diagrams without explanation",
+    "Annotation overlap",
+    "Roof-only technical visualization system",
+    "Missing façade engineering details",
+    "Overloaded envelope diagrams without hierarchy"
+  ],
+  "approved_characteristics": [
+    "Precise",
+    "Technical",
+    "Readable",
+    "Structured",
+    "Responsive",
+    "Engineering-focused",
+    "Proof-oriented",
+    "Envelope-engineering-focused",
+    "Architecturally credible",
+    "Consultant-grade",
+    "Multi-system"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Diagram philosophy",
+      "Diagram type overview",
+      "Annotation system",
+      "Responsive behavior",
+      "Fullscreen interaction rules",
+      "Technical storytelling examples",
+      "Correct vs incorrect diagram examples",
+      "Envelope-system diagram taxonomy",
+      "Façade and standing seam examples"
+    ],
+    "visual_direction": [
+      "Annotated diagram previews",
+      "Zoom interaction examples",
+      "Callout system examples",
+      "Technical layering diagrams",
+      "Mobile fullscreen viewer showcase",
+      "ACP façade detail examples",
+      "Standing seam section diagrams",
+      "Envelope transition details",
+      "Thermal bridge explanation visuals"
+    ]
+  },
+  "implementation_notes": [
+    "Technical diagrams are a core SIPANEL trust-building mechanism and must remain highly readable.",
+    "All engineering visuals should balance technical depth with user comprehension.",
+    "Mobile interaction and fullscreen zoom support are mandatory.",
+    "Diagram systems should integrate directly with the SIPANEL technical storytelling framework.",
+    "Diagram systems must support sandwich panels, aluminum cladding, ZIP roofing, façade engineering, and industrial envelope coordination equally.",
+    "Technical visualization should reinforce SIPANEL as an industrial envelope engineering authority."
+  ]
+}

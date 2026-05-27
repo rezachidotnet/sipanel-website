@@ -1,0 +1,304 @@
+{
+    "page": {
+      "number": 22,
+      "title": "Form & Input System",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the structure, behavior, accessibility, validation, and responsive interaction rules for SIPANEL forms and input components.",
+    "form_philosophy": {
+      "statement": "SIPANEL forms must feel fast, clear, technically professional, and frictionless for industrial users.",
+      "core_principles": [
+        "Reduce user effort",
+        "Collect only essential information",
+        "Guide completion clearly",
+        "Maintain engineering professionalism",
+        "Support mobile-first interaction",
+        "Preserve accessibility"
+      ]
+    },
+    "form_system_goals": [
+      {
+        "goal": "Reduce RFQ Friction",
+        "description": "Allow users to submit project requests quickly without unnecessary complexity."
+      },
+      {
+        "goal": "Support Technical Context",
+        "description": "Enable users to provide drawings, specifications, and engineering details efficiently."
+      },
+      {
+        "goal": "Improve Mobile Completion",
+        "description": "Optimize forms for industrial users working on mobile devices."
+      },
+      {
+        "goal": "Increase Data Accuracy",
+        "description": "Use validation and structure to minimize incomplete or incorrect submissions."
+      }
+    ],
+    "form_structure_rules": {
+      "general_rules": [
+        "Collect contact information first.",
+        "Use one clear purpose per form.",
+        "Group related fields logically.",
+        "Reduce visible fields where possible.",
+        "Use progressive disclosure for advanced technical details.",
+        "Preserve strong visual spacing."
+      ],
+      "preferred_structure": [
+        "Context introduction",
+        "Primary project fields",
+        "Optional technical details",
+        "File upload",
+        "Confirmation CTA"
+      ]
+    },
+    "input_styles": {
+      "text_input": {
+        "height_mobile": "48px",
+        "height_desktop": "52px",
+        "padding": "12px 16px",
+        "border_radius": "6px",
+        "border": "1px solid #D9DADD",
+        "background": "#FFFFFF",
+        "font_size_mobile": "16px",
+        "font_size_desktop": "16px"
+      },
+      "textarea": {
+        "minimum_height": "120px",
+        "resize": "vertical_only"
+      },
+      "select_dropdown": {
+        "height_mobile": "48px",
+        "height_desktop": "52px",
+        "icon": "chevron-down"
+      },
+      "file_upload": {
+        "type": "drag_and_drop + button upload",
+        "supported_formats": [
+          "PDF",
+          "DWG",
+          "JPG",
+          "PNG",
+          "ZIP"
+        ],
+        "max_file_size": "50MB"
+      }
+    },
+    "input_states": {
+      "default": {
+        "border": "#D9DADD",
+        "background": "#FFFFFF"
+      },
+      "hover": {
+        "border": "#68686B"
+      },
+      "focus": {
+        "border": "#FF6A00",
+        "outline": "2px solid rgba(255,106,0,0.2)"
+      },
+      "error": {
+        "border": "#C62828",
+        "message_color": "#C62828"
+      },
+      "success": {
+        "border": "#1E8E5A"
+      },
+      "disabled": {
+        "opacity": "0.5",
+        "background": "#F5F6F7"
+      }
+    },
+    "label_rules": {
+      "requirements": [
+        "Every field must have a visible label.",
+        "Labels should remain concise and clear.",
+        "Do not use placeholder text as labels.",
+        "Required fields must be clearly identified."
+      ],
+      "label_position": "top_aligned",
+      "helper_text_rules": [
+        "Use helper text only when necessary.",
+        "Keep helper text concise.",
+        "Explain technical upload requirements clearly."
+      ]
+    },
+    "validation_rules": {
+      "general_rules": [
+        "Validation should happen inline when possible.",
+        "Error messages must explain how to fix the issue.",
+        "Avoid generic error messages.",
+        "Do not clear valid fields after validation failure."
+      ],
+      "error_message_examples": [
+        "Please enter a valid project email address.",
+        "Upload must be PDF, DWG, JPG, PNG, or ZIP.",
+        "Phone number format is incomplete."
+      ],
+      "success_feedback": [
+        "Submission received.",
+        "Files uploaded successfully.",
+        "Engineering review request submitted."
+      ]
+    },
+    "rfq_form_behavior": {
+      "recommended_fields": [
+        "Contact information",
+        "Project name",
+        "Location",
+        "Project type",
+        "Required services",
+        "Estimated area",
+        "Message",
+        "File upload"
+        
+      ],
+      "recommended_flow": [
+        "Project basics",
+        "Technical requirements",
+        "Attachments",
+        "Contact details",
+        "Submission confirmation"
+      ]
+    },
+    "mobile_form_rules": {
+      "rules": [
+        "Use single-column layout.",
+        "Limit visible fields per viewport.",
+        "Support native keyboard types.",
+        "Enable autofill where possible.",
+        "Keep primary CTA sticky when appropriate."
+      ],
+      "touch_rules": [
+        "Minimum touch target 48px.",
+        "Large spacing between fields.",
+        "Avoid accidental taps."
+      ]
+    },
+    "technical_upload_rules": {
+      "allowed_files": [
+        "PDF",
+        "DWG",
+        "DXF",
+        "ZIP",
+        "JPG",
+        "PNG"
+      ],
+      "upload_behavior": [
+        "Show upload progress clearly.",
+        "Allow drag-and-drop on desktop.",
+        "Allow camera/photo upload on mobile.",
+        "Validate file size before upload."
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "All fields must have associated labels.",
+        "Error messages must be screen-reader accessible.",
+        "Keyboard navigation required.",
+        "Focus states must remain visible.",
+        "Use semantic form structure."
+      ],
+      "contrast_rules": [
+        "Maintain WCAG AA contrast.",
+        "Error and success colors must remain distinguishable."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Mirror field alignment for RTL.",
+        "Use logical spacing properties.",
+        "Allow translated labels to expand.",
+        "Preserve readable field hierarchy."
+      ],
+      "mixed_input_behavior": [
+        "Phone numbers remain LTR.",
+        "Emails remain LTR.",
+        "Technical codes remain LTR."
+      ],
+      "contact_field_placeholder_rules": {
+        "realistic_demo_values_forbidden": true,
+        "phone_placeholder": "[PHONE_NUMBER]",
+        "email_placeholder": "[EMAIL_ADDRESS]",
+        "example_values_allowed": false,
+        "rules": [
+          "Phone and email fields must not use realistic demo contact values.",
+          "Use neutral instructional placeholders such as 'Enter your phone number' instead of fake numbers.",
+          "Production contact information must never be inferred from form placeholder examples.",
+          "Phone numbers, emails, and technical codes remain LTR in RTL layouts."
+        ]
+      }
+    },
+    "conversion_optimization_rules": {
+      "rules": [
+        "Reduce optional fields.",
+        "Place proof near RFQ forms.",
+        "Keep CTA visible near form end.",
+        "Avoid long intimidating forms.",
+        "Use progressive steps for technical detail collection."
+      ]
+    },
+    "analytics_tracking": {
+      "required_events": [
+        "form_start",
+        "field_focus",
+        "file_upload_start",
+        "file_upload_complete",
+        "validation_error",
+        "form_submit",
+        "form_submit_success",
+        "form_submit_failure"
+      ],
+      "tracked_parameters": [
+        "form_id",
+        "field_name",
+        "device_type",
+        "language",
+        "submission_time"
+      ]
+    },
+    "forbidden_form_patterns": [
+      "Placeholder-only labels",
+      "Tiny mobile fields",
+      "Dense multi-column mobile forms",
+      "Hidden required fields",
+      "Unclear error messages",
+      "Auto-clearing form data",
+      "Long uninterrupted forms",
+      "File upload without feedback"
+    ],
+    "approved_form_characteristics": [
+      "Structured",
+      "Fast",
+      "Accessible",
+      "Technical",
+      "Mobile-friendly",
+      "Low-friction",
+      "Professional"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Form philosophy",
+        "Input style system",
+        "Field state examples",
+        "Validation behavior",
+        "RFQ form structure",
+        "Mobile interaction rules",
+        "Correct vs incorrect form examples"
+      ],
+      "visual_direction": [
+        "Input component grid",
+        "Validation state examples",
+        "Mobile form flow mockups",
+        "Technical upload interface examples",
+        "Accessible form behavior previews"
+      ]
+    },
+    "implementation_notes": [
+      "All forms must map directly to design tokens and frontend validation systems.",
+      "RFQ forms are critical conversion components and must prioritize usability and trust.",
+      "Mobile-first form testing is mandatory.",
+      "Technical uploads must remain simple, fast, and reliable across all devices."
+    ]
+  }

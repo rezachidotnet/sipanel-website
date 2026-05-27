@@ -1,0 +1,242 @@
+{
+    "page": {
+      "number": 16,
+      "title": "Responsive Behavior Rules",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define how SIPANEL layouts, components, content, imagery, technical diagrams, and conversion elements adapt across mobile, tablet, and desktop environments.",
+    "responsive_philosophy": {
+      "statement": "SIPANEL responsive behavior must preserve engineering clarity, technical readability, and conversion access across every screen size.",
+      "core_principles": [
+        "Mobile-first structure",
+        "One primary message per viewport",
+        "Technical clarity before decoration",
+        "Progressive content disclosure",
+        "Touch-friendly interaction",
+        "Performance-conscious layout behavior"
+      ]
+    },
+    "breakpoints": {
+      "small_mobile": "320px-480px",
+      "standard_mobile": "481px-767px",
+      "tablet": "768px-1024px",
+      "desktop": "1025px+"
+    },
+    "global_responsive_rules": {
+      "mobile": [
+        "Use single-column layouts.",
+        "Avoid desktop grids below 768px.",
+        "Keep primary CTA visible above fold.",
+        "Reduce text density by 40%-50%.",
+        "Use accordions for dense technical content.",
+        "Avoid hover-dependent interactions."
+      ],
+      "tablet": [
+        "Use adaptive 2-column layouts where appropriate.",
+        "Avoid dense 3-column content.",
+        "Preserve large touch targets.",
+        "Maintain clear section hierarchy."
+      ],
+      "desktop": [
+        "Use 12-column grid structure.",
+        "Allow split layouts and multi-column sections.",
+        "Preserve strong visual hierarchy.",
+        "Use wider technical visuals where readability improves."
+      ]
+    },
+    "layout_behavior": {
+      "header": {
+        "mobile": "Logo left, menu icon right, language selector inside drawer, sticky CTA at bottom.",
+        "tablet": "Logo left, collapsed or compact navigation, CTA visible.",
+        "desktop": "Logo left, navigation center, CTA and language selector right."
+      },
+      "hero": {
+        "mobile": "Stacked layout with headline, subheadline, CTA, trust items, then visual.",
+        "tablet": "Stacked or split layout depending on available width.",
+        "desktop": "Split 55/45 layout with text left and visual right."
+      },
+      "trust_bar": {
+        "mobile": "Horizontal scroll metrics or compact 2x2 grid.",
+        "tablet": "2x2 grid.",
+        "desktop": "Horizontal metric strip."
+      },
+      "proof_snapshot": {
+        "mobile": "Accordion cards or swipe cards.",
+        "tablet": "2-column cards.",
+        "desktop": "3-card grid."
+      },
+      "case_studies": {
+        "mobile": "Horizontal swipe cards with one visible card and card peek.",
+        "tablet": "2-column grid.",
+        "desktop": "Case study grid or slider with 3 visible cards."
+      },
+      "forms": {
+        "mobile": "Step-based form with 1-2 inputs per screen.",
+        "tablet": "Compact form card.",
+        "desktop": "Short inline or card-based form."
+      }
+    },
+    "content_responsiveness": {
+      "headline_rules": {
+        "mobile_max_lines": 3,
+        "desktop_max_words": 14,
+        "mobile_max_words": 10
+      },
+      "paragraph_rules": {
+        "mobile_max_lines": 3,
+        "desktop_max_lines": 4,
+        "prefer_bullets_on_mobile": true
+      },
+      "technical_content_rules": [
+        "Collapse secondary technical details on mobile.",
+        "Show summary before deep technical explanation.",
+        "Use progressive disclosure for complex engineering content.",
+        "Avoid exposing multiple dense diagrams at once."
+      ]
+    },
+    "image_responsiveness": {
+      "mobile": {
+        "preferred_width": "480px",
+        "formats": [
+          "WebP",
+          "AVIF"
+        ],
+        "rules": [
+          "Use mobile-specific crops.",
+          "Avoid loading desktop images.",
+          "Lazy-load below-the-fold visuals."
+        ]
+      },
+      "tablet": {
+        "preferred_width": "900px",
+        "formats": [
+          "WebP",
+          "AVIF"
+        ]
+      },
+      "desktop": {
+        "preferred_width": "1600px",
+        "formats": [
+          "WebP",
+          "AVIF"
+        ]
+      }
+    },
+    "technical_diagram_responsiveness": {
+      "mobile_behavior": [
+        "Show cropped preview first.",
+        "Open fullscreen viewer on tap.",
+        "Support pinch-to-zoom and drag-to-pan.",
+        "Avoid tiny unreadable labels.",
+        "Use no more than 3 visible callouts in preview mode."
+      ],
+      "tablet_behavior": [
+        "Use preview modal or inline preview.",
+        "Allow zoom for dense technical diagrams."
+      ],
+      "desktop_behavior": [
+        "Allow inline preview with modal expansion.",
+        "Use wider diagram layouts when useful."
+      ]
+    },
+    "interaction_responsiveness": {
+      "touch_targets": {
+        "minimum": "48px",
+        "preferred": "56px"
+      },
+      "mobile_rules": [
+        "Avoid hover-only states.",
+        "Use tap feedback.",
+        "Keep CTAs thumb-accessible.",
+        "Place important actions inside reachable zones.",
+        "Support swipe for case studies."
+      ],
+      "desktop_rules": [
+        "Use hover states carefully.",
+        "Preserve keyboard navigation.",
+        "Allow richer preview interactions only when useful."
+      ]
+    },
+    "conversion_responsiveness": {
+      "mobile_rules": [
+        "Primary CTA visible above fold.",
+        "Sticky CTA active after hero scroll.",
+        "CTA appears every 2-3 scroll sections.",
+        "WhatsApp and phone actions remain easy to access.",
+        "Forms should reduce typing and use progressive steps."
+      ],
+      "desktop_rules": [
+        "CTA should appear in hero, proof sections, case studies, and final conversion block.",
+        "Forms may show more fields but must remain short."
+      ]
+    },
+    "performance_rules": {
+      "mobile_targets": {
+        "max_load_time": "3 seconds",
+        "lcp_target": "under 2.5 seconds",
+        "cls_target": "minimal",
+        "initial_payload": "under 2MB"
+      },
+      "rules": [
+        "Preload hero image.",
+        "Lazy-load below-the-fold assets.",
+        "Use responsive image srcsets.",
+        "Avoid heavy PDF embeds on mobile.",
+        "Delay high-resolution diagrams until user interaction."
+      ]
+    },
+    "rtl_and_multilingual_behavior": {
+      "supported_languages": [
+        "English",
+        "Persian",
+        "Arabic",
+        "Russian"
+      ],
+      "rtl_languages": [
+        "Persian",
+        "Arabic"
+      ],
+      "rules": [
+        "Mirror layout direction for RTL languages.",
+        "Flip directional icons.",
+        "Use logical spacing instead of hardcoded left/right values.",
+        "Preserve responsive hierarchy across all languages.",
+        "Allow translated text to expand without layout breakage."
+      ]
+    },
+    "failure_prevention": [
+      "Do not use desktop grids on mobile.",
+      "Do not place CTA below first mobile scroll.",
+      "Do not show unreadable technical diagrams.",
+      "Do not use large uncompressed images.",
+      "Do not rely on hover interactions.",
+      "Do not allow horizontal overflow.",
+      "Do not stack too many technical elements in one viewport."
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Responsive philosophy",
+        "Breakpoint overview",
+        "Layout behavior by component",
+        "Content adaptation rules",
+        "Diagram responsiveness",
+        "Mobile vs desktop conversion behavior",
+        "Failure prevention examples"
+      ],
+      "visual_direction": [
+        "Breakpoint diagrams",
+        "Mobile/tablet/desktop layout comparisons",
+        "Responsive crop examples",
+        "CTA visibility maps",
+        "Technical diagram behavior previews"
+      ]
+    },
+    "implementation_notes": [
+      "Responsive behavior must be implemented mobile-first.",
+      "All components must be tested across mobile, tablet, desktop, and RTL layouts.",
+      "Technical readability and conversion access must not be sacrificed at smaller screen sizes.",
+      "Responsive rules should map directly to frontend breakpoints and design tokens."
+    ]
+  }

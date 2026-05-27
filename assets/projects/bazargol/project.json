@@ -1,0 +1,45 @@
+{
+              "project_name": "Sepehan Flower Market",
+              "slug": "sepehan-flower-market",
+              "location": "Dorcheh, Isfahan, Iran",
+              "category": "Commercial & Sandwich Panel Structures",
+              "project_type": "Commercial sandwich panel roofing system",
+              "status": "Completed",
+              "system_type": "Sandwich Panel",
+              "area": "3,500 m²",
+              "challenge": "Execution of a large commercial flower market requiring durable sandwich panel roofing, fast installation speed, controlled waterproofing performance, and clean architectural finishing for a high-traffic commercial environment.",
+              "sipanel_solution": "SIPANEL prepared coordinated engineering drawings and optimized sandwich panel layouts to support fast-track execution, efficient material usage, waterproofing continuity, and reliable roof performance.",
+              "engineering_decision": "Engineering teams selected installation sequencing strategies, panel alignment coordination, and sealing checkpoints to improve execution speed, reduce material waste, and maintain long-term weather protection.",
+              "execution_detail": "Installation was executed based on approved shop drawings using controlled sandwich panel coordination, fastening verification, and sealing inspection checkpoints to ensure accurate installation quality.",
+              "measured_result": "Successful fast-track delivery of a durable commercial sandwich panel roofing system with reliable weather protection, optimized installation efficiency, and clean finished appearance.",
+              "risk_prevented": [
+                "Installation alignment errors",
+                "Material waste",
+                "Water penetration",
+                "Improper panel sealing",
+                "Long-term maintenance issues",
+                "Execution delays"
+              ],
+              "primary_message": "Engineered sandwich panel roofing systems optimized for commercial durability and fast-track execution.",
+              "proof_points": [
+                "Commercial-scale sandwich panel execution",
+                "Optimized panel layout coordination",
+                "Controlled installation sequencing",
+                "Reliable waterproofing integration",
+                "Efficient material management"
+              ],
+              "metrics": {
+                "project_area": "3,500 m²",
+                "facility_type": "Commercial flower market",
+                "system_type": "Sandwich panel roofing system",
+                "execution_focus": "Fast installation and waterproofing reliability"
+              },
+              "images": {
+                "hero_desktop": "./projects/bazargol/bazargol-hero-desktop.webp",
+                "hero_mobile": "./projects/bazargol/bazargol-hero-mobile.webp",
+                "card": "./projects/bazargol/bazargol-card.webp",
+                "gallery_large": "./projects/bazargol/bazargol-gallery-large.webp",
+                "installation": "./projects/bazargol/bazargol-installation.webp",
+                "technical_detail": "./projects/bazargol/bazargol-technical-detail.webp"
+              }
+            }

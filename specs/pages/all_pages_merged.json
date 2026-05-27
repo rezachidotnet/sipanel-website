@@ -1,0 +1,4430 @@
+[
+  {
+    "page": "about_sipanel",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "company_about_page",
+    "purpose": "Create a high-trust industrial company page that positions SIPANEL as an engineering-first industrial envelope systems company.",
+    "route": {
+      "en": "/en/about",
+      "fa": "/fa/about",
+      "ar": "/ar/about",
+      "ru": "/ru/about"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "requirements": [
+        "localized content",
+        "localized metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Build trust and authority for SIPANEL.",
+      "secondary": "Explain the engineering-first execution philosophy.",
+      "conversion": "Encourage technical consultation and RFQ initiation."
+    },
+    "brand_positioning": {
+      "core_message": "SIPANEL reduces industrial project risk through engineering review, smart procurement, and controlled execution.",
+      "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+      "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION",
+      "do_not_position_as": [
+        "generic panel supplier",
+        "marketing-first construction brand",
+        "decorative architecture studio",
+        "cheap installer"
+      ]
+    },
+    "seo": {
+      "primary_keyword": "industrial envelope engineering company",
+      "secondary_keywords": [
+        "industrial panel engineering",
+        "standing seam roofing company",
+        "industrial cladding systems",
+        "engineering-controlled execution",
+        "industrial waterproof roofing",
+        "sandwich panel systems company"
+      ],
+      "title": "About SIPANEL | Industrial Envelope Engineering & Controlled Execution",
+      "meta_description": "Learn how SIPANEL helps industrial projects reduce execution risk through engineering review, smart procurement, waterproofing logic, and controlled installation systems.",
+      "h1": "Engineering-Controlled Industrial Envelope Systems.",
+      "schema": [
+        "Organization",
+        "BreadcrumbList",
+        "AboutPage"
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "authoritative",
+        "industrial",
+        "technical",
+        "trustworthy",
+        "structured",
+        "experienced"
+      ],
+      "visual_rules": [
+        "Use real industrial imagery if available.",
+        "Use diagrams, project visuals, technical overlays, and engineering references.",
+        "Avoid lifestyle branding.",
+        "Avoid startup aesthetics.",
+        "Avoid fake corporate culture visuals.",
+        "Avoid stock office people photography."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "about_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_60_40"
+        },
+        "content": {
+          "eyebrow": "About SIPANEL",
+          "h1": "Engineering-Controlled Industrial Envelope Systems.",
+          "subheadline": "SIPANEL helps industrial projects reduce leakage risk, material waste, coordination errors, and execution uncertainty through engineering review, smart procurement, and controlled installation.",
+          "primary_cta": "Request Technical Consultation",
+          "secondary_cta": "Explore Systems",
+          "trust_microcopy": "Built around industrial execution control, not just material supply."
+        },
+        "visual": {
+          "type": "industrial_execution_collage_or_project_visual",
+          "preferred_assets": [
+            "industrial roofing",
+            "panel installation",
+            "shop drawing preview",
+            "facade system",
+            "engineering coordination image"
+          ],
+          "fallback": "structured industrial composition using SIPANEL design system"
+        }
+      },
+      {
+        "id": "company_positioning",
+        "priority": "critical",
+        "title": "More Than Material Supply.",
+        "layout": {
+          "mobile": "stacked_cards",
+          "desktop": "3_column_cards"
+        },
+        "cards": [
+          {
+            "title": "Engineering Review",
+            "description": "SIPANEL reviews system logic, drainage, layout, waterproofing, and installation conditions before procurement and execution."
+          },
+          {
+            "title": "Smart Procurement",
+            "description": "Quantities, accessories, flashings, trims, and materials are coordinated to reduce waste and avoid site delays."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execution follows technical details, sequencing logic, inspection checkpoints, and engineering coordination."
+          }
+        ]
+      },
+      {
+        "id": "company_story",
+        "priority": "high",
+        "title": "Why SIPANEL Exists",
+        "layout": {
+          "mobile": "single_column",
+          "desktop": "split_text_visual"
+        },
+        "content_rules": [
+          "Focus on industrial execution problems.",
+          "Explain why engineering review matters before installation.",
+          "Avoid emotional startup storytelling.",
+          "Use direct professional tone."
+        ],
+        "content_structure": [
+          "problem_in_market",
+          "why_execution_fails",
+          "why_engineering_matters",
+          "how_sipanel_approaches_projects"
+        ],
+        "approved_topics": [
+          "roof leakage risk",
+          "material waste",
+          "weak coordination",
+          "incorrect system selection",
+          "poor installation sequencing",
+          "lack of technical review"
+        ]
+      },
+      {
+        "id": "core_principles",
+        "priority": "high",
+        "title": "Core Execution Principles",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "2x3_principles_grid"
+        },
+        "principles": [
+          {
+            "title": "Engineering Before Installation",
+            "description": "Project risk should be reviewed before site execution begins."
+          },
+          {
+            "title": "Waterproofing Logic Matters",
+            "description": "Drainage, flashings, overlaps, seams, and penetrations determine long-term roof performance."
+          },
+          {
+            "title": "Layout Controls Quality",
+            "description": "Panel rhythm, facade alignment, and quantity planning affect execution quality and waste."
+          },
+          {
+            "title": "Execution Needs Coordination",
+            "description": "Installation quality depends on sequencing, drawings, procurement, and inspection checkpoints."
+          },
+          {
+            "title": "Technical Proof Over Claims",
+            "description": "Real details, diagrams, and execution proof matter more than marketing language."
+          },
+          {
+            "title": "Industrial Projects Need Control",
+            "description": "Large industrial systems require planning, verification, and engineering discipline."
+          }
+        ]
+      },
+      {
+        "id": "systems_overview",
+        "priority": "critical",
+        "title": "Industrial Envelope Systems",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_column_grid"
+        },
+        "systems": [
+          {
+            "title": "Sandwich Panel Systems",
+            "description": "Panel layout, insulation systems, accessories, flashing coordination, and installation control.",
+            "cta": "Explore Panel Systems"
+          },
+          {
+            "title": "Standing Seam & ZIP Tech Roofing",
+            "description": "Waterproof roofing systems designed around drainage logic, concealed fastening, and controlled execution.",
+            "cta": "Explore Roofing Systems"
+          },
+          {
+            "title": "Aluminium Cladding & Covering",
+            "description": "Industrial facade systems coordinated through layout control, fixing logic, and precise execution.",
+            "cta": "Explore Cladding Systems"
+          }
+        ]
+      },
+      {
+        "id": "technical_proof_snapshot",
+        "priority": "high",
+        "title": "Engineering Proof Snapshot",
+        "layout": {
+          "mobile": "swipeable_cards",
+          "desktop": "4_column_technical_grid"
+        },
+        "items": [
+          {
+            "title": "Shop Drawing Coordination",
+            "description": "Layout, accessories, and sequencing reviewed before installation.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Roof Waterproofing Logic",
+            "description": "Drainage, flashing, and penetration details engineered before execution.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Material Optimization",
+            "description": "Procurement quantities planned to reduce waste and delays.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Inspection-Based Execution",
+            "description": "Quality checkpoints integrated during installation.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          }
+        ]
+      },
+      {
+        "id": "workflow_process",
+        "priority": "high",
+        "title": "How SIPANEL Approaches Industrial Projects",
+        "layout": {
+          "mobile": "vertical_steps",
+          "desktop": "horizontal_process_flow"
+        },
+        "steps": [
+          {
+            "title": "Project Review",
+            "description": "Review project conditions, system requirements, and execution risks."
+          },
+          {
+            "title": "Technical Coordination",
+            "description": "Coordinate drawings, drainage logic, details, accessories, and procurement planning."
+          },
+          {
+            "title": "Execution Planning",
+            "description": "Define installation sequencing, inspection points, and quality control flow."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execute according to technical standards, coordination logic, and engineering review."
+          }
+        ]
+      },
+      {
+        "id": "metrics_strip",
+        "priority": "medium",
+        "title": "Industrial Experience Snapshot",
+        "layout": {
+          "mobile": "2x2_grid",
+          "desktop": "horizontal_metrics_strip"
+        },
+        "metrics": [
+          {
+            "label": "Years of Experience",
+            "value": "pending_verified_data"
+          },
+          {
+            "label": "Industrial Projects",
+            "value": "pending_verified_data"
+          },
+          {
+            "label": "Executed Area",
+            "value": "pending_verified_data"
+          },
+          {
+            "label": "Systems Delivered",
+            "value": "pending_verified_data"
+          }
+        ],
+        "rules": [
+          "Do not invent metrics.",
+          "If data is missing, keep structured placeholders.",
+          "No animated counters unless verified."
+        ]
+      },
+      {
+        "id": "related_resources",
+        "priority": "medium",
+        "title": "Engineering Resources",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_card_grid"
+        },
+        "resources": [
+          {
+            "title": "Roof Leakage Prevention Checklist",
+            "cta": "Download Resource"
+          },
+          {
+            "title": "Sandwich Panel Selection Guide",
+            "cta": "Download Resource"
+          },
+          {
+            "title": "Shop Drawing Review Guide",
+            "cta": "Download Resource"
+          }
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline": "Reduce Execution Risk Before Construction Begins.",
+        "text": "Request a technical consultation for your industrial panel, roofing, or cladding project.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info"
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Technical Consultation",
+      "secondary_action": "WhatsApp",
+      "visibility": "after_hero_scroll"
+    },
+    "analytics_events": [
+      "about_page_view",
+      "hero_primary_cta_click",
+      "hero_secondary_cta_click",
+      "system_card_click",
+      "technical_proof_open",
+      "resource_click",
+      "consultation_cta_click",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "content_governance": {
+      "tone": [
+        "professional",
+        "technical",
+        "trustworthy",
+        "direct",
+        "measured"
+      ],
+      "avoid": [
+        "marketing hype",
+        "startup storytelling",
+        "luxury branding language",
+        "fake metrics",
+        "unsupported claims"
+      ]
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the About SIPANEL page according to this JSON specification.",
+      "rules": [
+        "Use the existing SIPANEL design system and global components.",
+        "Use Next.js App Router, TypeScript, Tailwind CSS, next-intl, and minimal Framer Motion.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use real industrial assets if available.",
+        "If metrics or assets are missing, create structured placeholders instead of fake content.",
+        "Do not invent company statistics.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if verified business data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  },
+  {
+    "page": "aluminium_cladding_covering",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "service_system_page",
+    "purpose": "Design and implement a dedicated service page for Aluminium Cladding & Covering systems with industrial facade positioning, technical proof, SEO structure, and RFQ conversion.",
+    "route": {
+      "en": "/en/systems/aluminium-cladding-covering",
+      "fa": "/fa/systems/aluminium-cladding-covering",
+      "ar": "/ar/systems/aluminium-cladding-covering",
+      "ru": "/ru/systems/aluminium-cladding-covering"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "requirements": [
+        "localized content",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic",
+        "language switcher must keep the same page route"
+      ]
+    },
+    "brand_positioning": {
+      "main_positioning": "SIPANEL engineers and executes aluminium cladding and covering systems through facade layout control, fixing logic, material optimization, edge detailing, and installation discipline.",
+      "do_not_position_as": [
+        "decorative cladding installer only",
+        "cheap facade contractor",
+        "generic aluminium supplier",
+        "consumer-style facade brand"
+      ],
+      "core_message": "Facade quality depends on controlled layout, fixing details, material planning, and precise execution before installation begins."
+    },
+    "seo": {
+      "primary_keyword": "aluminium cladding systems",
+      "secondary_keywords": [
+        "industrial aluminium cladding",
+        "facade cladding systems",
+        "industrial facade systems",
+        "aluminium covering systems",
+        "metal facade cladding",
+        "factory exterior cladding",
+        "architectural aluminium covering",
+        "industrial building facade"
+      ],
+      "title": "Aluminium Cladding & Covering | SIPANEL Industrial Facade Systems",
+      "meta_description": "SIPANEL engineers aluminium cladding and covering systems for industrial facades with layout control, fixing logic, material optimization, and controlled installation.",
+      "h1": "Aluminium Cladding Systems With Controlled Execution.",
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "seo_requirements": [
+        "Primary keyword must appear in URL, title, meta description, H1, first 100 words, and image alt text.",
+        "Add internal links to Sandwich Panel Systems, Standing Seam Roofing, Projects, Resources, and RFQ.",
+        "Add localized metadata for EN, FA, AR, RU.",
+        "Add FAQ schema.",
+        "Add service schema.",
+        "Use clean semantic headings."
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "industrial",
+        "architectural",
+        "precise",
+        "structured",
+        "facade-focused",
+        "premium B2B"
+      ],
+      "colors": {
+        "primary_orange": "#FF6A00",
+        "black": "#0F1113",
+        "deep_black": "#050607",
+        "dark_section": "#1A1D21",
+        "light_background": "#F5F6F7",
+        "white": "#FFFFFF",
+        "text_primary": "#111111",
+        "text_secondary": "#555555",
+        "border": "#E5E7EB"
+      },
+      "visual_rules": [
+        "Use orange only for CTA, active states, technical highlights, and alignment markers.",
+        "Use dark sections for technical authority and facade proof areas.",
+        "Use light sections for readability.",
+        "Avoid decorative luxury facade styling.",
+        "Avoid heavy gradients, glassmorphism, playful effects, and startup-style visuals.",
+        "Use real industrial facade or cladding imagery when available.",
+        "Use technical overlays such as grid lines, panel joints, fixing points, edge details, and elevation alignment markers."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "service_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_content_first",
+          "desktop": "split_55_45_text_left_visual_right"
+        },
+        "content": {
+          "eyebrow": "Industrial Facade & Covering Systems",
+          "h1": "Aluminium Cladding Systems With Controlled Execution.",
+          "subheadline": "SIPANEL coordinates facade layout, fixing logic, material usage, joint details, edge conditions, and installation sequencing for industrial and architectural exterior systems.",
+          "primary_cta": "Request Cladding Consultation",
+          "secondary_cta": "View Facade Projects",
+          "trust_microcopy": "Technical review for facade layout, fixing details, material planning, and execution control."
+        },
+        "visual": {
+          "type": "industrial_facade_visual_with_technical_overlay",
+          "preferred_assets": [
+            "industrial facade cladding image",
+            "aluminium panel elevation",
+            "fixing detail",
+            "edge detail",
+            "joint alignment detail"
+          ],
+          "fallback": "technical facade grid illustration using brand design system",
+          "alt_text": "Aluminium cladding system with controlled facade layout and fixing detail"
+        },
+        "rules": [
+          "CTA must be visible above fold on mobile.",
+          "Do not use luxury lifestyle facade imagery.",
+          "First screen must communicate facade control, layout accuracy, and execution reliability.",
+          "Use primary keyword naturally in first 100 words."
+        ]
+      },
+      {
+        "id": "problem_context",
+        "priority": "critical",
+        "title": "Facade Problems Often Start With Weak Layout Control.",
+        "intro": "Aluminium cladding quality depends on alignment, fixing, edge detailing, material planning, and coordination between the facade system and building structure.",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "3x2_problem_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Misaligned Panel Joints",
+            "description": "Poor layout planning can create visible joint errors and inconsistent facade rhythm."
+          },
+          {
+            "title": "Weak Fixing Coordination",
+            "description": "Fixing points, substructure, and panel connections must be coordinated before installation."
+          },
+          {
+            "title": "Material Waste",
+            "description": "Unplanned panel dimensions and cutting logic increase waste and procurement cost."
+          },
+          {
+            "title": "Edge & Corner Issues",
+            "description": "Corners, openings, parapets, and edge conditions need controlled details for clean execution."
+          },
+          {
+            "title": "Water Ingress Risk",
+            "description": "Openings, joints, and transitions can create water entry points if not detailed correctly."
+          },
+          {
+            "title": "Inconsistent Visual Quality",
+            "description": "Facade appearance depends on precise alignment, spacing, and installation discipline."
+          }
+        ]
+      },
+      {
+        "id": "sipanel_solution",
+        "priority": "critical",
+        "title": "How SIPANEL Controls Cladding Execution Before Installation",
+        "layout": {
+          "mobile": "numbered_vertical_steps",
+          "desktop": "horizontal_engineering_flow"
+        },
+        "steps": [
+          {
+            "title": "Facade Layout Review",
+            "description": "Elevation geometry, openings, panel sizes, joint rhythm, and visual alignment are reviewed before fabrication or installation."
+          },
+          {
+            "title": "Fixing & Support Logic",
+            "description": "Substructure, fixing points, connection details, expansion behavior, and panel support logic are coordinated as one system."
+          },
+          {
+            "title": "Material Optimization",
+            "description": "Panel dimensions, cutting logic, procurement quantities, and accessory needs are planned to reduce waste and delays."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execution follows approved layout, alignment checkpoints, edge details, and inspection-based quality control."
+          }
+        ],
+        "proof_note": "The goal is not only to cover a facade — it is to control the visual, technical, and execution quality of the exterior system."
+      },
+      {
+        "id": "system_details",
+        "priority": "high",
+        "title": "Aluminium Cladding System Logic",
+        "layout": {
+          "mobile": "accordion",
+          "desktop": "two_column_technical_layout"
+        },
+        "details": [
+          {
+            "title": "Elevation Grid Control",
+            "description": "Panel joints, openings, corners, and facade rhythm must be aligned with the building geometry."
+          },
+          {
+            "title": "Fixing Detail Coordination",
+            "description": "Fixing details determine stability, alignment, serviceability, and installation accuracy."
+          },
+          {
+            "title": "Substructure Compatibility",
+            "description": "The cladding system must coordinate with the supporting structure and site tolerances."
+          },
+          {
+            "title": "Edge & Opening Details",
+            "description": "Corners, windows, doors, parapets, and edges need clean technical transitions."
+          },
+          {
+            "title": "Material Cutting Logic",
+            "description": "Panel sizing and cutting strategy directly affect waste, procurement cost, and facade consistency."
+          },
+          {
+            "title": "Inspection-Based Execution",
+            "description": "Alignment, joint spacing, fixing quality, and final facade appearance require controlled checkpoints."
+          }
+        ]
+      },
+      {
+        "id": "technical_proof_viewer",
+        "priority": "critical",
+        "title": "Technical Proof for Facade Control",
+        "layout": {
+          "mobile": "swipeable_cards_with_zoom",
+          "desktop": "technical_gallery_grid"
+        },
+        "items": [
+          {
+            "title": "Facade Layout Grid",
+            "description": "Shows panel rhythm, elevation alignment, openings, and joint control before execution.",
+            "asset_type": "elevation_or_shop_drawing",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Fixing Detail",
+            "description": "Shows how aluminium cladding connects to the support structure and maintains stability.",
+            "asset_type": "technical_detail",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Edge & Corner Detail",
+            "description": "Shows how edges, corners, parapets, or openings are technically resolved.",
+            "asset_type": "technical_detail",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Material Optimization Preview",
+            "description": "Shows panel sizing, cutting logic, and quantity planning for reduced waste.",
+            "asset_type": "bom_mto_or_layout_preview",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          }
+        ],
+        "interaction_rules": [
+          "Enable fullscreen viewer.",
+          "Enable zoom on mobile and desktop.",
+          "Support keyboard navigation.",
+          "Add alt text for every technical asset.",
+          "Track technical_proof_open and diagram_zoom events."
+        ]
+      },
+      {
+        "id": "applications",
+        "priority": "high",
+        "title": "Where Aluminium Cladding Fits",
+        "layout": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "3_column_grid"
+        },
+        "cards": [
+          "Industrial facades",
+          "Factory exterior systems",
+          "Office-industrial buildings",
+          "Architectural metal coverings",
+          "Entrance volumes and feature areas",
+          "Exterior renovation projects"
+        ]
+      },
+      {
+        "id": "quality_checkpoints",
+        "priority": "high",
+        "title": "Cladding Quality Checkpoints",
+        "layout": {
+          "mobile": "checklist_accordion",
+          "desktop": "two_column_checklist"
+        },
+        "items": [
+          "Elevation layout verification",
+          "Panel joint alignment review",
+          "Fixing point coordination",
+          "Substructure compatibility check",
+          "Edge and corner detail review",
+          "Opening transition check",
+          "Material cutting optimization",
+          "Final facade alignment inspection"
+        ]
+      },
+      {
+        "id": "comparison_section",
+        "priority": "medium",
+        "title": "Typical Cladding Installation vs SIPANEL Engineering-Controlled Cladding",
+        "layout": {
+          "mobile": "stacked_comparison_cards",
+          "desktop": "two_column_comparison_table"
+        },
+        "columns": [
+          {
+            "title": "Typical Installation",
+            "points": [
+              "Facade layout adjusted on site",
+              "Fixing details handled reactively",
+              "Material waste accepted as normal",
+              "Joint alignment depends on installer habit",
+              "Edge details solved late during execution"
+            ]
+          },
+          {
+            "title": "SIPANEL Approach",
+            "points": [
+              "Facade layout reviewed before execution",
+              "Fixing and support logic coordinated early",
+              "Material dimensions planned to reduce waste",
+              "Joint rhythm and alignment controlled",
+              "Edges, openings, and transitions detailed in advance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "related_case_studies",
+        "priority": "high",
+        "title": "Related Facade & Cladding Projects",
+        "layout": {
+          "mobile": "horizontal_swipe_cards",
+          "desktop": "3_card_grid"
+        },
+        "card_structure": [
+          "project_name",
+          "location",
+          "facade_area_m2",
+          "challenge",
+          "engineering_decision",
+          "measured_result_or_pending",
+          "cta"
+        ],
+        "rules": [
+          "Use real facade or cladding projects only.",
+          "Do not invent metrics.",
+          "If no case studies exist yet, render a pending proof placeholder and ask for project data only when needed."
+        ],
+        "cta": "View Facade Projects"
+      },
+      {
+        "id": "faq_section",
+        "priority": "high",
+        "title": "Aluminium Cladding Questions",
+        "schema": "FAQPage",
+        "items": [
+          {
+            "question": "What makes aluminium cladding execution successful?",
+            "answer": "Successful aluminium cladding depends on facade layout control, fixing detail coordination, material planning, edge detailing, and installation checkpoints."
+          },
+          {
+            "question": "Can material waste be reduced in cladding projects?",
+            "answer": "Yes. Material waste can be reduced through panel dimension planning, cutting logic, quantity control, and coordinated procurement."
+          },
+          {
+            "question": "Does SIPANEL handle industrial facade projects?",
+            "answer": "Yes. SIPANEL supports aluminium cladding and covering systems for industrial facades, factory exteriors, architectural metal coverings, and exterior renovation projects."
+          },
+          {
+            "question": "Why are fixing details important in aluminium cladding?",
+            "answer": "Fixing details affect stability, alignment, expansion behavior, installation accuracy, and long-term facade performance."
+          },
+          {
+            "question": "Can SIPANEL coordinate cladding with other envelope systems?",
+            "answer": "Yes. The page should connect aluminium cladding with sandwich panel systems and roofing systems where a full industrial envelope solution is required."
+          }
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta_with_contact_options"
+        },
+        "headline": "Plan the Facade Before Installation Starts.",
+        "text": "Request a technical consultation for aluminium cladding layout, fixing details, material optimization, and controlled execution.",
+        "primary_cta": "Request Cladding Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info",
+        "rules": [
+          "Use verified contact information only.",
+          "Do not invent phone, email, or address.",
+          "Track cladding_consultation_cta_click, whatsapp_click, phone_click."
+        ]
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Cladding Consultation",
+      "secondary_action": "WhatsApp",
+      "visibility": "after_hero_scroll",
+      "rules": [
+        "Minimum height 48px.",
+        "Do not cover form fields or footer content.",
+        "Use orange primary CTA.",
+        "Track sticky_mobile_cta_click."
+      ]
+    },
+    "analytics_events": [
+      "service_page_view",
+      "cladding_consultation_cta_click",
+      "hero_primary_cta_click",
+      "hero_secondary_cta_click",
+      "technical_proof_open",
+      "diagram_zoom",
+      "faq_expand",
+      "related_case_study_click",
+      "rfq_start",
+      "phone_click",
+      "whatsapp_click",
+      "sticky_mobile_cta_click"
+    ],
+    "animation_rules": {
+      "principle": "Motion must support clarity, facade alignment, and technical understanding, not decoration.",
+      "allowed": [
+        "subtle fade",
+        "subtle slide",
+        "accordion expand",
+        "technical card hover",
+        "viewer open transition"
+      ],
+      "forbidden": [
+        "heavy parallax",
+        "scroll jacking",
+        "bounce effects",
+        "infinite decorative animation",
+        "cinematic delays",
+        "luxury lifestyle animation"
+      ],
+      "must_support": [
+        "prefers-reduced-motion",
+        "keyboard accessibility",
+        "pause hidden animations"
+      ]
+    },
+    "responsive_rules": {
+      "mobile_first": true,
+      "mobile": [
+        "Single column layout.",
+        "CTA above fold.",
+        "Technical details in accordions.",
+        "Proof viewer accessible from cards.",
+        "Swipeable project cards.",
+        "Touch targets minimum 48px."
+      ],
+      "desktop": [
+        "12-column grid.",
+        "Hero split 55/45.",
+        "Technical proof visible early.",
+        "Comparison table in two columns.",
+        "CTA repeated after proof and FAQ."
+      ]
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the Aluminium Cladding & Covering page according to this JSON specification.",
+      "rules": [
+        "Use the existing SIPANEL design system and global components.",
+        "Use Next.js App Router, TypeScript, Tailwind CSS, next-intl, and minimal Framer Motion.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use real assets from the project if available.",
+        "If technical images are missing, create structured placeholders marked as pending asset, not fake proof.",
+        "Do not invent project metrics.",
+        "Do not ask for approval for normal implementation decisions.",
+        "Ask only if real facade/cladding project data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  },
+  {
+    "page_group": "case_study_pages",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "purpose": "Define reusable case study pages that convert SIPANEL project history into measurable engineering proof.",
+    "global_rules": {
+      "positioning": "Case studies must prove SIPANEL engineering control, not just display project photos.",
+      "tone": "measured, technical, proof-driven, direct",
+      "visual_style": "technical_clean_industrial",
+      "supported_languages": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl_languages": [
+        "fa",
+        "ar"
+      ],
+      "content_rules": [
+        "Use real project data only.",
+        "Do not invent metrics.",
+        "If a metric is missing, mark it as pending.",
+        "Every case study must follow challenge → engineering decision → execution detail → measured result → risk prevented.",
+        "Use real project photography when available.",
+        "Prefer technical proof over marketing claims."
+      ]
+    },
+    "page_template": {
+      "route_pattern": {
+        "en": "/en/projects/[slug]",
+        "fa": "/fa/projects/[slug]",
+        "ar": "/ar/projects/[slug]",
+        "ru": "/ru/projects/[slug]"
+      },
+      "section_order": [
+        "case_study_hero",
+        "project_snapshot",
+        "challenge_section",
+        "engineering_decision_section",
+        "execution_detail_section",
+        "technical_proof_gallery",
+        "measured_result_section",
+        "risk_prevented_section",
+        "related_services",
+        "related_case_studies",
+        "conversion_cta"
+      ]
+    },
+    "case_study_hero": {
+      "layout": {
+        "mobile": "stacked",
+        "desktop": "split_55_45_text_left_image_right"
+      },
+      "required_fields": [
+        "project_name",
+        "project_type",
+        "location",
+        "main_service",
+        "hero_image",
+        "short_summary"
+      ],
+      "content_rules": [
+        "Hero headline must be project-specific.",
+        "Do not use exaggerated claims.",
+        "Show service category clearly.",
+        "Use real industrial project image."
+      ],
+      "cta": {
+        "primary": "Request Similar Project Review",
+        "secondary": "Explore Related Systems"
+      }
+    },
+    "project_snapshot": {
+      "layout": {
+        "mobile": "2_column_compact_grid",
+        "desktop": "horizontal_metric_strip"
+      },
+      "fields": [
+        {
+          "key": "location",
+          "label": "Location",
+          "required": true
+        },
+        {
+          "key": "area_m2",
+          "label": "Project Area",
+          "required": false,
+          "missing_behavior": "hide_or_mark_pending"
+        },
+        {
+          "key": "duration_days",
+          "label": "Execution Duration",
+          "required": false,
+          "missing_behavior": "hide_or_mark_pending"
+        },
+        {
+          "key": "system_type",
+          "label": "System Type",
+          "required": true
+        },
+        {
+          "key": "scope",
+          "label": "SIPANEL Scope",
+          "required": true
+        }
+      ],
+      "rules": [
+        "No fake counters.",
+        "No animated metrics unless verified.",
+        "Preserve original measurement units."
+      ]
+    },
+    "challenge_section": {
+      "title": "Project Challenge",
+      "purpose": "Explain the real risk, complexity, or execution problem.",
+      "content_structure": [
+        "short_problem_summary",
+        "3_to_5_challenge_points",
+        "business_or_execution_risk"
+      ],
+      "approved_topics": [
+        "leakage risk",
+        "material waste",
+        "tight installation sequence",
+        "complex geometry",
+        "coordination issue",
+        "cold room insulation requirement",
+        "large-span roofing condition",
+        "facade alignment challenge"
+      ]
+    },
+    "engineering_decision_section": {
+      "title": "Engineering Decision",
+      "purpose": "Show how SIPANEL solved the project before or during execution.",
+      "content_structure": [
+        "decision_summary",
+        "technical_reasoning",
+        "selected_system_logic",
+        "coordination_or_shop_drawing_note"
+      ],
+      "rules": [
+        "Explain why the decision reduced project risk.",
+        "Use technical clarity, not jargon-heavy explanation.",
+        "Connect decision to measurable or practical outcome."
+      ]
+    },
+    "execution_detail_section": {
+      "title": "Controlled Execution",
+      "purpose": "Show how SIPANEL managed installation and delivery.",
+      "content_structure": [
+        "installation_sequence",
+        "procurement_control",
+        "quality_checkpoints",
+        "coordination_with_site_team"
+      ],
+      "quality_checkpoints_examples": [
+        "panel alignment",
+        "flashing installation",
+        "roof drainage detail",
+        "fastener placement",
+        "joint overlap",
+        "edge condition",
+        "final inspection"
+      ]
+    },
+    "technical_proof_gallery": {
+      "title": "Technical Proof",
+      "layout": {
+        "mobile": "swipeable_cards_with_zoom",
+        "desktop": "grid_with_fullscreen_viewer"
+      },
+      "asset_types": [
+        "project_image",
+        "shop_drawing",
+        "drainage_detail",
+        "installation_photo",
+        "before_after",
+        "BOM_MTO_preview",
+        "inspection_photo"
+      ],
+      "interaction": {
+        "fullscreen_viewer": true,
+        "zoom_enabled": true,
+        "keyboard_accessible": true,
+        "mobile_pinch_zoom": true
+      },
+      "rules": [
+        "Use real proof assets when available.",
+        "Do not use decorative stock photos.",
+        "Every asset must have alt text.",
+        "Technical assets should include short explanation."
+      ]
+    },
+    "measured_result_section": {
+      "title": "Measured Result",
+      "purpose": "Present verified results without exaggeration.",
+      "result_fields": [
+        {
+          "key": "completed_area_m2",
+          "label": "Completed Area",
+          "verification": "required"
+        },
+        {
+          "key": "duration_days",
+          "label": "Completed In",
+          "verification": "required_if_shown"
+        },
+        {
+          "key": "waste_reduction_percent",
+          "label": "Waste Reduction",
+          "verification": "required_if_shown"
+        },
+        {
+          "key": "rework_reduced",
+          "label": "Rework Reduced",
+          "verification": "required_if_shown"
+        },
+        {
+          "key": "leakage_test_result",
+          "label": "Leakage Test Result",
+          "verification": "required_if_shown"
+        }
+      ],
+      "missing_data_behavior": [
+        "Do not fabricate.",
+        "Show qualitative result only if numeric result is not verified.",
+        "Mark internal data as pending if needed."
+      ]
+    },
+    "risk_prevented_section": {
+      "title": "Risk Prevented",
+      "purpose": "Connect the project result to SIPANEL positioning.",
+      "risk_categories": [
+        "leakage risk",
+        "material waste",
+        "hidden cost",
+        "installation delay",
+        "coordination error",
+        "rework",
+        "poor system selection"
+      ],
+      "content_rule": "Each risk prevented must explain what could have gone wrong and how SIPANEL reduced that risk."
+    },
+    "related_services": {
+      "title": "Related Systems",
+      "links": [
+        "Sandwich Panel Systems",
+        "Standing Seam & ZIP Tech Roofing",
+        "Aluminium Cladding & Covering"
+      ],
+      "rules": [
+        "Link only to relevant service pages.",
+        "Use internal links for SEO."
+      ]
+    },
+    "related_case_studies": {
+      "title": "Related Projects",
+      "layout": {
+        "mobile": "horizontal_swipe_cards",
+        "desktop": "3_card_grid"
+      },
+      "minimum": 2,
+      "maximum": 3
+    },
+    "conversion_cta": {
+      "headline": "Need This Level of Control for Your Project?",
+      "text": "Request an engineering review before procurement and installation.",
+      "primary_cta": "Get Free Engineering Review",
+      "secondary_cta": "Request Project Cost Check"
+    },
+    "seo": {
+      "schema": [
+        "Article",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "metadata_rules": [
+        "Title must include project type and SIPANEL.",
+        "Meta description must include challenge, system type, and engineering result if verified.",
+        "Use project image as Open Graph image.",
+        "Add localized metadata for en/fa/ar/ru.",
+        "Add canonical per language.",
+        "Add hreflang for all languages."
+      ],
+      "internal_linking": [
+        "Link to related system page.",
+        "Link to RFQ/contact page.",
+        "Link to related case studies.",
+        "Link to relevant technical resource."
+      ]
+    },
+    "analytics_events": [
+      "case_study_view",
+      "case_study_gallery_open",
+      "case_study_image_zoom",
+      "case_study_cta_click",
+      "related_service_click",
+      "related_case_study_click",
+      "rfq_start",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "responsive_rules": {
+      "mobile": [
+        "Use concise project snapshot.",
+        "Use swipe gallery.",
+        "Avoid dense technical paragraphs.",
+        "CTA must be repeated after proof section.",
+        "Touch targets minimum 48px."
+      ],
+      "desktop": [
+        "Use 12-column layout.",
+        "Use strong hierarchy.",
+        "Use technical proof gallery near top.",
+        "Keep project metrics visible above first scroll."
+      ]
+    },
+    "sample_case_study_data_template": {
+      "slug": "",
+      "project_name": "",
+      "project_type": "",
+      "location": "",
+      "main_service": "",
+      "system_type": "",
+      "scope": "",
+      "area_m2": "",
+      "duration_days": "",
+      "hero_image": "",
+      "short_summary": "",
+      "challenge": {
+        "summary": "",
+        "points": []
+      },
+      "engineering_decision": {
+        "summary": "",
+        "technical_reasoning": "",
+        "selected_system_logic": ""
+      },
+      "execution_detail": {
+        "installation_sequence": "",
+        "procurement_control": "",
+        "quality_checkpoints": []
+      },
+      "technical_assets": [],
+      "measured_result": {
+        "completed_area_m2": "",
+        "duration_days": "",
+        "waste_reduction_percent": "",
+        "leakage_test_result": "",
+        "verification_status": "pending"
+      },
+      "risk_prevented": [],
+      "related_services": [],
+      "related_case_studies": []
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement reusable localized case study pages based on this JSON specification.",
+      "rules": [
+        "Build a reusable CaseStudyPage component powered by case study data.",
+        "Do not invent project data or metrics.",
+        "If real data is missing, create the structure and mark fields as pending.",
+        "Use real assets from project folders when available.",
+        "Implement fullscreen technical proof viewer.",
+        "Implement localized routes for EN, FA, AR, RU.",
+        "Preserve RTL layout for FA and AR.",
+        "Do not ask approval for normal implementation decisions."
+      ]
+    }
+  },
+  {
+    "page": "engineering_resource_hub",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "resource_hub",
+    "purpose": "Create a technical resource hub that builds engineering authority, supports SEO, and generates qualified industrial leads.",
+    "route": {
+      "en": "/en/resources",
+      "fa": "/fa/resources",
+      "ar": "/ar/resources",
+      "ru": "/ru/resources"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "requirements": [
+        "localized resource titles",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Generate qualified technical leads through useful engineering resources.",
+      "secondary": "Position SIPANEL as an industrial envelope engineering authority.",
+      "conversion": "Resource download, engineering review request, RFQ start"
+    },
+    "seo": {
+      "primary_keyword": "industrial panel engineering resources",
+      "secondary_keywords": [
+        "sandwich panel guide",
+        "standing seam roofing guide",
+        "roof leakage prevention checklist",
+        "industrial cladding guide",
+        "shop drawing review",
+        "industrial envelope technical resources",
+        "panel installation checklist"
+      ],
+      "title": "Engineering Resources | SIPANEL Industrial Panel, Roofing & Cladding Guides",
+      "meta_description": "Explore SIPANEL engineering resources for sandwich panels, standing seam roofing, aluminium cladding, waterproofing details, shop drawing review, and industrial envelope project control.",
+      "h1": "Engineering Resources for Better Industrial Envelope Decisions.",
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "seo_requirements": [
+        "Each resource card must have a clear keyword focus.",
+        "Add internal links to service pages and case studies.",
+        "Add localized metadata for EN, FA, AR, RU.",
+        "Use clean semantic headings.",
+        "Do not publish thin content pages."
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "technical",
+        "structured",
+        "educational",
+        "industrial",
+        "trust-building",
+        "conversion-focused"
+      ],
+      "visual_rules": [
+        "Use structured cards with technical hierarchy.",
+        "Use orange only for CTA, filters, active states, and technical emphasis.",
+        "Use diagrams, document previews, and technical thumbnails instead of generic images.",
+        "Avoid blog-style clutter.",
+        "Avoid decorative illustrations.",
+        "Prioritize scanability on mobile."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "resource_hub_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_60_40"
+        },
+        "content": {
+          "eyebrow": "SIPANEL Technical Library",
+          "h1": "Engineering Resources for Better Industrial Envelope Decisions.",
+          "subheadline": "Practical guides, checklists, and technical references for panel systems, waterproof roofing, aluminium cladding, shop drawings, and controlled industrial execution.",
+          "primary_cta": "Download Engineering Resource",
+          "secondary_cta": "Request Technical Consultation",
+          "trust_microcopy": "Built for project owners, contractors, engineers, architects, and procurement teams."
+        },
+        "visual": {
+          "type": "technical_document_stack_or_diagram_preview",
+          "preferred_assets": [
+            "shop drawing preview",
+            "roof drainage detail",
+            "panel system checklist",
+            "resource PDF mockup"
+          ],
+          "fallback": "structured technical document preview using SIPANEL design system"
+        }
+      },
+      {
+        "id": "resource_categories",
+        "priority": "critical",
+        "title": "Browse by Engineering Topic",
+        "layout": {
+          "mobile": "horizontal_scroll_filters",
+          "desktop": "inline_filter_tabs"
+        },
+        "categories": [
+          {
+            "id": "panel_systems",
+            "label": "Panel Systems"
+          },
+          {
+            "id": "roofing_waterproofing",
+            "label": "Roofing & Waterproofing"
+          },
+          {
+            "id": "cladding_facades",
+            "label": "Cladding & Facades"
+          },
+          {
+            "id": "shop_drawings",
+            "label": "Shop Drawings"
+          },
+          {
+            "id": "procurement",
+            "label": "Procurement & MTO"
+          },
+          {
+            "id": "quality_control",
+            "label": "Quality Control"
+          }
+        ],
+        "interaction_rules": [
+          "Filter resources without page reload.",
+          "Update URL query parameter when category changes.",
+          "Track resource_category_filter event."
+        ]
+      },
+      {
+        "id": "featured_resources",
+        "priority": "critical",
+        "title": "Featured Engineering Resources",
+        "layout": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "3_card_grid"
+        },
+        "resource_card_structure": [
+          "resource_type",
+          "category",
+          "title",
+          "short_description",
+          "difficulty_level",
+          "estimated_read_time",
+          "download_required",
+          "primary_cta"
+        ],
+        "resources": [
+          {
+            "id": "roof_leakage_prevention_checklist",
+            "type": "checklist",
+            "category": "roofing_waterproofing",
+            "title": "Industrial Roof Leakage Prevention Checklist",
+            "description": "A practical checklist for reviewing slope, drainage, flashings, penetrations, gutters, and installation risk before roofing starts.",
+            "difficulty": "Practical",
+            "read_time": "8 min",
+            "cta": "Download Checklist",
+            "lead_capture": true
+          },
+          {
+            "id": "sandwich_panel_selection_guide",
+            "type": "guide",
+            "category": "panel_systems",
+            "title": "Sandwich Panel Selection Guide",
+            "description": "Understand panel type, core selection, thickness, joint logic, insulation needs, and project conditions before procurement.",
+            "difficulty": "Technical",
+            "read_time": "10 min",
+            "cta": "Download Guide",
+            "lead_capture": true
+          },
+          {
+            "id": "shop_drawing_review_guide",
+            "type": "guide",
+            "category": "shop_drawings",
+            "title": "Shop Drawing Review Guide for Panel Projects",
+            "description": "A structured guide for checking panel layout, accessories, flashing logic, quantities, and execution coordination.",
+            "difficulty": "Technical",
+            "read_time": "12 min",
+            "cta": "Download Guide",
+            "lead_capture": true
+          },
+          {
+            "id": "standing_seam_roof_detail_notes",
+            "type": "technical_note",
+            "category": "roofing_waterproofing",
+            "title": "Standing Seam Roof Detail Notes",
+            "description": "Key technical points for seams, concealed fastening, roof movement, flashing connections, and drainage coordination.",
+            "difficulty": "Advanced",
+            "read_time": "9 min",
+            "cta": "Read Technical Note",
+            "lead_capture": false
+          },
+          {
+            "id": "aluminium_cladding_layout_checklist",
+            "type": "checklist",
+            "category": "cladding_facades",
+            "title": "Aluminium Cladding Layout Checklist",
+            "description": "Review facade grid, panel rhythm, joints, fixing logic, edges, openings, and material optimization before installation.",
+            "difficulty": "Practical",
+            "read_time": "7 min",
+            "cta": "Download Checklist",
+            "lead_capture": true
+          },
+          {
+            "id": "mto_procurement_planning_sheet",
+            "type": "worksheet",
+            "category": "procurement",
+            "title": "MTO & Procurement Planning Sheet",
+            "description": "A structured worksheet for reviewing quantities, accessories, flashings, fasteners, trims, and procurement gaps.",
+            "difficulty": "Practical",
+            "read_time": "6 min",
+            "cta": "Download Worksheet",
+            "lead_capture": true
+          }
+        ],
+        "rules": [
+          "Do not claim a downloadable PDF exists unless the file exists.",
+          "If a resource file is missing, create the page/card and mark asset_status as pending.",
+          "Use lead capture only for high-value downloadable resources.",
+          "Track resource_card_view and resource_download events."
+        ]
+      },
+      {
+        "id": "engineering_learning_paths",
+        "priority": "high",
+        "title": "Recommended Learning Paths",
+        "layout": {
+          "mobile": "accordion_paths",
+          "desktop": "3_column_path_cards"
+        },
+        "paths": [
+          {
+            "title": "For Project Owners",
+            "goal": "Reduce risk before procurement and installation.",
+            "resources": [
+              "Industrial Roof Leakage Prevention Checklist",
+              "Sandwich Panel Selection Guide",
+              "Request Project Cost Check"
+            ]
+          },
+          {
+            "title": "For Contractors",
+            "goal": "Improve coordination, installation sequence, and material planning.",
+            "resources": [
+              "Shop Drawing Review Guide",
+              "MTO & Procurement Planning Sheet",
+              "Standing Seam Roof Detail Notes"
+            ]
+          },
+          {
+            "title": "For Engineers & Architects",
+            "goal": "Review technical details, system logic, and envelope coordination.",
+            "resources": [
+              "Standing Seam Roof Detail Notes",
+              "Aluminium Cladding Layout Checklist",
+              "Technical Proof Gallery"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "technical_proof_library",
+        "priority": "high",
+        "title": "Technical Proof Library",
+        "layout": {
+          "mobile": "swipeable_cards",
+          "desktop": "technical_grid"
+        },
+        "items": [
+          {
+            "title": "Shop Drawing Previews",
+            "description": "Panel layout, quantities, accessories, and execution sequence proof.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Waterproofing Details",
+            "description": "Drainage, flashing, overlap, gutter, and penetration detail references.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Facade Layout Details",
+            "description": "Cladding grid, fixing points, joints, edge conditions, and elevation control.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Quality Checkpoints",
+            "description": "Inspection references for installation, alignment, waterproofing, and final verification.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          }
+        ],
+        "interaction_rules": [
+          "Enable fullscreen viewer for diagrams.",
+          "Enable zoom for technical visuals.",
+          "Track technical_proof_open and diagram_zoom events."
+        ]
+      },
+      {
+        "id": "resource_lead_capture",
+        "priority": "critical",
+        "title": "Get the Right Engineering Resource for Your Project",
+        "layout": {
+          "mobile": "step_based_form",
+          "desktop": "two_column_form_and_resource_preview"
+        },
+        "form_fields": [
+          "name",
+          "company",
+          "phone",
+          "email",
+          "project_type",
+          "resource_requested",
+          "project_stage",
+          "message"
+        ],
+        "cta": "Send Me the Resource",
+        "rules": [
+          "Use React Hook Form and Zod validation.",
+          "Do not request too many fields on mobile.",
+          "Track resource_form_start and resource_form_submit.",
+          "After submission, show success state and next CTA: Request Technical Consultation."
+        ]
+      },
+      {
+        "id": "related_services",
+        "priority": "medium",
+        "title": "Explore Related Systems",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Sandwich Panel Systems",
+            "link": "/systems/sandwich-panel-systems"
+          },
+          {
+            "title": "Standing Seam & ZIP Tech Roofing",
+            "link": "/systems/standing-seam-zip-tech-roofing"
+          },
+          {
+            "title": "Aluminium Cladding & Covering",
+            "link": "/systems/aluminium-cladding-covering"
+          }
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline": "Need Technical Review Before Procurement?",
+        "text": "SIPANEL can review your industrial panel, roofing, or cladding project before execution risk appears on site.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp"
+      }
+    ],
+    "content_governance": {
+      "rules": [
+        "Resources must educate before selling.",
+        "Avoid generic blog language.",
+        "Avoid unverified performance claims.",
+        "Use engineering terminology with clear explanations.",
+        "Keep paragraphs short and scannable.",
+        "Each resource must connect to project risk reduction."
+      ]
+    },
+    "analytics_events": [
+      "resources_page_view",
+      "resource_category_filter",
+      "resource_card_view",
+      "resource_download",
+      "resource_form_start",
+      "resource_form_submit",
+      "technical_proof_open",
+      "diagram_zoom",
+      "related_service_click",
+      "rfq_start",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the Engineering Resource Hub according to this JSON specification.",
+      "rules": [
+        "Use existing SIPANEL design system and global components.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use real resource files if available.",
+        "If downloadable files are missing, create structured pending states instead of fake downloads.",
+        "Implement category filters.",
+        "Implement resource lead capture form.",
+        "Implement technical proof viewer.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if real downloadable assets, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  },
+  {
+    "page": "faq_system",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "faq_and_knowledge_system",
+    "purpose": "Create a scalable FAQ system for SEO, buyer education, technical clarity, and RFQ conversion.",
+    "route": {
+      "en": "/en/faq",
+      "fa": "/fa/faq",
+      "ar": "/ar/faq",
+      "ru": "/ru/faq"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "requirements": [
+        "localized FAQ questions and answers",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Answer buyer and technical questions before RFQ.",
+      "secondary": "Support SEO with structured FAQ content.",
+      "conversion": "Move visitors toward engineering review, RFQ, phone, or WhatsApp contact."
+    },
+    "seo": {
+      "primary_keyword": "industrial panel systems FAQ",
+      "secondary_keywords": [
+        "sandwich panel questions",
+        "standing seam roofing FAQ",
+        "industrial roof leakage questions",
+        "aluminium cladding FAQ",
+        "panel installation FAQ",
+        "industrial envelope questions"
+      ],
+      "title": "FAQ | SIPANEL Industrial Panel, Roofing & Cladding Questions",
+      "meta_description": "Find answers about SIPANEL sandwich panel systems, standing seam roofing, aluminium cladding, waterproofing, shop drawings, procurement, and industrial envelope execution.",
+      "h1": "Industrial Panel, Roofing & Cladding Questions.",
+      "schema": [
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "clear",
+        "structured",
+        "technical",
+        "educational",
+        "trust-building"
+      ],
+      "rules": [
+        "Use accordion layout for mobile.",
+        "Use category sidebar or filter tabs on desktop.",
+        "Avoid dense text blocks.",
+        "Use orange only for active category, CTA, and highlights.",
+        "Answers must be direct and technically useful.",
+        "Do not use marketing hype."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "faq_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_60_40"
+        },
+        "content": {
+          "eyebrow": "Technical FAQ",
+          "h1": "Industrial Panel, Roofing & Cladding Questions.",
+          "subheadline": "Clear answers about sandwich panel systems, Standing Seam and ZIP Tech roofing, aluminium cladding, waterproofing logic, shop drawings, procurement, and controlled industrial execution.",
+          "primary_cta": "Request Technical Consultation",
+          "secondary_cta": "Explore Systems"
+        }
+      },
+      {
+        "id": "faq_search_and_filters",
+        "priority": "critical",
+        "layout": {
+          "mobile": "search_then_horizontal_filters",
+          "desktop": "search_with_category_sidebar"
+        },
+        "features": [
+          "FAQ search input",
+          "category filters",
+          "URL query update",
+          "keyboard accessible accordion",
+          "expand/collapse all on desktop"
+        ],
+        "categories": [
+          {
+            "id": "general",
+            "label": "General"
+          },
+          {
+            "id": "sandwich_panels",
+            "label": "Sandwich Panels"
+          },
+          {
+            "id": "roofing_waterproofing",
+            "label": "Roofing & Waterproofing"
+          },
+          {
+            "id": "aluminium_cladding",
+            "label": "Aluminium Cladding"
+          },
+          {
+            "id": "engineering_process",
+            "label": "Engineering Process"
+          },
+          {
+            "id": "procurement_cost",
+            "label": "Procurement & Cost"
+          },
+          {
+            "id": "rfq_contact",
+            "label": "RFQ & Contact"
+          }
+        ],
+        "tracking_events": [
+          "faq_search",
+          "faq_category_filter",
+          "faq_expand"
+        ]
+      },
+      {
+        "id": "faq_items",
+        "priority": "critical",
+        "layout": {
+          "mobile": "accordion_list",
+          "desktop": "category_grouped_accordion"
+        },
+        "items": [
+          {
+            "id": "what_does_sipanel_do",
+            "category": "general",
+            "question": "What does SIPANEL do?",
+            "answer": "SIPANEL engineers and executes industrial envelope systems, including sandwich panel systems, Standing Seam and ZIP Tech roofing, aluminium cladding, and related technical coordination. The focus is not only supply, but also risk reduction through precise design, smart procurement, and engineered installation.",
+            "related_links": [
+              "/systems/sandwich-panel-systems",
+              "/systems/standing-seam-zip-tech-roofing",
+              "/systems/aluminium-cladding-covering"
+            ]
+          },
+          {
+            "id": "is_sipanel_only_panel_supplier",
+            "category": "general",
+            "question": "Is SIPANEL only a sandwich panel supplier?",
+            "answer": "No. SIPANEL should be positioned as an engineering-first industrial envelope company. Sandwich panels are one part of the system, alongside waterproof roofing, aluminium cladding, shop drawing coordination, procurement planning, and controlled installation.",
+            "related_links": [
+              "/about",
+              "/systems"
+            ]
+          },
+          {
+            "id": "what_is_engineering_control",
+            "category": "engineering_process",
+            "question": "What does engineering-controlled execution mean?",
+            "answer": "Engineering-controlled execution means reviewing the system before installation: drawings, quantities, accessories, waterproofing details, installation sequence, and quality checkpoints. This helps reduce leakage risk, material waste, delays, rework, and hidden cost.",
+            "related_links": [
+              "/resources",
+              "/contact"
+            ]
+          },
+          {
+            "id": "how_reduce_project_risk",
+            "category": "engineering_process",
+            "question": "How does SIPANEL reduce project risk?",
+            "answer": "SIPANEL reduces risk by reviewing project conditions early, coordinating technical details, planning procurement accurately, and controlling installation through execution logic and inspection checkpoints.",
+            "related_links": [
+              "/solutions/industrial-envelope-systems"
+            ]
+          },
+          {
+            "id": "what_are_sandwich_panels",
+            "category": "sandwich_panels",
+            "question": "What are sandwich panel systems used for?",
+            "answer": "Sandwich panel systems are used for industrial walls, roofs, cold rooms, warehouses, factories, logistics centers, and insulated building envelopes. Their performance depends on panel selection, joint logic, accessories, flashing details, and installation quality.",
+            "related_links": [
+              "/systems/sandwich-panel-systems"
+            ]
+          },
+          {
+            "id": "how_choose_panel_type",
+            "category": "sandwich_panels",
+            "question": "How should the correct sandwich panel type be selected?",
+            "answer": "Panel type should be selected based on building use, insulation requirements, environmental conditions, fire considerations, panel thickness, joint type, project geometry, and installation conditions. SIPANEL reviews these factors before procurement.",
+            "related_links": [
+              "/resources",
+              "/contact"
+            ]
+          },
+          {
+            "id": "how_reduce_panel_waste",
+            "category": "sandwich_panels",
+            "question": "How can panel material waste be reduced?",
+            "answer": "Panel waste can be reduced through layout review, quantity planning, cutting logic, accessory coordination, and shop drawing review before ordering materials.",
+            "related_links": [
+              "/solutions/panel-material-optimization"
+            ]
+          },
+          {
+            "id": "why_shop_drawings_matter",
+            "category": "engineering_process",
+            "question": "Why are shop drawings important for panel projects?",
+            "answer": "Shop drawings clarify panel layout, dimensions, accessories, flashing logic, joint details, quantities, and installation sequence before site execution. They help reduce coordination errors and rework.",
+            "related_links": [
+              "/solutions/shop-drawing-review-panel-projects",
+              "/resources"
+            ]
+          },
+          {
+            "id": "what_is_standing_seam_roofing",
+            "category": "roofing_waterproofing",
+            "question": "What is Standing Seam roofing?",
+            "answer": "Standing Seam roofing is a metal roofing system with raised seams and concealed fastening. When designed correctly, it supports stronger waterproofing behavior for industrial roofs by reducing direct fastener exposure and improving seam control.",
+            "related_links": [
+              "/systems/standing-seam-zip-tech-roofing"
+            ]
+          },
+          {
+            "id": "what_is_zip_tech_roofing",
+            "category": "roofing_waterproofing",
+            "question": "What is ZIP Tech roofing?",
+            "answer": "ZIP Tech roofing refers to a concealed fastening roof system approach used for industrial waterproof roofing applications. The final performance depends on drainage planning, seam coordination, flashing detail, and controlled installation.",
+            "related_links": [
+              "/systems/standing-seam-zip-tech-roofing"
+            ]
+          },
+          {
+            "id": "why_industrial_roofs_leak",
+            "category": "roofing_waterproofing",
+            "question": "Why do industrial roofs leak?",
+            "answer": "Industrial roof leakage often comes from weak drainage planning, incorrect slope, poor flashing coordination, uncontrolled penetrations, exposed fastener issues, or installation sequence errors.",
+            "related_links": [
+              "/solutions/industrial-roof-leakage-prevention"
+            ]
+          },
+          {
+            "id": "how_prevent_roof_leakage",
+            "category": "roofing_waterproofing",
+            "question": "How can roof leakage risk be reduced before installation?",
+            "answer": "Leakage risk can be reduced by reviewing roof slope, drainage paths, gutters, downspouts, flashings, overlaps, penetrations, edge details, and installation sequence before roofing starts.",
+            "related_links": [
+              "/systems/standing-seam-zip-tech-roofing",
+              "/resources"
+            ]
+          },
+          {
+            "id": "what_is_aluminium_cladding",
+            "category": "aluminium_cladding",
+            "question": "What is aluminium cladding used for?",
+            "answer": "Aluminium cladding is used for industrial facades, factory exteriors, architectural metal coverings, entrance volumes, and exterior renovation projects. Quality depends on layout control, fixing details, edge conditions, and installation accuracy.",
+            "related_links": [
+              "/systems/aluminium-cladding-covering"
+            ]
+          },
+          {
+            "id": "why_cladding_layout_matters",
+            "category": "aluminium_cladding",
+            "question": "Why does facade layout matter in cladding projects?",
+            "answer": "Facade layout controls panel rhythm, joint alignment, opening coordination, edge details, visual consistency, and material waste. Weak layout control can create visible quality problems and execution delays.",
+            "related_links": [
+              "/systems/aluminium-cladding-covering"
+            ]
+          },
+          {
+            "id": "what_affects_cladding_cost",
+            "category": "procurement_cost",
+            "question": "What affects aluminium cladding cost?",
+            "answer": "Cladding cost depends on material type, panel size, fixing system, facade geometry, openings, edge details, waste percentage, substructure needs, and installation complexity.",
+            "related_links": [
+              "/contact"
+            ]
+          },
+          {
+            "id": "how_request_quote",
+            "category": "rfq_contact",
+            "question": "How can I request a quotation or technical consultation?",
+            "answer": "You can use the RFQ form, call SIPANEL, send an email, or contact the team through WhatsApp. It is best to include project type, location, estimated area, project stage, and any drawings if available.",
+            "related_links": [
+              "/contact"
+            ]
+          },
+          {
+            "id": "what_info_for_rfq",
+            "category": "rfq_contact",
+            "question": "What information should I send for RFQ?",
+            "answer": "Send your name, company, phone, project type, location, estimated area, project stage, main concern, and any available drawings or files. This helps the engineering team review the request more accurately.",
+            "related_links": [
+              "/contact"
+            ]
+          },
+          {
+            "id": "can_upload_drawings",
+            "category": "rfq_contact",
+            "question": "Can I send drawings or project files?",
+            "answer": "Yes. The RFQ form can support optional uploads such as PDF, JPG, PNG, and DWG files if backend file upload is enabled securely.",
+            "related_links": [
+              "/contact"
+            ]
+          }
+        ],
+        "rules": [
+          "Do not invent technical claims.",
+          "Keep answers direct and useful.",
+          "Add related internal links.",
+          "Support FAQPage schema.",
+          "Localize all questions and answers.",
+          "Preserve engineering terminology accurately."
+        ]
+      },
+      {
+        "id": "faq_cta_band",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline": "Didn’t Find the Technical Answer You Need?",
+        "text": "Send your project details and SIPANEL can review the system, risk points, procurement needs, or execution conditions.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info"
+      }
+    ],
+    "data_model": {
+      "faq_item": {
+        "id": "string",
+        "category": "string",
+        "question": "localized_string",
+        "answer": "localized_string",
+        "related_links": "array",
+        "schema_enabled": "boolean",
+        "priority": "critical | high | medium"
+      },
+      "category": {
+        "id": "string",
+        "label": "localized_string",
+        "description": "localized_string_optional"
+      }
+    },
+    "analytics_events": [
+      "faq_page_view",
+      "faq_search",
+      "faq_category_filter",
+      "faq_expand",
+      "faq_related_link_click",
+      "faq_cta_click",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the SIPANEL FAQ system according to this JSON specification.",
+      "rules": [
+        "Create a reusable FAQ data model.",
+        "Create localized FAQ pages for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Implement search and category filtering.",
+        "Implement accessible accordions.",
+        "Add FAQPage schema from the FAQ data.",
+        "Add related internal links.",
+        "Use existing SIPANEL design system.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if conflicting specifications, destructive commands, paid services, or missing verified business data are involved."
+      ]
+    }
+  },
+  {
+    "page": "homepage",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "routes": [
+        "/en",
+        "/fa",
+        "/ar",
+        "/ru"
+      ],
+      "requirements": [
+        "localized content",
+        "localized metadata",
+        "hreflang",
+        "rtl mirrored layout",
+        "language switcher in header"
+      ]
+    },
+    "page_goal": {
+      "primary": "Generate qualified B2B industrial project leads",
+      "secondary": "Position SIPANEL as an engineering-first industrial envelope execution company",
+      "conversion": "Request engineering review or project cost check"
+    },
+    "brand_positioning": {
+      "core_message": "SIPANEL reduces industrial panel project risk through precise design, smart procurement, and engineered installation.",
+      "hero_h1": "Reduce Project Risk Before Construction Begins.",
+      "hero_subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
+      "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+      "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION"
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "avoid": [
+        "generic startup landing page",
+        "playful SaaS visuals",
+        "heavy gradients",
+        "glassmorphism",
+        "fake metrics",
+        "decorative animation",
+        "stock people photography"
+      ],
+      "must_feel": [
+        "engineering-first",
+        "industrial",
+        "precise",
+        "structured",
+        "trustworthy",
+        "premium B2B"
+      ]
+    },
+    "design_tokens": {
+      "colors": {
+        "primary_orange": "#FF6A00",
+        "orange_hover": "#E85F00",
+        "black": "#0F1113",
+        "deep_black": "#050607",
+        "dark_section": "#1A1D21",
+        "light_background": "#F5F6F7",
+        "white": "#FFFFFF",
+        "text_primary": "#111111",
+        "text_secondary": "#555555",
+        "border": "#E5E7EB"
+      },
+      "color_usage": {
+        "light_sections": "70%",
+        "dark_sections": "20%",
+        "orange_accent": "10%",
+        "orange_rule": "Use orange only for CTA, key metrics, technical emphasis, and active states."
+      },
+      "typography": {
+        "latin_headline": [
+          "Inter",
+          "Sora",
+          "Montserrat"
+        ],
+        "latin_body": [
+          "Inter",
+          "Roboto"
+        ],
+        "persian": [
+          "Vazirmatn",
+          "IRANSansX"
+        ],
+        "arabic": [
+          "Cairo",
+          "IBM Plex Sans Arabic"
+        ],
+        "russian": [
+          "Inter",
+          "Montserrat"
+        ],
+        "desktop": {
+          "h1": "48px / 1.05 / 800",
+          "h2": "36px / 1.15 / 750",
+          "h3": "24px / 1.25 / 700",
+          "body": "16px / 1.6 / 400"
+        },
+        "mobile": {
+          "h1": "32px / 1.08 / 800",
+          "h2": "26px / 1.15 / 750",
+          "h3": "20px / 1.25 / 700",
+          "body": "15px / 1.55 / 400"
+        }
+      },
+      "layout": {
+        "container_max_width": "1200px",
+        "desktop_grid": "12 columns",
+        "desktop_padding": "40px",
+        "tablet_padding": "32px",
+        "mobile_padding": "20px",
+        "section_padding_desktop": "96px",
+        "section_padding_mobile": "56px"
+      }
+    },
+    "page_sections": [
+      {
+        "id": "header",
+        "priority": "critical",
+        "layout": {
+          "desktop": "logo_left_menu_center_cta_language_right",
+          "mobile": "logo_left_menu_icon_right"
+        },
+        "content": {
+          "nav_items": [
+            "Home",
+            "Systems",
+            "Projects",
+            "Process",
+            "Resources",
+            "Contact"
+          ],
+          "primary_cta": "Get Free Engineering Review",
+          "language_switcher": [
+            "EN",
+            "FA",
+            "AR",
+            "RU"
+          ]
+        },
+        "rules": [
+          "Use original SIPANEL logo only",
+          "Logo minimum width 120px",
+          "Sticky header with subtle background transition",
+          "No heavy shadow",
+          "Mobile menu must include language switcher at top",
+          "CTA must remain visible on desktop"
+        ]
+      },
+      {
+        "id": "hero_section",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_55_45_text_left_visual_right"
+        },
+        "content": {
+          "eyebrow": "Industrial Envelope Engineering",
+          "h1": "Reduce Project Risk Before Construction Begins.",
+          "subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
+          "primary_cta": "Get Free Engineering Review",
+          "secondary_cta": "Request Project Cost Check",
+          "trust_microcopy": "Engineering-led review for industrial panel, roofing, and cladding projects."
+        },
+        "visual": {
+          "type": "industrial_project_image_or_technical_composite",
+          "requirements": [
+            "real industrial roofing/facade/panel application",
+            "technical grid overlay allowed",
+            "no generic people stock photo",
+            "no excessive effects"
+          ]
+        },
+        "rules": [
+          "Communicate value within 3 seconds",
+          "CTA must be above fold on mobile",
+          "Mention risk reduction, engineering control, and execution clarity",
+          "Do not use brand slogan as H1"
+        ]
+      },
+      {
+        "id": "trust_bar",
+        "priority": "critical",
+        "layout": {
+          "mobile": "horizontal_scroll_metrics",
+          "tablet": "2x2_grid",
+          "desktop": "horizontal_strip"
+        },
+        "content": {
+          "metrics": [
+            {
+              "label": "Years of Industrial Experience",
+              "value": "30+",
+              "verification": "needs_internal_confirmation"
+            },
+            {
+              "label": "Industrial Projects",
+              "value": "400+",
+              "verification": "needs_internal_confirmation"
+            },
+            {
+              "label": "Executed Panel Area",
+              "value": "10,000,000+ m²",
+              "verification": "needs_internal_confirmation"
+            }
+          ]
+        },
+        "rules": [
+          "Use only verified or clearly marked metrics",
+          "Do not create fake counters",
+          "No animated number counting unless data is verified"
+        ]
+      },
+      {
+        "id": "systems_overview",
+        "priority": "critical",
+        "purpose": "Show SIPANEL is not only a sandwich panel supplier.",
+        "layout": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Sandwich Panel Systems",
+            "description": "Coordinated wall, roof, cold room, and insulated envelope systems with engineering-controlled layout and execution.",
+            "cta": "Explore Panel Systems"
+          },
+          {
+            "title": "Standing Seam & ZIP Tech Roofing",
+            "description": "Industrial waterproof roofing systems designed around drainage logic, concealed fastening, and controlled installation.",
+            "cta": "Explore Roofing Systems"
+          },
+          {
+            "title": "Aluminium Cladding & Covering",
+            "description": "Facade and exterior metal covering systems for industrial and architectural envelope performance.",
+            "cta": "Explore Cladding Systems"
+          }
+        ]
+      },
+      {
+        "id": "engineering_proof_snapshot",
+        "priority": "critical",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Shop Drawing Precision",
+            "proof": "Panel layout, connection logic, and installation sequencing are reviewed before execution.",
+            "visual": "shop_drawing_preview"
+          },
+          {
+            "title": "Waterproofing Logic",
+            "proof": "Drainage, flashing, overlap, and roof details are engineered to reduce leakage risk.",
+            "visual": "drainage_detail_preview"
+          },
+          {
+            "title": "Material Optimization",
+            "proof": "Procurement is planned around accurate quantities, reduced waste, and controlled project cost.",
+            "visual": "bom_mto_preview"
+          }
+        ],
+        "rules": [
+          "Show proof visually before long explanation",
+          "Use diagrams or technical previews",
+          "Enable fullscreen viewer for technical visuals"
+        ]
+      },
+      {
+        "id": "process_section",
+        "priority": "high",
+        "title": "Engineering → Procurement → Execution",
+        "layout": {
+          "mobile": "accordion_steps",
+          "desktop": "horizontal_process"
+        },
+        "steps": [
+          {
+            "title": "Engineering Review",
+            "description": "Project drawings, site constraints, system requirements, and leakage risks are reviewed before supply."
+          },
+          {
+            "title": "Smart Procurement",
+            "description": "Panel quantities, accessories, flashings, and project materials are planned to reduce waste and delays."
+          },
+          {
+            "title": "Controlled Installation",
+            "description": "Execution follows coordinated sequences, technical details, and inspection-based quality control."
+          },
+          {
+            "title": "Final Verification",
+            "description": "The delivered system is checked against execution quality, waterproofing details, and project requirements."
+          }
+        ]
+      },
+      {
+        "id": "case_studies_preview",
+        "priority": "high",
+        "layout": {
+          "mobile": "horizontal_swipe_cards",
+          "desktop": "3_card_grid"
+        },
+        "content_rules": [
+          "Use real project photography",
+          "Use challenge → engineering decision → result",
+          "Do not invent project metrics",
+          "If data is missing, mark as pending"
+        ],
+        "card_structure": [
+          "project_name",
+          "location",
+          "project_type",
+          "area_m2",
+          "challenge",
+          "engineering_decision",
+          "measured_result",
+          "cta"
+        ],
+        "cta": "Explore Proven Projects"
+      },
+      {
+        "id": "comparison_section",
+        "priority": "medium",
+        "title": "Supply-Only vs Engineering-Controlled Execution",
+        "layout": {
+          "mobile": "stacked_comparison_cards",
+          "desktop": "two_column_table"
+        },
+        "columns": [
+          "Typical Supply-Only Approach",
+          "SIPANEL Engineering-Controlled Approach"
+        ],
+        "comparison_points": [
+          "Panel selection",
+          "Waterproofing responsibility",
+          "Material waste",
+          "Installation coordination",
+          "Risk before construction",
+          "Technical documentation"
+        ]
+      },
+      {
+        "id": "resources_preview",
+        "priority": "medium",
+        "title": "Technical Resources for Better Project Decisions",
+        "cards": [
+          {
+            "title": "Panel Selection Guide",
+            "type": "download_or_article"
+          },
+          {
+            "title": "Roof Leakage Prevention Checklist",
+            "type": "download_or_article"
+          },
+          {
+            "title": "Shop Drawing Review Guide",
+            "type": "download_or_article"
+          }
+        ],
+        "cta": "Download Engineering Resource",
+        "rules": [
+          "Connect downloads to lead capture",
+          "Track resource_download event"
+        ]
+      },
+      {
+        "id": "rfq_section",
+        "priority": "critical",
+        "title": "Start Your Project With Confidence.",
+        "layout": {
+          "mobile": "step_based_form",
+          "desktop": "two_column_form_and_contact"
+        },
+        "form_fields": [
+          "name",
+          "company",
+          "phone",
+          "whatsapp",
+          "email",
+          "project_type",
+          "project_location",
+          "estimated_area",
+          "message",
+          "optional_file_upload"
+        ],
+        "cta": "Request Technical Consultation",
+        "contact_source": "production_contact_info",
+        "rules": [
+          "Use real contact data only from production_contact_info",
+          "Do not invent contact data",
+          "Add spam protection",
+          "Validate fields with Zod",
+          "Track rfq_submit event"
+        ]
+      },
+      {
+        "id": "footer",
+        "priority": "critical",
+        "layout": "dark_industrial_footer",
+        "content": {
+          "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+          "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION",
+          "contact": "Use production_contact_info only",
+          "columns": [
+            "Systems",
+            "Projects",
+            "Resources",
+            "Company",
+            "Contact"
+          ]
+        }
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Get Engineering Review",
+      "secondary_action": "WhatsApp",
+      "rules": [
+        "Minimum height 48px",
+        "Do not block important content",
+        "Visible after hero scroll",
+        "Track sticky_mobile_cta_click"
+      ]
+    },
+    "seo": {
+      "title": "SIPANEL | Industrial Panel, Roofing & Cladding Engineering",
+      "meta_description": "SIPANEL reduces industrial panel project risk through precise shop drawings, smart procurement, and engineered installation for panel, roofing, and cladding systems.",
+      "primary_keywords": [
+        "industrial panel systems",
+        "sandwich panel systems",
+        "standing seam roofing",
+        "industrial cladding",
+        "panel installation engineering",
+        "industrial envelope systems"
+      ],
+      "schema": [
+        "Organization",
+        "LocalBusiness",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "requirements": [
+        "localized title and meta for all languages",
+        "hreflang for en/fa/ar/ru",
+        "canonical per language",
+        "internal links to service pages",
+        "FAQ section included or linked"
+      ]
+    },
+    "analytics_events": [
+      "hero_primary_cta_click",
+      "hero_secondary_cta_click",
+      "language_change",
+      "trust_bar_view",
+      "proof_card_expand",
+      "diagram_open",
+      "diagram_zoom",
+      "case_study_view",
+      "case_study_expand",
+      "resource_download",
+      "rfq_start",
+      "rfq_submit",
+      "phone_click",
+      "whatsapp_click",
+      "sticky_mobile_cta_click"
+    ],
+    "animation_rules": {
+      "principle": "Motion must support clarity, engineering confidence, and usability.",
+      "allowed": [
+        "subtle fade",
+        "subtle slide",
+        "opacity",
+        "transform",
+        "small hover elevation"
+      ],
+      "forbidden": [
+        "heavy parallax",
+        "scroll jacking",
+        "infinite decorative animation",
+        "bounce effects",
+        "cinematic delays"
+      ],
+      "must_support": [
+        "prefers-reduced-motion",
+        "pause hidden animations"
+      ]
+    },
+    "responsive_rules": {
+      "mobile_first": true,
+      "small_mobile": "320px-480px",
+      "standard_mobile": "481px-767px",
+      "tablet": "768px-1024px",
+      "desktop": "1025px+",
+      "mobile_requirements": [
+        "single column layout",
+        "CTA above fold",
+        "sticky mobile CTA",
+        "horizontal swipe for case studies",
+        "accordion for proof cards",
+        "minimum touch target 48px"
+      ]
+    },
+    "content_governance": {
+      "tone": [
+        "professional",
+        "technical",
+        "confident",
+        "clear",
+        "direct"
+      ],
+      "avoid": [
+        "marketing hype",
+        "fake urgency",
+        "unsupported claims",
+        "overly emotional language",
+        "unverified numbers"
+      ],
+      "approved_ctas": [
+        "Get Free Engineering Review",
+        "Request Project Cost Check",
+        "Request Technical Consultation",
+        "Explore Proven Projects",
+        "Download Engineering Resource"
+      ],
+      "forbidden_ctas": [
+        "Buy Now",
+        "Click Here",
+        "Limited Time Offer",
+        "Best Price Guaranteed"
+      ]
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement this homepage exactly according to the JSON specification.",
+      "rules": [
+        "Read existing global SIPANEL JSON files first",
+        "Do not overwrite stronger rules from source-design",
+        "Use reusable components",
+        "Use Next.js App Router, TypeScript, Tailwind, next-intl, Framer Motion only where needed",
+        "Build English master content first, then localize FA, AR, RU",
+        "Do not ask for approval for normal implementation decisions",
+        "Ask only if real business data, destructive commands, paid services, or conflicting specs are involved"
+      ]
+    }
+  },
+  {
+    "page": "rfq_contact",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "conversion_contact_page",
+    "purpose": "Create a high-conversion RFQ and contact page for qualified industrial project inquiries.",
+    "route": {
+      "en": "/en/contact",
+      "fa": "/fa/contact",
+      "ar": "/ar/contact",
+      "ru": "/ru/contact"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "requirements": [
+        "localized form labels",
+        "localized validation messages",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Convert qualified industrial visitors into RFQ or engineering consultation leads.",
+      "secondary": "Offer fast contact options through phone, WhatsApp, and email.",
+      "conversion": [
+        "rfq_submit",
+        "engineering_review_request",
+        "phone_click",
+        "whatsapp_click",
+        "email_click"
+      ]
+    },
+    "contact_source_rules": {
+      "use_only_verified_contact_info": true,
+      "contact_source": "production_contact_info",
+      "never_generate_fake_contact_data": true,
+      "required_contact_fields": [
+        "company_name",
+        "address",
+        "phone",
+        "whatsapp",
+        "email",
+        "website"
+      ]
+    },
+    "seo": {
+      "primary_keyword": "industrial panel project consultation",
+      "secondary_keywords": [
+        "request sandwich panel quotation",
+        "standing seam roofing consultation",
+        "industrial cladding consultation",
+        "industrial envelope RFQ",
+        "panel installation consultation",
+        "roofing engineering review"
+      ],
+      "title": "Contact SIPANEL | Request Industrial Panel, Roofing & Cladding Consultation",
+      "meta_description": "Request an engineering review or RFQ from SIPANEL for sandwich panel systems, standing seam roofing, aluminium cladding, and industrial envelope projects.",
+      "h1": "Start Your Project With Engineering Review.",
+      "schema": [
+        "ContactPage",
+        "Organization",
+        "LocalBusiness",
+        "BreadcrumbList"
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "direct",
+        "trustworthy",
+        "conversion-focused",
+        "industrial",
+        "professional"
+      ],
+      "rules": [
+        "Prioritize clarity and low friction.",
+        "Avoid decorative contact page design.",
+        "Keep form easy on mobile.",
+        "Use orange only for primary actions and active states.",
+        "Use verified contact data only."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "contact_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_55_45_form_preview"
+        },
+        "content": {
+          "eyebrow": "Request Engineering Review",
+          "h1": "Start Your Project With Engineering Review.",
+          "subheadline": "Send your project details for sandwich panel systems, standing seam roofing, aluminium cladding, or industrial envelope execution. SIPANEL reviews the project from an engineering-first perspective before procurement or installation.",
+          "primary_cta": "Start RFQ",
+          "secondary_cta": "Contact via WhatsApp",
+          "trust_microcopy": "For industrial project owners, contractors, engineers, architects, and procurement teams."
+        }
+      },
+      {
+        "id": "contact_options",
+        "priority": "critical",
+        "title": "Contact SIPANEL Directly",
+        "layout": {
+          "mobile": "single_column_contact_cards",
+          "desktop": "4_card_grid"
+        },
+        "cards": [
+          {
+            "type": "phone",
+            "label": "Phone",
+            "value_source": "production_contact_info.phone",
+            "cta": "Call SIPANEL",
+            "tracking_event": "phone_click"
+          },
+          {
+            "type": "whatsapp",
+            "label": "WhatsApp",
+            "value_source": "production_contact_info.whatsapp",
+            "cta": "Message on WhatsApp",
+            "tracking_event": "whatsapp_click"
+          },
+          {
+            "type": "email",
+            "label": "Email",
+            "value_source": "production_contact_info.email",
+            "cta": "Send Email",
+            "tracking_event": "email_click"
+          },
+          {
+            "type": "address",
+            "label": "Address",
+            "value_source": "production_contact_info.address",
+            "cta": "View Location",
+            "tracking_event": "address_click"
+          }
+        ],
+        "rules": [
+          "Do not invent contact values.",
+          "Use tel:, mailto:, and WhatsApp deep links correctly.",
+          "Address card can link to map only if map URL is verified."
+        ]
+      },
+      {
+        "id": "rfq_form",
+        "priority": "critical",
+        "title": "Request Project Review",
+        "layout": {
+          "mobile": "step_based_form",
+          "desktop": "two_column_form_with_guidance"
+        },
+        "form_behavior": {
+          "validation": "React Hook Form + Zod",
+          "spam_protection": true,
+          "success_state": true,
+          "error_state": true,
+          "autosave_progress": false,
+          "file_upload": "optional"
+        },
+        "steps": [
+          {
+            "id": "contact_details",
+            "title": "Contact Details",
+            "fields": [
+              {
+                "name": "name",
+                "type": "text",
+                "label": "Full Name",
+                "required": true
+              },
+              {
+                "name": "company",
+                "type": "text",
+                "label": "Company",
+                "required": false
+              },
+              {
+                "name": "phone",
+                "type": "tel",
+                "label": "Phone / WhatsApp",
+                "required": true
+              },
+              {
+                "name": "email",
+                "type": "email",
+                "label": "Email",
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": "project_scope",
+            "title": "Project Scope",
+            "fields": [
+              {
+                "name": "project_type",
+                "type": "select",
+                "label": "Project Type",
+                "required": true,
+                "options": [
+                  "Sandwich Panel Systems",
+                  "Standing Seam & ZIP Tech Roofing",
+                  "Aluminium Cladding & Covering",
+                  "Full Industrial Envelope",
+                  "Technical Review / Consultation",
+                  "Other"
+                ]
+              },
+              {
+                "name": "project_location",
+                "type": "text",
+                "label": "Project Location",
+                "required": false
+              },
+              {
+                "name": "estimated_area",
+                "type": "text",
+                "label": "Estimated Area",
+                "placeholder": "e.g. 5,000 m²",
+                "required": false
+              },
+              {
+                "name": "project_stage",
+                "type": "select",
+                "label": "Project Stage",
+                "required": false,
+                "options": [
+                  "Concept / Early Planning",
+                  "Design Review",
+                  "Procurement",
+                  "Before Installation",
+                  "During Installation",
+                  "Existing Problem / Leakage"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "technical_details",
+            "title": "Technical Details",
+            "fields": [
+              {
+                "name": "main_concern",
+                "type": "multi_select",
+                "label": "Main Concern",
+                "required": false,
+                "options": [
+                  "Leakage Risk",
+                  "Material Waste",
+                  "Cost Control",
+                  "Execution Delay",
+                  "System Selection",
+                  "Shop Drawing Review",
+                  "Installation Quality",
+                  "Procurement Planning"
+                ]
+              },
+              {
+                "name": "message",
+                "type": "textarea",
+                "label": "Project Details",
+                "required": true,
+                "placeholder": "Briefly describe your project, system needs, timeline, or technical concern."
+              },
+              {
+                "name": "file_upload",
+                "type": "file",
+                "label": "Upload Drawing or Project File",
+                "required": false,
+                "allowed_formats": [
+                  "PDF",
+                  "JPG",
+                  "PNG",
+                  "DWG"
+                ],
+                "max_size": "10MB"
+              }
+            ]
+          }
+        ],
+        "submit": {
+          "label": "Request Technical Consultation",
+          "loading_label": "Sending Request...",
+          "success_title": "Your request has been received.",
+          "success_message": "SIPANEL will review the project details and contact you through the provided information.",
+          "tracking_event": "rfq_submit"
+        },
+        "rules": [
+          "Keep mobile form short and step-based.",
+          "Do not overload first screen with too many fields.",
+          "Primary button minimum height 48px.",
+          "Show privacy/trust note below form.",
+          "Validate required fields clearly.",
+          "Track rfq_start, rfq_step_complete, rfq_submit."
+        ]
+      },
+      {
+        "id": "project_type_guidance",
+        "priority": "high",
+        "title": "What Can SIPANEL Review?",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Panel System Projects",
+            "description": "Panel selection, layout coordination, accessory planning, flashing logic, and installation sequencing."
+          },
+          {
+            "title": "Roofing Projects",
+            "description": "Standing seam, ZIP Tech, drainage paths, slope review, gutters, flashings, and leakage prevention."
+          },
+          {
+            "title": "Cladding Projects",
+            "description": "Facade layout, fixing logic, material optimization, joint alignment, edge details, and exterior execution."
+          }
+        ]
+      },
+      {
+        "id": "trust_before_submit",
+        "priority": "medium",
+        "title": "Why Submit Project Details?",
+        "layout": {
+          "mobile": "stacked_benefits",
+          "desktop": "4_column_benefits"
+        },
+        "benefits": [
+          "Identify execution risk before installation",
+          "Improve material and accessory planning",
+          "Reduce leakage and rework risk",
+          "Clarify system selection before procurement"
+        ]
+      },
+      {
+        "id": "location_section",
+        "priority": "medium",
+        "title": "SIPANEL Office",
+        "layout": {
+          "mobile": "address_card",
+          "desktop": "address_card_and_map_placeholder"
+        },
+        "content_source": "production_contact_info.address",
+        "map_rules": [
+          "Use map embed only if verified.",
+          "If map URL is missing, show address card only.",
+          "Do not create fake map location."
+        ]
+      },
+      {
+        "id": "faq_section",
+        "priority": "high",
+        "title": "Contact & RFQ Questions",
+        "schema": "FAQPage",
+        "items": [
+          {
+            "question": "What information should I send for a project review?",
+            "answer": "Send the project type, location, estimated area, current stage, main concern, and any drawings or technical documents if available."
+          },
+          {
+            "question": "Can I request only a technical consultation?",
+            "answer": "Yes. You can request a review for system selection, leakage risk, shop drawings, procurement planning, or installation coordination."
+          },
+          {
+            "question": "Does SIPANEL handle full industrial envelope projects?",
+            "answer": "Yes. SIPANEL supports sandwich panel systems, standing seam and ZIP Tech roofing, aluminium cladding, and related industrial envelope execution."
+          },
+          {
+            "question": "Can I send drawings or project files?",
+            "answer": "Yes. The RFQ form can support optional file upload for PDF, JPG, PNG, and DWG files if enabled in the backend."
+          }
+        ]
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Start RFQ",
+      "secondary_action": "WhatsApp",
+      "visibility": "after_hero_scroll",
+      "rules": [
+        "Minimum height 48px.",
+        "Do not cover active form fields.",
+        "Hide or reduce when user is inside form step.",
+        "Track sticky_mobile_cta_click."
+      ]
+    },
+    "analytics_events": [
+      "contact_page_view",
+      "rfq_start",
+      "rfq_step_complete",
+      "rfq_submit",
+      "rfq_error",
+      "file_upload_attempt",
+      "phone_click",
+      "whatsapp_click",
+      "email_click",
+      "address_click",
+      "faq_expand",
+      "sticky_mobile_cta_click"
+    ],
+    "backend_requirements": {
+      "form_submission": [
+        "Secure endpoint required.",
+        "Spam protection required.",
+        "Server-side validation required.",
+        "Lead notification to SIPANEL team required.",
+        "Store uploaded files securely if file upload is enabled."
+      ],
+      "file_upload": {
+        "enabled": "optional",
+        "allowed_formats": [
+          "PDF",
+          "JPG",
+          "PNG",
+          "DWG"
+        ],
+        "max_size": "10MB",
+        "security": [
+          "Validate MIME type.",
+          "Scan or restrict uploads.",
+          "Do not expose uploaded files publicly."
+        ]
+      }
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the RFQ / Contact page according to this JSON specification.",
+      "rules": [
+        "Use verified contact information only from production_contact_info.",
+        "Do not invent phone, email, address, or map links.",
+        "Use React Hook Form and Zod.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Implement step-based mobile RFQ form.",
+        "Implement contact cards with correct tel, mailto, and WhatsApp links.",
+        "If backend endpoint is missing, create a safe frontend-ready form structure and mark backend integration as pending.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if backend credentials, paid services, destructive commands, or conflicting specifications are involved."
+      ]
+    }
+  },
+  {
+    "page_group": "seo_landing_pages",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "reusable_seo_landing_page_template",
+    "purpose": "Create scalable SEO landing pages for industrial panel, roofing, cladding, waterproofing, and engineering-control keywords.",
+    "global_rules": {
+      "positioning": "Every SEO page must position SIPANEL as an engineering-first industrial envelope systems company, not a generic supplier.",
+      "tone": "technical, educational, clear, proof-driven, conversion-focused",
+      "visual_style": "technical_clean_industrial",
+      "supported_languages": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl_languages": [
+        "fa",
+        "ar"
+      ],
+      "content_rules": [
+        "One primary keyword per page.",
+        "Do not create thin SEO content.",
+        "Do not keyword-stuff.",
+        "Explain technical value clearly.",
+        "Connect every topic to risk reduction, leakage prevention, material optimization, or controlled execution.",
+        "Include internal links to services, case studies, resources, and RFQ.",
+        "Use real proof only.",
+        "Do not invent case studies or metrics."
+      ]
+    },
+    "route_pattern": {
+      "en": "/en/solutions/[slug]",
+      "fa": "/fa/solutions/[slug]",
+      "ar": "/ar/solutions/[slug]",
+      "ru": "/ru/solutions/[slug]"
+    },
+    "seo_requirements": {
+      "one_primary_keyword_per_page": true,
+      "primary_keyword_required_in": [
+        "url_slug",
+        "title_tag",
+        "meta_description",
+        "h1",
+        "first_100_words",
+        "image_alt_text",
+        "faq_question_when_natural"
+      ],
+      "technical_seo": [
+        "localized metadata for all languages",
+        "hreflang for en/fa/ar/ru",
+        "canonical per language",
+        "BreadcrumbList schema",
+        "FAQPage schema",
+        "Service schema when relevant",
+        "Article schema when educational",
+        "internal links required",
+        "optimized Open Graph data"
+      ],
+      "quality_rules": [
+        "Minimum 900 words equivalent for full SEO page when content is available.",
+        "Use short paragraphs and technical cards instead of dense text.",
+        "Every section must answer search intent.",
+        "Avoid repetitive generic content across pages.",
+        "Each page must include a unique angle, unique examples, and relevant CTAs."
+      ]
+    },
+    "page_template": {
+      "section_order": [
+        "seo_hero",
+        "search_intent_problem",
+        "technical_context",
+        "sipanel_solution",
+        "engineering_workflow",
+        "technical_proof",
+        "application_details",
+        "quality_checkpoints",
+        "related_case_studies",
+        "related_resources",
+        "faq_section",
+        "conversion_cta"
+      ]
+    },
+    "sections": [
+      {
+        "id": "seo_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_content_first",
+          "desktop": "split_60_40"
+        },
+        "required_fields": [
+          "primary_keyword",
+          "h1",
+          "short_intro",
+          "primary_cta",
+          "secondary_cta",
+          "trust_microcopy",
+          "hero_visual"
+        ],
+        "content_rules": [
+          "H1 must include the primary keyword naturally.",
+          "Intro must mention SIPANEL engineering control within the first 100 words.",
+          "CTA must be visible above fold on mobile.",
+          "Hero visual should be technical, industrial, and relevant to the keyword."
+        ],
+        "cta_options": [
+          "Get Free Engineering Review",
+          "Request Project Cost Check",
+          "Request Technical Consultation"
+        ]
+      },
+      {
+        "id": "search_intent_problem",
+        "priority": "critical",
+        "title_pattern": "The Real Risk Behind [PRIMARY_KEYWORD]",
+        "purpose": "Explain why the search topic matters in industrial projects.",
+        "layout": {
+          "mobile": "accordion_problem_cards",
+          "desktop": "3_to_5_card_grid"
+        },
+        "content_rules": [
+          "Connect the keyword to a real industrial problem.",
+          "Mention cost, leakage, delay, waste, coordination, or performance risk when relevant.",
+          "Avoid generic marketing language."
+        ],
+        "card_count": "3_to_5"
+      },
+      {
+        "id": "technical_context",
+        "priority": "high",
+        "title_pattern": "What [PRIMARY_KEYWORD] Requires Technically",
+        "purpose": "Educate the visitor with technical clarity.",
+        "layout": {
+          "mobile": "short_sections",
+          "desktop": "two_column_explanation"
+        },
+        "content_rules": [
+          "Explain system logic in plain technical language.",
+          "Use diagrams or visual callouts before long explanation.",
+          "Avoid jargon unless explained."
+        ]
+      },
+      {
+        "id": "sipanel_solution",
+        "priority": "critical",
+        "title": "How SIPANEL Reduces Project Risk",
+        "layout": {
+          "mobile": "numbered_steps",
+          "desktop": "horizontal_process_cards"
+        },
+        "required_solution_pillars": [
+          {
+            "title": "Precise Design",
+            "description": "Review system requirements, layout, details, and execution conditions before procurement."
+          },
+          {
+            "title": "Smart Procurement",
+            "description": "Plan materials, accessories, quantities, flashings, and project needs to reduce waste and delays."
+          },
+          {
+            "title": "Engineered Installation",
+            "description": "Execute with technical sequencing, inspection checkpoints, and controlled installation logic."
+          }
+        ]
+      },
+      {
+        "id": "engineering_workflow",
+        "priority": "high",
+        "title_pattern": "Engineering Workflow for [PRIMARY_KEYWORD]",
+        "layout": {
+          "mobile": "vertical_timeline",
+          "desktop": "timeline_or_flow"
+        },
+        "steps": [
+          "Project condition review",
+          "System selection logic",
+          "Technical detail coordination",
+          "Material and accessory planning",
+          "Installation sequencing",
+          "Inspection and final verification"
+        ]
+      },
+      {
+        "id": "technical_proof",
+        "priority": "critical",
+        "title": "Technical Proof Before Execution",
+        "layout": {
+          "mobile": "swipeable_cards_with_zoom",
+          "desktop": "technical_gallery_grid"
+        },
+        "asset_types": [
+          "shop_drawing",
+          "drainage_detail",
+          "flashing_detail",
+          "panel_layout",
+          "facade_grid",
+          "BOM_MTO_preview",
+          "installation_photo"
+        ],
+        "rules": [
+          "Use real assets when available.",
+          "If assets are missing, show structured pending placeholders.",
+          "Do not fake technical drawings.",
+          "Enable fullscreen viewer and zoom.",
+          "Add alt text using the primary keyword naturally."
+        ]
+      },
+      {
+        "id": "application_details",
+        "priority": "high",
+        "title_pattern": "Where [PRIMARY_KEYWORD] Is Used",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_column_application_grid"
+        },
+        "content_rules": [
+          "List industrial applications relevant to the keyword.",
+          "Each application should include one technical consideration.",
+          "Link to related service pages when relevant."
+        ]
+      },
+      {
+        "id": "quality_checkpoints",
+        "priority": "high",
+        "title_pattern": "[PRIMARY_KEYWORD] Quality Checkpoints",
+        "layout": {
+          "mobile": "checklist_accordion",
+          "desktop": "two_column_checklist"
+        },
+        "checkpoint_categories": [
+          "design_review",
+          "procurement_review",
+          "installation_review",
+          "waterproofing_review",
+          "final_inspection"
+        ],
+        "rules": [
+          "Use practical checkpoints.",
+          "Avoid vague quality claims.",
+          "Connect checkpoints to risk reduction."
+        ]
+      },
+      {
+        "id": "related_case_studies",
+        "priority": "high",
+        "title": "Related Project Proof",
+        "layout": {
+          "mobile": "horizontal_swipe_cards",
+          "desktop": "3_card_grid"
+        },
+        "rules": [
+          "Use related real projects only.",
+          "If no project exists, show pending proof state instead of fake case studies.",
+          "Each card must include challenge, engineering decision, and result when available."
+        ]
+      },
+      {
+        "id": "related_resources",
+        "priority": "medium",
+        "title": "Related Engineering Resources",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_card_grid"
+        },
+        "resource_types": [
+          "guide",
+          "checklist",
+          "technical_note",
+          "worksheet"
+        ],
+        "rules": [
+          "Link to resource hub.",
+          "Use lead capture for downloadable resources.",
+          "Track resource clicks."
+        ]
+      },
+      {
+        "id": "faq_section",
+        "priority": "critical",
+        "title_pattern": "[PRIMARY_KEYWORD] Questions",
+        "schema": "FAQPage",
+        "rules": [
+          "Minimum 4 questions.",
+          "Maximum 7 questions.",
+          "Questions should match real search intent.",
+          "Answers must be clear, technical, and non-promotional.",
+          "At least one FAQ should connect to consultation or project review naturally."
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline_pattern": "Review [PRIMARY_KEYWORD] Before Execution Starts.",
+        "text_pattern": "SIPANEL can review your project conditions, technical details, procurement needs, and installation risks before site execution.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info"
+      }
+    ],
+    "recommended_landing_pages": [
+      {
+        "id": "industrial_sandwich_panel_installation",
+        "primary_keyword": "industrial sandwich panel installation",
+        "route_slug": "industrial-sandwich-panel-installation",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors looking for installation quality, contractor capability, and execution risk reduction.",
+        "unique_angle": "Controlled installation through layout coordination, accessory planning, and inspection checkpoints."
+      },
+      {
+        "id": "sandwich_panel_for_factory_buildings",
+        "primary_keyword": "sandwich panel for factory buildings",
+        "route_slug": "sandwich-panel-for-factory-buildings",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors comparing panel systems for factories.",
+        "unique_angle": "Panel system selection based on insulation, durability, installation, and project conditions."
+      },
+      {
+        "id": "standing_seam_roofing_for_industrial_buildings",
+        "primary_keyword": "standing seam roofing for industrial buildings",
+        "route_slug": "standing-seam-roofing-industrial-buildings",
+        "related_service": "standing_seam_zip_tech_roofing",
+        "search_intent": "Visitors evaluating waterproof roofing systems.",
+        "unique_angle": "Leakage prevention through drainage logic, concealed fastening, and flashing coordination."
+      },
+      {
+        "id": "industrial_roof_leakage_prevention",
+        "primary_keyword": "industrial roof leakage prevention",
+        "route_slug": "industrial-roof-leakage-prevention",
+        "related_service": "standing_seam_zip_tech_roofing",
+        "search_intent": "Visitors dealing with or trying to avoid roof leakage.",
+        "unique_angle": "Leakage risk reduction before installation through slope, drainage, flashing, and penetration review."
+      },
+      {
+        "id": "aluminium_cladding_for_industrial_facades",
+        "primary_keyword": "aluminium cladding for industrial facades",
+        "route_slug": "aluminium-cladding-industrial-facades",
+        "related_service": "aluminium_cladding_covering",
+        "search_intent": "Visitors looking for industrial facade cladding solutions.",
+        "unique_angle": "Facade quality through layout control, fixing logic, material optimization, and edge detailing."
+      },
+      {
+        "id": "shop_drawing_review_for_panel_projects",
+        "primary_keyword": "shop drawing review for panel projects",
+        "route_slug": "shop-drawing-review-panel-projects",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors needing technical review before panel procurement or installation.",
+        "unique_angle": "Risk reduction through layout review, quantity control, accessory coordination, and installation sequencing."
+      },
+      {
+        "id": "industrial_envelope_systems",
+        "primary_keyword": "industrial envelope systems",
+        "route_slug": "industrial-envelope-systems",
+        "related_service": "all_systems",
+        "search_intent": "Visitors searching for complete envelope solutions.",
+        "unique_angle": "Integrated panel, roofing, and cladding execution under engineering control."
+      },
+      {
+        "id": "panel_material_optimization",
+        "primary_keyword": "panel material optimization",
+        "route_slug": "panel-material-optimization",
+        "related_service": "sandwich_panel_systems",
+        "search_intent": "Visitors concerned about waste, cost, and procurement planning.",
+        "unique_angle": "Material waste reduction through MTO, layout logic, and procurement coordination."
+      }
+    ],
+    "content_data_model": {
+      "required_fields_per_page": [
+        "id",
+        "primary_keyword",
+        "route_slug",
+        "localized_title",
+        "localized_meta_description",
+        "localized_h1",
+        "search_intent",
+        "problem_cards",
+        "technical_context",
+        "solution_points",
+        "workflow_steps",
+        "applications",
+        "quality_checkpoints",
+        "faqs",
+        "related_service",
+        "related_resources",
+        "related_case_studies"
+      ],
+      "optional_fields": [
+        "technical_assets",
+        "verified_metrics",
+        "downloadable_resource",
+        "project_examples"
+      ],
+      "missing_data_behavior": [
+        "Do not invent data.",
+        "Use pending states for missing real project proof.",
+        "Use educational content when case study proof is unavailable.",
+        "Keep CTA active even if proof assets are pending."
+      ]
+    },
+    "analytics_events": [
+      "seo_landing_page_view",
+      "seo_primary_cta_click",
+      "seo_secondary_cta_click",
+      "technical_proof_open",
+      "diagram_zoom",
+      "faq_expand",
+      "related_service_click",
+      "related_resource_click",
+      "related_case_study_click",
+      "rfq_start",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement a reusable SEO landing page system based on this JSON specification.",
+      "rules": [
+        "Create one reusable SEO landing page template powered by page data.",
+        "Create initial pages from recommended_landing_pages.",
+        "Generate localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use next-intl for localized content.",
+        "Use generateMetadata for localized SEO metadata.",
+        "Add hreflang and canonical logic.",
+        "Add FAQ schema and BreadcrumbList schema.",
+        "Use real assets when available.",
+        "Do not invent metrics or case studies.",
+        "If data is missing, use pending proof states.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if verified project data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  },
+  {
+    "page_group": "service_system_pages",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "purpose": "Define all core service/system pages for SIPANEL industrial envelope expertise.",
+    "global_rules": {
+      "positioning": "SIPANEL is not a sandwich panel supplier only. It is an engineering-first industrial envelope systems company.",
+      "tone": "technical, professional, direct, proof-driven",
+      "visual_style": "technical_clean_industrial",
+      "supported_languages": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl_languages": [
+        "fa",
+        "ar"
+      ],
+      "technology": [
+        "Next.js App Router",
+        "TypeScript",
+        "Tailwind CSS",
+        "next-intl",
+        "Framer Motion minimal"
+      ],
+      "content_rules": [
+        "Do not invent fake metrics.",
+        "Do not use unsupported claims.",
+        "Use engineering logic before marketing language.",
+        "Connect every service to risk reduction, material optimization, waterproofing, or execution control.",
+        "Each page must include a conversion CTA and RFQ path.",
+        "Each page must include internal links to related systems, case studies, and resources."
+      ]
+    },
+    "shared_page_template": {
+      "section_order": [
+        "service_hero",
+        "problem_context",
+        "sipanel_engineering_approach",
+        "system_applications",
+        "technical_proof",
+        "process_workflow",
+        "quality_checkpoints",
+        "related_case_studies",
+        "faq_section",
+        "conversion_cta"
+      ],
+      "mobile_rules": [
+        "Hero CTA visible above fold.",
+        "Use accordion for technical details.",
+        "Use horizontal swipe cards for applications and case studies.",
+        "Minimum touch target 48px.",
+        "Avoid dense paragraphs."
+      ],
+      "seo_rules": {
+        "one_primary_keyword_per_page": true,
+        "primary_keyword_required_in": [
+          "url",
+          "title",
+          "meta_description",
+          "h1",
+          "first_100_words",
+          "image_alt"
+        ],
+        "schema": [
+          "Service",
+          "FAQPage",
+          "BreadcrumbList"
+        ],
+        "hreflang_required": true,
+        "canonical_per_language": true,
+        "localized_metadata_required": true
+      }
+    },
+    "pages": [
+      {
+        "id": "sandwich_panel_systems",
+        "route": {
+          "en": "/en/systems/sandwich-panel-systems",
+          "fa": "/fa/systems/sandwich-panel-systems",
+          "ar": "/ar/systems/sandwich-panel-systems",
+          "ru": "/ru/systems/sandwich-panel-systems"
+        },
+        "seo": {
+          "primary_keyword": "sandwich panel systems",
+          "title": "Sandwich Panel Systems | SIPANEL Engineering-Controlled Execution",
+          "meta_description": "SIPANEL engineers sandwich panel systems through precise layout, smart procurement, waterproofing logic, and controlled installation for industrial buildings."
+        },
+        "hero": {
+          "eyebrow": "Industrial Panel Systems",
+          "h1": "Sandwich Panel Systems Engineered Before Installation.",
+          "subheadline": "SIPANEL coordinates panel layout, accessories, flashings, procurement quantities, and installation sequence to reduce waste, leakage risk, and execution errors.",
+          "primary_cta": "Request Panel Engineering Review",
+          "secondary_cta": "View Related Projects",
+          "visual_direction": "real sandwich panel industrial building, technical grid overlay, shop drawing detail preview"
+        },
+        "problem_context": {
+          "title": "Most Panel Problems Begin Before Installation.",
+          "cards": [
+            "Incorrect panel selection for climate or application",
+            "Poor coordination between supplier and installer",
+            "Material waste from inaccurate quantity planning",
+            "Leakage risk from weak flashing and joint details",
+            "Project delays caused by missing accessories or unclear drawings"
+          ]
+        },
+        "engineering_approach": {
+          "title": "How SIPANEL Controls Panel System Risk",
+          "steps": [
+            {
+              "title": "Panel System Review",
+              "description": "Project drawings, envelope requirements, insulation needs, and site conditions are reviewed before procurement."
+            },
+            {
+              "title": "Shop Drawing Coordination",
+              "description": "Panel layout, cut lists, joint logic, accessories, and installation sequence are clarified before execution."
+            },
+            {
+              "title": "Smart Procurement Planning",
+              "description": "Quantities, flashings, fasteners, trims, and accessories are planned to reduce waste and site delays."
+            },
+            {
+              "title": "Controlled Installation",
+              "description": "Execution follows coordinated drawings, inspection checkpoints, and waterproofing detail logic."
+            }
+          ]
+        },
+        "applications": [
+          "Industrial factories",
+          "Warehouses",
+          "Cold rooms",
+          "Food and pharmaceutical facilities",
+          "Logistics centers",
+          "Clean industrial spaces"
+        ],
+        "technical_proof": {
+          "required_visuals": [
+            "panel layout preview",
+            "connection detail",
+            "flashing detail",
+            "BOM/MTO quantity preview"
+          ],
+          "interaction": "fullscreen diagram viewer with zoom"
+        },
+        "quality_checkpoints": [
+          "Panel thickness and core type verification",
+          "Joint and overlap review",
+          "Flashing and trim coordination",
+          "Accessory quantity confirmation",
+          "Installation sequence review",
+          "Final visual and waterproofing inspection"
+        ],
+        "faq": [
+          {
+            "question": "How does SIPANEL reduce sandwich panel waste?",
+            "answer": "By reviewing layout, quantities, cutting logic, and accessories before procurement and installation."
+          },
+          {
+            "question": "Does SIPANEL only supply panels?",
+            "answer": "No. SIPANEL focuses on engineering-controlled panel system execution, including review, procurement coordination, and installation."
+          },
+          {
+            "question": "Can SIPANEL help select the correct panel type?",
+            "answer": "Yes. Panel choice is reviewed according to project use, insulation needs, environment, fire considerations, and execution conditions."
+          }
+        ],
+        "conversion_cta": {
+          "headline": "Need a Safer Panel System Plan?",
+          "text": "Request an engineering review before procurement and installation.",
+          "button": "Get Free Engineering Review"
+        }
+      },
+      {
+        "id": "standing_seam_zip_tech_roofing",
+        "route": {
+          "en": "/en/systems/standing-seam-zip-tech-roofing",
+          "fa": "/fa/systems/standing-seam-zip-tech-roofing",
+          "ar": "/ar/systems/standing-seam-zip-tech-roofing",
+          "ru": "/ru/systems/standing-seam-zip-tech-roofing"
+        },
+        "seo": {
+          "primary_keyword": "standing seam roofing",
+          "title": "Standing Seam & ZIP Tech Roofing | SIPANEL Waterproof Roofing Systems",
+          "meta_description": "SIPANEL designs and executes standing seam and ZIP Tech roofing systems with waterproofing logic, drainage coordination, and controlled installation."
+        },
+        "hero": {
+          "eyebrow": "Industrial Waterproof Roofing",
+          "h1": "Standing Seam Roofing Built Around Waterproofing Logic.",
+          "subheadline": "SIPANEL coordinates roof slope, drainage points, seams, flashings, gutters, and concealed fastening details to reduce leakage risk in industrial roofing projects.",
+          "primary_cta": "Request Roof Engineering Review",
+          "secondary_cta": "View Roofing Projects",
+          "visual_direction": "industrial roof detail, standing seam profile, drainage/flashing technical overlay"
+        },
+        "problem_context": {
+          "title": "Roof Leakage Is Usually a Design Coordination Problem.",
+          "cards": [
+            "Weak drainage planning",
+            "Incorrect flashing details",
+            "Poor seam coordination",
+            "Improper fastener exposure",
+            "Expansion and movement not considered",
+            "Installation sequence errors"
+          ]
+        },
+        "engineering_approach": {
+          "title": "How SIPANEL Reduces Roofing Risk",
+          "steps": [
+            {
+              "title": "Roof Geometry Review",
+              "description": "Slope, roof spans, drainage paths, penetrations, gutters, and edge conditions are reviewed before execution."
+            },
+            {
+              "title": "Waterproofing Detail Coordination",
+              "description": "Seams, overlaps, flashings, ridges, valleys, and connection details are coordinated to reduce leakage risk."
+            },
+            {
+              "title": "Material and Accessory Planning",
+              "description": "Roof sheets, clips, fasteners, flashings, gutters, and drainage accessories are planned before site work."
+            },
+            {
+              "title": "Controlled Roof Installation",
+              "description": "Installation follows technical sequencing and quality checkpoints for waterproofing performance."
+            }
+          ]
+        },
+        "applications": [
+          "Industrial factories",
+          "Large-span warehouses",
+          "Logistics facilities",
+          "Production halls",
+          "Cold storage roofing",
+          "Waterproof industrial roofs"
+        ],
+        "technical_proof": {
+          "required_visuals": [
+            "standing seam profile detail",
+            "drainage path diagram",
+            "flashing connection detail",
+            "roof penetration detail"
+          ],
+          "interaction": "fullscreen diagram viewer with zoom"
+        },
+        "quality_checkpoints": [
+          "Slope and drainage verification",
+          "Seam and clip alignment",
+          "Flashing detail review",
+          "Gutter and downspout coordination",
+          "Penetration waterproofing check",
+          "Post-installation inspection"
+        ],
+        "faq": [
+          {
+            "question": "Why is standing seam roofing used for industrial projects?",
+            "answer": "It supports concealed fastening, controlled seams, and improved waterproofing logic for large industrial roofs."
+          },
+          {
+            "question": "What causes most industrial roof leakage?",
+            "answer": "Leakage often comes from weak drainage planning, poor flashing details, incorrect penetrations, or installation errors."
+          },
+          {
+            "question": "Does SIPANEL review drainage before installation?",
+            "answer": "Yes. Drainage paths, gutters, downspouts, slopes, and critical waterproofing details are reviewed before execution."
+          }
+        ],
+        "conversion_cta": {
+          "headline": "Before Roofing Starts, Review the Leakage Risk.",
+          "text": "Request a roof engineering review for drainage, flashing, and execution coordination.",
+          "button": "Request Roof Review"
+        }
+      },
+      {
+        "id": "aluminium_cladding_covering",
+        "route": {
+          "en": "/en/systems/aluminium-cladding-covering",
+          "fa": "/fa/systems/aluminium-cladding-covering",
+          "ar": "/ar/systems/aluminium-cladding-covering",
+          "ru": "/ru/systems/aluminium-cladding-covering"
+        },
+        "seo": {
+          "primary_keyword": "aluminium cladding systems",
+          "title": "Aluminium Cladding & Covering | SIPANEL Industrial Facade Systems",
+          "meta_description": "SIPANEL engineers aluminium cladding and covering systems for industrial facades, exterior envelopes, and architectural metal applications."
+        },
+        "hero": {
+          "eyebrow": "Industrial Facade & Covering Systems",
+          "h1": "Aluminium Cladding Systems With Controlled Execution.",
+          "subheadline": "SIPANEL coordinates facade layout, fixing logic, material usage, joint details, and installation sequencing for industrial and architectural exterior systems.",
+          "primary_cta": "Request Cladding Consultation",
+          "secondary_cta": "View Facade Projects",
+          "visual_direction": "industrial facade cladding, aluminium panels, clean elevation grid, technical detail overlay"
+        },
+        "problem_context": {
+          "title": "Facade Quality Depends on Layout, Fixing, and Execution Control.",
+          "cards": [
+            "Misaligned panel joints",
+            "Poor fixing coordination",
+            "Material waste from weak layout planning",
+            "Inconsistent facade appearance",
+            "Water ingress at edges and openings",
+            "Lack of coordination between structure and covering system"
+          ]
+        },
+        "engineering_approach": {
+          "title": "How SIPANEL Controls Cladding Execution",
+          "steps": [
+            {
+              "title": "Facade Layout Review",
+              "description": "Elevation geometry, openings, joints, panel sizes, and visual alignment are reviewed before fabrication."
+            },
+            {
+              "title": "Fixing and Support Logic",
+              "description": "Substructure, fixing points, panel connections, and expansion behavior are coordinated for stable execution."
+            },
+            {
+              "title": "Material Optimization",
+              "description": "Panel dimensions, cutting logic, and procurement quantities are planned to reduce waste."
+            },
+            {
+              "title": "Controlled Installation",
+              "description": "Installation follows approved layout, alignment checkpoints, and edge detail coordination."
+            }
+          ]
+        },
+        "applications": [
+          "Industrial facades",
+          "Factory exteriors",
+          "Office-industrial buildings",
+          "Architectural metal coverings",
+          "Entrance volumes",
+          "Exterior renovation projects"
+        ],
+        "technical_proof": {
+          "required_visuals": [
+            "facade layout grid",
+            "fixing detail",
+            "edge detail",
+            "opening connection detail"
+          ],
+          "interaction": "fullscreen diagram viewer with zoom"
+        },
+        "quality_checkpoints": [
+          "Elevation layout verification",
+          "Joint alignment review",
+          "Fixing detail coordination",
+          "Edge and corner detail check",
+          "Material cutting optimization",
+          "Final facade alignment inspection"
+        ],
+        "faq": [
+          {
+            "question": "What is important in aluminium cladding execution?",
+            "answer": "Layout accuracy, fixing logic, edge details, material planning, and installation sequencing are critical for quality."
+          },
+          {
+            "question": "Can cladding material waste be reduced?",
+            "answer": "Yes. Waste can be reduced through layout planning, cutting optimization, and coordinated procurement."
+          },
+          {
+            "question": "Does SIPANEL handle industrial facade projects?",
+            "answer": "Yes. SIPANEL supports aluminium cladding and exterior covering systems for industrial and architectural applications."
+          }
+        ],
+        "conversion_cta": {
+          "headline": "Need a More Controlled Facade Execution Plan?",
+          "text": "Request a technical consultation for aluminium cladding layout, details, and installation strategy.",
+          "button": "Request Cladding Consultation"
+        }
+      }
+    ],
+    "shared_components_required": [
+      "LocalizedHeader",
+      "ServiceHero",
+      "ProblemCards",
+      "EngineeringApproachSteps",
+      "ApplicationCards",
+      "TechnicalProofViewer",
+      "QualityChecklist",
+      "RelatedCaseStudies",
+      "ServiceFAQ",
+      "ConversionCTA",
+      "LocalizedFooter"
+    ],
+    "analytics_events": [
+      "service_page_view",
+      "service_primary_cta_click",
+      "service_secondary_cta_click",
+      "technical_proof_open",
+      "technical_proof_zoom",
+      "faq_expand",
+      "related_case_study_click",
+      "rfq_start",
+      "phone_click",
+      "whatsapp_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement these service/system pages as reusable localized page templates.",
+      "rules": [
+        "Build one reusable service page component powered by page data.",
+        "Create separate localized routes for each language.",
+        "Use the same design system as homepage.",
+        "Use real assets when available; otherwise mark required assets as pending.",
+        "Do not invent fake project metrics.",
+        "Do not ask for approval for normal implementation decisions.",
+        "Ask only if verified project data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  },
+  {
+    "page": "standing_seam_zip_tech_roofing",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "service_system_page",
+    "purpose": "Design and implement a dedicated service page for Standing Seam & ZIP Tech Roofing systems with engineering-first positioning, waterproofing proof, SEO structure, and RFQ conversion.",
+    "route": {
+      "en": "/en/systems/standing-seam-zip-tech-roofing",
+      "fa": "/fa/systems/standing-seam-zip-tech-roofing",
+      "ar": "/ar/systems/standing-seam-zip-tech-roofing",
+      "ru": "/ru/systems/standing-seam-zip-tech-roofing"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": [
+        "en",
+        "fa",
+        "ar",
+        "ru"
+      ],
+      "rtl": [
+        "fa",
+        "ar"
+      ],
+      "requirements": [
+        "localized content",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic",
+        "language switcher must keep the same page route"
+      ]
+    },
+    "brand_positioning": {
+      "main_positioning": "SIPANEL engineers and executes industrial waterproof roofing systems through drainage logic, seam coordination, flashing control, and installation discipline.",
+      "do_not_position_as": [
+        "roof sheet supplier only",
+        "generic roofing contractor",
+        "cheap roofing installer",
+        "decorative roof brand"
+      ],
+      "core_message": "Roof leakage risk is reduced before installation through engineered waterproofing logic and controlled execution."
+    },
+    "seo": {
+      "primary_keyword": "standing seam roofing",
+      "secondary_keywords": [
+        "ZIP Tech roofing",
+        "industrial waterproof roofing",
+        "standing seam roof system",
+        "industrial roof leakage prevention",
+        "concealed fastening roof",
+        "industrial metal roofing",
+        "roof drainage design",
+        "roof flashing detail"
+      ],
+      "title": "Standing Seam & ZIP Tech Roofing | SIPANEL Industrial Waterproof Roofing",
+      "meta_description": "SIPANEL designs and executes Standing Seam and ZIP Tech roofing systems with drainage logic, flashing coordination, concealed fastening, and controlled installation for industrial projects.",
+      "h1": "Standing Seam Roofing Built Around Waterproofing Logic.",
+      "schema": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "seo_requirements": [
+        "Primary keyword must appear in URL, title, meta description, H1, first 100 words, and image alt text.",
+        "Add internal links to Sandwich Panel Systems, Aluminium Cladding, Projects, Resources, and RFQ.",
+        "Add localized metadata for EN, FA, AR, RU.",
+        "Add FAQ schema.",
+        "Add service schema.",
+        "Use clean semantic headings."
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "industrial",
+        "technical",
+        "precise",
+        "waterproofing-focused",
+        "engineering-controlled",
+        "premium B2B"
+      ],
+      "colors": {
+        "primary_orange": "#FF6A00",
+        "black": "#0F1113",
+        "deep_black": "#050607",
+        "dark_section": "#1A1D21",
+        "light_background": "#F5F6F7",
+        "white": "#FFFFFF",
+        "text_primary": "#111111",
+        "text_secondary": "#555555",
+        "border": "#E5E7EB"
+      },
+      "visual_rules": [
+        "Use orange only for CTA, active states, technical highlights, and risk markers.",
+        "Use dark sections for technical authority and proof areas.",
+        "Use light sections for readability.",
+        "Avoid heavy gradients, glassmorphism, playful effects, and startup-style visuals.",
+        "Use real industrial roofing imagery when available.",
+        "Use technical overlays such as slope arrows, drainage lines, seam paths, flashing callouts."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "service_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_content_first",
+          "desktop": "split_55_45_text_left_visual_right"
+        },
+        "content": {
+          "eyebrow": "Industrial Waterproof Roofing",
+          "h1": "Standing Seam Roofing Built Around Waterproofing Logic.",
+          "subheadline": "SIPANEL coordinates roof slope, drainage paths, seams, flashings, gutters, penetrations, and concealed fastening details to reduce leakage risk before installation begins.",
+          "primary_cta": "Request Roof Engineering Review",
+          "secondary_cta": "View Roofing Projects",
+          "trust_microcopy": "Technical review for industrial roof drainage, flashing details, and controlled installation."
+        },
+        "visual": {
+          "type": "industrial_roofing_visual_with_technical_overlay",
+          "preferred_assets": [
+            "standing seam roof image",
+            "ZIP Tech roof image",
+            "roof drainage diagram",
+            "flashing detail",
+            "seam profile detail"
+          ],
+          "fallback": "technical illustration using brand grid and roof line diagram",
+          "alt_text": "Standing seam roofing system with engineered waterproofing detail"
+        },
+        "rules": [
+          "CTA must be visible above fold on mobile.",
+          "Do not use generic construction stock photos.",
+          "First screen must communicate leakage risk reduction and engineering control.",
+          "Use primary keyword naturally in first 100 words."
+        ]
+      },
+      {
+        "id": "problem_context",
+        "priority": "critical",
+        "title": "Roof Leakage Is Usually a Coordination Problem.",
+        "intro": "Industrial roof failures often begin before installation: weak drainage planning, unclear flashing details, exposed fasteners, or uncoordinated penetrations.",
+        "layout": {
+          "mobile": "accordion_cards",
+          "desktop": "3x2_problem_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Weak Drainage Planning",
+            "description": "Poor slope, gutter, or downspout coordination can create standing water and long-term leakage risk."
+          },
+          {
+            "title": "Incorrect Flashing Details",
+            "description": "Edges, ridges, valleys, and wall connections need precise details before execution."
+          },
+          {
+            "title": "Uncontrolled Penetrations",
+            "description": "Skylights, vents, ducts, and service openings create risk when not detailed correctly."
+          },
+          {
+            "title": "Exposed Fastener Risk",
+            "description": "Incorrect fastening strategy increases the chance of water ingress and maintenance problems."
+          },
+          {
+            "title": "Thermal Movement Issues",
+            "description": "Large roof surfaces need movement-aware detailing to avoid stress and deformation."
+          },
+          {
+            "title": "Installation Sequence Errors",
+            "description": "Even good materials fail when installation sequence and quality checks are not controlled."
+          }
+        ]
+      },
+      {
+        "id": "sipanel_solution",
+        "priority": "critical",
+        "title": "How SIPANEL Engineers Roofing Risk Before Execution",
+        "layout": {
+          "mobile": "numbered_vertical_steps",
+          "desktop": "horizontal_engineering_flow"
+        },
+        "steps": [
+          {
+            "title": "Roof Geometry Review",
+            "description": "Slope, spans, roof edges, penetrations, gutters, drainage paths, and site conditions are reviewed before installation."
+          },
+          {
+            "title": "Waterproofing Detail Coordination",
+            "description": "Seams, ridges, valleys, wall junctions, flashings, overlaps, and expansion details are coordinated as a system."
+          },
+          {
+            "title": "Material & Accessory Planning",
+            "description": "Sheets, clips, fasteners, gutters, trims, flashings, and drainage accessories are planned to reduce delays and missing items."
+          },
+          {
+            "title": "Controlled Roof Installation",
+            "description": "Execution follows approved details, sequencing, fastening logic, and inspection checkpoints."
+          }
+        ],
+        "proof_note": "The goal is not only to install roofing material — it is to control the waterproofing system before site errors appear."
+      },
+      {
+        "id": "system_details",
+        "priority": "high",
+        "title": "Standing Seam & ZIP Tech System Logic",
+        "layout": {
+          "mobile": "accordion",
+          "desktop": "two_column_technical_layout"
+        },
+        "details": [
+          {
+            "title": "Concealed Fastening",
+            "description": "Standing seam roofing reduces direct fastener exposure and supports cleaner waterproofing behavior when detailed correctly."
+          },
+          {
+            "title": "Seam Coordination",
+            "description": "Seam paths, panel lengths, overlaps, and roof geometry must be coordinated with installation sequence."
+          },
+          {
+            "title": "Drainage Path Control",
+            "description": "Water movement must be planned through slope direction, gutters, downspouts, valleys, and roof edges."
+          },
+          {
+            "title": "Flashing Integration",
+            "description": "Flashings connect the roof system to walls, edges, ridges, corners, and penetrations."
+          },
+          {
+            "title": "Expansion Awareness",
+            "description": "Industrial roofs require allowance for movement, temperature changes, and large-surface behavior."
+          },
+          {
+            "title": "Inspection-Based Execution",
+            "description": "Quality checkpoints help detect execution errors before they become leakage issues."
+          }
+        ]
+      },
+      {
+        "id": "technical_proof_viewer",
+        "priority": "critical",
+        "title": "Technical Proof Before Installation",
+        "layout": {
+          "mobile": "swipeable_cards_with_zoom",
+          "desktop": "technical_gallery_grid"
+        },
+        "items": [
+          {
+            "title": "Seam Profile Detail",
+            "description": "Shows how the roof seam is coordinated for concealed fastening and water movement.",
+            "asset_type": "diagram_or_detail",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Drainage Path Diagram",
+            "description": "Shows slope, gutters, downspouts, and water exit logic before execution.",
+            "asset_type": "diagram_or_shop_drawing",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Flashing Connection Detail",
+            "description": "Shows edge, wall, ridge, or penetration flashing coordination.",
+            "asset_type": "technical_detail",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Roof Penetration Detail",
+            "description": "Shows how vents, ducts, skylights, or service penetrations are controlled.",
+            "asset_type": "technical_detail",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          }
+        ],
+        "interaction_rules": [
+          "Enable fullscreen viewer.",
+          "Enable zoom on mobile and desktop.",
+          "Support keyboard navigation.",
+          "Add alt text for every technical asset.",
+          "Track diagram_open and diagram_zoom events."
+        ]
+      },
+      {
+        "id": "applications",
+        "priority": "high",
+        "title": "Where This Roofing System Fits",
+        "layout": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "3_column_grid"
+        },
+        "cards": [
+          "Industrial factories",
+          "Large-span warehouses",
+          "Production halls",
+          "Logistics centers",
+          "Cold storage facilities",
+          "Waterproof industrial roofing projects"
+        ]
+      },
+      {
+        "id": "quality_checkpoints",
+        "priority": "high",
+        "title": "Roofing Quality Checkpoints",
+        "layout": {
+          "mobile": "checklist_accordion",
+          "desktop": "two_column_checklist"
+        },
+        "items": [
+          "Slope and drainage path verification",
+          "Gutter and downspout coordination",
+          "Seam alignment and clip positioning",
+          "Flashing and edge detail review",
+          "Penetration waterproofing check",
+          "Fastening logic verification",
+          "Expansion and movement review",
+          "Post-installation inspection"
+        ]
+      },
+      {
+        "id": "comparison_section",
+        "priority": "medium",
+        "title": "Typical Roofing Installation vs SIPANEL Engineering-Controlled Roofing",
+        "layout": {
+          "mobile": "stacked_comparison_cards",
+          "desktop": "two_column_comparison_table"
+        },
+        "columns": [
+          {
+            "title": "Typical Installation",
+            "points": [
+              "Material selected before drainage review",
+              "Flashing decisions made on site",
+              "Penetrations handled reactively",
+              "Accessories missing or delayed",
+              "Quality depends on installer habit"
+            ]
+          },
+          {
+            "title": "SIPANEL Approach",
+            "points": [
+              "Roof geometry and drainage reviewed early",
+              "Flashing logic coordinated before installation",
+              "Penetrations detailed as part of the system",
+              "Accessories planned before procurement",
+              "Execution follows checkpoints and technical control"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "related_case_studies",
+        "priority": "high",
+        "title": "Related Roofing Projects",
+        "layout": {
+          "mobile": "horizontal_swipe_cards",
+          "desktop": "3_card_grid"
+        },
+        "card_structure": [
+          "project_name",
+          "location",
+          "roof_area_m2",
+          "challenge",
+          "engineering_decision",
+          "measured_result_or_pending",
+          "cta"
+        ],
+        "rules": [
+          "Use real roofing projects only.",
+          "Do not invent metrics.",
+          "If no case studies exist yet, render a pending proof placeholder and ask for project data only when needed."
+        ],
+        "cta": "View Roofing Projects"
+      },
+      {
+        "id": "faq_section",
+        "priority": "high",
+        "title": "Standing Seam Roofing Questions",
+        "schema": "FAQPage",
+        "items": [
+          {
+            "question": "Why is standing seam roofing suitable for industrial projects?",
+            "answer": "Standing seam roofing supports concealed fastening, clean seam control, and better waterproofing behavior when roof geometry, drainage, flashings, and installation sequence are engineered correctly."
+          },
+          {
+            "question": "What causes most industrial roof leakage?",
+            "answer": "Leakage often comes from weak drainage planning, poor flashing coordination, uncontrolled penetrations, exposed fastener issues, or installation sequence errors."
+          },
+          {
+            "question": "Does SIPANEL review drainage before installation?",
+            "answer": "Yes. SIPANEL reviews slope, drainage paths, gutters, downspouts, roof edges, and penetration conditions before installation planning."
+          },
+          {
+            "question": "What is the difference between supply-only roofing and engineering-controlled roofing?",
+            "answer": "Supply-only focuses on material delivery. Engineering-controlled roofing coordinates the complete waterproofing system, including details, procurement, installation sequence, and quality checkpoints."
+          },
+          {
+            "question": "Can SIPANEL help with roof repair or only new roofing?",
+            "answer": "The page should support both new industrial roofing and technical review of existing leakage problems if SIPANEL operationally provides this service. If not confirmed, mark repair service as pending."
+          }
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta_with_contact_options"
+        },
+        "headline": "Review the Leakage Risk Before Roofing Starts.",
+        "text": "Request a technical roofing review for drainage, flashing, penetrations, and controlled installation planning.",
+        "primary_cta": "Request Roof Engineering Review",
+        "secondary_cta": "Contact via WhatsApp",
+        "contact_source": "production_contact_info",
+        "rules": [
+          "Use verified contact information only.",
+          "Do not invent phone, email, or address.",
+          "Track roof_review_cta_click, whatsapp_click, phone_click."
+        ]
+      }
+    ],
+    "sticky_mobile_cta": {
+      "enabled": true,
+      "label": "Roof Review",
+      "secondary_action": "WhatsApp",
+      "visibility": "after_hero_scroll",
+      "rules": [
+        "Minimum height 48px.",
+        "Do not cover form fields or footer content.",
+        "Use orange primary CTA.",
+        "Track sticky_mobile_cta_click."
+      ]
+    },
+    "analytics_events": [
+      "service_page_view",
+      "roof_review_cta_click",
+      "hero_primary_cta_click",
+      "hero_secondary_cta_click",
+      "technical_proof_open",
+      "diagram_zoom",
+      "faq_expand",
+      "related_case_study_click",
+      "rfq_start",
+      "phone_click",
+      "whatsapp_click",
+      "sticky_mobile_cta_click"
+    ],
+    "animation_rules": {
+      "principle": "Motion must support clarity and waterproofing understanding, not decoration.",
+      "allowed": [
+        "subtle fade",
+        "subtle slide",
+        "accordion expand",
+        "technical card hover",
+        "viewer open transition"
+      ],
+      "forbidden": [
+        "heavy parallax",
+        "scroll jacking",
+        "bounce effects",
+        "infinite decorative animation",
+        "cinematic delays"
+      ],
+      "must_support": [
+        "prefers-reduced-motion",
+        "keyboard accessibility",
+        "pause hidden animations"
+      ]
+    },
+    "responsive_rules": {
+      "mobile_first": true,
+      "mobile": [
+        "Single column layout.",
+        "CTA above fold.",
+        "Technical details in accordions.",
+        "Proof viewer accessible from cards.",
+        "Swipeable project cards.",
+        "Touch targets minimum 48px."
+      ],
+      "desktop": [
+        "12-column grid.",
+        "Hero split 55/45.",
+        "Technical proof visible early.",
+        "Comparison table in two columns.",
+        "CTA repeated after proof and FAQ."
+      ]
+    },
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the Standing Seam & ZIP Tech Roofing page according to this JSON specification.",
+      "rules": [
+        "Use the existing SIPANEL design system and global components.",
+        "Use Next.js App Router, TypeScript, Tailwind CSS, next-intl, and minimal Framer Motion.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use real assets from the project if available.",
+        "If technical images are missing, create structured placeholders marked as pending asset, not fake proof.",
+        "Do not invent project metrics.",
+        "Do not ask for approval for normal implementation decisions.",
+        "Ask only if real roofing project data, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  }
+]

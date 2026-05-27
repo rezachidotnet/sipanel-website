@@ -1,0 +1,438 @@
+{
+    "component_implementation_map": {
+      "version": "1.0",
+      "brand_source": "SIPANEL brand guidelines",
+      "purpose": "Translate SIPANEL website strategy into exact production-ready component rules.",
+  
+      "global_brand_rules": {
+        "logo_usage": {
+          "use_original_logo_only": true,
+          "do_not_distort": true,
+          "do_not_change_colors": true,
+          "clear_space_required": true,
+          "minimum_digital_width": "120px"
+        },
+        "colors": {
+          "primary_orange": "#FF6A00",
+          "black": "#0F1113",
+          "dark_black": "#050607",
+          "gray": "#68686B",
+          "light_background": "#F5F6F7",
+          "white": "#FFFFFF"
+        },
+        "tagline": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+        "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION",
+        "visual_style": "technical_clean_industrial"
+      },
+  
+      "components": {
+        "header": {
+          "objective": "Provide navigation and fast conversion access.",
+          "priority": "critical",
+          "layout": {
+            "desktop": "logo_left_menu_center_cta_right",
+            "mobile": "logo_left_menu_icon_right_sticky_cta_bottom"
+          },
+          "content_rules": {
+            "max_menu_items": 6,
+            "required_items": ["Home", "Systems", "Projects", "Process", "About", "Contact"]
+          },
+
+          "language_switcher": {
+            "enabled": true,
+            "position": {
+              "desktop": "top_right",
+              "mobile": "inside_mobile_menu_top"
+            },
+            "display_mode": {
+              "desktop": "inline_tabs",
+              "mobile": "dropdown"
+            },
+            "supported_languages": [
+              {
+                "code": "en",
+                "label": "EN",
+                "name": "English",
+                "direction": "ltr",
+                "default": true
+              },
+              {
+                "code": "fa",
+                "label": "FA",
+                "name": "فارسی",
+                "direction": "rtl"
+              },
+              {
+                "code": "ar",
+                "label": "AR",
+                "name": "العربية",
+                "direction": "rtl"
+              },
+              {
+                "code": "ru",
+                "label": "RU",
+                "name": "Русский",
+                "direction": "ltr"
+              }
+            ],
+            "behavior_rules": {
+              "persist_language_in_local_storage": true,
+              "auto_apply_document_direction": true,
+              "update_html_lang_attribute": true,
+              "update_html_dir_attribute": true,
+              "reload_page_on_language_change": false,
+              "keep_same_route_when_switching_language": true
+            },
+            "rtl_rules": {
+              "rtl_languages": ["fa", "ar"],
+              "mirror_layout_on_rtl": true,
+              "flip_icon_direction": true,
+              "text_align": {
+                "rtl": "right",
+                "ltr": "left"
+              }
+            },
+            "desktop_layout": {
+              "placement": "right_of_cta",
+              "spacing_from_cta": "16px",
+              "minimum_touch_target": "40px"
+            },
+            "mobile_layout": {
+              "placement": "top_of_drawer",
+              "full_width": true,
+              "item_height": "48px"
+            },
+            "visual_rules": {
+              "active_language_color": "#FF6A00",
+              "inactive_language_color": "#68686B",
+              "hover_color": "#E85F00",
+              "background": "transparent",
+              "border_style": "1px solid rgba(255,255,255,0.14)",
+              "border_radius": "6px"
+            },
+            "accessibility_rules": {
+              "keyboard_navigation": true,
+              "aria_label": "Select language",
+              "screen_reader_language_announcement": true
+            },
+            "seo_rules": {
+              "hreflang_required": true,
+              "localized_urls": true,
+              "canonical_per_language": true
+            },
+            "analytics_events": [
+              "language_switcher_open",
+              "language_change"
+            ]
+          },      
+          
+          "interaction_rules": {
+            "sticky_on_scroll": true,
+            "mobile_menu_type": "fullscreen_or_slide_panel",
+            "tap_target_minimum": "48px"
+          },
+          "brand_rules": {
+            "logo_min_width_mobile": "120px",
+            "logo_clear_space": "required",
+            "background": "white_or_black_only"
+          },
+          "analytics_events": ["header_cta_click", "mobile_menu_open", "mobile_menu_item_click"]
+        },
+  
+        "hero_section": {
+          "objective": "Communicate SIPANEL value within 3 seconds.",
+          "priority": "critical",
+          "layout": {
+            "desktop": "split_text_left_visual_right",
+            "mobile": "stacked_text_first_visual_second"
+          },
+          "content_rules": {
+            "headline_max_lines_mobile": 3,
+            "subheadline_max_lines_mobile": 4,
+            "primary_cta_required": true,
+            "secondary_cta_allowed": true,
+            "trust_items_max": 4
+          },
+          "visual_rules": {
+            "use_real_industrial_or_engineering_visual": true,
+            "avoid_generic_stock": true,
+            "overlay_allowed": true,
+            "orange_usage": "cta_and_key_terms_only"
+          },
+          "cta_rules": {
+            "primary_cta": "Get Free Engineering Review",
+            "secondary_cta": "Request Project Cost Check",
+            "mobile_cta_above_fold": true,
+            "sticky_cta_after_scroll": "40%"
+          },
+          "performance_rules": {
+            "preload_hero_image": true,
+            "mobile_hero_asset_max": "250KB",
+            "use_webp_or_avif": true
+          },
+          "seo_rules": {
+            "single_h1": true,
+            "primary_keyword_in_h1": true
+          },
+          "analytics_events": ["hero_primary_cta_click", "hero_secondary_cta_click", "hero_scroll_depth"]
+        },
+  
+        "trust_bar": {
+          "objective": "Create immediate industrial credibility.",
+          "priority": "critical",
+          "layout": {
+            "desktop": "horizontal_metric_strip",
+            "mobile": "horizontal_scroll_or_2x2_metric_grid"
+          },
+          "content_rules": {
+            "real_metrics_only": true,
+            "fake_counters_forbidden": true,
+            "max_visible_items_mobile": 4
+          },
+          "required_metrics": ["years_experience", "projects_completed", "industrial_area_completed"],
+          "visual_rules": {
+            "client_logos_grayscale": true,
+            "certificates_preview_allowed": true
+          },
+          "analytics_events": ["trust_bar_view"]
+        },
+  
+        "proof_snapshot": {
+          "objective": "Show engineering proof immediately after trust.",
+          "priority": "critical",
+          "layout": {
+            "desktop": "3_visual_cards",
+            "mobile": "accordion_or_swipe_cards"
+          },
+          "content_rules": {
+            "cards_required": 3,
+            "text_max_lines_mobile": 3,
+            "visual_required_each_card": true
+          },
+          "required_cards": [
+            "Shop Drawing Preview",
+            "Waterproofing Logic",
+            "Material Optimization"
+          ],
+          "interaction_rules": {
+            "mobile_tap_to_expand": true,
+            "diagram_zoom_enabled": true
+          },
+          "analytics_events": ["proof_card_expand", "proof_diagram_zoom"]
+        },
+  
+        "comparison_section": {
+          "objective": "Show SIPANEL advantage against fragmented projects.",
+          "priority": "high",
+          "layout": {
+            "desktop": "two_column_comparison",
+            "mobile": "stacked_comparison_cards"
+          },
+          "content_rules": {
+            "max_rows": 5,
+            "sipanel_side_must_show_risk_reduction": true,
+            "avoid_exaggeration": true
+          },
+          "visual_rules": {
+            "use_check_and_x_icons": true,
+            "orange_for_sipanel_advantage": true
+          },
+          "analytics_events": ["comparison_section_view"]
+        },
+  
+        "services_cards": {
+          "objective": "Explain services clearly and route users to service pages.",
+          "priority": "high",
+          "layout": {
+            "desktop": "4_card_grid",
+            "mobile": "stacked_cards_or_2_card_scroll"
+          },
+          "content_rules": {
+            "description_max_lines": 3,
+            "each_card_clickable": true,
+            "cta_required_each_card": true
+          },
+          "required_services": [
+            "Shop Drawing Design",
+            "Sandwich Panel Supply",
+            "Engineering Installation",
+            "Quality & Waterproofing Guarantee"
+          ],
+          "analytics_events": ["service_card_click"]
+        },
+  
+        "projects_case_studies": {
+          "objective": "Convert project proof into measurable credibility.",
+          "priority": "critical",
+          "layout": {
+            "desktop": "case_study_grid_or_slider",
+            "mobile": "swipeable_case_study_cards"
+          },
+          "required_fields": [
+            "project_name",
+            "location",
+            "area",
+            "challenge",
+            "engineering_decision",
+            "execution_detail",
+            "measured_result",
+            "risk_prevented",
+            "image"
+          ],
+          "content_rules": {
+            "real_images_only": true,
+            "fake_metrics_forbidden": true,
+            "each_case_must_show_problem_solution_result": true,
+            "risk_prevented_required": true
+          },
+          "mobile_rules": {
+            "one_card_visible": true,
+            "large_image_first": true,
+            "cta_after_every_2_cards": true
+          },
+          "analytics_events": ["case_study_view", "case_study_swipe", "case_study_cta_click"]
+        },
+  
+        "technical_diagram_viewer": {
+          "objective": "Make shop drawings and engineering diagrams readable on mobile.",
+          "priority": "critical",
+          "interaction_rules": {
+            "tap_to_fullscreen": true,
+            "pinch_to_zoom": true,
+            "drag_to_pan": true,
+            "close_button_visible": true
+          },
+          "visual_rules": {
+            "preview_max_annotations": 3,
+            "expanded_annotations_allowed": true,
+            "orange_callouts_only_for_technical_emphasis": true,
+            "avoid_cad_clutter": true
+          },
+          "performance_rules": {
+            "preview_load_first": true,
+            "high_resolution_load_on_tap": true,
+            "pdf_embed_on_mobile_forbidden": true
+          },
+          "analytics_events": ["diagram_open", "diagram_zoom", "diagram_close"]
+        },
+  
+        "process_section": {
+          "objective": "Show SIPANEL workflow as controlled and predictable.",
+          "priority": "high",
+          "layout": {
+            "desktop": "horizontal_steps",
+            "mobile": "accordion_steps_or_vertical_timeline"
+          },
+          "content_rules": {
+            "max_steps": 5,
+            "step_description_max_lines": 3
+          },
+          "visual_rules": {
+            "use_connected_flow": true,
+            "orange_arrows_or_nodes": true
+          },
+          "analytics_events": ["process_step_expand"]
+        },
+  
+        "resources_section": {
+          "objective": "Generate qualified leads through useful engineering resources.",
+          "priority": "high",
+          "layout": {
+            "desktop": "resource_card_grid",
+            "mobile": "expandable_resource_cards"
+          },
+          "content_rules": {
+            "resource_must_solve_real_problem": true,
+            "download_cta_required": true,
+            "preview_visual_required": true
+          },
+          "form_rules": {
+            "max_fields": 4,
+            "mobile_first_fields": ["name", "phone"],
+            "optional_fields": ["company", "message"]
+          },
+          "analytics_events": ["resource_card_click", "resource_download_start", "resource_download_complete"]
+        },
+  
+        "rfq_form": {
+          "objective": "Capture qualified project inquiries with low friction.",
+          "priority": "critical",
+          "layout": {
+            "desktop": "short_form",
+            "mobile": "step_based_form"
+          },
+          "field_rules": {
+            "desktop_max_fields": 5,
+            "mobile_first_step_max_fields": 2,
+            "phone_required": true,
+            "project_details_optional": true,
+            "file_upload_optional": true
+          },
+          "conversion_rules": {
+            "success_message_required": true,
+            "response_expectation": "within 1 working hour",
+            "whatsapp_alternative_required": true
+          },
+          "analytics_events": ["rfq_start", "rfq_step_complete", "rfq_submit", "rfq_abandon"]
+        },
+  
+        "sticky_mobile_cta": {
+          "objective": "Keep conversion access always reachable on mobile.",
+          "priority": "critical",
+          "position": "bottom_safe_zone",
+          "content_rules": {
+            "primary_text": "Free Engineering Review",
+            "secondary_actions": ["Call", "WhatsApp"]
+          },
+          "interaction_rules": {
+            "tap_target_minimum": "48px",
+            "hide_near_footer": true,
+            "do_not_block_content": true
+          },
+          "analytics_events": ["sticky_cta_click", "sticky_call_click", "sticky_whatsapp_click"]
+        },
+  
+        "footer": {
+          "objective": "Close the website with trust, navigation, and contact clarity.",
+          "priority": "medium",
+          "layout": {
+            "desktop": "multi_column",
+            "mobile": "stacked_simple_footer"
+          },
+          "content_rules": {
+            "logo_required": true,
+            "tagline_required": true,
+            "contact_info_required": true,
+            "important_links_repeated": true
+          },
+          "brand_rules": {
+            "use_dark_background_preferred": true,
+            "orange_accent_line_allowed": true
+          },
+          "analytics_events": ["footer_link_click", "footer_contact_click"]
+        }
+      },
+  
+      "implementation_priorities": {
+        "phase_1_critical_build": [
+          "header",
+          "hero_section",
+          "trust_bar",
+          "proof_snapshot",
+          "sticky_mobile_cta",
+          "rfq_form"
+        ],
+        "phase_2_conversion_and_proof": [
+          "projects_case_studies",
+          "comparison_section",
+          "resources_section",
+          "technical_diagram_viewer"
+        ],
+        "phase_3_full_platform": [
+          "services_cards",
+          "process_section",
+          "footer"
+        ]
+      }
+    }
+  }

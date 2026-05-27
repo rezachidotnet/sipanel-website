@@ -1,0 +1,255 @@
+{
+    "page": {
+      "number": 9,
+      "title": "Graphic Elements & Patterns",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the approved graphic elements, pattern systems, technical overlays, and visual accents used to reinforce SIPANEL's engineering-first industrial identity.",
+    "graphic_philosophy": {
+      "statement": "SIPANEL graphic elements must support technical clarity, structured hierarchy, and engineering confidence — never decoration for decoration's sake.",
+      "core_principles": [
+        "Functional over decorative",
+        "Technical over playful",
+        "Structured over random",
+        "Minimal over complex",
+        "Engineering clarity over visual noise"
+      ]
+    },
+    "approved_graphic_elements": {
+      "technical_lines": {
+        "description": "Thin structural lines used to create engineering precision and layout discipline.",
+        "usage": [
+          "Section dividers",
+          "Diagram callouts",
+          "Grid overlays",
+          "Technical annotations"
+        ],
+        "rules": [
+          "Use subtle contrast.",
+          "Avoid excessive line density.",
+          "Align lines to the grid system."
+        ]
+      },
+      "orange_accent_marks": {
+        "description": "Small orange highlights used for technical emphasis and conversion focus.",
+        "color": "#FF6A00",
+        "usage": [
+          "CTA emphasis",
+          "Annotation points",
+          "Key metrics",
+          "Important technical labels"
+        ],
+        "rules": [
+          "Use sparingly.",
+          "Never dominate the composition.",
+          "Reserve for important information only."
+        ]
+      },
+      "engineering_grids": {
+        "description": "Grid-inspired backgrounds or overlays that communicate structure and technical planning.",
+        "usage": [
+          "Section backgrounds",
+          "Presentation dividers",
+          "Technical pages",
+          "Diagram viewer screens"
+        ],
+        "rules": [
+          "Keep opacity low.",
+          "Do not reduce readability.",
+          "Use only where technical context is relevant."
+        ]
+      },
+      "annotation_callouts": {
+        "description": "Graphic labels, pointers, and markers used to explain technical details.",
+        "usage": [
+          "Waterproofing details",
+          "Drainage systems",
+          "Shop drawing previews",
+          "Installation sequences"
+        ],
+        "rules": [
+          "Maximum 3 visible callouts in preview mode.",
+          "Callout labels should remain under 6 words.",
+          "Each callout must explain risk reduction or technical value."
+        ]
+      },
+      "industrial_frames": {
+        "description": "Structured rectangular frames used to organize images, technical previews, and proof blocks.",
+        "usage": [
+          "Case study cards",
+          "Engineering proof sections",
+          "Image containers",
+          "Technical resource previews"
+        ],
+        "rules": [
+          "Use simple geometry.",
+          "Avoid decorative borders.",
+          "Maintain consistent radius and spacing."
+        ]
+      }
+    },
+    "pattern_system": {
+      "approved_patterns": [
+        {
+          "name": "Technical Grid Pattern",
+          "purpose": "Communicate engineering structure and measurement.",
+          "usage": [
+            "Dark technical sections",
+            "Brand divider pages",
+            "Engineering proof backgrounds"
+          ]
+        },
+        {
+          "name": "Diagonal Industrial Line Pattern",
+          "purpose": "Suggest industrial movement and structural rhythm.",
+          "usage": [
+            "Subtle background accents",
+            "Presentation covers",
+            "Footer or section transitions"
+          ]
+        },
+        {
+          "name": "Panel Seam Pattern",
+          "purpose": "Reference sandwich panel systems and modular construction.",
+          "usage": [
+            "Brand applications",
+            "Technical pages",
+            "Resource covers"
+          ]
+        },
+        {
+          "name": "Annotation Dot Pattern",
+          "purpose": "Support technical callouts and engineering inspection language.",
+          "usage": [
+            "Diagram previews",
+            "Proof snapshots",
+            "Technical storytelling pages"
+          ]
+        }
+      ],
+      "pattern_rules": [
+        "Patterns must remain subtle.",
+        "Patterns must never compete with text or technical visuals.",
+        "Use low opacity on background applications.",
+        "Avoid decorative complexity.",
+        "Patterns should support SIPANEL's industrial and engineering identity."
+      ]
+    },
+    "visual_accent_rules": {
+      "orange_usage": {
+        "color": "#FF6A00",
+        "usage_limit": "10%",
+        "allowed_for": [
+          "CTA elements",
+          "Technical highlights",
+          "Risk-reduction markers",
+          "Key metrics",
+          "Active states"
+        ],
+        "forbidden_for": [
+          "Large decorative backgrounds",
+          "Excessive pattern fills",
+          "Long text blocks",
+          "Random visual decoration"
+        ]
+      },
+      "line_weight": {
+        "thin": "1px",
+        "standard": "2px",
+        "technical_emphasis": "3px maximum",
+        "rules": [
+          "Use thin lines for technical structure.",
+          "Use thicker lines only for emphasis.",
+          "Maintain consistency across diagrams and layouts."
+        ]
+      },
+      "corner_radius": {
+        "standard": "6px-8px",
+        "technical_cards": "8px",
+        "large_containers": "12px maximum",
+        "rules": [
+          "Avoid overly rounded playful shapes.",
+          "Maintain industrial precision."
+        ]
+      }
+    },
+    "background_treatment_rules": {
+      "approved_backgrounds": [
+        "Solid black",
+        "Deep black",
+        "Light gray",
+        "White",
+        "Subtle technical grid",
+        "Low-opacity industrial pattern"
+      ],
+      "forbidden_backgrounds": [
+        "Heavy gradients",
+        "Bright decorative patterns",
+        "Complex abstract shapes",
+        "High-noise textures",
+        "Playful illustration backgrounds"
+      ],
+      "contrast_rule": "Graphic backgrounds must never reduce readability or accessibility."
+    },
+    "diagram_graphic_integration": {
+      "rules": [
+        "Use orange markers only for critical engineering details.",
+        "Keep technical labels short and readable.",
+        "Use arrows to explain direction, flow, or risk points.",
+        "Avoid cluttered CAD-style overlays in general brand applications.",
+        "Allow more detail only in fullscreen technical views."
+      ],
+      "approved_elements": [
+        "Directional arrows",
+        "Measurement indicators",
+        "Callout dots",
+        "Risk markers",
+        "Material flow lines",
+        "Water drainage arrows"
+      ]
+    },
+    "incorrect_usage": [
+      "Using patterns as decoration without technical purpose.",
+      "Using too many orange elements in one layout.",
+      "Adding playful shapes or illustrations.",
+      "Creating complex backgrounds that reduce readability.",
+      "Using random linework that does not align to the grid.",
+      "Applying heavy shadows, glows, or neon effects.",
+      "Using graphic elements that look like consumer tech branding."
+    ],
+    "approved_usage_contexts": [
+      "Brand guideline pages",
+      "Website technical sections",
+      "Engineering proof cards",
+      "Case study layouts",
+      "Resource covers",
+      "Presentation templates",
+      "Technical diagrams",
+      "SEO landing pages"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Graphic philosophy",
+        "Approved elements overview",
+        "Pattern system examples",
+        "Technical annotation examples",
+        "Correct vs incorrect usage",
+        "Application mockups"
+      ],
+      "visual_direction": [
+        "Dark technical grid section",
+        "Orange callout examples",
+        "Subtle pattern samples",
+        "Engineering annotation mockups",
+        "Industrial framing examples"
+      ]
+    },
+    "implementation_notes": [
+      "Graphic elements must support SIPANEL's engineering authority and technical readability.",
+      "Avoid decorative excess across all brand applications.",
+      "All patterns and graphic accents must be reusable, scalable, and aligned with the design token system.",
+      "Graphic elements should feel like engineering tools, not marketing ornaments."
+    ]
+  }

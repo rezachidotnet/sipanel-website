@@ -1,0 +1,273 @@
+{
+    "page": {
+      "number": 5,
+      "title": "Messaging Framework",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define SIPANEL's core messaging structure, value proposition, communication hierarchy, and reusable message pillars across brand, website, sales, SEO, and technical content.",
+    "messaging_foundation": {
+      "core_message": "SIPANEL reduces industrial panel project risk through precise design, smart procurement, and engineered installation.",
+      "brand_slogan": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+      "brand_philosophy": "We Engineer. We Control. We Deliver.",
+      "brand_message": "PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION"
+    },
+    "positioning_statement": {
+      "statement": "SIPANEL is an engineering-first industrial panel systems partner that controls design, procurement, and installation to reduce leakage risk, material waste, delays, hidden costs, and execution mistakes.",
+      "short_version": "Engineering-controlled sandwich panel systems for industrial projects.",
+      "audience": [
+        "Industrial project owners",
+        "Contractors",
+        "Consulting engineers",
+        "Factory investors",
+        "Procurement teams",
+        "Architects"
+      ]
+    },
+    "primary_value_proposition": {
+      "headline": "Reduce Project Risk Before Construction Begins.",
+      "supporting_message": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial panel projects.",
+      "conversion_message": "Start your project with engineering clarity before material is purchased or installed."
+    },
+    "messaging_hierarchy": {
+      "level_1_main_hero_message": {
+        "purpose": "Immediate homepage clarity",
+        "message": "Reduce Sandwich Panel Project Risk Before Execution Starts"
+      },
+      "level_2_supporting_message": {
+        "purpose": "Explain how SIPANEL creates value",
+        "message": "SIPANEL engineers, optimizes, and verifies your industrial panel project before installation — reducing leakage risk, material waste, delays, and hidden costs."
+      },
+      "level_3_proof_message": {
+        "purpose": "Show technical credibility",
+        "message": "Shop drawing based planning, drainage and waterproofing logic, material takeoff optimization, and installation quality checkpoints."
+      },
+      "level_4_conversion_message": {
+        "purpose": "Move users toward action",
+        "message": "Get a free engineering review before your project enters execution."
+      }
+    },
+    "message_pillars": [
+      {
+        "pillar": "Precise Design",
+        "core_idea": "Technical planning before execution reduces mistakes and uncertainty.",
+        "supporting_points": [
+          "Shop drawing preparation",
+          "Panel layout control",
+          "Drainage planning",
+          "Flashing and overlap detailing",
+          "Material takeoff accuracy"
+        ],
+        "proof_direction": "Use shop drawing previews, technical annotations, and layout examples."
+      },
+      {
+        "pillar": "Smart Procurement",
+        "core_idea": "Correct material decisions reduce waste, hidden cost, and project delays.",
+        "supporting_points": [
+          "Panel type selection",
+          "Supplier coordination",
+          "BOM / MTO control",
+          "Delivery planning",
+          "Cost and waste reduction"
+        ],
+        "proof_direction": "Use BOM samples, procurement workflows, and measurable optimization data."
+      },
+      {
+        "pillar": "Engineered Installation",
+        "core_idea": "Controlled installation improves waterproofing, alignment, and long-term performance.",
+        "supporting_points": [
+          "Installation sequencing",
+          "Waterproofing checkpoints",
+          "Drainage execution",
+          "Fastening control",
+          "Final inspection"
+        ],
+        "proof_direction": "Use project photos, installation sequences, quality checkpoints, and case studies."
+      }
+    ],
+    "problem_solution_framework": {
+      "problem_message": "Most sandwich panel project failures come from fragmented execution, weak planning, poor waterproofing logic, and unclear responsibility.",
+      "solution_message": "SIPANEL coordinates engineering, procurement, and installation as one controlled system.",
+      "result_message": "The project becomes more predictable, technically clear, and less exposed to leakage, waste, rework, and delay."
+    },
+    "risk_reduction_messages": {
+      "primary_risks": [
+        {
+          "risk": "Water leakage",
+          "message": "Drainage, flashing, overlap, and sealing details are planned before installation."
+        },
+        {
+          "risk": "Material waste",
+          "message": "Optimized panel layout and accurate material takeoff reduce unnecessary purchasing."
+        },
+        {
+          "risk": "Project delay",
+          "message": "Engineering coordination before procurement reduces site conflicts and rework."
+        },
+        {
+          "risk": "Wrong panel selection",
+          "message": "Panel type, core, thickness, and skin material are selected based on project conditions."
+        },
+        {
+          "risk": "Hidden costs",
+          "message": "Technical review helps identify problems before they become expensive execution issues."
+        }
+      ]
+    },
+    "audience_specific_messaging": {
+      "industrial_project_owners": {
+        "primary_concern": "Project reliability and long-term performance",
+        "message": "Reduce project uncertainty with engineering-controlled design, procurement, and installation."
+      },
+      "contractors": {
+        "primary_concern": "Execution speed and site coordination",
+        "message": "Install with approved drawings, clear sequencing, and controlled waterproofing details."
+      },
+      "consulting_engineers": {
+        "primary_concern": "Technical accuracy and validation",
+        "message": "Review shop drawings, drainage logic, and technical details before execution begins."
+      },
+      "procurement_teams": {
+        "primary_concern": "Cost control and material accuracy",
+        "message": "Reduce waste and wrong purchasing through accurate BOM / MTO and supplier coordination."
+      }
+    },
+    "approved_message_examples": {
+      "homepage": [
+        "Reduce Project Risk Before Construction Begins.",
+        "Engineering-controlled sandwich panel systems for industrial projects.",
+        "Plan drainage, waterproofing, material takeoff, and installation before execution starts."
+      ],
+      "service_pages": [
+        "Professional shop drawings for panel layout, cutting optimization, slope design, and material takeoff.",
+        "Controlled installation based on approved drawings, sealing principles, and quality checkpoints."
+      ],
+      "case_studies": [
+        "Engineering coordination reduced installation conflicts and improved execution accuracy.",
+        "Drainage and waterproofing planning helped prevent leakage risk after installation."
+      ],
+      "cta": [
+        "Get Free Engineering Review",
+        "Request Project Cost Check",
+        "Request Technical Consultation"
+      ]
+    },
+    "core_service_positioning": {
+      "primary_services": [
+        "Sandwich Panel Systems",
+        "Standing Seam & ZIP Tech Roofing",
+        "Aluminium Cladding & Covering",
+        "Industrial Building Envelope Solutions"
+      ],
+
+      "rules": [
+        "Do not position SIPANEL as sandwich-panel-only company.",
+        "Homepage messaging must represent all major service categories.",
+        "Engineering messaging should include roofing, cladding, and facade systems.",
+        "Use industrial building envelope terminology when appropriate."
+      ]
+    },
+    "messages_to_avoid": [
+      "We are the best sandwich panel company.",
+      "Guaranteed cheapest solution.",
+      "Perfect execution with zero risk.",
+      "Buy now before it is too late.",
+      "Unmatched quality and excellence."
+    ],
+    "proof_alignment_rules": [
+      "Every major message should connect to a visual, metric, case study, or technical explanation.",
+      "Risk-reduction claims must be supported by engineering logic.",
+      "Do not use unverified performance numbers.",
+      "Prefer project evidence over generic brand claims.",
+      "Use technical proof before emotional persuasion."
+    ],
+    "content_usage_mapping": {
+      "hero": "Use the strongest risk-reduction message.",
+      "trust_bar": "Use verified experience, project count, and executed area metrics only.",
+      "proof_snapshot": "Use technical proof messages: shop drawings, waterproofing logic, BOM / MTO.",
+      "services": "Use clear service benefit messages.",
+      "projects": "Use challenge, engineering decision, result, and risk prevented.",
+      "cta_sections": "Use engineering review and project confidence messaging.",
+      "footer": "Use brand slogan and concise company positioning."
+    },
+    "trust_bar": {
+      "items": [
+        {
+          "metric": "20+",
+          "label": "Years of Experience"
+        },
+        {
+          "metric": "250+",
+          "label": "Industrial Projects"
+        },
+        {
+          "metric": "1.2M m²",
+          "label": "Executed Panel Area"
+        }
+      ]
+    },
+    "trust_bar_generation_rules": {
+      "forbidden_generic_phrases": [
+        "Engineering-Driven Quality",
+        "Driven by Excellence",
+        "Quality First",
+        "Innovation & Quality",
+        "Built for Excellence"
+      ],
+
+      "trust_bar_must_use": [
+        "real metrics",
+        "verified project numbers",
+        "executed area",
+        "technical proof",
+        "inspection statistics",
+        "project experience"
+      ],
+
+      "rules": [
+        "Do not generate abstract marketing slogans for trust bars.",
+        "Trust bars must contain measurable industrial proof.",
+        "Avoid vague quality claims.",
+        "Prefer technical credibility over branding slogans."
+      ]
+    },
+    "multilingual_messaging_rules": {
+      "supported_languages": [
+        "English",
+        "Persian",
+        "Arabic",
+        "Russian"
+      ],
+      "rules": [
+        "Keep brand names untranslated.",
+        "Preserve engineering terminology accuracy.",
+        "Avoid literal translation of technical claims without review.",
+        "Maintain the same messaging hierarchy across all languages.",
+        "Support RTL layout for Persian and Arabic."
+      ]
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Core message statement",
+        "Positioning statement",
+        "Messaging hierarchy",
+        "Three message pillars",
+        "Problem-solution-result framework",
+        "Audience-specific messaging",
+        "Approved and forbidden message examples"
+      ],
+      "visual_direction": [
+        "Pillar diagram",
+        "Message hierarchy ladder",
+        "Risk-to-solution mapping",
+        "Technical proof callout boxes",
+        "Minimal orange emphasis"
+      ]
+    },
+    "implementation_notes": [
+      "Use the messaging framework as the source of truth for website copy, sales materials, SEO pages, and technical content.",
+      "Messages must remain engineering-first, proof-based, and free from exaggerated marketing claims.",
+      "All future campaigns should map back to at least one message pillar."
+    ]
+  }

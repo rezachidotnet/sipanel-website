@@ -1,0 +1,45 @@
+{
+              "project_name": "Mahshahr Taxi Parking Facility",
+              "slug": "mahshahr-taxi-parking",
+              "location": "Bandar Mahshahr, Khuzestan, Iran",
+              "category": "Transportation & Sandwich Panel Structures",
+              "project_type": "Commercial parking roofing system",
+              "system_type": "Sandwich Panel Roofing System",
+              "status": "Completed",
+              "area": "4,000 m²",
+              "challenge": "Execution of a large parking facility with complex roof geometry requiring accurate sandwich panel coordination, controlled rainwater drainage management, waterproofing continuity, and long-term corrosion resistance in a humid coastal environment.",
+              "sipanel_solution": "SIPANEL designed a coordinated sandwich panel roofing and drainage system including engineered gutters, optimized roof slopes, controlled water flow paths, and waterproofing integration to ensure reliable rainwater performance.",
+              "engineering_decision": "Engineering teams optimized drainage slopes, gutter positioning, downspout coordination, and sandwich panel alignment to improve water evacuation efficiency and reduce long-term maintenance risks.",
+              "execution_detail": "Roof panels, gutters, flashing systems, and downspouts were installed according to engineered drainage details using controlled alignment procedures, fastening checkpoints, and waterproof sealing verification workflows.",
+              "measured_result": "Successful delivery of a durable sandwich panel roofing system with reliable rainwater management, long-term weather protection, and controlled drainage performance.",
+              "risk_prevented": [
+                "Water accumulation",
+                "Roof leakage",
+                "Corrosion-related failures",
+                "Improper drainage flow",
+                "Panel alignment inconsistencies",
+                "Long-term waterproofing deterioration"
+              ],
+              "primary_message": "Engineered sandwich panel roofing systems designed for controlled drainage performance and long-term durability.",
+              "proof_points": [
+                "Engineered drainage coordination",
+                "Sandwich panel roof execution",
+                "Controlled gutter integration",
+                "Waterproofing continuity",
+                "Corrosion-resistant roof detailing"
+              ],
+              "metrics": {
+                "project_area": "4,000 m²",
+                "facility_type": "Taxi parking facility",
+                "system_type": "Sandwich panel roofing system",
+                "execution_focus": "Drainage control and waterproofing reliability"
+              },
+              "images": {
+                "hero_desktop": "./projects/mahshahr_taxi/mahshahr-taxi-hero-desktop.webp",
+                "hero_mobile": "./projects/mahshahr_taxi/mahshahr-taxi-hero-mobile.webp",
+                "card": "./projects/mahshahr_taxi/mahshahr-taxi-card.webp",
+                "gallery_large": "./projects/mahshahr_taxi/mahshahr-taxi-gallery-large.webp",
+                "installation": "./projects/mahshahr_taxi/mahshahr-taxi-installation.webp",
+                "technical_detail": "./projects/mahshahr_taxi/mahshahr-taxi-technical-detail.webp"
+              }
+            }

@@ -1,0 +1,267 @@
+{
+    "page": {
+      "number": 26,
+      "title": "Tables & Technical Data Display",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define how SIPANEL displays technical data, specifications, comparison tables, BOM/MTO information, metrics, and engineering records with clarity, accuracy, and responsive usability.",
+    "data_display_philosophy": {
+      "statement": "Technical data must be readable, structured, accurate, and useful for engineering decision-making.",
+      "core_principles": [
+        "Clarity over density",
+        "Accuracy over decoration",
+        "Structured hierarchy",
+        "Mobile readability",
+        "Engineering usefulness",
+        "Accessible data presentation"
+      ]
+    },
+    "approved_data_display_types": {
+      "specification_tables": {
+        "purpose": "Display technical properties, panel details, material information, and system requirements.",
+        "usage": [
+          "Service pages",
+          "Technical resources",
+          "Landing pages",
+          "Product explanations"
+        ]
+      },
+      "comparison_tables": {
+        "purpose": "Compare systems, materials, risks, or project approaches.",
+        "usage": [
+          "Typical project vs SIPANEL system",
+          "PU vs PIR vs Rockwool",
+          "Service comparison",
+          "Application comparison"
+        ]
+      },
+      "bom_mto_tables": {
+        "purpose": "Present material takeoff, quantity logic, optimization examples, and procurement planning.",
+        "usage": [
+          "Engineering proof",
+          "Resource center",
+          "Technical documentation",
+          "Case study proof"
+        ]
+      },
+      "metrics_blocks": {
+        "purpose": "Display project proof, performance indicators, and verified trust metrics.",
+        "usage": [
+          "Trust bar",
+          "Case studies",
+          "Project pages",
+          "Proof sections"
+        ]
+      }
+    },
+    "table_structure_rules": {
+      "header": {
+        "background": "#F5F6F7",
+        "text_color": "#0F1113",
+        "font_weight": 600
+      },
+      "body": {
+        "text_color": "#111111",
+        "font_size": "14px-16px",
+        "row_height_minimum": "48px"
+      },
+      "borders": {
+        "default": "1px solid #E5E7EB",
+        "emphasis": "1px solid #D9DADD"
+      },
+      "spacing": {
+        "cell_padding_mobile": "12px",
+        "cell_padding_desktop": "16px"
+      }
+    },
+    "data_hierarchy_rules": [
+      "Use clear table titles.",
+      "Group related data logically.",
+      "Highlight only the most important data points.",
+      "Avoid unnecessary columns.",
+      "Use supporting notes for technical context.",
+      "Do not overload mobile users with dense tables."
+    ],
+    "technical_accuracy_rules": [
+      "Do not publish unverified numbers.",
+      "Label estimated values clearly.",
+      "Use consistent measurement units.",
+      "Preserve original project metrics.",
+      "Avoid rounding that changes technical meaning.",
+      "Confirm engineering terms before publication."
+    ],
+    "responsive_behavior": {
+      "mobile": {
+        "preferred_patterns": [
+          "Stacked data cards",
+          "Horizontal scroll table when unavoidable",
+          "Accordion grouped rows",
+          "Summary-first display"
+        ],
+        "rules": [
+          "Avoid tiny text.",
+          "Keep important labels visible.",
+          "Do not force desktop tables onto mobile.",
+          "Use simplified previews for dense technical data."
+        ]
+      },
+      "tablet": {
+        "preferred_patterns": [
+          "Compact tables",
+          "2-column data groups",
+          "Expandable technical sections"
+        ]
+      },
+      "desktop": {
+        "preferred_patterns": [
+          "Full technical tables",
+          "Comparison matrices",
+          "Data grids",
+          "Specification tables"
+        ]
+      }
+    },
+    "comparison_table_rules": {
+      "structure": [
+        "Column 1: Criteria or risk",
+        "Column 2: Typical approach",
+        "Column 3: SIPANEL approach"
+      ],
+      "visual_rules": [
+        "Use check and X icons carefully.",
+        "Use orange only for SIPANEL advantage or key highlights.",
+        "Avoid exaggerated claims.",
+        "Keep rows concise."
+      ],
+      "maximum_rows_homepage": 5
+    },
+    "metrics_display_rules": {
+      "approved_metrics": [
+        "Years of experience",
+        "Industrial projects",
+        "Executed panel area",
+        "Project area",
+        "Installation duration",
+        "Waste reduction",
+        "Inspection checkpoints"
+      ],
+      "rules": [
+        "Use real metrics only.",
+        "Label unconfirmed metrics as pending or remove them.",
+        "Avoid fake animated counters.",
+        "Support metrics with context."
+      ]
+    },
+    "bom_mto_display_rules": {
+      "rules": [
+        "Show simplified sample first.",
+        "Allow detailed view on interaction.",
+        "Use clear column names.",
+        "Highlight optimization logic.",
+        "Avoid exposing unreadable spreadsheet screenshots on mobile."
+      ],
+      "recommended_columns": [
+        "Item",
+        "Panel type",
+        "Quantity",
+        "Unit",
+        "Length",
+        "Area",
+        "Notes"
+      ]
+    },
+    "accessibility_rules": {
+      "requirements": [
+        "Use semantic table markup.",
+        "Provide table captions where needed.",
+        "Use proper header cells.",
+        "Do not use images for text-based tables.",
+        "Maintain WCAG AA contrast.",
+        "Ensure horizontal scroll is keyboard accessible."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Mirror general table alignment in RTL languages.",
+        "Keep technical units consistent.",
+        "Allow English abbreviations like BOM, MTO, CAD, RFQ when appropriate.",
+        "Numeric and measurement data may remain LTR for clarity."
+      ]
+    },
+    "visual_emphasis_rules": {
+      "approved_emphasis": [
+        "Bold key values",
+        "Orange highlight for critical engineering data",
+        "Subtle background for important rows",
+        "Technical notes below table"
+      ],
+      "forbidden_emphasis": [
+        "Too many highlighted cells",
+        "Decorative color coding",
+        "Low-contrast data",
+        "Overuse of icons"
+      ]
+    },
+    "analytics_tracking": {
+      "required_events": [
+        "technical_table_view",
+        "table_expand",
+        "table_horizontal_scroll",
+        "bom_mto_view",
+        "comparison_table_view"
+      ],
+      "tracked_parameters": [
+        "table_type",
+        "section_id",
+        "device_type",
+        "language",
+        "interaction_type"
+      ]
+    },
+    "forbidden_patterns": [
+      "Dense spreadsheet screenshots",
+      "Tiny unreadable mobile tables",
+      "Fake or unverified metrics",
+      "Overly colorful data displays",
+      "Decorative chart styling",
+      "Unlabeled technical columns",
+      "Tables without context",
+      "Non-semantic table markup"
+    ],
+    "approved_characteristics": [
+      "Accurate",
+      "Readable",
+      "Structured",
+      "Technical",
+      "Accessible",
+      "Responsive",
+      "Proof-driven"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Data display philosophy",
+        "Table anatomy",
+        "Specification table example",
+        "Comparison table example",
+        "BOM/MTO sample display",
+        "Mobile data behavior",
+        "Correct vs incorrect data display"
+      ],
+      "visual_direction": [
+        "Technical table mockups",
+        "Responsive table transformations",
+        "BOM/MTO sample cards",
+        "Comparison matrix examples",
+        "Metric proof blocks"
+      ]
+    },
+    "implementation_notes": [
+      "Technical data must support decision-making, not overwhelm users.",
+      "All published metrics must be verified or clearly labeled.",
+      "Mobile technical data should use summary-first patterns.",
+      "Tables must remain accessible, responsive, and aligned with SIPANEL's engineering credibility."
+    ]
+  }

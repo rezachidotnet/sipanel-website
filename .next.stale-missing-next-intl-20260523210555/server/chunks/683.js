@@ -1,0 +1,1 @@
+"use strict";exports.id=683,exports.ids=[683],exports.modules={4683:(e,s,a)=>{a.d(s,{r3:()=>o});let o=JSON.parse('{"m":{"oZ":{"company_name":"SIPANEL","address":"No. 6, Azadegan Alley, Hezar Jerib Blvd, Isfahan, Iran","phone":"+98 31 3675 1101","whatsapp":"+98 912 065 66528","email":"info@sipanelco.ir","website":"https://www.sipanelco.ir"}}}').m.oZ}};

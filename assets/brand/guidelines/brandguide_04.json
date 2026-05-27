@@ -1,0 +1,264 @@
+{
+    "page": {
+      "number": 4,
+      "title": "Tone of Voice",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define how SIPANEL communicates across digital platforms, technical documentation, marketing, and client interactions while maintaining engineering authority and brand consistency.",
+    "tone_overview": {
+      "core_tone": "Professional, technical, confident, and clear.",
+      "communication_goal": "Communicate engineering expertise and controlled execution without relying on marketing exaggeration.",
+      "voice_statement": "SIPANEL speaks like an engineering partner, not a sales-driven contractor."
+    },
+    "brand_voice_characteristics": {
+      "primary_traits": [
+        "Technical",
+        "Direct",
+        "Structured",
+        "Confident",
+        "Professional",
+        "Clear",
+        "Measured"
+      ],
+      "secondary_traits": [
+        "Reliable",
+        "Analytical",
+        "Practical",
+        "Industrial"
+      ],
+      "avoid_traits": [
+        "Aggressive",
+        "Overly emotional",
+        "Trendy",
+        "Playful",
+        "Overly corporate",
+        "Sales-heavy"
+      ]
+    },
+    "communication_principles": [
+      {
+        "title": "Engineering Before Promotion",
+        "description": "Explain technical value and execution logic before discussing marketing claims."
+      },
+      {
+        "title": "Proof Over Hype",
+        "description": "Use measurable results and engineering reasoning instead of exaggerated statements."
+      },
+      {
+        "title": "Clarity Over Complexity",
+        "description": "Communicate technical concepts clearly without unnecessary jargon."
+      },
+      {
+        "title": "Structured Communication",
+        "description": "Organize information using hierarchy, bullets, and short readable sections."
+      },
+      {
+        "title": "Professional Confidence",
+        "description": "Speak with authority and precision without sounding arrogant."
+      }
+    ],
+    "approved_language_patterns": {
+      "preferred_phrases": [
+        "Engineering-controlled execution",
+        "Risk reduction through coordination",
+        "Material optimization",
+        "Waterproofing logic",
+        "Technical review process",
+        "Measured project performance",
+        "Execution accuracy",
+        "Controlled installation workflow",
+        "Coordinated panel layout",
+        "Inspection-based quality control"
+      ],
+      "preferred_structure": [
+        "Problem",
+        "Engineering cause",
+        "SIPANEL solution logic",
+        "Measured outcome"
+      ]
+    },
+    "forbidden_language_patterns": {
+      "forbidden_phrases": [
+        "Best in the world",
+        "Perfect solution",
+        "Guaranteed cheapest",
+        "Unmatched quality",
+        "Revolutionary system",
+        "Instant results",
+        "Zero risk"
+      ],
+      "avoid_language": [
+        "Overly emotional wording",
+        "Pressure-based sales language",
+        "Inflated advertising tone",
+        "Vague technical claims",
+        "Fake urgency"
+      ]
+    },
+    "writing_style_rules": {
+      "sentence_style": [
+        "Prefer short and direct sentences.",
+        "Avoid overly dense paragraphs.",
+        "Use engineering terminology with explanation when needed.",
+        "Keep one idea per paragraph."
+      ],
+      "paragraph_rules": {
+        "desktop_max_lines": 4,
+        "mobile_max_lines": 3
+      },
+      "readability_rules": [
+        "Use bullets for technical clarity.",
+        "Use subheadings frequently.",
+        "Avoid excessive abstraction.",
+        "Maintain fast scanning behavior."
+      ]
+    },
+    "tone_by_context": {
+      "website_copy": {
+        "tone": "Clear, concise, engineering-focused.",
+        "focus": [
+          "Risk reduction",
+          "Execution clarity",
+          "Technical trust"
+        ]
+      },
+      "technical_documents": {
+        "tone": "Precise, instructional, structured.",
+        "focus": [
+          "Accuracy",
+          "Coordination",
+          "Execution details"
+        ]
+      },
+      "case_studies": {
+        "tone": "Measured and proof-driven.",
+        "focus": [
+          "Challenge",
+          "Engineering decision",
+          "Result",
+          "Risk prevented"
+        ]
+      },
+      "rfq_and_forms": {
+        "tone": "Professional and frictionless.",
+        "focus": [
+          "Support",
+          "Technical consultation",
+          "Response clarity"
+        ]
+      },
+      "seo_content": {
+        "tone": "Educational and technically accessible.",
+        "focus": [
+          "Problem explanation",
+          "Engineering insight",
+          "Practical value"
+        ]
+      }
+    },
+    "headline_guidelines": {
+      "style": [
+        "Bold",
+        "Direct",
+        "Engineering-focused"
+      ],
+      "rules": [
+        "Communicate value quickly.",
+        "Avoid marketing exaggeration.",
+        "Use actionable technical language.",
+        "Prefer clarity over cleverness."
+      ],
+      "examples": {
+        "approved": [
+          "Reduce Roof Leakage Through Engineered Waterproofing Logic",
+          "Controlled Sandwich Panel Installation for Industrial Projects",
+          "Engineering-Led Panel Coordination for Faster Execution"
+        ],
+        "avoid": [
+          "The Ultimate Industrial Solution",
+          "Transform Your Factory Today",
+          "Next-Generation Roofing Excellence"
+        ]
+      }
+    },
+    "cta_tone_rules": {
+      "preferred_style": [
+        "Helpful",
+        "Professional",
+        "Engineering-oriented"
+      ],
+      "approved_examples": [
+        "Get Free Engineering Review",
+        "Request Project Cost Check",
+        "Request Technical Consultation",
+        "Explore Proven Projects"
+      ],
+      "forbidden_examples": [
+        "Buy Now",
+        "Act Fast",
+        "Limited Time Offer",
+        "Click Here"
+      ]
+    },
+    "multilingual_tone_rules": {
+      "general_rules": [
+        "Maintain technical professionalism across all languages.",
+        "Avoid literal machine-style translation.",
+        "Preserve engineering terminology accuracy.",
+        "Adapt tone naturally to regional business culture."
+      ],
+      "supported_languages": {
+        "english": {
+          "style": "Clear B2B engineering English"
+        },
+        "persian": {
+          "style": "Formal professional industrial Persian"
+        },
+        "arabic": {
+          "style": "Formal technical Arabic"
+        },
+        "russian": {
+          "style": "Structured technical B2B Russian"
+        }
+      }
+    },
+    "example_voice_comparisons": [
+      {
+        "type": "Weak",
+        "example": "We provide the best industrial panel services with excellent quality."
+      },
+      {
+        "type": "Approved",
+        "example": "SIPANEL coordinates panel layout, waterproofing details, and installation sequencing to reduce rework and execution risk."
+      }
+    ],
+    "tone_consistency_rules": [
+      "Every message should reinforce engineering authority.",
+      "Avoid sudden shifts into casual marketing language.",
+      "Use consistent terminology across departments and platforms.",
+      "Technical clarity must remain more important than promotional style."
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Voice overview",
+        "Core communication principles",
+        "Approved vs forbidden language",
+        "Context-based tone examples",
+        "Headline and CTA examples",
+        "Weak vs strong writing comparisons"
+      ],
+      "visual_direction": [
+        "Editorial technical layout",
+        "Structured comparison blocks",
+        "Highlighted engineering phrases",
+        "Minimal industrial styling"
+      ]
+    },
+    "implementation_notes": [
+      "Tone of voice rules apply across all departments, content, interfaces, and communication channels.",
+      "All multilingual implementations must preserve SIPANEL's engineering-first communication style.",
+      "The SIPANEL voice must always sound controlled, knowledgeable, and technically grounded."
+    ]
+  }

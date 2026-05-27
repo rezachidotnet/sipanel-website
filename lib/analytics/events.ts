@@ -1,0 +1,255 @@
+'use client';
+
+import type {Locale} from '@/i18n/routing';
+
+export const approvedAnalyticsEvents = [
+  'mobile_menu_open',
+  'mobile_menu_item_click',
+  'language_switcher_open',
+  'language_change',
+  'technical_quick_access_click',
+  'hero_primary_cta_click',
+  'hero_secondary_cta_click',
+  'hero_visibility_duration',
+  'trust_bar_view',
+  'proof_card_expand',
+  'proof_diagram_zoom',
+  'case_study_view',
+  'case_study_swipe',
+  'case_study_expand',
+  'case_study_cta_click',
+  'case_study_gallery_open',
+  'case_study_image_zoom',
+  'related_case_study_click',
+  'diagram_open',
+  'diagram_zoom',
+  'diagram_close',
+  'accordion_expand',
+  'technical_proof_open',
+  'resource_filter_use',
+  'resource_download',
+  'resource_download_start',
+  'resource_download_complete',
+  'resource_card_click',
+  'related_resource_click',
+  'sticky_cta_click',
+  'sticky_call_click',
+  'sticky_whatsapp_click',
+  'rfq_start',
+  'rfq_step_complete',
+  'rfq_submit',
+  'rfq_error',
+  'rfq_abandon',
+  'file_upload_attempt',
+  'contact_page_view',
+  'phone_click',
+  'whatsapp_click',
+  'email_click',
+  'address_click',
+  'map_click',
+  'blog_card_click',
+  'internal_link_click',
+  'related_service_click',
+  'service_page_click',
+  'faq_page_view',
+  'faq_search',
+  'faq_category_filter',
+  'faq_expand',
+  'faq_related_link_click',
+  'faq_cta_click',
+  'scroll_25',
+  'scroll_50',
+  'scroll_75',
+  'scroll_100'
+] as const;
+
+export type AnalyticsEventName = (typeof approvedAnalyticsEvents)[number];
+
+export type AnalyticsParams = Partial<{
+  page_url: string;
+  page_title: string;
+  device_type: 'mobile' | 'tablet' | 'desktop';
+  viewport_width: number;
+  traffic_source: string;
+  language: Locale | string;
+  component_id: string;
+  component_name: string;
+  section_id: string;
+  cta_text: string;
+  interaction_type: string;
+  lead_type: string;
+  project_type: string;
+  form_step: number | string;
+  submission_method: string;
+  diagram_type: string;
+  resource_type: string;
+  case_study_name: string;
+  engineering_topic: string;
+  previous_language: string;
+  selected_language: string;
+  search_query: string;
+  category: string;
+}>;
+
+type WindowWithAnalytics = Window & {
+  dataLayer?: Array<Record<string, unknown>>;
+  gtag?: (command: 'event', eventName: string, params?: Record<string, unknown>) => void;
+};
+
+const approvedEventSet = new Set<string>(approvedAnalyticsEvents);
+
+function isBrowser() {
+  return typeof window !== 'undefined' && typeof document !== 'undefined';
+}
+
+function hasAnalyticsConfig(win: WindowWithAnalytics) {
+  return Boolean(
+    process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ||
+      process.env.NEXT_PUBLIC_GTM_ID ||
+      win.gtag ||
+      win.dataLayer
+  );
+}
+
+function getDeviceType(width: number): AnalyticsParams['device_type'] {
+  if (width < 768) {
+    return 'mobile';
+  }
+
+  if (width < 1024) {
+    return 'tablet';
+  }
+
+  return 'desktop';
+}
+
+function getTrafficSource(win: WindowWithAnalytics) {
+  const params = new URLSearchParams(win.location.search);
+  const utmSource = params.get('utm_source');
+
+  if (utmSource) {
+    return utmSource;
+  }
+
+  if (document.referrer) {
+    try {
+      return new URL(document.referrer).hostname;
+    } catch {
+      return 'referral';
+    }
+  }
+
+  return 'direct';
+}
+
+function getLanguage() {
+  return document.documentElement.lang || undefined;
+}
+
+function buildCommonParams(): AnalyticsParams {
+  const width = window.innerWidth;
+
+  return {
+    page_url: window.location.href,
+    page_title: document.title,
+    device_type: getDeviceType(width),
+    viewport_width: width,
+    traffic_source: getTrafficSource(window),
+    language: getLanguage()
+  };
+}
+
+function sanitizeParams(params: AnalyticsParams) {
+  return Object.fromEntries(
+    Object.entries(params).filter(([, value]) => value !== undefined && value !== null && value !== '')
+  );
+}
+
+export function isApprovedAnalyticsEvent(eventName: string): eventName is AnalyticsEventName {
+  return approvedEventSet.has(eventName);
+}
+
+export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParams = {}) {
+  if (!isBrowser() || !isApprovedAnalyticsEvent(eventName)) {
+    return false;
+  }
+
+  const win = window as WindowWithAnalytics;
+
+  if (!hasAnalyticsConfig(win)) {
+    return false;
+  }
+
+  const payload = sanitizeParams({
+    ...buildCommonParams(),
+    ...params
+  });
+
+  if (process.env.NEXT_PUBLIC_GTM_ID || win.dataLayer) {
+    win.dataLayer = win.dataLayer ?? [];
+    win.dataLayer.push({
+      event: eventName,
+      ...payload
+    });
+  }
+
+  if (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || win.gtag) {
+    win.gtag?.('event', eventName, payload);
+  }
+
+  return true;
+}
+
+export function trackCtaClick(component_id: string, cta_text: string, eventName: AnalyticsEventName = 'internal_link_click') {
+  return trackEvent(eventName, {
+    component_id,
+    cta_text,
+    interaction_type: 'click'
+  });
+}
+
+export function trackRfqEvent(eventName: 'rfq_start' | 'rfq_step_complete' | 'rfq_submit' | 'rfq_error' | 'rfq_abandon', params: AnalyticsParams = {}) {
+  return trackEvent(eventName, {
+    lead_type: 'rfq',
+    ...params
+  });
+}
+
+export function trackLanguageChange(previous_language: string, selected_language: string, component_id = 'language_switcher') {
+  return trackEvent('language_change', {
+    previous_language,
+    selected_language,
+    component_id,
+    interaction_type: 'click'
+  });
+}
+
+export function trackProofEvent(eventName: 'proof_card_expand' | 'proof_diagram_zoom' | 'diagram_open' | 'diagram_zoom' | 'diagram_close' | 'technical_proof_open', params: AnalyticsParams = {}) {
+  return trackEvent(eventName, params);
+}
+
+export function trackFaqEvent(eventName: 'faq_search' | 'faq_category_filter' | 'faq_expand' | 'faq_related_link_click' | 'faq_cta_click', params: AnalyticsParams = {}) {
+  return trackEvent(eventName, params);
+}
+
+export function trackResourceEvent(eventName: 'resource_filter_use' | 'resource_download' | 'resource_download_start' | 'resource_download_complete' | 'resource_card_click' | 'related_resource_click', params: AnalyticsParams = {}) {
+  return trackEvent(eventName, params);
+}
+
+export function trackCaseStudyEvent(eventName: 'case_study_view' | 'case_study_swipe' | 'case_study_expand' | 'case_study_cta_click' | 'case_study_gallery_open' | 'case_study_image_zoom' | 'related_case_study_click', params: AnalyticsParams = {}) {
+  return trackEvent(eventName, params);
+}
+
+export function trackContactClick(type: 'phone' | 'whatsapp' | 'email' | 'map', component_id?: string) {
+  const eventName = {
+    phone: 'phone_click',
+    whatsapp: 'whatsapp_click',
+    email: 'email_click',
+    map: 'map_click'
+  }[type] as AnalyticsEventName;
+
+  return trackEvent(eventName, {
+    component_id,
+    interaction_type: 'click'
+  });
+}

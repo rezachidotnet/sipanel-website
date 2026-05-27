@@ -1,0 +1,307 @@
+{
+    "page": {
+      "number": 3,
+      "title": "Brand Applications",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Demonstrate how the SIPANEL brand system is applied consistently across digital, industrial, technical, and communication environments.",
+    "application_philosophy": {
+      "statement": "Every SIPANEL brand application must communicate engineering clarity, controlled execution, and industrial reliability.",
+      "core_principles": [
+        "Consistency across all touchpoints",
+        "Engineering-first visual communication",
+        "Structured hierarchy and spacing",
+        "Minimal visual noise",
+        "Real proof over decorative marketing"
+      ]
+    },
+    "application_categories": {
+      "digital_platforms": {
+        "description": "Applications across websites, dashboards, presentations, and digital communication systems.",
+        "examples": [
+          "Corporate website",
+          "SEO landing pages",
+          "RFQ forms",
+          "Resource center",
+          "Engineering dashboards",
+          "Email signatures"
+        ],
+        "rules": [
+          "Use clean technical layouts.",
+          "Preserve responsive behavior.",
+          "Use orange only for emphasis and actions.",
+          "Maintain accessibility standards.",
+          "Ensure mobile-first usability."
+        ]
+      },
+      "industrial_system_categories": {
+        "services": [
+          {
+            "name": "Sandwich Panel Systems",
+            "scope": [
+              "Wall panels",
+              "Roof panels",
+              "Cold room panels",
+              "Insulated industrial envelopes"
+            ]
+          },
+          {
+            "name": "Standing Seam & ZIP Tech Roofing",
+            "scope": [
+              "Standing seam roofing",
+              "ZIP Tech systems",
+              "Concealed fastening roofs",
+              "Industrial waterproof roofing"
+            ]
+          },
+          {
+            "name": "Aluminium Cladding & Covering",
+            "scope": [
+              "Facade cladding",
+              "Architectural aluminium covering",
+              "Industrial exterior systems",
+              "Metal architectural envelopes"
+            ]
+          }
+        ]
+      },
+      "technical_documentation": {
+        "description": "Applications for engineering documentation and technical communication.",
+        "examples": [
+          "Shop drawings",
+          "BOM/MTO sheets",
+          "Technical specifications",
+          "Installation sequences",
+          "Waterproofing diagrams",
+          "Inspection reports"
+        ],
+        "rules": [
+          "Prioritize readability over decoration.",
+          "Use annotation hierarchy consistently.",
+          "Use engineering callouts sparingly.",
+          "Preserve clean line structure.",
+          "Avoid excessive branding inside diagrams."
+        ]
+      },
+      "industrial_environment": {
+        "description": "Applications inside industrial and construction environments.",
+        "examples": [
+          "Site signage",
+          "Safety boards",
+          "Containers",
+          "Temporary project offices",
+          "Vehicle branding",
+          "Protective equipment"
+        ],
+        "rules": [
+          "Maximize visibility and contrast.",
+          "Use durable and minimal branding.",
+          "Avoid cluttered layouts.",
+          "Maintain logo integrity under harsh conditions."
+        ]
+      },
+      "marketing_and_sales": {
+        "description": "Applications for presentations, proposals, and commercial communication.",
+        "examples": [
+          "Project proposals",
+          "Capability decks",
+          "Case study PDFs",
+          "Trade show materials",
+          "Brochures",
+          "Client presentations"
+        ],
+        "rules": [
+          "Lead with proof and engineering value.",
+          "Avoid exaggerated sales language.",
+          "Use measurable project metrics.",
+          "Support claims with visuals and data."
+        ]
+      }
+    },
+    "website_application_rules": {
+      "homepage": {
+        "requirements": [
+          "Hero communicates value within 3 seconds",
+          "Trust metrics visible early",
+          "Proof before long explanation",
+          "Sticky mobile CTA enabled",
+          "Technical clarity prioritized"
+        ]
+      },
+      "service_pages": {
+        "requirements": [
+          "One primary keyword focus",
+          "Engineering workflow explanation",
+          "Case study integration",
+          "Technical proof visuals",
+          "Conversion CTA visibility"
+        ]
+      },
+      "case_studies": {
+        "requirements": [
+          "Real project photography",
+          "Challenge-solution-result structure",
+          "Measured proof",
+          "Risk prevented section",
+          "Technical detail support"
+        ]
+      }
+    },
+    "visual_application_rules": {
+      "imagery": {
+        "approved": [
+          "Industrial architecture",
+          "Engineering teams",
+          "Technical drawings",
+          "Construction execution",
+          "Real project photography",
+          "Panel installation process"
+        ],
+        "forbidden": [
+          "Generic office stock photos",
+          "Lifestyle imagery",
+          "Fake renders",
+          "Overly staged photography",
+          "Decorative visual effects"
+        ]
+      },
+      "layout_behavior": {
+        "principles": [
+          "Use strong alignment systems",
+          "Maintain spacing discipline",
+          "Avoid dense visual stacking",
+          "Preserve clear reading flow",
+          "Use technical hierarchy"
+        ]
+      }
+    },
+    "content_application_rules": {
+      "copy_style": {
+        "preferred": [
+          "Technical clarity",
+          "Direct communication",
+          "Measured proof",
+          "Engineering terminology with explanation",
+          "Short structured paragraphs"
+        ],
+        "avoid": [
+          "Marketing hype",
+          "Emotional exaggeration",
+          "Fake urgency",
+          "Overly promotional language"
+        ]
+      },
+      "proof_usage": {
+        "rules": [
+          "Only verified metrics allowed",
+          "Use measurable project evidence",
+          "Support claims visually when possible",
+          "Prefer engineering proof over testimonials"
+        ]
+      },
+      "placeholder_content_rules": {
+        "realistic_fake_contact_data_forbidden": true,
+        "forbidden_examples": [
+          "+98 21 9100 0000",
+          "+98 21 1234 5678",
+          "info@sipanel.com"
+        ],
+        "approved_placeholder_format": {
+          "phone": "[PHONE_NUMBER]",
+          "whatsapp": "[WHATSAPP_NUMBER]",
+          "email": "[EMAIL_ADDRESS]",
+          "address": "[BUSINESS_ADDRESS]"
+        },
+        "rules": [
+          "Mockups must not contain realistic fake contact details.",
+          "AI-ready design references must use bracketed placeholders only.",
+          "Production contact values must be injected from verified business settings.",
+          "Any visible contact data in presentation examples must be marked as placeholder."
+        ]
+      }
+    },
+    "ui_application_rules": {
+      "interaction_behavior": [
+        "Fast and predictable interactions",
+        "No decorative animation",
+        "Clear conversion paths",
+        "Accessible mobile interactions",
+        "Consistent CTA behavior"
+      ],
+      "motion_rules": [
+        "Use subtle transitions only",
+        "Avoid heavy parallax",
+        "Respect reduced-motion settings",
+        "Prioritize responsiveness over visual effects"
+      ]
+    },
+    "multilingual_application_rules": {
+      "supported_languages": [
+        "English",
+        "Persian",
+        "Arabic",
+        "Russian"
+      ],
+      "rules": [
+        "Maintain consistent visual hierarchy across languages.",
+        "Preserve engineering terminology accuracy.",
+        "Support RTL layouts correctly.",
+        "Ensure typography readability in all scripts."
+      ]
+    },
+    "engineering_application_examples": [
+      {
+        "application": "Waterproofing Detail Diagram",
+        "goal": "Explain risk prevention clearly using structured annotations and controlled orange emphasis."
+      },
+      {
+        "application": "Case Study Card",
+        "goal": "Present measurable proof with technical clarity and minimal marketing noise."
+      },
+      {
+        "application": "RFQ Flow",
+        "goal": "Reduce friction while maintaining technical professionalism."
+      }
+    ],
+    "correct_application_characteristics": [
+      "Structured layout",
+      "Engineering clarity",
+      "Measured orange usage",
+      "Readable typography",
+      "Proof-driven communication",
+      "Technical hierarchy",
+      "Industrial realism"
+    ],
+    "incorrect_application_characteristics": [
+      "Decorative visual overload",
+      "Excessive gradients",
+      "Heavy animations",
+      "Generic construction branding",
+      "Fake metrics",
+      "Overcrowded layouts",
+      "Inconsistent spacing"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Application philosophy statement",
+        "Real-world application categories",
+        "Website examples",
+        "Technical documentation examples",
+        "Industrial branding examples",
+        "Correct vs incorrect comparison"
+      ],
+      "visual_direction": [
+        "Mockup-based presentation",
+        "Industrial context visuals",
+        "Annotated application examples",
+        "Technical framing and grids"
+      ]
+    },
+    "implementation_notes": [
+      "Every SIPANEL application must reinforce engineering confidence and execution control.",
+      "Consistency across digital, physical, and technical environments is mandatory.",
+      "Brand applications should prioritize usability, proof visibility, and technical clarity over visual decoration."
+    ]
+  }

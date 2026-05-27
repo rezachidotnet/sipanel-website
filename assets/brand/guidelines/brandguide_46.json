@@ -1,0 +1,387 @@
+{
+  "page": {
+    "number": 46,
+    "title": "Correct & Incorrect Usage",
+    "section": "Implementation & Governance",
+    "version": "2.0",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define approved and forbidden applications of SIPANEL branding, UI systems, engineering content, façade and roofing visuals, technical diagrams, multilingual layouts, conversion systems, and frontend implementation standards to preserve industrial credibility, usability, and technical consistency.",
+  "usage_philosophy": {
+    "statement": "Every SIPANEL touchpoint must reinforce engineering trust, technical clarity, industrial professionalism, and consistent system behavior across all devices, languages, and engineering workflows.",
+    "core_principles": [
+      "Consistency builds trust",
+      "Engineering clarity first",
+      "Proof over decoration",
+      "Technical readability over visual complexity",
+      "Industrial usability over marketing trends",
+      "System-wide implementation discipline",
+      "Performance-aware presentation",
+      "Consultant-grade communication"
+    ]
+  },
+  "logo_usage": {
+    "correct_usage": [
+      "Use approved logo colors only.",
+      "Maintain required clear space.",
+      "Use SVG format for web implementation.",
+      "Use white logo on dark surfaces.",
+      "Preserve original proportions.",
+      "Use approved export versions only."
+    ],
+    "incorrect_usage": [
+      "Stretching or compressing the logo",
+      "Adding shadows or visual effects",
+      "Changing brand colors",
+      "Using low-contrast placement",
+      "Rotating the logo",
+      "Using low-resolution raster exports",
+      "Embedding logo inside complex industrial photography"
+    ]
+  },
+  "typography_usage": {
+    "correct_usage": [
+      "Use approved typography hierarchy.",
+      "Maintain readable line lengths.",
+      "Use clear engineering section structure.",
+      "Keep technical explanations scannable.",
+      "Preserve multilingual readability."
+    ],
+    "incorrect_usage": [
+      "Tiny unreadable mobile text",
+      "Decorative typography styles",
+      "Dense technical text walls",
+      "Weak heading hierarchy",
+      "Overloaded font weights",
+      "Compressed paragraph spacing"
+    ]
+  },
+  "color_usage": {
+    "correct_usage": [
+      "Use orange only for CTA and technical emphasis.",
+      "Use neutral backgrounds for engineering readability.",
+      "Maintain WCAG AA contrast.",
+      "Use dark surfaces carefully for premium technical sections.",
+      "Preserve consistent industrial palette."
+    ],
+    "incorrect_usage": [
+      "Using orange excessively",
+      "Low-contrast text",
+      "Random accent colors",
+      "Decorative gradients unrelated to engineering context",
+      "Overly colorful diagrams",
+      "Inconsistent surface colors"
+    ]
+  },
+  "layout_usage": {
+    "correct_usage": [
+      "Use structured grid alignment.",
+      "Maintain strong vertical rhythm.",
+      "Use clean engineering-focused layouts.",
+      "Create clear hierarchy and progressive disclosure.",
+      "Support mobile-first reading flow."
+    ],
+    "incorrect_usage": [
+      "Random spacing",
+      "Misaligned grids",
+      "Overcrowded sections",
+      "Too many columns on mobile",
+      "Weak hierarchy",
+      "Decorative layout fragmentation"
+    ]
+  },
+  "cta_usage": {
+    "correct_usage": [
+      "Use engineering-focused CTA language.",
+      "Place CTA after proof and technical explanation.",
+      "Use one dominant CTA per section.",
+      "Support CTA with trust indicators.",
+      "Use consultation-oriented messaging."
+    ],
+    "incorrect_usage": [
+      "Aggressive sales wording",
+      "Multiple competing CTAs",
+      "Tiny mobile CTA buttons",
+      "CTA without supporting proof",
+      "Hidden primary conversion path",
+      "Consumer e-commerce language"
+    ]
+  },
+  "technical_diagram_usage": {
+    "correct_usage": [
+      "Use annotated engineering previews.",
+      "Support fullscreen technical inspection.",
+      "Use zoomable engineering diagrams.",
+      "Use orange only for critical emphasis.",
+      "Keep annotations readable.",
+      "Use real engineering systems and details."
+    ],
+    "incorrect_usage": [
+      "Unreadable CAD screenshots",
+      "Too many annotations",
+      "No mobile zoom support",
+      "Decorative technical graphics",
+      "Tiny unreadable labels",
+      "Flattened engineering screenshots",
+      "No engineering explanation"
+    ]
+  },
+  "facade_and_zip_system_usage": {
+    "correct_usage": [
+      "Show real façade and roofing systems.",
+      "Use ACP, standing seam, and ZIP details accurately.",
+      "Explain thermal movement and waterproofing clearly.",
+      "Use engineering transition details.",
+      "Preserve technical realism."
+    ],
+    "incorrect_usage": [
+      "Generic cladding imagery",
+      "Roof-only engineering positioning",
+      "Missing façade coordination details",
+      "Decorative architectural renders without technical meaning",
+      "Incorrect standing seam representations"
+    ]
+  },
+  "photography_usage": {
+    "correct_usage": [
+      "Use real industrial project photography.",
+      "Show installation and engineering context.",
+      "Preserve realistic lighting and materials.",
+      "Use technically relevant imagery.",
+      "Highlight execution quality."
+    ],
+    "incorrect_usage": [
+      "Generic stock photography",
+      "Over-processed HDR effects",
+      "Fake industrial visuals",
+      "Lifestyle imagery unrelated to engineering",
+      "Low-resolution site photography",
+      "Unapproved supplier imagery"
+    ]
+  },
+  "motion_usage": {
+    "correct_usage": [
+      "Use subtle controlled transitions.",
+      "Animate only when interaction benefits clarity.",
+      "Keep motion fast and lightweight.",
+      "Respect reduced-motion preferences.",
+      "Use motion to reinforce hierarchy."
+    ],
+    "incorrect_usage": [
+      "Heavy parallax",
+      "Bounce animations",
+      "Slow transitions",
+      "Animation overload",
+      "Distracting motion effects",
+      "Scroll-jacking"
+    ]
+  },
+  "mobile_usage": {
+    "correct_usage": [
+      "Use thumb-friendly layouts.",
+      "Keep sticky CTA accessible.",
+      "Reduce technical density.",
+      "Use fullscreen technical viewers.",
+      "Support field usability conditions.",
+      "Prioritize fast engineering access."
+    ],
+    "incorrect_usage": [
+      "Desktop layouts forced onto mobile",
+      "Tiny touch targets",
+      "Long non-progressive forms",
+      "Unreadable technical sections",
+      "Hidden CTA paths",
+      "Dense technical previews",
+      "Tiny diagram controls"
+    ]
+  },
+  "seo_content_usage": {
+    "correct_usage": [
+      "Write for industrial search intent.",
+      "Use technical proof and diagrams.",
+      "Structure content using headings and FAQ.",
+      "Connect SEO content to engineering conversion.",
+      "Use natural engineering terminology."
+    ],
+    "incorrect_usage": [
+      "Keyword stuffing",
+      "Thin SEO pages",
+      "Generic blog-style writing",
+      "No technical explanation",
+      "No conversion path",
+      "Marketing-heavy content without proof"
+    ]
+  },
+  "case_study_usage": {
+    "correct_usage": [
+      "Explain engineering challenge first.",
+      "Show technical process and proof.",
+      "Use measurable industrial outcomes.",
+      "Include execution visuals.",
+      "Present waterproofing, drainage, façade, or installation logic."
+    ],
+    "incorrect_usage": [
+      "Marketing-only storytelling",
+      "No measurable results",
+      "Stock imagery instead of real projects",
+      "Overly emotional language",
+      "No engineering explanation"
+    ]
+  },
+  "resource_center_usage": {
+    "correct_usage": [
+      "Provide practical engineering value.",
+      "Use structured categories.",
+      "Show resource previews before download.",
+      "Connect resources to engineering consultation.",
+      "Support SEO and technical education."
+    ],
+    "incorrect_usage": [
+      "Generic blog structure",
+      "Downloads without preview value",
+      "Long forms before access",
+      "No engineering organization",
+      "Decorative PDF library behavior"
+    ]
+  },
+  "analytics_usage": {
+    "correct_usage": [
+      "Track meaningful engineering interactions.",
+      "Use consistent event naming.",
+      "Track RFQ and technical engagement.",
+      "Track diagram interactions and downloads.",
+      "Use analytics for UX optimization."
+    ],
+    "incorrect_usage": [
+      "Tracking page views only",
+      "Duplicate analytics events",
+      "No RFQ funnel tracking",
+      "No mobile interaction tracking",
+      "Missing multilingual tracking"
+    ]
+  },
+  "frontend_usage": {
+    "correct_usage": [
+      "Use reusable component systems.",
+      "Implement approved design tokens.",
+      "Optimize assets and technical visuals.",
+      "Support RTL and multilingual behavior.",
+      "Preserve responsive engineering readability."
+    ],
+    "incorrect_usage": [
+      "Hardcoded styling",
+      "Inconsistent spacing systems",
+      "Untested responsive layouts",
+      "Broken RTL behavior",
+      "Heavy unoptimized assets",
+      "Non-semantic HTML"
+    ]
+  },
+  "accessibility_usage": {
+    "correct_usage": [
+      "Maintain visible focus states.",
+      "Use semantic HTML structure.",
+      "Provide alt text and technical summaries.",
+      "Ensure WCAG AA contrast.",
+      "Support keyboard interaction.",
+      "Preserve technical readability in field conditions."
+    ],
+    "incorrect_usage": [
+      "Color-only communication",
+      "Missing field labels",
+      "Keyboard-inaccessible forms",
+      "Low-contrast text",
+      "Motion without reduced-motion support",
+      "Unreadable technical diagrams"
+    ]
+  },
+  "multilingual_usage": {
+    "correct_usage": [
+      "Preserve engineering terminology consistency.",
+      "Use hreflang and localized metadata.",
+      "Support RTL layouts correctly.",
+      "Allow translated content expansion.",
+      "Maintain engineering hierarchy across languages."
+    ],
+    "incorrect_usage": [
+      "Broken RTL alignment",
+      "Untranslated metadata",
+      "Clipped translated content",
+      "Inconsistent engineering terminology",
+      "Mixed-direction layout errors"
+    ]
+  },
+  "industrial_usability_rules": {
+    "correct_usage": [
+      "Support field-based mobile usage.",
+      "Maintain readability under outdoor conditions.",
+      "Use large touch-friendly interactions.",
+      "Provide fast access to technical information.",
+      "Preserve engineering clarity under low bandwidth."
+    ],
+    "incorrect_usage": [
+      "Tiny field controls",
+      "Low-visibility technical previews",
+      "Slow-loading engineering diagrams",
+      "Precision-heavy interactions",
+      "Overloaded mobile layouts"
+    ]
+  },
+  "quality_control_rules": [
+    "Every page must pass engineering-focused design QA before launch.",
+    "All assets must follow export standards.",
+    "All components must follow naming conventions.",
+    "Accessibility and performance testing are mandatory.",
+    "All diagrams must remain readable on mobile.",
+    "No unapproved visual patterns may enter production.",
+    "RTL and multilingual QA required before deployment."
+  ],
+  "approved_system_characteristics": [
+    "Technical",
+    "Structured",
+    "Consistent",
+    "Readable",
+    "Engineering-focused",
+    "Performance-aware",
+    "Consultant-grade",
+    "Industrial",
+    "Accessible"
+  ],
+  "forbidden_global_patterns": [
+    "Marketing-heavy styling",
+    "Inconsistent UI behavior",
+    "Decorative complexity without engineering value",
+    "Unreadable technical content",
+    "Unoptimized performance",
+    "Broken responsive layouts",
+    "Inconsistent brand application",
+    "Consumer-style industrial positioning",
+    "Fake engineering proof"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Usage philosophy",
+      "Correct vs incorrect brand usage",
+      "Typography and layout comparisons",
+      "Technical diagram examples",
+      "Mobile and field usability examples",
+      "SEO and conversion comparisons",
+      "Accessibility and multilingual examples",
+      "Frontend implementation comparisons"
+    ],
+    "visual_direction": [
+      "Side-by-side comparison layouts",
+      "Annotated engineering UI examples",
+      "Diagram readability comparisons",
+      "Mobile usability examples",
+      "Typography hierarchy showcases",
+      "Correct vs incorrect façade engineering visuals"
+    ]
+  },
+  "implementation_notes": [
+    "This page acts as the master governance reference for design, frontend, SEO, content, engineering visuals, and conversion systems.",
+    "Examples should use real SIPANEL engineering contexts whenever possible.",
+    "Consistency across all digital and technical touchpoints is critical for preserving SIPANEL's industrial engineering credibility.",
+    "Correct usage examples must reinforce sandwich panels, aluminum cladding, standing seam roofing, façade engineering, and waterproofing expertise equally."
+  ]
+}

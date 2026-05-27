@@ -1,0 +1,45 @@
+{
+              "project_name": "Tabas Railway Facility",
+              "slug": "tabas-railway-facility",
+              "location": "Tabas, Iran",
+              "category": "Transportation & Sandwich Panel Structures",
+              "project_type": "Large-span railway roofing system",
+              "system_type": "Sandwich Panel Roofing System",
+              "status": "Completed",
+              "area": "10,000 m²",
+              "challenge": "Execution of a large-scale double-curved railway structure requiring advanced sandwich panel coordination, precise structural alignment, controlled waterproofing continuity, and reliable long-span roof performance.",
+              "sipanel_solution": "SIPANEL provided a fully engineered sandwich panel roofing system specifically adapted for the complex double-arched railway structure, including panel layout optimization, drainage coordination, and structural integration.",
+              "engineering_decision": "Engineering teams applied custom sandwich panel detailing, structural alignment studies, drainage optimization strategies, and installation sequencing plans to maintain geometric precision and long-span performance reliability.",
+              "execution_detail": "Execution followed detailed shop drawings, coordinated installation planning, fastening verification procedures, and structural alignment checkpoints to ensure accurate roof geometry and waterproofing continuity.",
+              "measured_result": "Successful delivery of a durable large-span sandwich panel roofing system with reliable structural performance, controlled installation quality, and efficient project execution.",
+              "risk_prevented": [
+                "Structural misalignment",
+                "Drainage failures",
+                "Installation inaccuracies",
+                "Water penetration",
+                "Panel deformation",
+                "Long-term maintenance issues"
+              ],
+              "primary_message": "Engineered sandwich panel roofing systems designed for complex large-span transportation structures.",
+              "proof_points": [
+                "Double-curved roof coordination",
+                "Large-span sandwich panel execution",
+                "Structural alignment precision",
+                "Controlled installation sequencing",
+                "Reliable drainage integration"
+              ],
+              "metrics": {
+                "project_area": "10,000 m²",
+                "facility_type": "Railway facility",
+                "system_type": "Sandwich panel roofing system",
+                "execution_focus": "Long-span structural coordination and waterproofing control"
+              },
+              "images": {
+                "hero_desktop": "./projects/tabas/tabas-hero-desktop.webp",
+                "hero_mobile": "./projects/tabas/tabas-hero-mobile.webp",
+                "card": "./projects/tabas/tabas-card.webp",
+                "gallery_large": "./projects/tabas/tabas-gallery-large.webp",
+                "installation": "./projects/tabas/tabas-installation.webp",
+                "technical_detail": "./projects/tabas/tabas-technical-detail.webp"
+              }
+            }

@@ -1,0 +1,326 @@
+{
+    "analytics_tracking_system": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "purpose": "Track mobile UX, conversion behavior, engineering engagement, lead quality, and performance signals.",
+  
+      "tools": {
+        "required": [
+          "Google Analytics 4",
+          "Google Search Console"
+        ],
+        "recommended": [
+          "Google Tag Manager",
+          "Microsoft Clarity or Hotjar",
+          "Meta Pixel if ads are used",
+          "CRM lead tracking"
+        ]
+      },
+  
+      "conversion_goals": {
+        "primary": [
+          "rfq_submit",
+          "engineering_review_request",
+          "phone_click",
+          "whatsapp_click"
+        ],
+        "secondary": [
+          "resource_download",
+          "case_study_view",
+          "diagram_zoom",
+          "service_page_click"
+        ]
+      },
+  
+      "events": {
+        "navigation": {
+          "mobile_menu_open": {
+            "trigger": "User opens mobile menu",
+            "priority": "medium"
+          },
+          "mobile_menu_item_click": {
+            "trigger": "User clicks mobile menu item",
+            "priority": "medium"
+          },
+          "language_switcher_open": {
+            "trigger": "User opens language selector",
+            "priority": "medium"
+          },
+          "language_change": {
+            "trigger": "User changes website language",
+            "priority": "high",
+            "parameters": [
+              "previous_language",
+              "selected_language",
+              "page_url",
+              "device_type"
+            ]
+          },        
+          "technical_quick_access_click": {
+            "trigger": "User clicks technical quick access item",
+            "priority": "high"
+          }
+        },
+  
+        "hero": {
+          "hero_primary_cta_click": {
+            "trigger": "User clicks Get Free Engineering Review in hero",
+            "priority": "critical"
+          },
+          "hero_secondary_cta_click": {
+            "trigger": "User clicks Request Project Cost Check in hero",
+            "priority": "high"
+          },
+          "hero_visibility_duration": {
+            "trigger": "Measure time hero remains visible",
+            "priority": "medium"
+          }
+        },
+  
+        "trust_and_proof": {
+          "trust_bar_view": {
+            "trigger": "Trust bar enters viewport",
+            "priority": "medium"
+          },
+          "proof_card_expand": {
+            "trigger": "User expands engineering proof card",
+            "priority": "high"
+          },
+          "proof_diagram_zoom": {
+            "trigger": "User opens or zooms proof diagram",
+            "priority": "high"
+          }
+        },
+  
+        "case_studies": {
+          "case_study_view": {
+            "trigger": "Case study card enters viewport",
+            "priority": "high"
+          },
+          "case_study_swipe": {
+            "trigger": "User swipes mobile project card",
+            "priority": "medium"
+          },
+          "case_study_expand": {
+            "trigger": "User opens project details",
+            "priority": "high"
+          },
+          "case_study_cta_click": {
+            "trigger": "User clicks CTA inside or after case study",
+            "priority": "critical"
+          }
+        },
+  
+        "technical_engagement": {
+          "diagram_open": {
+            "trigger": "User opens fullscreen diagram",
+            "priority": "high"
+          },
+          "diagram_zoom": {
+            "trigger": "User zooms technical diagram",
+            "priority": "high"
+          },
+          "diagram_close": {
+            "trigger": "User closes fullscreen diagram",
+            "priority": "medium"
+          },
+          "accordion_expand": {
+            "trigger": "User expands technical accordion",
+            "priority": "medium"
+          },
+          "resource_filter_use": {
+            "trigger": "User filters resources",
+            "priority": "medium"
+          }
+        },
+  
+        "lead_generation": {
+          "sticky_cta_click": {
+            "trigger": "User clicks sticky mobile CTA",
+            "priority": "critical"
+          },
+          "sticky_call_click": {
+            "trigger": "User taps Call from sticky CTA",
+            "priority": "critical"
+          },
+          "sticky_whatsapp_click": {
+            "trigger": "User taps WhatsApp from sticky CTA",
+            "priority": "critical"
+          },
+          "rfq_start": {
+            "trigger": "User starts RFQ form",
+            "priority": "critical"
+          },
+          "rfq_step_complete": {
+            "trigger": "User completes one RFQ step",
+            "priority": "high"
+          },
+          "rfq_submit": {
+            "trigger": "User submits RFQ form",
+            "priority": "critical"
+          },
+          "rfq_abandon": {
+            "trigger": "User starts but does not submit RFQ",
+            "priority": "high"
+          },
+          "resource_download_start": {
+            "trigger": "User starts resource download form",
+            "priority": "high"
+          },
+          "resource_download_complete": {
+            "trigger": "User successfully downloads resource",
+            "priority": "critical"
+          }
+        },
+  
+        "contact": {
+          "phone_click": {
+            "trigger": "User clicks phone number",
+            "priority": "critical"
+          },
+          "whatsapp_click": {
+            "trigger": "User clicks WhatsApp link",
+            "priority": "critical"
+          },
+          "email_click": {
+            "trigger": "User clicks email link",
+            "priority": "medium"
+          },
+          "map_click": {
+            "trigger": "User opens map or address",
+            "priority": "medium"
+          }
+        },
+  
+        "seo_content": {
+          "blog_card_click": {
+            "trigger": "User clicks engineering insight article",
+            "priority": "medium"
+          },
+          "internal_link_click": {
+            "trigger": "User clicks contextual internal link",
+            "priority": "medium"
+          }
+        },
+  
+        "scroll_depth": {
+          "scroll_25": {
+            "trigger": "User reaches 25% scroll depth",
+            "priority": "low"
+          },
+          "scroll_50": {
+            "trigger": "User reaches 50% scroll depth",
+            "priority": "medium"
+          },
+          "scroll_75": {
+            "trigger": "User reaches 75% scroll depth",
+            "priority": "medium"
+          },
+          "scroll_100": {
+            "trigger": "User reaches bottom of page",
+            "priority": "low"
+          }
+        }
+      },
+  
+      "event_parameters": {
+        "required_common_parameters": [
+          "page_url",
+          "page_title",
+          "device_type",
+          "viewport_width",
+          "traffic_source",
+          "language"
+        ],
+        "component_parameters": [
+          "component_id",
+          "component_name",
+          "section_id",
+          "cta_text",
+          "interaction_type"
+        ],
+        "lead_parameters": [
+          "lead_type",
+          "project_type",
+          "form_step",
+          "submission_method"
+        ],
+        "technical_parameters": [
+          "diagram_type",
+          "resource_type",
+          "case_study_name",
+          "engineering_topic"
+        ]
+      },
+  
+      "funnels": {
+        "primary_mobile_lead_funnel": [
+          "hero_view",
+          "trust_bar_view",
+          "proof_card_expand",
+          "sticky_cta_click",
+          "rfq_start",
+          "rfq_submit"
+        ],
+        "technical_engagement_funnel": [
+          "proof_card_expand",
+          "diagram_open",
+          "diagram_zoom",
+          "resource_download_start",
+          "resource_download_complete"
+        ],
+        "case_study_conversion_funnel": [
+          "case_study_view",
+          "case_study_expand",
+          "case_study_cta_click",
+          "rfq_start",
+          "rfq_submit"
+        ]
+      },
+  
+      "success_kpis": {
+        "conversion": [
+          "mobile_rfq_conversion_rate",
+          "sticky_cta_click_rate",
+          "phone_and_whatsapp_click_rate",
+          "resource_download_conversion_rate"
+        ],
+        "engagement": [
+          "case_study_interaction_rate",
+          "diagram_zoom_rate",
+          "technical_accordion_expand_rate",
+          "average_scroll_depth"
+        ],
+        "performance": [
+          "mobile_lcp",
+          "mobile_cls",
+          "mobile_inp",
+          "mobile_page_load_time"
+        ],
+        "seo": [
+          "organic_sessions",
+          "keyword_rankings",
+          "landing_page_clicks",
+          "blog_to_service_clicks"
+        ]
+      },
+  
+      "reporting_frequency": {
+        "weekly": [
+          "traffic",
+          "cta_clicks",
+          "rfq_submissions",
+          "phone_clicks",
+          "whatsapp_clicks"
+        ],
+        "monthly": [
+          "seo_growth",
+          "conversion_rate",
+          "case_study_performance",
+          "resource_downloads",
+          "mobile_performance"
+        ]
+      }
+    }
+  }

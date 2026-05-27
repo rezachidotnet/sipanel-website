@@ -1,0 +1,412 @@
+{
+    "page": "engineering_resource_hub",
+    "brand": "SIPANEL",
+    "version": "1.0",
+    "page_type": "resource_hub",
+    "purpose": "Create a technical resource hub that builds engineering authority, supports SEO, and generates qualified industrial leads.",
+    "route": {
+      "en": "/en/resources",
+      "fa": "/fa/resources",
+      "ar": "/ar/resources",
+      "ru": "/ru/resources"
+    },
+    "language_system": {
+      "default": "en",
+      "supported": ["en", "fa", "ar", "ru"],
+      "rtl": ["fa", "ar"],
+      "requirements": [
+        "localized resource titles",
+        "localized SEO metadata",
+        "hreflang",
+        "canonical per language",
+        "RTL mirrored layout for Persian and Arabic"
+      ]
+    },
+    "page_goal": {
+      "primary": "Generate qualified technical leads through useful engineering resources.",
+      "secondary": "Position SIPANEL as an industrial envelope engineering authority.",
+      "conversion": "Resource download, engineering review request, RFQ start"
+    },
+    "seo": {
+      "primary_keyword": "industrial panel engineering resources",
+      "secondary_keywords": [
+        "sandwich panel guide",
+        "standing seam roofing guide",
+        "roof leakage prevention checklist",
+        "industrial cladding guide",
+        "shop drawing review",
+        "industrial envelope technical resources",
+        "panel installation checklist"
+      ],
+      "title": "Engineering Resources | SIPANEL Industrial Panel, Roofing & Cladding Guides",
+      "meta_description": "Explore SIPANEL engineering resources for sandwich panels, standing seam roofing, aluminium cladding, waterproofing details, shop drawing review, and industrial envelope project control.",
+      "h1": "Engineering Resources for Better Industrial Envelope Decisions.",
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "seo_requirements": [
+        "Each resource card must have a clear keyword focus.",
+        "Add internal links to service pages and case studies.",
+        "Add localized metadata for EN, FA, AR, RU.",
+        "Use clean semantic headings.",
+        "Do not publish thin content pages."
+      ]
+    },
+    "design_direction": {
+      "style": "technical_clean_industrial",
+      "visual_feel": [
+        "technical",
+        "structured",
+        "educational",
+        "industrial",
+        "trust-building",
+        "conversion-focused"
+      ],
+      "visual_rules": [
+        "Use structured cards with technical hierarchy.",
+        "Use orange only for CTA, filters, active states, and technical emphasis.",
+        "Use diagrams, document previews, and technical thumbnails instead of generic images.",
+        "Avoid blog-style clutter.",
+        "Avoid decorative illustrations.",
+        "Prioritize scanability on mobile."
+      ]
+    },
+    "page_sections": [
+      {
+        "id": "resource_hub_hero",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked",
+          "desktop": "split_60_40"
+        },
+        "content": {
+          "eyebrow": "SIPANEL Technical Library",
+          "h1": "Engineering Resources for Better Industrial Envelope Decisions.",
+          "subheadline": "Practical guides, checklists, and technical references for panel systems, waterproof roofing, aluminium cladding, shop drawings, and controlled industrial execution.",
+          "primary_cta": "Download Engineering Resource",
+          "secondary_cta": "Request Technical Consultation",
+          "trust_microcopy": "Built for project owners, contractors, engineers, architects, and procurement teams."
+        },
+        "visual": {
+          "type": "technical_document_stack_or_diagram_preview",
+          "preferred_assets": [
+            "shop drawing preview",
+            "roof drainage detail",
+            "panel system checklist",
+            "resource PDF mockup"
+          ],
+          "fallback": "structured technical document preview using SIPANEL design system"
+        }
+      },
+      {
+        "id": "resource_categories",
+        "priority": "critical",
+        "title": "Browse by Engineering Topic",
+        "layout": {
+          "mobile": "horizontal_scroll_filters",
+          "desktop": "inline_filter_tabs"
+        },
+        "categories": [
+          {
+            "id": "panel_systems",
+            "label": "Panel Systems"
+          },
+          {
+            "id": "roofing_waterproofing",
+            "label": "Roofing & Waterproofing"
+          },
+          {
+            "id": "cladding_facades",
+            "label": "Cladding & Facades"
+          },
+          {
+            "id": "shop_drawings",
+            "label": "Shop Drawings"
+          },
+          {
+            "id": "procurement",
+            "label": "Procurement & MTO"
+          },
+          {
+            "id": "quality_control",
+            "label": "Quality Control"
+          }
+        ],
+        "interaction_rules": [
+          "Filter resources without page reload.",
+          "Update URL query parameter when category changes.",
+          "Track resource_category_filter event."
+        ]
+      },
+      {
+        "id": "featured_resources",
+        "priority": "critical",
+        "title": "Featured Engineering Resources",
+        "layout": {
+          "mobile": "single_column_cards",
+          "tablet": "2_column_grid",
+          "desktop": "3_card_grid"
+        },
+        "resource_card_structure": [
+          "resource_type",
+          "category",
+          "title",
+          "short_description",
+          "difficulty_level",
+          "estimated_read_time",
+          "download_required",
+          "primary_cta"
+        ],
+        "resources": [
+          {
+            "id": "roof_leakage_prevention_checklist",
+            "type": "checklist",
+            "category": "roofing_waterproofing",
+            "title": "Industrial Roof Leakage Prevention Checklist",
+            "description": "A practical checklist for reviewing slope, drainage, flashings, penetrations, gutters, and installation risk before roofing starts.",
+            "difficulty": "Practical",
+            "read_time": "8 min",
+            "cta": "Download Checklist",
+            "lead_capture": true
+          },
+          {
+            "id": "sandwich_panel_selection_guide",
+            "type": "guide",
+            "category": "panel_systems",
+            "title": "Sandwich Panel Selection Guide",
+            "description": "Understand panel type, core selection, thickness, joint logic, insulation needs, and project conditions before procurement.",
+            "difficulty": "Technical",
+            "read_time": "10 min",
+            "cta": "Download Guide",
+            "lead_capture": true
+          },
+          {
+            "id": "shop_drawing_review_guide",
+            "type": "guide",
+            "category": "shop_drawings",
+            "title": "Shop Drawing Review Guide for Panel Projects",
+            "description": "A structured guide for checking panel layout, accessories, flashing logic, quantities, and execution coordination.",
+            "difficulty": "Technical",
+            "read_time": "12 min",
+            "cta": "Download Guide",
+            "lead_capture": true
+          },
+          {
+            "id": "standing_seam_roof_detail_notes",
+            "type": "technical_note",
+            "category": "roofing_waterproofing",
+            "title": "Standing Seam Roof Detail Notes",
+            "description": "Key technical points for seams, concealed fastening, roof movement, flashing connections, and drainage coordination.",
+            "difficulty": "Advanced",
+            "read_time": "9 min",
+            "cta": "Read Technical Note",
+            "lead_capture": false
+          },
+          {
+            "id": "aluminium_cladding_layout_checklist",
+            "type": "checklist",
+            "category": "cladding_facades",
+            "title": "Aluminium Cladding Layout Checklist",
+            "description": "Review facade grid, panel rhythm, joints, fixing logic, edges, openings, and material optimization before installation.",
+            "difficulty": "Practical",
+            "read_time": "7 min",
+            "cta": "Download Checklist",
+            "lead_capture": true
+          },
+          {
+            "id": "mto_procurement_planning_sheet",
+            "type": "worksheet",
+            "category": "procurement",
+            "title": "MTO & Procurement Planning Sheet",
+            "description": "A structured worksheet for reviewing quantities, accessories, flashings, fasteners, trims, and procurement gaps.",
+            "difficulty": "Practical",
+            "read_time": "6 min",
+            "cta": "Download Worksheet",
+            "lead_capture": true
+          }
+        ],
+        "rules": [
+          "Do not claim a downloadable PDF exists unless the file exists.",
+          "If a resource file is missing, create the page/card and mark asset_status as pending.",
+          "Use lead capture only for high-value downloadable resources.",
+          "Track resource_card_view and resource_download events."
+        ]
+      },
+      {
+        "id": "engineering_learning_paths",
+        "priority": "high",
+        "title": "Recommended Learning Paths",
+        "layout": {
+          "mobile": "accordion_paths",
+          "desktop": "3_column_path_cards"
+        },
+        "paths": [
+          {
+            "title": "For Project Owners",
+            "goal": "Reduce risk before procurement and installation.",
+            "resources": [
+              "Industrial Roof Leakage Prevention Checklist",
+              "Sandwich Panel Selection Guide",
+              "Request Project Cost Check"
+            ]
+          },
+          {
+            "title": "For Contractors",
+            "goal": "Improve coordination, installation sequence, and material planning.",
+            "resources": [
+              "Shop Drawing Review Guide",
+              "MTO & Procurement Planning Sheet",
+              "Standing Seam Roof Detail Notes"
+            ]
+          },
+          {
+            "title": "For Engineers & Architects",
+            "goal": "Review technical details, system logic, and envelope coordination.",
+            "resources": [
+              "Standing Seam Roof Detail Notes",
+              "Aluminium Cladding Layout Checklist",
+              "Technical Proof Gallery"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "technical_proof_library",
+        "priority": "high",
+        "title": "Technical Proof Library",
+        "layout": {
+          "mobile": "swipeable_cards",
+          "desktop": "technical_grid"
+        },
+        "items": [
+          {
+            "title": "Shop Drawing Previews",
+            "description": "Panel layout, quantities, accessories, and execution sequence proof.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Waterproofing Details",
+            "description": "Drainage, flashing, overlap, gutter, and penetration detail references.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Facade Layout Details",
+            "description": "Cladding grid, fixing points, joints, edge conditions, and elevation control.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          },
+          {
+            "title": "Quality Checkpoints",
+            "description": "Inspection references for installation, alignment, waterproofing, and final verification.",
+            "asset_status": "use_real_asset_if_available_otherwise_pending"
+          }
+        ],
+        "interaction_rules": [
+          "Enable fullscreen viewer for diagrams.",
+          "Enable zoom for technical visuals.",
+          "Track technical_proof_open and diagram_zoom events."
+        ]
+      },
+      {
+        "id": "resource_lead_capture",
+        "priority": "critical",
+        "title": "Get the Right Engineering Resource for Your Project",
+        "layout": {
+          "mobile": "step_based_form",
+          "desktop": "two_column_form_and_resource_preview"
+        },
+        "form_fields": [
+          "name",
+          "company",
+          "phone",
+          "email",
+          "project_type",
+          "resource_requested",
+          "project_stage",
+          "message"
+        ],
+        "cta": "Send Me the Resource",
+        "rules": [
+          "Use React Hook Form and Zod validation.",
+          "Do not request too many fields on mobile.",
+          "Track resource_form_start and resource_form_submit.",
+          "After submission, show success state and next CTA: Request Technical Consultation."
+        ]
+      },
+      {
+        "id": "related_services",
+        "priority": "medium",
+        "title": "Explore Related Systems",
+        "layout": {
+          "mobile": "single_column_cards",
+          "desktop": "3_card_grid"
+        },
+        "cards": [
+          {
+            "title": "Sandwich Panel Systems",
+            "link": "/systems/sandwich-panel-systems"
+          },
+          {
+            "title": "Standing Seam & ZIP Tech Roofing",
+            "link": "/systems/standing-seam-zip-tech-roofing"
+          },
+          {
+            "title": "Aluminium Cladding & Covering",
+            "link": "/systems/aluminium-cladding-covering"
+          }
+        ]
+      },
+      {
+        "id": "conversion_cta",
+        "priority": "critical",
+        "layout": {
+          "mobile": "stacked_dark_cta",
+          "desktop": "dark_split_cta"
+        },
+        "headline": "Need Technical Review Before Procurement?",
+        "text": "SIPANEL can review your industrial panel, roofing, or cladding project before execution risk appears on site.",
+        "primary_cta": "Request Technical Consultation",
+        "secondary_cta": "Contact via WhatsApp"
+      }
+    ],
+    "content_governance": {
+      "rules": [
+        "Resources must educate before selling.",
+        "Avoid generic blog language.",
+        "Avoid unverified performance claims.",
+        "Use engineering terminology with clear explanations.",
+        "Keep paragraphs short and scannable.",
+        "Each resource must connect to project risk reduction."
+      ]
+    },
+    "analytics_events": [
+      "resources_page_view",
+      "resource_category_filter",
+      "resource_card_view",
+      "resource_download",
+      "resource_form_start",
+      "resource_form_submit",
+      "technical_proof_open",
+      "diagram_zoom",
+      "related_service_click",
+      "rfq_start",
+      "whatsapp_click",
+      "phone_click"
+    ],
+    "implementation_instruction_for_claude_code": {
+      "task": "Implement the Engineering Resource Hub according to this JSON specification.",
+      "rules": [
+        "Use existing SIPANEL design system and global components.",
+        "Create localized routes for EN, FA, AR, RU.",
+        "Apply RTL layout for FA and AR.",
+        "Use real resource files if available.",
+        "If downloadable files are missing, create structured pending states instead of fake downloads.",
+        "Implement category filters.",
+        "Implement resource lead capture form.",
+        "Implement technical proof viewer.",
+        "Do not ask approval for normal implementation decisions.",
+        "Ask only if real downloadable assets, destructive commands, paid services, or conflicting specifications are involved."
+      ]
+    }
+  }

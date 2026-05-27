@@ -1,0 +1,297 @@
+{
+    "page": {
+      "number": 21,
+      "title": "Buttons & CTA System",
+      "section": "UI Component System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define SIPANEL button styles, CTA hierarchy, interaction states, conversion behavior, accessibility rules, and usage standards across all digital interfaces.",
+    "button_philosophy": {
+      "statement": "Buttons and CTAs must guide users toward engineering-first actions with clarity, confidence, and minimal friction.",
+      "core_principles": [
+        "One primary action per viewport",
+        "Clear conversion hierarchy",
+        "Engineering-focused CTA language",
+        "Strong accessibility",
+        "Consistent interaction feedback",
+        "Mobile-first usability"
+      ]
+    },
+    "cta_hierarchy": {
+      "primary_cta": {
+        "purpose": "Main conversion action",
+        "examples": [
+          "Get Free Engineering Review",
+          "Request Technical Consultation",
+          "Request Project Cost Check"
+        ],
+        "visual_priority": "highest"
+      },
+      "secondary_cta": {
+        "purpose": "Supporting navigation or lower-commitment action",
+        "examples": [
+          "Explore Proven Projects",
+          "View Technical Proof",
+          "Download Engineering Resource"
+        ],
+        "visual_priority": "medium"
+      },
+      "tertiary_cta": {
+        "purpose": "Low-emphasis contextual action",
+        "examples": [
+          "Learn More",
+          "View Details",
+          "Read Case Study"
+        ],
+        "visual_priority": "low"
+      }
+    },
+    "button_styles": {
+      "primary_button": {
+        "background": "#FF6A00",
+        "text_color": "#FFFFFF",
+        "border": "none",
+        "height_mobile": "48px",
+        "height_desktop": "52px",
+        "padding": "12px 24px",
+        "border_radius": "6px",
+        "font_weight": 600,
+        "usage": [
+          "Hero CTA",
+          "RFQ submission",
+          "Main conversion sections",
+          "Sticky mobile CTA"
+        ]
+      },
+      "secondary_button": {
+        "background": "transparent",
+        "text_color": "#0F1113",
+        "border": "1px solid #0F1113",
+        "height_mobile": "48px",
+        "height_desktop": "52px",
+        "padding": "12px 24px",
+        "border_radius": "6px",
+        "font_weight": 600,
+        "usage": [
+          "Supporting actions",
+          "Project exploration",
+          "Resource navigation"
+        ]
+      },
+      "dark_surface_secondary_button": {
+        "background": "transparent",
+        "text_color": "#FFFFFF",
+        "border": "1px solid rgba(255,255,255,0.4)",
+        "usage": [
+          "Dark hero sections",
+          "Footer CTAs",
+          "Technical dark sections"
+        ]
+      },
+      "text_button": {
+        "background": "transparent",
+        "text_color": "#0F1113",
+        "border": "none",
+        "font_weight": 600,
+        "usage": [
+          "Inline actions",
+          "Card links",
+          "Low-priority navigation"
+        ]
+      }
+    },
+    "interaction_states": {
+      "default": {
+        "description": "Normal resting state."
+      },
+      "hover": {
+        "primary": {
+          "background": "#E85F00",
+          "motion": "subtle translateY(-1px)"
+        },
+        "secondary": {
+          "background": "rgba(15,17,19,0.04)",
+          "border_color": "#0F1113"
+        }
+      },
+      "active": {
+        "motion": "scale(0.98)",
+        "duration": "100ms"
+      },
+      "focus": {
+        "outline": "2px solid #FF6A00",
+        "outline_offset": "2px",
+        "required": true
+      },
+      "disabled": {
+        "opacity": "0.45",
+        "cursor": "not-allowed",
+        "interaction": "none"
+      },
+      "loading": {
+        "behavior": "show spinner or progress indicator",
+        "rules": [
+          "Preserve button width.",
+          "Prevent duplicate submissions.",
+          "Keep loading text clear."
+        ]
+      }
+    },
+    "cta_language_rules": {
+      "approved_primary_ctas": [
+        "Get Free Engineering Review",
+        "Request Technical Consultation",
+        "Request Project Cost Check",
+        "Start Project Evaluation"
+      ],
+      "approved_secondary_ctas": [
+        "Explore Proven Projects",
+        "View Technical Proof",
+        "Download Engineering Resource",
+        "Review Case Studies"
+      ],
+      "forbidden_ctas": [
+        "Buy Now",
+        "Click Here",
+        "Limited Time Offer",
+        "Best Price Guaranteed",
+        "Act Fast"
+      ],
+      "rules": [
+        "Use engineering-first language.",
+        "Avoid pressure-based sales wording.",
+        "Make the action outcome clear.",
+        "Use short and direct CTA labels."
+      ]
+    },
+    "placement_rules": {
+      "hero": [
+        "Primary CTA must appear above fold.",
+        "Secondary CTA may sit beside or below primary CTA.",
+        "CTA group must remain visually dominant."
+      ],
+      "technical_sections": [
+        "Place CTA after proof or explanation.",
+        "Avoid interrupting technical reading.",
+        "Use context-specific CTA language."
+      ],
+      "case_studies": [
+        "Place CTA after project proof.",
+        "Use project-related CTA copy."
+      ],
+      "mobile": [
+        "Sticky CTA should appear after hero scroll.",
+        "CTA must remain within thumb-accessible zone.",
+        "Avoid blocking important content."
+      ]
+    },
+    "mobile_cta_system": {
+      "sticky_cta": {
+        "enabled": true,
+        "position": "bottom safe zone",
+        "primary_action": "Free Engineering Review",
+        "secondary_actions": [
+          "Call",
+          "WhatsApp"
+        ],
+        "rules": [
+          "Minimum height 48px.",
+          "Hide near footer when necessary.",
+          "Do not obstruct form fields.",
+          "Maintain safe-area padding."
+        ]
+      },
+      "mobile_behavior": [
+        "Use full-width buttons when space is limited.",
+        "Stack CTAs vertically below 480px.",
+        "Keep button labels concise.",
+        "Avoid multiple competing CTAs in one viewport."
+      ]
+    },
+    "accessibility_rules": {
+      "minimum_touch_target": "48px",
+      "contrast": "WCAG AA",
+      "keyboard_required": true,
+      "rules": [
+        "All buttons must be keyboard accessible.",
+        "Focus states must be visible.",
+        "Do not rely only on color to indicate state.",
+        "Icon-only buttons require aria-labels.",
+        "Loading buttons must announce state when needed."
+      ]
+    },
+    "rtl_and_multilingual_rules": {
+      "rtl_supported": true,
+      "rules": [
+        "Directional icons must flip in RTL.",
+        "Button padding must use logical spacing.",
+        "CTA text must allow expansion in translated languages.",
+        "Avoid fixed-width buttons for multilingual labels."
+      ]
+    },
+    "analytics_events": {
+      "required_events": [
+        "hero_primary_cta_click",
+        "hero_secondary_cta_click",
+        "sticky_cta_click",
+        "sticky_call_click",
+        "sticky_whatsapp_click",
+        "case_study_cta_click",
+        "resource_download_start",
+        "rfq_start",
+        "rfq_submit"
+      ],
+      "event_parameters": [
+        "cta_text",
+        "component_id",
+        "section_id",
+        "page_url",
+        "device_type",
+        "language"
+      ]
+    },
+    "forbidden_button_patterns": [
+      "Multiple primary CTAs in one viewport",
+      "Low-contrast CTA colors",
+      "Tiny mobile buttons",
+      "Unclear labels",
+      "Decorative button effects",
+      "Heavy shadows or glow effects",
+      "CTA before value explanation",
+      "Pressure-based CTA copy"
+    ],
+    "approved_button_characteristics": [
+      "Clear",
+      "Technical",
+      "Actionable",
+      "Accessible",
+      "Consistent",
+      "Mobile-friendly",
+      "Conversion-focused"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "CTA philosophy",
+        "Button hierarchy",
+        "Button style specimens",
+        "Interaction states",
+        "CTA language examples",
+        "Mobile sticky CTA behavior",
+        "Correct vs incorrect button usage"
+      ],
+      "visual_direction": [
+        "Button state grid",
+        "CTA hierarchy examples",
+        "Mobile sticky CTA mockup",
+        "Dark and light surface examples",
+        "Interaction annotation samples"
+      ]
+    },
+    "implementation_notes": [
+      "All buttons must map to approved design tokens.",
+      "CTA language must remain engineering-first and free from sales pressure.",
+      "Mobile CTA behavior is critical for conversion and must be tested on real devices.",
+      "Button analytics must be implemented for all major conversion actions."
+    ]
+  }

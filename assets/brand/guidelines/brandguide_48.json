@@ -1,0 +1,341 @@
+{
+  "page": {
+    "number": 48,
+    "title": "Design QA Checklist",
+    "section": "Implementation & Governance",
+    "version": "2.0",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define the final visual, UX, technical, responsive, accessibility, performance, analytics, SEO, multilingual, and implementation quality assurance checks required before SIPANEL pages, components, resources, RFQ flows, and engineering systems go live.",
+  "qa_philosophy": {
+    "statement": "Design QA ensures every SIPANEL experience meets engineering-grade standards for clarity, consistency, performance, accessibility, technical trust, and production readiness.",
+    "core_principles": [
+      "Consistency before launch",
+      "Mobile-first verification",
+      "Technical clarity validation",
+      "Performance-aware review",
+      "Accessibility compliance",
+      "Production-ready quality",
+      "Engineering credibility protection",
+      "Multilingual reliability",
+      "Industrial field usability"
+    ]
+  },
+  "global_visual_qa": {
+    "layout_and_spacing": [
+      "Grid alignment is correct.",
+      "Spacing follows approved token system.",
+      "Section rhythm is visually balanced.",
+      "No unintended overflow exists.",
+      "Containers align consistently across breakpoints.",
+      "Technical sections remain readable and not overcrowded."
+    ],
+    "typography": [
+      "Typography hierarchy is correct.",
+      "Heading sizes follow approved scale.",
+      "Body text remains readable on all devices.",
+      "Line heights and spacing are consistent.",
+      "No clipped or overlapping text exists.",
+      "Technical terminology remains readable on mobile."
+    ],
+    "color_and_contrast": [
+      "Approved color palette is used.",
+      "CTA colors are consistent.",
+      "WCAG AA contrast requirements are met.",
+      "No accidental or inconsistent colors appear.",
+      "Orange is used only for CTA and technical emphasis."
+    ],
+    "imagery": [
+      "Images are high quality and optimized.",
+      "Industrial photography remains authentic.",
+      "Images are correctly cropped across breakpoints.",
+      "No stretched or distorted images exist.",
+      "Façade, roofing, cladding, and envelope visuals are represented accurately."
+    ]
+  },
+  "component_qa": {
+    "buttons_and_cta": [
+      "Button hierarchy is correct.",
+      "Hover, focus, active, loading, and disabled states work properly.",
+      "CTA copy matches approved guidelines.",
+      "Buttons are accessible on mobile.",
+      "System-specific CTAs are contextually correct."
+    ],
+    "forms_and_rfq": [
+      "All form fields function correctly.",
+      "Validation messages are clear.",
+      "Error states display correctly.",
+      "RFQ flow works from start to submission.",
+      "File upload behaves correctly.",
+      "System-category selector works correctly.",
+      "Success state communicates engineering next steps clearly."
+    ],
+    "navigation": [
+      "Desktop navigation functions correctly.",
+      "Mobile menu opens and closes smoothly.",
+      "Sticky CTA behavior works correctly.",
+      "Language switcher functions properly.",
+      "System navigation supports sandwich panels, cladding, ZIP roofing, and envelope engineering."
+    ],
+    "modals_and_overlays": [
+      "Modals open and close correctly.",
+      "Background scroll is controlled.",
+      "Fullscreen diagram viewer works properly.",
+      "Focus trapping works in overlays.",
+      "Close controls remain visible and accessible."
+    ]
+  },
+  "responsive_qa": {
+    "mobile": [
+      "No horizontal scrolling exists.",
+      "Touch targets are minimum 48px.",
+      "Sticky CTA remains visible and usable.",
+      "Typography is readable.",
+      "Technical diagrams support zoom.",
+      "RFQ flow is usable with one hand.",
+      "Technical previews are not overcrowded.",
+      "Mobile layout supports field-use conditions."
+    ],
+    "tablet": [
+      "Adaptive layouts behave correctly.",
+      "Navigation transitions properly.",
+      "Spacing scales consistently.",
+      "No broken grids exist.",
+      "Technical visuals remain readable."
+    ],
+    "desktop": [
+      "Large layouts remain balanced.",
+      "Technical diagrams scale properly.",
+      "Proof sections align correctly.",
+      "No oversized empty areas exist.",
+      "Engineering content remains structured and consultant-grade."
+    ]
+  },
+  "technical_visual_qa": {
+    "diagram_viewer": [
+      "Preview diagrams are readable.",
+      "Fullscreen viewer supports zoom and pan.",
+      "Annotations remain legible.",
+      "Close controls remain accessible.",
+      "High-resolution assets load correctly.",
+      "ACP façade details remain readable.",
+      "Standing seam and ZIP roofing details remain readable.",
+      "Envelope transition diagrams remain understandable."
+    ],
+    "tables_and_data": [
+      "Tables are readable on all devices.",
+      "Responsive table behavior works correctly.",
+      "Technical data alignment is consistent.",
+      "No clipped content exists.",
+      "Specification-style information remains scannable."
+    ],
+    "engineering_accuracy": [
+      "Technical diagrams match approved engineering logic.",
+      "No misleading façade or roofing detail is used.",
+      "Waterproofing, drainage, and thermal movement visuals are accurate.",
+      "Technical labels use approved terminology."
+    ]
+  },
+  "content_qa": {
+    "tone_and_messaging": [
+      "Content follows SIPANEL tone of voice.",
+      "No exaggerated marketing language exists.",
+      "Engineering messaging remains clear.",
+      "CTAs are technically aligned.",
+      "Content positions SIPANEL as an industrial envelope engineering partner."
+    ],
+    "seo_content": [
+      "Page includes one H1.",
+      "Headings follow semantic order.",
+      "Meta title and description exist.",
+      "Internal links function correctly.",
+      "FAQ sections behave correctly.",
+      "System keywords are used naturally and accurately."
+    ],
+    "case_studies": [
+      "Engineering challenge is explained clearly.",
+      "Proof and metrics are visible.",
+      "Project visuals are optimized.",
+      "Case study CTA works correctly.",
+      "Outcome claims are verified and measurable."
+    ],
+    "resources": [
+      "Resource previews are visible.",
+      "Download CTAs work correctly.",
+      "Resource categories are organized.",
+      "Technical files are optimized and accessible."
+    ]
+  },
+  "accessibility_qa": {
+    "requirements": [
+      "Keyboard navigation works across the entire page.",
+      "Focus states are visible.",
+      "Images contain alt text.",
+      "Forms include labels.",
+      "Screen reader hierarchy is correct.",
+      "Reduced-motion preference is respected.",
+      "Color is not the only communication method.",
+      "Technical diagrams include accessible summaries.",
+      "Diagram modals trap focus correctly."
+    ]
+  },
+  "rtl_and_multilingual_qa": {
+    "requirements": [
+      "RTL layout mirrors correctly.",
+      "Translated content does not break layout.",
+      "Language switcher preserves current route.",
+      "Typography remains readable across languages.",
+      "Directional icons flip correctly in RTL.",
+      "Technical terminology remains consistent.",
+      "Localized metadata exists."
+    ]
+  },
+  "performance_qa": {
+    "requirements": [
+      "Images are optimized.",
+      "Hero assets are preloaded correctly.",
+      "Below-the-fold assets are lazy-loaded.",
+      "No heavy unnecessary scripts exist.",
+      "Core Web Vitals targets are met.",
+      "Technical diagrams load progressively.",
+      "No heavy PDFs are embedded on mobile.",
+      "RFQ interaction remains fast."
+    ],
+    "required_metrics": {
+      "lcp": "under 2.5 seconds",
+      "cls": "0.1 or lower",
+      "inp": "under 200ms",
+      "mobile_lighthouse": "90+",
+      "desktop_lighthouse": "95+"
+    }
+  },
+  "analytics_qa": {
+    "requirements": [
+      "Primary CTA clicks are tracked.",
+      "RFQ flow events fire correctly.",
+      "Diagram interactions are tracked.",
+      "Resource downloads are tracked.",
+      "Language changes are tracked.",
+      "Analytics naming conventions are correct.",
+      "System-category interactions are tracked.",
+      "No duplicate analytics events fire."
+    ]
+  },
+  "frontend_qa": {
+    "requirements": [
+      "Design tokens are implemented correctly.",
+      "No hardcoded visual values exist.",
+      "Responsive breakpoints function correctly.",
+      "Reusable components are used consistently.",
+      "No console errors appear in production.",
+      "Component naming follows convention.",
+      "RTL logic uses logical CSS properties."
+    ]
+  },
+  "browser_and_device_qa": {
+    "required_devices": [
+      "iPhone Safari",
+      "Android Chrome",
+      "Tablet viewport",
+      "Desktop Chrome",
+      "Desktop Safari",
+      "Desktop Firefox"
+    ],
+    "required_tests": [
+      "Slow network simulation",
+      "RTL layout testing",
+      "Mobile orientation testing",
+      "Touch interaction testing",
+      "Fullscreen diagram interaction",
+      "RFQ file upload test"
+    ]
+  },
+  "pre_launch_approval_checklist": [
+    "Visual QA completed",
+    "Responsive QA completed",
+    "Accessibility QA completed",
+    "Performance QA completed",
+    "Analytics QA completed",
+    "SEO QA completed",
+    "RTL QA completed",
+    "RFQ flow tested",
+    "Diagram viewer tested",
+    "Technical content reviewed",
+    "Final stakeholder approval received"
+  ],
+  "severity_levels": {
+    "critical": [
+      "Broken RFQ flow",
+      "Unreadable mobile layout",
+      "Accessibility blocker",
+      "Broken navigation",
+      "Missing CTA functionality",
+      "Broken language switcher",
+      "Misleading technical diagram"
+    ],
+    "major": [
+      "Layout inconsistency",
+      "Broken responsive section",
+      "Performance issue",
+      "Analytics missing",
+      "Unreadable technical visual",
+      "Incorrect system-category routing"
+    ],
+    "minor": [
+      "Spacing inconsistency",
+      "Microcopy refinement",
+      "Minor alignment issue",
+      "Non-blocking visual polish"
+    ]
+  },
+  "forbidden_patterns": [
+    "Untested responsive layouts",
+    "Broken mobile interactions",
+    "Unreadable technical diagrams",
+    "Missing accessibility labels",
+    "Inconsistent CTA styling",
+    "Heavy unoptimized images",
+    "No analytics validation",
+    "Broken RTL layouts",
+    "Unverified technical claims",
+    "Roof-only representation where envelope positioning is required"
+  ],
+  "approved_characteristics": [
+    "Consistent",
+    "Responsive",
+    "Accessible",
+    "Optimized",
+    "Readable",
+    "Engineering-focused",
+    "Production-ready",
+    "Consultant-grade",
+    "Envelope-aware"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "QA philosophy",
+      "Visual QA checklist",
+      "Responsive QA checklist",
+      "Technical and diagram QA",
+      "Accessibility and performance QA",
+      "Analytics and frontend QA",
+      "Pre-launch approval workflow",
+      "Severity classification"
+    ],
+    "visual_direction": [
+      "QA workflow diagram",
+      "Severity classification cards",
+      "Responsive test matrix",
+      "Checklist tables",
+      "Pre-launch approval flow",
+      "Technical visual QA examples"
+    ]
+  },
+  "implementation_notes": [
+    "Design QA must happen before every production release.",
+    "Design, development, SEO, analytics, engineering, and content teams should participate in QA review.",
+    "Critical issues must block launch until resolved.",
+    "The QA checklist should evolve as SIPANEL expands its digital system.",
+    "QA must protect SIPANEL's industrial envelope positioning, technical credibility, and multilingual production quality."
+  ]
+}

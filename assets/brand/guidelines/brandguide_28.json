@@ -1,0 +1,388 @@
+{
+  "page": {
+    "number": 28,
+    "title": "SEO Content Standards",
+    "section": "Content & Conversion System",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Define how SIPANEL creates SEO content that ranks, supports technical authority, preserves engineering credibility, and converts qualified industrial leads across sandwich panels, aluminum cladding, ZIP roofing, and industrial envelope systems.",
+  "seo_philosophy": {
+    "statement": "SIPANEL SEO content must serve real industrial envelope search intent through engineering clarity, technical proof, and conversion-focused structure.",
+    "core_principles": [
+      "Write for humans first",
+      "Match industrial search intent",
+      "Use one primary keyword per page",
+      "Support claims with technical logic",
+      "Connect SEO content to conversion",
+      "Avoid keyword stuffing",
+      "Represent all core systems: sandwich panels, aluminum cladding, ZIP roofing, and envelope engineering"
+    ]
+  },
+  "global_seo_rules": {
+    "primary_keyword_rules": [
+      "Each page must target one primary keyword.",
+      "Support multiple industrial envelope system categories.",
+      "Include cladding, façade, and standing seam terminology.",
+      "Separate roofing keywords from façade keywords.",
+      "Target both engineering and installation intent.",
+      "Do not make all SEO content sandwich-panel-only.",
+      "Use industrial envelope terminology when the page covers multiple systems."
+    ],
+    "recommended_keyword_types": {
+      "sandwich_panel_keywords": [
+        "sandwich panel installation",
+        "industrial sandwich panel systems",
+        "cold storage sandwich panels",
+        "factory sandwich panel systems",
+        "warehouse sandwich panel systems",
+        "shop drawing sandwich panels",
+        "sandwich panel cost optimization",
+        "PU vs PIR vs Rockwool panels"
+      ],
+      "aluminum_cladding_keywords": [
+        "aluminum cladding systems",
+        "ACP façade systems",
+        "aluminum composite panel installation",
+        "industrial façade cladding",
+        "rainscreen cladding systems",
+        "façade substructure engineering",
+        "industrial aluminum façade systems",
+        "ACP detailing and installation"
+      ],
+      "zip_roofing_keywords": [
+        "ZIP roofing systems",
+        "standing seam roofing systems",
+        "concealed fastener roofing",
+        "industrial metal roofing systems",
+        "standing seam waterproofing",
+        "long-span roofing systems",
+        "ZIP roof installation",
+        "standing seam roof engineering"
+      ],
+      "industrial_envelope_keywords": [
+        "industrial envelope systems",
+        "building envelope engineering",
+        "industrial façade and roofing systems",
+        "roof and façade coordination",
+        "thermal envelope optimization",
+        "industrial cladding and roofing solutions",
+        "engineered building envelope systems"
+      ]
+    },
+    "keyword_required_locations": [
+      "URL",
+      "Title tag",
+      "Meta description",
+      "H1",
+      "First 100 words",
+      "Image alt text"
+    ],
+    "required_elements": [
+      "Clear H1",
+      "Structured H2/H3 hierarchy",
+      "Internal links",
+      "FAQ section",
+      "Relevant CTA",
+      "Related case study or proof",
+      "Optimized images",
+      "System-specific technical proof",
+      "Service category alignment"
+    ]
+  },
+  "content_structure": {
+    "recommended_page_flow": [
+      "Search-intent matched hero",
+      "Problem context",
+      "Engineering cause",
+      "SIPANEL solution logic",
+      "Technical proof",
+      "Application details",
+      "Case study links",
+      "FAQ",
+      "Conversion CTA"
+    ],
+    "rules": [
+      "Explain the problem before presenting the solution.",
+      "Use technical examples where possible.",
+      "Include internal links to services, projects, resources, and articles.",
+      "Place CTA after value and proof.",
+      "Match technical examples to the system category: sandwich panel, aluminum cladding, ZIP roofing, or envelope engineering.",
+      "Avoid forcing waterproofing language onto façade or cladding pages when not relevant."
+    ]
+  },
+  "seo_landing_page_template": {
+    "seo_hero": [
+      "H1 with primary keyword",
+      "Short intro",
+      "Primary CTA",
+      "Trust microcopy",
+      "Relevant system category: sandwich panel, aluminum cladding, ZIP roofing, or envelope engineering"
+    ],
+    "problem_context": [
+      "3-5 problem cards",
+      "Connection to cost, leakage, delay, waste, thermal movement, façade alignment, wind-load coordination, or execution risk"
+    ],
+    "technical_proof": [
+      "Diagram, shop drawing, façade section, standing seam detail, or cladding attachment preview",
+      "Short explanation",
+      "Risk reduction point",
+      "System-specific engineering logic"
+    ],
+    "faq_section": {
+      "minimum_questions": 3,
+      "maximum_questions": 6,
+      "schema": "FAQPage"
+    },
+    "conversion_cta": {
+      "primary": "Get Free Engineering Review",
+      "secondary": "Request Project Cost Check",
+      "system_specific_examples": [
+        "Request Cladding Consultation",
+        "Review ZIP Roofing System",
+        "Request Envelope Engineering Review"
+      ]
+    }
+  },
+  "approved_content_topics": {
+    "sandwich_panel_topics": [
+      "Sandwich panel installation",
+      "Industrial roof waterproofing",
+      "Shop drawing for sandwich panels",
+      "Panel layout optimization",
+      "Cold storage sandwich panels",
+      "Factory panel systems",
+      "Warehouse panel systems",
+      "PU vs PIR vs Rockwool panels",
+      "Material takeoff and BOM/MTO",
+      "Drainage design for industrial roofs"
+    ],
+    "aluminum_cladding_topics": [
+      "Aluminum cladding systems",
+      "ACP façade installation",
+      "Rainscreen cladding systems",
+      "Façade substructure coordination",
+      "Aluminum façade detailing",
+      "Thermal bridge reduction in cladding",
+      "Façade alignment and tolerance control",
+      "Industrial façade engineering"
+    ],
+    "zip_roofing_topics": [
+      "ZIP roofing systems",
+      "Standing seam roofing",
+      "Concealed fastener roof systems",
+      "Standing seam thermal movement",
+      "Long-span metal roofing",
+      "Industrial roof seam detailing",
+      "ZIP roof waterproofing logic",
+      "Standing seam installation process"
+    ],
+    "industrial_envelope_topics": [
+      "Industrial building envelope systems",
+      "Roof and façade transition detailing",
+      "Envelope continuity",
+      "Thermal envelope optimization",
+      "Mixed-system envelope coordination",
+      "Industrial cladding and roofing integration",
+      "Building envelope engineering review"
+    ]
+  },
+  "metadata_rules": {
+    "title_tag": {
+      "recommended_length": "50-60 characters",
+      "rules": [
+        "Include primary keyword.",
+        "Include SIPANEL where appropriate.",
+        "Avoid keyword stuffing.",
+        "Use system-specific wording for cladding, ZIP roofing, sandwich panel, or envelope pages."
+      ]
+    },
+    "meta_description": {
+      "recommended_length": "140-160 characters",
+      "rules": [
+        "Explain engineering value.",
+        "Include primary keyword naturally.",
+        "End with a useful action or benefit.",
+        "Mention the relevant system category clearly."
+      ]
+    },
+    "url": {
+      "rules": [
+        "Keep URLs short and readable.",
+        "Use lowercase words.",
+        "Use hyphens between words.",
+        "Avoid unnecessary parameters.",
+        "Use clear system-specific slugs such as /aluminum-cladding-systems, /zip-roofing-systems, or /industrial-envelope-engineering."
+      ]
+    }
+  },
+  "internal_linking_rules": {
+    "minimum_internal_links_per_page": 4,
+    "required_link_types": [
+      "Related service page",
+      "Related case study",
+      "Related resource",
+      "Contact or RFQ page"
+    ],
+    "system_linking_rules": [
+      "Sandwich panel pages should link to shop drawing, installation, waterproofing, and relevant case studies.",
+      "Aluminum cladding pages should link to façade detailing, cladding case studies, and envelope coordination pages.",
+      "ZIP roofing pages should link to standing seam details, waterproofing logic, and roofing case studies.",
+      "Envelope engineering pages should link to sandwich panel, cladding, ZIP roofing, and RFQ pages."
+    ],
+    "rules": [
+      "Use contextual anchor text.",
+      "Avoid generic 'click here' links.",
+      "Link blog articles to relevant service pages.",
+      "Link service pages to case studies and resources.",
+      "Avoid linking every page only to sandwich panel content."
+    ]
+  },
+  "image_seo_rules": {
+    "rules": [
+      "Use real project and engineering visuals.",
+      "Compress images for performance.",
+      "Use descriptive filenames.",
+      "Add meaningful alt text.",
+      "Avoid keyword stuffing in alt text.",
+      "Use system-specific filenames and alt text for cladding, ZIP roofing, sandwich panel, and envelope visuals."
+    ],
+    "example_filenames": [
+      "industrial-roof-sandwich-panel-installation.webp",
+      "aluminum-cladding-facade-system.webp",
+      "zip-standing-seam-roof-detail.webp",
+      "industrial-envelope-transition-detail.webp"
+    ],
+    "example_alt_texts": [
+      "Industrial roof sandwich panel installation with engineered drainage planning",
+      "Aluminum cladding façade system with coordinated substructure",
+      "ZIP standing seam roof detail with concealed fastening system",
+      "Industrial envelope transition detail between roof and façade"
+    ]
+  },
+  "technical_seo_rules": {
+    "requirements": [
+      "Clean URL structure",
+      "XML sitemap",
+      "Robots.txt",
+      "Canonical tags",
+      "Schema markup",
+      "Breadcrumb navigation",
+      "Fast loading speed",
+      "Mobile-friendly layout",
+      "System-specific structured content",
+      "Envelope-system keyword coverage"
+    ],
+    "schema_types": [
+      "Organization",
+      "LocalBusiness",
+      "Service",
+      "FAQPage",
+      "BreadcrumbList",
+      "Article",
+      "Project",
+      "Product",
+      "ImageObject"
+    ]
+  },
+  "multilingual_seo_rules": {
+    "supported_languages": [
+      "English",
+      "Persian",
+      "Arabic",
+      "Russian"
+    ],
+    "requirements": [
+      "Use hreflang tags.",
+      "Use localized URLs.",
+      "Translate title tags and meta descriptions.",
+      "Translate H1 and core content.",
+      "Preserve technical terminology accuracy.",
+      "Use canonical tags per language.",
+      "Validate cladding, façade, ZIP roofing, and envelope terminology in every supported language."
+    ]
+  },
+  "content_quality_rules": {
+    "approved": [
+      "Engineering explanations",
+      "Real project examples",
+      "Technical diagrams",
+      "Risk-reduction logic",
+      "Clear FAQs",
+      "Proof-backed claims",
+      "System-specific technical proof",
+      "Consultant-level envelope explanations"
+    ],
+    "forbidden": [
+      "Keyword stuffing",
+      "Thin generic content",
+      "Fake metrics",
+      "Unsupported claims",
+      "Copied manufacturer descriptions",
+      "Overly promotional writing",
+      "Roof-only SEO structure for all services",
+      "Sandwich-panel-only positioning",
+      "Missing façade or cladding terminology on relevant pages"
+    ]
+  },
+  "conversion_alignment": {
+    "rules": [
+      "Every SEO page must include a relevant CTA.",
+      "CTA must match user intent.",
+      "Place trust and proof before high-commitment actions.",
+      "Use engineering-first CTA language.",
+      "Use system-specific CTAs when the page targets cladding, ZIP roofing, sandwich panel, or envelope engineering intent."
+    ],
+    "approved_ctas": [
+      "Get Free Engineering Review",
+      "Request Project Cost Check",
+      "Request Technical Consultation",
+      "Download Engineering Resource",
+      "Request Cladding Consultation",
+      "Review ZIP Roofing System",
+      "Request Envelope Engineering Review",
+      "Discuss Your Industrial Envelope Project"
+    ]
+  },
+  "seo_qa_checklist": [
+    "Primary keyword appears in H1, title, URL, meta description, and first 100 words.",
+    "Page has one clear search intent.",
+    "Content includes technical proof or real project reference.",
+    "Internal links are included.",
+    "FAQ section exists.",
+    "Images are optimized with alt text.",
+    "CTA is present and relevant.",
+    "No fake or unsupported claims are used.",
+    "Page is mobile-friendly and fast.",
+    "System category is clearly identified.",
+    "Cladding, ZIP roofing, sandwich panel, or envelope terminology is used correctly.",
+    "The page does not incorrectly position SIPANEL as sandwich-panel-only."
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "SEO philosophy",
+      "Global SEO rules",
+      "Landing page content structure",
+      "Metadata examples",
+      "Internal linking map",
+      "Multilingual SEO standards",
+      "SEO QA checklist"
+    ],
+    "visual_direction": [
+      "SEO page wireframe",
+      "Keyword placement diagram",
+      "Internal linking flow",
+      "Metadata example cards",
+      "FAQ schema preview",
+      "System-category SEO map",
+      "Envelope keyword cluster diagram"
+    ]
+  },
+  "implementation_notes": [
+    "SEO content must support both organic visibility and qualified lead generation.",
+    "Technical accuracy is more important than keyword density.",
+    "Every SEO page should reinforce SIPANEL as an engineering-first industrial envelope partner.",
+    "SEO standards must be applied consistently across all supported languages.",
+    "SEO architecture must represent sandwich panels, aluminum cladding, ZIP roofing, and industrial envelope engineering equally where relevant."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+    "page": {
+      "number": 12,
+      "title": "Grid & Spacing System",
+      "section": "Visual Design System",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the structural grid, spacing scale, alignment behavior, layout rhythm, and responsive spacing rules for SIPANEL digital and brand applications.",
+    "grid_philosophy": {
+      "statement": "The SIPANEL grid and spacing system must communicate engineering order, structural clarity, and controlled execution.",
+      "core_principles": [
+        "Measured spacing",
+        "Strong alignment",
+        "Consistent rhythm",
+        "Technical structure",
+        "Reduced visual noise",
+        "Responsive discipline"
+      ]
+    },
+    "grid_system": {
+      "desktop": {
+        "type": "12-column grid",
+        "container_max_width": "1200px",
+        "gutter": "24px",
+        "margin": "40px",
+        "usage": [
+          "Homepage",
+          "Landing pages",
+          "Case studies",
+          "Resource pages",
+          "Technical content layouts"
+        ]
+      },
+      "tablet": {
+        "type": "6-column adaptive grid",
+        "gutter": "24px",
+        "margin": "32px"
+      },
+      "mobile": {
+        "type": "single-column grid",
+        "gutter": "20px",
+        "margin": "20px"
+      }
+    },
+    "spacing_scale": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "40px",
+      "xxl": "64px",
+      "section_mobile": "56px",
+      "section_desktop": "96px"
+    },
+    "layout_spacing_rules": {
+      "section_spacing": {
+        "desktop": "80px-120px",
+        "tablet": "64px-88px",
+        "mobile": "48px-64px"
+      },
+      "component_spacing": {
+        "card_padding": "24px",
+        "mobile_card_padding": "20px",
+        "button_gap": "12px",
+        "form_field_gap": "16px",
+        "grid_card_gap": "24px"
+      },
+      "content_spacing": {
+        "headline_to_body": "16px-24px",
+        "body_to_cta": "24px-32px",
+        "section_label_to_headline": "8px-12px"
+      }
+    },
+    "alignment_rules": [
+      "All major elements must align to the grid.",
+      "Avoid random spacing values.",
+      "Use consistent horizontal and vertical rhythm.",
+      "Preserve generous whitespace around technical content.",
+      "Do not overcrowd engineering visuals."
+    ],
+    "responsive_behavior": {
+      "desktop": [
+        "Use 12-column layouts.",
+        "Allow split hero and multi-column content.",
+        "Maintain maximum container width."
+      ],
+      "tablet": [
+        "Use 2-column adaptive layouts when content allows.",
+        "Avoid dense 3-column grids.",
+        "Increase spacing between technical blocks."
+      ],
+      "mobile": [
+        "Use single-column layouts.",
+        "Avoid side-by-side content below 768px.",
+        "Keep CTA and key proof visible without excessive scrolling.",
+        "Reduce simultaneous technical density."
+      ]
+    },
+    "technical_layout_rules": {
+      "diagrams": [
+        "Use generous margins around diagrams.",
+        "Keep annotations aligned to technical grid.",
+        "Avoid overlapping callouts.",
+        "Preserve zoom readability on mobile."
+      ],
+      "tables": [
+        "Use consistent cell padding.",
+        "Preserve readable row height.",
+        "Allow horizontal scroll on mobile only when necessary."
+      ],
+      "case_studies": [
+        "Use structured image-content rhythm.",
+        "Keep project metrics aligned.",
+        "Separate challenge, solution, and result clearly."
+      ]
+    },
+    "spacing_dos": [
+      "Use spacing tokens consistently.",
+      "Create clear hierarchy through whitespace.",
+      "Group related content visually.",
+      "Give CTAs enough breathing room.",
+      "Use large section spacing for premium industrial feel."
+    ],
+    "spacing_donts": [
+      "Do not use random pixel values.",
+      "Do not compress technical content.",
+      "Do not place CTAs too close to unrelated content.",
+      "Do not use dense multi-column layouts on mobile.",
+      "Do not allow inconsistent card heights without reason."
+    ],
+    "token_mapping": {
+      "container_max": "1200px",
+      "mobile_padding": "20px",
+      "tablet_padding": "32px",
+      "desktop_padding": "40px",
+      "gutter_default": "24px",
+      "section_spacing_desktop": "96px",
+      "section_spacing_mobile": "56px"
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Grid philosophy",
+        "Desktop / tablet / mobile grid examples",
+        "Spacing scale",
+        "Component spacing examples",
+        "Technical layout examples",
+        "Correct vs incorrect spacing"
+      ],
+      "visual_direction": [
+        "Grid overlay diagrams",
+        "Spacing token samples",
+        "Responsive layout examples",
+        "Annotated section spacing"
+      ]
+    },
+    "implementation_notes": [
+      "Grid and spacing values must map directly to design tokens.",
+      "Spacing consistency is critical to SIPANEL's engineering-first visual identity.",
+      "Mobile layouts must prioritize clarity, scanability, and touch-friendly interaction.",
+      "Whitespace should communicate control, not emptiness."
+    ]
+  }

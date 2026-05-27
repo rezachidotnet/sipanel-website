@@ -1,0 +1,133 @@
+{
+    "component": "sipanel_homepage_header_hero",
+    "version": "1.0",
+    "style": "premium_industrial_engineering",
+    "layout": {
+      "top_bar": {
+        "enabled": true,
+        "background": "#0F1113",
+        "height": "54px",
+        "left": ["language_selector"],
+        "right": ["phone", "email"]
+      },
+      "main_header": {
+        "background": "#FFFFFF",
+        "height": "132px",
+        "position": "sticky",
+        "layout": "logo_left_nav_center_cta_right"
+      },
+      "hero": {
+        "layout": "split_diagonal",
+        "left_panel": "dark_content_block",
+        "right_panel": "industrial_building_image",
+        "height_desktop": "680px"
+      }
+    },
+    "brand": {
+      "logo": {
+        "position": "left",
+        "min_width": "220px",
+        "use_original_only": true
+      },
+      "colors": {
+        "orange": "#FF6A00",
+        "black": "#0F1113",
+        "deep_black": "#050607",
+        "white": "#FFFFFF",
+        "gray": "#68686B",
+        "light_gray": "#F5F6F7"
+      },
+      "typography": {
+        "headline_font": "Sora",
+        "body_font": "Inter",
+        "button_font": "Inter"
+      }
+    },
+    "navigation": {
+      "items": [
+        "Home",
+        "Systems",
+        "Projects",
+        "Process",
+        "About",
+        "Resources",
+        "Contact"
+      ],
+      "active_item": "Home",
+      "active_style": {
+        "color": "#FF6A00",
+        "underline": true
+      },
+      "cta": {
+        "label": "Get Free Engineering Review",
+        "type": "primary",
+        "background": "#FF6A00",
+        "text_color": "#FFFFFF"
+      }
+    },
+    "hero_content": {
+      "eyebrow": "Engineering Power. Controlled Execution.",
+      "headline": "Reduce Project Risk Before Construction Begins.",
+      "subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
+      "primary_cta": "Get Free Engineering Review",
+      "secondary_cta": "Request Project Cost Check",
+      "metrics": [
+        {
+          "value": "30+",
+          "label": "Years of Experience"
+        },
+        {
+          "value": "400+",
+          "label": "Industrial Projects"
+        },
+        {
+          "value": "10M+ m²",
+          "label": "Executed Panel Area"
+        },
+        {
+          "value": "Engineering",
+          "label": "Driven Quality Control"
+        }
+      ]
+    },
+    "hero_visual": {
+      "type": "industrial_architecture",
+      "description": "large modern industrial warehouse with dark panels and orange structural accents",
+      "treatment": {
+        "contrast": "controlled",
+        "color_grade": "neutral_industrial",
+        "overlay": "subtle_dark"
+      }
+    },
+    "trust_strip": {
+      "enabled": true,
+      "position": "below_hero",
+      "headline": "Trusted by Industry Leaders",
+      "logo_style": "grayscale",
+      "max_logos": 6
+    },
+    "responsive": {
+      "desktop": {
+        "header_layout": "logo_left_nav_center_cta_right",
+        "hero_layout": "split_55_45"
+      },
+      "tablet": {
+        "header_layout": "logo_left_compact_nav_cta_right",
+        "hero_layout": "stacked_or_split"
+      },
+      "mobile": {
+        "header_layout": "logo_left_menu_icon_right",
+        "hero_layout": "stacked_text_first",
+        "cta_behavior": "sticky_bottom_cta",
+        "metrics_layout": "horizontal_scroll"
+      }
+    },
+    "rules": [
+      "Use orange only for CTA, active states, and technical emphasis.",
+      "Avoid gradients, glow effects, and decorative animation.",
+      "Use real industrial photography when replacing AI placeholder image.",
+      "Keep primary CTA visible above the fold.",
+      "Maintain WCAG AA contrast.",
+      "Support RTL layout for Persian and Arabic."
+    ]
+  }

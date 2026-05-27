@@ -1,0 +1,267 @@
+{
+    "page": {
+      "number": 6,
+      "title": "Risk Communication Principles",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define how SIPANEL communicates project risks, technical challenges, engineering decisions, and preventive solutions with clarity, professionalism, and measurable credibility.",
+    "core_principle": {
+      "statement": "SIPANEL communicates risk as an engineering responsibility, not as fear-based marketing.",
+      "communication_goal": "Help project stakeholders understand technical risks clearly while demonstrating how engineering coordination reduces execution uncertainty."
+    },
+    "risk_communication_philosophy": {
+      "principles": [
+        {
+          "title": "Explain Before Selling",
+          "description": "Clarify the engineering cause of a problem before presenting SIPANEL's solution."
+        },
+        {
+          "title": "Use Technical Logic",
+          "description": "Support every risk statement with engineering reasoning or execution logic."
+        },
+        {
+          "title": "Avoid Fear Marketing",
+          "description": "Communicate risk professionally without exaggeration or manipulation."
+        },
+        {
+          "title": "Focus on Prevention",
+          "description": "Position SIPANEL as a system that prevents execution problems before they happen."
+        },
+        {
+          "title": "Connect Risk to Measurable Impact",
+          "description": "Explain how technical mistakes affect leakage, waste, delays, rework, or hidden costs."
+        }
+      ]
+    },
+    "primary_risk_categories": [
+      {
+        "category": "Waterproofing Failure",
+        "description": "Leakage caused by incorrect slope design, flashing details, overlap execution, or drainage coordination.",
+        "engineering_focus": [
+          "Drainage logic",
+          "Slope calculation",
+          "Flashing details",
+          "Sealant continuity",
+          "Water flow control"
+        ],
+        "preferred_message": "Waterproofing performance depends on coordinated drainage, overlap detailing, and installation sequencing before execution begins."
+      },
+      {
+        "category": "Material Waste",
+        "description": "Excess panel usage caused by inaccurate layout planning or procurement mistakes.",
+        "engineering_focus": [
+          "Shop drawing optimization",
+          "Panel layout coordination",
+          "Material takeoff control",
+          "Cutting optimization"
+        ],
+        "preferred_message": "Accurate shop drawings and coordinated panel layouts help reduce unnecessary material waste and procurement errors."
+      },
+      {
+        "category": "Execution Delays",
+        "description": "Site conflicts and installation interruptions caused by poor coordination.",
+        "engineering_focus": [
+          "Installation sequencing",
+          "Drawing coordination",
+          "Site preparation",
+          "Technical planning"
+        ],
+        "preferred_message": "Pre-coordinated engineering documentation reduces installation interruptions and execution uncertainty."
+      },
+      {
+        "category": "Rework & Installation Errors",
+        "description": "Incorrect alignment, fastening, or detailing that requires correction after installation.",
+        "engineering_focus": [
+          "Installation control",
+          "Quality checkpoints",
+          "Technical supervision",
+          "Panel alignment"
+        ],
+        "preferred_message": "Controlled installation workflows reduce rework and improve execution accuracy."
+      },
+      {
+        "category": "Hidden Project Costs",
+        "description": "Unexpected costs caused by technical mistakes discovered late in execution.",
+        "engineering_focus": [
+          "Engineering review",
+          "Early coordination",
+          "Material validation",
+          "Execution planning"
+        ],
+        "preferred_message": "Engineering review before procurement helps identify hidden technical risks before they become expensive site problems."
+      }
+    ],
+    "communication_framework": {
+      "recommended_structure": [
+        "Identify the technical problem",
+        "Explain the engineering cause",
+        "Show the execution impact",
+        "Present SIPANEL's preventive approach",
+        "Support with proof or visual explanation"
+      ],
+      "example": {
+        "problem": "Industrial roof leakage after heavy rain.",
+        "engineering_cause": "Incorrect gutter slope and insufficient overlap detailing.",
+        "impact": "Water infiltration, insulation damage, and maintenance cost.",
+        "sipanel_solution": "Drainage logic and waterproofing details coordinated before installation.",
+        "proof": "Shop drawing annotation and completed project reference."
+      }
+    },
+    "approved_risk_language": {
+      "preferred_phrases": [
+        "Risk reduction through engineering coordination",
+        "Prevent leakage before installation begins",
+        "Controlled execution workflow",
+        "Technical validation before procurement",
+        "Waterproofing logic integrated into design",
+        "Reduce rework through planning accuracy",
+        "Execution risk minimized through coordination",
+        "Inspection-based quality control"
+      ],
+      "tone_characteristics": [
+        "Professional",
+        "Measured",
+        "Technical",
+        "Educational",
+        "Solution-oriented"
+      ]
+    },
+    "forbidden_risk_language": {
+      "forbidden_phrases": [
+        "Disaster-proof solution",
+        "Zero risk guaranteed",
+        "Perfect forever",
+        "Your project will fail without us",
+        "Guaranteed no leakage ever",
+        "The only correct solution"
+      ],
+      "avoid_styles": [
+        "Fear-based marketing",
+        "Emotional manipulation",
+        "Aggressive urgency",
+        "Unverified technical claims",
+        "Competitor attacks without proof"
+      ]
+    },
+    "visual_risk_communication_rules": {
+      "preferred_visuals": [
+        "Technical diagrams",
+        "Drainage flow annotations",
+        "Shop drawing previews",
+        "Execution sequence visuals",
+        "Before-and-after engineering comparisons",
+        "Real project photography"
+      ],
+      "annotation_rules": [
+        "Use short technical labels",
+        "Highlight engineering logic clearly",
+        "Use orange only for emphasis",
+        "Avoid cluttered CAD screenshots",
+        "Focus on clarity and readability"
+      ],
+      "forbidden_visuals": [
+        "Fake damage renders",
+        "Exaggerated failure imagery",
+        "Fear-based visuals",
+        "Overly dramatic graphics"
+      ]
+    },
+    "proof_alignment_rules": [
+      "Every risk claim should connect to technical reasoning.",
+      "Use measurable examples when possible.",
+      "Support major claims with case studies or diagrams.",
+      "Do not publish unverified performance numbers.",
+      "Risk communication must increase trust, not anxiety."
+    ],
+    "risk_to_solution_mapping": [
+      {
+        "risk": "Roof leakage",
+        "solution": "Drainage slope planning and waterproofing detail coordination"
+      },
+      {
+        "risk": "Panel waste",
+        "solution": "Optimized shop drawing and BOM / MTO control"
+      },
+      {
+        "risk": "Project delay",
+        "solution": "Execution sequencing and technical coordination"
+      },
+      {
+        "risk": "Incorrect installation",
+        "solution": "Inspection checkpoints and installation control"
+      },
+      {
+        "risk": "Hidden costs",
+        "solution": "Engineering review before procurement"
+      }
+    ],
+    "audience_communication_guidelines": {
+      "project_owners": {
+        "focus": [
+          "Reliability",
+          "Cost control",
+          "Long-term performance"
+        ]
+      },
+      "contractors": {
+        "focus": [
+          "Execution speed",
+          "Coordination clarity",
+          "Reduced rework"
+        ]
+      },
+      "consultants": {
+        "focus": [
+          "Technical validation",
+          "Engineering logic",
+          "Drawing accuracy"
+        ]
+      },
+      "procurement_teams": {
+        "focus": [
+          "Material accuracy",
+          "Supplier coordination",
+          "Waste reduction"
+        ]
+      }
+    },
+    "multilingual_risk_rules": {
+      "supported_languages": [
+        "English",
+        "Persian",
+        "Arabic",
+        "Russian"
+      ],
+      "requirements": [
+        "Maintain technical accuracy in all translations.",
+        "Avoid exaggerated wording in any language.",
+        "Preserve engineering terminology consistency.",
+        "Support RTL layouts for Persian and Arabic."
+      ]
+    },
+    "page_layout_recommendation": {
+      "structure": [
+        "Risk communication philosophy",
+        "Primary risk categories",
+        "Risk-to-solution framework",
+        "Approved vs forbidden language",
+        "Technical diagram examples",
+        "Audience-specific communication guidance"
+      ],
+      "visual_direction": [
+        "Engineering callout diagrams",
+        "Risk-to-solution flowcharts",
+        "Structured comparison blocks",
+        "Industrial technical imagery",
+        "Measured orange accents"
+      ]
+    },
+    "implementation_notes": [
+      "Risk communication should position SIPANEL as a technically responsible engineering partner.",
+      "Avoid using fear to drive conversion.",
+      "Technical clarity and preventive logic must always be more important than emotional persuasion.",
+      "All risk communication should reinforce trust, engineering discipline, and execution control."
+    ]
+  }

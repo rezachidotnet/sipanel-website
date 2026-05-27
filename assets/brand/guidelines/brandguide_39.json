@@ -1,0 +1,443 @@
+{
+  "page": {
+    "number": 39,
+    "title": "Resource Center Showcase",
+    "section": "Experience Showcases",
+    "version": "1.1",
+    "brand": "SIPANEL"
+  },
+  "page_objective": "Show how the SIPANEL Resource Center organizes technical guides, façade references, engineering diagrams, specification resources, checklists, technical articles, and downloadable industrial envelope resources to build authority and generate qualified engineering leads.",
+  "resource_center_philosophy": {
+    "statement": "The Resource Center should position SIPANEL as an industrial envelope engineering knowledge platform, not a generic blog or simple download library.",
+    "core_principles": [
+      "Engineering usefulness",
+      "Technical authority",
+      "Fast resource discovery",
+      "Mobile-first readability",
+      "Lead generation through value",
+      "Proof-based education",
+      "Consultant-grade organization",
+      "Envelope-system clarity",
+      "Specification-oriented structure",
+      "Practical technical guidance"
+    ]
+  },
+  "primary_goals": [
+    {
+      "goal": "Build Engineering Authority",
+      "description": "Provide practical engineering resources that help users understand façade systems, waterproofing, drainage, installation logic, thermal movement, and envelope coordination."
+    },
+    {
+      "goal": "Generate Qualified Leads",
+      "description": "Use high-value technical downloads and engineering consultation prompts to capture serious industrial project interest."
+    },
+    {
+      "goal": "Support SEO Growth",
+      "description": "Create structured educational content around industrial envelope systems, façade engineering, standing seam roofing, and technical project risks."
+    },
+    {
+      "goal": "Support Consultant & Architect Workflows",
+      "description": "Provide specification-ready references, technical details, and engineering resources suitable for consultants, architects, and procurement teams."
+    }
+  ],
+  "resource_categories": {
+    "technical_guides": {
+      "examples": [
+        "Industrial Roof Waterproofing Guide",
+        "Sandwich Panel Installation Guide",
+        "Shop Drawing Review Guide",
+        "Panel Cost Optimization Guide",
+        "ACP Façade Engineering Guide",
+        "Standing Seam Roofing Guide",
+        "Envelope Transition Detailing Guide",
+        "Thermal Movement Coordination Guide"
+      ],
+      "purpose": "Educate users and support engineering decision-making."
+    },
+    "checklists": {
+      "examples": [
+        "Waterproofing Inspection Checklist",
+        "Installation Quality Checklist",
+        "RFQ Preparation Checklist",
+        "Site Readiness Checklist",
+        "Façade QA Checklist",
+        "Standing Seam Inspection Checklist",
+        "Envelope Coordination Checklist"
+      ],
+      "purpose": "Provide practical field and technical review tools."
+    },
+    "diagram_sets": {
+      "examples": [
+        "Drainage Detail Examples",
+        "Flashing Detail Samples",
+        "Panel Overlap Diagrams",
+        "BOM / MTO Sample Sheets",
+        "ACP Attachment Details",
+        "Standing Seam Roof Sections",
+        "Envelope Transition Details",
+        "Thermal Bridge Diagrams"
+      ],
+      "purpose": "Show engineering proof and technical clarity."
+    },
+    "specification_resources": {
+      "examples": [
+        "Façade Specification Templates",
+        "Envelope Material Specifications",
+        "Standing Seam System References",
+        "ACP Performance Criteria",
+        "Thermal Performance References"
+      ],
+      "purpose": "Support consultant and procurement workflows."
+    },
+    "case_study_resources": {
+      "examples": [
+        "Project Proof Sheets",
+        "Execution Summary PDFs",
+        "Technical Challenge Breakdowns",
+        "Envelope Coordination Summaries",
+        "Façade Engineering Case Studies"
+      ],
+      "purpose": "Convert project history into structured engineering proof."
+    },
+    "seo_articles": {
+      "examples": [
+        "How to Prevent Leakage in Sandwich Panel Roofs",
+        "Why Shop Drawings Reduce Project Cost",
+        "PU vs PIR vs Rockwool Sandwich Panels",
+        "ACP Cladding vs Traditional Façade Systems",
+        "Standing Seam vs Exposed Fastener Roofing",
+        "How Thermal Bridges Affect Industrial Buildings"
+      ],
+      "purpose": "Capture organic search demand and educate industrial users."
+    }
+  },
+  "resource_center_structure": {
+    "section_1": {
+      "name": "Resource Hero",
+      "required_elements": [
+        "Technical headline",
+        "Short explanation",
+        "Primary CTA",
+        "Search input",
+        "Category filter",
+        "System-category selector"
+      ],
+      "recommended_headline": "Industrial Envelope Engineering Resources"
+    },
+    "section_2": {
+      "name": "Featured Resources",
+      "required_elements": [
+        "High-value download cards",
+        "Preview visuals",
+        "Short engineering benefit explanation",
+        "Download CTA",
+        "System-category tags"
+      ]
+    },
+    "section_3": {
+      "name": "Resource Categories",
+      "required_elements": [
+        "Technical guides",
+        "Checklists",
+        "Diagrams",
+        "Specifications",
+        "Case studies",
+        "Articles"
+      ]
+    },
+    "section_4": {
+      "name": "Technical Preview Area",
+      "required_elements": [
+        "Diagram snippets",
+        "Checklist preview",
+        "Sample page preview",
+        "Value explanation",
+        "Façade detail preview",
+        "Standing seam detail preview"
+      ]
+    },
+    "section_5": {
+      "name": "Engineering Search & Filter",
+      "required_elements": [
+        "Technical keyword search",
+        "System-category filters",
+        "Resource-type filters",
+        "Download type filters"
+      ]
+    },
+    "section_6": {
+      "name": "Lead Capture Flow",
+      "required_elements": [
+        "Short download form",
+        "Engineering support microcopy",
+        "Optional consultation CTA",
+        "Envelope consultation CTA"
+      ]
+    }
+  },
+  "resource_card_rules": {
+    "required_elements": [
+      "Resource type label",
+      "Title",
+      "Short description",
+      "Preview visual",
+      "Download or view CTA",
+      "System-category tag",
+      "File type indicator"
+    ],
+    "rules": [
+      "Keep descriptions short.",
+      "Show practical value immediately.",
+      "Use technical visuals instead of decorative graphics.",
+      "Connect every resource to a real industrial problem.",
+      "Support consultant-grade scanning.",
+      "Use engineering terminology carefully."
+    ]
+  },
+  "technical_search_and_filtering": {
+    "supported_filters": [
+      "Sandwich panels",
+      "ACP cladding",
+      "Standing seam roofing",
+      "ZIP roofing",
+      "Envelope engineering",
+      "Waterproofing",
+      "Thermal movement",
+      "Façade coordination",
+      "Technical drawings",
+      "Specifications",
+      "Checklists"
+    ],
+    "rules": [
+      "Keep filtering fast and intuitive.",
+      "Support consultant workflows.",
+      "Allow combined category filtering.",
+      "Use searchable engineering terminology.",
+      "Preserve mobile usability."
+    ]
+  },
+  "download_flow_rules": {
+    "rules": [
+      "Keep download forms short.",
+      "Ask only for essential contact information.",
+      "Allow WhatsApp or phone follow-up where appropriate.",
+      "Do not block all content before showing value.",
+      "Use trust-supporting microcopy.",
+      "Support low-friction engineering engagement."
+    ],
+    "recommended_fields": [
+      "Name",
+      "Phone",
+      "Email",
+      "Project type",
+      "System interest"
+    ],
+    "supporting_microcopy": "Free technical resource provided for engineering communication and project support."
+  },
+  "mobile_behavior": {
+    "rules": [
+      "Use expandable resource cards.",
+      "Keep filter controls simple.",
+      "Show one resource focus per viewport.",
+      "Use large download buttons.",
+      "Avoid dense article grids.",
+      "Allow quick access to technical categories.",
+      "Prioritize technical readability.",
+      "Support field-based technical browsing."
+    ],
+    "recommended_patterns": [
+      "Category chips",
+      "Search input",
+      "Expandable cards",
+      "Swipeable featured resources",
+      "Sticky download CTA when relevant",
+      "System-category selector"
+    ]
+  },
+  "desktop_behavior": {
+    "rules": [
+      "Use grid-based resource layout.",
+      "Support filtering and category navigation.",
+      "Show larger technical previews.",
+      "Allow side-by-side resource explanations.",
+      "Preserve clean scanning hierarchy.",
+      "Support consultant-grade resource inspection.",
+      "Allow technical comparison viewing."
+    ]
+  },
+  "seo_integration_rules": {
+    "requirements": [
+      "Every article targets one primary keyword.",
+      "Each resource page includes internal links.",
+      "Use FAQ sections where relevant.",
+      "Connect resources to service pages and case studies.",
+      "Optimize images and PDF previews.",
+      "Support envelope-engineering keyword coverage."
+    ],
+    "recommended_keywords": [
+      "sandwich panel installation guide",
+      "industrial roof waterproofing checklist",
+      "shop drawing sandwich panels",
+      "sandwich panel cost optimization",
+      "roof drainage design guide",
+      "ACP façade engineering guide",
+      "standing seam roofing detail",
+      "industrial envelope engineering",
+      "thermal bridge industrial buildings",
+      "façade waterproofing systems"
+    ]
+  },
+  "technical_visual_rules": {
+    "approved_visuals": [
+      "Checklist previews",
+      "Shop drawing snippets",
+      "Drainage diagrams",
+      "Waterproofing details",
+      "BOM/MTO samples",
+      "Installation sequences",
+      "ACP façade details",
+      "Standing seam roof sections",
+      "Envelope transition diagrams",
+      "Thermal bridge visuals",
+      "Rainscreen airflow diagrams"
+    ],
+    "rules": [
+      "Use real or realistic engineering visuals.",
+      "Avoid generic document icons only.",
+      "Support diagram zoom where needed.",
+      "Keep previews readable on mobile.",
+      "Use consultant-grade technical presentation.",
+      "Avoid decorative engineering visuals."
+    ]
+  },
+  "resource_storytelling_rules": {
+    "recommended_structure": [
+      "Engineering problem",
+      "Technical explanation",
+      "System solution",
+      "Execution logic",
+      "Downloadable guidance",
+      "Consultation opportunity"
+    ],
+    "rules": [
+      "Use practical engineering context.",
+      "Avoid generic educational content.",
+      "Connect technical resources to real project scenarios.",
+      "Support envelope-system understanding."
+    ]
+  },
+  "conversion_integration": {
+    "primary_ctas": [
+      "Download Engineering Resource",
+      "Request Technical Consultation",
+      "Get Free Engineering Review",
+      "Discuss Envelope System",
+      "Review Technical Detail"
+    ],
+    "rules": [
+      "Place CTA after resource value is clear.",
+      "Use consultation CTA for high-intent technical users.",
+      "Connect downloads to lead tracking.",
+      "Avoid aggressive sales language.",
+      "Support consultant-style engagement."
+    ]
+  },
+  "accessibility_rules": {
+    "requirements": [
+      "Resource cards must be keyboard accessible.",
+      "Download buttons must have clear labels.",
+      "PDF previews require accessible descriptions.",
+      "Filter controls must be screen-reader friendly.",
+      "Maintain WCAG AA contrast.",
+      "Support readable technical terminology."
+    ]
+  },
+  "rtl_and_multilingual_rules": {
+    "rtl_supported": true,
+    "rules": [
+      "Translate resource titles and descriptions.",
+      "Mirror category navigation in RTL.",
+      "Preserve technical abbreviations where appropriate.",
+      "Use localized SEO metadata.",
+      "Ensure downloadable resources match selected language when available.",
+      "Maintain engineering terminology consistency."
+    ]
+  },
+  "analytics_tracking": {
+    "required_events": [
+      "resource_center_view",
+      "resource_filter_use",
+      "resource_card_click",
+      "resource_preview_open",
+      "resource_download_start",
+      "resource_download_complete",
+      "resource_cta_click",
+      "system_category_interaction",
+      "technical_search_use"
+    ],
+    "tracked_parameters": [
+      "resource_type",
+      "resource_title",
+      "category",
+      "device_type",
+      "language",
+      "lead_source",
+      "system_category",
+      "download_type",
+      "resource_format"
+    ]
+  },
+  "forbidden_patterns": [
+    "Generic blog layout without technical structure",
+    "Download cards with no preview value",
+    "Long forms before showing resource value",
+    "Decorative document mockups only",
+    "Uncategorized resource clutter",
+    "Untracked downloads",
+    "Non-localized multilingual resources",
+    "Roof-only resource positioning",
+    "Contractor-style educational content"
+  ],
+  "approved_characteristics": [
+    "Technical",
+    "Useful",
+    "Structured",
+    "SEO-ready",
+    "Lead-generating",
+    "Mobile-friendly",
+    "Engineering-focused",
+    "Consultant-grade",
+    "Envelope-focused",
+    "Architecturally credible"
+  ],
+  "page_layout_recommendation": {
+    "structure": [
+      "Resource center philosophy",
+      "Resource category system",
+      "Featured resource showcase",
+      "Technical search and filtering",
+      "Download flow example",
+      "Mobile resource behavior",
+      "SEO integration map",
+      "Correct vs incorrect resource center examples"
+    ],
+    "visual_direction": [
+      "Resource hub wireframe",
+      "Featured resource cards",
+      "Checklist preview mockup",
+      "Diagram preview examples",
+      "Mobile expandable resource cards",
+      "ACP detail preview cards",
+      "Standing seam resource layouts",
+      "Specification-style resource tables",
+      "Technical search interface"
+    ]
+  },
+  "implementation_notes": [
+    "The Resource Center should function as both an authority-building system and a qualified engineering lead engine.",
+    "Every resource should solve a real technical or industrial decision problem.",
+    "Resource interactions must connect to analytics and lead routing.",
+    "Mobile usability and multilingual consistency are mandatory for all resource experiences.",
+    "Resource architecture must support sandwich panels, ACP cladding, ZIP roofing systems, façade engineering, and industrial envelope coordination equally."
+  ]
+}

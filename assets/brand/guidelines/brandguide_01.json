@@ -1,0 +1,198 @@
+{
+    "page": {
+      "number": 1,
+      "title": "Brand Identity",
+      "section": "Brand Foundation",
+      "version": "1.0",
+      "brand": "SIPANEL"
+    },
+    "page_objective": "Define the strategic identity, positioning, visual philosophy, and engineering mindset behind the SIPANEL brand system.",
+    "brand_core": {
+      "brand_name": "SIPANEL",
+      "tagline": "ENGINEERING POWER. CONTROLLED EXECUTION.",
+      "core_message": "SIPANEL reduces industrial panel project risk through precise design, smart procurement, and engineered installation.",
+      "brand_positioning": "Engineering-first industrial panel systems company focused on risk reduction, waterproofing logic, material optimization, and controlled project execution.",
+      "brand_promise": "Deliver technically coordinated industrial panel systems with measurable execution control and engineering clarity."
+    },
+    "brand_personality": {
+      "primary_traits": [
+        "Technical",
+        "Professional",
+        "Controlled",
+        "Reliable",
+        "Confident",
+        "Industrial",
+        "Precise"
+      ],
+      "secondary_traits": [
+        "Efficient",
+        "Structured",
+        "Analytical",
+        "Modern"
+      ],
+      "avoid_traits": [
+        "Overly corporate",
+        "Aggressive sales-driven",
+        "Decorative",
+        "Trendy",
+        "Playful",
+        "Generic construction branding"
+      ]
+    },
+    "brand_philosophy": {
+      "principles": [
+        {
+          "title": "Engineering Before Marketing",
+          "description": "Every visual, message, and interaction must communicate technical confidence and execution clarity."
+        },
+        {
+          "title": "Proof Over Claims",
+          "description": "Use measurable project evidence instead of exaggerated marketing language."
+        },
+        {
+          "title": "Controlled Execution",
+          "description": "The brand should communicate structure, predictability, and engineering discipline."
+        },
+        {
+          "title": "Industrial Clarity",
+          "description": "Design must remain clean, technical, and highly readable across all devices."
+        },
+        {
+          "title": "Risk Reduction Mindset",
+          "description": "Every communication should connect back to reducing project risk, leakage, waste, delays, or rework."
+        }
+      ]
+    },
+    "visual_identity": {
+      "visual_style": "technical_clean_industrial",
+      "design_language": [
+        "Strong grid structure",
+        "Minimal visual noise",
+        "Measured orange accent usage",
+        "Technical layouts",
+        "Engineering-inspired composition",
+        "Real industrial imagery",
+        "Functional hierarchy"
+      ],
+      "avoid_visual_language": [
+        "Heavy gradients",
+        "Glassmorphism",
+        "Playful illustration systems",
+        "Overdecorated layouts",
+        "Startup-style visuals",
+        "Generic stock people photography"
+      ]
+    },
+    "color_identity": {
+      "primary_orange": "#FF6A00",
+      "black": "#0F1113",
+      "deep_black": "#050607",
+      "gray": "#68686B",
+      "light_background": "#F5F6F7",
+      "white": "#FFFFFF",
+      "orange_usage_rule": "Orange should be reserved for CTAs, engineering highlights, key metrics, and technical emphasis only.",
+      "dark_usage_rule": "Dark sections should be used strategically to create hierarchy and technical authority."
+    },
+    "typography_identity": {
+      "primary_fonts": [
+        "Inter",
+        "Sora",
+        "Montserrat"
+      ],
+      "tone": "Bold, technical, modern, and highly readable.",
+      "headline_characteristics": [
+        "Strong hierarchy",
+        "Tight spacing",
+        "Engineering-focused wording",
+        "Minimal fluff"
+      ]
+    },
+    "messaging_direction": {
+      "communication_style": [
+        "Direct",
+        "Technical",
+        "Confident",
+        "Clear",
+        "Structured"
+      ],
+      "preferred_language": [
+        "Engineering control",
+        "Material optimization",
+        "Waterproofing logic",
+        "Execution accuracy",
+        "Risk reduction",
+        "Project reliability"
+      ],
+      "forbidden_language": [
+        "Best in the world",
+        "Cheapest solution",
+        "Guaranteed perfection",
+        "Marketing hype",
+        "Fake urgency"
+      ]
+    },
+    "experience_principles": {
+      "website_experience_goals": [
+        "Communicate value within 3 seconds",
+        "Show proof early",
+        "Reduce cognitive load",
+        "Support mobile-first industrial usability",
+        "Keep technical information accessible"
+      ],
+      "interaction_principles": [
+        "Clarity over animation",
+        "Function before decoration",
+        "Fast access to conversion points",
+        "Technical proof before long explanations"
+      ]
+    },
+    "brand_keywords": [
+      "Engineering",
+      "Industrial",
+      "Controlled Execution",
+      "Technical Clarity",
+      "Risk Reduction",
+      "Waterproofing",
+      "Precision",
+      "Reliability",
+      "Material Optimization",
+      "Execution Quality"
+    ],
+    "approved_brand_associations": [
+      "Industrial engineering",
+      "Technical precision",
+      "Structured execution",
+      "Engineering documentation",
+      "Large-scale industrial projects",
+      "Measured proof"
+    ],
+    "forbidden_brand_associations": [
+      "Luxury lifestyle branding",
+      "Playful startup aesthetics",
+      "Consumer-tech visual language",
+      "Cheap construction advertising",
+      "Exaggerated marketing visuals"
+    ],
+    "page_layout_recommendation": {
+      "structure": [
+        "Hero brand statement",
+        "Brand philosophy",
+        "Personality matrix",
+        "Visual identity overview",
+        "Messaging principles",
+        "Experience principles"
+      ],
+      "visual_direction": [
+        "Industrial architecture imagery",
+        "Technical diagram overlays",
+        "Structured grids",
+        "Minimal orange accents",
+        "Dark technical sections balanced with light layouts"
+      ]
+    },
+    "implementation_notes": [
+      "All future brand, UI, content, and frontend decisions must align with these identity principles.",
+      "The SIPANEL brand must always communicate engineering confidence before marketing appeal.",
+      "Consistency across multilingual implementations is mandatory."
+    ]
+  }

@@ -1,0 +1,212 @@
+{
+    "animation_behavior_map": {
+      "version": "1.0",
+      "brand": "SIPANEL",
+  
+      "motion_principle": "Motion must support clarity, engineering confidence, and usability. It must never feel decorative, playful, heavy, or distracting.",
+  
+      "global_motion_rules": {
+        "reduced_motion_supported": true,
+        "avoid_heavy_parallax": true,
+        "avoid_infinite_decorative_animation": true,
+        "avoid_scroll_jacking": true,
+        "prefer_transform_and_opacity": true,
+        "pause_hidden_animations": true
+      },
+  
+      "timing_tokens": {
+        "fast": "150ms",
+        "standard": "240ms",
+        "slow": "350ms",
+        "modal": "300ms"
+      },
+  
+      "easing_tokens": {
+        "standard": "ease-out",
+        "entrance": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "exit": "ease-in",
+        "accordion": "ease-out"
+      },
+  
+      "component_animations": {
+        "header": {
+          "sticky_transition": {
+            "type": "subtle_shadow_and_background_change",
+            "duration": "180ms",
+            "allowed_properties": ["opacity", "box-shadow", "background-color"]
+          },
+          "mobile_menu": {
+            "type": "slide_in",
+            "direction": "right",
+            "duration": "240ms",
+            "rules": ["No bounce", "No exaggerated motion", "Close instantly on link click"]
+          }
+        },
+
+        "language_switcher": {
+          "dropdown_open": {
+            "type": "fade_and_slide_down",
+            "duration": "180ms",
+            "rules": [
+              "No bounce animation",
+              "Close instantly after selection",
+              "Respect prefers-reduced-motion"
+            ]
+          },
+          "language_change": {
+            "type": "subtle_fade_transition",
+            "duration": "150ms",
+            "rules": [
+              "Avoid full page flash",
+              "Preserve scroll position",
+              "Do not delay interaction"
+            ]
+          },
+          "hover": {
+            "desktop": "subtle_opacity_change",
+            "mobile": "tap_feedback_only",
+            "duration": "150ms"
+          }
+        },      
+  
+        "hero_section": {
+          "entrance": {
+            "type": "fade_in_subtle_slide",
+            "duration": "300ms",
+            "delay_limit": "100ms",
+            "rules": ["Headline appears first", "CTA appears immediately after", "No cinematic delay"]
+          },
+          "visual": {
+            "type": "static_or_subtle_fade",
+            "rules": ["No autoplay video on mobile", "No heavy parallax"]
+          }
+        },
+  
+        "cta_buttons": {
+          "hover": {
+            "desktop": "subtle_brightness_or_translate_y_minus_1px",
+            "mobile": "tap_feedback_only",
+            "duration": "150ms"
+          },
+          "tap_feedback": {
+            "type": "scale_0_98_or_opacity_feedback",
+            "duration": "100ms"
+          }
+        },
+  
+        "cards": {
+          "hover": {
+            "desktop": "subtle_shadow_increase",
+            "mobile": "none_or_tap_feedback",
+            "duration": "180ms"
+          },
+          "entrance": {
+            "type": "fade_in",
+            "duration": "240ms",
+            "stagger": "60ms_max"
+          }
+        },
+  
+        "accordions": {
+          "expand": {
+            "type": "height_and_opacity",
+            "duration": "240ms",
+            "rules": [
+              "No layout jump",
+              "Keep active header visible",
+              "Allow quick collapse"
+            ]
+          }
+        },
+  
+        "case_study_slider": {
+          "swipe": {
+            "type": "snap_scroll",
+            "duration": "native_or_240ms",
+            "rules": [
+              "No auto-rotation on mobile",
+              "Progress dots update instantly",
+              "Swipe must feel native"
+            ]
+          }
+        },
+  
+        "diagram_fullscreen": {
+          "open": {
+            "type": "fade_overlay_scale_image",
+            "duration": "300ms",
+            "rules": [
+              "Preserve scroll position",
+              "Close button visible immediately",
+              "Do not animate diagram labels aggressively"
+            ]
+          },
+          "zoom_pan": {
+            "type": "native_gesture",
+            "rules": [
+              "Prioritize responsiveness over effects",
+              "Disable background motion",
+              "Avoid lag during pinch zoom"
+            ]
+          },
+          "close": {
+            "type": "fade_out",
+            "duration": "180ms"
+          }
+        },
+  
+        "sticky_mobile_cta": {
+          "appear": {
+            "type": "slide_up_subtle",
+            "duration": "220ms",
+            "trigger": "after_40_percent_scroll"
+          },
+          "hide": {
+            "type": "slide_down_or_fade",
+            "duration": "180ms",
+            "trigger": "near_footer"
+          }
+        },
+  
+        "rfq_form": {
+          "step_transition": {
+            "type": "horizontal_slide_or_fade",
+            "duration": "220ms",
+            "rules": [
+              "Preserve form state",
+              "Avoid disorienting transitions",
+              "Show progress clearly"
+            ]
+          },
+          "success_state": {
+            "type": "fade_in",
+            "duration": "240ms"
+          }
+        }
+      },
+  
+      "performance_rules": {
+        "max_simultaneous_animations_mobile": 2,
+        "disable_heavy_effects_on_low_power_devices": true,
+        "avoid_blur_on_mobile": true,
+        "avoid_large_animated_backgrounds": true,
+        "prefer_css_transitions": true
+      },
+  
+      "accessibility_rules": {
+        "prefers_reduced_motion": {
+          "disable": [
+            "slide_distance",
+            "parallax",
+            "staggered_entrances",
+            "decorative_motion"
+          ],
+          "preserve": [
+            "tap_feedback",
+            "accordion_state_change",
+            "form_success_feedback"
+          ]
+        }
+      }
+    }
+  }
