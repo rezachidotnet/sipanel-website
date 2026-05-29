@@ -18,6 +18,10 @@ export type RfqSubmissionPayload = {
   project_stage?: string;
   main_concern?: string[];
   website?: string;
+  source_page?: string;
+  form_type?: string;
+  language?: string;
+  uploaded_file_url?: string;
 };
 
 export type StoredRfqUpload = {

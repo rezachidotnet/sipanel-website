@@ -2,7 +2,14 @@ import {NextResponse, type NextRequest} from 'next/server';
 import {randomUUID} from 'node:crypto';
 import {z} from 'zod';
 import {createOdooCrmLead} from '@/lib/rfq/odoo';
-import {storeRfqSubmission, type RfqSubmissionPayload} from '@/lib/rfq/server';
+import {
+  getRfqUpload,
+  storeRfqSubmission,
+  storeRfqUpload,
+  sendRfqNotification,
+  type RfqSubmissionPayload
+} from '@/lib/rfq/server';
+import {sanitizeInput} from '@/lib/rfq/sanitize';
 
 export const runtime = 'nodejs';
 
@@ -19,13 +26,20 @@ const leadPayloadSchema = z.object({
   name: z.string().trim().min(2).max(120),
   company: z.string().trim().max(160).optional().default(''),
   phone: z.string().trim().min(5).max(60),
+  whatsapp: z.string().trim().max(60).optional().default(''),
   email: z.string().trim().email().optional().or(z.literal('')).default(''),
-  resource_slug: z.string().trim().min(2).max(160),
-  resource_title: z.string().trim().min(2).max(220),
-  project_type: z.string().trim().max(120).optional().default('Engineering Resource Request'),
+  project_type: z.string().trim().max(120).optional().default(''),
+  project_location: z.string().trim().max(160).optional().default(''),
+  estimated_area: z.string().trim().max(80).optional().default(''),
   project_stage: z.string().trim().max(120).optional().default(''),
-  message: z.string().trim().max(2000).optional().default(''),
-  website: z.string().max(0).optional().default('')
+  main_concern: z.array(z.string().trim().max(120)).max(12).optional().default([]),
+  message: z.string().trim().max(5000).optional().default(''),
+  website: z.string().max(0).optional().default(''),
+  source_page: z.string().trim().max(300).optional().default(''),
+  form_type: z.string().trim().max(120).optional().default(''),
+  language: z.string().trim().max(10).optional().default(''),
+  resource_slug: z.string().trim().max(160).optional().default(''),
+  resource_title: z.string().trim().max(220).optional().default('')
 });
 
 function getClientIp(request: NextRequest) {
@@ -50,20 +64,89 @@ function jsonError(status: number, message: string, errors?: Record<string, stri
   return NextResponse.json({ok: false, message, ...(errors ? {errors} : {})}, {status});
 }
 
+function extractFormDataFields(formData: FormData) {
+  const concerns = formData
+    .getAll('main_concern')
+    .filter((value): value is string => typeof value === 'string' && value.trim().length > 0);
+
+  return {
+    name: String(formData.get('name') ?? ''),
+    company: String(formData.get('company') ?? ''),
+    phone: String(formData.get('phone') ?? ''),
+    whatsapp: String(formData.get('whatsapp') ?? ''),
+    email: String(formData.get('email') ?? ''),
+    project_type: String(formData.get('project_type') ?? ''),
+    project_location: String(formData.get('project_location') ?? ''),
+    estimated_area: String(formData.get('estimated_area') ?? ''),
+    project_stage: String(formData.get('project_stage') ?? ''),
+    main_concern: concerns,
+    message: String(formData.get('message') ?? ''),
+    website: String(formData.get('website') ?? ''),
+    source_page: String(formData.get('source_page') ?? ''),
+    form_type: String(formData.get('form_type') ?? ''),
+    language: String(formData.get('language') ?? ''),
+    resource_slug: String(formData.get('resource_slug') ?? ''),
+    resource_title: String(formData.get('resource_title') ?? '')
+  };
+}
+
+function sanitizePayload(data: z.infer<typeof leadPayloadSchema>): RfqSubmissionPayload {
+  return {
+    name: sanitizeInput(data.name),
+    company: sanitizeInput(data.company ?? ''),
+    phone: sanitizeInput(data.phone),
+    whatsapp: sanitizeInput(data.whatsapp ?? ''),
+    email: sanitizeInput(data.email ?? ''),
+    project_type: sanitizeInput(data.project_type ?? ''),
+    project_location: sanitizeInput(data.project_location ?? ''),
+    estimated_area: sanitizeInput(data.estimated_area ?? ''),
+    project_stage: sanitizeInput(data.project_stage ?? ''),
+    main_concern: (data.main_concern ?? []).map(sanitizeInput),
+    message: sanitizeInput(data.message ?? ''),
+    website: '',
+    source_page: sanitizeInput(data.source_page ?? ''),
+    form_type: sanitizeInput(data.form_type ?? ''),
+    language: sanitizeInput(data.language ?? '')
+  };
+}
+
 export async function POST(request: NextRequest) {
   const clientIp = getClientIp(request);
 
   if (isRateLimited(clientIp)) {
-    return jsonError(429, 'Too many lead submissions. Please try again later.');
+    return jsonError(429, 'Too many submissions. Please try again later.');
   }
 
   try {
-    const json = await request.json();
-    const parsed = leadPayloadSchema.safeParse(json);
+    const contentType = request.headers.get('content-type') ?? '';
+    const isFormData = contentType.includes('multipart/form-data');
+
+    let rawFields: Record<string, unknown>;
+    let formData: FormData | null = null;
+
+    if (isFormData) {
+      formData = await request.formData();
+      rawFields = extractFormDataFields(formData);
+    } else {
+      rawFields = await request.json();
+    }
+
+    // Enrich resource download requests
+    if (rawFields.resource_title && !rawFields.form_type) {
+      rawFields.form_type = 'Resource Download';
+    }
+
+    if (rawFields.resource_title && !rawFields.project_type) {
+      rawFields.project_type = `Resource download: ${rawFields.resource_title}`;
+    }
+
+    const parsed = leadPayloadSchema.safeParse(rawFields);
 
     if (!parsed.success) {
-      const errors = Object.fromEntries(parsed.error.issues.map((issue) => [String(issue.path[0] ?? 'form'), issue.message]));
-      return jsonError(400, 'Please review the lead capture fields.', errors);
+      const errors = Object.fromEntries(
+        parsed.error.issues.map((issue) => [String(issue.path[0] ?? 'form'), issue.message])
+      );
+      return jsonError(400, 'Please review the form fields.', errors);
     }
 
     if (parsed.data.website) {
@@ -71,44 +154,56 @@ export async function POST(request: NextRequest) {
     }
 
     const submissionId = randomUUID();
-    const payload: RfqSubmissionPayload = {
-      name: parsed.data.name,
-      company: parsed.data.company,
-      phone: parsed.data.phone,
-      email: parsed.data.email,
-      whatsapp: '',
-      project_type: `Resource download request: ${parsed.data.resource_title}`,
-      project_location: '',
-      estimated_area: '',
-      project_stage: parsed.data.project_stage,
-      main_concern: ['Engineering resource download'],
-      message: [
-        `Requested resource: ${parsed.data.resource_title}`,
-        `Resource slug: ${parsed.data.resource_slug}`,
-        '',
-        parsed.data.message || 'No additional message provided.'
-      ].join('\n'),
-      website: ''
-    };
+    const payload = sanitizePayload(parsed.data);
 
-    await storeRfqSubmission(payload, submissionId, null);
-    const odooLead = await createOdooCrmLead(payload, submissionId, null);
+    // Handle file upload if present in FormData
+    let storedUpload = null;
+
+    if (formData) {
+      const upload = getRfqUpload(formData);
+
+      if (upload) {
+        storedUpload = await storeRfqUpload(upload, submissionId);
+        payload.uploaded_file_url = storedUpload.relativePath;
+      }
+    }
+
+    // Store submission locally (always succeeds even if Odoo fails)
+    await storeRfqSubmission(payload, submissionId, storedUpload);
+
+    // Send notification webhook if configured
+    let notificationConfigured = false;
+
+    try {
+      const notification = await sendRfqNotification(payload, submissionId, storedUpload);
+      notificationConfigured = notification.configured;
+    } catch {
+      console.error('Lead notification failed', {submissionId});
+    }
+
+    // Create Odoo CRM lead
+    const odooLead = await createOdooCrmLead(payload, submissionId, storedUpload);
 
     return NextResponse.json({
       ok: true,
-      message: 'Resource request received.',
+      message: 'Your request has been received.',
       submissionId,
+      notificationConfigured,
       odooConfigured: odooLead.configured
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'UNKNOWN_ERROR';
 
-    if (message.startsWith('ODOO_')) {
-      console.error('Resource lead Odoo creation failed', {message});
-      return jsonError(502, 'Lead was stored but could not be sent to Odoo CRM.');
+    if (message.startsWith('UPLOAD_')) {
+      return jsonError(400, 'Uploaded file did not pass security checks.');
     }
 
-    console.error('Resource lead submission failed', {message});
-    return jsonError(500, 'Lead request could not be processed safely.');
+    if (message.startsWith('ODOO_')) {
+      console.error('Lead Odoo creation failed', {message});
+      return jsonError(502, 'Your submission was stored but could not be sent to CRM. Our team will follow up.');
+    }
+
+    console.error('Lead submission failed', {message});
+    return jsonError(500, 'Submission could not be processed. Please try again or contact us directly.');
   }
 }

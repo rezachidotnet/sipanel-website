@@ -1,4 +1,4 @@
-export const rfqApiEndpoint = '/api/rfq';
+export const rfqApiEndpoint = '/api/lead';
 
 export const rfqAllowedFileExtensions = ['pdf', 'jpg', 'jpeg', 'png', 'dwg'] as const;
 

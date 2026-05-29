@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useMemo, useRef, useState} from 'react';
-import {useTranslations} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 import {useForm, type FieldErrors, type Resolver} from 'react-hook-form';
 import {z} from 'zod';
 import {LtrText} from '@/components/bidi/ltr-text';
@@ -96,6 +96,7 @@ function createRfqResolver(t: ReturnType<typeof useTranslations<'rfq'>>): Resolv
 }
 
 export function RfqSection() {
+  const locale = useLocale();
   const t = useTranslations('rfq');
   const contactNote = t('contact.note');
   const localizedAddress = t.has('contact.address') ? t('contact.address') : '';
@@ -186,6 +187,9 @@ export function RfqSection() {
     appendIfPresent(formData, 'estimated_area', values.estimated_area);
     appendIfPresent(formData, 'message', values.message);
     formData.append('website', values.website);
+    formData.append('source_page', '/');
+    formData.append('form_type', 'RFQ Quick Consultation');
+    formData.append('language', locale);
 
     if (values.optional_file_upload?.[0]) {
       formData.append('optional_file_upload', values.optional_file_upload[0]);

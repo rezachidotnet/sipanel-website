@@ -89,7 +89,10 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           message: formData.get('message'),
           website: formData.get('website'),
           resource_slug: page.resource.slug,
-          resource_title: page.resource.title
+          resource_title: page.resource.title,
+          source_page: `/resources/${page.resource.slug}`,
+          form_type: 'Resource Download',
+          language: locale
         })
       });
       const payload = (await response.json()) as {ok?: boolean; message?: string};

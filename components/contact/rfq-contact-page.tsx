@@ -319,6 +319,9 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
     values.main_concern.forEach((concern) => formData.append('main_concern', concern));
     appendIfPresent(formData, 'message', values.message);
     formData.append('website', values.website);
+    formData.append('source_page', `/contact`);
+    formData.append('form_type', 'RFQ Consultation');
+    formData.append('language', locale);
 
     if (values.file_upload?.[0]) {
       formData.append('optional_file_upload', values.file_upload[0]);
