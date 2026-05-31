@@ -46,7 +46,7 @@ export function StickyMobileCta() {
       className={isVisible ? 'sticky-mobile-cta is-visible' : 'sticky-mobile-cta'}
     >
       {/* track: sticky_mobile_cta_click */}
-      <a className="sticky-mobile-cta__primary" href="#engineering-review" onClick={() => trackEvent('sticky_cta_click', {component_id: 'sticky_mobile_cta'})}>
+      <a className="sticky-mobile-cta__primary" href="#rfq" onClick={() => trackEvent('sticky_cta_click', {component_id: 'sticky_mobile_cta'})}>
         {t('primary')}
       </a>
       {/* track: whatsapp_click */}

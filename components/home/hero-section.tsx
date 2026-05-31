@@ -17,10 +17,10 @@ export function HeroSection() {
           <h1 id="homepage-hero-title">{t('headline')}</h1>
           <p className="hero-copy__subheadline">{t('subheadline')}</p>
 
-          <div className="hero-copy__actions" id="engineering-review">
+          <div className="hero-copy__actions">
             {/* track: hero_primary_cta_click */}
             <Link
-              href="/#engineering-review"
+              href="/#rfq"
               className="button-primary"
               onClick={() => trackCtaClick('homepage_hero', t('primaryCta'), 'hero_primary_cta_click')}
             >
@@ -28,7 +28,7 @@ export function HeroSection() {
             </Link>
             {/* track: hero_secondary_cta_click */}
             <Link
-              href="/contact#rfq-form"
+              href="/contact"
               className="button-secondary"
               onClick={() => trackCtaClick('homepage_hero', t('secondaryCta'), 'hero_secondary_cta_click')}
             >

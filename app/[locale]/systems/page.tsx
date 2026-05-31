@@ -225,15 +225,29 @@ const systems = [
       ar: 'تفاصيل نظام الألواح المزدوجة الصناعية',
       ru: 'Детали промышленной сэндвич-панельной системы'
     },
-    title: 'Sandwich Panel Systems',
-    subtitle: 'Engineered Before Installation.',
-    description:
-      'SIPANEL engineers sandwich panel systems through precise layout, smart procurement, waterproofing logic, and controlled installation for industrial buildings.',
+    title: {
+      fa: 'سیستم ساندویچ پانل',
+      en: 'Sandwich Panel Systems',
+      ar: 'أنظمة الألواح المزدوجة',
+      ru: 'Сэндвич-панельные системы'
+    },
+    subtitle: {
+      fa: 'مهندسی پیش از نصب',
+      en: 'Engineered Before Installation.',
+      ar: 'هندسة قبل التركيب',
+      ru: 'Спроектировано до монтажа.'
+    },
+    description: {
+      fa: 'سی\u200Cپانل سیستم\u200Cهای ساندویچ پانل را با چیدمان دقیق، تأمین هوشمند، منطق آب\u200Cبندی و نصب کنترل\u200Cشده برای ساختمان\u200Cهای صنعتی طراحی و اجرا می\u200Cکند.',
+      en: 'SIPANEL engineers sandwich panel systems through precise layout, smart procurement, waterproofing logic, and controlled installation for industrial buildings.',
+      ar: 'تقوم SIPANEL بهندسة أنظمة الألواح المزدوجة من خلال التخطيط الدقيق والتوريد الذكي ومنطق العزل المائي والتركيب المتحكم للمباني الصناعية.',
+      ru: 'SIPANEL проектирует сэндвич-панельные системы с точной раскладкой, умными закупками, логикой гидроизоляции и контролируемым монтажом.'
+    },
     routes: {
-      en: '/systems/sandwich-panel',
-      fa: '/systems/sandwich-panel',
-      ar: '/systems/sandwich-panel',
-      ru: '/systems/sandwich-panel'
+      en: '/systems/sandwich-panel-systems',
+      fa: '/systems/sandwich-panel-systems',
+      ar: '/systems/sandwich-panel-systems',
+      ru: '/systems/sandwich-panel-systems'
     }
   },
   {
@@ -246,15 +260,29 @@ const systems = [
       ar: 'تفاصيل نظام تسقيف الدرز القائم',
       ru: 'Детали фальцевой кровельной системы'
     },
-    title: 'Standing Seam Roofing',
-    subtitle: 'Built Around Waterproofing Logic.',
-    description:
-      'SIPANEL designs and executes Standing Seam and ZIP Tech roofing systems with drainage logic, flashing coordination, concealed fastening, and controlled installation for industrial projects.',
+    title: {
+      fa: 'سقف ایستادرز و ZIP Tech',
+      en: 'Standing Seam Roofing',
+      ar: 'تسقيف الدرز القائم',
+      ru: 'Фальцевая кровля'
+    },
+    subtitle: {
+      fa: 'طراحی\u200Cشده بر پایه منطق آب\u200Cبندی',
+      en: 'Built Around Waterproofing Logic.',
+      ar: 'مبني على منطق العزل المائي',
+      ru: 'На основе логики гидроизоляции.'
+    },
+    description: {
+      fa: 'سی\u200Cپانل سیستم\u200Cهای سقف ایستادرز و ZIP Tech را با منطق زهکشی، هماهنگی فلاشینگ، اتصال مخفی و نصب کنترل\u200Cشده برای پروژه\u200Cهای صنعتی طراحی و اجرا می\u200Cکند.',
+      en: 'SIPANEL designs and executes Standing Seam and ZIP Tech roofing systems with drainage logic, flashing coordination, concealed fastening, and controlled installation for industrial projects.',
+      ar: 'تصمم SIPANEL وتنفذ أنظمة تسقيف الدرز القائم وZIP Tech مع منطق الصرف وتنسيق الوميض والتثبيت المخفي والتركيب المتحكم.',
+      ru: 'SIPANEL проектирует и монтирует фальцевые и ZIP Tech системы с логикой водоотвода, координацией примыканий и контролируемым монтажом.'
+    },
     routes: {
-      en: '/systems/standing-seam',
-      fa: '/systems/standing-seam',
-      ar: '/systems/standing-seam',
-      ru: '/systems/standing-seam'
+      en: '/systems/standing-seam-zip-tech-roofing',
+      fa: '/systems/standing-seam-zip-tech-roofing',
+      ar: '/systems/standing-seam-zip-tech-roofing',
+      ru: '/systems/standing-seam-zip-tech-roofing'
     }
   },
   {
@@ -267,15 +295,29 @@ const systems = [
       ar: 'تفاصيل نظام الكسوة الألمنيوم الصناعية',
       ru: 'Детали промышленной алюминиевой облицовки'
     },
-    title: 'Aluminium Cladding Systems',
-    subtitle: 'With Controlled Execution.',
-    description:
-      'SIPANEL engineers aluminium cladding and covering systems for industrial facades with layout control, fixing logic, material optimization, and controlled installation.',
+    title: {
+      fa: 'سیستم نمای آلومینیومی',
+      en: 'Aluminium Cladding Systems',
+      ar: 'أنظمة الكسوة الألمنيوم',
+      ru: 'Алюминиевая облицовка'
+    },
+    subtitle: {
+      fa: 'اجرای کنترل\u200Cشده نما',
+      en: 'With Controlled Execution.',
+      ar: 'بتنفيذ متحكم',
+      ru: 'С контролируемым монтажом.'
+    },
+    description: {
+      fa: 'سی\u200Cپانل سیستم\u200Cهای پوشش و کلادینگ آلومینیومی را با کنترل چیدمان، منطق اتصال، بهینه\u200Cسازی متریال و نصب مهندسی\u200Cشده برای نماهای صنعتی ارائه می\u200Cدهد.',
+      en: 'SIPANEL engineers aluminium cladding and covering systems for industrial facades with layout control, fixing logic, material optimization, and controlled installation.',
+      ar: 'تقدم SIPANEL أنظمة كسوة وتغطية الألمنيوم للواجهات الصناعية مع التحكم في التخطيط ومنطق التثبيت وتحسين المواد.',
+      ru: 'SIPANEL проектирует алюминиевые облицовочные системы с контролем раскладки, логикой крепления и оптимизацией материалов.'
+    },
     routes: {
-      en: '/systems/aluminium-cladding',
-      fa: '/systems/aluminium-cladding',
-      ar: '/systems/aluminium-cladding',
-      ru: '/systems/aluminium-cladding'
+      en: '/systems/aluminium-cladding-covering',
+      fa: '/systems/aluminium-cladding-covering',
+      ar: '/systems/aluminium-cladding-covering',
+      ru: '/systems/aluminium-cladding-covering'
     }
   }
 ];
@@ -338,7 +380,7 @@ function buildCollectionSchema(locale: Locale) {
     description: content.description,
     url: routes[locale],
     items: systems.map((system) => ({
-      name: system.title,
+      name: system.title[locale],
       url: system.routes[locale]
     }))
   });
@@ -409,7 +451,8 @@ export default function SystemsOverviewPage({params}: Props) {
             <Image
               className="systems-hero__mobile-img"
               src={heroMobile}
-              alt={heroAlt[locale]}
+              alt=""
+              aria-hidden="true"
               fill
               priority
               placeholder="blur"
@@ -442,7 +485,8 @@ export default function SystemsOverviewPage({params}: Props) {
                   <Image
                     className="systems-card__mobile-img"
                     src={system.imageMobile}
-                    alt={system.alt[locale]}
+                    alt=""
+                    aria-hidden="true"
                     fill
                     placeholder="blur"
                     sizes="100vw"
@@ -455,9 +499,9 @@ export default function SystemsOverviewPage({params}: Props) {
                   </span>
                 </div>
                 <div className="systems-card__body">
-                  <h3>{system.title}</h3>
-                  <p className="systems-card__subtitle">{system.subtitle}</p>
-                  <p className="systems-card__description">{system.description}</p>
+                  <h3>{system.title[locale]}</h3>
+                  <p className="systems-card__subtitle">{system.subtitle[locale]}</p>
+                  <p className="systems-card__description">{system.description[locale]}</p>
                   <Link href={system.routes[locale]} className="systems-card__cta">
                     {content.cta}
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">

@@ -73,16 +73,26 @@ export function Footer() {
 
           <div className="site-footer__column site-footer__contact">
             <h2>{footer('contact')}</h2>
-            <address>
-              {localizedAddress ? <span>{localizedAddress}</span> : <LtrText>{productionContactInfo.address}</LtrText>}
+            <address className="site-footer__address-list">
+              <span className="site-footer__address-item">
+                {localizedAddress ? localizedAddress : <LtrText>{productionContactInfo.address}</LtrText>}
+              </span>
               {/* track: footer_contact_click */}
-              <LtrText as="a" href={`tel:${productionContactInfo.phone.replace(/\s/g, '')}`}>{productionContactInfo.phone}</LtrText>
+              <LtrText as="a" href={`tel:${productionContactInfo.phone.replace(/\s/g, '')}`} className="site-footer__address-item">
+                {productionContactInfo.phone}
+              </LtrText>
               {/* track: footer_contact_click */}
-              <LtrText as="a" href={`https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`}>{productionContactInfo.whatsapp}</LtrText>
+              <LtrText as="a" href={`https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`} className="site-footer__address-item">
+                {productionContactInfo.whatsapp}
+              </LtrText>
               {/* track: footer_contact_click */}
-              <LtrText as="a" href={`mailto:${productionContactInfo.email}`}>{productionContactInfo.email}</LtrText>
+              <LtrText as="a" href={`mailto:${productionContactInfo.email}`} className="site-footer__address-item">
+                {productionContactInfo.email}
+              </LtrText>
               {/* track: footer_link_click */}
-              <LtrText as="a" href={productionContactInfo.website}>{productionContactInfo.website.replace('https://', '')}</LtrText>
+              <LtrText as="a" href={productionContactInfo.website} className="site-footer__address-item">
+                {productionContactInfo.website.replace('https://', '')}
+              </LtrText>
             </address>
           </div>
         </nav>
