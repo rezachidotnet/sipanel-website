@@ -6,6 +6,16 @@ import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 
+/* ── Static image imports ── */
+import heroDesktop from '@/assets/systems/hero/systems-hero-desktop.webp';
+import heroMobile from '@/assets/systems/hero/systems-hero-mobile.webp';
+import sandwichDesktop from '@/assets/systems/sandwich-panel/cover-desktop.webp';
+import sandwichMobile from '@/assets/systems/sandwich-panel/cover-mobile.webp';
+import standingSeamDesktop from '@/assets/systems/standing-seam/cover-desktop.webp';
+import standingSeamMobile from '@/assets/systems/standing-seam/cover-mobile.webp';
+import aluminiumDesktop from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
+import aluminiumMobile from '@/assets/systems/aluminium-claddin/cover-mobile.webp';
+
 type Props = {
   params: {locale: Locale};
 };
@@ -207,7 +217,8 @@ const copy: Record<
 const systems = [
   {
     id: 'sandwich-panel',
-    image: '/assets/systems/sandwich-panel/cover.webp',
+    imageDesktop: sandwichDesktop,
+    imageMobile: sandwichMobile,
     alt: {
       fa: 'جزئیات سیستم ساندویچ پانل صنعتی',
       en: 'Industrial sandwich panel system detail',
@@ -227,7 +238,8 @@ const systems = [
   },
   {
     id: 'standing-seam',
-    image: '/assets/systems/standing-seam/cover.webp',
+    imageDesktop: standingSeamDesktop,
+    imageMobile: standingSeamMobile,
     alt: {
       fa: 'جزئیات سیستم سقف ایستادرز',
       en: 'Standing seam roofing system detail',
@@ -247,7 +259,8 @@ const systems = [
   },
   {
     id: 'aluminium-cladding',
-    image: '/assets/systems/aluminium-cladding/cover.webp',
+    imageDesktop: aluminiumDesktop,
+    imageMobile: aluminiumMobile,
     alt: {
       fa: 'جزئیات سیستم نمای آلومینیومی صنعتی',
       en: 'Industrial aluminium cladding system detail',
@@ -386,18 +399,20 @@ export default function SystemsOverviewPage({params}: Props) {
           <div className="systems-hero__visual">
             <Image
               className="systems-hero__desktop-img"
-              src="/assets/systems/hero/systems-hero-desktop.webp"
+              src={heroDesktop}
               alt={heroAlt[locale]}
               fill
               priority
+              placeholder="blur"
               sizes="(max-width: 767px) 100vw, 55vw"
             />
             <Image
               className="systems-hero__mobile-img"
-              src="/assets/systems/hero/systems-hero-mobile.webp"
+              src={heroMobile}
               alt={heroAlt[locale]}
               fill
               priority
+              placeholder="blur"
               sizes="100vw"
             />
           </div>
@@ -416,10 +431,21 @@ export default function SystemsOverviewPage({params}: Props) {
               <article className="systems-card" key={system.id}>
                 <div className="systems-card__image">
                   <Image
-                    src={system.image}
+                    className="systems-card__desktop-img"
+                    src={system.imageDesktop}
                     alt={system.alt[locale]}
                     fill
+                    placeholder="blur"
                     sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                  <Image
+                    className="systems-card__mobile-img"
+                    src={system.imageMobile}
+                    alt={system.alt[locale]}
+                    fill
+                    placeholder="blur"
+                    sizes="100vw"
                     loading="lazy"
                   />
                   <span className="systems-card__badge" aria-hidden="true">
