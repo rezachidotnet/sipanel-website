@@ -48,15 +48,11 @@ const rfqSubmissionSchema = z.object({
 });
 
 function getUploadRoot() {
-  return process.env.RFQ_UPLOAD_DIR
-    ? path.resolve(process.env.RFQ_UPLOAD_DIR)
-    : path.resolve('private', 'rfq-uploads', 'tmp');
+  return process.env.RFQ_UPLOAD_DIR ?? '/tmp/rfq-uploads';
 }
 
 function getSubmissionRoot() {
-  return process.env.RFQ_SUBMISSION_DIR
-    ? path.resolve(process.env.RFQ_SUBMISSION_DIR)
-    : path.resolve('private', 'rfq-submissions');
+  return process.env.RFQ_SUBMISSION_DIR ?? '/tmp/rfq-submissions';
 }
 
 function getExtension(filename: string) {
