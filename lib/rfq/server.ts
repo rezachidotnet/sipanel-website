@@ -1,5 +1,3 @@
-import {mkdir, writeFile} from 'node:fs/promises';
-import path from 'node:path';
 import {randomUUID} from 'node:crypto';
 import {z} from 'zod';
 import {rfqAllowedFileExtensions, rfqAllowedMimeTypes, rfqMaxFileSizeBytes} from './constants';
@@ -89,7 +87,8 @@ function hasValidMagicBytes(extension: string, bytes: Uint8Array) {
 }
 
 function safeOriginalName(filename: string) {
-  return path.basename(filename).replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 160);
+  const base = filename.split('/').pop()?.split('\\').pop() ?? filename;
+  return base.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 160);
 }
 
 export function parseRfqFormData(formData: FormData) {
@@ -169,12 +168,13 @@ export async function storeRfqUpload(file: File, submissionId: string): Promise<
     throw new Error('UPLOAD_SIGNATURE_INVALID');
   }
 
-  const directory = path.join(getUploadRoot(), submissionId);
+  const {mkdir, writeFile} = await import('node:fs/promises');
+  const directory = `${getUploadRoot()}/${submissionId}`;
   await mkdir(directory, {recursive: true, mode: 0o700});
 
   const originalName = safeOriginalName(file.name);
   const storedName = `${randomUUID()}.${extension}`;
-  const destination = path.join(directory, storedName);
+  const destination = `${directory}/${storedName}`;
 
   await writeFile(destination, buffer, {mode: 0o600});
 
@@ -192,10 +192,11 @@ export async function storeRfqSubmission(
   submissionId: string,
   upload: StoredRfqUpload | null
 ) {
+  const {mkdir, writeFile} = await import('node:fs/promises');
   const root = getSubmissionRoot();
   await mkdir(root, {recursive: true, mode: 0o700});
 
-  const destination = path.join(root, `${submissionId}.json`);
+  const destination = `${root}/${submissionId}.json`;
   await writeFile(
     destination,
     JSON.stringify(
