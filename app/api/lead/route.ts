@@ -163,13 +163,25 @@ export async function POST(request: NextRequest) {
       const upload = getRfqUpload(formData);
 
       if (upload) {
-        storedUpload = await storeRfqUpload(upload, submissionId);
-        payload.uploaded_file_url = storedUpload.relativePath;
+        try {
+          storedUpload = await storeRfqUpload(upload, submissionId);
+          payload.uploaded_file_url = storedUpload.relativePath;
+        } catch (uploadError) {
+          const msg = uploadError instanceof Error ? uploadError.message : '';
+          if (msg.startsWith('UPLOAD_')) {
+            throw uploadError;
+          }
+          console.error('File upload storage failed (non-critical)', {submissionId, error: msg});
+        }
       }
     }
 
-    // Store submission locally (always succeeds even if Odoo fails)
-    await storeRfqSubmission(payload, submissionId, storedUpload);
+    // Store submission locally — best-effort, non-blocking on serverless (read-only fs)
+    try {
+      await storeRfqSubmission(payload, submissionId, storedUpload);
+    } catch {
+      console.error('Local submission storage failed (non-critical, likely read-only fs)', {submissionId});
+    }
 
     // Send notification webhook if configured
     let notificationConfigured = false;
