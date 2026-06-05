@@ -47,13 +47,17 @@ const rfqSubmissionSchema = z.object({
   website: z.string().max(0).optional().default('')
 });
 
-const uploadRoot = process.env.RFQ_UPLOAD_DIR
-  ? path.resolve(process.env.RFQ_UPLOAD_DIR)
-  : path.join(/* turbopackIgnore: true */ process.cwd(), 'private', 'rfq-uploads', 'tmp');
+function getUploadRoot() {
+  return process.env.RFQ_UPLOAD_DIR
+    ? path.resolve(process.env.RFQ_UPLOAD_DIR)
+    : path.resolve('private', 'rfq-uploads', 'tmp');
+}
 
-const submissionRoot = process.env.RFQ_SUBMISSION_DIR
-  ? path.resolve(process.env.RFQ_SUBMISSION_DIR)
-  : path.join(/* turbopackIgnore: true */ process.cwd(), 'private', 'rfq-submissions');
+function getSubmissionRoot() {
+  return process.env.RFQ_SUBMISSION_DIR
+    ? path.resolve(process.env.RFQ_SUBMISSION_DIR)
+    : path.resolve('private', 'rfq-submissions');
+}
 
 function getExtension(filename: string) {
   return filename.split('.').pop()?.toLowerCase() ?? '';
@@ -169,7 +173,7 @@ export async function storeRfqUpload(file: File, submissionId: string): Promise<
     throw new Error('UPLOAD_SIGNATURE_INVALID');
   }
 
-  const directory = path.join(uploadRoot, submissionId);
+  const directory = path.join(getUploadRoot(), submissionId);
   await mkdir(directory, {recursive: true, mode: 0o700});
 
   const originalName = safeOriginalName(file.name);
@@ -181,7 +185,7 @@ export async function storeRfqUpload(file: File, submissionId: string): Promise<
   return {
     originalName,
     storedName,
-    relativePath: path.relative(process.cwd(), destination),
+    relativePath: destination,
     size: file.size,
     mimeType: file.type
   };
@@ -192,9 +196,10 @@ export async function storeRfqSubmission(
   submissionId: string,
   upload: StoredRfqUpload | null
 ) {
-  await mkdir(submissionRoot, {recursive: true, mode: 0o700});
+  const root = getSubmissionRoot();
+  await mkdir(root, {recursive: true, mode: 0o700});
 
-  const destination = path.join(submissionRoot, `${submissionId}.json`);
+  const destination = path.join(root, `${submissionId}.json`);
   await writeFile(
     destination,
     JSON.stringify(
@@ -210,7 +215,7 @@ export async function storeRfqSubmission(
     {mode: 0o600}
   );
 
-  return path.relative(process.cwd(), destination);
+  return destination;
 }
 
 export async function sendRfqNotification(
