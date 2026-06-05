@@ -10,39 +10,51 @@ import {
 } from '@/lib/insights/engineering-insights';
 
 type Props = {
-  params: {
-    locale: Locale;
+  params: Promise<{
+    locale: string;
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return getAllEngineeringInsightStaticParams();
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
-  const metadata = getEngineeringInsightArticleMetadata(params.locale, params.slug);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale, slug} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+  const metadata = getEngineeringInsightArticleMetadata(validLocale, slug);
 
   if (!metadata) {
     notFound();
   }
 
+  setRequestLocale(validLocale);
+
   return metadata;
 }
 
-export default function InsightArticleRoute({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function InsightArticleRoute({params}: Props) {
+  const {locale, slug} = await params;
 
-  if (!locales.includes(params.locale)) {
+  if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
-  const article = getEngineeringInsightArticle(params.locale, params.slug);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  const article = getEngineeringInsightArticle(validLocale, slug);
 
   if (!article) {
     notFound();
   }
 
-  return <EngineeringArticleTemplate locale={params.locale} article={article} />;
+  return <EngineeringArticleTemplate locale={validLocale} article={article} />;
 }

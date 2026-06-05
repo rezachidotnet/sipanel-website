@@ -9,19 +9,28 @@ import {RfqSection} from '@/components/home/rfq-section';
 import {StickyMobileCta} from '@/components/home/sticky-mobile-cta';
 import {TrustBar} from '@/components/home/trust-bar';
 import {SchemaScript} from '@/components/seo/schema-script';
-import type {Locale} from '@/i18n/routing';
+import {locales, type Locale} from '@/i18n/routing';
 import {buildLocalBusinessSchema, buildOrganizationSchema} from '@/lib/seo/schema';
+import {notFound} from 'next/navigation';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 export default async function HomePage({params}: Props) {
-  setRequestLocale(params.locale);
-  const rfq = await getTranslations({locale: params.locale, namespace: 'rfq'});
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+  const rfq = await getTranslations({locale: validLocale, namespace: 'rfq'});
   const localizedAddress = rfq.has('contact.address') ? rfq('contact.address') : '';
-  const organizationSchema = buildOrganizationSchema(params.locale, `/${params.locale}#organization`);
-  const localBusinessSchema = buildLocalBusinessSchema(params.locale, `/${params.locale}#local-business`);
+  const organizationSchema = buildOrganizationSchema(validLocale, `/${validLocale}#organization`);
+  const localBusinessSchema = buildLocalBusinessSchema(validLocale, `/${validLocale}#local-business`);
   const localizedOrganizationSchema = localizedAddress ? {...organizationSchema, address: localizedAddress} : organizationSchema;
   const localizedLocalBusinessSchema = localizedAddress ? {...localBusinessSchema, address: localizedAddress} : localBusinessSchema;
 

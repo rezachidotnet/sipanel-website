@@ -1,10 +1,12 @@
 import Image, {type StaticImageData} from 'next/image';
 import type {Metadata} from 'next';
 import {setRequestLocale} from 'next-intl/server';
+import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
+import {listCaseStudySlugs} from '@/lib/case-studies/case-study-pages';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
 import bazargolCard from '@/assets/projects/bazargol/photos/bazargol-card.webp';
 import babakSardarbCard from '@/assets/projects/babak_sardarb/photos/babak_sardarb-card.webp';
@@ -17,7 +19,7 @@ import tabasCard from '@/assets/projects/tabas/photos/tabas-card.webp';
 import pompTiranCard from '@/assets/projects/pomp-tiran/photos/pomp-tiran-card.webp';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 type ProjectCaseStudy = {
@@ -35,6 +37,8 @@ type ProjectCaseStudy = {
   riskPrevented: string[];
   image: StaticImageData;
 };
+
+type LocalizedProjectCaseStudy = Omit<ProjectCaseStudy, 'slug' | 'filters' | 'image'>;
 
 const routes: LocalizedRouteMap = {
   en: '/en/projects',
@@ -71,9 +75,10 @@ const copy: Record<
       envelope: string;
     };
     proofPending: string;
+    primaryCta: string;
+    costReviewCta: string;
     openCaseStudy: string;
-    consultationCta: string;
-    systemsCta: string;
+    detailComingSoon: string;
     conversionTitle: string;
     conversionText: string;
     home: string;
@@ -107,18 +112,19 @@ const copy: Record<
       envelope: 'Industrial envelope'
     },
     proofPending: 'Only source-backed project fields are shown. Unverified metrics remain marked as pending inside each case study.',
+    primaryCta: 'Get Free Engineering Review',
+    costReviewCta: 'Request Project Cost Review',
     openCaseStudy: 'View Case Study',
-    consultationCta: 'Request Similar Project Review',
-    systemsCta: 'Explore Systems',
+    detailComingSoon: 'Project details coming soon',
     conversionTitle: 'Need this level of control for your project?',
     conversionText: 'Send the project type, location, approximate area, drawings if available, and the main risk you want SIPANEL to review.',
     home: 'Home'
   },
   fa: {
     title: 'پروژه‌ها و مطالعات موردی SIPANEL',
-    h1: 'Proven Industrial Envelope Projects.',
+    h1: 'پروژه‌های اجراشده در پوشش صنعتی ساختمان',
     description:
-      'پروژه‌های سقف صنعتی، ساندویچ پنل، ZIP Panel و کلادینگ آلومینیومی SIPANEL را با چالش مهندسی، منطق اجرا، نتیجه و ریسک‌های کنترل‌شده بررسی کنید.',
+      'پروژه‌های سقف صنعتی، ساندویچ پانل، سقف ایستادرز / ZIP و کلادینگ آلومینیومی SIPANEL را با چالش مهندسی، منطق اجرا، نتیجه و ریسک‌های کنترل‌شده بررسی کنید.',
     eyebrow: 'شواهد پروژه',
     introTitle: 'پروژه‌هایی که سیستم را اثبات می‌کنند',
     intro:
@@ -127,26 +133,28 @@ const copy: Record<
     labels: {
       projectName: 'نام پروژه',
       location: 'موقعیت',
-      areaM2: 'مساحت m2',
+      areaM2: 'مساحت',
       systemType: 'نوع سیستم',
-      mainChallenge: 'چالش اصلی',
+      mainChallenge: 'چالش',
       engineeringDecision: 'تصمیم مهندسی',
-      measuredResult: 'نتیجه قابل اندازه‌گیری',
+      measuredResult: 'نتیجه',
       risks: 'ریسک‌های کنترل‌شده'
     },
     filters: {
-      all: 'همه',
-      sandwich: 'سیستم‌های ساندویچ پانل',
-      standing: 'سقف استندینگ سیم',
+      all: 'همه پروژه‌ها',
+      sandwich: 'ساندویچ پانل',
+      standing: 'سقف ایستادرز',
       cladding: 'کلادینگ آلومینیومی',
-      envelope: 'پوسته صنعتی'
+      envelope: 'پوشش صنعتی ساختمان'
     },
-    proofPending: 'فقط فیلدهای دارای منبع پروژه نمایش داده شده‌اند. شاخص‌های تاییدنشده داخل هر مطالعه موردی در حالت انتظار می‌مانند.',
-    openCaseStudy: 'View Case Study',
-    consultationCta: 'درخواست بررسی پروژه مشابه',
-    systemsCta: 'مشاهده سیستم‌ها',
-    conversionTitle: 'برای پروژه خود به همین سطح کنترل نیاز دارید؟',
-    conversionText: 'نوع پروژه، موقعیت، متراژ تقریبی، نقشه‌ها در صورت وجود و ریسک اصلی مورد نظر برای بررسی را ارسال کنید.',
+    proofPending: 'جزئیات پروژه‌ها پس از بررسی نهایی و آماده‌سازی مستندات تکمیلی منتشر می‌شود.',
+    primaryCta: 'دریافت بررسی مهندسی رایگان',
+    costReviewCta: 'درخواست بررسی هزینه پروژه',
+    openCaseStudy: 'مشاهده جزئیات پروژه',
+    detailComingSoon: 'جزئیات پروژه به‌زودی',
+    conversionTitle: 'برای انتخاب پوشش مناسب پروژه، ابتدا ریسک‌های فنی را بررسی کنید.',
+    conversionText:
+      'تیم SIPANEL می‌تواند بر اساس نقشه‌ها، موقعیت پروژه و نوع سازه، پیشنهاد اولیه فنی و مسیر اجرای مناسب را بررسی کند.',
     home: 'خانه'
   },
   ar: {
@@ -177,9 +185,10 @@ const copy: Record<
       envelope: 'الغلاف الصناعي'
     },
     proofPending: 'تُعرض فقط حقول المشروع المدعومة بالمصدر. وتبقى المؤشرات غير الموثقة موسومة كقيد الانتظار داخل كل دراسة حالة.',
+    primaryCta: 'Get Free Engineering Review',
+    costReviewCta: 'Request Project Cost Review',
     openCaseStudy: 'View Case Study',
-    consultationCta: 'اطلب مراجعة مشروع مشابه',
-    systemsCta: 'استكشاف الأنظمة',
+    detailComingSoon: 'Project details coming soon',
     conversionTitle: 'هل تحتاج هذا المستوى من التحكم لمشروعك؟',
     conversionText: 'أرسل نوع المشروع والموقع والمساحة التقريبية والرسومات إن وجدت والمخاطر الأساسية التي تريد من SIPANEL مراجعتها.',
     home: 'الرئيسية'
@@ -212,9 +221,10 @@ const copy: Record<
       envelope: 'Промышленная оболочка'
     },
     proofPending: 'Показаны только поля проекта, подтвержденные источником. Неподтвержденные метрики остаются отмеченными как ожидающие внутри каждого кейса.',
+    primaryCta: 'Get Free Engineering Review',
+    costReviewCta: 'Request Project Cost Review',
     openCaseStudy: 'View Case Study',
-    consultationCta: 'Запросить проверку похожего проекта',
-    systemsCta: 'Посмотреть системы',
+    detailComingSoon: 'Project details coming soon',
     conversionTitle: 'Нужен такой уровень контроля для вашего проекта?',
     conversionText: 'Отправьте тип проекта, локацию, примерную площадь, чертежи при наличии и главный риск, который SIPANEL должен проверить.',
     home: 'Главная'
@@ -404,15 +414,186 @@ const projectCaseStudies: ProjectCaseStudy[] = [
   }
 ];
 
+const rfqHref = '/contact#rfq-form';
+const caseStudyDetailSlugs = new Set(listCaseStudySlugs());
+
+const localizedProjectCaseStudies: Partial<Record<Locale, Record<string, LocalizedProjectCaseStudy>>> = {
+  fa: {
+    'shahre-babak-hall': {
+      projectName: 'سالن کشتی شهربابک',
+      location: 'شهربابک، کرمان، ایران',
+      category: 'سازه ورزشی با سقف ایستادرز / ZIP',
+      projectType: 'مجموعه ورزشی کشتی با چند گنبد',
+      systemType: 'سقف ایستادرز / ZIP',
+      area: '۹۰۰ مترمربع',
+      challenge:
+        'چند سالن ورزشی گنبدی به هماهنگی دقیق پانل‌های ZIP خمیده، هم‌راستایی سازه، تداوم آب‌بندی و اجرای یکنواخت نمای سقف نیاز داشتند.',
+      engineeringDecision:
+        'SIPANEL نقشه‌های اجرایی هماهنگ، چیدمان پانل‌های ZIP خمیده، دیتیل‌های آب‌بندی و توالی نصب را برای حفظ تقارن گنبد و پیوستگی زهکشی آماده کرد.',
+      measuredResult:
+        'سه سالن کشتی گنبدی با هندسه سقف هماهنگ، عملکرد قابل اتکای سقف ایستادرز / ZIP و کیفیت نصب کنترل‌شده تحویل شد.',
+      riskPrevented: ['خطای هم‌راستایی سقف خمیده', 'نفوذ آب در اتصال‌های گنبدی', 'تداخل در توالی نصب']
+    },
+    'sepehan-flower-market': {
+      projectName: 'بازار گل سپاهان',
+      location: 'درچه، اصفهان، ایران',
+      category: 'سازه تجاری با ساندویچ پانل',
+      projectType: 'سیستم سقف تجاری با ساندویچ پانل',
+      systemType: 'ساندویچ پانل',
+      area: '۳٬۵۰۰ مترمربع',
+      challenge:
+        'بازار گل پرتردد به سقف ساندویچ پانل بادوام، نصب سریع، کنترل آب‌بندی و پرداخت معماری تمیز نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL چیدمان پانل‌ها، توالی نصب، نقاط کنترل درزگیری و هماهنگی متریال را برای اجرای سریع و کاهش پرت بهینه کرد.',
+      measuredResult:
+        'سیستم سقف تجاری با ساندویچ پانل بادوام، حفاظت جوی قابل اتکا، نصب کارآمد و کیفیت پرداخت کنترل‌شده اجرا شد.',
+      riskPrevented: ['خطای هم‌راستایی نصب', 'پرت متریال', 'نفوذ آب']
+    },
+    'shahr-babak-stadium-entrance': {
+      projectName: 'ورودی ورزشگاه شهربابک',
+      location: 'شهربابک، کرمان، ایران',
+      category: 'سازه ورزشی با کلادینگ آلومینیومی',
+      projectType: 'نمای معماری خمیده ورودی ورزشگاه',
+      systemType: 'کلادینگ آلومینیومی',
+      area: '۷۰۰ مترمربع',
+      challenge:
+        'ورودی خمیده و پیچیده ورزشگاه به دیتیل‌گذاری دقیق کلادینگ آلومینیومی، هماهنگی سطح، تداوم آب‌بندی و یکپارچگی نمای معماری نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL روش‌های اجرای کلادینگ آلومینیومی، دیتیل‌های فلاشینگ خمیده و توالی نصب را برای حفظ پیوستگی معماری و کنترل زهکشی ترکیب کرد.',
+      measuredResult:
+        'ورودی با پرداخت معماری دقیق، یکپارچگی کنترل‌شده نما و عملکرد مقاوم در برابر شرایط جوی تحویل شد.',
+      riskPrevented: ['خطای هم‌راستایی نما', 'موج‌افتادگی سطح', 'نفوذ آب در گذارهای خمیده']
+    },
+    'andimeshk-stadium': {
+      projectName: 'ورزشگاه اندیمشک',
+      location: 'اندیمشک، خوزستان، ایران',
+      category: 'سازه ورزشی با ساندویچ پانل',
+      projectType: 'سیستم سقف ورزشگاهی دوخم',
+      systemType: 'سقف ساندویچ پانل',
+      area: '۶٬۰۰۰ مترمربع',
+      challenge:
+        'سقف دوخم ورزشگاه به هماهنگی ساندویچ پانل، دقت هم‌راستایی سازه، تداوم آب‌بندی و نصب کنترل‌شده روی هندسه قوسی نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL مطالعات هم‌راستایی سازه، نقشه‌های چیدمان پانل، دیتیل‌های زهکشی و توالی نصب را برای دقت هندسی و عملکرد سقف آماده کرد.',
+      measuredResult:
+        'سقف ورزشگاه با عملکرد قابل اتکای ساندویچ پانل، هندسه خمیده دقیق و کیفیت نصب کنترل‌شده تحویل شد.',
+      riskPrevented: ['تغییر شکل ساندویچ پانل', 'اختلال در زهکشی', 'ناهم‌راستایی سازه']
+    },
+    'absaar-water-park': {
+      projectName: 'پارک آبی آبسار',
+      location: 'ایران',
+      category: 'سازه تفریحی با سیستم سقف ترکیبی',
+      projectType: 'سیستم سقف پارک آبی با کنترل نورگیری',
+      systemType: 'سقف ترکیبی ایستادرز / ZIP، پلی‌کربنات و ساندویچ پانل',
+      area: '۱۲٬۰۰۰ مترمربع',
+      challenge:
+        'سقف بزرگ مجموعه تفریحی به عبور نور، تهویه داخلی، یکپارچگی آب‌بندی و هماهنگی میان بخش‌های شفاف، بازشوهای متحرک و پانل‌های عایق نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL زون‌بندی سقف، یکپارچه‌سازی بازشوهای تهویه خودکار، گذارهای آب‌بند و چیدمان تکیه‌گاه‌ها را برای کنترل پایدار محیط داخلی مهندسی کرد.',
+      measuredResult:
+        'پروژه با نورگیری کنترل‌شده، تهویه خودکار سقف، بازده عایق حرارتی و عملکرد آب‌بندی بلندمدت تحویل شد.',
+      riskPrevented: ['اختلال در سیستم تهویه', 'نفوذ آب در بخش‌های بازشو', 'عدم تعادل حرارتی']
+    },
+    'megaparsmall-atrium': {
+      projectName: 'آتریوم مگاپارس مال',
+      location: 'ایران',
+      category: 'سازه تجاری با سقف معماری',
+      projectType: 'سازه سقف آتریوم',
+      systemType: 'سقف ایستادرز / ZIP',
+      area: '۴٬۵۰۰ مترمربع',
+      challenge:
+        'سقف آتریوم با دهانه بزرگ به هماهنگی پانل‌های ZIP خمیده، یکپارچگی آب‌بندی، کنترل حرکت حرارتی و ادغام معماری تمیز نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL چیدمان پانل‌های ZIP، مطالعات حرکت انبساطی، هماهنگی زهکشی و توالی نصب را برای پایداری سقف دهانه‌بلند آماده کرد.',
+      measuredResult:
+        'سقف آتریوم با آب‌بندی قابل اتکا، اجرای دقیق سقف ایستادرز و یکپارچگی معماری کنترل‌شده تحویل شد.',
+      riskPrevented: ['نفوذ آب', 'تنش ناشی از انبساط حرارتی', 'انحراف در هم‌راستایی سقف']
+    },
+    'mahshahr-taxi-parking': {
+      projectName: 'پارکینگ تاکسی ماهشهر',
+      location: 'بندر ماهشهر، خوزستان، ایران',
+      category: 'سازه حمل‌ونقل با ساندویچ پانل',
+      projectType: 'سیستم سقف پارکینگ تجاری',
+      systemType: 'سقف ساندویچ پانل',
+      area: '۴٬۰۰۰ مترمربع',
+      challenge:
+        'پارکینگ ساحلی در محیط مرطوب به هماهنگی سقف ساندویچ پانل، مدیریت آب باران، تداوم آب‌بندی و دیتیل‌های مقاوم در برابر خوردگی نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL شیب‌های زهکشی، موقعیت آبروها، هماهنگی ناودان‌ها و هم‌راستایی ساندویچ پانل را برای تخلیه بهتر آب و کاهش ریسک نگهداری بهینه کرد.',
+      measuredResult:
+        'سیستم سقف با مدیریت قابل اتکای آب باران، حفاظت جوی بادوام و عملکرد زهکشی کنترل‌شده اجرا شد.',
+      riskPrevented: ['تجمع آب', 'نشتی سقف', 'خرابی‌های ناشی از خوردگی']
+    },
+    'parand-city-entrance': {
+      projectName: 'دروازه ورودی شهر پرند',
+      location: 'پرند، تهران، ایران',
+      category: 'سازه معماری با کلادینگ آلومینیومی',
+      projectType: 'نمای معماری ورودی شهر',
+      systemType: 'کلادینگ آلومینیومی',
+      area: '۵۰۰ مترمربع',
+      challenge:
+        'ورودی ویژه شهر به کلادینگ آلومینیومی سفارشی، کنترل هندسه خمیده، تداوم آب‌بندی و پرداخت دقیق نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL دیتیل‌های گذار خمیده، سیستم‌های هماهنگی لبه، راهبردهای هم‌راستایی سازه و فرایندهای درزگیری را برای یکپارچگی معماری طراحی کرد.',
+      measuredResult:
+        'ورودی شهر با اجرای دقیق هندسه، کلادینگ آلومینیومی بادوام و عملکرد نمای مقاوم در برابر شرایط جوی تحویل شد.',
+      riskPrevented: ['ناهماهنگی ابعادی', 'خرابی درزگیری نما', 'خطای هم‌راستایی خمیده']
+    },
+    'tabas-railway-facility': {
+      projectName: 'پروژه راه‌آهن طبس',
+      location: 'طبس، ایران',
+      category: 'سازه حمل‌ونقل با ساندویچ پانل',
+      projectType: 'سیستم سقف دهانه‌بلند راه‌آهن',
+      systemType: 'سقف ساندویچ پانل',
+      area: '۱۰٬۰۰۰ مترمربع',
+      challenge:
+        'سازه بزرگ و دوخم راه‌آهن به هماهنگی پیشرفته ساندویچ پانل، هم‌راستایی دقیق سازه، تداوم آب‌بندی و عملکرد پایدار سقف دهانه‌بلند نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL دیتیل‌گذاری اختصاصی پانل، مطالعات هم‌راستایی سازه، بهینه‌سازی زهکشی و توالی نصب را برای اطمینان از عملکرد دهانه‌بلند اجرا کرد.',
+      measuredResult:
+        'سقف راه‌آهن با عملکرد بادوام ساندویچ پانل، کیفیت نصب کنترل‌شده و اجرای کارآمد تحویل شد.',
+      riskPrevented: ['ناهم‌راستایی سازه', 'اختلال در زهکشی', 'تغییر شکل پانل']
+    },
+    'tiran-gas-station': {
+      projectName: 'جایگاه سوخت تیران',
+      location: 'اصفهان، ایران',
+      category: 'سازه تجاری با ساندویچ پانل',
+      projectType: 'سیستم سقف جایگاه سوخت',
+      systemType: 'سقف ساندویچ پانل',
+      area: '۶۰۰ مترمربع',
+      challenge:
+        'جایگاه سوخت عمومی با زمان‌بندی فشرده به سقف ساندویچ پانل بادوام، توالی اجرای کارآمد، آب‌بندی قابل اتکا و پرداخت تمیز نیاز داشت.',
+      engineeringDecision:
+        'SIPANEL چیدمان ساندویچ پانل، دیتیل‌های هماهنگی سازه، راهبردهای اتصال و یکپارچه‌سازی زهکشی را برای سرعت و دوام بهینه کرد.',
+      measuredResult:
+        'سیستم سقف جایگاه سوخت با حفاظت جوی قابل اتکا، ظاهر مدرن و کیفیت نصب کنترل‌شده تکمیل شد.',
+      riskPrevented: ['نشتی سقف', 'خطای هم‌راستایی نصب', 'اجرای نادرست درزگیری']
+    }
+  }
+};
+
+function getProjectCaseStudy(project: ProjectCaseStudy, locale: Locale): ProjectCaseStudy {
+  const localizedProject = localizedProjectCaseStudies[locale]?.[project.slug];
+
+  return localizedProject ? {...project, ...localizedProject} : project;
+}
+
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  const content = copy[params.locale];
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+  const content = copy[validLocale];
 
   return buildPageMetadata({
-    locale: params.locale,
+    locale: validLocale,
     title: content.title,
     description: content.description,
     routes
@@ -421,12 +602,13 @@ export function generateMetadata({params}: Props): Metadata {
 
 function buildCollectionSchema(locale: Locale) {
   const content = copy[locale];
+  const projects = projectCaseStudies.map((project) => getProjectCaseStudy(project, locale));
 
   return buildCollectionPageSchema(locale, `${routes[locale]}#collection`, {
     name: content.title,
     description: content.description,
     url: routes[locale],
-    items: projectCaseStudies.map((project) => ({
+    items: projects.map((project) => ({
       name: project.projectName,
       url: `/${locale}/projects/${project.slug}`
     }))
@@ -440,16 +622,51 @@ function buildBreadcrumbSchema(locale: Locale) {
   ]);
 }
 
-export default function ProjectsOverviewPage({params}: Props) {
-  setRequestLocale(params.locale);
-  const content = copy[params.locale];
+const filterOptions = [
+  {id: 'all'},
+  {id: 'sandwich'},
+  {id: 'standing'},
+  {id: 'cladding'},
+  {id: 'envelope'}
+] as const;
+
+function getFilterOptions(locale: Locale) {
+  return locale === 'fa' ? filterOptions.filter((filter) => filter.id !== 'envelope') : filterOptions;
+}
+
+function hasCaseStudyDetailPage(slug: string) {
+  return caseStudyDetailSlugs.has(slug);
+}
+
+function formatProjectArea(area: string, locale: Locale) {
+  if (locale !== 'fa') {
+    return area;
+  }
+
+  return area.replace(/\s*m2\s*$/i, ' مترمربع');
+}
+
+export default async function ProjectsOverviewPage({params}: Props) {
+  const {locale: requestedLocale} = await params;
+
+  if (!locales.includes(requestedLocale as Locale)) {
+    notFound();
+  }
+
+  const locale = requestedLocale as Locale;
+
+  setRequestLocale(locale);
+  const content = copy[locale];
+  const isPersianProjectsPage = locale === 'fa';
+  const projects = projectCaseStudies.map((project) => getProjectCaseStudy(project, locale));
+  const visibleFilterOptions = getFilterOptions(locale);
 
   return (
-    <article className="projects-index-page" dir={getDirection(params.locale)}>
+    <article className="projects-index-page" data-locale={locale} dir={getDirection(locale)}>
       {/* track: projects_page_view */}
-      <SchemaScript schema={buildCollectionSchema(params.locale)} />
-      <SchemaScript schema={buildBreadcrumbSchema(params.locale)} />
-      <SchemaScript schema={buildOrganizationSchema(params.locale, `${routes[params.locale]}#organization`)} />
+      <SchemaScript schema={buildCollectionSchema(locale)} />
+      <SchemaScript schema={buildBreadcrumbSchema(locale)} />
+      <SchemaScript schema={buildOrganizationSchema(locale, `${routes[locale]}#organization`)} />
 
       <section className="projects-index-hero" data-section="projects_index_hero" aria-labelledby="projects-index-title">
         {/* track: case_study_view */}
@@ -459,11 +676,11 @@ export default function ProjectsOverviewPage({params}: Props) {
             <h1 id="projects-index-title">{content.h1}</h1>
             <p>{content.description}</p>
             <div className="projects-index-hero__actions">
-              <Link href="/contact#rfq-form" className="button-primary">
-                {content.consultationCta}
+              <Link href={rfqHref} className="button-primary">
+                {content.primaryCta}
               </Link>
-              <Link href="/systems" className="button-secondary">
-                {content.systemsCta}
+              <Link href={rfqHref} className="button-secondary">
+                {content.costReviewCta}
               </Link>
             </div>
           </div>
@@ -483,87 +700,177 @@ export default function ProjectsOverviewPage({params}: Props) {
 
           <div className="projects-index-filter" aria-label={content.allProjects}>
             {/* track: project_filter_use */}
-            <input className="projects-index-filter__input" defaultChecked id="projects-filter-all" name="projects-filter" type="radio" />
-            <label htmlFor="projects-filter-all">{content.filters.all}</label>
-            <input className="projects-index-filter__input" id="projects-filter-sandwich" name="projects-filter" type="radio" />
-            <label htmlFor="projects-filter-sandwich">{content.filters.sandwich}</label>
-            <input className="projects-index-filter__input" id="projects-filter-standing" name="projects-filter" type="radio" />
-            <label htmlFor="projects-filter-standing">{content.filters.standing}</label>
-            <input className="projects-index-filter__input" id="projects-filter-cladding" name="projects-filter" type="radio" />
-            <label htmlFor="projects-filter-cladding">{content.filters.cladding}</label>
-            <input className="projects-index-filter__input" id="projects-filter-envelope" name="projects-filter" type="radio" />
-            <label htmlFor="projects-filter-envelope">{content.filters.envelope}</label>
+            {visibleFilterOptions.map((filter, index) => (
+              <div className="projects-index-filter__item" key={filter.id}>
+                <input
+                  className="projects-index-filter__input"
+                  defaultChecked={index === 0}
+                  id={`projects-filter-${filter.id}`}
+                  name="projects-filter"
+                  type="radio"
+                />
+                <label htmlFor={`projects-filter-${filter.id}`}>{content.filters[filter.id]}</label>
+              </div>
+            ))}
           </div>
 
           <div className="projects-index-grid">
-            {projectCaseStudies.map((project) => (
-              <article className="projects-index-card" key={project.slug} data-filter={project.filters.join(' ')} data-project-slug={project.slug}>
-                <div className="projects-index-card__image">
-                  <Image
-                    src={project.image}
-                    alt={`${project.projectName} industrial project photography`}
-                    fill
-                    sizes="(max-width: 767px) 86vw, (max-width: 1024px) 44vw, 31vw"
-                  />
-                </div>
-                <div className="projects-index-card__body">
-                  <div className="projects-index-card__meta">
-                    <span>{project.category}</span>
-                    <span>{project.projectType}</span>
-                  </div>
-                  <h3>{project.projectName}</h3>
-                  <dl className="projects-index-card__snapshot">
-                    <div>
-                      <dt>{content.labels.projectName}</dt>
-                      <dd>{project.projectName}</dd>
+            {projects.map((project) => {
+              if (!isPersianProjectsPage) {
+                return (
+                  <article className="projects-index-card" key={project.slug} data-filter={project.filters.join(' ')} data-project-slug={project.slug}>
+                    <div className="projects-index-card__image">
+                      <Image
+                        src={project.image}
+                        alt={`${project.projectName} industrial project photography`}
+                        fill
+                        sizes="(max-width: 767px) 86vw, (max-width: 1024px) 44vw, 31vw"
+                      />
                     </div>
-                    <div>
-                      <dt>{content.labels.location}</dt>
-                      <dd>{project.location}</dd>
-                    </div>
-                    <div>
-                      <dt>{content.labels.areaM2}</dt>
-                      <dd>{project.area}</dd>
-                    </div>
-                    <div>
-                      <dt>{content.labels.systemType}</dt>
-                      <dd>{project.systemType}</dd>
-                    </div>
-                  </dl>
+                    <div className="projects-index-card__body">
+                      <div className="projects-index-card__meta">
+                        <span>{project.category}</span>
+                        <span>{project.projectType}</span>
+                      </div>
+                      <h3>{project.projectName}</h3>
+                      <dl className="projects-index-card__snapshot">
+                        <div>
+                          <dt>{content.labels.projectName}</dt>
+                          <dd>{project.projectName}</dd>
+                        </div>
+                        <div>
+                          <dt>{content.labels.location}</dt>
+                          <dd>{project.location}</dd>
+                        </div>
+                        <div>
+                          <dt>{content.labels.areaM2}</dt>
+                          <dd>{project.area}</dd>
+                        </div>
+                        <div>
+                          <dt>{content.labels.systemType}</dt>
+                          <dd>{project.systemType}</dd>
+                        </div>
+                      </dl>
 
-                  <div className="projects-index-card__proof">
-                    <section>
-                      <h4>{content.labels.mainChallenge}</h4>
-                      <p>{project.challenge}</p>
-                    </section>
-                    <section>
-                      <h4>{content.labels.engineeringDecision}</h4>
-                      <p>{project.engineeringDecision}</p>
-                    </section>
-                    <section>
-                      <h4>{content.labels.measuredResult}</h4>
-                      <p>{project.measuredResult}</p>
-                    </section>
-                  </div>
+                      <div className="projects-index-card__proof">
+                        <section>
+                          <h4>{content.labels.mainChallenge}</h4>
+                          <p>{project.challenge}</p>
+                        </section>
+                        <section>
+                          <h4>{content.labels.engineeringDecision}</h4>
+                          <p>{project.engineeringDecision}</p>
+                        </section>
+                        <section>
+                          <h4>{content.labels.measuredResult}</h4>
+                          <p>{project.measuredResult}</p>
+                        </section>
+                      </div>
 
-                  <div className="projects-index-card__risks">
-                    <h4>{content.labels.risks}</h4>
-                    <ul>
-                      {project.riskPrevented.map((risk) => (
-                        <li key={risk}>{risk}</li>
-                      ))}
-                    </ul>
-                  </div>
+                      <div className="projects-index-card__risks">
+                        <h4>{content.labels.risks}</h4>
+                        <ul>
+                          {project.riskPrevented.map((risk) => (
+                            <li key={risk}>{risk}</li>
+                          ))}
+                        </ul>
+                      </div>
 
-                  <div className="projects-index-card__footer">
-                    {/* track: case_study_click */}
-                    <Link href={`/projects/${project.slug}`} className="projects-index-card__cta">
-                      {content.openCaseStudy}
-                    </Link>
+                      <div className="projects-index-card__footer">
+                        {hasCaseStudyDetailPage(project.slug) ? (
+                          /* track: case_study_click */
+                          <Link href={`/projects/${project.slug}`} className="projects-index-card__cta">
+                            {content.openCaseStudy}
+                          </Link>
+                        ) : (
+                          <span className="projects-index-card__cta projects-index-card__cta--disabled" aria-disabled="true">
+                            {content.detailComingSoon}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                );
+              }
+
+              const detailSections = [
+                {label: content.labels.mainChallenge, text: project.challenge},
+                {label: content.labels.engineeringDecision, text: project.engineeringDecision},
+                {label: content.labels.measuredResult, text: project.measuredResult}
+              ].filter((section) => section.text.trim().length > 0);
+              const risks = project.riskPrevented.filter((risk) => risk.trim().length > 0);
+
+              return (
+                <article className="projects-index-card" key={project.slug} data-filter={project.filters.join(' ')} data-project-slug={project.slug}>
+                  <div className="projects-index-card__image">
+                    <Image
+                      src={project.image}
+                      alt={
+                        locale === 'fa'
+                          ? `تصویر پروژه صنعتی ${project.projectName}`
+                          : `${project.projectName} industrial project photography`
+                      }
+                      fill
+                      sizes="(max-width: 767px) 86vw, (max-width: 1024px) 44vw, 31vw"
+                    />
                   </div>
-                </div>
-              </article>
-            ))}
+                  <div className="projects-index-card__body">
+                    <h3>{project.projectName}</h3>
+                    <dl className="projects-index-card__snapshot">
+                      <div>
+                        <dt>{content.labels.location}</dt>
+                        <dd>{project.location}</dd>
+                      </div>
+                      <div>
+                        <dt>{content.labels.systemType}</dt>
+                        <dd>{project.systemType}</dd>
+                      </div>
+                      <div className="projects-index-card__area">
+                        <dt>{content.labels.areaM2}</dt>
+                        <dd>
+                          {content.labels.areaM2}: {formatProjectArea(project.area, locale)}
+                        </dd>
+                      </div>
+                    </dl>
+
+                    {detailSections.length > 0 ? (
+                      <div className="projects-index-card__proof">
+                        {detailSections.map((section) => (
+                          <section key={section.label}>
+                            <h4>{section.label}</h4>
+                            <p>{section.text}</p>
+                          </section>
+                        ))}
+                      </div>
+                    ) : null}
+
+                    {risks.length > 0 ? (
+                      <div className="projects-index-card__risks">
+                        <h4>{content.labels.risks}</h4>
+                        <ul>
+                          {risks.map((risk) => (
+                            <li key={risk}>{risk}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+
+                    <div className="projects-index-card__footer">
+                      {hasCaseStudyDetailPage(project.slug) ? (
+                        /* track: case_study_click */
+                        <Link href={`/projects/${project.slug}`} className="projects-index-card__cta">
+                          {content.openCaseStudy}
+                        </Link>
+                      ) : (
+                        <span className="projects-index-card__cta projects-index-card__cta--disabled" aria-disabled="true">
+                          {content.detailComingSoon}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -571,8 +878,9 @@ export default function ProjectsOverviewPage({params}: Props) {
       <section className="projects-index-section projects-index-section--light" data-section="proof_governance" aria-labelledby="projects-proof-title">
         <div className="container-shell projects-index-proof">
           <div>
-            <p className="service-eyebrow">{content.allProjects}</p>
-            <h2 id="projects-proof-title">{content.proofPending}</h2>
+            <p className="service-eyebrow">{isPersianProjectsPage ? content.eyebrow : content.allProjects}</p>
+            <h2 id="projects-proof-title">{isPersianProjectsPage ? content.allProjects : content.proofPending}</h2>
+            {isPersianProjectsPage ? <p>{content.proofPending}</p> : null}
           </div>
           <div className="projects-index-proof__items">
             <span>{content.labels.mainChallenge}</span>
@@ -590,8 +898,11 @@ export default function ProjectsOverviewPage({params}: Props) {
             <p>{content.conversionText}</p>
           </div>
           <div className="projects-index-conversion__actions">
-            <Link href="/contact#rfq-form" className="button-primary">
-              {content.consultationCta}
+            <Link href={rfqHref} className="button-primary">
+              {content.primaryCta}
+            </Link>
+            <Link href={rfqHref} className="button-secondary">
+              {content.costReviewCta}
             </Link>
           </div>
         </div>

@@ -71,7 +71,7 @@ const ibmPlexSansArabic = localFont({
 
 type Props = {
   children: React.ReactNode;
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 export function generateStaticParams() {
@@ -79,13 +79,21 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
-  setRequestLocale(params.locale);
-  const t = await getTranslations({locale: params.locale, namespace: 'metadata'});
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+  const t = await getTranslations({locale: validLocale, namespace: 'metadata'});
 
   return {
     metadataBase: new URL(getSiteBaseUrl()),
     ...buildPageMetadata({
-      locale: params.locale,
+      locale: validLocale,
       title: t('title'),
       description: t('description'),
       routes: {
@@ -118,31 +126,35 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 }
 
 export default async function LocaleLayout({children, params}: Props) {
-  if (!locales.includes(params.locale)) {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
-  setRequestLocale(params.locale);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
   const messages = await getMessages();
-  const dir = getDirection(params.locale);
+  const dir = getDirection(validLocale);
   const localeFontClass =
-    params.locale === 'fa'
+    validLocale === 'fa'
       ? vazirmatn.className
-      : params.locale === 'ar'
+      : validLocale === 'ar'
         ? ibmPlexSansArabic.className
         : inter.className;
 
   return (
     <html
-      lang={params.locale}
+      lang={validLocale}
       dir={dir}
-      data-locale={params.locale}
-      className={`${inter.variable} ${vazirmatn.variable} ${ibmPlexSansArabic.variable} typography-${params.locale}`}
+      data-locale={validLocale}
+      className={`${inter.variable} ${vazirmatn.variable} ${ibmPlexSansArabic.variable} typography-${validLocale}`}
     >
       <body className={localeFontClass}>
         <NextIntlClientProvider messages={messages}>
-          <LocaleRuntime locale={params.locale} dir={dir} />
-          <Header locale={params.locale} />
+          <LocaleRuntime locale={validLocale} dir={dir} />
+          <Header locale={validLocale} />
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>

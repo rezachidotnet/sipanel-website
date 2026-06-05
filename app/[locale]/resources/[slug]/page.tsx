@@ -10,39 +10,51 @@ import {
 } from '@/lib/resources/engineering-resource-hub';
 
 type Props = {
-  params: {
-    locale: Locale;
+  params: Promise<{
+    locale: string;
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return getAllResourceDetailStaticParams();
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
-  const metadata = getResourceDetailMetadata(params.locale, params.slug);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale, slug} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+  const metadata = getResourceDetailMetadata(validLocale, slug);
 
   if (!metadata) {
     notFound();
   }
 
+  setRequestLocale(validLocale);
+
   return metadata;
 }
 
-export default function ResourceDetailRoute({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function ResourceDetailRoute({params}: Props) {
+  const {locale, slug} = await params;
 
-  if (!locales.includes(params.locale)) {
+  if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
-  const page = getResourceDetailPage(params.locale, params.slug);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  const page = getResourceDetailPage(validLocale, slug);
 
   if (!page) {
     notFound();
   }
 
-  return <ResourceDetailPageTemplate locale={params.locale} page={page} />;
+  return <ResourceDetailPageTemplate locale={validLocale} page={page} />;
 }

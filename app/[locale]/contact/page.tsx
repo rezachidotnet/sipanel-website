@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import {setRequestLocale} from 'next-intl/server';
+import {notFound} from 'next/navigation';
 import {RfqContactPage} from '@/components/contact/rfq-contact-page';
 import {locales, type Locale} from '@/i18n/routing';
 import {getRfqContactPageData, rfqContactPage} from '@/lib/contact/rfq-contact-page';
@@ -13,7 +14,7 @@ import {
 } from '@/lib/seo/schema';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 const pageData = getRfqContactPageData();
@@ -53,29 +54,45 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return buildPageMetadata({
-    locale: params.locale,
+    locale: validLocale,
     title: rfqContactPage.seo.title,
     description: rfqContactPage.seo.meta_description,
     routes: rfqContactPage.route
   });
 }
 
-export default function ContactPage({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function ContactPage({params}: Props) {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
-      <SchemaPlaceholder schema={buildContactPageSchema(params.locale)} />
-      <SchemaPlaceholder schema={buildOrganizationSchema(params.locale)} />
-      <SchemaPlaceholder schema={buildLocalBusinessSchema(params.locale)} />
-      <SchemaPlaceholder schema={buildBreadcrumbSchema(params.locale)} />
-      <SchemaPlaceholder schema={buildFaqSchema(params.locale)} />
+      <SchemaPlaceholder schema={buildContactPageSchema(validLocale)} />
+      <SchemaPlaceholder schema={buildOrganizationSchema(validLocale)} />
+      <SchemaPlaceholder schema={buildLocalBusinessSchema(validLocale)} />
+      <SchemaPlaceholder schema={buildBreadcrumbSchema(validLocale)} />
+      <SchemaPlaceholder schema={buildFaqSchema(validLocale)} />
       {/* track: contact_page_view */}
-      <RfqContactPage locale={params.locale} page={pageData} />
+      <RfqContactPage locale={validLocale} page={pageData} />
     </>
   );
 }

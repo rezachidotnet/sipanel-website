@@ -6,7 +6,7 @@ import {locales, type Locale} from '@/i18n/routing';
 import {getAboutPageData, getAboutPageMetadata} from '@/lib/about/about-page';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 const page = getAboutPageData();
@@ -15,28 +15,35 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
 
-  if (!page.routes[params.locale]) {
+  if (!locales.includes(locale as Locale) || !page.routes[locale as Locale]) {
     notFound();
   }
 
-  return getAboutPageMetadata(params.locale);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  return getAboutPageMetadata(validLocale);
 }
 
-export default function AboutPageRoute({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function AboutPageRoute({params}: Props) {
+  const {locale} = await params;
 
-  if (!page.routes[params.locale]) {
+  if (!locales.includes(locale as Locale) || !page.routes[locale as Locale]) {
     notFound();
   }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
       {/* track: about_page_view */}
-      <AboutPage locale={params.locale} page={page} />
+      <AboutPage locale={validLocale} page={page} />
     </>
   );
 }
-

@@ -17,7 +17,7 @@ import {
 } from '@/lib/seo/schema';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
   searchParams?: {category?: string};
 };
 
@@ -69,30 +69,38 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
   const page = getEngineeringResourceHubPage();
 
-  if (!page.routes[params.locale]) {
+  if (!locales.includes(locale as Locale) || !page.routes[locale as Locale]) {
     notFound();
   }
 
-  return getEngineeringResourceHubMetadata(params.locale);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  return getEngineeringResourceHubMetadata(validLocale);
 }
 
-export default function ResourcesPage({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function ResourcesPage({params}: Props) {
+  const {locale} = await params;
   const page = getEngineeringResourceHubPage();
 
-  if (!page.routes[params.locale]) {
+  if (!locales.includes(locale as Locale) || !page.routes[locale as Locale]) {
     notFound();
   }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
       {/* track: resources_page_view */}
-      <Suspense fallback={<ResourceHubSeoFallback locale={params.locale} />}>
-        <EngineeringResourceHubPage locale={params.locale} page={page} />
+      <Suspense fallback={<ResourceHubSeoFallback locale={validLocale} />}>
+        <EngineeringResourceHubPage locale={validLocale} page={page} />
       </Suspense>
     </>
   );

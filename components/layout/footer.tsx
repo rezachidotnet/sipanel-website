@@ -17,6 +17,14 @@ export function Footer() {
   const nav = useTranslations('nav');
   const footer = useTranslations('footer');
   const localizedAddress = footer.has('address') ? footer('address') : '';
+  const phoneHref = `tel:${productionContactInfo.phone}`;
+  const whatsappHref = `https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`;
+  const contactLabels = {
+    address: footer.has('addressLabel') ? footer('addressLabel') : 'Address',
+    phone: footer.has('phoneLabel') ? footer('phoneLabel') : 'Phone',
+    whatsapp: footer.has('whatsappLabel') ? footer('whatsappLabel') : 'WhatsApp',
+    email: footer.has('emailLabel') ? footer('emailLabel') : 'Email'
+  };
 
   return (
     <footer className="site-footer">
@@ -74,21 +82,25 @@ export function Footer() {
           <div className="site-footer__column site-footer__contact">
             <h2>{footer('contact')}</h2>
             <address className="site-footer__address-list">
-              <span className="site-footer__address-item">
-                {localizedAddress ? localizedAddress : <LtrText>{productionContactInfo.address}</LtrText>}
+              <span className="site-footer__address-item site-footer__address-item--address">
+                <span className="site-footer__address-label">{contactLabels.address}</span>
+                <span className="site-footer__address-value">{localizedAddress ? localizedAddress : productionContactInfo.address}</span>
               </span>
               {/* track: footer_contact_click */}
-              <LtrText as="a" href={`tel:${productionContactInfo.phone.replace(/\s/g, '')}`} className="site-footer__address-item">
-                {productionContactInfo.phone}
-              </LtrText>
+              <a href={phoneHref} className="site-footer__address-item">
+                <span className="site-footer__address-label">{contactLabels.phone}</span>
+                <LtrText className="site-footer__address-value">{productionContactInfo.phone}</LtrText>
+              </a>
               {/* track: footer_contact_click */}
-              <LtrText as="a" href={`https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`} className="site-footer__address-item">
-                {productionContactInfo.whatsapp}
-              </LtrText>
+              <a href={whatsappHref} className="site-footer__address-item">
+                <span className="site-footer__address-label">{contactLabels.whatsapp}</span>
+                <LtrText className="site-footer__address-value">{productionContactInfo.whatsapp}</LtrText>
+              </a>
               {/* track: footer_contact_click */}
-              <LtrText as="a" href={`mailto:${productionContactInfo.email}`} className="site-footer__address-item">
-                {productionContactInfo.email}
-              </LtrText>
+              <a href={`mailto:${productionContactInfo.email}`} className="site-footer__address-item">
+                <span className="site-footer__address-label">{contactLabels.email}</span>
+                <LtrText className="site-footer__address-value">{productionContactInfo.email}</LtrText>
+              </a>
               {/* track: footer_link_click */}
               <LtrText as="a" href={productionContactInfo.website} className="site-footer__address-item">
                 {productionContactInfo.website.replace('https://', '')}

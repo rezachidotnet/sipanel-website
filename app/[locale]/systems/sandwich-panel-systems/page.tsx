@@ -6,7 +6,7 @@ import {getSandwichPanelSystemsPage, sandwichPanelSystemsSpec} from '@/lib/servi
 import {buildPageMetadata} from '@/lib/seo/metadata';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 const pageData = getSandwichPanelSystemsPage();
@@ -15,24 +15,40 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    throw new Error(`Unsupported locale: ${locale}`);
+  }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return buildPageMetadata({
-    locale: params.locale,
+    locale: validLocale,
     title: sandwichPanelSystemsSpec.seo.title,
     description: sandwichPanelSystemsSpec.seo.meta_description,
     routes: sandwichPanelSystemsSpec.route
   });
 }
 
-export default function SandwichPanelSystemsPage({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function SandwichPanelSystemsPage({params}: Props) {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    throw new Error(`Unsupported locale: ${locale}`);
+  }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
       {/* track: service_page_view */}
-      <ServicePageTemplate locale={params.locale} page={pageData} />
+      <ServicePageTemplate locale={validLocale} page={pageData} />
     </>
   );
 }

@@ -15,7 +15,7 @@
   "header": {
     "selectLanguage": "انتخاب زبان",
     "menu": "منو",
-    "phone": "+98 31 3675 1101",
+    "phone": "+989120656528",
     "email": "info@sipanelco.ir",
     "cta": "دریافت بررسی مهندسی رایگان"
   },
@@ -26,6 +26,10 @@
     "resources": "منابع",
     "company": "شرکت",
     "contact": "تماس",
+    "addressLabel": "آدرس",
+    "phoneLabel": "تلفن",
+    "whatsappLabel": "واتساپ",
+    "emailLabel": "ایمیل",
     "address": "اصفهان، خیابان هزارجریب، کوی ازادگان، پلاک ۶"
   },
   "trustBar": {

@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import Image from 'next/image';
 import {setRequestLocale} from 'next-intl/server';
+import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
@@ -17,7 +18,7 @@ import aluminiumDesktop from '@/assets/systems/aluminium-claddin/cover-desktop.w
 import aluminiumMobile from '@/assets/systems/aluminium-claddin/cover-mobile.webp';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 const routes: LocalizedRouteMap = {
@@ -361,11 +362,18 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  const content = copy[params.locale];
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const validLocale = locale as Locale;
+  const content = copy[validLocale];
 
   return buildPageMetadata({
-    locale: params.locale,
+    locale: validLocale,
     title: content.title,
     description: content.description,
     routes
@@ -393,9 +401,16 @@ function buildBreadcrumbSchema(locale: Locale) {
   ]);
 }
 
-export default function SystemsOverviewPage({params}: Props) {
-  setRequestLocale(params.locale);
-  const locale = params.locale;
+export default async function SystemsOverviewPage({params}: Props) {
+  const {locale: requestedLocale} = await params;
+
+  if (!locales.includes(requestedLocale as Locale)) {
+    notFound();
+  }
+
+  const locale = requestedLocale as Locale;
+
+  setRequestLocale(locale);
   const content = copy[locale];
   const dir = getDirection(locale);
 

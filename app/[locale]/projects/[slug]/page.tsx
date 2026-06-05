@@ -10,36 +10,44 @@ import {
 } from '@/lib/case-studies/case-study-pages';
 
 type Props = {
-  params: {locale: Locale; slug: string};
+  params: Promise<{locale: string; slug: string}>;
 };
 
 export function generateStaticParams() {
   return listCaseStudySlugs().flatMap((slug) => locales.map((locale) => ({locale, slug})));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
-  const page = getCaseStudyPageData(params.slug);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale, slug} = await params;
+  const page = getCaseStudyPageData(slug);
 
-  if (!page) {
+  if (!locales.includes(locale as Locale) || !page) {
     notFound();
   }
 
-  return getCaseStudyPageMetadata(params.locale, page);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  return getCaseStudyPageMetadata(validLocale, page);
 }
 
-export default function CaseStudyPage({params}: Props) {
-  setRequestLocale(params.locale);
-  const page = getCaseStudyPageData(params.slug);
+export default async function CaseStudyPage({params}: Props) {
+  const {locale, slug} = await params;
+  const page = getCaseStudyPageData(slug);
 
-  if (!page) {
+  if (!locales.includes(locale as Locale) || !page) {
     notFound();
   }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
       {/* track: case_study_page_view */}
-      <CaseStudyPageTemplate locale={params.locale} page={page} />
+      <CaseStudyPageTemplate locale={validLocale} page={page} />
     </>
   );
 }

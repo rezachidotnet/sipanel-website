@@ -48,6 +48,14 @@ function isNavItemActive(key: (typeof navKeys)[number], pathname: string) {
   return normalizedPathname === href || normalizedPathname.startsWith(`${href}/`);
 }
 
+function getNavHref(key: (typeof navKeys)[number]) {
+  if (key === 'process') {
+    return navHref.process;
+  }
+
+  return navHref[key];
+}
+
 export function Header({locale}: Props) {
   const nav = useTranslations('nav');
   const header = useTranslations('header');
@@ -78,11 +86,12 @@ export function Header({locale}: Props) {
           <nav className="desktop-nav" aria-label="Primary navigation">
             {navKeys.map((key) => {
               const isActive = isNavItemActive(key, pathname);
+              const href = getNavHref(key);
 
               return (
                 <Link
                   key={key}
-                  href={navHref[key]}
+                  href={href}
                   aria-current={isActive ? 'page' : undefined}
                   className={isActive ? 'desktop-nav__item is-active' : 'desktop-nav__item'}
                 >
@@ -114,12 +123,13 @@ export function Header({locale}: Props) {
                 <nav className="mobile-menu__nav" aria-label="Mobile navigation">
                   {navKeys.map((key) => {
                     const isActive = isNavItemActive(key, pathname);
+                    const href = getNavHref(key);
 
                     return (
                       /* track: mobile_menu_item_click */
                       <Link
                         key={key}
-                        href={navHref[key]}
+                        href={href}
                         aria-current={isActive ? 'page' : undefined}
                         className={isActive ? 'mobile-menu__link is-active' : 'mobile-menu__link'}
                         onClick={closeMobileMenu}

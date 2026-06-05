@@ -14,7 +14,7 @@ import {
 } from '@/lib/faq/faq-page';
 
 type Props = {
-  params: {locale: Locale};
+  params: Promise<{locale: string}>;
 };
 
 const page = getFaqPageData();
@@ -44,28 +44,36 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
 
-  if (!page.routes[params.locale]) {
+  if (!locales.includes(locale as Locale) || !page.routes[locale as Locale]) {
     notFound();
   }
 
-  return getFaqPageMetadata(params.locale);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  return getFaqPageMetadata(validLocale);
 }
 
-export default function FaqPageRoute({params}: Props) {
-  setRequestLocale(params.locale);
+export default async function FaqPageRoute({params}: Props) {
+  const {locale} = await params;
 
-  if (!page.routes[params.locale]) {
+  if (!locales.includes(locale as Locale) || !page.routes[locale as Locale]) {
     notFound();
   }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
       {/* track: faq_page_view */}
-      <Suspense fallback={<FaqSeoFallback locale={params.locale} />}>
-        <FaqPage locale={params.locale} page={page} />
+      <Suspense fallback={<FaqSeoFallback locale={validLocale} />}>
+        <FaqPage locale={validLocale} page={page} />
       </Suspense>
     </>
   );

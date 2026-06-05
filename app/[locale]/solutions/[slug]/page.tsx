@@ -10,36 +10,44 @@ import {
 } from '@/lib/seo/seo-landing-pages';
 
 type Props = {
-  params: {locale: Locale; slug: string};
+  params: Promise<{locale: string; slug: string}>;
 };
 
 export function generateStaticParams() {
   return listSeoLandingPageSlugs().flatMap((slug) => locales.map((locale) => ({locale, slug})));
 }
 
-export function generateMetadata({params}: Props): Metadata {
-  setRequestLocale(params.locale);
-  const page = getSeoLandingPageBySlug(params.slug);
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale, slug} = await params;
+  const page = getSeoLandingPageBySlug(slug);
 
-  if (!page) {
+  if (!locales.includes(locale as Locale) || !page) {
     notFound();
   }
 
-  return buildSeoLandingPageMetadata(page, params.locale);
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
+
+  return buildSeoLandingPageMetadata(page, validLocale);
 }
 
-export default function SeoSolutionPage({params}: Props) {
-  setRequestLocale(params.locale);
-  const page = getSeoLandingPageBySlug(params.slug);
+export default async function SeoSolutionPage({params}: Props) {
+  const {locale, slug} = await params;
+  const page = getSeoLandingPageBySlug(slug);
 
-  if (!page) {
+  if (!locales.includes(locale as Locale) || !page) {
     notFound();
   }
+
+  const validLocale = locale as Locale;
+
+  setRequestLocale(validLocale);
 
   return (
     <>
       {/* track: seo_landing_page_view */}
-      <SeoLandingPageTemplate locale={params.locale} page={page} />
+      <SeoLandingPageTemplate locale={validLocale} page={page} />
     </>
   );
 }
