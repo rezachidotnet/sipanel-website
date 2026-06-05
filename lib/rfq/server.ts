@@ -49,11 +49,11 @@ const rfqSubmissionSchema = z.object({
 
 const uploadRoot = process.env.RFQ_UPLOAD_DIR
   ? path.resolve(process.env.RFQ_UPLOAD_DIR)
-  : path.join(process.cwd(), 'private', 'rfq-uploads', 'tmp');
+  : path.join(/* turbopackIgnore: true */ process.cwd(), 'private', 'rfq-uploads', 'tmp');
 
 const submissionRoot = process.env.RFQ_SUBMISSION_DIR
   ? path.resolve(process.env.RFQ_SUBMISSION_DIR)
-  : path.join(process.cwd(), 'private', 'rfq-submissions');
+  : path.join(/* turbopackIgnore: true */ process.cwd(), 'private', 'rfq-submissions');
 
 function getExtension(filename: string) {
   return filename.split('.').pop()?.toLowerCase() ?? '';
