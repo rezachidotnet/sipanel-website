@@ -3,45 +3,16 @@ import {Suspense} from 'react';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {EngineeringResourceHubPage} from '@/components/resources/engineering-resource-hub-page';
-import {SchemaScript} from '@/components/seo/schema-script';
 import {getDirection, locales, type Locale} from '@/i18n/routing';
 import {
-  getEngineeringResourceHubBreadcrumbs,
   getEngineeringResourceHubMetadata,
   getEngineeringResourceHubPage
 } from '@/lib/resources/engineering-resource-hub';
-import {
-  buildBreadcrumbListSchema,
-  buildCollectionPageSchema,
-  buildOrganizationSchema
-} from '@/lib/seo/schema';
 
 type Props = {
   params: Promise<{locale: string}>;
   searchParams?: {category?: string};
 };
-
-function buildResourceCollectionSchema(locale: Locale) {
-  const page = getEngineeringResourceHubPage();
-  const content = page.localeContent[locale];
-
-  return buildCollectionPageSchema(locale, `${page.routes[locale]}#collection`, {
-    name: content.seo.title,
-    description: content.seo.meta_description,
-    url: page.routes[locale],
-    items: content.featuredResources.map((resource) => ({name: resource.title}))
-  });
-}
-
-function buildResourceBreadcrumbSchema(locale: Locale) {
-  const page = getEngineeringResourceHubPage();
-
-  return buildBreadcrumbListSchema(
-    locale,
-    `${page.routes[locale]}#breadcrumb`,
-    getEngineeringResourceHubBreadcrumbs(locale).map((item) => ({name: item.label, item: item.href}))
-  );
-}
 
 function ResourceHubSeoFallback({locale}: {locale: Locale}) {
   const page = getEngineeringResourceHubPage();
@@ -49,9 +20,6 @@ function ResourceHubSeoFallback({locale}: {locale: Locale}) {
 
   return (
     <article className="resource-hub-page" dir={getDirection(locale)}>
-      <SchemaScript schema={buildResourceCollectionSchema(locale)} />
-      <SchemaScript schema={buildResourceBreadcrumbSchema(locale)} />
-      <SchemaScript schema={buildOrganizationSchema(locale, `/${locale}#organization`)} />
       <section className="resource-hub-hero" data-section="resource_hub_hero" aria-labelledby="resource-hub-title">
         <div className="container-shell resource-hub-hero__inner">
           <div className="resource-hub-hero__copy">

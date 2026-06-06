@@ -110,28 +110,24 @@
         },
         "categories": [
           {
-            "id": "panel_systems",
-            "label": "Panel Systems"
+            "id": "technical_guides",
+            "label": "Technical Guides"
           },
           {
-            "id": "roofing_waterproofing",
-            "label": "Roofing & Waterproofing"
+            "id": "execution_details",
+            "label": "Execution Details"
           },
           {
-            "id": "cladding_facades",
-            "label": "Cladding & Facades"
+            "id": "procurement_and_supply",
+            "label": "Procurement & Supply"
           },
           {
-            "id": "shop_drawings",
-            "label": "Shop Drawings"
+            "id": "case_studies",
+            "label": "Case Studies"
           },
           {
-            "id": "procurement",
-            "label": "Procurement & MTO"
-          },
-          {
-            "id": "quality_control",
-            "label": "Quality Control"
+            "id": "datasheets",
+            "label": "Datasheets"
           }
         ],
         "interaction_rules": [
@@ -163,7 +159,7 @@
           {
             "id": "roof_leakage_prevention_checklist",
             "type": "checklist",
-            "category": "roofing_waterproofing",
+            "category": "technical_guides",
             "title": "Industrial Roof Leakage Prevention Checklist",
             "description": "A practical checklist for reviewing slope, drainage, flashings, penetrations, gutters, and installation risk before roofing starts.",
             "difficulty": "Practical",
@@ -174,7 +170,7 @@
           {
             "id": "sandwich_panel_selection_guide",
             "type": "guide",
-            "category": "panel_systems",
+            "category": "technical_guides",
             "title": "Sandwich Panel Selection Guide",
             "description": "Understand panel type, core selection, thickness, joint logic, insulation needs, and project conditions before procurement.",
             "difficulty": "Technical",
@@ -185,7 +181,7 @@
           {
             "id": "shop_drawing_review_guide",
             "type": "guide",
-            "category": "shop_drawings",
+            "category": "execution_details",
             "title": "Shop Drawing Review Guide for Panel Projects",
             "description": "A structured guide for checking panel layout, accessories, flashing logic, quantities, and execution coordination.",
             "difficulty": "Technical",
@@ -195,8 +191,8 @@
           },
           {
             "id": "standing_seam_roof_detail_notes",
-            "type": "technical_note",
-            "category": "roofing_waterproofing",
+            "type": "article",
+            "category": "execution_details",
             "title": "Standing Seam Roof Detail Notes",
             "description": "Key technical points for seams, concealed fastening, roof movement, flashing connections, and drainage coordination.",
             "difficulty": "Advanced",
@@ -207,7 +203,7 @@
           {
             "id": "aluminium_cladding_layout_checklist",
             "type": "checklist",
-            "category": "cladding_facades",
+            "category": "execution_details",
             "title": "Aluminium Cladding Layout Checklist",
             "description": "Review facade grid, panel rhythm, joints, fixing logic, edges, openings, and material optimization before installation.",
             "difficulty": "Practical",
@@ -217,8 +213,8 @@
           },
           {
             "id": "mto_procurement_planning_sheet",
-            "type": "worksheet",
-            "category": "procurement",
+            "type": "checklist",
+            "category": "procurement_and_supply",
             "title": "MTO & Procurement Planning Sheet",
             "description": "A structured worksheet for reviewing quantities, accessories, flashings, fasteners, trims, and procurement gaps.",
             "difficulty": "Practical",

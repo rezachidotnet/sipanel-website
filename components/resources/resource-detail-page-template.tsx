@@ -63,6 +63,7 @@ function ResourcePreviewGraphic({label}: {label: string}) {
 
 export function ResourceDetailPageTemplate({locale, page}: Props) {
   const dir = getDirection(locale);
+  const ui = page.ui;
   const [submitState, setSubmitState] = useState<SubmitState>('idle');
   const [feedback, setFeedback] = useState('');
 
@@ -104,13 +105,13 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       setSubmitState('success');
       setFeedback(
         page.resource.assetStatus === 'pending_resource_file'
-          ? 'Your request was sent. The verified file is pending, so SIPANEL will follow up with the resource status.'
-          : 'Your request was sent. File access can be released after lead review.'
+          ? ui.downloadSuccessPending
+          : ui.downloadSuccess
       );
       form.reset();
     } catch {
       setSubmitState('error');
-      setFeedback('The request could not be sent. Please review the fields or use the consultation form.');
+      setFeedback(ui.downloadError);
     }
   }
 
@@ -129,7 +130,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <section className="resource-detail-hero" data-section="resource_detail_hero" aria-labelledby="resource-detail-title">
         <div className="container-shell resource-detail-hero__inner">
           <div className="resource-detail-hero__copy">
-            <p className="resource-hub-eyebrow">SIPANEL Engineering Resource</p>
+            <p className="resource-hub-eyebrow">{ui.eyebrow}</p>
             <h1 id="resource-detail-title">{page.resource.title}</h1>
             <p>{page.resource.description}</p>
             <div className="resource-detail-hero__actions">
@@ -139,12 +140,12 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
               </a>
               {/* track: rfq_start */}
               <Link className="button-secondary" href="/contact#rfq-form">
-                Request Technical Consultation
+                {ui.requestConsultation}
               </Link>
             </div>
           </div>
           <div className="resource-detail-hero__visual">
-            <ResourcePreviewGraphic label={page.resource.assetStatus === 'pending_resource_file' ? 'Pending verified resource file' : 'Verified resource file'} />
+            <ResourcePreviewGraphic label={page.resource.assetStatus === 'pending_resource_file' ? ui.pendingBadge : ui.verifiedBadge} />
           </div>
         </div>
       </section>
@@ -152,28 +153,28 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <section className="resource-detail-section resource-detail-section--light" data-section="resource_summary" aria-labelledby="resource-summary-title">
         <div className="container-shell resource-detail-section__inner">
           <header>
-            <h2 id="resource-summary-title">Resource Summary</h2>
+            <h2 id="resource-summary-title">{ui.summaryTitle}</h2>
           </header>
           <dl className="resource-detail-summary-grid">
             <div>
-              <dt>Resource type</dt>
-              <dd>{getResourceTypeLabel(page.resource.type)}</dd>
+              <dt>{ui.summaryType}</dt>
+              <dd>{getResourceTypeLabel(page.resource.type, locale)}</dd>
             </div>
             <div>
-              <dt>Category</dt>
+              <dt>{ui.summaryCategory}</dt>
               <dd>{page.categoryLabel}</dd>
             </div>
             <div>
-              <dt>Difficulty</dt>
+              <dt>{ui.summaryDifficulty}</dt>
               <dd>{page.resource.difficulty}</dd>
             </div>
             <div>
-              <dt>Read time</dt>
+              <dt>{ui.summaryReadTime}</dt>
               <dd>{page.resource.readTime}</dd>
             </div>
             <div>
-              <dt>File status</dt>
-              <dd>Pending verified downloadable file</dd>
+              <dt>{ui.summaryFileStatus}</dt>
+              <dd>{ui.summaryFileStatusPending}</dd>
             </div>
           </dl>
         </div>
@@ -182,7 +183,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <section className="resource-detail-section" data-section="technical_context" aria-labelledby="resource-context-title">
         <div className="container-shell resource-detail-context">
           <div>
-            <h2 id="resource-context-title">{page.context.title}</h2>
+            <h2 id="resource-context-title">{ui.contextTitle}</h2>
             <p>{page.context.description}</p>
           </div>
           <ul>
@@ -196,8 +197,8 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <section className="resource-detail-section resource-detail-section--light" data-section="preview_sections" aria-labelledby="resource-preview-title">
         <div className="container-shell resource-detail-section__inner">
           <header>
-            <h2 id="resource-preview-title">Preview Sections</h2>
-            <p>Structured preview only. No downloadable file is shown until a real resource file is available.</p>
+            <h2 id="resource-preview-title">{ui.previewTitle}</h2>
+            <p>{ui.previewNote}</p>
           </header>
           <div className="resource-detail-preview-grid">
             {page.previewSections.map((section) => (
@@ -218,87 +219,100 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       >
         <div className="container-shell resource-detail-download">
           <div className="resource-detail-download__copy">
-            <h2 id="resource-download-title">Request Resource Access</h2>
-            <p>Submit contact details before file access. This resource currently has a structured pending state because no verified PDF is attached.</p>
-            <span>Requested resource: {page.resource.title}</span>
+            <h2 id="resource-download-title">{ui.downloadTitle}</h2>
+            <p>{page.resource.assetStatus === 'pending_resource_file' ? ui.downloadPendingNote : ui.downloadNote}</p>
+            <span>{ui.downloadRequested}: {page.resource.title}</span>
           </div>
 
           <form className="resource-detail-form" onSubmit={handleSubmit}>
             <input className="rfq-form__honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <label>
-              <span>Name</span>
-              <input name="name" required minLength={2} />
+              <span>{ui.fieldName}</span>
+              <input name="name" required minLength={2} autoComplete="name" />
             </label>
             <label>
-              <span>Company</span>
-              <input name="company" />
+              <span>{ui.fieldPhone}</span>
+              <input name="phone" required type="tel" autoComplete="tel" dir="ltr" />
             </label>
             <label>
-              <span>Phone</span>
-              <input name="phone" required type="tel" />
+              <span>{ui.fieldCompany}</span>
+              <input name="company" autoComplete="organization" />
             </label>
             <label>
-              <span>Email</span>
-              <input name="email" type="email" />
-            </label>
-            <label>
-              <span>Project type</span>
+              <span>{ui.fieldProjectType}</span>
               <input name="project_type" defaultValue={page.categoryLabel} />
             </label>
-            <label>
-              <span>Project stage</span>
-              <input name="project_stage" />
-            </label>
             <label className="resource-detail-form__full">
-              <span>Message</span>
-              <textarea name="message" rows={4} defaultValue={`Please send availability status for ${page.resource.title}.`} />
+              <span>{ui.fieldMessage}</span>
+              <textarea name="message" rows={3} />
             </label>
 
             <div className="resource-detail-form__actions">
               <p className={submitState === 'error' ? 'resource-detail-form__error' : 'resource-detail-form__feedback'} aria-live="polite">
-                {feedback || 'The form creates a lead before resource access.'}
+                {feedback}
               </p>
-              {/* track: resource_download_complete */}
               <button className="resource-card__cta" type="submit" disabled={submitState === 'submitting' || submitState === 'success'}>
-                {submitState === 'submitting' ? 'Sending request...' : page.leadCapture.cta}
+                {submitState === 'submitting' ? ui.downloadSending : ui.downloadSubmit}
               </button>
+              <p className="resource-detail-form__privacy">{ui.privacyNote}</p>
             </div>
           </form>
         </div>
       </section>
 
-      <section className="resource-detail-section resource-detail-section--light" data-section="related_services" aria-labelledby="resource-related-services-title">
-        <div className="container-shell resource-detail-section__inner">
-          <header>
-            <h2 id="resource-related-services-title">Related Services</h2>
-          </header>
-          <div className="resource-detail-link-grid">
-            {page.relatedServices.map((service) => (
-              <Link className="resource-related-card" href={service.href} key={service.href}>
-                {/* track: related_service_click */}
-                {service.title}
-              </Link>
-            ))}
+      {page.relatedSystems.length > 0 && (
+        <section className="resource-detail-section resource-detail-section--light" data-section="related_systems" aria-labelledby="resource-related-systems-title">
+          <div className="container-shell resource-detail-section__inner">
+            <header>
+              <h2 id="resource-related-systems-title">{ui.relatedSystemsTitle}</h2>
+            </header>
+            <div className="resource-detail-link-grid">
+              {page.relatedSystems.map((system) => (
+                <Link className="resource-related-card resource-related-card--system" href={system.href} key={system.key}>
+                  <span>{system.name}</span>
+                  <em>{system.description}</em>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="resource-detail-section" data-section="related_resources" aria-labelledby="resource-related-resources-title">
         <div className="container-shell resource-detail-section__inner">
           <header>
-            <h2 id="resource-related-resources-title">Related Resources</h2>
+            <h2 id="resource-related-resources-title">{ui.relatedResourcesTitle}</h2>
           </header>
           <div className="resource-detail-link-grid">
             {page.relatedResources.map((resource) => (
               <Link className="resource-related-card resource-related-card--resource" href={`/resources/${resource.slug}`} key={resource.slug}>
                 {/* track: related_resource_click */}
                 <span>{resource.title}</span>
-                <em>{resource.assetStatus === 'pending_resource_file' ? 'Pending verified downloadable file' : 'Verified downloadable file'}</em>
+                <em>{resource.assetStatus === 'pending_resource_file' ? ui.pendingBadge : ui.verifiedBadge}</em>
               </Link>
             ))}
           </div>
         </div>
       </section>
+
+      {page.relatedProjects.length > 0 && (
+        <section className="resource-detail-section resource-detail-section--light" data-section="related_projects" aria-labelledby="resource-related-projects-title">
+          <div className="container-shell resource-detail-section__inner">
+            <header>
+              <h2 id="resource-related-projects-title">{ui.relatedProjectsTitle}</h2>
+            </header>
+            <div className="resource-detail-link-grid">
+              {page.relatedProjects.map((project) => (
+                <Link className="resource-related-card resource-related-card--project" href={project.href} key={project.slug}>
+                  <span>{project.name}</span>
+                  <em>{project.location}</em>
+                  <em>{project.systemType}</em>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="resource-detail-section resource-detail-section--dark" data-section="conversion_cta" aria-labelledby="resource-detail-cta-title">
         <div className="container-shell resource-detail-conversion">

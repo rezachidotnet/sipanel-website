@@ -1,8 +1,10 @@
 import {Link, type Locale, getDirection} from '@/i18n/routing';
 import {
+  formatResourceDate,
   getEngineeringResourceHubBreadcrumbs,
   getProductionContactInfo,
   getResourceTypeLabel,
+  getStatLabels,
   type ResourceHubCard,
   type ResourceHubCategory,
   type ResourceHubPageData
@@ -10,6 +12,7 @@ import {
 import {
   buildBreadcrumbListSchema,
   buildCollectionPageSchema,
+  buildFaqPageSchema,
   buildOrganizationSchema as buildSharedOrganizationSchema
 } from '@/lib/seo/schema';
 
@@ -58,13 +61,13 @@ function ResourceHubDocumentPreview({label}: {label: string}) {
   );
 }
 
-function ResourceFilters({categories, groupId}: {categories: ResourceHubCategory[]; groupId: string}) {
+function ResourceFilters({categories, groupId, allLabel}: {categories: ResourceHubCategory[]; groupId: string; allLabel: string}) {
   return (
     <div className="resource-filter-controls" aria-label="Resource categories">
       <input className="resource-filter-input" type="radio" name={`resource-category-${groupId}`} id={`resource-filter-${groupId}-all`} defaultChecked />
       <label className="resource-filter-pill" htmlFor={`resource-filter-${groupId}-all`}>
         {/* track: resource_category_filter */}
-        All resources
+        {allLabel}
       </label>
 
       {categories.map((category) => (
@@ -80,10 +83,54 @@ function ResourceFilters({categories, groupId}: {categories: ResourceHubCategory
   );
 }
 
-function ResourceCard({resource, categoryLabel, mode = 'grid'}: {resource: ResourceHubCard; categoryLabel: string; mode?: 'featured' | 'grid'}) {
-  const pendingMessage = resource.leadCapture
-    ? 'Lead capture required before release. Resource file pending verification.'
-    : 'Resource content is pending verified downloadable file.';
+function ResourceCardStats({resource, locale}: {resource: ResourceHubCard; locale: Locale}) {
+  const {preview} = resource;
+  const labels = getStatLabels(locale);
+  const items: Array<{label: string; value: string}> = [];
+
+  if (preview.format) {
+    items.push({label: '', value: preview.format});
+  }
+
+  if (preview.pageCount) {
+    const num = locale === 'fa' || locale === 'ar'
+      ? preview.pageCount.toLocaleString(`${locale}-u-nu-${locale === 'ar' ? 'arab' : 'native'}`)
+      : String(preview.pageCount);
+    items.push({label: '', value: `${num} ${labels.pages}`});
+  }
+
+  if (preview.readingTime) {
+    const match = preview.readingTime.match(/(\d+)/);
+    if (match) {
+      const num = locale === 'fa' || locale === 'ar'
+        ? Number(match[1]).toLocaleString(`${locale}-u-nu-${locale === 'ar' ? 'arab' : 'native'}`)
+        : match[1];
+      items.push({label: labels.readingTime, value: `${num} ${labels.minutes}`});
+    }
+  }
+
+  if (preview.updatedAt) {
+    items.push({label: labels.updated, value: formatResourceDate(preview.updatedAt, locale)});
+  }
+
+  if (items.length === 0) {
+    return null;
+  }
+
+  return (
+    <dl className="resource-hub-card__stats">
+      {items.map((item) => (
+        <div key={item.value}>
+          {item.label ? <dt>{item.label}</dt> : <dt className="sr-only">{item.value}</dt>}
+          <dd>{item.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+function ResourceCard({resource, categoryLabel, locale, ui, mode = 'grid'}: {resource: ResourceHubCard; categoryLabel: string; locale: Locale; ui: {relatedSystem: string; viewDetails: string; pendingFile: string; pendingLead: string; hasRelatedProjects: string}; mode?: 'featured' | 'grid'}) {
+  const pendingMessage = resource.leadCapture ? ui.pendingLead : ui.pendingFile;
 
   return (
     <article
@@ -102,34 +149,28 @@ function ResourceCard({resource, categoryLabel, mode = 'grid'}: {resource: Resou
 
       <div className="resource-card__content">
         <div className="resource-hub-card__meta">
-          <span className="resource-card__type">{getResourceTypeLabel(resource.type)}</span>
+          <span className="resource-card__type">{getResourceTypeLabel(resource.type, locale)}</span>
           <span className="resource-hub-card__category">{categoryLabel}</span>
         </div>
 
         <h3>{resource.title}</h3>
         <p>{resource.description}</p>
 
-        <dl className="resource-hub-card__stats">
-          <div>
-            <dt>Difficulty</dt>
-            <dd>{resource.difficulty}</dd>
-          </div>
-          <div>
-            <dt>Read time</dt>
-            <dd>{resource.readTime}</dd>
-          </div>
-        </dl>
+        <ResourceCardStats resource={resource} locale={locale} />
 
         <span className="resource-card__pending">{pendingMessage}</span>
+        {resource.relatedProjectSlugs.length > 0 && (
+          <span className="resource-card__projects-hint">{ui.hasRelatedProjects}</span>
+        )}
 
         <div className="resource-hub-card__actions">
           {/* track: resource_card_click */}
           <Link href={resource.relatedServiceHref} className="resource-hub-card__link">
-            Related system
+            {ui.relatedSystem}
           </Link>
-          {/* track: resource_download_start */}
-          <Link className="resource-card__cta" href={`/resources/${resource.slug}#download-lead-capture-form`} data-download-mode={mode}>
-            {resource.cta}
+          {/* track: resource_detail_view */}
+          <Link className="resource-card__cta" href={`/resources/${resource.slug}`}>
+            {ui.viewDetails}
           </Link>
         </div>
       </div>
@@ -137,20 +178,7 @@ function ResourceCard({resource, categoryLabel, mode = 'grid'}: {resource: Resou
   );
 }
 
-function FieldLabel({field}: {field: string}) {
-  const labels: Record<string, string> = {
-    name: 'Name',
-    company: 'Company',
-    phone: 'Phone',
-    email: 'Email',
-    project_type: 'Project type',
-    resource_requested: 'Resource requested',
-    project_stage: 'Project stage',
-    message: 'Message'
-  };
 
-  return <>{labels[field] ?? field.replaceAll('_', ' ')}</>;
-}
 
 export function EngineeringResourceHubPage({locale, page}: Props) {
   const dir = getDirection(locale);
@@ -175,11 +203,21 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
 
             <div className="resource-hub-hero__actions">
               {/* track: resource_download_start */}
-              <a href="#lead-capture-download-flow" className="button-primary">
-                {content.hero.primaryCta}
-              </a>
+              {content.hero.primaryCtaDisabled ? (
+                <span className="button-primary button-primary--disabled" aria-disabled="true">
+                  {content.hero.primaryCta}
+                </span>
+              ) : content.hero.primaryCtaHref.startsWith('#') ? (
+                <a href={content.hero.primaryCtaHref} className="button-primary">
+                  {content.hero.primaryCta}
+                </a>
+              ) : (
+                <Link href={content.hero.primaryCtaHref} className="button-primary">
+                  {content.hero.primaryCta}
+                </Link>
+              )}
               {/* track: rfq_start */}
-              <Link href="/contact#rfq-form" className="button-secondary">
+              <Link href={content.hero.secondaryCtaHref} className="button-secondary">
                 {content.hero.secondaryCta}
               </Link>
             </div>
@@ -198,9 +236,9 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
       <section className="resource-hub-section resource-hub-section--light" data-section="resource_categories" aria-labelledby="resource-categories-title">
         <div className="container-shell resource-hub-section__inner">
           <header>
-            <h2 id="resource-categories-title">Browse by Engineering Topic</h2>
+            <h2 id="resource-categories-title">{content.ui.sectionBrowse}</h2>
           </header>
-          <ResourceFilters categories={content.categories} groupId="categories" />
+          <ResourceFilters categories={content.categories} groupId="categories" allLabel={content.allResourcesLabel} />
         </div>
       </section>
 
@@ -208,8 +246,8 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
         <div className="container-shell resource-hub-section__inner">
           <header className="resource-hub-section__header">
             <div>
-              <h2 id="featured-resources-title">Featured Engineering Resources</h2>
-              <p>High-value resources remain marked pending until real downloadable files are verified.</p>
+              <h2 id="featured-resources-title">{content.ui.sectionFeatured}</h2>
+
             </div>
           </header>
 
@@ -219,6 +257,8 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
                 key={resource.id}
                 resource={resource}
                 categoryLabel={categoryLabelById.get(resource.category) ?? resource.category}
+                locale={locale}
+                ui={content.ui}
                 mode="featured"
               />
             ))}
@@ -230,17 +270,16 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
         <div className="container-shell resource-hub-section__inner">
           <header className="resource-hub-section__header">
             <div>
-              <h2 id="resource-grid-title">Engineering Resource Library</h2>
-              <p>Filter by system topic, then start the lead-capture flow for pending downloads.</p>
+              <h2 id="resource-grid-title">{content.ui.sectionLibrary}</h2>
             </div>
             <span className="resource-hub-count">{content.featuredResources.length} resources</span>
           </header>
 
           <div className="resource-hub-filter-shell">
-            <ResourceFilters categories={content.categories} groupId="grid" />
+            <ResourceFilters categories={content.categories} groupId="grid" allLabel={content.allResourcesLabel} />
             <div className="resource-hub-grid">
               {content.featuredResources.map((resource) => (
-                <ResourceCard key={resource.id} resource={resource} categoryLabel={categoryLabelById.get(resource.category) ?? resource.category} />
+                <ResourceCard key={resource.id} resource={resource} categoryLabel={categoryLabelById.get(resource.category) ?? resource.category} locale={locale} ui={content.ui} />
               ))}
             </div>
           </div>
@@ -255,32 +294,38 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
       >
         <div className="container-shell resource-lead-flow">
           <div className="resource-lead-flow__copy">
-            <h2 id="resource-lead-title">{content.leadCapture.title}</h2>
-            <p>Downloads are released through consultation-ready lead capture because verified resource files are not yet attached to the website.</p>
-            <ResourceHubDocumentPreview label="Pending verified resource file" />
+            <h2 id="resource-lead-title">{content.ui.indexLeadTitle}</h2>
+            <p>{content.ui.indexLeadNote}</p>
+            <ResourceHubDocumentPreview label={content.ui.pendingBadge} />
           </div>
 
-          <form className="resource-lead-form" aria-label={content.leadCapture.title}>
-            {content.leadCapture.fields.map((field) => (
-              <label key={field} className={field === 'message' ? 'resource-lead-form__field resource-lead-form__field--full' : 'resource-lead-form__field'}>
-                <span>
-                  <FieldLabel field={field} />
-                </span>
-                {field === 'message' ? (
-                  <textarea name={field} rows={4} placeholder="Project context or requested resource" />
-                ) : (
-                  <input name={field} type={field === 'email' ? 'email' : field === 'phone' ? 'tel' : 'text'} />
-                )}
-              </label>
-            ))}
+          <form className="resource-lead-form" aria-label={content.ui.indexLeadTitle}>
+            <label className="resource-lead-form__field">
+              <span>{content.ui.fieldName}</span>
+              <input name="name" required minLength={2} autoComplete="name" />
+            </label>
+            <label className="resource-lead-form__field">
+              <span>{content.ui.fieldPhone}</span>
+              <input name="phone" required type="tel" autoComplete="tel" dir="ltr" />
+            </label>
+            <label className="resource-lead-form__field">
+              <span>{content.ui.fieldCompany}</span>
+              <input name="company" autoComplete="organization" />
+            </label>
+            <label className="resource-lead-form__field">
+              <span>{content.ui.fieldProjectType}</span>
+              <input name="project_type" />
+            </label>
+            <label className="resource-lead-form__field resource-lead-form__field--full">
+              <span>{content.ui.fieldMessage}</span>
+              <textarea name="message" rows={3} />
+            </label>
 
             <div className="resource-lead-form__actions">
-              {/* track: resource_download_complete */}
-              <p role="status">Submission endpoint pending. The download flow is connected to this lead-capture form.</p>
-              {/* track: resource_download_start */}
               <button type="button" className="resource-card__cta" disabled aria-disabled="true">
-                {content.leadCapture.cta}
+                {content.ui.downloadSubmit}
               </button>
+              <p className="resource-lead-form__privacy">{content.ui.privacyNote}</p>
             </div>
           </form>
         </div>
@@ -289,7 +334,7 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
       <section className="resource-hub-section resource-hub-section--light" data-section="related_services" aria-labelledby="resource-related-title">
         <div className="container-shell resource-hub-section__inner">
           <header className="resource-hub-section__header">
-            <h2 id="resource-related-title">Explore Related Systems</h2>
+            <h2 id="resource-related-title">{content.ui.sectionExplore}</h2>
           </header>
 
           <div className="resource-related-grid">
@@ -301,6 +346,25 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
           </div>
         </div>
       </section>
+
+      {content.faq.items.length > 0 && (
+        <section className="resource-hub-section" data-section="resource_faq" aria-labelledby="resource-hub-faq-title">
+          <SchemaPlaceholder schema={buildFaqPageSchema(locale, `${page.routes[locale]}#faq`, content.faq.items)} />
+          <div className="container-shell resource-hub-section__inner">
+            <header>
+              <h2 id="resource-hub-faq-title">{content.faq.title}</h2>
+            </header>
+            <div className="resource-hub-faq-list">
+              {content.faq.items.map((item) => (
+                <details className="resource-hub-faq-item" key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="resource-hub-section resource-hub-section--dark" data-section="conversion_cta" aria-labelledby="resource-hub-conversion-title">
         <div className="container-shell resource-hub-conversion">

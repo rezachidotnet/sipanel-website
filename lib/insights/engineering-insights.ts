@@ -97,7 +97,7 @@ const categoryLabels: Record<InsightCategoryId, string> = {
 const resources = getEngineeringResourceHubPage().localeContent.en.featuredResources;
 
 function relatedResourceLinks(category: InsightCategoryId): EngineeringInsightLink[] {
-  const byCategory = resources.filter((resource) => resource.category === category).slice(0, 2);
+  const byCategory = resources.filter((resource) => (resource.category as string) === category).slice(0, 2);
   const fallback = resources.filter((resource) => !byCategory.some((item) => item.slug === resource.slug)).slice(0, 2);
   const selected: ResourceHubCard[] = byCategory.length > 0 ? byCategory : fallback;
 

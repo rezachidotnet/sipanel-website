@@ -2264,8 +2264,10 @@ button[aria-disabled='true'] {
 
 .resource-filter-controls {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   overflow-x: auto;
+  padding-inline: var(--container-padding);
+  margin-inline: calc(var(--container-padding) * -1);
   padding-bottom: 4px;
   scrollbar-width: none;
 }
@@ -2331,12 +2333,11 @@ button[aria-disabled='true'] {
   gap: 14px;
 }
 
-.resource-hub-filter-shell:has(#resource-filter-grid-panel_systems:checked) .resource-hub-card:not([data-resource-category='panel_systems']),
-.resource-hub-filter-shell:has(#resource-filter-grid-roofing_waterproofing:checked) .resource-hub-card:not([data-resource-category='roofing_waterproofing']),
-.resource-hub-filter-shell:has(#resource-filter-grid-cladding_facades:checked) .resource-hub-card:not([data-resource-category='cladding_facades']),
-.resource-hub-filter-shell:has(#resource-filter-grid-shop_drawings:checked) .resource-hub-card:not([data-resource-category='shop_drawings']),
-.resource-hub-filter-shell:has(#resource-filter-grid-procurement:checked) .resource-hub-card:not([data-resource-category='procurement']),
-.resource-hub-filter-shell:has(#resource-filter-grid-quality_control:checked) .resource-hub-card:not([data-resource-category='quality_control']) {
+.resource-hub-filter-shell:has(#resource-filter-grid-technical_guides:checked) .resource-hub-card:not([data-resource-category='technical_guides']),
+.resource-hub-filter-shell:has(#resource-filter-grid-execution_details:checked) .resource-hub-card:not([data-resource-category='execution_details']),
+.resource-hub-filter-shell:has(#resource-filter-grid-procurement_and_supply:checked) .resource-hub-card:not([data-resource-category='procurement_and_supply']),
+.resource-hub-filter-shell:has(#resource-filter-grid-case_studies:checked) .resource-hub-card:not([data-resource-category='case_studies']),
+.resource-hub-filter-shell:has(#resource-filter-grid-datasheets:checked) .resource-hub-card:not([data-resource-category='datasheets']) {
   display: none;
 }
 
@@ -2366,7 +2367,7 @@ button[aria-disabled='true'] {
 .resource-hub-card__stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px 12px;
   margin: 0;
 }
 
@@ -2494,6 +2495,41 @@ button[aria-disabled='true'] {
   font-weight: 850;
   line-height: 1.25;
   box-shadow: var(--shadow-subtle);
+}
+
+.resource-hub-faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.resource-hub-faq-item {
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  box-shadow: var(--shadow-subtle);
+}
+
+.resource-hub-faq-item summary {
+  min-height: 48px;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 850;
+  line-height: 1.35;
+  list-style: none;
+}
+
+.resource-hub-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.resource-hub-faq-item p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  padding: 0 16px 16px;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .resource-hub-conversion {
@@ -2625,8 +2661,23 @@ button[aria-disabled='true'] {
   color: var(--color-text-muted);
 }
 
+.resource-card__projects-hint {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.resource-related-card--project em,
+.resource-related-card--system em {
+  color: var(--color-text-muted);
+  font-style: normal;
+  font-size: 13px;
+}
+
 .resource-card__cta {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   min-height: 48px;
   align-items: center;
   justify-content: center;
@@ -2943,6 +2994,14 @@ button[aria-disabled='true'] {
 
 .resource-detail-form__error {
   color: var(--color-danger, #b3261e);
+}
+
+.resource-detail-form__privacy,
+.resource-lead-form__privacy {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .resource-detail-conversion h2,
@@ -7089,6 +7148,18 @@ button[aria-disabled='true'] {
   .resource-hub-featured-grid,
   .resource-hub-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resource-filter-controls {
+    padding-inline: 0;
+    margin-inline: 0;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .resource-card__cta {
+    width: auto;
+    display: inline-flex;
   }
 
   .resource-lead-form {
