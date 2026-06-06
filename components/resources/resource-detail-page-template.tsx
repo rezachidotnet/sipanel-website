@@ -4,6 +4,7 @@ import {useState, type FormEvent} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import type {ResourceDetailPageData} from '@/lib/resources/engineering-resource-hub';
 import {formatResourceDate, getResourceTypeLabel} from '@/lib/resources/engineering-resource-hub';
+import {ResourceBreadcrumb} from '@/components/resources/resource-breadcrumb';
 import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
@@ -39,8 +40,8 @@ function buildDigitalDocumentSchema(locale: Locale, page: ResourceDetailPageData
     description: page.resource.description,
     url: withBaseUrl(page.route[locale]),
     inLanguage: locale,
-    encodingFormat: page.resource.assetStatus === 'pending_resource_file' ? 'pending verified file' : 'application/pdf',
-    isAccessibleForFree: false,
+    encodingFormat: 'application/pdf',
+    isAccessibleForFree: true,
     provider: {
       '@type': 'Organization',
       name: 'SIPANEL'
@@ -181,6 +182,10 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <SchemaPlaceholder schema={buildDigitalDocumentSchema(locale, page)} />
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, page)} />
       <SchemaPlaceholder schema={buildSharedOrganizationSchema(locale, `${page.route[locale]}#organization`)} />
+
+      <div className="container-shell">
+        <ResourceBreadcrumb items={page.breadcrumbs} ariaLabel={ui.breadcrumbAriaLabel} />
+      </div>
 
       <section className="resource-detail-hero" data-section="resource_detail_hero" aria-labelledby="resource-detail-title">
         <div className="container-shell resource-detail-hero__inner">

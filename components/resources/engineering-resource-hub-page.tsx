@@ -9,6 +9,8 @@ import {
   type ResourceHubCategory,
   type ResourceHubPageData
 } from '@/lib/resources/engineering-resource-hub';
+import {ResourceBreadcrumb} from '@/components/resources/resource-breadcrumb';
+import {ResourceSortControl} from '@/components/resources/resource-sort-control';
 import {
   buildBreadcrumbListSchema,
   buildCollectionPageSchema,
@@ -31,8 +33,8 @@ function buildCollectionSchema(locale: Locale, page: ResourceHubPageData) {
   const content = page.localeContent[locale];
 
   return buildCollectionPageSchema(locale, `${page.routes[locale]}#collection`, {
-    name: content.seo.title,
-    description: content.seo.meta_description,
+    name: content.localeSeo.title,
+    description: content.localeSeo.meta_description,
     url: page.routes[locale],
     items: content.featuredResources.map((resource) => ({name: resource.title}))
   });
@@ -89,7 +91,8 @@ function ResourceFilters({
   groupId,
   allLabel,
   locale,
-  totalCount
+  totalCount,
+  filterAriaLabel
 }: {
   categories: ResourceHubCategory[];
   counts: Map<ResourceHubCategory['id'], number>;
@@ -97,9 +100,10 @@ function ResourceFilters({
   allLabel: string;
   locale: Locale;
   totalCount: number;
+  filterAriaLabel: string;
 }) {
   return (
-    <div className="resource-filter-controls" aria-label="Resource categories">
+    <div className="resource-filter-controls" aria-label={filterAriaLabel}>
       <input className="resource-filter-input" type="radio" name={`resource-category-${groupId}`} id={`resource-filter-${groupId}-all`} defaultChecked />
       <label className="resource-filter-pill" htmlFor={`resource-filter-${groupId}-all`}>
         {/* track: resource_category_filter */}
@@ -121,25 +125,6 @@ function ResourceFilters({
   );
 }
 
-function ResourceCategoryOverview({categories, counts, locale}: {categories: ResourceHubCategory[]; counts: Map<ResourceHubCategory['id'], number>; locale: Locale}) {
-  return (
-    <div className="resource-category-overview">
-      {categories.map((category) => {
-        const count = counts.get(category.id) ?? 0;
-
-        return (
-          <article className="resource-category-card" data-resource-count={count} key={category.id}>
-            <div>
-              <h3>{category.label}</h3>
-              <p>{category.description}</p>
-            </div>
-            <span>{formatResourceCount(count, locale)}</span>
-          </article>
-        );
-      })}
-    </div>
-  );
-}
 
 function ResourceProofStrip({metrics, label}: {metrics: Props['proofMetrics']; label: string}) {
   return (
@@ -204,14 +189,21 @@ function ResourceCardStats({resource, locale}: {resource: ResourceHubCard; local
   );
 }
 
-function ResourceCardPreview({resource, locale}: {resource: ResourceHubCard; locale: Locale}) {
+function ResourceCardPreview({resource, locale, priority = false}: {resource: ResourceHubCard; locale: Locale; priority?: boolean}) {
   const image = resource.preview.image;
   const imageAlt = resource.preview.imageAlt?.[locale] ?? resource.title;
 
   if (image) {
     return (
       <div className="resource-card__preview resource-card__preview--image">
-        <Image src={image} alt={imageAlt} fill sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1024px) 45vw, 30vw" />
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1024px) 45vw, 30vw"
+          priority={priority}
+          placeholder="blur"
+        />
       </div>
     );
   }
@@ -238,8 +230,11 @@ function ResourceCard({resource, categoryLabel, locale, ui, mode = 'grid'}: {res
       data-resource-category={resource.category}
       data-asset-status={resource.assetStatus}
       data-lead-capture={resource.leadCaptureStatus}
+      data-sort-date={resource.sortDate}
+      data-sort-order={resource.recommendedOrder}
+      data-sort-readtime={resource.sortReadTime}
     >
-      <ResourceCardPreview resource={resource} locale={locale} />
+      <ResourceCardPreview resource={resource} locale={locale} priority={mode === 'featured'} />
 
       <div className="resource-card__content">
         <div className="resource-hub-card__meta">
@@ -295,6 +290,10 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, page)} />
       <SchemaPlaceholder schema={buildOrganizationSchema(locale)} />
 
+      <div className="container-shell">
+        <ResourceBreadcrumb items={getEngineeringResourceHubBreadcrumbs(locale)} ariaLabel={content.ui.breadcrumbAriaLabel} />
+      </div>
+
       <section className="resource-hub-hero" data-section="resource_hub_hero" aria-labelledby="resource-hub-title">
         <div className="container-shell resource-hub-hero__inner">
           <div className="resource-hub-hero__copy">
@@ -328,8 +327,8 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
           <div className="resource-hub-hero__visual" aria-label={content.hero.visualFallback} role="img">
             <div className="resource-hub-doc-stack">
               <ResourceHubDocumentPreview label={content.hero.visualFallback} />
-              <ResourceHubDocumentPreview label="Panel layout" />
-              <ResourceHubDocumentPreview label="Waterproofing detail" />
+              <ResourceHubDocumentPreview label={content.ui.heroVisualLabel1} />
+              <ResourceHubDocumentPreview label={content.ui.heroVisualLabel2} />
             </div>
           </div>
         </div>
@@ -337,22 +336,10 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
 
       <ResourceProofStrip metrics={proofMetrics} label={proofLabel} />
 
-      <section className="resource-hub-section resource-hub-section--light" data-section="resource_categories" aria-labelledby="resource-categories-title">
-        <div className="container-shell resource-hub-section__inner">
-          <header>
-            <h2 id="resource-categories-title">{content.ui.sectionBrowse}</h2>
-          </header>
-          <ResourceCategoryOverview categories={content.categories} counts={categoryCounts} locale={locale} />
-        </div>
-      </section>
-
       <section className="resource-hub-section" data-section="featured_resources" aria-labelledby="featured-resources-title">
         <div className="container-shell resource-hub-section__inner">
           <header className="resource-hub-section__header">
-            <div>
-              <h2 id="featured-resources-title">{content.ui.sectionFeatured}</h2>
-              <p className="resource-hub-authority-note">{content.ui.authorityNote}</p>
-            </div>
+            <h2 id="featured-resources-title">{content.ui.sectionFeatured}</h2>
           </header>
 
           <div className="resource-hub-featured-grid">
@@ -380,19 +367,68 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
           </header>
 
           <div className="resource-hub-filter-shell">
-            <ResourceFilters
-              categories={filterCategories}
-              counts={categoryCounts}
-              groupId="grid"
-              allLabel={content.allResourcesLabel}
-              locale={locale}
-              totalCount={totalResourceCount}
-            />
+            <div className="resource-hub-filter-bar">
+              <ResourceFilters
+                categories={filterCategories}
+                counts={categoryCounts}
+                groupId="grid"
+                allLabel={content.allResourcesLabel}
+                locale={locale}
+                totalCount={totalResourceCount}
+                filterAriaLabel={content.ui.filterAriaLabel}
+              />
+              <ResourceSortControl
+                labels={{
+                  sortLabel: content.ui.sortLabel,
+                  sortNewest: content.ui.sortNewest,
+                  sortOldest: content.ui.sortOldest,
+                  sortRecommended: content.ui.sortRecommended,
+                  sortShorterRead: content.ui.sortShorterRead
+                }}
+                gridSelector=".resource-hub-grid"
+                hasReadTime={content.featuredResources.some((r) => r.sortReadTime > 0)}
+              />
+            </div>
             <div className="resource-hub-grid">
               {content.featuredResources.map((resource) => (
                 <ResourceCard key={resource.id} resource={resource} categoryLabel={categoryLabelById.get(resource.category) ?? resource.category} locale={locale} ui={content.ui} />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {content.faq.items.length > 0 && (
+        <section className="resource-hub-section" data-section="resource_faq" aria-labelledby="resource-hub-faq-title">
+          <SchemaPlaceholder schema={buildFaqPageSchema(locale, `${page.routes[locale]}#faq`, content.faq.items)} />
+          <div className="container-shell resource-hub-section__inner">
+            <header>
+              <h2 id="resource-hub-faq-title">{content.faq.title}</h2>
+            </header>
+            <div className="resource-hub-faq-list">
+              {content.faq.items.map((item) => (
+                <details className="resource-hub-faq-item" key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="resource-hub-section resource-hub-section--light" data-section="related_services" aria-labelledby="resource-related-title">
+        <div className="container-shell resource-hub-section__inner">
+          <header className="resource-hub-section__header">
+            <h2 id="resource-related-title">{content.ui.sectionExplore}</h2>
+          </header>
+
+          <div className="resource-related-grid">
+            {content.relatedServices.map((service) => (
+              <Link key={service.href} href={service.href} className="resource-related-card">
+                {service.title}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -441,41 +477,6 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
           </form>
         </div>
       </section>
-
-      <section className="resource-hub-section resource-hub-section--light" data-section="related_services" aria-labelledby="resource-related-title">
-        <div className="container-shell resource-hub-section__inner">
-          <header className="resource-hub-section__header">
-            <h2 id="resource-related-title">{content.ui.sectionExplore}</h2>
-          </header>
-
-          <div className="resource-related-grid">
-            {content.relatedServices.map((service) => (
-              <Link key={service.href} href={service.href} className="resource-related-card">
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {content.faq.items.length > 0 && (
-        <section className="resource-hub-section" data-section="resource_faq" aria-labelledby="resource-hub-faq-title">
-          <SchemaPlaceholder schema={buildFaqPageSchema(locale, `${page.routes[locale]}#faq`, content.faq.items)} />
-          <div className="container-shell resource-hub-section__inner">
-            <header>
-              <h2 id="resource-hub-faq-title">{content.faq.title}</h2>
-            </header>
-            <div className="resource-hub-faq-list">
-              {content.faq.items.map((item) => (
-                <details className="resource-hub-faq-item" key={item.question}>
-                  <summary>{item.question}</summary>
-                  <p>{item.answer}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <section className="resource-hub-section resource-hub-section--dark" data-section="conversion_cta" aria-labelledby="resource-hub-conversion-title">
         <div className="container-shell resource-hub-conversion">

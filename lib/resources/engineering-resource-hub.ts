@@ -159,6 +159,9 @@ export type ResourceHubCard = {
   reviewedBy?: string;
   reviewedByRole?: string;
   updatedAt?: string;
+  recommendedOrder: number;
+  sortDate: string;
+  sortReadTime: number;
 };
 
 export type ResourceDetailPageData = {
@@ -249,6 +252,20 @@ const resourceTypeLabels: Record<Locale, Record<ResourceTypeId, string>> = {
   fa: {pdf: 'PDF', guide: 'راهنما', checklist: 'چک\u200cلیست', cad: 'CAD', datasheet: 'دیتاشیت', case_study: 'مطالعه موردی', article: 'مقاله'},
   ar: {pdf: 'PDF', guide: 'دليل', checklist: 'قائمة تحقق', cad: 'CAD', datasheet: 'نشرة بيانات', case_study: 'دراسة حالة', article: 'مقال'},
   ru: {pdf: 'PDF', guide: 'Руководство', checklist: 'Чек-лист', cad: 'CAD', datasheet: 'Технический паспорт', case_study: 'Кейс', article: 'Статья'}
+};
+
+const difficultyLabels: Record<Locale, Record<string, string>> = {
+  en: {Practical: 'Practical', Technical: 'Technical', Advanced: 'Advanced'},
+  fa: {Practical: 'کاربردی', Technical: 'فنی', Advanced: 'پیشرفته'},
+  ar: {Practical: 'عملي', Technical: 'فني', Advanced: 'متقدم'},
+  ru: {Practical: 'Практический', Technical: 'Технический', Advanced: 'Продвинутый'}
+};
+
+const ctaLabels: Record<Locale, Record<string, string>> = {
+  en: {'Download Checklist': 'Download Checklist', 'Download Guide': 'Download Guide', 'Read Technical Note': 'Read Technical Note', 'Download Worksheet': 'Download Worksheet'},
+  fa: {'Download Checklist': 'دانلود چک\u200cلیست', 'Download Guide': 'دانلود راهنما', 'Read Technical Note': 'مطالعه یادداشت فنی', 'Download Worksheet': 'دانلود کاربرگ'},
+  ar: {'Download Checklist': 'تحميل القائمة', 'Download Guide': 'تحميل الدليل', 'Read Technical Note': 'قراءة الملاحظة الفنية', 'Download Worksheet': 'تحميل ورقة العمل'},
+  ru: {'Download Checklist': 'Скачать чек-лист', 'Download Guide': 'Скачать руководство', 'Read Technical Note': 'Читать техзаметку', 'Download Worksheet': 'Скачать лист'}
 };
 
 const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
@@ -726,6 +743,15 @@ export type ResourceHubUiLabels = {
   contextualSystemSuffix: string;
   contextualProjectPrefix: string;
   contextualProjectSuffix: string;
+  sortLabel: string;
+  sortNewest: string;
+  sortOldest: string;
+  sortRecommended: string;
+  sortShorterRead: string;
+  heroVisualLabel1: string;
+  heroVisualLabel2: string;
+  breadcrumbAriaLabel: string;
+  filterAriaLabel: string;
 };
 
 const uiLabels: Record<Locale, ResourceHubUiLabels> = {
@@ -765,7 +791,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     downloadSuccessPending: 'Your request has been received. The resource link or follow-up details will be sent to you.',
     downloadError: 'Could not send your request. Please check the fields and try again.',
     sectionBrowse: 'Browse by Engineering Topic',
-    sectionFeatured: 'Featured Engineering Resources',
+    sectionFeatured: 'Featured Resources',
     sectionLibrary: 'Engineering Resource Library',
     sectionExplore: 'Explore Related Systems',
     relatedSystemsTitle: 'Related Systems',
@@ -795,7 +821,16 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     contextualSystemPrefix: 'For more context on this solution, review',
     contextualSystemSuffix: 'as the related system.',
     contextualProjectPrefix: 'For an executed example of this approach, see',
-    contextualProjectSuffix: 'in the project library.'
+    contextualProjectSuffix: 'in the project library.',
+    sortLabel: 'Sort',
+    sortNewest: 'Newest',
+    sortOldest: 'Oldest',
+    sortRecommended: 'Recommended',
+    sortShorterRead: 'Shorter Reading Time',
+    heroVisualLabel1: 'Panel layout',
+    heroVisualLabel2: 'Waterproofing detail',
+    breadcrumbAriaLabel: 'Breadcrumb',
+    filterAriaLabel: 'Resource categories'
   },
   fa: {
     eyebrow: 'منابع مهندسی SIPANEL',
@@ -833,7 +868,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     downloadSuccessPending: 'درخواست شما ثبت شد. لینک فایل یا اطلاعات تکمیلی برای شما ارسال می\u200cشود.',
     downloadError: 'ارسال درخواست ممکن نشد. لطفاً فیلدها را بررسی کنید و دوباره تلاش کنید.',
     sectionBrowse: 'مرور بر اساس موضوع مهندسی',
-    sectionFeatured: 'منابع مهندسی منتخب',
+    sectionFeatured: 'منابع پیشنهادی',
     sectionLibrary: 'کتابخانه منابع مهندسی',
     sectionExplore: 'سیستم\u200cهای مرتبط را بررسی کنید',
     relatedSystemsTitle: 'پوشانه\u200cهای مرتبط',
@@ -863,7 +898,16 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     contextualSystemPrefix: 'برای آشنایی بیشتر با این راهکار، صفحه',
     contextualSystemSuffix: 'را ببینید.',
     contextualProjectPrefix: 'نمونه اجرای این راهکار را در پروژه',
-    contextualProjectSuffix: 'بررسی کنید.'
+    contextualProjectSuffix: 'بررسی کنید.',
+    sortLabel: 'مرتب\u200cسازی',
+    sortNewest: 'جدیدترین',
+    sortOldest: 'قدیمی\u200cترین',
+    sortRecommended: 'پیشنهادی',
+    sortShorterRead: 'زمان مطالعه کوتاه\u200cتر',
+    heroVisualLabel1: 'چیدمان پانل',
+    heroVisualLabel2: 'دیتیل آب\u200cبندی',
+    breadcrumbAriaLabel: 'مسیر صفحه',
+    filterAriaLabel: 'دسته\u200cبندی منابع'
   },
   ar: {
     eyebrow: 'موارد SIPANEL الهندسية',
@@ -901,7 +945,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     downloadSuccessPending: 'تم استلام طلبك. سيتم إرسال رابط الملف أو تفاصيل المتابعة إليك.',
     downloadError: 'تعذر إرسال الطلب. يرجى مراجعة الحقول والمحاولة مرة أخرى.',
     sectionBrowse: 'تصفح حسب الموضوع الهندسي',
-    sectionFeatured: 'الموارد الهندسية المميزة',
+    sectionFeatured: 'الموارد المميزة',
     sectionLibrary: 'مكتبة الموارد الهندسية',
     sectionExplore: 'استكشف الأنظمة ذات الصلة',
     relatedSystemsTitle: 'أنظمة ذات صلة',
@@ -931,7 +975,16 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     contextualSystemPrefix: 'لمزيد من السياق حول هذا الحل، راجع',
     contextualSystemSuffix: 'كنظام ذي صلة.',
     contextualProjectPrefix: 'لرؤية مثال منفذ لهذا النهج، راجع',
-    contextualProjectSuffix: 'في مكتبة المشاريع.'
+    contextualProjectSuffix: 'في مكتبة المشاريع.',
+    sortLabel: 'ترتيب',
+    sortNewest: 'الأحدث',
+    sortOldest: 'الأقدم',
+    sortRecommended: 'الموصى به',
+    sortShorterRead: 'وقت قراءة أقصر',
+    heroVisualLabel1: 'تخطيط الألواح',
+    heroVisualLabel2: 'تفاصيل العزل المائي',
+    breadcrumbAriaLabel: 'مسار التنقل',
+    filterAriaLabel: 'فئات الموارد'
   },
   ru: {
     eyebrow: 'Инженерный ресурс SIPANEL',
@@ -969,7 +1022,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     downloadSuccessPending: 'Ваш запрос получен. Ссылка на файл или дополнительная информация будет отправлена вам.',
     downloadError: 'Не удалось отправить запрос. Проверьте поля и попробуйте снова.',
     sectionBrowse: 'Обзор по инженерной теме',
-    sectionFeatured: 'Избранные инженерные ресурсы',
+    sectionFeatured: 'Рекомендуемые материалы',
     sectionLibrary: 'Библиотека инженерных ресурсов',
     sectionExplore: 'Изучите связанные системы',
     relatedSystemsTitle: 'Связанные системы',
@@ -999,7 +1052,16 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     contextualSystemPrefix: 'Для дополнительного контекста по этому решению смотрите',
     contextualSystemSuffix: 'как связанную систему.',
     contextualProjectPrefix: 'Пример реализации этого подхода смотрите в проекте',
-    contextualProjectSuffix: 'в библиотеке проектов.'
+    contextualProjectSuffix: 'в библиотеке проектов.',
+    sortLabel: 'Сортировка',
+    sortNewest: 'Сначала новые',
+    sortOldest: 'Сначала старые',
+    sortRecommended: 'Рекомендуемые',
+    sortShorterRead: 'Меньше времени чтения',
+    heroVisualLabel1: 'Раскладка панелей',
+    heroVisualLabel2: 'Узел гидроизоляции',
+    breadcrumbAriaLabel: 'Навигация',
+    filterAriaLabel: 'Категории ресурсов'
   }
 };
 
@@ -1277,23 +1339,31 @@ function buildFeaturedResources(): ResourceHubCard[] {
     throw new Error('Missing featured_resources in engineering_resource_hub.json');
   }
 
-  return resourcesSection.resources.map((resource) => ({
-    id: resource.id,
-    slug: resource.id.replaceAll('_', '-'),
-    type: resource.type,
-    category: resource.category,
-    title: resource.title,
-    description: resource.description,
-    difficulty: resource.difficulty,
-    readTime: resource.read_time,
-    cta: resource.cta,
-    leadCapture: resource.lead_capture,
-    assetStatus: 'pending_resource_file',
-    leadCaptureStatus: resource.lead_capture ? 'pending_lead_capture' : 'not_required',
-    relatedServiceHref: relatedServiceByCategory[resource.category],
-    preview: resourcePreviewData[resource.id] ?? {},
-    relatedProjectSlugs: resourceRelatedProjects[resource.id] ?? []
-  }));
+  return resourcesSection.resources.map((resource, index) => {
+    const preview = resourcePreviewData[resource.id] ?? {};
+    const readTimeMatch = resource.read_time.match(/(\d+)/);
+
+    return {
+      id: resource.id,
+      slug: resource.id.replaceAll('_', '-'),
+      type: resource.type,
+      category: resource.category,
+      title: resource.title,
+      description: resource.description,
+      difficulty: resource.difficulty,
+      readTime: resource.read_time,
+      cta: resource.cta,
+      leadCapture: resource.lead_capture,
+      assetStatus: 'pending_resource_file' as const,
+      leadCaptureStatus: resource.lead_capture ? 'pending_lead_capture' as const : 'not_required' as const,
+      relatedServiceHref: relatedServiceByCategory[resource.category],
+      preview,
+      relatedProjectSlugs: resourceRelatedProjects[resource.id] ?? [],
+      recommendedOrder: index,
+      sortDate: preview.updatedAt ?? '2026-01',
+      sortReadTime: readTimeMatch ? Number.parseInt(readTimeMatch[1], 10) : 0
+    };
+  });
 }
 
 function getSection<T extends ResourceHubSpec['page_sections'][number]['id']>(
@@ -1607,12 +1677,18 @@ function buildLocaleContentMap() {
         ? {...base.hero, ...heroOverrides[locale]}
         : base.hero;
 
+      const localeSystemKeys: SystemKey[] = ['sandwich_panel', 'standing_seam_zip', 'aluminium_cladding'];
+
       const content: ResourceHubLocaleContent = {
         ...base,
         localeSeo: localeSeoData[locale],
         hero: localeHero,
         allResourcesLabel: labels.allResources,
         ui: uiLabels[locale],
+        relatedServices: localeSystemKeys.map((key) => ({
+          title: systemLabels[locale][key].name,
+          href: systemRoutes[key]
+        })),
         categories: categoryIds.map((id) => ({
           id,
           label: labels.categories[id].label,
@@ -1626,6 +1702,8 @@ function buildLocaleContentMap() {
             ...resource,
             title: resourceDetailContent[resource.id]?.[locale]?.title ?? resource.title,
             description: resourceDetailContent[resource.id]?.[locale]?.summary ?? resource.description,
+            difficulty: difficultyLabels[locale][resource.difficulty] ?? resource.difficulty,
+            cta: ctaLabels[locale][resource.cta] ?? resource.cta,
             authorName: resourceAuthority.authorName ?? defaultAuthority.authorName,
             authorRole: resourceAuthority.authorRole ?? defaultAuthority.authorRole,
             reviewedBy: resourceAuthority.reviewedBy ?? defaultAuthority.reviewedBy,
@@ -1731,13 +1809,11 @@ export function getResourceDetailMetadata(locale: Locale, slug: string) {
   }
 
   const content = engineeringResourceHubPage.localeContent[locale];
-  const typeLabel = getResourceTypeLabel(page.resource.type, locale);
-  const categoryLabel = page.categoryLabel;
 
   return buildPageMetadata({
     locale,
     title: `${page.resource.title} | ${content.localeSeo.detailSuffix}`,
-    description: `${typeLabel} — ${categoryLabel}. ${page.detailContent.seoDescription}`,
+    description: page.detailContent.seoDescription,
     routes: page.route,
     type: 'article'
   });
