@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import {Link, type Locale, getDirection} from '@/i18n/routing';
 import {
   formatResourceDate,
   getEngineeringResourceHubBreadcrumbs,
-  getProductionContactInfo,
   getResourceTypeLabel,
   getStatLabels,
   type ResourceHubCard,
@@ -19,6 +19,8 @@ import {
 type Props = {
   locale: Locale;
   page: ResourceHubPageData;
+  proofMetrics: Array<{id: 'yearsExperience' | 'industrialProjects' | 'executedPanelArea'; value: string; label: string}>;
+  proofLabel: string;
 };
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
@@ -61,13 +63,48 @@ function ResourceHubDocumentPreview({label}: {label: string}) {
   );
 }
 
-function ResourceFilters({categories, groupId, allLabel}: {categories: ResourceHubCategory[]; groupId: string; allLabel: string}) {
+function formatResourceCount(count: number, locale: Locale) {
+  const number = locale === 'fa' || locale === 'ar'
+    ? count.toLocaleString(`${locale}-u-nu-${locale === 'ar' ? 'arab' : 'native'}`)
+    : count.toLocaleString(locale);
+
+  if (locale === 'fa') {
+    return `${number} منبع`;
+  }
+
+  if (locale === 'ar') {
+    return `${number} مورد`;
+  }
+
+  if (locale === 'ru') {
+    return `${number} ресурсов`;
+  }
+
+  return `${number} ${count === 1 ? 'resource' : 'resources'}`;
+}
+
+function ResourceFilters({
+  categories,
+  counts,
+  groupId,
+  allLabel,
+  locale,
+  totalCount
+}: {
+  categories: ResourceHubCategory[];
+  counts: Map<ResourceHubCategory['id'], number>;
+  groupId: string;
+  allLabel: string;
+  locale: Locale;
+  totalCount: number;
+}) {
   return (
     <div className="resource-filter-controls" aria-label="Resource categories">
       <input className="resource-filter-input" type="radio" name={`resource-category-${groupId}`} id={`resource-filter-${groupId}-all`} defaultChecked />
       <label className="resource-filter-pill" htmlFor={`resource-filter-${groupId}-all`}>
         {/* track: resource_category_filter */}
-        {allLabel}
+        <span>{allLabel}</span>
+        <em>{formatResourceCount(totalCount, locale)}</em>
       </label>
 
       {categories.map((category) => (
@@ -75,11 +112,49 @@ function ResourceFilters({categories, groupId, allLabel}: {categories: ResourceH
           <input className="resource-filter-input" type="radio" name={`resource-category-${groupId}`} id={`resource-filter-${groupId}-${category.id}`} />
           <label className="resource-filter-pill" htmlFor={`resource-filter-${groupId}-${category.id}`}>
             {/* track: resource_category_filter */}
-            {category.label}
+            <span>{category.label}</span>
+            <em>{formatResourceCount(counts.get(category.id) ?? 0, locale)}</em>
           </label>
         </span>
       ))}
     </div>
+  );
+}
+
+function ResourceCategoryOverview({categories, counts, locale}: {categories: ResourceHubCategory[]; counts: Map<ResourceHubCategory['id'], number>; locale: Locale}) {
+  return (
+    <div className="resource-category-overview">
+      {categories.map((category) => {
+        const count = counts.get(category.id) ?? 0;
+
+        return (
+          <article className="resource-category-card" data-resource-count={count} key={category.id}>
+            <div>
+              <h3>{category.label}</h3>
+              <p>{category.description}</p>
+            </div>
+            <span>{formatResourceCount(count, locale)}</span>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
+function ResourceProofStrip({metrics, label}: {metrics: Props['proofMetrics']; label: string}) {
+  return (
+    <section className="resource-hub-proof-strip" aria-label={label}>
+      <div className="container-shell">
+        <div className="resource-hub-proof-strip__grid">
+          {metrics.map((metric) => (
+            <div className="resource-hub-proof-strip__item" key={metric.id}>
+              <strong>{metric.value}</strong>
+              <span>{metric.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -129,27 +204,49 @@ function ResourceCardStats({resource, locale}: {resource: ResourceHubCard; local
   );
 }
 
+function ResourceCardPreview({resource, locale}: {resource: ResourceHubCard; locale: Locale}) {
+  const image = resource.preview.image;
+  const imageAlt = resource.preview.imageAlt?.[locale] ?? resource.title;
+
+  if (image) {
+    return (
+      <div className="resource-card__preview resource-card__preview--image">
+        <Image src={image} alt={imageAlt} fill sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1024px) 45vw, 30vw" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="resource-card__preview" aria-hidden="true">
+      <span />
+      <span />
+      <span />
+    </div>
+  );
+}
+
 function ResourceCard({resource, categoryLabel, locale, ui, mode = 'grid'}: {resource: ResourceHubCard; categoryLabel: string; locale: Locale; ui: {relatedSystem: string; viewDetails: string; pendingFile: string; pendingLead: string; hasRelatedProjects: string}; mode?: 'featured' | 'grid'}) {
   const pendingMessage = resource.leadCapture ? ui.pendingLead : ui.pendingFile;
+  const typeLabel = getResourceTypeLabel(resource.type, locale);
 
   return (
     <article
       className="resource-card resource-hub-card"
       data-resource-id={resource.id}
+      data-resource-type={resource.type}
       data-category={resource.category}
       data-resource-category={resource.category}
       data-asset-status={resource.assetStatus}
       data-lead-capture={resource.leadCaptureStatus}
     >
-      <div className="resource-card__preview" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
+      <ResourceCardPreview resource={resource} locale={locale} />
 
       <div className="resource-card__content">
         <div className="resource-hub-card__meta">
-          <span className="resource-card__type">{getResourceTypeLabel(resource.type, locale)}</span>
+          <strong className="resource-card__type">
+            <span aria-hidden="true" />
+            {typeLabel}
+          </strong>
           <span className="resource-hub-card__category">{categoryLabel}</span>
         </div>
 
@@ -180,12 +277,17 @@ function ResourceCard({resource, categoryLabel, locale, ui, mode = 'grid'}: {res
 
 
 
-export function EngineeringResourceHubPage({locale, page}: Props) {
+export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLabel}: Props) {
   const dir = getDirection(locale);
   const content = page.localeContent[locale];
-  const contact = getProductionContactInfo();
   const featuredResources = content.featuredResources.slice(0, 3);
   const categoryLabelById = new Map(content.categories.map((category) => [category.id, category.label]));
+  const categoryCounts = content.featuredResources.reduce((counts, resource) => {
+    counts.set(resource.category, (counts.get(resource.category) ?? 0) + 1);
+    return counts;
+  }, new Map<ResourceHubCategory['id'], number>());
+  const filterCategories = content.categories.filter((category) => (categoryCounts.get(category.id) ?? 0) > 0);
+  const totalResourceCount = content.featuredResources.length;
 
   return (
     <article className="resource-hub-page" data-resource-hub="" dir={dir}>
@@ -233,12 +335,14 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
         </div>
       </section>
 
+      <ResourceProofStrip metrics={proofMetrics} label={proofLabel} />
+
       <section className="resource-hub-section resource-hub-section--light" data-section="resource_categories" aria-labelledby="resource-categories-title">
         <div className="container-shell resource-hub-section__inner">
           <header>
             <h2 id="resource-categories-title">{content.ui.sectionBrowse}</h2>
           </header>
-          <ResourceFilters categories={content.categories} groupId="categories" allLabel={content.allResourcesLabel} />
+          <ResourceCategoryOverview categories={content.categories} counts={categoryCounts} locale={locale} />
         </div>
       </section>
 
@@ -247,7 +351,7 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
           <header className="resource-hub-section__header">
             <div>
               <h2 id="featured-resources-title">{content.ui.sectionFeatured}</h2>
-
+              <p className="resource-hub-authority-note">{content.ui.authorityNote}</p>
             </div>
           </header>
 
@@ -272,11 +376,18 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
             <div>
               <h2 id="resource-grid-title">{content.ui.sectionLibrary}</h2>
             </div>
-            <span className="resource-hub-count">{content.featuredResources.length} resources</span>
+            <span className="resource-hub-count">{formatResourceCount(totalResourceCount, locale)}</span>
           </header>
 
           <div className="resource-hub-filter-shell">
-            <ResourceFilters categories={content.categories} groupId="grid" allLabel={content.allResourcesLabel} />
+            <ResourceFilters
+              categories={filterCategories}
+              counts={categoryCounts}
+              groupId="grid"
+              allLabel={content.allResourcesLabel}
+              locale={locale}
+              totalCount={totalResourceCount}
+            />
             <div className="resource-hub-grid">
               {content.featuredResources.map((resource) => (
                 <ResourceCard key={resource.id} resource={resource} categoryLabel={categoryLabelById.get(resource.category) ?? resource.category} locale={locale} ui={content.ui} />
@@ -369,17 +480,22 @@ export function EngineeringResourceHubPage({locale, page}: Props) {
       <section className="resource-hub-section resource-hub-section--dark" data-section="conversion_cta" aria-labelledby="resource-hub-conversion-title">
         <div className="container-shell resource-hub-conversion">
           <div>
-            <h2 id="resource-hub-conversion-title">{content.conversionCta.headline}</h2>
-            <p>{content.conversionCta.text}</p>
+            <h2 id="resource-hub-conversion-title">{content.ui.rfqConversionTitle}</h2>
+            <p>{content.ui.rfqConversionDescription}</p>
+            <ul className="resource-hub-conversion__proof" aria-label={content.ui.rfqConversionHelper}>
+              {content.ui.rfqConversionTrust.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
           <div className="resource-hub-conversion__actions">
             {/* track: rfq_start */}
             <Link href="/contact#rfq-form" className="button-primary">
-              {content.conversionCta.primary_cta}
+              {content.ui.rfqConversionPrimary}
             </Link>
-            <a className="button-secondary" href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}>
-              {content.conversionCta.secondary_cta}
-            </a>
+            <Link href="/contact" className="button-secondary">
+              {content.ui.rfqConversionSecondary}
+            </Link>
           </div>
         </div>
       </section>

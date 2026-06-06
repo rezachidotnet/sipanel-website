@@ -3,7 +3,7 @@
 import {useState, type FormEvent} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import type {ResourceDetailPageData} from '@/lib/resources/engineering-resource-hub';
-import {getResourceTypeLabel} from '@/lib/resources/engineering-resource-hub';
+import {formatResourceDate, getResourceTypeLabel} from '@/lib/resources/engineering-resource-hub';
 import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
@@ -58,6 +58,61 @@ function ResourcePreviewGraphic({label}: {label: string}) {
       </div>
       <em>{label}</em>
     </div>
+  );
+}
+
+function ResourceContextLinks({page}: {page: ResourceDetailPageData}) {
+  const system = page.relatedSystems[0];
+  const project = page.relatedProjects[0];
+
+  if (!system && !project) {
+    return null;
+  }
+
+  return (
+    <div className="resource-detail-context-links">
+      {system ? (
+        <p>
+          {page.ui.contextualSystemPrefix}{' '}
+          <Link href={system.href}>{system.name}</Link>{' '}
+          {page.ui.contextualSystemSuffix}
+        </p>
+      ) : null}
+      {project ? (
+        <p>
+          {page.ui.contextualProjectPrefix}{' '}
+          <Link href={project.href}>{project.name}</Link>{' '}
+          {page.ui.contextualProjectSuffix}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+function ResourceAuthorityBlock({locale, page}: {locale: Locale; page: ResourceDetailPageData}) {
+  const {resource, ui} = page;
+  const items = [
+    resource.authorName ? {label: ui.preparedByLabel, name: resource.authorName, role: resource.authorRole} : null,
+    resource.reviewedBy ? {label: ui.reviewedByLabel, name: resource.reviewedBy, role: resource.reviewedByRole} : null,
+    resource.updatedAt ? {label: ui.lastUpdatedLabel, name: formatResourceDate(resource.updatedAt, locale)} : null
+  ].filter((item): item is {label: string; name: string; role?: string} => item !== null);
+
+  if (items.length === 0) {
+    return null;
+  }
+
+  return (
+    <dl className="resource-detail-authority">
+      {items.map((item) => (
+        <div key={item.label}>
+          <dt>{item.label}</dt>
+          <dd>
+            <span>{item.name}</span>
+            {item.role ? <em>{item.role}</em> : null}
+          </dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 
@@ -120,7 +175,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       {/* track: resource_detail_view */}
       <SchemaPlaceholder schema={buildArticleSchema(locale, `${page.route[locale]}#article`, {
         headline: page.resource.title,
-        description: page.resource.description,
+        description: page.detailContent.seoDescription,
         url: page.route[locale]
       })} />
       <SchemaPlaceholder schema={buildDigitalDocumentSchema(locale, page)} />
@@ -132,7 +187,8 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           <div className="resource-detail-hero__copy">
             <p className="resource-hub-eyebrow">{ui.eyebrow}</p>
             <h1 id="resource-detail-title">{page.resource.title}</h1>
-            <p>{page.resource.description}</p>
+            <p>{page.detailContent.summary}</p>
+            <ResourceAuthorityBlock locale={locale} page={page} />
             <div className="resource-detail-hero__actions">
               {/* track: resource_download_start */}
               <a className="button-primary" href="#download-lead-capture-form">
@@ -180,6 +236,30 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
+      <section className="resource-detail-section" data-section="resource_introduction" aria-labelledby="resource-introduction-title">
+        <div className="container-shell resource-detail-prose">
+          <h2 id="resource-introduction-title">{ui.introductionTitle}</h2>
+          <p className="resource-detail-authority-note">{ui.authorityNote}</p>
+          <p>{page.detailContent.introduction}</p>
+          <ResourceContextLinks page={page} />
+        </div>
+      </section>
+
+      <section className="resource-detail-section resource-detail-section--light" data-section="use_when" aria-labelledby="resource-use-when-title">
+        <div className="container-shell resource-detail-section__inner">
+          <header>
+            <h2 id="resource-use-when-title">{ui.useWhenTitle}</h2>
+          </header>
+          <div className="resource-detail-list-grid">
+            {page.detailContent.useWhen.map((item) => (
+              <article className="resource-detail-mini-card" key={item}>
+                <h3>{item}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="resource-detail-section" data-section="technical_context" aria-labelledby="resource-context-title">
         <div className="container-shell resource-detail-context">
           <div>
@@ -197,14 +277,30 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <section className="resource-detail-section resource-detail-section--light" data-section="preview_sections" aria-labelledby="resource-preview-title">
         <div className="container-shell resource-detail-section__inner">
           <header>
-            <h2 id="resource-preview-title">{ui.previewTitle}</h2>
+            <h2 id="resource-preview-title">{ui.keyTechnicalPointsTitle}</h2>
             <p>{ui.previewNote}</p>
           </header>
           <div className="resource-detail-preview-grid">
-            {page.previewSections.map((section) => (
-              <article className="resource-detail-preview-card" key={section.title}>
-                <h3>{section.title}</h3>
-                <p>{section.description}</p>
+            {page.detailContent.keyPoints.map((point) => (
+              <article className="resource-detail-preview-card" key={point.title}>
+                <h3>{point.title}</h3>
+                <p>{point.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="resource-detail-section" data-section="common_mistakes" aria-labelledby="resource-mistakes-title">
+        <div className="container-shell resource-detail-section__inner">
+          <header>
+            <h2 id="resource-mistakes-title">{ui.commonMistakesTitle}</h2>
+          </header>
+          <div className="resource-detail-preview-grid">
+            {page.detailContent.commonMistakes.map((mistake) => (
+              <article className="resource-detail-preview-card resource-detail-preview-card--warning" key={mistake.title}>
+                <h3>{mistake.title}</h3>
+                <p>{mistake.description}</p>
               </article>
             ))}
           </div>
@@ -300,11 +396,13 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           <div className="container-shell resource-detail-section__inner">
             <header>
               <h2 id="resource-related-projects-title">{ui.relatedProjectsTitle}</h2>
+              <p>{ui.relatedProjectsProofIntro}</p>
             </header>
             <div className="resource-detail-link-grid">
               {page.relatedProjects.map((project) => (
                 <Link className="resource-related-card resource-related-card--project" href={project.href} key={project.slug}>
                   <span>{project.name}</span>
+                  {project.reason ? <p>{project.reason}</p> : null}
                   <em>{project.location}</em>
                   <em>{project.systemType}</em>
                 </Link>
@@ -317,17 +415,14 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       <section className="resource-detail-section resource-detail-section--dark" data-section="conversion_cta" aria-labelledby="resource-detail-cta-title">
         <div className="container-shell resource-detail-conversion">
           <div>
-            <h2 id="resource-detail-cta-title">{page.conversionCta.headline}</h2>
-            <p>{page.conversionCta.text}</p>
+            <h2 id="resource-detail-cta-title">{ui.detailConsultationTitle}</h2>
+            <p>{ui.rfqConversionHelper}</p>
           </div>
           <div className="resource-detail-conversion__actions">
             {/* track: rfq_start */}
             <Link href="/contact#rfq-form" className="button-primary">
-              {page.conversionCta.primary_cta}
+              {ui.detailConsultationButton}
             </Link>
-            <a href="#download-lead-capture-form" className="button-secondary">
-              {page.conversionCta.secondary_cta}
-            </a>
           </div>
         </div>
       </section>
