@@ -8,8 +8,13 @@ type Props = {
 };
 
 function LogoCard({logo, index}: {logo: (typeof clientLogos)[number]; index: number}) {
+  const style: React.CSSProperties = {
+    animationDelay: `${index * 60}ms`,
+    ...(logo.scale ? {'--logo-scale': logo.scale} as React.CSSProperties : {})
+  };
+
   return (
-    <div className="client-logo-card" key={logo.id} style={{animationDelay: `${index * 60}ms`}}>
+    <div className="client-logo-card" key={logo.id} style={style}>
       <Image
         src={logo.src}
         alt={logo.alt}
@@ -33,13 +38,11 @@ export function ClientLogosSection({variant = 'grid'}: Props) {
           <p className="client-logos-carousel__note">{t('description')}</p>
         </div>
         <div className="client-logos-carousel">
-          <div className="client-logos-carousel__fade client-logos-carousel__fade--start" aria-hidden="true" />
           <ClientLogosCarouselScroll>
             {clientLogos.map((logo, index) => (
               <LogoCard logo={logo} index={index} key={logo.id} />
             ))}
           </ClientLogosCarouselScroll>
-          <div className="client-logos-carousel__fade client-logos-carousel__fade--end" aria-hidden="true" />
         </div>
       </section>
     );

@@ -6,6 +6,7 @@ export type ClientLogo = {
   height: number;
   sector?: string;
   alt: string;
+  scale?: number;
 };
 
 export const clientLogos: ClientLogo[] = [
@@ -16,7 +17,8 @@ export const clientLogos: ClientLogo[] = [
     width: 200,
     height: 200,
     sector: 'petrochemical',
-    alt: 'Maru Petrochemical Company'
+    alt: 'Maru Petrochemical Company',
+    scale: 1.3
   },
   {
     id: 'jam-petrochemical',
@@ -52,7 +54,8 @@ export const clientLogos: ClientLogo[] = [
     width: 200,
     height: 134,
     sector: 'industrial',
-    alt: 'Parsgostar Industrial Group'
+    alt: 'Parsgostar Industrial Group',
+    scale: 1.25
   },
   {
     id: 'aryasasool',
@@ -61,7 +64,8 @@ export const clientLogos: ClientLogo[] = [
     width: 200,
     height: 200,
     sector: 'petrochemical',
-    alt: 'Arya Sasol Polymer Company'
+    alt: 'Arya Sasol Polymer Company',
+    scale: 1.35
   },
   {
     id: 'pars-garma',
@@ -106,7 +110,8 @@ export const clientLogos: ClientLogo[] = [
     width: 200,
     height: 134,
     sector: 'infrastructure',
-    alt: 'Tehran Imam Khomeini Airport'
+    alt: 'Tehran Imam Khomeini Airport',
+    scale: 1.2
   },
   {
     id: 'shahre-foroodgahi',
