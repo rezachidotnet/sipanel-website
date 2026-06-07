@@ -1,11 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import {useRef} from 'react';
+import {useRef, useState} from 'react';
 import {useTranslations} from 'next-intl';
 import logo from '@/assets/brand/logos/logo.png';
 import {Link, locales, usePathname, type Locale} from '@/i18n/routing';
 import {LanguageSwitcher} from '@/components/localization/language-switcher';
+import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
+import {trackCatalogEvent} from '@/lib/analytics/events';
 
 const navKeys = ['home', 'systems', 'projects', 'process', 'resources', 'about', 'contact'] as const;
 const navHref: Record<(typeof navKeys)[number], string> = {
@@ -61,11 +63,18 @@ export function Header({locale}: Props) {
   const header = useTranslations('header');
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+  const [catalogOpen, setCatalogOpen] = useState(false);
 
   function closeMobileMenu() {
     if (mobileMenuRef.current) {
       mobileMenuRef.current.open = false;
     }
+  }
+
+  function handleCatalogClick() {
+    trackCatalogEvent('catalog_cta_clicked', {component_id: 'header_cta'});
+    closeMobileMenu();
+    setCatalogOpen(true);
   }
 
   return (
@@ -102,10 +111,10 @@ export function Header({locale}: Props) {
           </nav>
 
           <div className="main-header__actions">
-            {/* track: header_cta_click */}
-            <Link href="/contact#rfq-form" className="header-cta">
+            {/* track: catalog_cta_clicked */}
+            <button type="button" className="header-cta" onClick={handleCatalogClick}>
               {header('cta')}
-            </Link>
+            </button>
             {/* track: language_switcher_open, language_change */}
             <div className="desktop-language">
               <LanguageSwitcher activeLocale={locale} />
@@ -139,14 +148,16 @@ export function Header({locale}: Props) {
                     );
                   })}
                 </nav>
-                <Link href="/contact#rfq-form" className="mobile-menu__cta" onClick={closeMobileMenu}>
+                <button type="button" className="mobile-menu__cta" onClick={handleCatalogClick}>
                   {header('cta')}
-                </Link>
+                </button>
               </div>
             </details>
           </div>
         </div>
       </div>
+
+      <CatalogDownloadModal isOpen={catalogOpen} onClose={() => setCatalogOpen(false)} />
     </header>
   );
 }

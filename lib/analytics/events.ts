@@ -57,6 +57,9 @@ export const approvedAnalyticsEvents = [
   'faq_expand',
   'faq_related_link_click',
   'faq_cta_click',
+  'catalog_cta_clicked',
+  'catalog_form_submitted',
+  'catalog_download_started',
   'scroll_25',
   'scroll_50',
   'scroll_75',
@@ -238,6 +241,13 @@ export function trackResourceEvent(eventName: 'resource_filter_use' | 'resource_
 
 export function trackCaseStudyEvent(eventName: 'case_study_view' | 'case_study_swipe' | 'case_study_expand' | 'case_study_cta_click' | 'case_study_gallery_open' | 'case_study_image_zoom' | 'related_case_study_click', params: AnalyticsParams = {}) {
   return trackEvent(eventName, params);
+}
+
+export function trackCatalogEvent(eventName: 'catalog_cta_clicked' | 'catalog_form_submitted' | 'catalog_download_started', params: AnalyticsParams = {}) {
+  return trackEvent(eventName, {
+    lead_type: 'catalog_download',
+    ...params
+  });
 }
 
 export function trackContactClick(type: 'phone' | 'whatsapp' | 'email' | 'map', component_id?: string) {

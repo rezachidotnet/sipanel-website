@@ -1,13 +1,21 @@
 'use client';
 
+import {useState} from 'react';
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
-import heroImage from '@/assets/projects/andimeshk/photos/andimeshk-hero-desktop.webp';
+import heroImage from '@/assets/projects/mahshahr_taxi/photos/mahshahr_taxi-hero-desktop.webp';
 import {Link} from '@/i18n/routing';
-import {trackCtaClick} from '@/lib/analytics/events';
+import {trackCtaClick, trackCatalogEvent} from '@/lib/analytics/events';
+import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
 
 export function HeroSection() {
   const t = useTranslations('hero');
+  const [catalogOpen, setCatalogOpen] = useState(false);
+
+  function handleCatalogClick() {
+    trackCatalogEvent('catalog_cta_clicked', {component_id: 'homepage_hero'});
+    setCatalogOpen(true);
+  }
 
   return (
     <section className="hero-section" aria-labelledby="homepage-hero-title">
@@ -18,14 +26,14 @@ export function HeroSection() {
           <p className="hero-copy__subheadline">{t('subheadline')}</p>
 
           <div className="hero-copy__actions">
-            {/* track: hero_primary_cta_click */}
-            <Link
-              href="/#rfq"
+            {/* track: catalog_cta_clicked */}
+            <button
+              type="button"
               className="button-primary"
-              onClick={() => trackCtaClick('homepage_hero', t('primaryCta'), 'hero_primary_cta_click')}
+              onClick={handleCatalogClick}
             >
               {t('primaryCta')}
-            </Link>
+            </button>
             {/* track: hero_secondary_cta_click */}
             <Link
               href="/contact"
@@ -49,6 +57,8 @@ export function HeroSection() {
           <div className="hero-visual__overlay" aria-hidden="true" />
         </div>
       </div>
+
+      <CatalogDownloadModal isOpen={catalogOpen} onClose={() => setCatalogOpen(false)} />
     </section>
   );
 }
