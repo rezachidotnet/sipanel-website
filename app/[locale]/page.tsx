@@ -41,7 +41,7 @@ export default async function HomePage({params}: Props) {
       <SchemaScript schema={localizedLocalBusinessSchema} />
       <HeroSection />
       <TrustBar />
-      <ClientLogosSection />
+      <ClientLogosSection variant="carousel" />
       <EngineeringProofSnapshot />
       <StickyMobileCta />
       <ProcessSection />
