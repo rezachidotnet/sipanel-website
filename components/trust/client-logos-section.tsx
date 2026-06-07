@@ -15,8 +15,8 @@ export function ClientLogosSection() {
         </header>
 
         <div className="client-logos-grid">
-          {clientLogos.map((logo) => (
-            <div className="client-logo-card" key={logo.id}>
+          {clientLogos.map((logo, index) => (
+            <div className="client-logo-card" key={logo.id} style={{animationDelay: `${index * 60}ms`}}>
               <Image
                 src={logo.src}
                 alt={logo.alt}

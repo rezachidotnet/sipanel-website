@@ -1695,12 +1695,12 @@ button[aria-disabled='true'] {
 
 .client-logos-section {
   background: var(--color-gray-background);
-  padding-block: 56px;
+  padding-block: 40px;
 }
 
 .client-logos-section__inner {
   display: grid;
-  gap: 28px;
+  gap: 24px;
 }
 
 .client-logos-section__header {
@@ -1748,12 +1748,15 @@ button[aria-disabled='true'] {
   border-radius: var(--radius-card);
   background: var(--color-white);
   padding: 16px 12px;
-  transition: border-color 200ms ease-out, box-shadow 200ms ease-out;
+  transform: translateY(0) scale(1);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  animation: client-logo-enter 0.5s ease both;
 }
 
 .client-logo-card:hover {
-  border-color: rgba(255, 106, 0, 0.25);
-  box-shadow: 0 2px 8px rgba(15, 17, 19, 0.06);
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgba(255, 106, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(15, 17, 19, 0.08), 0 0 0 1px rgba(255, 106, 0, 0.1);
 }
 
 .client-logo-card__image {
@@ -1763,13 +1766,40 @@ button[aria-disabled='true'] {
   max-height: 56px;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.7;
-  transition: filter 250ms ease-out, opacity 250ms ease-out;
+  opacity: 0.65;
+  transition: filter 220ms ease, opacity 220ms ease;
 }
 
 .client-logo-card:hover .client-logo-card__image {
   filter: grayscale(0%);
   opacity: 1;
+}
+
+@keyframes client-logo-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-card {
+    animation: none;
+    transition: border-color 220ms ease, box-shadow 220ms ease;
+  }
+
+  .client-logo-card:hover {
+    transform: none;
+  }
+
+  .client-logo-card__image {
+    transition: filter 220ms ease, opacity 220ms ease;
+  }
 }
 
 .process-section {
@@ -8599,11 +8629,11 @@ button[aria-disabled='true'] {
   }
 
   .client-logos-section {
-    padding-block: 80px;
+    padding-block: 60px;
   }
 
   .client-logos-section__inner {
-    gap: 36px;
+    gap: 32px;
   }
 
   .client-logos-section__header h2 {
