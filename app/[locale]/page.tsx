@@ -8,6 +8,7 @@ import {ResourcesPreview} from '@/components/home/resources-preview';
 import {RfqSection} from '@/components/home/rfq-section';
 import {StickyMobileCta} from '@/components/home/sticky-mobile-cta';
 import {TrustBar} from '@/components/home/trust-bar';
+import {ClientLogosSection} from '@/components/trust/client-logos-section';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {locales, type Locale} from '@/i18n/routing';
 import {buildLocalBusinessSchema, buildOrganizationSchema} from '@/lib/seo/schema';
@@ -41,6 +42,7 @@ export default async function HomePage({params}: Props) {
       <HeroSection />
       <TrustBar />
       <EngineeringProofSnapshot />
+      <ClientLogosSection />
       <StickyMobileCta />
       <ProcessSection />
       <CaseStudiesPreview />

@@ -294,5 +294,10 @@
     "error": "Submission failed. Please try again.",
     "close": "Close",
     "privacy": "Your information is used only for sending the catalog and technical follow-up."
+  },
+  "clientLogos": {
+    "eyebrow": "Trusted by Industrial Clients",
+    "title": "Companies and projects that have trusted SIPANEL experience",
+    "description": "Our experience across industrial, petrochemical, steel and commercial projects supports the trust placed in SIPANEL engineering solutions."
   }
 }

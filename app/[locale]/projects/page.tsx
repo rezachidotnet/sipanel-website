@@ -3,6 +3,7 @@ import type {Metadata} from 'next';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
+import {ClientLogosSection} from '@/components/trust/client-logos-section';
 import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
@@ -689,6 +690,8 @@ export default async function ProjectsOverviewPage({params}: Props) {
           </div>
         </div>
       </section>
+
+      <ClientLogosSection />
 
       <section className="projects-index-section" data-section="projects_case_studies" aria-labelledby="projects-case-studies-title">
         <div className="container-shell projects-index-section__inner">
