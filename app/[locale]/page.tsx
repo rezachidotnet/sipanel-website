@@ -4,6 +4,7 @@ import {ComparisonSection} from '@/components/home/comparison-section';
 import {EngineeringProofSnapshot} from '@/components/home/engineering-proof-snapshot';
 import {HeroSection} from '@/components/home/hero-section';
 import {ProcessSection} from '@/components/home/process-section';
+import {SystemsShowcase} from '@/components/home/systems-showcase';
 import {ResourcesPreview} from '@/components/home/resources-preview';
 import {RfqSection} from '@/components/home/rfq-section';
 import {StickyMobileCta} from '@/components/home/sticky-mobile-cta';
@@ -42,6 +43,7 @@ export default async function HomePage({params}: Props) {
       <HeroSection />
       <TrustBar />
       <ClientLogosSection variant="carousel" />
+      <SystemsShowcase />
       <EngineeringProofSnapshot />
       <StickyMobileCta />
       <ProcessSection />

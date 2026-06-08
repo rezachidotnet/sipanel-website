@@ -299,5 +299,16 @@
     "eyebrow": "Trusted by Industrial Clients",
     "title": "Companies and projects that have trusted SIPANEL experience",
     "description": "In industrial, petrochemical and commercial projects"
+  },
+  "systemsShowcase": {
+    "title": "Industrial Envelope Systems",
+    "description": "From engineering and shop drawings to procurement and installation, SIPANEL delivers integrated industrial envelope systems.",
+    "learnMore": "Learn More",
+    "sandwichPanel": "Sandwich Panel Systems",
+    "sandwichPanelDesc": "Insulated wall and roof panels with thermal insulation cores for industrial buildings.",
+    "standingSeam": "Standing Seam & ZIP Roofing",
+    "standingSeamDesc": "Concealed-fastener roofing with long-term waterproofing and flashing coordination.",
+    "aluminiumCladding": "Aluminium Cladding & Covering",
+    "aluminiumCladdingDesc": "Facade cladding systems with flashing details and weatherproofing for industrial envelopes."
   }
 }

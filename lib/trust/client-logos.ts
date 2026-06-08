@@ -6,34 +6,32 @@ export type ClientLogo = {
   height: number;
   sector?: string;
   alt: string;
-  scale?: number;
 };
 
 export const clientLogos: ClientLogo[] = [
   {
     id: 'maru-petrochemical',
     name: 'Maru Petrochemical',
-    src: '/clients/maru-petrochemical.png',
-    width: 200,
+    src: '/clients/maru-petrochemical.webp',
+    width: 400,
     height: 200,
     sector: 'petrochemical',
-    alt: 'Maru Petrochemical Company',
-    scale: 1.3
+    alt: 'Maru Petrochemical Company'
   },
   {
     id: 'jam-petrochemical',
     name: 'Jam Petrochemical',
-    src: '/clients/jam-petrochemical.png',
-    width: 200,
-    height: 90,
+    src: '/clients/jam-petrochemical.webp',
+    width: 400,
+    height: 200,
     sector: 'petrochemical',
     alt: 'Jam Petrochemical Complex'
   },
   {
     id: 'tondguyan-petrochemical',
     name: 'Tondguyan Petrochemical',
-    src: '/clients/tondguyan-petrochemical.png',
-    width: 200,
+    src: '/clients/tondguyan-petrochemical.webp',
+    width: 400,
     height: 200,
     sector: 'petrochemical',
     alt: 'Tondguyan Petrochemical Company'
@@ -41,8 +39,8 @@ export const clientLogos: ClientLogo[] = [
   {
     id: 'fanavaran',
     name: 'Fanavaran Petrochemical',
-    src: '/clients/fanavaran.png',
-    width: 200,
+    src: '/clients/fanavaran.webp',
+    width: 400,
     height: 200,
     sector: 'petrochemical',
     alt: 'Fanavaran Petrochemical Company'
@@ -50,28 +48,26 @@ export const clientLogos: ClientLogo[] = [
   {
     id: 'parsgostar',
     name: 'Parsgostar',
-    src: '/clients/parsgostar.png',
-    width: 200,
-    height: 134,
+    src: '/clients/parsgostar.webp',
+    width: 400,
+    height: 200,
     sector: 'industrial',
-    alt: 'Parsgostar Industrial Group',
-    scale: 1.25
+    alt: 'Parsgostar Industrial Group'
   },
   {
     id: 'aryasasool',
     name: 'Arya Sasol',
-    src: '/clients/aryasasool.png',
-    width: 200,
+    src: '/clients/aryasasool.webp',
+    width: 400,
     height: 200,
     sector: 'petrochemical',
-    alt: 'Arya Sasol Polymer Company',
-    scale: 1.35
+    alt: 'Arya Sasol Polymer Company'
   },
   {
     id: 'pars-garma',
     name: 'Pars Garma',
-    src: '/clients/pars-garma.jpg',
-    width: 200,
+    src: '/clients/pars-garma.webp',
+    width: 400,
     height: 200,
     sector: 'industrial',
     alt: 'Pars Garma Industrial Company'
@@ -79,9 +75,9 @@ export const clientLogos: ClientLogo[] = [
   {
     id: 'zamzam-motors',
     name: 'Zamzam Motors',
-    src: '/clients/zamzam-motors.png',
-    width: 200,
-    height: 124,
+    src: '/clients/zamzam-motors.webp',
+    width: 400,
+    height: 200,
     sector: 'automotive',
     alt: 'Zamzam Motors Group'
   },
@@ -89,44 +85,43 @@ export const clientLogos: ClientLogo[] = [
     id: 'hyperme',
     name: 'Hyperme',
     src: '/clients/hyperme.webp',
-    width: 200,
-    height: 74,
+    width: 400,
+    height: 200,
     sector: 'commercial',
     alt: 'Hyperme Commercial Complex'
   },
   {
     id: 'artesh',
     name: 'Army of the Islamic Republic',
-    src: '/clients/artesh.jpg',
-    width: 200,
-    height: 113,
+    src: '/clients/artesh.webp',
+    width: 400,
+    height: 200,
     sector: 'defense',
     alt: 'Army of the Islamic Republic of Iran'
   },
   {
     id: 'foroodgah-teh',
     name: 'Tehran Airport',
-    src: '/clients/foroodgah-teh.png',
-    width: 200,
-    height: 134,
+    src: '/clients/foroodgah-teh.webp',
+    width: 400,
+    height: 200,
     sector: 'infrastructure',
-    alt: 'Tehran Imam Khomeini Airport',
-    scale: 1.2
+    alt: 'Tehran Imam Khomeini Airport'
   },
   {
     id: 'shahre-foroodgahi',
     name: 'Airport City',
     src: '/clients/shahre-foroodgahi.webp',
-    width: 200,
-    height: 96,
+    width: 400,
+    height: 200,
     sector: 'infrastructure',
     alt: 'Airport City Development'
   },
   {
     id: 'samandehi-esfahan',
     name: 'Samandehi Isfahan',
-    src: '/clients/samandehi-esfahan.png',
-    width: 200,
+    src: '/clients/samandehi-esfahan.webp',
+    width: 400,
     height: 200,
     sector: 'municipal',
     alt: 'Isfahan Urban Development Organization'
@@ -134,9 +129,9 @@ export const clientLogos: ClientLogo[] = [
   {
     id: 'mese-sarchecshme',
     name: 'Mes-e Sarcheshmeh',
-    src: '/clients/mese-sarchecshme.png',
-    width: 200,
-    height: 82,
+    src: '/clients/mese-sarchecshme.webp',
+    width: 400,
+    height: 200,
     sector: 'mining',
     alt: 'Sarcheshmeh Copper Complex'
   }

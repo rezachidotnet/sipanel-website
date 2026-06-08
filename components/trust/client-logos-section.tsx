@@ -8,13 +8,8 @@ type Props = {
 };
 
 function LogoCard({logo, index}: {logo: (typeof clientLogos)[number]; index: number}) {
-  const style: React.CSSProperties = {
-    animationDelay: `${index * 60}ms`,
-    ...(logo.scale ? {'--logo-scale': logo.scale} as React.CSSProperties : {})
-  };
-
   return (
-    <div className="client-logo-card" key={logo.id} style={style}>
+    <div className="client-logo-card" key={logo.id} style={{animationDelay: `${index * 60}ms`}}>
       <Image
         src={logo.src}
         alt={logo.alt}
