@@ -1,0 +1,101 @@
+{
+  "slug": "gonabad-university-sports-hall",
+  "status": "completed",
+  "featured": false,
+  "area_m2": 3000,
+  "systems": [
+    "sandwich_panel",
+    "curved_roof_system"
+  ],
+  "images": {
+    "card": "/images/projects/gonabad-university-sports-hall/card.webp",
+    "hero_desktop": "/images/projects/gonabad-university-sports-hall/hero-desktop.webp",
+    "hero_mobile": "/images/projects/gonabad-university-sports-hall/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/gonabad-university-sports-hall/after.webp",
+      "/images/projects/gonabad-university-sports-hall/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن ورزشی دانشگاه علوم پزشکی گناباد",
+      "location": "گناباد، ایران",
+      "category": "آموزشی و ورزشی",
+      "project_type": "سالن ورزشی دانشگاهی",
+      "system_label": "ساندویچ پانل",
+      "area_label": "۳۰۰۰ مترمربع",
+      "card_subtitle": "۳۰۰۰ مترمربع پوشش ساندویچ پانل",
+      "card_highlight": "پوشش سالن ورزشی با سقف قوسی بلنددهانه",
+      "summary": "اجرای پوشش ساندویچ پانل برای سالن ورزشی دانشگاه علوم پزشکی گناباد بر روی سازه فضاکار با دهانه بزرگ و سقف قوسی.",
+      "challenge": "پروژه شامل اجرای پوشش بر روی یک سقف قوسی با دهانه بلند بود که نیازمند حفظ یکنواختی خطوط پوشش، کنترل دقیق انحنا و هماهنگی کامل با هندسه سازه بود.",
+      "engineering_decision": "برنامه‌ریزی دقیق نصب، کنترل تلرانس‌های اجرایی و اجرای مرحله‌ای پوشش برای دستیابی به سطحی یکپارچه در طول کامل سالن.",
+      "measured_result": "اجرای موفق ۳۰۰۰ مترمربع پوشش ساندویچ پانل و تکمیل پوسته سالن ورزشی مطابق با الزامات بهره‌برداری دانشگاهی.",
+      "risk_prevented": [
+        "اعوجاج در خطوط سقف قوسی",
+        "ناهماهنگی پوشش و سازه",
+        "کاهش عملکرد آب‌بندی سقف",
+        "افت کیفیت ظاهری سالن"
+      ]
+    },
+    "en": {
+      "title": "Gonabad University Sports Hall",
+      "location": "Gonabad, Iran",
+      "category": "Education & Sports",
+      "project_type": "University Sports Hall",
+      "system_label": "Sandwich Panel System",
+      "area_label": "3,000 m²",
+      "card_subtitle": "3,000 m² Sandwich Panel Enclosure",
+      "card_highlight": "Long-Span Curved Sports Hall Roof",
+      "summary": "Design and execution of sandwich panel roofing for the Gonabad University of Medical Sciences sports hall over a long-span curved structure.",
+      "challenge": "The project required accurate installation of sandwich panels on a large curved roof while maintaining alignment, weather-tightness, and architectural consistency.",
+      "engineering_decision": "Careful installation sequencing and geometric control to ensure a uniform enclosure across the entire roof surface.",
+      "measured_result": "Successful completion of 3,000 m² of sandwich panel enclosure for a university sports facility.",
+      "risk_prevented": [
+        "Curved roof alignment issues",
+        "Mismatch between enclosure and structure",
+        "Waterproofing deficiencies",
+        "Reduced architectural quality"
+      ]
+    },
+    "ar": {
+      "title": "الصالة الرياضية لجامعة علوم الطب في كناباد",
+      "location": "كناباد، إيران",
+      "category": "تعليمي ورياضي",
+      "project_type": "صالة رياضية جامعية",
+      "system_label": "ألواح ساندويتش",
+      "area_label": "٣٠٠٠ متر مربع",
+      "card_subtitle": "٣٠٠٠ متر مربع من التغطية",
+      "card_highlight": "سقف رياضي مقوس واسع الامتداد",
+      "summary": "تنفيذ نظام تغطية بألواح الساندويتش لصالة رياضية جامعية فوق هيكل طويل الامتداد بسقف مقوس.",
+      "challenge": "تطلب المشروع تنفيذ التغطية على سقف مقوس كبير مع الحفاظ على الدقة الهندسية والعزل المائي.",
+      "engineering_decision": "التحكم الدقيق في هندسة السقف وتسلسل التنفيذ لضمان تجانس التغطية.",
+      "measured_result": "تنفيذ ناجح لمساحة ٣٠٠٠ متر مربع من التغطية الخاصة بالصالة الرياضية.",
+      "risk_prevented": [
+        "تشوه خطوط السقف",
+        "عدم توافق الهيكل مع التغطية",
+        "ضعف العزل المائي",
+        "انخفاض الجودة المعمارية"
+      ]
+    },
+    "ru": {
+      "title": "Спортивный зал Университета медицинских наук Гонабада",
+      "location": "Гонабад, Иран",
+      "category": "Образование и спорт",
+      "project_type": "Университетский спортивный зал",
+      "system_label": "Сэндвич-панели",
+      "area_label": "3 000 м²",
+      "card_subtitle": "3 000 м² покрытия из сэндвич-панелей",
+      "card_highlight": "Большепролетная арочная кровля",
+      "summary": "Монтаж покрытия из сэндвич-панелей для спортивного комплекса Университета медицинских наук Гонабада.",
+      "challenge": "Требовалось выполнить монтаж покрытия на крупнопролетной арочной конструкции с сохранением геометрии и герметичности.",
+      "engineering_decision": "Точный контроль геометрии и поэтапная организация монтажных работ.",
+      "measured_result": "Успешная реализация 3 000 м² покрытия спортивного объекта.",
+      "risk_prevented": [
+        "Нарушение геометрии кровли",
+        "Несоответствие конструкции и покрытия",
+        "Проблемы герметичности",
+        "Снижение архитектурного качества"
+      ]
+    }
+  }
+}

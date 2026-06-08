@@ -1,0 +1,112 @@
+{
+  "slug": "bandar-mahshahr-bus-terminal",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 4000,
+  "systems": [
+    "space_frame_structure",
+    "composite_roof_system",
+    "insulated_roofing"
+  ],
+  "images": {
+    "card": "/images/projects/bandar-mahshahr-bus-terminal/card.webp",
+    "hero_desktop": "/images/projects/bandar-mahshahr-bus-terminal/hero-desktop.webp",
+    "hero_mobile": "/images/projects/bandar-mahshahr-bus-terminal/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/bandar-mahshahr-bus-terminal/gallery-01.webp",
+      "/images/projects/bandar-mahshahr-bus-terminal/gallery-02.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "ترمینال اتوبوس شهری بندر ماهشهر",
+      "location": "بندر ماهشهر، ایران",
+      "category": "زیرساخت حمل‌ونقل عمومی",
+      "project_type": "پایانه مسافربری شهری",
+      "system_label": "سازه فضاکار با پوشش ترکیبی عایق‌دار",
+      "area_label": "حدود ۴۰۰۰ مترمربع",
+      "card_subtitle": "سقف پایانه مسافربری با دهانه‌های بلند",
+      "card_highlight": "پوشش مقاوم در اقلیم گرم و مرطوب جنوب ایران",
+      "summary": "طراحی، ساخت و اجرای سازه فضاکار سقف ترمینال اتوبوس شهری بندر ماهشهر با زیربنای تقریبی ۴۰۰۰ مترمربع انجام شد. این پروژه با هدف ایجاد فضای سرپوشیده گسترده برای جابجایی مسافران و مقاومت در شرایط اقلیمی سخت جنوب کشور اجرا گردید.",
+      "challenge": "تأمین سایه گسترده، مقاومت در برابر رطوبت و خوردگی محیطی و ایجاد فضای بدون ستون‌های مزاحم برای حرکت مسافران و ناوگان حمل‌ونقل.",
+      "engineering_decision": "استفاده از سازه فضاکار سبک با پوشش ترکیبی ورق و عایق پشم سنگ برای افزایش دوام، بهبود عملکرد حرارتی و کاهش بارهای وارده به سازه اصلی.",
+      "measured_result": "اجرای حدود ۴۰۰۰ مترمربع سقف یکپارچه برای ترمینال شهری با قابلیت پوشش دهانه‌های وسیع و عملکرد مناسب در شرایط اقلیمی بندر ماهشهر.",
+      "risk_prevented": [
+        "افزایش دمای فضای زیر سقف",
+        "خوردگی ناشی از رطوبت و شرایط ساحلی",
+        "تداخل ستون‌ها با مسیرهای تردد",
+        "افزایش وزن سازه و هزینه نگهداری"
+      ]
+    },
+    "en": {
+      "title": "Bandar Mahshahr Urban Bus Terminal",
+      "location": "Bandar Mahshahr, Iran",
+      "category": "Transportation Infrastructure",
+      "project_type": "Urban Passenger Terminal",
+      "system_label": "Space Frame with Insulated Composite Roofing",
+      "area_label": "Approx. 4,000 m²",
+      "card_subtitle": "Large-span public transportation terminal roof",
+      "card_highlight": "Designed for harsh southern coastal climate",
+      "summary": "Design, fabrication and installation of a large-span space frame roof structure for the Bandar Mahshahr Urban Bus Terminal, covering approximately 4,000 square meters.",
+      "challenge": "Providing shaded public space while ensuring durability against heat, humidity and corrosive environmental conditions.",
+      "engineering_decision": "A lightweight space frame combined with insulated sheet roofing and rock wool insulation was selected to improve thermal performance and durability.",
+      "measured_result": "Successful delivery of a large-scale terminal roof with efficient structural and thermal performance.",
+      "risk_prevented": [
+        "Excessive solar heat gain",
+        "Environmental corrosion",
+        "Passenger circulation conflicts",
+        "High maintenance requirements"
+      ]
+    },
+    "ar": {
+      "title": "محطة حافلات بندر ماهشهر",
+      "location": "بندر ماهشهر، إيران",
+      "category": "بنية تحتية للنقل",
+      "project_type": "محطة نقل حضرية",
+      "system_label": "هيكل فراغي مع تغطية معزولة",
+      "area_label": "حوالي ٤٠٠٠ م²",
+      "card_subtitle": "سقف واسع الامتداد لمحطة الركاب",
+      "card_highlight": "مصمم للبيئة الساحلية الحارة والرطبة",
+      "summary": "تنفيذ سقف هيكل فراغي واسع الامتداد لمحطة الحافلات في بندر ماهشهر.",
+      "challenge": "تحقيق الحماية الحرارية ومقاومة الرطوبة والتآكل.",
+      "engineering_decision": "استخدام هيكل فراغي خفيف مع عزل بالصوف الصخري.",
+      "measured_result": "إنجاز سقف يغطي نحو ٤٠٠٠ متر مربع من مساحة المحطة.",
+      "risk_prevented": [
+        "ارتفاع درجات الحرارة",
+        "التآكل البيئي",
+        "إعاقة حركة الركاب",
+        "ارتفاع تكاليف الصيانة"
+      ]
+    },
+    "ru": {
+      "title": "Автобусный терминал Бендер-Махшехр",
+      "location": "Бендер-Махшехр, Иран",
+      "category": "Транспортная инфраструктура",
+      "project_type": "Пассажирский терминал",
+      "system_label": "Пространственная конструкция с утепленной кровлей",
+      "area_label": "Около 4000 м²",
+      "card_subtitle": "Большепролетное покрытие терминала",
+      "card_highlight": "Для жаркого и влажного климата Персидского залива",
+      "summary": "Проектирование и строительство покрытия автобусного терминала площадью около 4000 м².",
+      "challenge": "Защита пассажиров от жары и обеспечение долговечности конструкции.",
+      "engineering_decision": "Использование пространственной конструкции и утепленной кровельной системы с минеральной ватой.",
+      "measured_result": "Создано покрытие крупного общественного транспортного объекта.",
+      "risk_prevented": [
+        "Перегрев пространства",
+        "Коррозия",
+        "Помехи движению пассажиров",
+        "Высокие эксплуатационные расходы"
+      ]
+    }
+  },
+  "seo": {
+    "primary_keyword": "Bus Terminal Space Frame Roof",
+    "secondary_keywords": [
+      "Transportation Terminal Roofing",
+      "Large Span Public Structure",
+      "Space Frame Terminal",
+      "Bandar Mahshahr Terminal",
+      "Insulated Roof System"
+    ]
+  }
+}

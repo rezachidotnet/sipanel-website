@@ -1,0 +1,101 @@
+{
+  "slug": "atlas-hotel-shahinshahr-atrium",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 700,
+  "systems": [
+    "polycarbonate_cladding",
+    "space_frame_structure"
+  ],
+  "images": {
+    "card": "/images/projects/atlas-hotel-shahinshahr/card.webp",
+    "hero_desktop": "/images/projects/atlas-hotel-shahinshahr/hero-desktop.webp",
+    "hero_mobile": "/images/projects/atlas-hotel-shahinshahr/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/atlas-hotel-shahinshahr/after.webp",
+      "/images/projects/atlas-hotel-shahinshahr/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "آتریوم هتل اطلس",
+      "location": "شاهین‌شهر، اصفهان، ایران",
+      "category": "هتل و مهمان‌نوازی",
+      "project_type": "آتریوم مرکزی هتل",
+      "system_label": "پوشش پلی‌کربنات",
+      "area_label": "۷۰۰ مترمربع",
+      "card_subtitle": "۷۰۰ مترمربع پوشش پلی‌کربنات",
+      "card_highlight": "نورگیر مرکزی هتل با فرم فضاکار",
+      "summary": "طراحی و اجرای پوشش پلی‌کربنات آتریوم مرکزی هتل اطلس شاهین‌شهر بر روی سازه فضاکار با هدف تأمین نور طبیعی و خلق فضای شاخص در قلب مجموعه.",
+      "challenge": "آتریوم به‌عنوان مهم‌ترین فضای عمومی هتل، نیازمند پوششی سبک، شفاف و هماهنگ با معماری داخلی بود. کیفیت نور، زیبایی بصری و یکپارچگی فرم از الزامات اصلی پروژه محسوب می‌شد.",
+      "engineering_decision": "استفاده از سیستم پلی‌کربنات برای انتقال نور طبیعی، کاهش وزن مرده سازه و ایجاد پوششی یکپارچه بر روی هندسه فضاکار سقف آتریوم.",
+      "measured_result": "اجرای موفق ۷۰۰ مترمربع پوشش پلی‌کربنات و ایجاد یک فضای مرکزی روشن و شاخص برای مجموعه هتل.",
+      "risk_prevented": [
+        "کاهش نور طبیعی در فضای آتریوم",
+        "افزایش وزن پوشش سقف",
+        "اختلال در یکپارچگی معماری داخلی",
+        "کاهش کیفیت تجربه مهمانان هتل"
+      ]
+    },
+    "en": {
+      "title": "Atlas Hotel Atrium",
+      "location": "Shahin Shahr, Isfahan, Iran",
+      "category": "Hospitality",
+      "project_type": "Hotel Central Atrium",
+      "system_label": "Polycarbonate Roofing System",
+      "area_label": "700 m²",
+      "card_subtitle": "700 m² Polycarbonate Enclosure",
+      "card_highlight": "Hotel Atrium Daylighting Structure",
+      "summary": "Design and execution of the Atlas Hotel central atrium enclosure using a polycarbonate roofing system over a space-frame structure.",
+      "challenge": "The atrium served as the focal public space of the hotel and required a lightweight, translucent enclosure capable of delivering natural daylight while preserving architectural quality.",
+      "engineering_decision": "Implementation of a polycarbonate enclosure to maximize daylight penetration, reduce structural weight, and maintain architectural continuity.",
+      "measured_result": "Successful completion of a 700 m² polycarbonate atrium enclosure, creating a bright and welcoming hospitality environment.",
+      "risk_prevented": [
+        "Insufficient daylight in the atrium",
+        "Excessive roof dead load",
+        "Architectural discontinuity",
+        "Reduced guest experience quality"
+      ]
+    },
+    "ar": {
+      "title": "أتريوم فندق أطلس",
+      "location": "شاهين شهر، أصفهان، إيران",
+      "category": "الضيافة والفنادق",
+      "project_type": "أتريوم مركزي للفندق",
+      "system_label": "نظام تغطية من البولي كربونات",
+      "area_label": "٧٠٠ متر مربع",
+      "card_subtitle": "٧٠٠ متر مربع من تغطية البولي كربونات",
+      "card_highlight": "هيكل إضاءة طبيعية لأتريوم الفندق",
+      "summary": "تنفيذ تغطية الأتريوم المركزي لفندق أطلس باستخدام نظام البولي كربونات فوق هيكل فضائي.",
+      "challenge": "كان الأتريوم يمثل القلب المعماري للفندق ويتطلب حلاً خفيف الوزن يسمح بدخول الضوء الطبيعي ويحافظ على جودة التصميم الداخلي.",
+      "engineering_decision": "استخدام نظام البولي كربونات لتوفير الإضاءة الطبيعية وتقليل الأحمال وتحقيق الانسجام المعماري.",
+      "measured_result": "تنفيذ ناجح لمساحة ٧٠٠ متر مربع من التغطية الشفافة للأتريوم المركزي.",
+      "risk_prevented": [
+        "ضعف الإضاءة الطبيعية",
+        "زيادة الأحمال على الهيكل",
+        "فقدان التكامل المعماري",
+        "تراجع جودة تجربة الضيوف"
+      ]
+    },
+    "ru": {
+      "title": "Атриум отеля Atlas",
+      "location": "Шахиншехр, Исфахан, Иран",
+      "category": "Гостиничный комплекс",
+      "project_type": "Центральный атриум отеля",
+      "system_label": "Поликарбонатная кровельная система",
+      "area_label": "700 м²",
+      "card_subtitle": "700 м² поликарбонатного покрытия",
+      "card_highlight": "Светопрозрачный атриум гостиницы",
+      "summary": "Проектирование и реализация покрытия центрального атриума отеля Atlas с использованием поликарбонатной системы на пространственной конструкции.",
+      "challenge": "Атриум являлся ключевым общественным пространством отеля и требовал легкой светопрозрачной оболочки с высоким архитектурным качеством.",
+      "engineering_decision": "Применение поликарбонатного покрытия для обеспечения естественного освещения и снижения нагрузок на конструкцию.",
+      "measured_result": "Успешная реализация 700 м² покрытия атриума с созданием комфортного внутреннего пространства.",
+      "risk_prevented": [
+        "Недостаток естественного освещения",
+        "Избыточная нагрузка на конструкцию",
+        "Нарушение архитектурного единства",
+        "Снижение качества гостиничной среды"
+      ]
+    }
+  }
+}

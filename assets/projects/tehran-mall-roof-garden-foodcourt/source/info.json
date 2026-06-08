@@ -1,0 +1,111 @@
+{
+  "slug": "tehran-mall-roof-garden-foodcourt",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 7000,
+  "systems": [
+    "space_frame_structure",
+    "sandwich_panel_roofing"
+  ],
+  "images": {
+    "card": "/images/projects/tehran-mall/card.webp",
+    "hero_desktop": "/images/projects/tehran-mall/hero-desktop.webp",
+    "hero_mobile": "/images/projects/tehran-mall/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/tehran-mall/gallery-01.webp",
+      "/images/projects/tehran-mall/gallery-02.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سقف روف گاردن، فودکورت و سینمای تهران مال",
+      "location": "تهران، ایران",
+      "category": "مجتمع تجاری و تفریحی",
+      "project_type": "سقف فضاکار گسترده",
+      "system_label": "سازه فضاکار و پوشش ساندویچ پانل",
+      "area_label": "حدود ۷۰۰۰ مترمربع",
+      "card_subtitle": "پوشش سقف روف گاردن، فودکورت و مجموعه سینمایی",
+      "card_highlight": "یکی از بزرگ‌ترین پروژه‌های فضاکار تجاری کشور",
+      "summary": "طراحی، ساخت و اجرای سازه فضاکار سقف بخش روف گاردن، فودکورت و مجموعه سینمایی تهران مال با زیربنای پوشش حدود ۷۰۰۰ مترمربع انجام شد. پروژه شامل دهانه‌های بزرگ، حداقل ستون‌گذاری و هماهنگی کامل با معماری و کاربری‌های تجاری و تفریحی مجموعه بود.",
+      "challenge": "پوشش یکپارچه فضاهای گسترده تجاری و تفریحی در طبقات فوقانی ساختمان با محدودیت‌های معماری، بارگذاری و الزامات اجرایی پیچیده.",
+      "engineering_decision": "استفاده از سیستم سازه فضاکار برای ایجاد دهانه‌های بلند، کاهش تعداد تکیه‌گاه‌ها، افزایش سرعت اجرا و تأمین انعطاف‌پذیری معماری در فضاهای عمومی.",
+      "measured_result": "اجرای موفق بیش از ۷۰۰۰ مترمربع سقف فضاکار برای روف گاردن، فودکورت و سینماهای مجموعه تهران مال.",
+      "risk_prevented": [
+        "افزایش وزن سازه اصلی",
+        "تداخل ستون‌ها با کاربری تجاری",
+        "پیچیدگی اجرای دهانه‌های بزرگ",
+        "محدودیت توسعه معماری فضاهای عمومی"
+      ]
+    },
+    "en": {
+      "title": "Tehran Mall Roof Garden, Food Court & Cinema Roof",
+      "location": "Tehran, Iran",
+      "category": "Commercial & Entertainment Complex",
+      "project_type": "Large-Span Roof Structure",
+      "system_label": "Space Frame + Sandwich Panel Roofing",
+      "area_label": "Approx. 7,000 m²",
+      "card_subtitle": "Roof structure for roof garden, food court and cinema complex",
+      "card_highlight": "One of Iran's major commercial space frame projects",
+      "summary": "Design, fabrication and installation of approximately 7,000 square meters of space frame roofing covering the roof garden, food court and cinema facilities of Tehran Mall.",
+      "challenge": "Creating large column-free commercial and entertainment spaces while meeting architectural and structural requirements.",
+      "engineering_decision": "A long-span space frame system was selected to maximize open space, reduce structural weight and improve construction efficiency.",
+      "measured_result": "Successful completion of a large-scale roofing structure serving multiple public-use functions within Tehran Mall.",
+      "risk_prevented": [
+        "Excessive structural loads",
+        "Operational interference from columns",
+        "Large-span construction challenges",
+        "Architectural restrictions"
+      ]
+    },
+    "ar": {
+      "title": "سقف حديقة السطح ومنطقة المطاعم والسينما في طهران مول",
+      "location": "طهران، إيران",
+      "category": "مجمع تجاري وترفيهي",
+      "project_type": "سقف واسع الامتداد",
+      "system_label": "هيكل فراغي مع ألواح ساندويتش بانل",
+      "area_label": "حوالي ٧٠٠٠ م²",
+      "card_subtitle": "تغطية منطقة المطاعم والسينما وحديقة السطح",
+      "card_highlight": "مشروع واسع النطاق للمساحات التجارية",
+      "summary": "تنفيذ هيكل فراغي واسع الامتداد لتغطية مناطق الروف جاردن والفودكورت والسينما في مشروع طهران مول.",
+      "challenge": "توفير مساحات مفتوحة كبيرة مع الحفاظ على المتطلبات المعمارية والإنشائية.",
+      "engineering_decision": "اعتماد نظام الهيكل الفراغي لتحقيق بحور كبيرة وتقليل عدد الأعمدة.",
+      "measured_result": "إنجاز أكثر من ٧٠٠٠ متر مربع من التغطية الإنشائية.",
+      "risk_prevented": [
+        "زيادة الأحمال",
+        "تداخل الأعمدة مع الاستخدام",
+        "صعوبات التنفيذ",
+        "قيود التصميم المعماري"
+      ]
+    },
+    "ru": {
+      "title": "Кровля Roof Garden, Food Court и кинотеатров Tehran Mall",
+      "location": "Тегеран, Иран",
+      "category": "Торгово-развлекательный комплекс",
+      "project_type": "Большепролетная кровля",
+      "system_label": "Пространственная конструкция и сэндвич-панели",
+      "area_label": "Около 7000 м²",
+      "card_subtitle": "Покрытие зоны фудкорта, кинотеатров и rooftop garden",
+      "card_highlight": "Крупный коммерческий проект",
+      "summary": "Проектирование и монтаж пространственной конструкции покрытия для зон Roof Garden, Food Court и кинотеатров комплекса Tehran Mall.",
+      "challenge": "Создание больших открытых пространств без промежуточных опор.",
+      "engineering_decision": "Использование пространственной ферменной системы для перекрытия больших пролетов.",
+      "measured_result": "Реализовано около 7000 м² покрытия общественных пространств.",
+      "risk_prevented": [
+        "Избыточные нагрузки",
+        "Помехи от колонн",
+        "Сложность монтажа",
+        "Архитектурные ограничения"
+      ]
+    }
+  },
+  "seo": {
+    "primary_keyword": "Tehran Mall Space Frame Roof",
+    "secondary_keywords": [
+      "Roof Garden Structure",
+      "Food Court Roofing",
+      "Cinema Roof Structure",
+      "Large Span Space Frame",
+      "Commercial Complex Roofing"
+    ]
+  }
+}

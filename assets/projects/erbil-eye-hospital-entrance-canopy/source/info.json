@@ -1,0 +1,103 @@
+{
+  "slug": "erbil-eye-hospital-entrance-canopy",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 1500,
+  "country": "Iraq",
+  "city": "Erbil",
+  "systems": [
+    "polycarbonate_cladding",
+    "architectural_space_frame"
+  ],
+  "images": {
+    "card": "/images/projects/erbil-eye-hospital-entrance-canopy/card.webp",
+    "hero_desktop": "/images/projects/erbil-eye-hospital-entrance-canopy/hero-desktop.webp",
+    "hero_mobile": "/images/projects/erbil-eye-hospital-entrance-canopy/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/erbil-eye-hospital-entrance-canopy/after.webp",
+      "/images/projects/erbil-eye-hospital-entrance-canopy/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سایبان ورودی بیمارستان چشم اربیل",
+      "location": "اربیل، کردستان عراق",
+      "category": "درمانی",
+      "project_type": "ورودی بیمارستان تخصصی",
+      "system_label": "پلی‌کربنات و سازه فضاکار",
+      "area_label": "۱۵۰۰ مترمربع",
+      "card_subtitle": "۱۵۰۰ مترمربع پوشش پلی‌کربنات",
+      "card_highlight": "تبدیل فرم معماری چشم به سازه قابل اجرا",
+      "summary": "طراحی و اجرای پوشش ورودی بیمارستان چشم اربیل بر روی سازه‌ای با فرم الهام‌گرفته از چشم انسان که باید پس از تکمیل، مفاهیم پلک، مردمک و هندسه چشم را به‌صورت کامل نمایش دهد.",
+      "challenge": "چالش اصلی پروژه تبدیل یک فرم معماری نمادین به یک سیستم اجرایی واقعی بود. هندسه پروژه به گونه‌ای طراحی شده بود که فرم نهایی باید تصویر یک چشم را تداعی کند و کوچک‌ترین خطای اجرایی می‌توانست این مفهوم معماری را از بین ببرد.",
+      "engineering_decision": "کنترل دقیق هندسه سه‌بعدی سازه، طراحی جزئیات اتصال پوشش پلی‌کربنات و اجرای مرحله‌ای پوشش برای حفظ انحناها و خطوط اصلی فرم چشم.",
+      "measured_result": "اجرای موفق حدود ۱۵۰۰ مترمربع پوشش پلی‌کربنات و دستیابی به فرم نهایی منطبق با کانسپت معماری بیمارستان چشم.",
+      "risk_prevented": [
+        "از بین رفتن خوانایی فرم چشم",
+        "اعوجاج در هندسه پلک و مردمک",
+        "ناهماهنگی بین سازه و پوشش",
+        "کاهش کیفیت بصری ورودی بیمارستان"
+      ]
+    },
+    "en": {
+      "title": "Erbil Eye Hospital Entrance Canopy",
+      "location": "Erbil, Kurdistan Region, Iraq",
+      "category": "Healthcare Facility",
+      "project_type": "Hospital Entrance Canopy",
+      "system_label": "Polycarbonate Cladding & Space Frame",
+      "area_label": "1,500 m²",
+      "card_subtitle": "1,500 m² Polycarbonate Enclosure",
+      "card_highlight": "Transforming an eye-shaped concept into reality",
+      "summary": "Architectural entrance canopy for Erbil Eye Hospital, designed and executed to reproduce the visual characteristics of a human eye through structural form and polycarbonate cladding.",
+      "challenge": "The project required translating a symbolic architectural concept into a buildable structure while preserving the visual expression of the eyelid, iris, and eye geometry.",
+      "engineering_decision": "Precise three-dimensional geometric control, custom cladding detailing, and phased installation to preserve the architectural intent throughout construction.",
+      "measured_result": "Successful completion of approximately 1,500 m² of polycarbonate enclosure while maintaining the intended eye-shaped architectural identity.",
+      "risk_prevented": [
+        "Loss of architectural eye geometry",
+        "Distortion of eyelid and iris forms",
+        "Mismatch between structure and enclosure",
+        "Reduced visual impact of hospital entrance"
+      ]
+    },
+    "ar": {
+      "title": "مظلة مدخل مستشفى العيون في أربيل",
+      "location": "أربيل، إقليم كردستان، العراق",
+      "category": "منشأة صحية",
+      "project_type": "مظلة مدخل مستشفى",
+      "system_label": "بولي كربونات وهيكل فراغي",
+      "area_label": "١٥٠٠ متر مربع",
+      "card_subtitle": "١٥٠٠ متر مربع من تغطية البولي كربونات",
+      "card_highlight": "تحويل شكل العين المعماري إلى واقع",
+      "summary": "تنفيذ مظلة مدخل مستشفى العيون في أربيل بهندسة مستوحاة من شكل العين البشرية باستخدام هيكل فراغي وتغطية من البولي كربونات.",
+      "challenge": "كان التحدي الرئيسي هو الحفاظ على التعبير المعماري لشكل العين بحيث تظهر الجفون والبؤبؤ بوضوح بعد اكتمال التنفيذ.",
+      "engineering_decision": "التحكم الدقيق في الهندسة ثلاثية الأبعاد وتطوير تفاصيل التثبيت للحفاظ على الشكل المعماري المقصود.",
+      "measured_result": "تنفيذ ناجح لحوالي ١٥٠٠ متر مربع من التغطية مع الحفاظ على الهوية البصرية للمشروع.",
+      "risk_prevented": [
+        "فقدان شكل العين المعماري",
+        "تشوه الجفون أو البؤبؤ",
+        "عدم التوافق بين الهيكل والتغطية",
+        "ضعف التأثير البصري للمدخل"
+      ]
+    },
+    "ru": {
+      "title": "Навес входной зоны глазной больницы Эрбиля",
+      "location": "Эрбиль, Курдистан, Ирак",
+      "category": "Медицинский объект",
+      "project_type": "Входная группа больницы",
+      "system_label": "Поликарбонат и пространственная конструкция",
+      "area_label": "1 500 м²",
+      "card_subtitle": "1 500 м² покрытия из поликарбоната",
+      "card_highlight": "Реализация архитектурной формы глаза",
+      "summary": "Входная группа глазной больницы Эрбиля, выполненная в форме человеческого глаза с использованием пространственной конструкции и поликарбонатного покрытия.",
+      "challenge": "Основной задачей было сохранить узнаваемую форму глаза, включая геометрию века и зрачка, после завершения всех строительных работ.",
+      "engineering_decision": "Точный контроль трехмерной геометрии и разработка специальных решений по креплению поликарбонатного покрытия.",
+      "measured_result": "Успешная реализация около 1 500 м² покрытия с сохранением архитектурной концепции объекта.",
+      "risk_prevented": [
+        "Потеря визуального образа глаза",
+        "Искажение формы века и зрачка",
+        "Несоответствие конструкции и покрытия",
+        "Снижение архитектурной выразительности"
+      ]
+    }
+  }
+}

@@ -28,6 +28,54 @@ import tabasCard from '@/assets/projects/tabas/photos/tabas-card.webp';
 import tabasHero from '@/assets/projects/tabas/photos/tabas-hero-desktop.webp';
 import pompTiranCard from '@/assets/projects/pomp-tiran/photos/pomp-tiran-card.webp';
 import pompTiranHero from '@/assets/projects/pomp-tiran/photos/pomp-tiran-hero-desktop.webp';
+import ahvazAirportPassengerTerminalCard from '@/assets/projects/ahvaz-airport-passenger-terminal/photos/ahvaz-airport-passenger-terminal-card.webp';
+import ahvazAirportPassengerTerminalHero from '@/assets/projects/ahvaz-airport-passenger-terminal/photos/ahvaz-airport-passenger-terminal-hero-desktop.webp';
+import atlasHotelShahinshahrAtriumCard from '@/assets/projects/atlas-hotel-shahinshahr-atrium/photos/atlas-hotel-shahinshahr-atrium-card.webp';
+import atlasHotelShahinshahrAtriumHero from '@/assets/projects/atlas-hotel-shahinshahr-atrium/photos/atlas-hotel-shahinshahr-atrium-hero-desktop.webp';
+import baharestanPrayerHallCard from '@/assets/projects/baharestan-prayer-hall/photos/baharestan-prayer-hall-card.webp';
+import baharestanPrayerHallHero from '@/assets/projects/baharestan-prayer-hall/photos/baharestan-prayer-hall-hero-desktop.webp';
+import bandarAbbasMallAtriumRoofCard from '@/assets/projects/bandar-abbas-mall-atrium-roof/photos/bandar-abbas-mall-atrium-roof-card.webp';
+import bandarAbbasMallAtriumRoofHero from '@/assets/projects/bandar-abbas-mall-atrium-roof/photos/bandar-abbas-mall-atrium-roof-hero-desktop.webp';
+import bandarMahshahrBusTerminalCard from '@/assets/projects/bandar-mahshahr-bus-terminal/photos/bandar-mahshahr-bus-terminal-card.webp';
+import bandarMahshahrBusTerminalHero from '@/assets/projects/bandar-mahshahr-bus-terminal/photos/bandar-mahshahr-bus-terminal-hero-desktop.webp';
+import eftekharCommercialOfficeComplexCard from '@/assets/projects/eftekhar-commercial-office-complex/photos/eftekhar-commercial-office-complex-card.webp';
+import eftekharCommercialOfficeComplexHero from '@/assets/projects/eftekhar-commercial-office-complex/photos/eftekhar-commercial-office-complex-hero-desktop.webp';
+import enghelabClubPadelCenterCard from '@/assets/projects/enghelab-club-padel-center/photos/enghelab-club-padel-center-card.webp';
+import enghelabClubPadelCenterHero from '@/assets/projects/enghelab-club-padel-center/photos/enghelab-club-padel-center-hero-desktop.webp';
+import erbilEyeHospitalEntranceCanopyCard from '@/assets/projects/erbil-eye-hospital-entrance-canopy/photos/erbil-eye-hospital-entrance-canopy-card.webp';
+import erbilEyeHospitalEntranceCanopyHero from '@/assets/projects/erbil-eye-hospital-entrance-canopy/photos/erbil-eye-hospital-entrance-canopy-hero-desktop.webp';
+import fadakMallGlassSkylightCard from '@/assets/projects/fadak-mall-glass-skylight/photos/fadak-mall-glass-skylight-card.webp';
+import fadakMallGlassSkylightHero from '@/assets/projects/fadak-mall-glass-skylight/photos/fadak-mall-glass-skylight-hero-desktop.webp';
+import gonabadUniversitySportsHallCard from '@/assets/projects/gonabad-university-sports-hall/photos/gonabad-university-sports-hall-card.webp';
+import gonabadUniversitySportsHallHero from '@/assets/projects/gonabad-university-sports-hall/photos/gonabad-university-sports-hall-hero-desktop.webp';
+import imamKhomeiniAirportHajjTerminalCard from '@/assets/projects/imam-khomeini-airport-hajj-terminal/photos/imam-khomeini-airport-hajj-terminal-card.webp';
+import imamKhomeiniAirportHajjTerminalHero from '@/assets/projects/imam-khomeini-airport-hajj-terminal/photos/imam-khomeini-airport-hajj-terminal-hero-desktop.webp';
+import kermanshahIndustrialUniversityPetroleumFacultyCard from '@/assets/projects/kermanshah-industrial-university-petroleum-faculty/photos/kermanshah-industrial-university-petroleum-faculty-card.webp';
+import kermanshahIndustrialUniversityPetroleumFacultyHero from '@/assets/projects/kermanshah-industrial-university-petroleum-faculty/photos/kermanshah-industrial-university-petroleum-faculty-hero-desktop.webp';
+import makuConventionHallCard from '@/assets/projects/maku-convention-hall/photos/maku-convention-hall-card.webp';
+import makuConventionHallHero from '@/assets/projects/maku-convention-hall/photos/maku-convention-hall-hero-desktop.webp';
+import marunPetrochemicalVisitorTerminalCard from '@/assets/projects/marun-petrochemical-visitor-terminal/photos/marun-petrochemical-visitor-terminal-card.webp';
+import marunPetrochemicalVisitorTerminalHero from '@/assets/projects/marun-petrochemical-visitor-terminal/photos/marun-petrochemical-visitor-terminal-hero-desktop.webp';
+import mehrabadAircraftHangarCard from '@/assets/projects/mehrabad-aircraft-hangar/photos/mehrabad-aircraft-hangar-card.webp';
+import mehrabadAircraftHangarHero from '@/assets/projects/mehrabad-aircraft-hangar/photos/mehrabad-aircraft-hangar-hero-desktop.webp';
+import najafabadUniversityAmphitheaterCard from '@/assets/projects/najafabad-university-amphitheater/photos/najafabad-university-amphitheater-card.webp';
+import najafabadUniversityAmphitheaterHero from '@/assets/projects/najafabad-university-amphitheater/photos/najafabad-university-amphitheater-hero-desktop.webp';
+import payamIndustrialCityCeramicFactoryCard from '@/assets/projects/payam-industrial-city-ceramic-factory/photos/payam-industrial-city-ceramic-factory-card.webp';
+import payamIndustrialCityCeramicFactoryHero from '@/assets/projects/payam-industrial-city-ceramic-factory/photos/payam-industrial-city-ceramic-factory-hero-desktop.webp';
+import rouzbehCharityComplexZanjanCard from '@/assets/projects/rouzbeh-charity-complex-zanjan/photos/rouzbeh-charity-complex-zanjan-card.webp';
+import rouzbehCharityComplexZanjanHero from '@/assets/projects/rouzbeh-charity-complex-zanjan/photos/rouzbeh-charity-complex-zanjan-hero-desktop.webp';
+import shahroodAzadUniversitySkylightCard from '@/assets/projects/shahrood-azad-university-skylight/photos/shahrood-azad-university-skylight-card.webp';
+import shahroodAzadUniversitySkylightHero from '@/assets/projects/shahrood-azad-university-skylight/photos/shahrood-azad-university-skylight-hero-desktop.webp';
+import shalamchehBorderGateCard from '@/assets/projects/shalamcheh-border-gate/photos/shalamcheh-border-gate-card.webp';
+import shalamchehBorderGateHero from '@/assets/projects/shalamcheh-border-gate/photos/shalamcheh-border-gate-hero-desktop.webp';
+import tarbiatModaresResearchGreenhouseCard from '@/assets/projects/tarbiat-modares-research-greenhouse/photos/tarbiat-modares-research-greenhouse-card.webp';
+import tarbiatModaresResearchGreenhouseHero from '@/assets/projects/tarbiat-modares-research-greenhouse/photos/tarbiat-modares-research-greenhouse-hero-desktop.webp';
+import tavanirShahrekordCentralAtriumCard from '@/assets/projects/tavanir-shahrekord-central-atrium/photos/tavanir-shahrekord-central-atrium-card.webp';
+import tavanirShahrekordCentralAtriumHero from '@/assets/projects/tavanir-shahrekord-central-atrium/photos/tavanir-shahrekord-central-atrium-hero-desktop.webp';
+import tehranMallRoofGardenFoodcourtCard from '@/assets/projects/tehran-mall-roof-garden-foodcourt/photos/tehran-mall-roof-garden-foodcourt-card.webp';
+import tehranMallRoofGardenFoodcourtHero from '@/assets/projects/tehran-mall-roof-garden-foodcourt/photos/tehran-mall-roof-garden-foodcourt-hero-desktop.webp';
+import toranjKishRestaurantCard from '@/assets/projects/toranj-kish-restaurant/photos/toranj-kish-restaurant-card.webp';
+import toranjKishRestaurantHero from '@/assets/projects/toranj-kish-restaurant/photos/toranj-kish-restaurant-hero-desktop.webp';
 
 export type CaseStudyProofAsset = {
   title: string;
@@ -424,6 +472,678 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     riskPrevented: ['Roof leakage', 'Installation alignment errors', 'Improper sealing execution', 'Drainage inconsistencies'],
     cardImage: pompTiranCard,
     heroImage: pompTiranHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'ahvaz-airport-passenger-terminal',
+    projectName: {
+      en: 'Ahvaz Airport Passenger Terminal',
+      fa: 'سالن انتظار فرودگاه اهواز',
+      ar: 'صالة المسافرين في مطار الأهواز',
+      ru: 'Пассажирский терминал аэропорта Ахваз'
+    },
+    projectType: {
+      en: 'Airport Passenger Terminal',
+      fa: 'سالن انتظار فرودگاه',
+      ar: 'صالة مسافرين',
+      ru: 'Пассажирский терминал аэропорта'
+    },
+    mainService: zipRoofingService,
+    serviceHref: '/systems/standing-seam-zip-tech-roofing',
+    location: 'Ahvaz, Iran',
+    area: '4,000 m²',
+    challenge: 'The main challenge was the curved front architectural feature, where the covering had to be bent in a perpendicular direction, making the execution technically difficult.',
+    sipanelSolution: 'Custom execution detailing, geometric control of the curved form, and precise coordination between substructure, aluminium panels, and ZIP-TECH system.',
+    engineeringDecision: 'Custom execution detailing, geometric control of the curved form, and precise coordination between substructure, aluminium panels, and ZIP-TECH system.',
+    executionDetail: 'Successful execution of 4,000 m² of ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.',
+    measuredResult: 'Successful execution of 4,000 m² of ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.',
+    riskPrevented: ['Visual breaks in curved facade', 'Incorrect perpendicular bending', 'Mismatch between cladding and substructure', 'Loss of architectural quality in airport facade'],
+    cardImage: ahvazAirportPassengerTerminalCard,
+    heroImage: ahvazAirportPassengerTerminalHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'atlas-hotel-shahinshahr-atrium',
+    projectName: {
+      en: 'Atlas Hotel Atrium',
+      fa: 'آتریوم هتل اطلس',
+      ar: 'أتريوم فندق أطلس',
+      ru: 'Атриум отеля Atlas'
+    },
+    projectType: {
+      en: 'Hotel Central Atrium',
+      fa: 'آتریوم مرکزی هتل',
+      ar: 'أتريوم مركزي للفندق',
+      ru: 'Центральный атриум отеля'
+    },
+    mainService: claddingService,
+    serviceHref: '/systems/aluminium-cladding-covering',
+    location: 'Shahin Shahr, Isfahan, Iran',
+    area: '700 m²',
+    challenge: 'The atrium served as the focal public space of the hotel and required a lightweight, translucent enclosure capable of delivering natural daylight while preserving architectural quality.',
+    sipanelSolution: 'Implementation of a polycarbonate enclosure to maximize daylight penetration, reduce structural weight, and maintain architectural continuity.',
+    engineeringDecision: 'Implementation of a polycarbonate enclosure to maximize daylight penetration, reduce structural weight, and maintain architectural continuity.',
+    executionDetail: 'Successful completion of a 700 m² polycarbonate atrium enclosure, creating a bright and welcoming hospitality environment.',
+    measuredResult: 'Successful completion of a 700 m² polycarbonate atrium enclosure, creating a bright and welcoming hospitality environment.',
+    riskPrevented: ['Insufficient daylight in the atrium', 'Excessive roof dead load', 'Architectural discontinuity', 'Reduced guest experience quality'],
+    cardImage: atlasHotelShahinshahrAtriumCard,
+    heroImage: atlasHotelShahinshahrAtriumHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'baharestan-prayer-hall',
+    projectName: {
+      en: 'Baharestan Prayer Hall',
+      fa: 'سالن نماز شهر بهارستان',
+      ar: 'قاعة الصلاة في مدينة بهارستان',
+      ru: 'Молитвенный зал Бахарестан'
+    },
+    projectType: {
+      en: 'Prayer Hall',
+      fa: 'سالن نماز',
+      ar: 'قاعة صلاة',
+      ru: 'Молитвенный зал'
+    },
+    mainService: claddingService,
+    serviceHref: '/systems/aluminium-cladding-covering',
+    location: 'Baharestan, Iran',
+    area: '1,000 m²',
+    challenge: 'The main challenge was installing dry ceramic cladding on steep roof surfaces where conventional dry-facade systems are typically not applicable.',
+    sipanelSolution: 'Development and fabrication of custom connection systems capable of safely supporting ceramic panels on highly inclined roof geometries.',
+    engineeringDecision: 'Development and fabrication of custom connection systems capable of safely supporting ceramic panels on highly inclined roof geometries.',
+    executionDetail: 'Successful execution of 1,000 m² of enclosure and facade works while maintaining architectural continuity between roof and wall surfaces.',
+    measuredResult: 'Successful execution of 1,000 m² of enclosure and facade works while maintaining architectural continuity between roof and wall surfaces.',
+    riskPrevented: ['Ceramic panel slippage on inclined surfaces', 'Connection failure under roof loads', 'Discontinuity between roof and facade', 'Reduced durability of dry-facade system'],
+    cardImage: baharestanPrayerHallCard,
+    heroImage: baharestanPrayerHallHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'bandar-abbas-mall-atrium-roof',
+    projectName: {
+      en: 'Bandar Abbas Mall',
+      fa: 'مال بندرعباس',
+      ar: 'مول بندر عباس',
+      ru: 'Bandar Abbas Mall'
+    },
+    projectType: {
+      en: 'Central Atrium Roof',
+      fa: 'آتریوم مرکزی مجتمع تجاری',
+      ar: 'سقف الأتريوم المركزي',
+      ru: 'Кровля центрального атриума'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Bandar Abbas, Iran',
+    area: '700 m²',
+    challenge: 'The project involved installing enclosure systems over a prominent curved space-frame roof located at the center of a commercial development where architectural quality was critical.',
+    sipanelSolution: 'Careful geometric control, alignment of panel layouts with the curved structure, and detailed finishing works to achieve a continuous architectural surface.',
+    engineeringDecision: 'Careful geometric control, alignment of panel layouts with the curved structure, and detailed finishing works to achieve a continuous architectural surface.',
+    executionDetail: 'Successful completion of 700 m² of sandwich panel roofing for the central atrium enclosure.',
+    measuredResult: 'Successful completion of 700 m² of sandwich panel roofing for the central atrium enclosure.',
+    riskPrevented: ['Visual discontinuity on curved surfaces', 'Geometry mismatch between roof and structure', 'Panel alignment defects', 'Reduced architectural quality'],
+    cardImage: bandarAbbasMallAtriumRoofCard,
+    heroImage: bandarAbbasMallAtriumRoofHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'bandar-mahshahr-bus-terminal',
+    projectName: {
+      en: 'Bandar Mahshahr Urban Bus Terminal',
+      fa: 'ترمینال اتوبوس شهری بندر ماهشهر',
+      ar: 'محطة حافلات بندر ماهشهر',
+      ru: 'Автобусный терминал Бендер-Махшехр'
+    },
+    projectType: {
+      en: 'Urban Passenger Terminal',
+      fa: 'پایانه مسافربری شهری',
+      ar: 'محطة نقل حضرية',
+      ru: 'Пассажирский терминал'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Bandar Mahshahr, Iran',
+    area: 'Approx. 4,000 m²',
+    challenge: 'Providing shaded public space while ensuring durability against heat, humidity and corrosive environmental conditions.',
+    sipanelSolution: 'A lightweight space frame combined with insulated sheet roofing and rock wool insulation was selected to improve thermal performance and durability.',
+    engineeringDecision: 'A lightweight space frame combined with insulated sheet roofing and rock wool insulation was selected to improve thermal performance and durability.',
+    executionDetail: 'Successful delivery of a large-scale terminal roof with efficient structural and thermal performance.',
+    measuredResult: 'Successful delivery of a large-scale terminal roof with efficient structural and thermal performance.',
+    riskPrevented: ['Excessive solar heat gain', 'Environmental corrosion', 'Passenger circulation conflicts', 'High maintenance requirements'],
+    cardImage: bandarMahshahrBusTerminalCard,
+    heroImage: bandarMahshahrBusTerminalHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'eftekhar-commercial-office-complex',
+    projectName: {
+      en: 'Eftekhar Commercial & Office Complex',
+      fa: 'مجتمع تجاری اداری افتخار',
+      ar: 'مجمع افتخار التجاري والإداري',
+      ru: 'Торгово-офисный комплекс Эфтехар'
+    },
+    projectType: {
+      en: 'Central Atrium Roof',
+      fa: 'پوشش آتریوم مرکزی',
+      ar: 'تغطية الأتريوم المركزي',
+      ru: 'Покрытие центрального атриума'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Isfahan, Iran',
+    area: '300 m²',
+    challenge: 'The roof structure had to be integrated between existing building blocks while maintaining waterproof performance and structural efficiency.',
+    sipanelSolution: 'A lightweight space frame combined with polycarbonate panels was selected to create a column-free span with excellent daylight transmission.',
+    engineeringDecision: 'A lightweight space frame combined with polycarbonate panels was selected to create a column-free span with excellent daylight transmission.',
+    executionDetail: 'Approximately 300 m² of covered atrium space delivered without intermediate supports.',
+    measuredResult: 'Approximately 300 m² of covered atrium space delivered without intermediate supports.',
+    riskPrevented: ['Water infiltration', 'Excessive dead load', 'Insufficient daylight', 'Commercial space disruption'],
+    cardImage: eftekharCommercialOfficeComplexCard,
+    heroImage: eftekharCommercialOfficeComplexHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'enghelab-club-padel-center',
+    projectName: {
+      en: 'Enghelab Club Padel Center',
+      fa: 'مجموعه پدل باشگاه انقلاب',
+      ar: 'مركز البادل في نادي انقلاب',
+      ru: 'Падел-центр спортивного комплекса Энгелаб'
+    },
+    projectType: {
+      en: 'Padel Sports Hall',
+      fa: 'سالن پدل و ورزش‌های راکتی',
+      ar: 'قاعة بادل',
+      ru: 'Падел-холл'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Tehran, Iran',
+    area: '2,000 m²',
+    challenge: 'The project required large clear spans while maintaining structural efficiency and architectural quality within an active sports complex.',
+    sipanelSolution: 'A lightweight space frame structure combined with sandwich panels was selected to optimize span capability, construction speed and durability.',
+    engineeringDecision: 'A lightweight space frame structure combined with sandwich panels was selected to optimize span capability, construction speed and durability.',
+    executionDetail: 'Approximately 2,000 m² of sports facility enclosure delivered with large unobstructed interior space.',
+    measuredResult: 'Approximately 2,000 m² of sports facility enclosure delivered with large unobstructed interior space.',
+    riskPrevented: ['Excessive structural weight', 'Obstruction of sports activities', 'Construction delays', 'Long-term maintenance issues'],
+    cardImage: enghelabClubPadelCenterCard,
+    heroImage: enghelabClubPadelCenterHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'erbil-eye-hospital-entrance-canopy',
+    projectName: {
+      en: 'Erbil Eye Hospital Entrance Canopy',
+      fa: 'سایبان ورودی بیمارستان چشم اربیل',
+      ar: 'مظلة مدخل مستشفى العيون في أربيل',
+      ru: 'Навес входной зоны глазной больницы Эрбиля'
+    },
+    projectType: {
+      en: 'Hospital Entrance Canopy',
+      fa: 'ورودی بیمارستان تخصصی',
+      ar: 'مظلة مدخل مستشفى',
+      ru: 'Входная группа больницы'
+    },
+    mainService: claddingService,
+    serviceHref: '/systems/aluminium-cladding-covering',
+    location: 'Erbil, Kurdistan Region, Iraq',
+    area: '1,500 m²',
+    challenge: 'The project required translating a symbolic architectural concept into a buildable structure while preserving the visual expression of the eyelid, iris, and eye geometry.',
+    sipanelSolution: 'Precise three-dimensional geometric control, custom cladding detailing, and phased installation to preserve the architectural intent throughout construction.',
+    engineeringDecision: 'Precise three-dimensional geometric control, custom cladding detailing, and phased installation to preserve the architectural intent throughout construction.',
+    executionDetail: 'Successful completion of approximately 1,500 m² of polycarbonate enclosure while maintaining the intended eye-shaped architectural identity.',
+    measuredResult: 'Successful completion of approximately 1,500 m² of polycarbonate enclosure while maintaining the intended eye-shaped architectural identity.',
+    riskPrevented: ['Loss of architectural eye geometry', 'Distortion of eyelid and iris forms', 'Mismatch between structure and enclosure', 'Reduced visual impact of hospital entrance'],
+    cardImage: erbilEyeHospitalEntranceCanopyCard,
+    heroImage: erbilEyeHospitalEntranceCanopyHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'fadak-mall-glass-skylight',
+    projectName: {
+      en: 'Fadak Mall Glass Skylight',
+      fa: 'اسکای‌لایت فدک مال',
+      ar: 'السكاي لايت الزجاجي لفدك مول',
+      ru: 'Стеклянный световой фонарь Fadak Mall'
+    },
+    projectType: {
+      en: 'Central Skylight',
+      fa: 'نورگیر مرکزی (Skylight)',
+      ar: 'سكاي لايت مركزي',
+      ru: 'Центральный световой фонарь'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Isfahan, Iran',
+    area: '500 m²',
+    challenge: 'The project required the installation of a glass enclosure over a three-dimensional elliptical form while maintaining geometric accuracy, waterproofing performance, and visual transparency.',
+    sipanelSolution: 'Precise geometric control, custom glazing details, and installation management to achieve a seamless architectural skylight.',
+    engineeringDecision: 'Precise geometric control, custom glazing details, and installation management to achieve a seamless architectural skylight.',
+    executionDetail: 'Successful completion of a 500 m² glass skylight delivering natural daylight to the mall atrium.',
+    measuredResult: 'Successful completion of a 500 m² glass skylight delivering natural daylight to the mall atrium.',
+    riskPrevented: ['Geometric distortion', 'Water leakage', 'Mismatch between structure and glazing', 'Reduced daylight performance'],
+    cardImage: fadakMallGlassSkylightCard,
+    heroImage: fadakMallGlassSkylightHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'gonabad-university-sports-hall',
+    projectName: {
+      en: 'Gonabad University Sports Hall',
+      fa: 'سالن ورزشی دانشگاه علوم پزشکی گناباد',
+      ar: 'الصالة الرياضية لجامعة علوم الطب في كناباد',
+      ru: 'Спортивный зал Университета медицинских наук Гонабада'
+    },
+    projectType: {
+      en: 'University Sports Hall',
+      fa: 'سالن ورزشی دانشگاهی',
+      ar: 'صالة رياضية جامعية',
+      ru: 'Университетский спортивный зал'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Gonabad, Iran',
+    area: '3,000 m²',
+    challenge: 'The project required accurate installation of sandwich panels on a large curved roof while maintaining alignment, weather-tightness, and architectural consistency.',
+    sipanelSolution: 'Careful installation sequencing and geometric control to ensure a uniform enclosure across the entire roof surface.',
+    engineeringDecision: 'Careful installation sequencing and geometric control to ensure a uniform enclosure across the entire roof surface.',
+    executionDetail: 'Successful completion of 3,000 m² of sandwich panel enclosure for a university sports facility.',
+    measuredResult: 'Successful completion of 3,000 m² of sandwich panel enclosure for a university sports facility.',
+    riskPrevented: ['Curved roof alignment issues', 'Mismatch between enclosure and structure', 'Waterproofing deficiencies', 'Reduced architectural quality'],
+    cardImage: gonabadUniversitySportsHallCard,
+    heroImage: gonabadUniversitySportsHallHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'imam-khomeini-airport-hajj-terminal',
+    projectName: {
+      en: 'Imam Khomeini Airport Hajj Passenger Terminal',
+      fa: 'سالن انتظار حجاج فرودگاه امام خمینی',
+      ar: 'صالة انتظار الحجاج - مطار الإمام الخميني',
+      ru: 'Зал ожидания паломников аэропорта Имама Хомейни'
+    },
+    projectType: {
+      en: 'Passenger Waiting Hall',
+      fa: 'سالن انتظار مسافران',
+      ar: 'صالة انتظار المسافرين',
+      ru: 'Пассажирский терминал ожидания'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Tehran, Iran',
+    area: '5,000 m²',
+    challenge: 'The primary challenge was the extremely compressed schedule between project award and the return of Hajj pilgrims, requiring immediate completion and operational readiness.',
+    sipanelSolution: 'Fast-track procurement, parallel installation activities, and integration of polycarbonate wall systems to maximize natural daylight within the hall.',
+    engineeringDecision: 'Fast-track procurement, parallel installation activities, and integration of polycarbonate wall systems to maximize natural daylight within the hall.',
+    executionDetail: 'Successful completion and handover of a 5,000 m² airport facility in less than seven days.',
+    measuredResult: 'Successful completion and handover of a 5,000 m² airport facility in less than seven days.',
+    riskPrevented: ['Operational delays before Hajj return flights', 'Airport capacity shortages', 'Insufficient daylight inside waiting areas', 'Disruption of passenger handling operations'],
+    cardImage: imamKhomeiniAirportHajjTerminalCard,
+    heroImage: imamKhomeiniAirportHajjTerminalHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'kermanshah-industrial-university-petroleum-faculty',
+    projectName: {
+      en: 'Kermanshah Industrial University Petroleum Faculty',
+      fa: 'دانشکده نفت دانشگاه صنعتی کرمانشاه',
+      ar: 'كلية النفط في الجامعة الصناعية بكرمانشاه',
+      ru: 'Нефтяной факультет Индустриального университета Керманшаха'
+    },
+    projectType: {
+      en: 'Structural Glass Facade',
+      fa: 'نمای شیشه‌ای سازه‌ای',
+      ar: 'واجهة زجاجية إنشائية',
+      ru: 'Стеклянный структурный фасад'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Kermanshah, Iran',
+    area: '1,000 m²',
+    challenge: 'The key challenge was designing facade connections so that structural movement during earthquakes would not damage or break the glass panels.',
+    sipanelSolution: 'Connection details were engineered to accommodate relative structural displacement and reduce stress transfer to the glass facade.',
+    engineeringDecision: 'Connection details were engineered to accommodate relative structural displacement and reduce stress transfer to the glass facade.',
+    executionDetail: 'Successful execution of approximately 1,000 m² of glass facade, which reportedly performed without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.',
+    measuredResult: 'Successful execution of approximately 1,000 m² of glass facade, which reportedly performed without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.',
+    riskPrevented: ['Glass breakage under seismic movement', 'Facade connection failure', 'Mismatch between structure and glass facade', 'Reduced building-user safety'],
+    cardImage: kermanshahIndustrialUniversityPetroleumFacultyCard,
+    heroImage: kermanshahIndustrialUniversityPetroleumFacultyHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'maku-convention-hall',
+    projectName: {
+      en: 'Maku Convention Hall',
+      fa: 'سالن اجتماعات ماکو',
+      ar: 'قاعة ماكو للمؤتمرات',
+      ru: 'Конференц-зал Маку'
+    },
+    projectType: {
+      en: 'Convention Hall',
+      fa: 'سالن اجتماعات',
+      ar: 'قاعة اجتماعات',
+      ru: 'Конференц-зал'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Maku, Iran',
+    area: '2,000 m²',
+    challenge: 'The large-span curved geometry required precise installation to maintain weather-tightness, architectural consistency and structural performance.',
+    sipanelSolution: 'A sandwich panel system was selected to combine lightweight construction, thermal efficiency and rapid installation.',
+    engineeringDecision: 'A sandwich panel system was selected to combine lightweight construction, thermal efficiency and rapid installation.',
+    executionDetail: 'Successful installation of approximately 2,000 m² of sandwich panel enclosure over the large-span structure.',
+    measuredResult: 'Successful installation of approximately 2,000 m² of sandwich panel enclosure over the large-span structure.',
+    riskPrevented: ['Water penetration', 'Excessive roof dead load', 'Construction delays', 'Reduced thermal performance'],
+    cardImage: makuConventionHallCard,
+    heroImage: makuConventionHallHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'marun-petrochemical-visitor-terminal',
+    projectName: {
+      en: 'Marun Petrochemical Multipurpose Hall',
+      fa: 'سالن چندمنظوره پتروشیمی مارون',
+      ar: 'قاعة مجمع مارون للبتروكيماويات',
+      ru: 'Многофункциональный зал нефтехимического комплекса Marun'
+    },
+    projectType: {
+      en: 'Industrial Gathering Facility',
+      fa: 'سالن خدماتی و تجمعات',
+      ar: 'منشأة صناعية متعددة الاستخدامات',
+      ru: 'Промышленный общественный объект'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Mahshahr, Iran',
+    area: '5,000 m²',
+    challenge: 'A critical engineering challenge was the development of a reliable structural interface between the tensile membrane system and the primary structure while maintaining load transfer integrity and long-term durability.',
+    sipanelSolution: 'A dedicated connection assembly was engineered, analyzed and fabricated specifically for the interaction between the tensile membrane structure and the main supporting frame.',
+    engineeringDecision: 'A dedicated connection assembly was engineered, analyzed and fabricated specifically for the interaction between the tensile membrane structure and the main supporting frame.',
+    executionDetail: 'Successful completion of approximately 5,000 m² of hybrid enclosure within an active petrochemical environment.',
+    measuredResult: 'Successful completion of approximately 5,000 m² of hybrid enclosure within an active petrochemical environment.',
+    riskPrevented: ['Stress concentration at membrane connections', 'Wind-induced membrane failures', 'Structural instability at force-transfer points', 'High maintenance requirements'],
+    cardImage: marunPetrochemicalVisitorTerminalCard,
+    heroImage: marunPetrochemicalVisitorTerminalHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'mehrabad-aircraft-hangar',
+    projectName: {
+      en: 'Mehrabad Airport Aircraft Hangar',
+      fa: 'آشیانه هواپیما فرودگاه مهرآباد',
+      ar: 'حظيرة الطائرات في مطار مهرآباد',
+      ru: 'Авиационный ангар аэропорта Мехрабад'
+    },
+    projectType: {
+      en: 'Aircraft Hangar',
+      fa: 'آشیانه هواپیما',
+      ar: 'حظيرة طائرات',
+      ru: 'Авиационный ангар'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Tehran, Iran',
+    area: '5,000 m²',
+    challenge: 'The main challenge was the severe curvature of the structure and the need for accurate sandwich panel installation over a continuous curved geometry.',
+    sipanelSolution: 'Precise coordination between the space frame, substructure, and panel installation sequence to preserve the curved form and avoid visual breaks.',
+    engineeringDecision: 'Precise coordination between the space frame, substructure, and panel installation sequence to preserve the curved form and avoid visual breaks.',
+    executionDetail: 'Successful execution of 5,000 m² of sandwich panel covering while maintaining the geometric continuity of the curved surface.',
+    measuredResult: 'Successful execution of 5,000 m² of sandwich panel covering while maintaining the geometric continuity of the curved surface.',
+    riskPrevented: ['Visual breaks on curved roof surface', 'Installation errors on curved geometry', 'Mismatch between structure and covering system', 'Poor final appearance on large-span enclosure'],
+    cardImage: mehrabadAircraftHangarCard,
+    heroImage: mehrabadAircraftHangarHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'najafabad-university-amphitheater',
+    projectName: {
+      en: 'Najafabad University Amphitheater',
+      fa: 'سالن آمفی‌تئاتر دانشگاه آزاد اسلامی نجف‌آباد',
+      ar: 'مدرج جامعة نجف آباد',
+      ru: 'Амфитеатр университета Наджафабад'
+    },
+    projectType: {
+      en: 'Amphitheater and Convention Facility',
+      fa: 'آمفی‌تئاتر و مرکز همایش',
+      ar: 'مسرح ومركز مؤتمرات',
+      ru: 'Амфитеатр и конференц-центр'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Najafabad, Isfahan, Iran',
+    area: '4,000 m²',
+    challenge: 'The project featured a highly complex architectural geometry including cantilevers, curved edges and irregular surfaces that required precise enclosure detailing.',
+    sipanelSolution: 'Custom support details and enclosure assemblies were developed to preserve the architectural intent while maintaining durability and weather protection.',
+    engineeringDecision: 'Custom support details and enclosure assemblies were developed to preserve the architectural intent while maintaining durability and weather protection.',
+    executionDetail: 'Successful execution of approximately 4,000 m² of architectural enclosure on a complex university landmark building.',
+    measuredResult: 'Successful execution of approximately 4,000 m² of architectural enclosure on a complex university landmark building.',
+    riskPrevented: ['Architectural form distortion', 'Water leakage at geometric transitions', 'Excessive dead loads', 'Future maintenance complications'],
+    cardImage: najafabadUniversityAmphitheaterCard,
+    heroImage: najafabadUniversityAmphitheaterHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'payam-industrial-city-ceramic-factory',
+    projectName: {
+      en: 'Payam Industrial City Ceramic Manufacturing Facility',
+      fa: 'سالن تولید ظروف سرامیکی شهرک صنعتی پیام',
+      ar: 'مصنع إنتاج الأدوات الخزفية في مدينة بيام الصناعية',
+      ru: 'Завод керамической продукции в промышленной зоне Payam'
+    },
+    projectType: {
+      en: 'Long-span space frame industrial production hall',
+      fa: 'سازه فضاکار دهانه بلند برای فضای تولید صنعتی',
+      ar: 'صالة إنتاج صناعية بهيكل فراغي واسع',
+      ru: 'Большепролетный производственный цех'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Karaj, Iran',
+    area: '4,500 m²',
+    challenge: 'Providing a large unobstructed production area while minimizing structural weight and construction time.',
+    sipanelSolution: 'A lightweight space frame system was selected to achieve long spans and operational flexibility for ceramic manufacturing processes.',
+    engineeringDecision: 'A lightweight space frame system was selected to achieve long spans and operational flexibility for ceramic manufacturing processes.',
+    executionDetail: 'A 4,500 m² column-efficient production space optimized for manufacturing operations.',
+    measuredResult: 'A 4,500 m² column-efficient production space optimized for manufacturing operations.',
+    riskPrevented: ['Excessive structural weight', 'Column obstruction in production area', 'Construction delays', 'Inadequate span capability'],
+    cardImage: payamIndustrialCityCeramicFactoryCard,
+    heroImage: payamIndustrialCityCeramicFactoryHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'rouzbeh-charity-complex-zanjan',
+    projectName: {
+      en: 'Rouzbeh Charity Complex',
+      fa: 'مؤسسه خیریه روزبه زنجان',
+      ar: 'مجمع روزبه الخيري',
+      ru: 'Благотворительный комплекс Rouzbeh'
+    },
+    projectType: {
+      en: 'Central atrium roofing with space frame structure',
+      fa: 'پوشش دهانه مرکزی ساختمان با سازه فضاکار و ساندویچ پانل',
+      ar: 'تغطية ساحة مركزية بهيكل فراغي',
+      ru: 'Покрытие центрального атриума пространственной конструкцией'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Zanjan, Iran',
+    area: '1,000 m²',
+    challenge: 'Installing a long-span roof over a multi-storey structure under construction while maintaining compatibility with the reinforced concrete building frame.',
+    sipanelSolution: 'A lightweight space frame system combined with insulated sandwich panels was selected to optimize weight, speed, and thermal performance over the central atrium.',
+    engineeringDecision: 'A lightweight space frame system combined with insulated sandwich panels was selected to optimize weight, speed, and thermal performance over the central atrium.',
+    executionDetail: 'A fully covered central space providing approximately 1,000 m² of protected area integrated into the multi-storey building structure.',
+    measuredResult: 'A fully covered central space providing approximately 1,000 m² of protected area integrated into the multi-storey building structure.',
+    riskPrevented: ['Excessive dead load on building frame', 'Construction delays from weather exposure', 'Incompatibility with RC structure', 'Long-term maintenance issues'],
+    cardImage: rouzbehCharityComplexZanjanCard,
+    heroImage: rouzbehCharityComplexZanjanHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'shahrood-azad-university-skylight',
+    projectName: {
+      en: 'Shahrood Azad University Central Skylight',
+      fa: 'سقف نورگیر ساختمان مرکزی دانشگاه آزاد شاهرود',
+      ar: 'السقف الزجاجي للمبنى المركزي بجامعة آزاد شاهرود',
+      ru: 'Светопрозрачный купол центрального корпуса Университета Азад Шахруд'
+    },
+    projectType: {
+      en: 'Central Skylight Roof',
+      fa: 'سقف نورگیر مرکزی',
+      ar: 'سقف إنارة طبيعية',
+      ru: 'Центральный световой купол'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Shahrood, Iran',
+    area: '400 m²',
+    challenge: 'The skylight was installed on an existing roof structure, requiring careful control of dead loads, waterproofing details and structural integration.',
+    sipanelSolution: 'A dome-shaped space frame with multiwall polycarbonate panels was selected to provide uniform daylight while minimizing structural weight.',
+    engineeringDecision: 'A dome-shaped space frame with multiwall polycarbonate panels was selected to provide uniform daylight while minimizing structural weight.',
+    executionDetail: 'Approximately 400 m² of naturally illuminated interior space created without intermediate supports.',
+    measuredResult: 'Approximately 400 m² of naturally illuminated interior space created without intermediate supports.',
+    riskPrevented: ['Water leakage', 'Excessive roof loading', 'Insufficient daylight', 'High daytime energy consumption'],
+    cardImage: shahroodAzadUniversitySkylightCard,
+    heroImage: shahroodAzadUniversitySkylightHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'shalamcheh-border-gate',
+    projectName: {
+      en: 'Shalamcheh Border Gate',
+      fa: 'گیت ورودی مرز شلمچه',
+      ar: 'بوابة منفذ شلمجة الحدودي',
+      ru: 'Пограничный терминал Шаламче'
+    },
+    projectType: {
+      en: 'Border Terminal Entrance',
+      fa: 'پایانه و گیت مرزی',
+      ar: 'محطة حدودية',
+      ru: 'Пограничный терминал'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Khuzestan, Iran',
+    area: '4,000 m²',
+    challenge: 'The project required large unobstructed spans to accommodate heavy pedestrian and vehicle traffic while maintaining structural efficiency and climatic protection.',
+    sipanelSolution: 'A lightweight space frame solution with sandwich panel roofing was selected to maximize span capability and accelerate construction.',
+    engineeringDecision: 'A lightweight space frame solution with sandwich panel roofing was selected to maximize span capability and accelerate construction.',
+    executionDetail: 'Approximately 4,000 m² of covered border terminal infrastructure delivered.',
+    measuredResult: 'Approximately 4,000 m² of covered border terminal infrastructure delivered.',
+    riskPrevented: ['Traffic obstruction', 'Construction delays', 'Excessive structural weight', 'Reduced operational capacity'],
+    cardImage: shalamchehBorderGateCard,
+    heroImage: shalamchehBorderGateHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'tarbiat-modares-research-greenhouse',
+    projectName: {
+      en: 'Tarbiat Modares University Research Greenhouse',
+      fa: 'گلخانه تحقیقاتی دانشگاه تربیت مدرس',
+      ar: 'البيت الزجاجي البحثي لجامعة تربيت مدرس',
+      ru: 'Исследовательская теплица Университета Тарбиат Модаррес'
+    },
+    projectType: {
+      en: 'Research Greenhouse',
+      fa: 'گلخانه تحقیقاتی',
+      ar: 'بيت زجاجي بحثي',
+      ru: 'Исследовательская теплица'
+    },
+    mainService: claddingService,
+    serviceHref: '/systems/aluminium-cladding-covering',
+    location: 'Iran',
+    area: '400 m²',
+    challenge: 'The project required the installation of a transparent enclosure over a complex dome-shaped geometry while maintaining durability, daylight performance, and structural efficiency.',
+    sipanelSolution: 'Implementation of lightweight polycarbonate panels combined with accurate geometric control of the space-frame structure.',
+    engineeringDecision: 'Implementation of lightweight polycarbonate panels combined with accurate geometric control of the space-frame structure.',
+    executionDetail: 'Successful completion of approximately 400 m² of polycarbonate enclosure for research and experimental greenhouse applications.',
+    measuredResult: 'Successful completion of approximately 400 m² of polycarbonate enclosure for research and experimental greenhouse applications.',
+    riskPrevented: ['Insufficient daylight penetration', 'Thermal performance issues', 'Geometry mismatch', 'Excessive structural loading'],
+    cardImage: tarbiatModaresResearchGreenhouseCard,
+    heroImage: tarbiatModaresResearchGreenhouseHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'tavanir-shahrekord-central-atrium',
+    projectName: {
+      en: 'Tavanir Shahrekord Central Atrium',
+      fa: 'وید مرکزی شرکت توانیر شهرکرد',
+      ar: 'الأتريوم المركزي لشركة توانير شهرکرد',
+      ru: 'Центральный атриум компании Tavanir'
+    },
+    projectType: {
+      en: 'Atrium Skylight',
+      fa: 'پوشش وید مرکزی',
+      ar: 'سقف أتريوم زجاجي',
+      ru: 'Стеклянный атриум'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Shahrekord, Iran',
+    area: 'Approx. 350 m²',
+    challenge: 'Providing maximum daylight and architectural transparency while maintaining structural efficiency.',
+    sipanelSolution: 'A lightweight space frame integrated with spider glass fittings was selected to minimize visual obstruction and maximize transparency.',
+    engineeringDecision: 'A lightweight space frame integrated with spider glass fittings was selected to minimize visual obstruction and maximize transparency.',
+    executionDetail: 'Completed transparent atrium enclosure delivering natural daylight and weather protection.',
+    measuredResult: 'Completed transparent atrium enclosure delivering natural daylight and weather protection.',
+    riskPrevented: ['Excessive structural weight', 'Daylight reduction', 'Visual obstruction', 'Complex glass support requirements'],
+    cardImage: tavanirShahrekordCentralAtriumCard,
+    heroImage: tavanirShahrekordCentralAtriumHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'tehran-mall-roof-garden-foodcourt',
+    projectName: {
+      en: 'Tehran Mall Roof Garden, Food Court & Cinema Roof',
+      fa: 'سقف روف گاردن، فودکورت و سینمای تهران مال',
+      ar: 'سقف حديقة السطح ومنطقة المطاعم والسينما في طهران مول',
+      ru: 'Кровля Roof Garden, Food Court и кинотеатров Tehran Mall'
+    },
+    projectType: {
+      en: 'Large-Span Roof Structure',
+      fa: 'سقف فضاکار گسترده',
+      ar: 'سقف واسع الامتداد',
+      ru: 'Большепролетная кровля'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Tehran, Iran',
+    area: 'Approx. 7,000 m²',
+    challenge: 'Creating large column-free commercial and entertainment spaces while meeting architectural and structural requirements.',
+    sipanelSolution: 'A long-span space frame system was selected to maximize open space, reduce structural weight and improve construction efficiency.',
+    engineeringDecision: 'A long-span space frame system was selected to maximize open space, reduce structural weight and improve construction efficiency.',
+    executionDetail: 'Successful completion of a large-scale roofing structure serving multiple public-use functions within Tehran Mall.',
+    measuredResult: 'Successful completion of a large-scale roofing structure serving multiple public-use functions within Tehran Mall.',
+    riskPrevented: ['Excessive structural loads', 'Operational interference from columns', 'Large-span construction challenges', 'Architectural restrictions'],
+    cardImage: tehranMallRoofGardenFoodcourtCard,
+    heroImage: tehranMallRoofGardenFoodcourtHero,
+    resourceTitle: localized('Panel Selection Guide')
+  },
+  {
+    slug: 'toranj-kish-restaurant',
+    projectName: {
+      en: 'Toranj Kish Hotel Restaurant Roof',
+      fa: 'رستوران دریایی هتل ترنج کیش',
+      ar: 'مطعم فندق ترنج كيش',
+      ru: 'Ресторан отеля Toranj Kish'
+    },
+    projectType: {
+      en: 'Overwater Restaurant',
+      fa: 'رستوران روی آب',
+      ar: 'مطعم فوق المياه',
+      ru: 'Ресторан над водой'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Kish Island, Iran',
+    area: 'Approx. 500 m²',
+    challenge: 'Construction in a highly corrosive marine environment with logistical and operational constraints.',
+    sipanelSolution: 'A lightweight space frame system was selected to minimize dead loads and facilitate installation over water.',
+    engineeringDecision: 'A lightweight space frame system was selected to minimize dead loads and facilitate installation over water.',
+    executionDetail: 'Successful completion of the restaurant roof structure in a demanding coastal environment.',
+    measuredResult: 'Successful completion of the restaurant roof structure in a demanding coastal environment.',
+    riskPrevented: ['Marine corrosion', 'Excessive structural weight', 'Installation difficulties', 'Operational disruptions'],
+    cardImage: toranjKishRestaurantCard,
+    heroImage: toranjKishRestaurantHero,
     resourceTitle: localized('Panel Selection Guide')
   }
 ];

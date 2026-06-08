@@ -1,0 +1,102 @@
+{
+  "slug": "shahrood-azad-university-skylight",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 400,
+  "systems": [
+    "polycarbonate_system",
+    "space_frame_structure",
+    "skylight_system"
+  ],
+  "images": {
+    "card": "/images/projects/shahrood-azad-university-skylight/card.webp",
+    "hero_desktop": "/images/projects/shahrood-azad-university-skylight/hero-desktop.webp",
+    "hero_mobile": "/images/projects/shahrood-azad-university-skylight/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/shahrood-azad-university-skylight/after.webp",
+      "/images/projects/shahrood-azad-university-skylight/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سقف نورگیر ساختمان مرکزی دانشگاه آزاد شاهرود",
+      "location": "شاهرود، ایران",
+      "category": "آموزشی",
+      "project_type": "سقف نورگیر مرکزی",
+      "system_label": "پوشش پلی کربنات",
+      "area_label": "۴۰۰ مترمربع",
+      "card_subtitle": "نورگیر پلی کربنات بر روی سازه فضاکار",
+      "card_highlight": "تأمین نور طبیعی برای فضای مرکزی ساختمان",
+      "summary": "سقف نورگیر ساختمان مرکزی دانشگاه آزاد شاهرود با استفاده از سازه فضاکار و پوشش پلی کربنات طراحی و اجرا شد. این پروژه با هدف تأمین نور طبیعی، بهبود کیفیت فضایی و حذف نیاز به نور مصنوعی در ساعات روز اجرا گردید.",
+      "challenge": "پروژه بر روی بام ساختمان موجود اجرا شد و نیازمند کنترل وزن سازه، محدودیت‌های اجرایی، آب‌بندی کامل و انتقال ایمن بارها به سازه اصلی ساختمان بود.",
+      "engineering_decision": "استفاده از سازه فضاکار سبک با هندسه گنبدی و پوشش پلی کربنات چندجداره برای دستیابی به نور یکنواخت، کاهش بار مرده و افزایش سرعت اجرا.",
+      "measured_result": "ایجاد حدود ۴۰۰ مترمربع فضای نورگیر با نور طبیعی گسترده و بدون نیاز به ستون‌های میانی.",
+      "risk_prevented": [
+        "نفوذ آب به ساختمان",
+        "افزایش بار مرده سقف",
+        "کاهش نور طبیعی فضاهای داخلی",
+        "هزینه بالای روشنایی روزانه"
+      ]
+    },
+    "en": {
+      "title": "Shahrood Azad University Central Skylight",
+      "location": "Shahrood, Iran",
+      "category": "Education",
+      "project_type": "Central Skylight Roof",
+      "system_label": "Polycarbonate Roofing System",
+      "area_label": "400 m²",
+      "card_subtitle": "Polycarbonate Skylight on Space Frame Structure",
+      "card_highlight": "Natural daylight solution for an educational facility",
+      "summary": "The central skylight roof of Shahrood Azad University was designed and constructed using a lightweight space frame structure and polycarbonate cladding to maximize natural daylight within the building.",
+      "challenge": "The skylight was installed on an existing roof structure, requiring careful control of dead loads, waterproofing details and structural integration.",
+      "engineering_decision": "A dome-shaped space frame with multiwall polycarbonate panels was selected to provide uniform daylight while minimizing structural weight.",
+      "measured_result": "Approximately 400 m² of naturally illuminated interior space created without intermediate supports.",
+      "risk_prevented": [
+        "Water leakage",
+        "Excessive roof loading",
+        "Insufficient daylight",
+        "High daytime energy consumption"
+      ]
+    },
+    "ar": {
+      "title": "السقف الزجاجي للمبنى المركزي بجامعة آزاد شاهرود",
+      "location": "شاهرود، إيران",
+      "category": "تعليمي",
+      "project_type": "سقف إنارة طبيعية",
+      "system_label": "ألواح بولي كربونات",
+      "area_label": "٤٠٠ متر مربع",
+      "card_subtitle": "سقف إنارة طبيعية بهيكل فراغي",
+      "card_highlight": "تعزيز الإضاءة الطبيعية داخل المبنى",
+      "summary": "تم تنفيذ السقف العلوي للمبنى المركزي باستخدام هيكل فراغي خفيف وألواح بولي كربونات لتوفير أقصى استفادة من الضوء الطبيعي.",
+      "challenge": "تم تنفيذ المشروع فوق مبنى قائم مع متطلبات دقيقة للعزل المائي وتقليل الأحمال.",
+      "engineering_decision": "اعتماد هيكل فراغي قُبّي الشكل مع ألواح بولي كربونات متعددة الجدران.",
+      "measured_result": "إنشاء مساحة مضاءة طبيعياً بمساحة تقارب ٤٠٠ متر مربع.",
+      "risk_prevented": [
+        "تسرب المياه",
+        "زيادة الأحمال",
+        "ضعف الإضاءة الطبيعية",
+        "ارتفاع استهلاك الطاقة"
+      ]
+    },
+    "ru": {
+      "title": "Светопрозрачный купол центрального корпуса Университета Азад Шахруд",
+      "location": "Шахруд, Иран",
+      "category": "Образование",
+      "project_type": "Центральный световой купол",
+      "system_label": "Поликарбонатная система покрытия",
+      "area_label": "400 м²",
+      "card_subtitle": "Поликарбонатный световой купол на пространственной конструкции",
+      "card_highlight": "Естественное освещение центральных пространств",
+      "summary": "Светопрозрачный купол центрального корпуса был реализован с использованием пространственной конструкции и поликарбонатных панелей для максимального использования дневного света.",
+      "challenge": "Монтаж на существующей кровле требовал строгого контроля нагрузок и надежной гидроизоляции.",
+      "engineering_decision": "Выбрана легкая купольная пространственная ферма с многослойным поликарбонатом.",
+      "measured_result": "Создано около 400 м² естественно освещенного пространства.",
+      "risk_prevented": [
+        "Протечки",
+        "Избыточные нагрузки",
+        "Недостаток естественного света",
+        "Повышенное энергопотребление"
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "slug": "bandar-abbas-mall-atrium-roof",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 700,
+  "systems": [
+    "sandwich_panel"
+  ],
+  "images": {
+    "card": "/images/projects/bandar-abbas-mall-atrium-roof/card.webp",
+    "hero_desktop": "/images/projects/bandar-abbas-mall-atrium-roof/hero-desktop.webp",
+    "hero_mobile": "/images/projects/bandar-abbas-mall-atrium-roof/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/bandar-abbas-mall-atrium-roof/after.webp",
+      "/images/projects/bandar-abbas-mall-atrium-roof/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "مال بندرعباس",
+      "location": "بندرعباس، ایران",
+      "category": "مجتمع تجاری",
+      "project_type": "آتریوم مرکزی مجتمع تجاری",
+      "system_label": "سیستم ساندویچ پانل",
+      "area_label": "۷۰۰ مترمربع",
+      "card_subtitle": "۷۰۰ مترمربع پوشش ساندویچ پانل",
+      "card_highlight": "پوشش قوسی آتریوم مرکزی",
+      "summary": "اجرای پوشش ساندویچ پانل برای آتریوم مرکزی مال بندرعباس بر روی سازه فضاکار قوسی با هندسه معماری شاخص.",
+      "challenge": "پروژه شامل اجرای پوشش بر روی سازه فضاکار قوسی در قلب مجموعه تجاری بود؛ بخشی که علاوه بر الزامات فنی، در معرض دید مستقیم بازدیدکنندگان قرار دارد و کیفیت اجرای آن اهمیت ویژه‌ای داشت.",
+      "engineering_decision": "کنترل دقیق خطوط نصب، هماهنگی هندسه پوشش با فرم قوسی سازه و اجرای جزئیات پایانی برای دستیابی به سطحی یکپارچه و خوانا در فضای آتریوم.",
+      "measured_result": "اجرای موفق ۷۰۰ مترمربع پوشش ساندویچ پانل بر روی سقف قوسی آتریوم و تکمیل پوسته معماری فضای مرکزی مجتمع.",
+      "risk_prevented": [
+        "شکست بصری در سطوح قوسی",
+        "عدم تطابق پوشش با هندسه سازه",
+        "موج‌دار شدن خطوط پوشش",
+        "افت کیفیت معماری فضای مرکزی"
+      ]
+    },
+    "en": {
+      "title": "Bandar Abbas Mall",
+      "location": "Bandar Abbas, Iran",
+      "category": "Commercial Complex",
+      "project_type": "Central Atrium Roof",
+      "system_label": "Sandwich Panel System",
+      "area_label": "700 m²",
+      "card_subtitle": "700 m² Sandwich Panel Roofing",
+      "card_highlight": "Curved Atrium Roof Enclosure",
+      "summary": "Sandwich panel roofing works for the central atrium of Bandar Abbas Mall, executed over a curved space-frame structure.",
+      "challenge": "The project involved installing enclosure systems over a prominent curved space-frame roof located at the center of a commercial development where architectural quality was critical.",
+      "engineering_decision": "Careful geometric control, alignment of panel layouts with the curved structure, and detailed finishing works to achieve a continuous architectural surface.",
+      "measured_result": "Successful completion of 700 m² of sandwich panel roofing for the central atrium enclosure.",
+      "risk_prevented": [
+        "Visual discontinuity on curved surfaces",
+        "Geometry mismatch between roof and structure",
+        "Panel alignment defects",
+        "Reduced architectural quality"
+      ]
+    },
+    "ar": {
+      "title": "مول بندر عباس",
+      "location": "بندر عباس، إيران",
+      "category": "مجمع تجاري",
+      "project_type": "سقف الأتريوم المركزي",
+      "system_label": "نظام ألواح الساندويتش",
+      "area_label": "٧٠٠ متر مربع",
+      "card_subtitle": "٧٠٠ متر مربع من ألواح الساندويتش",
+      "card_highlight": "تغطية الأتريوم المنحني",
+      "summary": "تنفيذ تغطية الأتريوم المركزي في مول بندر عباس باستخدام ألواح الساندويتش فوق هيكل فضائي منحني.",
+      "challenge": "تطلب المشروع تنفيذ التغطية فوق سقف فضائي منحني بارز في قلب المجمع التجاري مع الحفاظ على جودة المظهر المعماري.",
+      "engineering_decision": "ضبط هندسي دقيق لخطوط التركيب وتنسيق كامل بين شكل الهيكل ونظام التغطية.",
+      "measured_result": "تنفيذ ناجح لمساحة ٧٠٠ متر مربع من تغطية ألواح الساندويتش للأتريوم المركزي.",
+      "risk_prevented": [
+        "تشوهات بصرية في الأسطح المنحنية",
+        "عدم التوافق مع هندسة الهيكل",
+        "أخطاء محاذاة الألواح",
+        "انخفاض الجودة المعمارية"
+      ]
+    },
+    "ru": {
+      "title": "Bandar Abbas Mall",
+      "location": "Бендер-Аббас, Иран",
+      "category": "Торговый комплекс",
+      "project_type": "Кровля центрального атриума",
+      "system_label": "Система сэндвич-панелей",
+      "area_label": "700 м²",
+      "card_subtitle": "700 м² покрытия из сэндвич-панелей",
+      "card_highlight": "Криволинейное покрытие атриума",
+      "summary": "Монтаж покрытия из сэндвич-панелей для центрального атриума торгового комплекса Bandar Abbas Mall.",
+      "challenge": "Необходимо было выполнить облицовку криволинейной пространственной конструкции, расположенной в центральной части торгового комплекса.",
+      "engineering_decision": "Точный геометрический контроль и согласование раскладки панелей с формой пространственной конструкции.",
+      "measured_result": "Успешное выполнение 700 м² покрытия атриума из сэндвич-панелей.",
+      "risk_prevented": [
+        "Визуальные дефекты на криволинейной поверхности",
+        "Несоответствие геометрии конструкции",
+        "Ошибки раскладки панелей",
+        "Снижение архитектурного качества"
+      ]
+    }
+  }
+}

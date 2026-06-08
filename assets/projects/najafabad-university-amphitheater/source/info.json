@@ -1,0 +1,102 @@
+{
+  "slug": "najafabad-university-amphitheater",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 4000,
+  "systems": [
+    "sandwich_panel_system",
+    "architectural_space_frame",
+    "complex_geometry_enclosure"
+  ],
+  "images": {
+    "card": "/images/projects/najafabad-university-amphitheater/card.webp",
+    "hero_desktop": "/images/projects/najafabad-university-amphitheater/hero-desktop.webp",
+    "hero_mobile": "/images/projects/najafabad-university-amphitheater/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/najafabad-university-amphitheater/after.webp",
+      "/images/projects/najafabad-university-amphitheater/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن آمفی‌تئاتر دانشگاه آزاد اسلامی نجف‌آباد",
+      "location": "نجف‌آباد، اصفهان، ایران",
+      "category": "آموزشی و فرهنگی",
+      "project_type": "آمفی‌تئاتر و مرکز همایش",
+      "system_label": "ساندویچ پانل",
+      "area_label": "۴۰۰۰ مترمربع",
+      "card_subtitle": "۴۰۰۰ مترمربع پوشش ساندویچ پانل",
+      "card_highlight": "پوشش معماری پیچیده بر روی فرم آزاد",
+      "summary": "طراحی و اجرای پوشش سقف، لبه‌ها و سطوح زیرین سازه آمفی‌تئاتر دانشگاه نجف‌آباد با استفاده از سیستم ساندویچ پانل بر روی یک فرم معماری شاخص و غیرمتعارف.",
+      "challenge": "معماری پروژه دارای خطوط شکسته، کنسول‌های بلند، سطوح منحنی و زوایای متغیر بود. پوشش باید به‌گونه‌ای اجرا می‌شد که هندسه معماری بدون تغییر حفظ شود و در عین حال جزئیات اجرایی و آب‌بندی نیز کنترل گردد.",
+      "engineering_decision": "طراحی جزئیات اختصاصی برای پوشش سطوح جانبی، زیرسازه و لبه‌های آزاد با استفاده از ساندویچ پانل و زیرسازی ویژه جهت حفظ خلوص فرم معماری.",
+      "measured_result": "اجرای حدود ۴۰۰۰ مترمربع پوشش ساندویچ پانل بر روی یکی از پیچیده‌ترین فرم‌های معماری دانشگاهی کشور.",
+      "risk_prevented": [
+        "اعوجاج در فرم معماری پروژه",
+        "نشت آب در نقاط شکست هندسی",
+        "افزایش وزن پوشش",
+        "پیچیدگی تعمیر و نگهداری در آینده"
+      ]
+    },
+    "en": {
+      "title": "Najafabad University Amphitheater",
+      "location": "Najafabad, Isfahan, Iran",
+      "category": "Education & Cultural Facilities",
+      "project_type": "Amphitheater and Convention Facility",
+      "system_label": "Sandwich Panel System",
+      "area_label": "4,000 m²",
+      "card_subtitle": "4,000 m² Sandwich Panel Enclosure",
+      "card_highlight": "Complex architectural envelope on a free-form geometry",
+      "summary": "Design and execution of the roof, edge and soffit enclosure systems for the Najafabad University Amphitheater using sandwich panel technology.",
+      "challenge": "The project featured a highly complex architectural geometry including cantilevers, curved edges and irregular surfaces that required precise enclosure detailing.",
+      "engineering_decision": "Custom support details and enclosure assemblies were developed to preserve the architectural intent while maintaining durability and weather protection.",
+      "measured_result": "Successful execution of approximately 4,000 m² of architectural enclosure on a complex university landmark building.",
+      "risk_prevented": [
+        "Architectural form distortion",
+        "Water leakage at geometric transitions",
+        "Excessive dead loads",
+        "Future maintenance complications"
+      ]
+    },
+    "ar": {
+      "title": "مدرج جامعة نجف آباد",
+      "location": "نجف آباد، أصفهان، إيران",
+      "category": "تعليمي وثقافي",
+      "project_type": "مسرح ومركز مؤتمرات",
+      "system_label": "ألواح ساندويتش بانل",
+      "area_label": "٤٠٠٠ متر مربع",
+      "card_subtitle": "٤٠٠٠ متر مربع من التغطية",
+      "card_highlight": "تنفيذ غلاف معماري معقد على شكل حر",
+      "summary": "تنفيذ أنظمة التغطية للسقف والحواف والأسطح السفلية لمدرج جامعة نجف آباد باستخدام الساندويتش بانل.",
+      "challenge": "تميز المشروع بهندسة معمارية معقدة تضم بروزات كبيرة وأسطحاً منحنية وزوايا متغيرة.",
+      "engineering_decision": "تطوير تفاصيل تنفيذ خاصة للحفاظ على الشكل المعماري مع ضمان الأداء الإنشائي والعزل.",
+      "measured_result": "تنفيذ نحو ٤٠٠٠ متر مربع من التغطية المعمارية بنجاح.",
+      "risk_prevented": [
+        "تشوه الشكل المعماري",
+        "تسرب المياه",
+        "زيادة الأحمال",
+        "صعوبة الصيانة المستقبلية"
+      ]
+    },
+    "ru": {
+      "title": "Амфитеатр университета Наджафабад",
+      "location": "Наджафабад, Исфахан, Иран",
+      "category": "Образовательные и культурные объекты",
+      "project_type": "Амфитеатр и конференц-центр",
+      "system_label": "Сэндвич-панели",
+      "area_label": "4 000 м²",
+      "card_subtitle": "4 000 м² ограждающих конструкций",
+      "card_highlight": "Сложная архитектурная оболочка свободной формы",
+      "summary": "Проектирование и монтаж покрытия кровли, кромок и нижних поверхностей амфитеатра университета Наджафабад.",
+      "challenge": "Здание имеет сложную архитектурную геометрию с большими консолями, криволинейными поверхностями и нестандартными переходами.",
+      "engineering_decision": "Разработка специальных узлов и решений для сохранения архитектурного замысла и обеспечения надежности оболочки.",
+      "measured_result": "Успешная реализация около 4 000 м² покрытия на одном из наиболее сложных университетских объектов.",
+      "risk_prevented": [
+        "Искажение архитектурной формы",
+        "Протечки в сложных узлах",
+        "Избыточная нагрузка",
+        "Сложности эксплуатации"
+      ]
+    }
+  }
+}

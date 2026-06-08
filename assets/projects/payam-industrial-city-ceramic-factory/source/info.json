@@ -1,0 +1,104 @@
+{
+  "slug": "payam-industrial-city-ceramic-factory",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 4500,
+  "year": null,
+  "sector": "industrial",
+  "systems": [
+    "space_frame_structure",
+    "sandwich_panel_roofing"
+  ],
+  "location": {
+    "city": "Karaj",
+    "region": "Payam Industrial City",
+    "country": "Iran"
+  },
+  "images": {
+    "before": "/images/projects/payam-ceramic-factory/before.webp",
+    "after": "/images/projects/payam-ceramic-factory/after.webp",
+    "gallery": [
+      "/images/projects/payam-ceramic-factory/gallery-01.webp",
+      "/images/projects/payam-ceramic-factory/gallery-02.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن تولید ظروف سرامیکی شهرک صنعتی پیام",
+      "subtitle": "سازه فضاکار دهانه بلند برای فضای تولید صنعتی",
+      "location": "شهرک صنعتی پیام، کرج",
+      "area": "۴۵۰۰ مترمربع",
+      "system": "سازه فضاکار با پوشش ساندویچ پانل",
+      "summary": "طراحی، ساخت و اجرای سازه فضاکار و پوشش سقف سالن تولید ظروف سرامیکی در شهرک صنعتی پیام کرج. پروژه با هدف ایجاد فضای تولید بدون ستون میانی و تأمین انعطاف‌پذیری کامل برای خطوط تولید و جابجایی تجهیزات صنعتی اجرا شد.",
+      "challenge": "تأمین دهانه‌های وسیع صنعتی، کاهش تعداد ستون‌ها، کنترل وزن سازه و اجرای سریع بدون اختلال در برنامه راه‌اندازی کارخانه.",
+      "solution": "استفاده از سیستم سازه فضاکار سبک با قابلیت پوشش دهانه‌های بزرگ و اجرای پوشش ساندویچ پانل جهت تأمین الزامات حرارتی، دوام و سرعت نصب.",
+      "result": "ایجاد فضای تولیدی وسیع و یکپارچه به مساحت تقریبی ۴۵۰۰ مترمربع با حداقل موانع سازه‌ای و قابلیت بهره‌برداری صنعتی بلندمدت.",
+      "highlights": [
+        "۴۵۰۰ مترمربع پوشش سقف",
+        "سازه فضاکار دهانه بلند",
+        "پوشش ساندویچ پانل",
+        "فضای تولید بدون ستون میانی",
+        "مناسب برای خطوط تولید صنعتی"
+      ]
+    },
+    "en": {
+      "title": "Payam Industrial City Ceramic Manufacturing Facility",
+      "subtitle": "Long-span space frame industrial production hall",
+      "location": "Karaj, Iran",
+      "area": "4,500 m²",
+      "system": "Space Frame Structure + Sandwich Panel Roofing",
+      "summary": "Design, fabrication and installation of a long-span space frame roof structure and sandwich panel roofing system for a ceramic manufacturing facility in Payam Industrial City.",
+      "challenge": "Providing a large unobstructed production area while minimizing structural weight and construction time.",
+      "solution": "A lightweight space frame system was selected to achieve long spans and operational flexibility for industrial production.",
+      "result": "A 4,500 m² column-efficient production space optimized for manufacturing operations.",
+      "highlights": [
+        "4,500 m² coverage",
+        "Long-span space frame",
+        "Industrial manufacturing facility",
+        "Sandwich panel roofing",
+        "Optimized production layout"
+      ]
+    },
+    "ar": {
+      "title": "مصنع إنتاج الأدوات الخزفية في مدينة بيام الصناعية",
+      "location": "كرج، إيران",
+      "area": "٤٥٠٠ م²",
+      "system": "هيكل فراغي مع ساندويتش بانل",
+      "summary": "تنفيذ سقف صناعي واسع باستخدام الهيكل الفراغي لتوفير مساحة إنتاج مفتوحة.",
+      "highlights": [
+        "٤٥٠٠ م²",
+        "منشأة صناعية",
+        "هيكل فراغي"
+      ]
+    },
+    "ru": {
+      "title": "Завод керамической продукции в промышленной зоне Payam",
+      "location": "Карадж, Иран",
+      "area": "4500 м²",
+      "system": "Пространственная конструкция и сэндвич-панели",
+      "summary": "Проект производственного комплекса с большепролетной пространственной конструкцией.",
+      "highlights": [
+        "4500 м²",
+        "Промышленный объект",
+        "Большепролетная конструкция"
+      ]
+    }
+  },
+  "technical_data": {
+    "structure_type": "space_frame",
+    "roof_system": "sandwich_panel",
+    "application": "ceramic_manufacturing",
+    "span_category": "long_span_industrial",
+    "column_free_priority": true
+  },
+  "seo": {
+    "primary_keyword": "Industrial Space Frame Factory Roof",
+    "secondary_keywords": [
+      "Ceramic Factory Structure",
+      "Long Span Industrial Building",
+      "Sandwich Panel Roofing",
+      "Industrial Hall Construction",
+      "Space Frame Manufacturing Facility"
+    ]
+  }
+}

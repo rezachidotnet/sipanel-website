@@ -1,0 +1,90 @@
+{
+  "slug": "rouzbeh-charity-complex-zanjan",
+  "status": "completed",
+  "featured": false,
+  "area_m2": 1000,
+  "year": null,
+  "sector": "institutional",
+  "systems": [
+    "space_frame_structure",
+    "sandwich_panel_roofing"
+  ],
+  "location": {
+    "city": "Zanjan",
+    "region": "Zanjan Province",
+    "country": "Iran"
+  },
+  "images": {
+    "before": "/images/projects/rouzbeh-charity-complex-zanjan/before.webp",
+    "after": "/images/projects/rouzbeh-charity-complex-zanjan/after.webp"
+  },
+  "content": {
+    "fa": {
+      "title": "مؤسسه خیریه روزبه زنجان",
+      "subtitle": "پوشش دهانه مرکزی ساختمان با سازه فضاکار و ساندویچ پانل",
+      "location": "زنجان، ایران",
+      "area": "۱۰۰۰ مترمربع",
+      "system": "سازه فضاکار و پوشش ساندویچ پانل",
+      "summary": "طراحی، ساخت و اجرای سازه فضاکار و پوشش ساندویچ پانل برای دهانه مرکزی ساختمان مؤسسه خیریه روزبه زنجان. پروژه با هدف ایجاد فضای سرپوشیده وسیع در بخش میانی مجموعه و هماهنگی کامل با معماری ساختمان اجرا شد.",
+      "challenge": "اجرای سازه بر روی ساختمان چندطبقه در حال احداث، محدودیت‌های اجرایی ناشی از ارتفاع پروژه و نیاز به هماهنگی کامل با سازه بتنی موجود.",
+      "solution": "استفاده از سیستم فضاکار سبک با قابلیت نصب سریع و حداقل بار مرده، همراه با پوشش ساندویچ پانل برای تأمین عملکرد حرارتی و دوام بلندمدت.",
+      "result": "ایجاد فضای سرپوشیده یکپارچه به مساحت تقریبی ۱۰۰۰ مترمربع با اجرای سریع و حداقل تأثیر بر روند ساخت مجموعه.",
+      "highlights": [
+        "۱۰۰۰ مترمربع پوشش سقف",
+        "سازه فضاکار سبک",
+        "پوشش ساندویچ پانل",
+        "نصب روی ساختمان چندطبقه",
+        "هماهنگی با سازه بتنی موجود"
+      ]
+    },
+    "en": {
+      "title": "Rouzbeh Charity Complex",
+      "subtitle": "Central Atrium Roofing with Space Frame Structure",
+      "location": "Zanjan, Iran",
+      "area": "1,000 m²",
+      "system": "Space Frame Structure + Sandwich Panel Roofing",
+      "summary": "Design, fabrication and installation of a space frame roof structure and sandwich panel enclosure for the central section of the Rouzbeh Charity Complex in Zanjan.",
+      "challenge": "Installing a long-span roof over a multi-storey structure under construction while maintaining compatibility with the reinforced concrete building frame.",
+      "solution": "A lightweight space frame system combined with insulated sandwich panels was selected to optimize weight, speed of installation and long-term performance.",
+      "result": "A fully covered central space providing approximately 1,000 m² of protected area integrated into the architectural design.",
+      "highlights": [
+        "1,000 m² coverage",
+        "Institutional building",
+        "Space frame roof",
+        "Sandwich panel system",
+        "Multi-storey integration"
+      ]
+    },
+    "ar": {
+      "title": "مجمع روزبه الخيري",
+      "location": "زنجان، إيران",
+      "area": "١٠٠٠ م²",
+      "system": "هيكل فراغي مع ساندويتش بانل",
+      "summary": "تنفيذ تغطية الساحة المركزية للمبنى باستخدام الهيكل الفراغي وألواح الساندويتش بانل."
+    },
+    "ru": {
+      "title": "Благотворительный комплекс Rouzbeh",
+      "location": "Зенджан, Иран",
+      "area": "1000 м²",
+      "system": "Пространственная конструкция и сэндвич-панели",
+      "summary": "Проект покрытия центральной части здания с использованием пространственной конструкции."
+    }
+  },
+  "technical_data": {
+    "structure_type": "space_frame",
+    "roof_system": "sandwich_panel",
+    "application": "institutional_building",
+    "span_category": "medium_span",
+    "installation_type": "over_existing_building"
+  },
+  "seo": {
+    "primary_keyword": "Institutional Space Frame Roofing",
+    "secondary_keywords": [
+      "Atrium Roof Structure",
+      "Space Frame Canopy",
+      "Sandwich Panel Roof",
+      "Charity Complex Roofing",
+      "Long Span Roof Construction"
+    ]
+  }
+}

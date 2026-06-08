@@ -1,0 +1,103 @@
+{
+  "slug": "baharestan-prayer-hall",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 1000,
+  "systems": [
+    "sandwich_panel",
+    "dry_facade",
+    "ceramic_cladding",
+    "structural_glazing"
+  ],
+  "images": {
+    "card": "/images/projects/baharestan-prayer-hall/card.webp",
+    "hero_desktop": "/images/projects/baharestan-prayer-hall/hero-desktop.webp",
+    "hero_mobile": "/images/projects/baharestan-prayer-hall/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/baharestan-prayer-hall/after.webp",
+      "/images/projects/baharestan-prayer-hall/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن نماز شهر بهارستان",
+      "location": "بهارستان، ایران",
+      "category": "ساختمان عمومی",
+      "project_type": "سالن نماز",
+      "system_label": "ساندویچ پانل، نمای خشک سرامیک و شیشه",
+      "area_label": "۱۰۰۰ مترمربع",
+      "card_subtitle": "۱۰۰۰ مترمربع نمای خشک و ساندویچ پانل",
+      "card_highlight": "طراحی اختصاصی نمای خشک روی سقف شیبدار",
+      "summary": "طراحی و اجرای سالن نماز شهر بهارستان با سیستم ساندویچ پانل، نمای خشک سرامیکی و سطوح شیشه‌ای با هندسه معماری خاص.",
+      "challenge": "چالش اصلی پروژه اجرای نمای خشک سرامیکی بر روی سطوح سقف با شیب زیاد بود؛ موضوعی که در سیستم‌های متعارف نمای خشک پیش‌بینی نشده است.",
+      "engineering_decision": "طراحی، مهندسی و تولید اتصالات اختصاصی برای نصب ایمن و پایدار سرامیک خشک بر روی سطوح شیبدار و حفظ یکپارچگی هندسی نما و سقف.",
+      "measured_result": "اجرای موفق ۱۰۰۰ مترمربع پوشش و نما با حفظ خطوط معماری پروژه و دستیابی به یک پوسته یکپارچه بین سقف و دیوار.",
+      "risk_prevented": [
+        "لغزش یا جابجایی سرامیک روی شیب",
+        "شکست اتصالات در سطوح مایل",
+        "عدم یکپارچگی بین نما و سقف",
+        "کاهش دوام سیستم نمای خشک"
+      ]
+    },
+    "en": {
+      "title": "Baharestan Prayer Hall",
+      "location": "Baharestan, Iran",
+      "category": "Public Building",
+      "project_type": "Prayer Hall",
+      "system_label": "Sandwich Panel, Dry Ceramic Facade & Glass",
+      "area_label": "1,000 m²",
+      "card_subtitle": "1,000 m² Dry Facade & Sandwich Panel",
+      "card_highlight": "Custom dry-facade system for steep roof surfaces",
+      "summary": "Design and execution of Baharestan Prayer Hall using sandwich panels, dry ceramic facade technology, and architectural glazing.",
+      "challenge": "The main challenge was installing dry ceramic cladding on steep roof surfaces where conventional dry-facade systems are typically not applicable.",
+      "engineering_decision": "Development and fabrication of custom connection systems capable of safely supporting ceramic panels on highly inclined roof geometries.",
+      "measured_result": "Successful execution of 1,000 m² of enclosure and facade works while maintaining architectural continuity between roof and wall surfaces.",
+      "risk_prevented": [
+        "Ceramic panel slippage on inclined surfaces",
+        "Connection failure under roof loads",
+        "Discontinuity between roof and facade",
+        "Reduced durability of dry-facade system"
+      ]
+    },
+    "ar": {
+      "title": "قاعة الصلاة في مدينة بهارستان",
+      "location": "بهارستان، إيران",
+      "category": "مبنى عام",
+      "project_type": "قاعة صلاة",
+      "system_label": "ألواح ساندويتش وواجهة سيراميك جافة وزجاج",
+      "area_label": "١٠٠٠ متر مربع",
+      "card_subtitle": "١٠٠٠ متر مربع من الواجهة الجافة وألواح الساندويتش",
+      "card_highlight": "تصميم خاص لتركيب الواجهة الجافة على الأسقف المائلة",
+      "summary": "تصميم وتنفيذ قاعة الصلاة في مدينة بهارستان باستخدام ألواح الساندويتش والواجهة الجافة السيراميكية والأسطح الزجاجية المعمارية.",
+      "challenge": "تمثل التحدي الرئيسي في تركيب واجهة السيراميك الجافة على أسطح السقف شديدة الانحدار، وهو أمر لا تغطيه الأنظمة التقليدية عادة.",
+      "engineering_decision": "تصميم وتصنيع وصلات خاصة تسمح بتثبيت ألواح السيراميك بأمان على الأسطح المائلة مع الحفاظ على الاستقرار طويل الأمد.",
+      "measured_result": "تنفيذ ناجح لمساحة ١٠٠٠ متر مربع مع الحفاظ على التكامل المعماري بين السقف والواجهة.",
+      "risk_prevented": [
+        "انزلاق السيراميك على الأسطح المائلة",
+        "فشل الوصلات الإنشائية",
+        "فقدان التكامل بين السقف والواجهة",
+        "انخفاض عمر نظام الواجهة الجافة"
+      ]
+    },
+    "ru": {
+      "title": "Молитвенный зал Бахарестан",
+      "location": "Бахарестан, Иран",
+      "category": "Общественное здание",
+      "project_type": "Молитвенный зал",
+      "system_label": "Сэндвич-панели, вентилируемый керамический фасад и остекление",
+      "area_label": "1 000 м²",
+      "card_subtitle": "1 000 м² фасадных и кровельных работ",
+      "card_highlight": "Специальная система крепления фасада на крутой кровле",
+      "summary": "Проектирование и реализация молитвенного зала Бахарестан с использованием сэндвич-панелей, керамического навесного фасада и архитектурного остекления.",
+      "challenge": "Основной сложностью стала установка керамического навесного фасада на крутых наклонных поверхностях кровли.",
+      "engineering_decision": "Разработка и изготовление специальных крепежных элементов для надежного монтажа керамических панелей на наклонных поверхностях.",
+      "measured_result": "Успешное выполнение 1 000 м² работ с сохранением единой архитектурной оболочки между фасадом и кровлей.",
+      "risk_prevented": [
+        "Смещение керамических панелей на уклоне",
+        "Разрушение крепежных узлов",
+        "Нарушение единства фасада и кровли",
+        "Снижение долговечности фасадной системы"
+      ]
+    }
+  }
+}

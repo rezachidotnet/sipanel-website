@@ -1,0 +1,101 @@
+{
+  "slug": "tarbiat-modares-research-greenhouse",
+  "status": "completed",
+  "featured": false,
+  "area_m2": 400,
+  "systems": [
+    "polycarbonate_cladding",
+    "space_frame_structure"
+  ],
+  "images": {
+    "card": "/images/projects/tarbiat-modares-research-greenhouse/card.webp",
+    "hero_desktop": "/images/projects/tarbiat-modares-research-greenhouse/hero-desktop.webp",
+    "hero_mobile": "/images/projects/tarbiat-modares-research-greenhouse/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/tarbiat-modares-research-greenhouse/after.webp",
+      "/images/projects/tarbiat-modares-research-greenhouse/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "گلخانه تحقیقاتی دانشگاه تربیت مدرس",
+      "location": "ایران",
+      "category": "آموزشی و پژوهشی",
+      "project_type": "گلخانه تحقیقاتی",
+      "system_label": "پوشش پلی‌کربنات",
+      "area_label": "۴۰۰ مترمربع",
+      "card_subtitle": "۴۰۰ مترمربع پوشش پلی‌کربنات",
+      "card_highlight": "گلخانه گنبدی با نور طبیعی کنترل‌شده",
+      "summary": "طراحی و اجرای گلخانه تحقیقاتی دانشگاه تربیت مدرس با سازه فضاکار و پوشش پلی‌کربنات با هدف تأمین نور طبیعی یکنواخت برای فعالیت‌های پژوهشی.",
+      "challenge": "پروژه نیازمند اجرای پوشش شفاف بر روی یک هندسه گنبدی پیچیده بود؛ به‌گونه‌ای که ضمن تأمین نور مناسب، عملکرد سازه و دوام پوشش نیز حفظ شود.",
+      "engineering_decision": "استفاده از پانل‌های پلی‌کربنات سبک و مقاوم در کنار کنترل دقیق هندسه سازه فضاکار برای دستیابی به پوسته‌ای شفاف و یکپارچه.",
+      "measured_result": "اجرای موفق حدود ۴۰۰ مترمربع پوشش پلی‌کربنات بر روی سازه گنبدی و ایجاد محیط مناسب برای تحقیقات و آزمایش‌های گیاهی.",
+      "risk_prevented": [
+        "کاهش نور طبیعی در فضای تحقیقاتی",
+        "اختلال در عملکرد حرارتی گلخانه",
+        "ناهماهنگی هندسی بین پوشش و سازه",
+        "افزایش وزن مرده سازه"
+      ]
+    },
+    "en": {
+      "title": "Tarbiat Modares University Research Greenhouse",
+      "location": "Iran",
+      "category": "Education & Research",
+      "project_type": "Research Greenhouse",
+      "system_label": "Polycarbonate Enclosure",
+      "area_label": "400 m²",
+      "card_subtitle": "400 m² Polycarbonate System",
+      "card_highlight": "Geodesic Greenhouse with Controlled Daylighting",
+      "summary": "Research greenhouse developed using a space-frame structure and polycarbonate enclosure to provide a controlled daylight environment for academic research.",
+      "challenge": "The project required the installation of a transparent enclosure over a complex dome-shaped geometry while maintaining durability, daylight performance, and structural efficiency.",
+      "engineering_decision": "Implementation of lightweight polycarbonate panels combined with accurate geometric control of the space-frame structure.",
+      "measured_result": "Successful completion of approximately 400 m² of polycarbonate enclosure for research and experimental greenhouse applications.",
+      "risk_prevented": [
+        "Insufficient daylight penetration",
+        "Thermal performance issues",
+        "Geometry mismatch",
+        "Excessive structural loading"
+      ]
+    },
+    "ar": {
+      "title": "البيت الزجاجي البحثي لجامعة تربيت مدرس",
+      "location": "إيران",
+      "category": "تعليمي وبحثي",
+      "project_type": "بيت زجاجي بحثي",
+      "system_label": "تغطية من البولي كربونات",
+      "area_label": "٤٠٠ متر مربع",
+      "card_subtitle": "٤٠٠ متر مربع من البولي كربونات",
+      "card_highlight": "بيت زجاجي قُبّبي بإضاءة طبيعية مدروسة",
+      "summary": "تنفيذ بيت زجاجي بحثي باستخدام هيكل فراغي وتغطية من البولي كربونات لتوفير بيئة مناسبة للأبحاث الزراعية.",
+      "challenge": "تطلب المشروع تنفيذ غلاف شفاف فوق هندسة قُبّبية معقدة مع الحفاظ على الأداء الحراري والإنشائي.",
+      "engineering_decision": "استخدام ألواح بولي كربونات خفيفة الوزن مع ضبط هندسي دقيق للهيكل الفراغي.",
+      "measured_result": "تنفيذ ناجح لحوالي ٤٠٠ متر مربع من التغطية الشفافة للأغراض البحثية.",
+      "risk_prevented": [
+        "نقص الإضاءة الطبيعية",
+        "ضعف الأداء الحراري",
+        "عدم تطابق الشكل الهندسي",
+        "زيادة الأحمال على الهيكل"
+      ]
+    },
+    "ru": {
+      "title": "Исследовательская теплица Университета Тарбиат Модаррес",
+      "location": "Иран",
+      "category": "Образование и исследования",
+      "project_type": "Исследовательская теплица",
+      "system_label": "Поликарбонатное покрытие",
+      "area_label": "400 м²",
+      "card_subtitle": "400 м² поликарбонатного покрытия",
+      "card_highlight": "Купольная теплица с естественным освещением",
+      "summary": "Исследовательская теплица на пространственной конструкции с поликарбонатным покрытием для научных и экспериментальных работ.",
+      "challenge": "Требовалось реализовать прозрачную оболочку сложной купольной формы с сохранением светопропускания и долговечности.",
+      "engineering_decision": "Применение легких поликарбонатных панелей и точный контроль геометрии пространственной конструкции.",
+      "measured_result": "Успешная реализация около 400 м² поликарбонатного покрытия для исследовательской теплицы.",
+      "risk_prevented": [
+        "Недостаток естественного освещения",
+        "Проблемы с теплотехническими характеристиками",
+        "Нарушение геометрии конструкции",
+        "Избыточная нагрузка на каркас"
+      ]
+    }
+  }
+}

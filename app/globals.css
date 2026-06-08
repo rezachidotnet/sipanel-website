@@ -7659,6 +7659,8 @@ button[aria-disabled='true'] {
 .projects-index-filter:has(#projects-filter-sandwich:checked) + .projects-index-grid .projects-index-card:not([data-filter~='sandwich']),
 .projects-index-filter:has(#projects-filter-standing:checked) + .projects-index-grid .projects-index-card:not([data-filter~='standing']),
 .projects-index-filter:has(#projects-filter-cladding:checked) + .projects-index-grid .projects-index-card:not([data-filter~='cladding']),
+.projects-index-filter:has(#projects-filter-glass:checked) + .projects-index-grid .projects-index-card:not([data-filter~='glass']),
+.projects-index-filter:has(#projects-filter-polycarbonate:checked) + .projects-index-grid .projects-index-card:not([data-filter~='polycarbonate']),
 .projects-index-filter:has(#projects-filter-envelope:checked) + .projects-index-grid .projects-index-card:not([data-filter~='envelope']) {
   display: none;
 }

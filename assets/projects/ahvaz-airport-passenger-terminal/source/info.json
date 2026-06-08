@@ -1,0 +1,101 @@
+{
+  "slug": "ahvaz-airport-passenger-terminal",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 4000,
+  "systems": [
+    "zip_tech_roofing",
+    "aluminium_cladding"
+  ],
+  "images": {
+    "card": "/images/projects/ahvaz-airport-passenger-terminal/card.webp",
+    "hero_desktop": "/images/projects/ahvaz-airport-passenger-terminal/hero-desktop.webp",
+    "hero_mobile": "/images/projects/ahvaz-airport-passenger-terminal/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/ahvaz-airport-passenger-terminal/after.webp",
+      "/images/projects/ahvaz-airport-passenger-terminal/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن انتظار فرودگاه اهواز",
+      "location": "اهواز، ایران",
+      "category": "زیرساخت فرودگاهی",
+      "project_type": "سالن انتظار فرودگاه",
+      "system_label": "زیپ تک و آلومینیوم کلادینگ",
+      "area_label": "۴۰۰۰ مترمربع",
+      "card_subtitle": "۴۰۰۰ مترمربع زیپ تک و آلومینیوم کلادینگ",
+      "card_highlight": "اجرای موفق پوشش روی قوس پیچیده",
+      "summary": "اجرای سیستم زیپ تک و آلومینیوم کلادینگ برای سالن انتظار فرودگاه اهواز با تمرکز بر پوشش دقیق فرم قوسی نما.",
+      "challenge": "چالش اصلی پروژه، اجرای پوشش روی قوس جلوی سازه بود؛ بخشی که نیاز داشت پوشش در جهت عمود خم شود و اجرای آن را پیچیده می‌کرد.",
+      "engineering_decision": "طراحی جزئیات اجرایی اختصاصی، کنترل هندسه قوس و هماهنگی دقیق بین زیرسازی، پنل‌های آلومینیومی و سیستم زیپ تک برای رسیدن به فرم نهایی.",
+      "measured_result": "اجرای موفق ۴۰۰۰ مترمربع پوشش زیپ تک و آلومینیوم کلادینگ با حفظ فرم قوسی و کیفیت ظاهری نهایی.",
+      "risk_prevented": [
+        "شکست بصری در قوس نما",
+        "خطای خمکاری در جهت عمود",
+        "ناهماهنگی بین پوشش و زیرسازی",
+        "افت کیفیت معماری در نمای فرودگاهی"
+      ]
+    },
+    "en": {
+      "title": "Ahvaz Airport Passenger Terminal",
+      "location": "Ahvaz, Iran",
+      "category": "Airport Infrastructure",
+      "project_type": "Airport Passenger Terminal",
+      "system_label": "ZIP-TECH Roofing & Aluminium Cladding",
+      "area_label": "4,000 m²",
+      "card_subtitle": "4,000 m² ZIP-TECH & Aluminium Cladding",
+      "card_highlight": "Complex curved facade execution",
+      "summary": "ZIP-TECH roofing and aluminium cladding works for Ahvaz Airport Passenger Terminal, focused on accurate execution of the curved facade geometry.",
+      "challenge": "The main challenge was the curved front architectural feature, where the covering had to be bent in a perpendicular direction, making the execution technically difficult.",
+      "engineering_decision": "Custom execution detailing, geometric control of the curved form, and precise coordination between substructure, aluminium panels, and ZIP-TECH system.",
+      "measured_result": "Successful execution of 4,000 m² of ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.",
+      "risk_prevented": [
+        "Visual breaks in curved facade",
+        "Incorrect perpendicular bending",
+        "Mismatch between cladding and substructure",
+        "Loss of architectural quality in airport facade"
+      ]
+    },
+    "ar": {
+      "title": "صالة المسافرين في مطار الأهواز",
+      "location": "الأهواز، إيران",
+      "category": "بنية تحتية للمطارات",
+      "project_type": "صالة مسافرين",
+      "system_label": "نظام ZIP-TECH والكلادينج الألومنيوم",
+      "area_label": "٤٠٠٠ متر مربع",
+      "card_subtitle": "٤٠٠٠ متر مربع من ZIP-TECH والكلادينج الألومنيوم",
+      "card_highlight": "تنفيذ ناجح لواجهة منحنية معقدة",
+      "summary": "تنفيذ نظام ZIP-TECH والكلادينج الألومنيوم لصالة المسافرين في مطار الأهواز مع التركيز على تنفيذ دقيق لهندسة الواجهة المنحنية.",
+      "challenge": "كان التحدي الرئيسي هو تنفيذ التغطية على القوس الأمامي للهيكل، حيث كان يجب ثني الغطاء باتجاه عمودي، مما جعل التنفيذ أكثر تعقيداً.",
+      "engineering_decision": "تطوير تفاصيل تنفيذ خاصة، والتحكم الهندسي في شكل القوس، والتنسيق الدقيق بين الهيكل الفرعي وألواح الألومنيوم ونظام ZIP-TECH.",
+      "measured_result": "تنفيذ ناجح لمساحة ٤٠٠٠ متر مربع من نظام ZIP-TECH والكلادينج الألومنيوم مع الحفاظ على الشكل المعماري المنحني وجودة المظهر النهائي.",
+      "risk_prevented": [
+        "انقطاعات بصرية في الواجهة المنحنية",
+        "أخطاء في الثني بالاتجاه العمودي",
+        "عدم التوافق بين الكلادينج والهيكل الفرعي",
+        "انخفاض الجودة المعمارية في واجهة المطار"
+      ]
+    },
+    "ru": {
+      "title": "Пассажирский терминал аэропорта Ахваз",
+      "location": "Ахваз, Иран",
+      "category": "Аэропортовая инфраструктура",
+      "project_type": "Пассажирский терминал аэропорта",
+      "system_label": "ZIP-TECH и алюминиевая облицовка",
+      "area_label": "4 000 м²",
+      "card_subtitle": "4 000 м² ZIP-TECH и алюминиевой облицовки",
+      "card_highlight": "Монтаж сложной криволинейной фасадной системы",
+      "summary": "Работы по системе ZIP-TECH и алюминиевой облицовке пассажирского терминала аэропорта Ахваз с акцентом на точное выполнение криволинейной геометрии фасада.",
+      "challenge": "Главной сложностью проекта была облицовка передней арочной части конструкции, где покрытие требовалось изгибать в перпендикулярном направлении.",
+      "engineering_decision": "Разработка специальных монтажных решений, контроль геометрии арки и точная координация подсистемы, алюминиевых панелей и системы ZIP-TECH.",
+      "measured_result": "Успешное выполнение 4 000 м² покрытия ZIP-TECH и алюминиевой облицовки с сохранением криволинейной архитектурной формы и качества внешнего вида.",
+      "risk_prevented": [
+        "Визуальные разрывы на криволинейном фасаде",
+        "Ошибки перпендикулярного изгиба",
+        "Несоответствие облицовки и подсистемы",
+        "Снижение архитектурного качества фасада аэропорта"
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "slug": "mehrabad-aircraft-hangar",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 5000,
+  "systems": [
+    "sandwich_panel"
+  ],
+  "images": {
+    "card": "/images/projects/mehrabad-aircraft-hangar/card.webp",
+    "hero_desktop": "/images/projects/mehrabad-aircraft-hangar/hero-desktop.webp",
+    "hero_mobile": "/images/projects/mehrabad-aircraft-hangar/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/mehrabad-aircraft-hangar/after.webp",
+      "/images/projects/mehrabad-aircraft-hangar/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "آشیانه هواپیما فرودگاه مهرآباد",
+      "location": "تهران، ایران",
+      "category": "زیرساخت هوانوردی",
+      "project_type": "آشیانه هواپیما",
+      "system_label": "سیستم ساندویچ پانل",
+      "area_label": "۵۰۰۰ مترمربع",
+      "card_subtitle": "۵۰۰۰ مترمربع ساندویچ پانل",
+      "card_highlight": "اجرای موفق پوشش قوسی با دهانه بزرگ",
+      "summary": "اجرای پوشش ساندویچ پانل برای آشیانه هواپیما فرودگاه مهرآباد بر روی سازه فضاکار قوسی با دهانه بزرگ.",
+      "challenge": "چالش اصلی پروژه، قوس شدید سازه و نیاز به اجرای دقیق پوشش ساندویچ پانل بر روی هندسه منحنی بود.",
+      "engineering_decision": "هماهنگی دقیق بین سازه فضاکار، زیرسازی و مسیر نصب پانل‌ها برای حفظ فرم قوسی و جلوگیری از شکست بصری در سطح نهایی.",
+      "measured_result": "اجرای موفق ۵۰۰۰ مترمربع پوشش ساندویچ پانل با حفظ یکنواختی هندسی سطح قوسی.",
+      "risk_prevented": [
+        "شکست بصری در پوشش قوسی",
+        "خطای نصب روی سازه منحنی",
+        "ناهماهنگی بین سازه و پوشش",
+        "افت کیفیت ظاهری در دهانه بزرگ"
+      ]
+    },
+    "en": {
+      "title": "Mehrabad Airport Aircraft Hangar",
+      "location": "Tehran, Iran",
+      "category": "Aviation Infrastructure",
+      "project_type": "Aircraft Hangar",
+      "system_label": "Sandwich Panel System",
+      "area_label": "5,000 m²",
+      "card_subtitle": "5,000 m² Sandwich Panel System",
+      "card_highlight": "Large-span curved enclosure execution",
+      "summary": "Sandwich panel enclosure for a large-span aircraft hangar at Mehrabad Airport, installed over a curved space frame structure.",
+      "challenge": "The main challenge was the severe curvature of the structure and the need for accurate sandwich panel installation over a continuous curved geometry.",
+      "engineering_decision": "Precise coordination between the space frame, substructure, and panel installation sequence to preserve the curved form and avoid visual breaks.",
+      "measured_result": "Successful execution of 5,000 m² of sandwich panel covering while maintaining the geometric continuity of the curved surface.",
+      "risk_prevented": [
+        "Visual breaks on curved roof surface",
+        "Installation errors on curved geometry",
+        "Mismatch between structure and covering system",
+        "Poor final appearance on large-span enclosure"
+      ]
+    },
+    "ar": {
+      "title": "حظيرة الطائرات في مطار مهرآباد",
+      "location": "طهران، إيران",
+      "category": "بنية تحتية للطيران",
+      "project_type": "حظيرة طائرات",
+      "system_label": "نظام ألواح الساندويتش",
+      "area_label": "٥٠٠٠ متر مربع",
+      "card_subtitle": "٥٠٠٠ متر مربع من ألواح الساندويتش",
+      "card_highlight": "تنفيذ ناجح لتغطية منحنية واسعة البحر",
+      "summary": "تنفيذ نظام ألواح الساندويتش لحظيرة طائرات في مطار مهرآباد على هيكل فضائي منحني واسع البحر.",
+      "challenge": "كان التحدي الرئيسي هو الانحناء الكبير للهيكل والحاجة إلى تركيب دقيق لألواح الساندويتش على هندسة منحنية مستمرة.",
+      "engineering_decision": "تنسيق دقيق بين الهيكل الفضائي والتجهيزات الفرعية وتسلسل تركيب الألواح للحفاظ على الشكل المنحني ومنع الانقطاعات البصرية.",
+      "measured_result": "تنفيذ ناجح لمساحة ٥٠٠٠ متر مربع من ألواح الساندويتش مع الحفاظ على الاستمرارية الهندسية للسطح المنحني.",
+      "risk_prevented": [
+        "انقطاعات بصرية في السطح المنحني",
+        "أخطاء تركيب على الهندسة المنحنية",
+        "عدم التوافق بين الهيكل ونظام التغطية",
+        "ضعف المظهر النهائي في البحر الكبير"
+      ]
+    },
+    "ru": {
+      "title": "Авиационный ангар аэропорта Мехрабад",
+      "location": "Тегеран, Иран",
+      "category": "Авиационная инфраструктура",
+      "project_type": "Авиационный ангар",
+      "system_label": "Система сэндвич-панелей",
+      "area_label": "5 000 м²",
+      "card_subtitle": "5 000 м² сэндвич-панелей",
+      "card_highlight": "Монтаж покрытия на большепролетной криволинейной конструкции",
+      "summary": "Покрытие авиационного ангара аэропорта Мехрабад сэндвич-панелями по криволинейной пространственной конструкции.",
+      "challenge": "Главной сложностью проекта была значительная кривизна конструкции и необходимость точного монтажа сэндвич-панелей по непрерывной изогнутой геометрии.",
+      "engineering_decision": "Точная координация пространственной конструкции, подсистемы и последовательности монтажа панелей для сохранения криволинейной формы без визуальных разрывов.",
+      "measured_result": "Успешное выполнение 5 000 м² покрытия из сэндвич-панелей с сохранением геометрической непрерывности изогнутой поверхности.",
+      "risk_prevented": [
+        "Визуальные разрывы на криволинейной поверхности",
+        "Ошибки монтажа на изогнутой геометрии",
+        "Несоответствие между конструкцией и системой покрытия",
+        "Снижение качества внешнего вида на большом пролете"
+      ]
+    }
+  }
+}

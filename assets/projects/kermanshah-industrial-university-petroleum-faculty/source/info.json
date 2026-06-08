@@ -1,0 +1,102 @@
+{
+  "slug": "kermanshah-industrial-university-petroleum-faculty",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 1000,
+  "systems": [
+    "structural_glazing",
+    "seismic_connection_design",
+    "space_frame_facade"
+  ],
+  "images": {
+    "card": "/images/projects/kermanshah-industrial-university-petroleum-faculty/card.webp",
+    "hero_desktop": "/images/projects/kermanshah-industrial-university-petroleum-faculty/hero-desktop.webp",
+    "hero_mobile": "/images/projects/kermanshah-industrial-university-petroleum-faculty/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/kermanshah-industrial-university-petroleum-faculty/after.webp",
+      "/images/projects/kermanshah-industrial-university-petroleum-faculty/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "دانشکده نفت دانشگاه صنعتی کرمانشاه",
+      "location": "کرمانشاه، ایران",
+      "category": "آموزشی و دانشگاهی",
+      "project_type": "نمای شیشه‌ای سازه‌ای",
+      "system_label": "نمای شیشه‌ای با اتصالات کنترل‌شده",
+      "area_label": "۱۰۰۰ مترمربع",
+      "card_subtitle": "۱۰۰۰ مترمربع نمای شیشه‌ای",
+      "card_highlight": "اتصالات مقاوم در برابر زلزله برای نمای شیشه‌ای",
+      "summary": "طراحی و اجرای نمای شیشه‌ای عمودی دانشکده نفت دانشگاه صنعتی کرمانشاه با تمرکز بر عملکرد اتصالات در برابر جابه‌جایی‌های لرزه‌ای.",
+      "challenge": "چالش اصلی پروژه طراحی اتصالات نمای شیشه‌ای بود؛ به‌گونه‌ای که در هنگام زلزله، تغییرشکل سازه باعث شکست یا آسیب به شیشه‌ها نشود.",
+      "engineering_decision": "طراحی اتصالات با قابلیت تحمل جابه‌جایی نسبی سازه و کنترل تنش وارد بر شیشه‌ها برای حفظ ایمنی و عملکرد نما.",
+      "measured_result": "اجرای موفق حدود ۱۰۰۰ مترمربع نمای شیشه‌ای که در زلزله کرمانشاه دهه ۱۳۹۰ خورشیدی عملکرد مناسبی داشت و آسیبی به شیشه‌ها وارد نشد.",
+      "risk_prevented": [
+        "شکست شیشه در اثر جابه‌جایی لرزه‌ای",
+        "آسیب به اتصالات نما",
+        "ناهماهنگی بین سازه و نمای شیشه‌ای",
+        "کاهش ایمنی کاربران ساختمان"
+      ]
+    },
+    "en": {
+      "title": "Kermanshah Industrial University Petroleum Faculty",
+      "location": "Kermanshah, Iran",
+      "category": "Education & University",
+      "project_type": "Structural Glass Facade",
+      "system_label": "Seismic-Responsive Glass Facade Connections",
+      "area_label": "1,000 m²",
+      "card_subtitle": "1,000 m² Structural Glass Facade",
+      "card_highlight": "Earthquake-resistant connection design for glass facade",
+      "summary": "Design and execution of the vertical glass facade for the Petroleum Faculty of Kermanshah Industrial University, focused on seismic movement tolerance.",
+      "challenge": "The key challenge was designing facade connections so that structural movement during earthquakes would not damage or break the glass panels.",
+      "engineering_decision": "Connection details were engineered to accommodate relative structural displacement and reduce stress transfer to the glass facade.",
+      "measured_result": "Successful execution of approximately 1,000 m² of glass facade, which reportedly performed without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.",
+      "risk_prevented": [
+        "Glass breakage under seismic movement",
+        "Facade connection failure",
+        "Mismatch between structure and glass facade",
+        "Reduced building-user safety"
+      ]
+    },
+    "ar": {
+      "title": "كلية النفط في الجامعة الصناعية بكرمانشاه",
+      "location": "كرمانشاه، إيران",
+      "category": "تعليمي وجامعي",
+      "project_type": "واجهة زجاجية إنشائية",
+      "system_label": "وصلات واجهة زجاجية مقاومة للحركة الزلزالية",
+      "area_label": "١٠٠٠ متر مربع",
+      "card_subtitle": "١٠٠٠ متر مربع من الواجهة الزجاجية",
+      "card_highlight": "تصميم وصلات مقاومة للزلازل للواجهة الزجاجية",
+      "summary": "تصميم وتنفيذ الواجهة الزجاجية العمودية لكلية النفط في الجامعة الصناعية بكرمانشاه مع التركيز على أداء الوصلات أثناء الحركة الزلزالية.",
+      "challenge": "كان التحدي الرئيسي هو تصميم وصلات الواجهة الزجاجية بحيث لا تؤدي حركة الهيكل أثناء الزلازل إلى كسر الزجاج أو تلفه.",
+      "engineering_decision": "تصميم وصلات قادرة على استيعاب الإزاحات النسبية للهيكل وتقليل انتقال الإجهاد إلى ألواح الزجاج.",
+      "measured_result": "تنفيذ ناجح لحوالي ١٠٠٠ متر مربع من الواجهة الزجاجية، وقد أثبت النظام أداءه أثناء زلزال كرمانشاه دون حدوث أضرار في الزجاج حسب المعلومات المتاحة.",
+      "risk_prevented": [
+        "كسر الزجاج بسبب الحركة الزلزالية",
+        "فشل وصلات الواجهة",
+        "عدم التوافق بين الهيكل والواجهة الزجاجية",
+        "انخفاض سلامة مستخدمي المبنى"
+      ]
+    },
+    "ru": {
+      "title": "Нефтяной факультет Индустриального университета Керманшаха",
+      "location": "Керманшах, Иран",
+      "category": "Образование и университет",
+      "project_type": "Стеклянный структурный фасад",
+      "system_label": "Сейсмостойкие узлы стеклянного фасада",
+      "area_label": "1 000 м²",
+      "card_subtitle": "1 000 м² стеклянного фасада",
+      "card_highlight": "Сейсмостойкие соединения для стеклянного фасада",
+      "summary": "Проектирование и монтаж вертикального стеклянного фасада нефтяного факультета Индустриального университета Керманшаха с учетом сейсмических перемещений.",
+      "challenge": "Главной задачей было спроектировать узлы крепления фасада так, чтобы при землетрясении деформации конструкции не приводили к повреждению стекол.",
+      "engineering_decision": "Разработка соединений, способных воспринимать относительные перемещения конструкции и снижать передачу напряжений на стеклянные панели.",
+      "measured_result": "Успешная реализация около 1 000 м² стеклянного фасада; по имеющейся информации, система прошла проверку землетрясением в Керманшахе без повреждения стекол.",
+      "risk_prevented": [
+        "Разрушение стекла при сейсмических перемещениях",
+        "Повреждение фасадных узлов",
+        "Несоответствие конструкции и стеклянного фасада",
+        "Снижение безопасности пользователей здания"
+      ]
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "eftekhar-commercial-office-complex",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 300,
+  "systems": [
+    "polycarbonate_system",
+    "space_frame_structure",
+    "atrium_roof"
+  ],
+  "images": {
+    "card": "/images/projects/eftekhar-commercial-office-complex/card.webp",
+    "hero_desktop": "/images/projects/eftekhar-commercial-office-complex/hero-desktop.webp",
+    "hero_mobile": "/images/projects/eftekhar-commercial-office-complex/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/eftekhar-commercial-office-complex/after.webp",
+      "/images/projects/eftekhar-commercial-office-complex/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "مجتمع تجاری اداری افتخار",
+      "location": "اصفهان، ایران",
+      "category": "تجاری و اداری",
+      "project_type": "پوشش آتریوم مرکزی",
+      "system_label": "پوشش پلی کربنات",
+      "area_label": "۳۰۰ مترمربع",
+      "card_subtitle": "پوشش پلی کربنات بر روی سازه فضاکار",
+      "card_highlight": "ایجاد آتریوم نورگیر در مجتمع تجاری اداری",
+      "summary": "پوشش آتریوم مرکزی مجتمع تجاری اداری افتخار اصفهان با استفاده از سازه فضاکار و صفحات پلی کربنات چندجداره اجرا شد تا ضمن حفاظت در برابر شرایط جوی، نور طبیعی به فضای داخلی منتقل شود.",
+      "challenge": "اجرای سازه میان دو بلوک ساختمانی موجود نیازمند طراحی دقیق سازه، کنترل تغییرشکل و اجرای جزئیات آب بندی بود.",
+      "engineering_decision": "استفاده از سازه فضاکار سبک همراه با پوشش پلی کربنات برای ایجاد دهانه بدون ستون، کاهش بار مرده و تأمین نور طبیعی.",
+      "measured_result": "ایجاد حدود ۳۰۰ مترمربع فضای سرپوشیده نورگیر بدون نیاز به ستون میانی.",
+      "risk_prevented": [
+        "نفوذ آب باران",
+        "افزایش بار مرده ساختمان",
+        "کاهش نور طبیعی",
+        "اختلال در عملکرد فضای تجاری"
+      ]
+    },
+    "en": {
+      "title": "Eftekhar Commercial & Office Complex",
+      "location": "Isfahan, Iran",
+      "category": "Commercial & Office",
+      "project_type": "Central Atrium Roof",
+      "system_label": "Polycarbonate Roofing System",
+      "area_label": "300 m²",
+      "card_subtitle": "Polycarbonate Atrium Roofing",
+      "card_highlight": "Daylit atrium enclosure for a commercial complex",
+      "summary": "The central atrium of the Eftekhar Commercial & Office Complex was enclosed using a space frame structure and multiwall polycarbonate panels to provide weather protection while maximizing daylight.",
+      "challenge": "The roof structure had to be integrated between existing building blocks while maintaining waterproof performance and structural efficiency.",
+      "engineering_decision": "A lightweight space frame combined with polycarbonate panels was selected to create a column-free span with excellent daylight transmission.",
+      "measured_result": "Approximately 300 m² of covered atrium space delivered without intermediate supports.",
+      "risk_prevented": [
+        "Water infiltration",
+        "Excessive dead load",
+        "Insufficient daylight",
+        "Commercial space disruption"
+      ]
+    },
+    "ar": {
+      "title": "مجمع افتخار التجاري والإداري",
+      "location": "أصفهان، إيران",
+      "category": "تجاري وإداري",
+      "project_type": "تغطية الأتريوم المركزي",
+      "system_label": "ألواح بولي كربونات",
+      "area_label": "٣٠٠ متر مربع",
+      "card_subtitle": "تغطية أتريوم ببولي كربونات",
+      "card_highlight": "إنشاء مساحة مضاءة طبيعياً داخل المجمع",
+      "summary": "تم تنفيذ تغطية الأتريوم المركزي باستخدام هيكل فراغي وألواح بولي كربونات متعددة الجدران لتوفير الحماية من العوامل الجوية مع الاستفادة القصوى من الضوء الطبيعي.",
+      "challenge": "تم تنفيذ المشروع بين مبنيين قائمين مع متطلبات خاصة للعزل المائي والسلامة الإنشائية.",
+      "engineering_decision": "اعتماد هيكل فراغي خفيف مع تغطية بولي كربونات لتحقيق فضاء مفتوح وخفيف الوزن.",
+      "measured_result": "تنفيذ مساحة مغطاة تبلغ حوالي ٣٠٠ متر مربع دون أعمدة وسطية.",
+      "risk_prevented": [
+        "تسرب المياه",
+        "زيادة الأحمال",
+        "ضعف الإضاءة الطبيعية",
+        "تعطيل الاستخدام التجاري"
+      ]
+    },
+    "ru": {
+      "title": "Торгово-офисный комплекс Эфтехар",
+      "location": "Исфахан, Иран",
+      "category": "Коммерческая недвижимость",
+      "project_type": "Покрытие центрального атриума",
+      "system_label": "Поликарбонатная кровельная система",
+      "area_label": "300 м²",
+      "card_subtitle": "Поликарбонатное покрытие атриума",
+      "card_highlight": "Светопрозрачный атриум для коммерческого комплекса",
+      "summary": "Центральный атриум комплекса был перекрыт пространственной конструкцией с многослойными поликарбонатными панелями для защиты от погодных условий и максимального естественного освещения.",
+      "challenge": "Конструкция должна была быть интегрирована между существующими зданиями с соблюдением требований по гидроизоляции и нагрузкам.",
+      "engineering_decision": "Использование легкой пространственной фермы и поликарбонатного покрытия позволило создать свободный пролет без промежуточных опор.",
+      "measured_result": "Создано около 300 м² перекрытого атриумного пространства.",
+      "risk_prevented": [
+        "Протечки",
+        "Избыточная нагрузка",
+        "Недостаток естественного света",
+        "Нарушение работы комплекса"
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "imam-khomeini-airport-hajj-terminal",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 5000,
+  "systems": [
+    "sandwich_panel",
+    "polycarbonate_daylighting"
+  ],
+  "images": {
+    "card": "/images/projects/imam-khomeini-airport-hajj-terminal/card.webp",
+    "hero_desktop": "/images/projects/imam-khomeini-airport-hajj-terminal/hero-desktop.webp",
+    "hero_mobile": "/images/projects/imam-khomeini-airport-hajj-terminal/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/imam-khomeini-airport-hajj-terminal/after.webp",
+      "/images/projects/imam-khomeini-airport-hajj-terminal/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن انتظار حجاج فرودگاه امام خمینی",
+      "location": "تهران، ایران",
+      "category": "زیرساخت فرودگاهی",
+      "project_type": "سالن انتظار مسافران",
+      "system_label": "ساندویچ پانل و پلی‌کربنات",
+      "area_label": "۵۰۰۰ مترمربع",
+      "card_subtitle": "۵۰۰۰ مترمربع پوشش فرودگاهی",
+      "card_highlight": "تحویل و اجرا در کمتر از ۷ روز",
+      "summary": "طراحی و اجرای پوشش سالن انتظار حجاج در پارکینگ شماره ۳ فرودگاه امام خمینی با سیستم ساندویچ پانل و دیوارهای پلی‌کربنات جهت تأمین نور طبیعی.",
+      "challenge": "بزرگ‌ترین چالش پروژه محدودیت شدید زمانی بود. فاصله زمانی بین سفارش پروژه و بازگشت حجاج بسیار کوتاه بود و سالن باید در زمانی فشرده آماده بهره‌برداری می‌شد.",
+      "engineering_decision": "برنامه‌ریزی فشرده تأمین مصالح، اجرای همزمان چند جبهه کاری و استفاده از پلی‌کربنات در جداره‌ها برای افزایش نور طبیعی و کاهش نیاز به روشنایی روز.",
+      "measured_result": "تکمیل و تحویل ۵۰۰۰ مترمربع پوشش فرودگاهی در کمتر از ۷ روز و آماده‌سازی سالن پیش از آغاز بهره‌برداری.",
+      "risk_prevented": [
+        "عدم آمادگی سالن پیش از بازگشت حجاج",
+        "تاخیر در بهره‌برداری فرودگاهی",
+        "کمبود نور طبیعی در فضای انتظار",
+        "اختلال در برنامه‌ریزی عملیاتی فرودگاه"
+      ]
+    },
+    "en": {
+      "title": "Imam Khomeini Airport Hajj Passenger Terminal",
+      "location": "Tehran, Iran",
+      "category": "Airport Infrastructure",
+      "project_type": "Passenger Waiting Hall",
+      "system_label": "Sandwich Panel & Polycarbonate System",
+      "area_label": "5,000 m²",
+      "card_subtitle": "5,000 m² Airport Enclosure",
+      "card_highlight": "Delivered in Less Than 7 Days",
+      "summary": "Rapid construction of the Hajj passenger waiting hall at Parking Area No.3 of Imam Khomeini Airport using sandwich panels and polycarbonate daylighting walls.",
+      "challenge": "The primary challenge was the extremely compressed schedule between project award and the return of Hajj pilgrims, requiring immediate completion and operational readiness.",
+      "engineering_decision": "Fast-track procurement, parallel installation activities, and integration of polycarbonate wall systems to maximize natural daylight within the hall.",
+      "measured_result": "Successful completion and handover of a 5,000 m² airport facility in less than seven days.",
+      "risk_prevented": [
+        "Operational delays before Hajj return flights",
+        "Airport capacity shortages",
+        "Insufficient daylight inside waiting areas",
+        "Disruption of passenger handling operations"
+      ]
+    },
+    "ar": {
+      "title": "صالة انتظار الحجاج - مطار الإمام الخميني",
+      "location": "طهران، إيران",
+      "category": "بنية تحتية للمطارات",
+      "project_type": "صالة انتظار المسافرين",
+      "system_label": "ألواح ساندويتش وبولي كربونات",
+      "area_label": "٥٠٠٠ متر مربع",
+      "card_subtitle": "٥٠٠٠ متر مربع من التغطية",
+      "card_highlight": "تم التنفيذ خلال أقل من ٧ أيام",
+      "summary": "تنفيذ صالة انتظار الحجاج في الموقف رقم ٣ بمطار الإمام الخميني باستخدام ألواح الساندويتش وجدران البولي كربونات للإضاءة الطبيعية.",
+      "challenge": "كان التحدي الرئيسي هو ضيق الوقت بين إصدار أمر التنفيذ وعودة الحجاج، مما تطلب إنجاز المشروع خلال فترة زمنية استثنائية.",
+      "engineering_decision": "تنفيذ سريع ومتوازٍ للأعمال مع استخدام البولي كربونات لتعزيز الإضاءة الطبيعية داخل الصالة.",
+      "measured_result": "إنجاز وتسليم مساحة ٥٠٠٠ متر مربع خلال أقل من سبعة أيام.",
+      "risk_prevented": [
+        "تأخير تشغيل الصالة",
+        "نقص القدرة الاستيعابية للمطار",
+        "ضعف الإضاءة الطبيعية",
+        "تعطيل حركة المسافرين"
+      ]
+    },
+    "ru": {
+      "title": "Зал ожидания паломников аэропорта Имама Хомейни",
+      "location": "Тегеран, Иран",
+      "category": "Аэропортовая инфраструктура",
+      "project_type": "Пассажирский терминал ожидания",
+      "system_label": "Сэндвич-панели и поликарбонат",
+      "area_label": "5 000 м²",
+      "card_subtitle": "5 000 м² аэропортового покрытия",
+      "card_highlight": "Реализовано менее чем за 7 дней",
+      "summary": "Быстровозводимый зал ожидания паломников в аэропорту Имама Хомейни с применением сэндвич-панелей и светопрозрачных поликарбонатных стен.",
+      "challenge": "Основной сложностью проекта были крайне сжатые сроки между заказом и возвращением паломников после хаджа.",
+      "engineering_decision": "Организация параллельного выполнения работ и использование поликарбоната для обеспечения естественного освещения внутренних пространств.",
+      "measured_result": "Завершение и ввод в эксплуатацию объекта площадью 5 000 м² менее чем за семь дней.",
+      "risk_prevented": [
+        "Задержка ввода объекта в эксплуатацию",
+        "Недостаточная пропускная способность аэропорта",
+        "Недостаток естественного освещения",
+        "Сбои в обслуживании пассажиров"
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "fadak-mall-glass-skylight",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 500,
+  "systems": [
+    "structural_glazing",
+    "space_frame_skylight"
+  ],
+  "images": {
+    "card": "/images/projects/fadak-mall-glass-skylight/card.webp",
+    "hero_desktop": "/images/projects/fadak-mall-glass-skylight/hero-desktop.webp",
+    "hero_mobile": "/images/projects/fadak-mall-glass-skylight/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/fadak-mall-glass-skylight/after.webp",
+      "/images/projects/fadak-mall-glass-skylight/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "اسکای‌لایت فدک مال",
+      "location": "اصفهان، ایران",
+      "category": "مجتمع تجاری",
+      "project_type": "نورگیر مرکزی (Skylight)",
+      "system_label": "پوشش شیشه‌ای",
+      "area_label": "۵۰۰ مترمربع",
+      "card_subtitle": "۵۰۰ مترمربع نورگیر شیشه‌ای",
+      "card_highlight": "نورگیر بیضوی با هندسه سه‌بعدی",
+      "summary": "طراحی و اجرای نورگیر مرکزی فدک مال اصفهان با فرم بیضوی و پوشش تمام شیشه‌ای بر روی سازه فضاکار.",
+      "challenge": "پروژه شامل اجرای پوشش شیشه‌ای بر روی یک هندسه بیضوی سه‌بعدی بود؛ به‌گونه‌ای که یکنواختی خطوط شبکه، آب‌بندی و شفافیت بصری در کل سطح حفظ شود.",
+      "engineering_decision": "کنترل دقیق هندسه سازه فضاکار، طراحی جزئیات اتصال شیشه‌ها و مدیریت تلرانس‌های اجرایی برای دستیابی به سطحی یکپارچه و شفاف.",
+      "measured_result": "اجرای موفق ۵۰۰ مترمربع نورگیر شیشه‌ای با حفظ کیفیت بصری و تأمین نور طبیعی برای فضای مرکزی مجتمع.",
+      "risk_prevented": [
+        "اعوجاج هندسی در فرم بیضوی",
+        "اختلال در آب‌بندی نورگیر",
+        "ناهماهنگی شبکه شیشه و سازه",
+        "کاهش کیفیت نور طبیعی در آتریوم"
+      ]
+    },
+    "en": {
+      "title": "Fadak Mall Glass Skylight",
+      "location": "Isfahan, Iran",
+      "category": "Commercial Complex",
+      "project_type": "Central Skylight",
+      "system_label": "Glass Roofing System",
+      "area_label": "500 m²",
+      "card_subtitle": "500 m² Glass Skylight",
+      "card_highlight": "Elliptical Three-Dimensional Skylight",
+      "summary": "Design and execution of the central glass skylight at Fadak Mall, featuring an elliptical geometry supported by a space-frame structure.",
+      "challenge": "The project required the installation of a glass enclosure over a three-dimensional elliptical form while maintaining geometric accuracy, waterproofing performance, and visual transparency.",
+      "engineering_decision": "Precise geometric control, custom glazing details, and installation management to achieve a seamless architectural skylight.",
+      "measured_result": "Successful completion of a 500 m² glass skylight delivering natural daylight to the mall atrium.",
+      "risk_prevented": [
+        "Geometric distortion",
+        "Water leakage",
+        "Mismatch between structure and glazing",
+        "Reduced daylight performance"
+      ]
+    },
+    "ar": {
+      "title": "السكاي لايت الزجاجي لفدك مول",
+      "location": "أصفهان، إيران",
+      "category": "مجمع تجاري",
+      "project_type": "سكاي لايت مركزي",
+      "system_label": "نظام تغطية زجاجية",
+      "area_label": "٥٠٠ متر مربع",
+      "card_subtitle": "٥٠٠ متر مربع من التغطية الزجاجية",
+      "card_highlight": "سكاي لايت بيضاوي ثلاثي الأبعاد",
+      "summary": "تصميم وتنفيذ سكاي لايت مركزي في فدك مول بأصفهان باستخدام تغطية زجاجية فوق هيكل فراغي.",
+      "challenge": "تطلب المشروع تنفيذ تغطية زجاجية فوق هندسة بيضاوية ثلاثية الأبعاد مع الحفاظ على الدقة الهندسية والعزل المائي.",
+      "engineering_decision": "التحكم الدقيق في الهندسة وتطوير تفاصيل خاصة لتركيب الزجاج وضمان استمرارية الشكل المعماري.",
+      "measured_result": "تنفيذ ناجح لسكاي لايت زجاجي بمساحة ٥٠٠ متر مربع يوفر إضاءة طبيعية للفراغ الداخلي.",
+      "risk_prevented": [
+        "تشوه الشكل الهندسي",
+        "تسرب المياه",
+        "عدم توافق الهيكل مع الزجاج",
+        "ضعف الإضاءة الطبيعية"
+      ]
+    },
+    "ru": {
+      "title": "Стеклянный световой фонарь Fadak Mall",
+      "location": "Исфахан, Иран",
+      "category": "Торговый комплекс",
+      "project_type": "Центральный световой фонарь",
+      "system_label": "Стеклянная кровельная система",
+      "area_label": "500 м²",
+      "card_subtitle": "500 м² стеклянного покрытия",
+      "card_highlight": "Эллиптический трехмерный световой фонарь",
+      "summary": "Проектирование и реализация стеклянного светового фонаря в Fadak Mall на пространственной конструкции эллиптической формы.",
+      "challenge": "Необходимо было реализовать остекление сложной эллиптической геометрии с сохранением точности формы и герметичности.",
+      "engineering_decision": "Точный контроль геометрии, разработка специальных узлов крепления стекла и управление монтажными допусками.",
+      "measured_result": "Успешное выполнение стеклянного покрытия площадью 500 м² для естественного освещения центрального атриума.",
+      "risk_prevented": [
+        "Искажение геометрии",
+        "Протечки",
+        "Несоответствие конструкции и остекления",
+        "Недостаточное естественное освещение"
+      ]
+    }
+  }
+}

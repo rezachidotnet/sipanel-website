@@ -1,0 +1,101 @@
+{
+  "slug": "tavanir-shahrekord-central-atrium",
+  "status": "completed",
+  "featured": false,
+  "area_m2": 350,
+  "systems": [
+    "space_frame_structure",
+    "glass_roofing",
+    "spider_glazing"
+  ],
+  "images": {
+    "card": "/images/projects/tavanir-shahrekord-atrium/card.webp",
+    "hero_desktop": "/images/projects/tavanir-shahrekord-atrium/hero-desktop.webp",
+    "hero_mobile": "/images/projects/tavanir-shahrekord-atrium/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/tavanir-shahrekord-atrium/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "وید مرکزی شرکت توانیر شهرکرد",
+      "location": "شهرکرد، ایران",
+      "category": "ساختمان اداری",
+      "project_type": "پوشش وید مرکزی",
+      "system_label": "شیشه و اتصالات اسپایدر",
+      "area_label": "حدود ۳۵۰ مترمربع",
+      "card_subtitle": "سقف شیشه‌ای فضاکار برای آتریوم مرکزی",
+      "card_highlight": "ترکیب سازه فضاکار با سیستم اسپایدر گلس",
+      "summary": "طراحی، ساخت و اجرای سازه فضاکار و سیستم پوشش شیشه‌ای وید مرکزی ساختمان شرکت توانیر شهرکرد با استفاده از اتصالات اسپایدر انجام شد. پروژه با هدف تأمین نور طبیعی، حفظ شفافیت فضایی و ایجاد پوشش ایمن برای آتریوم مرکزی اجرا گردید.",
+      "challenge": "ایجاد یک سقف شفاف با حداقل المان‌های مزاحم بصری و در عین حال تأمین الزامات سازه‌ای و بارگذاری شیشه.",
+      "engineering_decision": "استفاده از سازه فضاکار سبک به همراه سیستم Spider Glazing برای انتقال بارها، حفظ شفافیت معماری و ایجاد یک سقف نورگیر یکپارچه.",
+      "measured_result": "اجرای پوشش شیشه‌ای آتریوم مرکزی ساختمان اداری با قابلیت تأمین نور طبیعی و عملکرد سازه‌ای مناسب.",
+      "risk_prevented": [
+        "کاهش نور طبیعی",
+        "افزایش وزن سازه",
+        "اختلال در دید معماری",
+        "پیچیدگی اجرای سیستم شیشه‌ای"
+      ]
+    },
+    "en": {
+      "title": "Tavanir Shahrekord Central Atrium",
+      "location": "Shahrekord, Iran",
+      "category": "Office Building",
+      "project_type": "Atrium Skylight",
+      "system_label": "Spider Glass System",
+      "area_label": "Approx. 350 m²",
+      "card_subtitle": "Space frame skylight with spider glazing",
+      "card_highlight": "Transparent atrium enclosure solution",
+      "summary": "Design and construction of a space frame supported glass atrium roof utilizing spider glazing connections for the central atrium of the Tavanir office complex in Shahrekord.",
+      "challenge": "Providing maximum daylight and architectural transparency while maintaining structural efficiency.",
+      "engineering_decision": "A lightweight space frame integrated with spider glass fittings was selected to minimize visual obstruction and maximize transparency.",
+      "measured_result": "Completed transparent atrium enclosure delivering natural daylight and weather protection.",
+      "risk_prevented": [
+        "Excessive structural weight",
+        "Daylight reduction",
+        "Visual obstruction",
+        "Complex glass support requirements"
+      ]
+    },
+    "ar": {
+      "title": "الأتريوم المركزي لشركة توانير شهرکرد",
+      "location": "شهرکرد، إيران",
+      "category": "مبنى إداري",
+      "project_type": "سقف أتريوم زجاجي",
+      "system_label": "زجاج سبايدر",
+      "area_label": "حوالي ٣٥٠ م²",
+      "card_subtitle": "سقف شفاف بهيكل فراغي",
+      "card_highlight": "نظام زجاجي بتركيبات سبايدر",
+      "summary": "تنفيذ سقف زجاجي شفاف للأتريوم المركزي باستخدام هيكل فراغي واتصالات سبايدر.",
+      "challenge": "تحقيق الشفافية المعمارية مع الحفاظ على الأداء الإنشائي.",
+      "engineering_decision": "اعتماد هيكل فراغي خفيف مع نظام Spider Glazing.",
+      "measured_result": "إنجاز تغطية زجاجية تسمح بدخول الإضاءة الطبيعية وتحمي الفراغ الداخلي.",
+      "risk_prevented": [
+        "زيادة الوزن",
+        "تقليل الإضاءة",
+        "تشويش الرؤية المعمارية",
+        "تعقيد تثبيت الزجاج"
+      ]
+    },
+    "ru": {
+      "title": "Центральный атриум компании Tavanir",
+      "location": "Шахрекорд, Иран",
+      "category": "Административное здание",
+      "project_type": "Стеклянный атриум",
+      "system_label": "Spider Glazing",
+      "area_label": "Около 350 м²",
+      "card_subtitle": "Светопрозрачное покрытие атриума",
+      "card_highlight": "Пространственная конструкция и спайдерное остекление",
+      "summary": "Проектирование и строительство стеклянного покрытия центрального атриума с использованием пространственной конструкции и системы Spider Glazing.",
+      "challenge": "Обеспечение максимальной прозрачности и естественного освещения.",
+      "engineering_decision": "Применение легкой пространственной конструкции и спайдерных креплений стекла.",
+      "measured_result": "Создано светопрозрачное покрытие атриума административного комплекса.",
+      "risk_prevented": [
+        "Избыточный вес",
+        "Недостаток освещения",
+        "Визуальные препятствия",
+        "Сложность крепления стекла"
+      ]
+    }
+  }
+}

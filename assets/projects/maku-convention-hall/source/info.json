@@ -1,0 +1,101 @@
+{
+  "slug": "maku-convention-hall",
+  "status": "completed",
+  "featured": false,
+  "area_m2": 2000,
+  "systems": [
+    "sandwich_panel_system",
+    "large_span_space_frame"
+  ],
+  "images": {
+    "card": "/images/projects/maku-convention-hall/card.webp",
+    "hero_desktop": "/images/projects/maku-convention-hall/hero-desktop.webp",
+    "hero_mobile": "/images/projects/maku-convention-hall/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/maku-convention-hall/after.webp",
+      "/images/projects/maku-convention-hall/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن اجتماعات ماکو",
+      "location": "ماکو، آذربایجان غربی، ایران",
+      "category": "فرهنگی و اجتماعات",
+      "project_type": "سالن اجتماعات",
+      "system_label": "ساندویچ پانل",
+      "area_label": "۲۰۰۰ مترمربع",
+      "card_subtitle": "۲۰۰۰ مترمربع پوشش ساندویچ پانل",
+      "card_highlight": "پوشش دهانه بزرگ با فرم منحنی",
+      "summary": "طراحی و اجرای پوشش سالن اجتماعات ماکو با استفاده از ساندویچ پانل بر روی سازه فضاکار دهانه بزرگ.",
+      "challenge": "هندسه منحنی و دهانه وسیع سازه نیازمند اجرای دقیق پوشش برای حفظ یکنواختی ظاهری، آب‌بندی مناسب و عملکرد سازه‌ای در شرایط اقلیمی منطقه بود.",
+      "engineering_decision": "استفاده از سیستم ساندویچ پانل برای دستیابی به وزن مناسب، سرعت اجرا و عملکرد حرارتی مطلوب در کنار سازه فضاکار.",
+      "measured_result": "اجرای حدود ۲۰۰۰ مترمربع پوشش ساندویچ پانل بر روی سازه دهانه بلند سالن اجتماعات.",
+      "risk_prevented": [
+        "نفوذ آب در سطوح منحنی",
+        "افزایش وزن مرده پوشش",
+        "کاهش سرعت اجرا",
+        "افت عملکرد حرارتی ساختمان"
+      ]
+    },
+    "en": {
+      "title": "Maku Convention Hall",
+      "location": "Maku, Iran",
+      "category": "Public & Cultural Facilities",
+      "project_type": "Convention Hall",
+      "system_label": "Sandwich Panel System",
+      "area_label": "2,000 m²",
+      "card_subtitle": "2,000 m² Sandwich Panel Roofing",
+      "card_highlight": "Large-span curved enclosure",
+      "summary": "Design and execution of the Maku Convention Hall enclosure using sandwich panel systems over a long-span space-frame structure.",
+      "challenge": "The large-span curved geometry required precise installation to maintain weather-tightness, architectural consistency and structural performance.",
+      "engineering_decision": "A sandwich panel system was selected to combine lightweight construction, thermal efficiency and rapid installation.",
+      "measured_result": "Successful installation of approximately 2,000 m² of sandwich panel enclosure over the large-span structure.",
+      "risk_prevented": [
+        "Water penetration",
+        "Excessive roof dead load",
+        "Construction delays",
+        "Reduced thermal performance"
+      ]
+    },
+    "ar": {
+      "title": "قاعة ماكو للمؤتمرات",
+      "location": "ماكو، إيران",
+      "category": "مرافق ثقافية وعامة",
+      "project_type": "قاعة اجتماعات",
+      "system_label": "ألواح ساندويتش بانل",
+      "area_label": "٢٠٠٠ متر مربع",
+      "card_subtitle": "٢٠٠٠ متر مربع من التغطية",
+      "card_highlight": "تغطية بحر واسع بتصميم منحني",
+      "summary": "تنفيذ تغطية قاعة ماكو باستخدام نظام الساندويتش بانل فوق هيكل فضائي واسع البحر.",
+      "challenge": "تطلب الشكل المنحني والبحر الواسع دقة عالية في التنفيذ للحفاظ على العزل المائي والأداء الإنشائي.",
+      "engineering_decision": "اختيار الساندويتش بانل لتحقيق خفة الوزن وسرعة التنفيذ وكفاءة العزل الحراري.",
+      "measured_result": "تنفيذ نحو ٢٠٠٠ متر مربع من التغطية بنجاح.",
+      "risk_prevented": [
+        "تسرب المياه",
+        "زيادة الأحمال",
+        "تأخير التنفيذ",
+        "ضعف العزل الحراري"
+      ]
+    },
+    "ru": {
+      "title": "Конференц-зал Маку",
+      "location": "Маку, Иран",
+      "category": "Общественные и культурные объекты",
+      "project_type": "Конференц-зал",
+      "system_label": "Сэндвич-панели",
+      "area_label": "2 000 м²",
+      "card_subtitle": "2 000 м² покрытия из сэндвич-панелей",
+      "card_highlight": "Большепролетная криволинейная оболочка",
+      "summary": "Проектирование и монтаж покрытия конференц-зала Маку с применением сэндвич-панелей на пространственной конструкции.",
+      "challenge": "Криволинейная геометрия и большой пролет требовали высокой точности монтажа и надежной герметизации.",
+      "engineering_decision": "Использование сэндвич-панелей для снижения веса конструкции и повышения энергоэффективности.",
+      "measured_result": "Успешная реализация около 2 000 м² покрытия.",
+      "risk_prevented": [
+        "Протечки",
+        "Избыточная нагрузка",
+        "Задержки строительства",
+        "Снижение теплоизоляции"
+      ]
+    }
+  }
+}

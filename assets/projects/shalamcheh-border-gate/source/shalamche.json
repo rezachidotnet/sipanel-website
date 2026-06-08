@@ -1,0 +1,102 @@
+{
+  "slug": "shalamcheh-border-gate",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 4000,
+  "systems": [
+    "sandwich_panel_system",
+    "space_frame_structure",
+    "transportation_infrastructure"
+  ],
+  "images": {
+    "card": "/images/projects/shalamcheh-border-gate/card.webp",
+    "hero_desktop": "/images/projects/shalamcheh-border-gate/hero-desktop.webp",
+    "hero_mobile": "/images/projects/shalamcheh-border-gate/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/shalamcheh-border-gate/after.webp",
+      "/images/projects/shalamcheh-border-gate/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "گیت ورودی مرز شلمچه",
+      "location": "شلمچه، خوزستان، ایران",
+      "category": "زیرساخت حمل و نقل",
+      "project_type": "پایانه و گیت مرزی",
+      "system_label": "ساندویچ پانل",
+      "area_label": "۴۰۰۰ مترمربع",
+      "card_subtitle": "پوشش پایانه مرزی با سازه فضاکار و ساندویچ پانل",
+      "card_highlight": "سازه شاخص ورودی یکی از مهم‌ترین مرزهای ایران",
+      "summary": "طراحی، ساخت و اجرای پوشش گیت ورودی مرز شلمچه با استفاده از سازه فضاکار و سیستم پوشش ساندویچ پانل انجام شد. این پروژه به عنوان یکی از مهم‌ترین مبادی تردد مسافری و تجاری بین ایران و عراق، نیازمند دهانه‌های بزرگ و فضای باز بدون مانع بود.",
+      "challenge": "پروژه شامل چندین دهانه بزرگ با فرم معماری خاص بود که باید ضمن ایجاد سایه و حفاظت اقلیمی، امکان عبور حجم بالای خودروها و مسافران را فراهم می‌کرد.",
+      "engineering_decision": "استفاده از سازه فضاکار سبک با پوشش ساندویچ پانل، امکان اجرای دهانه‌های وسیع، سرعت بالای نصب و حداقل تعداد ستون‌های مزاحم را فراهم کرد.",
+      "measured_result": "اجرای حدود ۴۰۰۰ مترمربع پوشش برای مجموعه ورودی مرز شلمچه و ایجاد فضای عملکردی مناسب برای تردد و کنترل مرزی.",
+      "risk_prevented": [
+        "تراکم ستون‌ها در مسیر عبور",
+        "افزایش زمان اجرا",
+        "افزایش وزن سازه",
+        "کاهش ظرفیت بهره‌برداری پایانه"
+      ]
+    },
+    "en": {
+      "title": "Shalamcheh Border Gate",
+      "location": "Khuzestan, Iran",
+      "category": "Transportation Infrastructure",
+      "project_type": "Border Terminal Entrance",
+      "system_label": "Sandwich Panel System",
+      "area_label": "4,000 m²",
+      "card_subtitle": "Large-span border terminal enclosure",
+      "card_highlight": "Gateway structure at one of Iran's major border crossings",
+      "summary": "Design and construction of the entrance canopy and enclosure system for the Shalamcheh Border Gate using space frame technology and sandwich panel roofing.",
+      "challenge": "The project required large unobstructed spans to accommodate heavy pedestrian and vehicle traffic while maintaining structural efficiency and climatic protection.",
+      "engineering_decision": "A lightweight space frame solution with sandwich panel roofing was selected to maximize span capability and accelerate construction.",
+      "measured_result": "Approximately 4,000 m² of covered border terminal infrastructure delivered.",
+      "risk_prevented": [
+        "Traffic obstruction",
+        "Construction delays",
+        "Excessive structural weight",
+        "Reduced operational capacity"
+      ]
+    },
+    "ar": {
+      "title": "بوابة منفذ شلمجة الحدودي",
+      "location": "خوزستان، إيران",
+      "category": "البنية التحتية للنقل",
+      "project_type": "محطة حدودية",
+      "system_label": "ألواح ساندويتش بانل",
+      "area_label": "٤٠٠٠ متر مربع",
+      "card_subtitle": "تغطية محطة حدودية واسعة الامتداد",
+      "card_highlight": "بوابة عبور رئيسية بين إيران والعراق",
+      "summary": "تنفيذ منظومة التغطية لبوابة منفذ شلمجة الحدودي باستخدام الهيكل الفراغي وألواح الساندويتش بانل.",
+      "challenge": "توفير فضاءات واسعة للحركة الكثيفة للمسافرين والمركبات دون عوائق إنشائية.",
+      "engineering_decision": "استخدام هيكل فراغي خفيف مع تغطية ساندويتش بانل لتحقيق بحور واسعة وسرعة تنفيذ عالية.",
+      "measured_result": "تنفيذ نحو ٤٠٠٠ متر مربع من البنية التحتية المغطاة.",
+      "risk_prevented": [
+        "إعاقة الحركة",
+        "تأخير التنفيذ",
+        "زيادة الأحمال",
+        "انخفاض الكفاءة التشغيلية"
+      ]
+    },
+    "ru": {
+      "title": "Пограничный терминал Шаламче",
+      "location": "Хузестан, Иран",
+      "category": "Транспортная инфраструктура",
+      "project_type": "Пограничный терминал",
+      "system_label": "Сэндвич-панели",
+      "area_label": "4 000 м²",
+      "card_subtitle": "Большепролетное покрытие пограничного терминала",
+      "card_highlight": "Крупный транспортный объект на границе Ирана и Ирака",
+      "summary": "Проектирование и строительство покрытия въездной зоны пограничного терминала Шаламче с использованием пространственной конструкции и сэндвич-панелей.",
+      "challenge": "Необходимость обеспечения беспрепятственного движения большого количества транспорта и пассажиров.",
+      "engineering_decision": "Применение легкой пространственной фермы позволило создать большие пролеты при минимальном количестве опор.",
+      "measured_result": "Реализовано около 4 000 м² покрытых площадей терминала.",
+      "risk_prevented": [
+        "Ограничение движения",
+        "Задержки строительства",
+        "Избыточные нагрузки",
+        "Снижение пропускной способности"
+      ]
+    }
+  }
+}

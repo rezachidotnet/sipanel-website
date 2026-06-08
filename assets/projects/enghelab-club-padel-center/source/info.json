@@ -1,0 +1,102 @@
+{
+  "slug": "enghelab-club-padel-center",
+  "status": "completed",
+  "featured": false,
+  "area_m2": 2000,
+  "systems": [
+    "sandwich_panel_system",
+    "architectural_space_frame",
+    "sports_facility_enclosure"
+  ],
+  "images": {
+    "card": "/images/projects/enghelab-club-padel-center/card.webp",
+    "hero_desktop": "/images/projects/enghelab-club-padel-center/hero-desktop.webp",
+    "hero_mobile": "/images/projects/enghelab-club-padel-center/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/enghelab-club-padel-center/after.webp",
+      "/images/projects/enghelab-club-padel-center/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "مجموعه پدل باشگاه انقلاب",
+      "location": "تهران، ایران",
+      "category": "ورزشی",
+      "project_type": "سالن پدل و ورزش‌های راکتی",
+      "system_label": "ساندویچ پانل",
+      "area_label": "۲۰۰۰ مترمربع",
+      "card_subtitle": "۲۰۰۰ مترمربع پوشش ساندویچ پانل",
+      "card_highlight": "پوشش سالن ورزشی در مجموعه انقلاب تهران",
+      "summary": "طراحی، ساخت و اجرای پوشش سقف مجموعه پدل باشگاه انقلاب تهران با استفاده از سازه فضاکار و سیستم ساندویچ پانل.",
+      "challenge": "پروژه در یکی از شناخته‌شده‌ترین مجموعه‌های ورزشی کشور اجرا شد و نیازمند هماهنگی دقیق بین معماری، سازه و محدودیت‌های اجرایی سایت بود.",
+      "engineering_decision": "استفاده از سازه فضاکار سبک با پوشش ساندویچ پانل برای دستیابی به دهانه‌های بزرگ، سرعت اجرا و کاهش بار مرده سازه.",
+      "measured_result": "اجرای حدود ۲۰۰۰ مترمربع پوشش سالن ورزشی با حداقل تعداد ستون میانی و ایجاد فضای مناسب برای زمین‌های پدل.",
+      "risk_prevented": [
+        "افزایش وزن سازه",
+        "اختلال در عملکرد زمین‌های ورزشی",
+        "افزایش زمان اجرا",
+        "مشکلات نگهداری بلندمدت"
+      ]
+    },
+    "en": {
+      "title": "Enghelab Club Padel Center",
+      "location": "Tehran, Iran",
+      "category": "Sports Facilities",
+      "project_type": "Padel Sports Hall",
+      "system_label": "Sandwich Panel System",
+      "area_label": "2,000 m²",
+      "card_subtitle": "2,000 m² Sandwich Panel Enclosure",
+      "card_highlight": "Sports facility enclosure in Tehran",
+      "summary": "Design and execution of the roof enclosure system for the Enghelab Club Padel Center using space frame technology and sandwich panel cladding.",
+      "challenge": "The project required large clear spans while maintaining structural efficiency and architectural quality within an active sports complex.",
+      "engineering_decision": "A lightweight space frame structure combined with sandwich panels was selected to optimize span capability, construction speed and durability.",
+      "measured_result": "Approximately 2,000 m² of sports facility enclosure delivered with large unobstructed interior space.",
+      "risk_prevented": [
+        "Excessive structural weight",
+        "Obstruction of sports activities",
+        "Construction delays",
+        "Long-term maintenance issues"
+      ]
+    },
+    "ar": {
+      "title": "مركز البادل في نادي انقلاب",
+      "location": "طهران، إيران",
+      "category": "منشآت رياضية",
+      "project_type": "قاعة بادل",
+      "system_label": "ألواح ساندويتش بانل",
+      "area_label": "٢٠٠٠ متر مربع",
+      "card_subtitle": "٢٠٠٠ متر مربع من التغطية",
+      "card_highlight": "منشأة رياضية داخل نادي انقلاب",
+      "summary": "تنفيذ نظام التغطية لساحة البادل باستخدام الهيكل الفراغي وألواح الساندويتش بانل.",
+      "challenge": "الحاجة إلى تحقيق فضاءات واسعة خالية من العوائق مع الحفاظ على الكفاءة الإنشائية.",
+      "engineering_decision": "اعتماد هيكل فضائي خفيف الوزن مع تغطية من الساندويتش بانل.",
+      "measured_result": "تنفيذ نحو ٢٠٠٠ متر مربع من التغطية الرياضية.",
+      "risk_prevented": [
+        "زيادة الأحمال",
+        "إعاقة الأنشطة الرياضية",
+        "تأخير التنفيذ",
+        "مشاكل الصيانة"
+      ]
+    },
+    "ru": {
+      "title": "Падел-центр спортивного комплекса Энгелаб",
+      "location": "Тегеран, Иран",
+      "category": "Спортивные объекты",
+      "project_type": "Падел-холл",
+      "system_label": "Сэндвич-панели",
+      "area_label": "2 000 м²",
+      "card_subtitle": "2 000 м² ограждающих конструкций",
+      "card_highlight": "Спортивное сооружение в Тегеране",
+      "summary": "Проектирование и монтаж покрытия падел-центра с использованием пространственной конструкции и сэндвич-панелей.",
+      "challenge": "Необходимость создания больших свободных пролетов для спортивного использования.",
+      "engineering_decision": "Использование легкой пространственной фермы и сэндвич-панелей.",
+      "measured_result": "Реализовано около 2 000 м² покрытия спортивного объекта.",
+      "risk_prevented": [
+        "Избыточная нагрузка",
+        "Помехи спортивным функциям",
+        "Задержки строительства",
+        "Сложности обслуживания"
+      ]
+    }
+  }
+}

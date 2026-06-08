@@ -1,0 +1,103 @@
+{
+  "slug": "marun-petrochemical-visitor-terminal",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 5000,
+  "systems": [
+    "sandwich_panel_system",
+    "tensile_membrane_structure",
+    "custom_connection_design",
+    "large_span_space_frame"
+  ],
+  "images": {
+    "card": "/images/projects/marun-petrochemical-visitor-terminal/card.webp",
+    "hero_desktop": "/images/projects/marun-petrochemical-visitor-terminal/hero-desktop.webp",
+    "hero_mobile": "/images/projects/marun-petrochemical-visitor-terminal/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/marun-petrochemical-visitor-terminal/after.webp",
+      "/images/projects/marun-petrochemical-visitor-terminal/before.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "سالن چندمنظوره پتروشیمی مارون",
+      "location": "ماهشهر، خوزستان، ایران",
+      "category": "نفت، گاز و پتروشیمی",
+      "project_type": "سالن خدماتی و تجمعات",
+      "system_label": "ساندویچ پانل و سازه چادری",
+      "area_label": "۵۰۰۰ مترمربع",
+      "card_subtitle": "۵۰۰۰ مترمربع پوشش ترکیبی",
+      "card_highlight": "طراحی اتصال اختصاصی بین سازه چادری و سازه اصلی",
+      "summary": "طراحی و اجرای پوشش سالن پتروشیمی مارون با استفاده از ساندویچ پانل و سیستم سازه چادری در یکی از مهم‌ترین مجتمع‌های پتروشیمی ایران.",
+      "challenge": "چالش اصلی پروژه اتصال ایمن و پایدار سازه چادری به سازه اصلی بود. این اتصال باید ضمن انتقال نیروها، امکان عملکرد صحیح پوشش پارچه‌ای را در شرایط باد، دما و بهره‌برداری صنعتی فراهم می‌کرد.",
+      "engineering_decision": "طراحی، تحلیل و ساخت جزئیات اتصال اختصاصی بین سازه فضاکار و سیستم کششی پارچه‌ای به‌منظور تضمین عملکرد بلندمدت و ایمنی سازه.",
+      "measured_result": "اجرای حدود ۵۰۰۰ مترمربع پوشش ترکیبی شامل ساندویچ پانل و پارچه معماری با موفقیت کامل و بهره‌برداری در محیط صنعتی پتروشیمی.",
+      "risk_prevented": [
+        "تمرکز تنش در محل اتصال سازه چادری",
+        "خرابی پوشش پارچه‌ای در اثر بار باد",
+        "ناپایداری در نقاط انتقال نیرو",
+        "افزایش هزینه‌های تعمیر و نگهداری"
+      ]
+    },
+    "en": {
+      "title": "Marun Petrochemical Multipurpose Hall",
+      "location": "Mahshahr, Iran",
+      "category": "Oil, Gas & Petrochemical",
+      "project_type": "Industrial Gathering Facility",
+      "system_label": "Sandwich Panel & Tensile Membrane",
+      "area_label": "5,000 m²",
+      "card_subtitle": "5,000 m² Hybrid Enclosure",
+      "card_highlight": "Custom-engineered connection between tensile membrane and primary structure",
+      "summary": "Design and execution of a hybrid enclosure system combining sandwich panels and tensile membrane roofing for Marun Petrochemical Complex.",
+      "challenge": "A critical engineering challenge was the development of a reliable structural interface between the tensile membrane system and the primary structure while maintaining load transfer integrity and long-term durability.",
+      "engineering_decision": "A dedicated connection assembly was engineered, analyzed and fabricated specifically for the interaction between the tensile membrane structure and the main supporting frame.",
+      "measured_result": "Successful completion of approximately 5,000 m² of hybrid enclosure within an active petrochemical environment.",
+      "risk_prevented": [
+        "Stress concentration at membrane connections",
+        "Wind-induced membrane failures",
+        "Structural instability at force-transfer points",
+        "High maintenance requirements"
+      ]
+    },
+    "ar": {
+      "title": "قاعة مجمع مارون للبتروكيماويات",
+      "location": "ماهشهر، إيران",
+      "category": "النفط والغاز والبتروكيماويات",
+      "project_type": "منشأة صناعية متعددة الاستخدامات",
+      "system_label": "ساندويتش بانل وهيكل غشائي مشدود",
+      "area_label": "٥٠٠٠ متر مربع",
+      "card_subtitle": "٥٠٠٠ متر مربع من التغطية المركبة",
+      "card_highlight": "تصميم وصلة خاصة بين الهيكل الغشائي والهيكل الرئيسي",
+      "summary": "تنفيذ نظام تغطية مركب يجمع بين الساندويتش بانل والهيكل الغشائي المشدود في مجمع مارون للبتروكيماويات.",
+      "challenge": "تمثل التحدي الرئيسي في تطوير وصلة آمنة وفعالة بين الهيكل الغشائي والهيكل الحامل الرئيسي.",
+      "engineering_decision": "تصميم وتصنيع تفاصيل ربط خاصة لضمان انتقال الأحمال واستقرار النظام على المدى الطويل.",
+      "measured_result": "تنفيذ نحو ٥٠٠٠ متر مربع من التغطية المركبة بنجاح ضمن بيئة صناعية فعالة.",
+      "risk_prevented": [
+        "تركيز الإجهادات في نقاط الربط",
+        "فشل الغشاء تحت تأثير الرياح",
+        "عدم استقرار النظام الإنشائي",
+        "ارتفاع تكاليف الصيانة"
+      ]
+    },
+    "ru": {
+      "title": "Многофункциональный зал нефтехимического комплекса Marun",
+      "location": "Махшехр, Иран",
+      "category": "Нефтегазовая и нефтехимическая промышленность",
+      "project_type": "Промышленный общественный объект",
+      "system_label": "Сэндвич-панели и мембранная конструкция",
+      "area_label": "5 000 м²",
+      "card_subtitle": "5 000 м² комбинированного покрытия",
+      "card_highlight": "Специально разработанный узел соединения мембранной системы",
+      "summary": "Проектирование и реализация комбинированной оболочки из сэндвич-панелей и мембранного покрытия для комплекса Marun Petrochemical.",
+      "challenge": "Ключевой задачей стала разработка надежного узла сопряжения между мембранной конструкцией и основным несущим каркасом.",
+      "engineering_decision": "Был разработан и изготовлен специальный узел для безопасной передачи нагрузок между двумя конструктивными системами.",
+      "measured_result": "Успешная реализация около 5 000 м² покрытия в условиях действующего нефтехимического предприятия.",
+      "risk_prevented": [
+        "Концентрация напряжений",
+        "Повреждение мембранного покрытия ветром",
+        "Нестабильность узлов соединения",
+        "Повышенные эксплуатационные расходы"
+      ]
+    }
+  }
+}

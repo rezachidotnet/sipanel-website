@@ -1,0 +1,111 @@
+{
+  "slug": "toranj-kish-restaurant",
+  "status": "completed",
+  "featured": true,
+  "area_m2": 500,
+  "systems": [
+    "space_frame_structure",
+    "sandwich_panel_roofing"
+  ],
+  "images": {
+    "card": "/images/projects/toranj-kish-restaurant/card.webp",
+    "hero_desktop": "/images/projects/toranj-kish-restaurant/hero-desktop.webp",
+    "hero_mobile": "/images/projects/toranj-kish-restaurant/hero-mobile.webp",
+    "gallery": [
+      "/images/projects/toranj-kish-restaurant/gallery-01.webp",
+      "/images/projects/toranj-kish-restaurant/gallery-02.webp"
+    ]
+  },
+  "content": {
+    "fa": {
+      "title": "رستوران دریایی هتل ترنج کیش",
+      "location": "جزیره کیش، ایران",
+      "category": "هتل و گردشگری",
+      "project_type": "رستوران روی آب",
+      "system_label": "سازه فضاکار و پوشش ساندویچ پانل",
+      "area_label": "حدود ۵۰۰ مترمربع",
+      "card_subtitle": "سقف رستوران دریایی در مجموعه هتل ترنج",
+      "card_highlight": "اجرای سازه در محیط دریایی و خورنده خلیج فارس",
+      "summary": "طراحی، ساخت و اجرای سازه فضاکار سقف رستوران هتل ترنج کیش بر روی سازه مستقر در آب‌های خلیج فارس انجام شد. پروژه با هدف ایجاد فضای معماری شاخص برای یکی از شناخته‌شده‌ترین هتل‌های دریایی ایران اجرا گردید.",
+      "challenge": "اجرای سازه در محیط دریایی با رطوبت و خوردگی بالا، محدودیت‌های دسترسی و الزامات ویژه بهره‌برداری هتل.",
+      "engineering_decision": "استفاده از سیستم سازه فضاکار سبک برای کاهش وزن، تسهیل حمل و نصب و افزایش دوام در شرایط اقلیمی ساحلی.",
+      "measured_result": "اجرای موفق سقف رستوران مجموعه هتل ترنج با پوشش حدود ۵۰۰ مترمربع در محیط دریایی.",
+      "risk_prevented": [
+        "خوردگی ناشی از شرایط دریایی",
+        "افزایش بار مرده سازه",
+        "پیچیدگی نصب در محیط آبی",
+        "اختلال در عملکرد مجموعه گردشگری"
+      ]
+    },
+    "en": {
+      "title": "Toranj Kish Hotel Restaurant Roof",
+      "location": "Kish Island, Iran",
+      "category": "Hospitality & Tourism",
+      "project_type": "Overwater Restaurant",
+      "system_label": "Space Frame + Sandwich Panel Roofing",
+      "area_label": "Approx. 500 m²",
+      "card_subtitle": "Roof structure for the iconic overwater restaurant",
+      "card_highlight": "Marine environment engineering solution",
+      "summary": "Design, fabrication and installation of the space frame roof structure for the overwater restaurant of Toranj Kish Hotel, one of Iran's most recognized hospitality destinations.",
+      "challenge": "Construction in a highly corrosive marine environment with logistical and operational constraints.",
+      "engineering_decision": "A lightweight space frame system was selected to minimize dead loads and facilitate installation over water.",
+      "measured_result": "Successful completion of the restaurant roof structure in a demanding coastal environment.",
+      "risk_prevented": [
+        "Marine corrosion",
+        "Excessive structural weight",
+        "Installation difficulties",
+        "Operational disruptions"
+      ]
+    },
+    "ar": {
+      "title": "مطعم فندق ترنج كيش",
+      "location": "جزيرة كيش، إيران",
+      "category": "الضيافة والسياحة",
+      "project_type": "مطعم فوق المياه",
+      "system_label": "هيكل فراغي مع ساندويتش بانل",
+      "area_label": "حوالي ٥٠٠ م²",
+      "card_subtitle": "سقف مطعم بحري مميز",
+      "card_highlight": "تنفيذ في بيئة بحرية قاسية",
+      "summary": "تنفيذ سقف المطعم البحري في فندق ترنج كيش باستخدام هيكل فراغي خفيف.",
+      "challenge": "العمل في بيئة بحرية ذات رطوبة وتآكل مرتفعين.",
+      "engineering_decision": "اعتماد هيكل فراغي لتقليل الوزن وتحسين سهولة التركيب.",
+      "measured_result": "إنجاز سقف المطعم بنجاح فوق المياه.",
+      "risk_prevented": [
+        "التآكل البحري",
+        "زيادة الأحمال",
+        "صعوبات التنفيذ",
+        "تعطيل التشغيل"
+      ]
+    },
+    "ru": {
+      "title": "Ресторан отеля Toranj Kish",
+      "location": "Остров Киш, Иран",
+      "category": "Гостиничный бизнес",
+      "project_type": "Ресторан над водой",
+      "system_label": "Пространственная конструкция и сэндвич-панели",
+      "area_label": "Около 500 м²",
+      "card_subtitle": "Кровля ресторана над морем",
+      "card_highlight": "Инженерное решение для морской среды",
+      "summary": "Проектирование и монтаж покрытия ресторана отеля Toranj Kish, расположенного над водами Персидского залива.",
+      "challenge": "Работа в агрессивной морской среде.",
+      "engineering_decision": "Использование легкой пространственной конструкции.",
+      "measured_result": "Успешная реализация проекта в условиях морского климата.",
+      "risk_prevented": [
+        "Коррозия",
+        "Избыточные нагрузки",
+        "Сложности монтажа",
+        "Эксплуатационные риски"
+      ]
+    }
+  },
+  "seo": {
+    "primary_keyword": "Toranj Kish Hotel Roof Structure",
+    "secondary_keywords": [
+      "Overwater Restaurant Roof",
+      "Marine Space Frame",
+      "Hotel Roofing System",
+      "Kish Island Construction",
+      "Hospitality Structure"
+    ]
+  }
+}
