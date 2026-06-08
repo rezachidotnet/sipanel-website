@@ -310,5 +310,19 @@
     "standingSeamDesc": "Concealed-fastener roofing with long-term waterproofing and flashing coordination.",
     "aluminiumCladding": "Aluminium Cladding & Covering",
     "aluminiumCladdingDesc": "Facade cladding systems with flashing details and weatherproofing for industrial envelopes."
+  },
+  "featuredProject": {
+    "eyebrow": "Featured Project",
+    "title": "32-Bed Military Hospital",
+    "location": "Raz & Jargalan, North Khorasan, Iran",
+    "metric1Value": "50",
+    "metric1Label": "Days",
+    "metric2Value": "32",
+    "metric2Label": "Beds",
+    "metric3Label": "Full EPC Delivery",
+    "description": "During the COVID-19 emergency, SIPANEL delivered a fully operational 32-bed hospital from excavation to readiness in less than 50 days.",
+    "scopeTitle": "Scope included:",
+    "scopeItems": "Engineering|Shop Drawings|Excavation|Construction|Sandwich Panel Envelope|Internal Sandwich Panel Partitions|Installation & Readiness",
+    "cta": "View Project Case Study"
   }
 }

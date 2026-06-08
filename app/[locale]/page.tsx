@@ -4,6 +4,7 @@ import {ComparisonSection} from '@/components/home/comparison-section';
 import {EngineeringProofSnapshot} from '@/components/home/engineering-proof-snapshot';
 import {HeroSection} from '@/components/home/hero-section';
 import {ProcessSection} from '@/components/home/process-section';
+import {FeaturedProject} from '@/components/home/featured-project';
 import {SystemsShowcase} from '@/components/home/systems-showcase';
 import {ResourcesPreview} from '@/components/home/resources-preview';
 import {RfqSection} from '@/components/home/rfq-section';
@@ -44,6 +45,7 @@ export default async function HomePage({params}: Props) {
       <TrustBar />
       <ClientLogosSection variant="carousel" />
       <SystemsShowcase />
+      <FeaturedProject />
       <EngineeringProofSnapshot />
       <StickyMobileCta />
       <ProcessSection />

@@ -216,6 +216,37 @@ const claddingService: LocalizedText = {
 
 const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
+    slug: 'army-hospital',
+    projectName: {
+      en: '32-Bed Military Hospital',
+      fa: 'بیمارستان ۳۲ تختخوابی ارتش',
+      ar: 'مستشفى عسكري بسعة ٣٢ سريراً',
+      ru: 'Военный госпиталь на 32 койки'
+    },
+    projectType: {
+      en: 'Emergency hospital — Full EPC delivery',
+      fa: 'بیمارستان اضطراری — تحویل کامل EPC',
+      ar: 'مستشفى طوارئ — تسليم EPC كامل',
+      ru: 'Экстренный госпиталь — полная поставка EPC'
+    },
+    mainService: sandwichPanelService,
+    serviceHref: '/systems/sandwich-panel-systems',
+    location: 'Raz & Jargalan, North Khorasan, Iran',
+    area: '—',
+    challenge: 'During the COVID-19 emergency, a fully operational 32-bed military hospital was needed from excavation to readiness in under 50 days, requiring full EPC coordination.',
+    sipanelSolution: 'SIPANEL delivered the complete project scope including engineering, shop drawings, excavation, construction, sandwich panel envelope, internal partitions, and full installation readiness.',
+    engineeringDecision: 'Engineering teams coordinated full EPC delivery — from excavation and structural construction to sandwich panel envelope, internal partitions, and final readiness — within an emergency timeline.',
+    executionDetail: 'Execution followed a compressed 50-day schedule covering excavation, construction, sandwich panel cladding, internal partitioning, and installation to operational readiness.',
+    measuredResult: 'A fully operational 32-bed military hospital was delivered from excavation to readiness in less than 50 days during the COVID-19 emergency.',
+    riskPrevented: ['Schedule overrun beyond 50-day target', 'Coordination failures across EPC disciplines', 'Envelope weather protection delays', 'Internal partition installation bottlenecks'],
+    resourceTitle: {
+      en: 'Panel Selection Guide',
+      fa: 'راهنمای انتخاب پانل',
+      ar: 'دليل اختيار الألواح',
+      ru: 'Руководство по выбору панелей'
+    }
+  },
+  {
     slug: 'shahre-babak-hall',
     projectName: localized('Shahr Babak Wrestling Hall'),
     projectType: localized('Multi-dome wrestling sports complex'),
