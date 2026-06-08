@@ -280,7 +280,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     mainService: sandwichPanelService,
     serviceHref: '/systems/sandwich-panel-systems',
     location: 'Raz & Jargalan, North Khorasan, Iran',
-    area: '—',
+    area: '1,000 m²',
     challenge: 'During the COVID-19 emergency, a fully operational 32-bed military hospital was needed from excavation to readiness in under 50 days, requiring full EPC coordination.',
     sipanelSolution: 'SIPANEL delivered the complete project scope including engineering, shop drawings, excavation, construction, sandwich panel envelope, internal partitions, and full installation readiness.',
     engineeringDecision: 'Engineering teams coordinated full EPC delivery — from excavation and structural construction to sandwich panel envelope, internal partitions, and final readiness — within an emergency timeline.',
