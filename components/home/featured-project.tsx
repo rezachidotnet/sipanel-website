@@ -30,6 +30,7 @@ export function FeaturedProject() {
 
   useEffect(() => {
     if (isVisible && videoRef.current) {
+      videoRef.current.load();
       videoRef.current.play().catch(() => {});
     }
   }, [isVisible]);
