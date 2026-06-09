@@ -328,18 +328,48 @@
     "aluminiumCladding": "Aluminium Cladding & Covering",
     "aluminiumCladdingDesc": "Facade cladding systems with flashing details and weatherproofing for industrial envelopes."
   },
+  "whySipanel": {
+    "title": "Why SIPANEL",
+    "description": "Controlled engineering, procurement, and execution to reduce errors, rework, and hidden project risks.",
+    "shopDrawing": {
+      "title": "Shop Drawing Engineering",
+      "desc": "Shop drawings prepared before procurement and installation to reduce site clashes, rework, and costly on-site changes."
+    },
+    "procurement": {
+      "title": "Procurement Optimization",
+      "desc": "Material selection based on project technical needs, climate conditions, delivery scheduling, and hidden procurement cost control."
+    },
+    "installation": {
+      "title": "Installation Management",
+      "desc": "Technical control of the installation process, connection inspection, waterproofing, and compliance with approved shop drawings."
+    },
+    "multiSystem": {
+      "title": "Multi-System Expertise",
+      "desc": "Coordination of sandwich panels, standing seam, aluminium cladding, and glass systems through a single engineering path."
+    },
+    "complexProjects": {
+      "title": "Complex Project Experience",
+      "desc": "Execution experience in airports, hospitals, industrial and commercial projects with long spans, tight schedules, and special site conditions."
+    },
+    "documentation": {
+      "title": "Technical Documentation & Coordination",
+      "desc": "Engineering documentation, quality control reports, and coordination between design, procurement, and site execution."
+    }
+  },
   "featuredProject": {
     "eyebrow": "Featured Project",
     "title": "32-Bed Military Hospital",
+    "valueStatement": "Operational hospital delivered in less than 50 days",
     "location": "Raz & Jargalan, North Khorasan, Iran",
-    "metric1Value": "50",
-    "metric1Label": "Days",
-    "metric2Value": "32",
-    "metric2Label": "Beds",
-    "metric3Label": "Full EPC Delivery",
+    "metric1Value": "Less Than 50 Days",
+    "metric1Label": "Delivery Timeline",
+    "metric2Value": "32 Beds",
+    "metric2Label": "Hospital Capacity",
+    "metric3Value": "Engineering, Procurement & Execution",
+    "metric3Label": "Full delivery from design to operation",
     "description": "During the COVID-19 emergency, SIPANEL delivered a fully operational 32-bed hospital from excavation to readiness in less than 50 days.",
     "scopeTitle": "Scope included:",
-    "scopeItems": "Engineering|Shop Drawings|Excavation|Construction|Sandwich Panel Envelope|Internal Sandwich Panel Partitions|Installation & Readiness",
-    "cta": "View Project Case Study"
+    "scopeItems": "Engineering|Procurement|Execution|Internal & External Sandwich Panels",
+    "cta": "View Full Case Study"
   }
 }

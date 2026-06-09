@@ -79,6 +79,8 @@ export function FeaturedProject() {
               {t('title')}
             </h2>
 
+            <p className="featured-project__value-statement">{t('valueStatement')}</p>
+
             <address className="featured-project__location">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path
@@ -99,7 +101,8 @@ export function FeaturedProject() {
                 <span>{t('metric2Label')}</span>
               </div>
               <div className="featured-project__metric">
-                <strong>{t('metric3Label')}</strong>
+                <strong>{t('metric3Value')}</strong>
+                <span>{t('metric3Label')}</span>
               </div>
             </div>
 
@@ -114,9 +117,8 @@ export function FeaturedProject() {
               </ul>
             </div>
 
-            <Link href="/projects/army-hospital" className="featured-project__cta">
+            <Link href="/projects/army-hospital" className="featured-project__cta button-primary">
               {t('cta')}
-              <span className="featured-project__cta-arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

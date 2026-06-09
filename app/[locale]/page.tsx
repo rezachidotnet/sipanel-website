@@ -6,7 +6,7 @@ import {HeroSection} from '@/components/home/hero-section';
 import {ProcessSection} from '@/components/home/process-section';
 import {FeaturedProject} from '@/components/home/featured-project';
 import {SystemsShowcase} from '@/components/home/systems-showcase';
-import {ResourcesPreview} from '@/components/home/resources-preview';
+import {WhySipanel} from '@/components/home/why-sipanel';
 import {RfqSection} from '@/components/home/rfq-section';
 import {StickyMobileCta} from '@/components/home/sticky-mobile-cta';
 import {TrustBar} from '@/components/home/trust-bar';
@@ -44,14 +44,14 @@ export default async function HomePage({params}: Props) {
       <HeroSection />
       <TrustBar />
       <ClientLogosSection variant="carousel" />
-      <SystemsShowcase />
       <FeaturedProject />
+      <WhySipanel />
       <EngineeringProofSnapshot />
+      <SystemsShowcase />
       <StickyMobileCta />
       <ProcessSection />
       <CaseStudiesPreview />
       <ComparisonSection />
-      <ResourcesPreview />
       <RfqSection />
     </>
   );
