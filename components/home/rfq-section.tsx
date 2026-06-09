@@ -160,7 +160,6 @@ export function RfqSection() {
     >
       <div className="container-shell rfq-section__inner">
         <aside className="rfq-contact" aria-label={t('contact.title')}>
-          <span className="rfq-contact__eyebrow">{t('eyebrow')}</span>
           <h2 id="rfq-title">{t('title')}</h2>
           <p>{t('intro')}</p>
           <div className="rfq-contact__details">

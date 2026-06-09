@@ -98,7 +98,6 @@ export function EngineeringProofSnapshot() {
     <section className="proof-snapshot" aria-labelledby="proof-snapshot-title">
       <div className="container-shell proof-snapshot__inner">
         <div className="proof-snapshot__header">
-          <p>{t('eyebrow')}</p>
           <h2 id="proof-snapshot-title">{t('title')}</h2>
           <span>{t('description')}</span>
         </div>

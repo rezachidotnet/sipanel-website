@@ -27,9 +27,8 @@ export function ClientLogosSection({variant = 'grid'}: Props) {
 
   if (variant === 'carousel') {
     return (
-      <section className="client-logos-section client-logos-section--carousel" aria-label={t('eyebrow')}>
+      <section className="client-logos-section client-logos-section--carousel" aria-label={t('title')}>
         <div className="container-shell client-logos-carousel__header">
-          <p className="client-logos-eyebrow">{t('eyebrow')}</p>
           <p className="client-logos-carousel__note">{t('description')}</p>
         </div>
         <div className="client-logos-carousel">
@@ -47,7 +46,6 @@ export function ClientLogosSection({variant = 'grid'}: Props) {
     <section className="client-logos-section" aria-labelledby="client-logos-title">
       <div className="container-shell client-logos-section__inner">
         <header className="client-logos-section__header">
-          <p className="client-logos-eyebrow">{t('eyebrow')}</p>
           <h2 id="client-logos-title">{t('title')}</h2>
           <p className="client-logos-description">{t('description')}</p>
         </header>

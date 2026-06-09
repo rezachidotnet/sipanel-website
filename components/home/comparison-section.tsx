@@ -24,7 +24,6 @@ export function ComparisonSection() {
     <section className="comparison-section" aria-labelledby="comparison-title">
       <div className="container-shell comparison-section__inner">
         <header className="comparison-section__header">
-          <p className="comparison-section__eyebrow">{t('eyebrow')}</p>
           <h2 id="comparison-title">{t('title')}</h2>
           <p>{t('intro')}</p>
         </header>

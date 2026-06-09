@@ -169,7 +169,6 @@ export function CaseStudiesPreview() {
       {/* track: case_study_swipe */}
       <div className="container-shell case-studies-preview__inner">
         <header className="case-studies-preview__header">
-          <p>{t('eyebrow')}</p>
           <h2 id="case-studies-title">{t('title')}</h2>
           <Link href="/projects" className="case-studies-preview__cta">
             {t('cta')}

@@ -186,8 +186,8 @@
       },
       "materialWaste": {
         "label": "Material waste",
-        "typical": "Quantities can be ordered before panel layout and accessory coordination are fully resolved.",
-        "sipanel": "Procurement follows coordinated layouts and material planning to support waste control."
+        "typical": "Materials are ordered without a finalized layout; waste, surplus, and shortages are discovered on site.",
+        "sipanel": "Panel and accessory layout is defined on shop drawings and the material list is extracted from actual dimensions to reduce waste and over-ordering."
       },
       "installationCoordination": {
         "label": "Installation coordination",
@@ -196,13 +196,13 @@
       },
       "riskBeforeConstruction": {
         "label": "Risk before construction",
-        "typical": "Project risks often become visible after materials arrive or installation starts.",
-        "sipanel": "Key risks are reviewed before procurement so decisions can be controlled earlier."
+        "typical": "System clashes, dimensional errors, and connection issues are typically discovered after materials arrive on site.",
+        "sipanel": "System clashes, critical connection points, and execution dimensions are reviewed and resolved in shop drawings before materials are ordered."
       },
       "technicalDocumentation": {
         "label": "Technical documentation",
-        "typical": "Documentation may be limited to product information and basic installation guidance.",
-        "sipanel": "Shop drawings, details, and procurement logic support clearer responsibility during execution."
+        "typical": "Documentation is limited to product data sheets and generic installation guides; execution responsibilities are not documented.",
+        "sipanel": "Shop drawings, flashing details, connection details, and material lists are produced so that responsibility at each execution stage is documented and traceable."
       }
     }
   },
@@ -293,11 +293,10 @@
     "error": "The request could not be sent safely. Please review the fields and try again."
   },
   "hero": {
-    "eyebrow": "Engineering Power. Controlled Execution.",
-    "headline": "Cover Your Structure with Precision and Beauty.",
-    "subheadline": "Precision shop drawings, controlled procurement, and engineered installation systems for industrial buildings.",
-    "primaryCta": "Get Catalog",
-    "secondaryCta": "Request Project Cost Check",
+    "headline": "Industrial Building Envelopes, from Design to Execution",
+    "subheadline": "Precise shop drawings, controlled procurement, and engineered installation to reduce errors, rework, and execution risks in your project.",
+    "primaryCta": "Get Project Engineering Review",
+    "secondaryCta": "Download Technical Catalog",
     "visualAlt": "SIPANEL industrial building envelope project with engineered roof and facade systems"
   },
   "catalogDownload": {
