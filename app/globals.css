@@ -1147,6 +1147,29 @@ button[aria-disabled='true'] {
   transform: translateY(-1px);
 }
 
+.button-catalog-download {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-button);
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 12px 22px;
+  font-size: 15px;
+  background: #1F2937;
+  color: #FFFFFF;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms ease-out, transform 150ms ease-out;
+}
+
+.button-catalog-download:hover {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
 .hero-visual {
   position: relative;
   min-height: 300px;
@@ -7537,7 +7560,7 @@ button[aria-disabled='true'] {
 }
 
 .projects-index-section {
-  padding: 64px 0;
+  padding: 32px 0 64px;
 }
 
 .projects-index-section--light {
@@ -7550,7 +7573,6 @@ button[aria-disabled='true'] {
 }
 
 .projects-index-section__header h2,
-.projects-index-proof h2,
 .projects-index-conversion h2 {
   margin: 0;
   font-size: 30px;
@@ -7858,32 +7880,6 @@ button[aria-disabled='true'] {
   text-decoration: none;
 }
 
-.projects-index-proof {
-  display: grid;
-  gap: 22px;
-}
-
-.projects-index-proof p {
-  max-width: 760px;
-  color: var(--color-text-secondary);
-  line-height: 1.75;
-  margin: 12px 0 0;
-}
-
-.projects-index-proof__items {
-  display: grid;
-  gap: 10px;
-}
-
-.projects-index-proof__items span {
-  border: 1px solid var(--color-gray-light);
-  border-radius: var(--radius-card);
-  background: var(--color-white);
-  color: var(--color-text-primary);
-  font-size: 14px;
-  font-weight: 850;
-  padding: 14px;
-}
 
 .projects-index-page:dir(rtl) .projects-index-card__snapshot dt,
 .projects-index-page:dir(rtl) .projects-index-card__proof h4,
@@ -8808,15 +8804,6 @@ button[aria-disabled='true'] {
     padding-inline: 0;
   }
 
-  .projects-index-proof {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
-    align-items: center;
-  }
-
-  .projects-index-proof__items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .projects-index-conversion__inner {
     grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
     align-items: center;
@@ -8954,7 +8941,7 @@ button[aria-disabled='true'] {
 
   .about-section,
   .projects-index-section {
-    padding-block: 96px;
+    padding: 48px 0 96px;
   }
 
   .about-section__inner,
@@ -8964,7 +8951,6 @@ button[aria-disabled='true'] {
 
   .about-section__header h2,
   .projects-index-section__header h2,
-  .projects-index-proof h2,
   .projects-index-conversion h2 {
     font-size: 36px;
   }

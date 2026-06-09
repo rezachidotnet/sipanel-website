@@ -6,6 +6,7 @@ import {SchemaScript} from '@/components/seo/schema-script';
 import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
+import {CatalogDownloadButton} from '@/components/home/catalog-download-button';
 import {listCaseStudySlugs} from '@/lib/case-studies/case-study-pages';
 import armyHospitalCard from '@/assets/projects/army-hospital/photos/army-hospital-card.webp';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
@@ -80,9 +81,6 @@ const copy: Record<
     title: string;
     h1: string;
     description: string;
-    eyebrow: string;
-    introTitle: string;
-    intro: string;
     allProjects: string;
     labels: {
       projectName: string;
@@ -103,7 +101,6 @@ const copy: Record<
       polycarbonate: string;
       envelope: string;
     };
-    proofPending: string;
     primaryCta: string;
     costReviewCta: string;
     openCaseStudy: string;
@@ -115,13 +112,9 @@ const copy: Record<
 > = {
   en: {
     title: 'SIPANEL Projects & Case Studies',
-    h1: 'Proven Industrial Envelope Projects.',
+    h1: 'Selected SIPANEL Projects',
     description:
-      'Explore SIPANEL industrial roofing, sandwich panel, ZIP panel, and aluminium cladding projects through engineering challenge, execution logic, measured result, and risk-prevention proof.',
-    eyebrow: 'Project Proof',
-    introTitle: 'Projects that prove the system',
-    intro:
-      'Each card is structured around the project challenge, SIPANEL engineering decision, execution result, and risks controlled before or during installation.',
+      'Dozens of completed projects across industrial facilities, airports, healthcare, commercial and sports buildings in Iran.\nFrom long-span structures to complex architectural envelopes, explore SIPANEL\u2019s engineered execution solutions.',
     allProjects: 'Project case studies',
     labels: {
       projectName: 'Project name',
@@ -142,9 +135,8 @@ const copy: Record<
       polycarbonate: 'Polycarbonate Systems',
       envelope: 'Industrial envelope'
     },
-    proofPending: 'Only source-backed project fields are shown. Unverified metrics remain marked as pending inside each case study.',
     primaryCta: 'Get Free Engineering Review',
-    costReviewCta: 'Request Project Cost Review',
+    costReviewCta: 'Download Technical Catalog',
     openCaseStudy: 'View Case Study',
     detailComingSoon: 'Project details coming soon',
     conversionTitle: 'Need this level of control for your project?',
@@ -153,13 +145,9 @@ const copy: Record<
   },
   fa: {
     title: 'پروژه‌ها و مطالعات موردی SIPANEL',
-    h1: 'پروژه‌های اجراشده در پوشش صنعتی ساختمان',
+    h1: 'پروژه‌های منتخب SIPANEL',
     description:
-      'پروژه‌های سقف صنعتی، ساندویچ پانل، سقف ایستادرز / ZIP و کلادینگ آلومینیومی SIPANEL را با چالش مهندسی، منطق اجرا، نتیجه و ریسک‌های کنترل‌شده بررسی کنید.',
-    eyebrow: 'شواهد پروژه',
-    introTitle: 'پروژه‌هایی که سیستم را اثبات می‌کنند',
-    intro:
-      'هر کارت بر اساس چالش پروژه، تصمیم مهندسی SIPANEL، نتیجه اجرا و ریسک‌های کنترل‌شده پیش یا حین نصب ساختاردهی شده است.',
+      'بیش از ده‌ها پروژه اجراشده در صنایع، فرودگاه‌ها، مراکز درمانی، تجاری و ورزشی ایران.\nاز دهانه‌های بلند تا پوشش‌های پیچیده معماری؛ نمونه‌هایی از راهکارهای مهندسی اجراشده SIPANEL.',
     allProjects: 'مطالعات موردی پروژه',
     labels: {
       projectName: 'نام پروژه',
@@ -180,9 +168,8 @@ const copy: Record<
       polycarbonate: 'سیستم‌های پلی‌کربنات',
       envelope: 'پوشش صنعتی ساختمان'
     },
-    proofPending: 'جزئیات پروژه‌ها پس از بررسی نهایی و آماده‌سازی مستندات تکمیلی منتشر می‌شود.',
     primaryCta: 'دریافت بررسی مهندسی رایگان',
-    costReviewCta: 'درخواست بررسی هزینه پروژه',
+    costReviewCta: 'دانلود کاتالوگ فنی',
     openCaseStudy: 'مشاهده جزئیات پروژه',
     detailComingSoon: 'جزئیات پروژه به‌زودی',
     conversionTitle: 'برای انتخاب پوشش مناسب پروژه، ابتدا ریسک‌های فنی را بررسی کنید.',
@@ -192,13 +179,9 @@ const copy: Record<
   },
   ar: {
     title: 'مشاريع ودراسات حالة SIPANEL',
-    h1: 'Proven Industrial Envelope Projects.',
+    h1: 'مشاريع مختارة من SIPANEL',
     description:
-      'استكشف مشاريع SIPANEL في الأسقف الصناعية وألواح الساندويش وZIP Panel وكسوة الألمنيوم من خلال التحدي الهندسي ومنطق التنفيذ والنتيجة والمخاطر التي تمت السيطرة عليها.',
-    eyebrow: 'إثبات المشروع',
-    introTitle: 'مشاريع تثبت النظام',
-    intro:
-      'تُبنى كل بطاقة حول تحدي المشروع، والقرار الهندسي من SIPANEL، ونتيجة التنفيذ، والمخاطر التي تمت السيطرة عليها قبل أو أثناء التركيب.',
+      'عشرات المشاريع المنفذة في المنشآت الصناعية والمطارات والمرافق الصحية والتجارية والرياضية في إيران.\nمن البحور الواسعة إلى الأغلفة المعمارية المعقدة، استعرض حلول SIPANEL الهندسية المنفذة.',
     allProjects: 'دراسات حالة المشاريع',
     labels: {
       projectName: 'اسم المشروع',
@@ -219,9 +202,8 @@ const copy: Record<
       polycarbonate: 'أنظمة البولي كربونات',
       envelope: 'الغلاف الصناعي'
     },
-    proofPending: 'تُعرض فقط حقول المشروع المدعومة بالمصدر. وتبقى المؤشرات غير الموثقة موسومة كقيد الانتظار داخل كل دراسة حالة.',
     primaryCta: 'Get Free Engineering Review',
-    costReviewCta: 'Request Project Cost Review',
+    costReviewCta: 'تحميل الكتالوج الفني',
     openCaseStudy: 'View Case Study',
     detailComingSoon: 'Project details coming soon',
     conversionTitle: 'هل تحتاج هذا المستوى من التحكم لمشروعك؟',
@@ -230,13 +212,9 @@ const copy: Record<
   },
   ru: {
     title: 'Проекты и кейсы SIPANEL',
-    h1: 'Proven Industrial Envelope Projects.',
+    h1: 'Избранные проекты SIPANEL',
     description:
-      'Изучите проекты SIPANEL по промышленной кровле, сэндвич-панелям, ZIP Panel и алюминиевой облицовке через инженерную задачу, логику выполнения, результат и предотвращенные риски.',
-    eyebrow: 'Проектное подтверждение',
-    introTitle: 'Проекты, которые подтверждают систему',
-    intro:
-      'Каждая карточка построена вокруг задачи проекта, инженерного решения SIPANEL, результата выполнения и рисков, контролируемых до или во время монтажа.',
+      'Десятки реализованных проектов в промышленных, аэропортовых, медицинских, коммерческих и спортивных объектах Ирана.\nОт большепролетных конструкций до сложных архитектурных оболочек — примеры инженерных решений SIPANEL.',
     allProjects: 'Проектные кейсы',
     labels: {
       projectName: 'Название проекта',
@@ -257,9 +235,8 @@ const copy: Record<
       polycarbonate: 'Поликарбонатные системы',
       envelope: 'Промышленная оболочка'
     },
-    proofPending: 'Показаны только поля проекта, подтвержденные источником. Неподтвержденные метрики остаются отмеченными как ожидающие внутри каждого кейса.',
     primaryCta: 'Get Free Engineering Review',
-    costReviewCta: 'Request Project Cost Review',
+    costReviewCta: 'Скачать технический каталог',
     openCaseStudy: 'View Case Study',
     detailComingSoon: 'Project details coming soon',
     conversionTitle: 'Нужен такой уровень контроля для вашего проекта?',
@@ -1456,16 +1433,13 @@ export default async function ProjectsOverviewPage({params}: Props) {
         {/* track: case_study_view */}
         <div className="container-shell projects-index-hero__inner">
           <div className="projects-index-hero__copy">
-            <p className="service-eyebrow">{content.eyebrow}</p>
             <h1 id="projects-index-title">{content.h1}</h1>
             <p>{content.description}</p>
             <div className="projects-index-hero__actions">
               <Link href={rfqHref} className="button-primary">
                 {content.primaryCta}
               </Link>
-              <Link href={rfqHref} className="button-secondary">
-                {content.costReviewCta}
-              </Link>
+              <CatalogDownloadButton label={content.costReviewCta} componentId="projects_hero" />
             </div>
           </div>
           <div className="projects-index-hero__visual" aria-hidden="true">
@@ -1474,14 +1448,8 @@ export default async function ProjectsOverviewPage({params}: Props) {
         </div>
       </section>
 
-      <section className="projects-index-section" data-section="projects_case_studies" aria-labelledby="projects-case-studies-title">
+      <section className="projects-index-section" data-section="projects_case_studies" aria-label={content.allProjects}>
         <div className="container-shell projects-index-section__inner">
-          <header className="projects-index-section__header">
-            <p className="service-eyebrow">{content.eyebrow}</p>
-            <h2 id="projects-case-studies-title">{content.introTitle}</h2>
-            <p>{content.intro}</p>
-          </header>
-
           <div className="projects-index-filter" aria-label={content.allProjects}>
             {/* track: project_filter_use */}
             {visibleFilterOptions.map((filter, index) => (
@@ -1659,22 +1627,6 @@ export default async function ProjectsOverviewPage({params}: Props) {
         </div>
       </section>
 
-      <section className="projects-index-section projects-index-section--light" data-section="proof_governance" aria-labelledby="projects-proof-title">
-        <div className="container-shell projects-index-proof">
-          <div>
-            <p className="service-eyebrow">{isPersianProjectsPage ? content.eyebrow : content.allProjects}</p>
-            <h2 id="projects-proof-title">{isPersianProjectsPage ? content.allProjects : content.proofPending}</h2>
-            {isPersianProjectsPage ? <p>{content.proofPending}</p> : null}
-          </div>
-          <div className="projects-index-proof__items">
-            <span>{content.labels.mainChallenge}</span>
-            <span>{content.labels.engineeringDecision}</span>
-            <span>{content.labels.measuredResult}</span>
-            <span>{content.labels.risks}</span>
-          </div>
-        </div>
-      </section>
-
       <section className="projects-index-conversion" data-section="projects_conversion_cta" aria-labelledby="projects-conversion-title">
         <div className="container-shell projects-index-conversion__inner">
           <div>
@@ -1685,9 +1637,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
             <Link href={rfqHref} className="button-primary">
               {content.primaryCta}
             </Link>
-            <Link href={rfqHref} className="button-secondary">
-              {content.costReviewCta}
-            </Link>
+            <CatalogDownloadButton label={content.costReviewCta} componentId="projects_conversion" />
           </div>
         </div>
       </section>
