@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import {useRef, useState, useEffect, useCallback} from 'react';
 import {useTranslations} from 'next-intl';
-import logo from '@/assets/brand/logos/logo.png';
+import logo from '@/assets/brand/logos/logo-black-transparency.svg';
 import {Link, locales, usePathname, type Locale} from '@/i18n/routing';
 import {LanguageSwitcher} from '@/components/localization/language-switcher';
 import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
