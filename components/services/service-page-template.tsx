@@ -42,6 +42,12 @@ type ServiceFaq = {
   answer: string;
 };
 
+type CaseStudyLabels = {
+  challenge: string;
+  result: string;
+  viewProject: string;
+};
+
 export type ServicePageTemplateData = {
   id: string;
   routes: LocalizedRoutes;
@@ -105,6 +111,7 @@ export type ServicePageTemplateData = {
     label: string;
     href: string;
   }>;
+  caseStudyLabels?: CaseStudyLabels;
   schemas?: {
     organization?: boolean;
   };
@@ -114,9 +121,6 @@ type ServicePageTemplateProps = {
   locale: Locale;
   page: ServicePageTemplateData;
 };
-
-const pendingAssetStatus = 'pending_real_technical_asset';
-const pendingProjectStatus = 'pending_project_proof';
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />;
@@ -153,16 +157,18 @@ function buildOrganizationSchema(locale: Locale, page: ServicePageTemplateData) 
   return buildSharedOrganizationSchema(locale, `${page.routes[locale]}#organization`);
 }
 
+function getCaseStudyLabels(page: ServicePageTemplateData): CaseStudyLabels {
+  return page.caseStudyLabels ?? {challenge: 'Challenge', result: 'Result', viewProject: 'View Project'};
+}
+
 export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
   const dir = getDirection(locale);
-  const hasTechnicalAssets = Boolean(page.technicalProof.assets?.length);
   const hasCaseStudies = Boolean(page.relatedCaseStudies.cases?.length);
-  const technicalAssets: ServiceTechnicalAsset[] = page.technicalProof.assets?.length
-    ? page.technicalProof.assets
-    : page.technicalProof.requiredVisuals.map((visual) => ({
-        title: visual,
-        assetStatus: 'pending'
-      }));
+  const labels = getCaseStudyLabels(page);
+
+  const hasRealTechnicalAssets = page.technicalProof.assets?.some((a) => a.image) ?? false;
+  const technicalAssetsWithDescriptions = page.technicalProof.assets?.filter((a) => a.image || a.description) ?? [];
+  const showTechnicalProofSection = hasRealTechnicalAssets || technicalAssetsWithDescriptions.length > 0;
 
   return (
     <article className="service-page-template" data-service-id={page.id} dir={dir}>
@@ -198,7 +204,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
 
           <div
             className="service-hero__visual"
-            data-asset-status={page.hero.visual ? 'available' : pendingAssetStatus}
+            data-asset-status={page.hero.visual ? 'available' : 'pending_real_technical_asset'}
           >
             {page.hero.visual ? (
               <Image
@@ -213,7 +219,6 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                 <span />
                 <span />
                 <span />
-                <em>{page.hero.visualDirection}</em>
               </div>
             )}
           </div>
@@ -275,45 +280,36 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
         </div>
       </section>
 
-      <section
-        className="service-section service-technical-proof"
-        data-section="technical_proof"
-        aria-labelledby="service-proof-title"
-      >
-        <div className="container-shell service-section__inner">
-          <header>
-            <h2 id="service-proof-title">{page.technicalProof.title}</h2>
-            <p>{page.technicalProof.description}</p>
-          </header>
-          <div className="service-proof-grid" data-asset-status={hasTechnicalAssets ? 'available' : pendingAssetStatus}>
-            {technicalAssets.map((asset) => (
-              <article
-                className="service-proof-card"
-                key={asset.title}
-                onClick={() => trackProofEvent('technical_proof_open', {component_id: page.id, diagram_type: asset.title})}
-              >
-                <div className="service-proof-card__preview">
+      {showTechnicalProofSection ? (
+        <section
+          className="service-section service-technical-proof"
+          data-section="technical_proof"
+          aria-labelledby="service-proof-title"
+        >
+          <div className="container-shell service-section__inner">
+            <header>
+              <h2 id="service-proof-title">{page.technicalProof.title}</h2>
+            </header>
+            <div className="service-proof-grid" data-asset-status={hasRealTechnicalAssets ? 'available' : 'engineering_cards'}>
+              {technicalAssetsWithDescriptions.map((asset) => (
+                <article
+                  className="service-proof-card"
+                  key={asset.title}
+                  onClick={() => trackProofEvent('technical_proof_open', {component_id: page.id, diagram_type: asset.title})}
+                >
                   {asset.image ? (
-                    <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 84vw, 30vw" />
-                  ) : (
-                    <div className="service-technical-placeholder" aria-label={asset.title} role="img">
-                      <span />
-                      <span />
-                      <span />
-                      <em>{asset.title}</em>
+                    <div className="service-proof-card__preview">
+                      <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 84vw, 30vw" />
                     </div>
-                  )}
-                </div>
-                <h3>{asset.title}</h3>
-                {asset.description ? <p>{asset.description}</p> : <p data-asset-status={pendingAssetStatus}>Pending real technical asset.</p>}
-                {/* track: technical_proof_open */}
-                {/* track: technical_proof_zoom */}
-                {/* track: diagram_zoom */}
-              </article>
-            ))}
+                  ) : null}
+                  <h3>{asset.title}</h3>
+                  {asset.description ? <p>{asset.description}</p> : null}
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section
         className="service-section service-section--light"
@@ -361,44 +357,38 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
           <header>
             <h2 id="service-cases-title">{page.relatedCaseStudies.title}</h2>
           </header>
-          <div className="service-case-grid" data-asset-status={hasCaseStudies ? 'available' : pendingProjectStatus}>
-            {hasCaseStudies ? (
-              page.relatedCaseStudies.cases?.map((project) => (
+          {hasCaseStudies ? (
+            <div className="service-case-grid" data-asset-status="available">
+              {page.relatedCaseStudies.cases?.map((project) => (
                 <article className="service-case-card" key={project.projectName}>
-                  <div className="service-case-card__media" data-asset-status={project.image ? 'available' : pendingProjectStatus}>
+                  <div className="service-case-card__media" data-asset-status={project.image ? 'available' : 'pending_project_proof'}>
                     {project.image ? (
-                      <Image src={project.image} alt={`${project.projectName} real project photography`} fill sizes="(max-width: 767px) 84vw, 30vw" />
+                      <Image src={project.image} alt={project.projectName} fill sizes="(max-width: 767px) 84vw, 30vw" />
                     ) : (
                       <div className="service-technical-placeholder" aria-label={project.projectName} role="img">
                         <span />
                         <span />
                         <span />
-                        <em>{project.projectName}</em>
                       </div>
                     )}
                   </div>
                   <h3>{project.projectName}</h3>
-                  <p>{project.location}</p>
+                  <p>{project.location}{project.areaM2 ? ` — ${project.areaM2}` : ''}</p>
                   <dl>
-                    <dt>Challenge</dt>
+                    <dt>{labels.challenge}</dt>
                     <dd>{project.challenge}</dd>
-                    <dt>Result</dt>
+                    <dt>{labels.result}</dt>
                     <dd>{project.measuredResult}</dd>
                   </dl>
-                  {/* track: related_case_study_click */}
                   {project.href ? (
                     <Link href={project.href} onClick={() => trackCaseStudyEvent('related_case_study_click', {component_id: page.id, case_study_name: project.projectName})}>
-                      {project.projectType ?? project.projectName}
+                      {labels.viewProject}
                     </Link>
                   ) : null}
                 </article>
-              ))
-            ) : (
-              <article className="service-card service-card--pending">
-                <p data-asset-status={pendingProjectStatus}>Pending verified related case studies for this service.</p>
-              </article>
-            )}
-          </div>
+              ))}
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -435,10 +425,8 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
             <Link href="/#rfq" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: `${page.id}_conversion_cta`})}>
               {page.conversionCta.button}
             </Link>
-            {/* track: whatsapp_click */}
-            {/* track: phone_click */}
             {page.conversionCta.secondaryButton ? (
-              <Link href="/contact#rfq-form" className="button-secondary" onClick={() => trackEvent('service_page_click', {component_id: `${page.id}_conversion_cta`, cta_text: page.conversionCta.secondaryButton})}>
+              <Link href="#service-related-case-studies" className="button-secondary" onClick={() => trackEvent('service_page_click', {component_id: `${page.id}_conversion_cta`, cta_text: page.conversionCta.secondaryButton})}>
                 {page.conversionCta.secondaryButton}
               </Link>
             ) : null}

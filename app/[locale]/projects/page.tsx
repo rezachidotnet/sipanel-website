@@ -7,7 +7,6 @@ import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 import {CatalogDownloadButton} from '@/components/home/catalog-download-button';
-import {listCaseStudySlugs} from '@/lib/case-studies/case-study-pages';
 import armyHospitalCard from '@/assets/projects/army-hospital/photos/army-hospital-card.webp';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
 import bazargolCard from '@/assets/projects/bazargol/photos/bazargol-card.webp';
@@ -103,8 +102,6 @@ const copy: Record<
     };
     primaryCta: string;
     costReviewCta: string;
-    openCaseStudy: string;
-    detailComingSoon: string;
     conversionTitle: string;
     conversionText: string;
     home: string;
@@ -137,8 +134,6 @@ const copy: Record<
     },
     primaryCta: 'Get Free Engineering Review',
     costReviewCta: 'Download Technical Catalog',
-    openCaseStudy: 'View Case Study',
-    detailComingSoon: 'Project details coming soon',
     conversionTitle: 'Need this level of control for your project?',
     conversionText: 'Send the project type, location, approximate area, drawings if available, and the main risk you want SIPANEL to review.',
     home: 'Home'
@@ -170,8 +165,6 @@ const copy: Record<
     },
     primaryCta: 'دریافت بررسی مهندسی رایگان',
     costReviewCta: 'دانلود کاتالوگ فنی',
-    openCaseStudy: 'مشاهده جزئیات پروژه',
-    detailComingSoon: 'جزئیات پروژه به‌زودی',
     conversionTitle: 'برای انتخاب پوشش مناسب پروژه، ابتدا ریسک‌های فنی را بررسی کنید.',
     conversionText:
       'تیم SIPANEL می‌تواند بر اساس نقشه‌ها، موقعیت پروژه و نوع سازه، پیشنهاد اولیه فنی و مسیر اجرای مناسب را بررسی کند.',
@@ -204,8 +197,6 @@ const copy: Record<
     },
     primaryCta: 'Get Free Engineering Review',
     costReviewCta: 'تحميل الكتالوج الفني',
-    openCaseStudy: 'View Case Study',
-    detailComingSoon: 'Project details coming soon',
     conversionTitle: 'هل تحتاج هذا المستوى من التحكم لمشروعك؟',
     conversionText: 'أرسل نوع المشروع والموقع والمساحة التقريبية والرسومات إن وجدت والمخاطر الأساسية التي تريد من SIPANEL مراجعتها.',
     home: 'الرئيسية'
@@ -237,8 +228,6 @@ const copy: Record<
     },
     primaryCta: 'Get Free Engineering Review',
     costReviewCta: 'Скачать технический каталог',
-    openCaseStudy: 'View Case Study',
-    detailComingSoon: 'Project details coming soon',
     conversionTitle: 'Нужен такой уровень контроля для вашего проекта?',
     conversionText: 'Отправьте тип проекта, локацию, примерную площадь, чертежи при наличии и главный риск, который SIPANEL должен проверить.',
     home: 'Главная'
@@ -874,7 +863,6 @@ const projectCaseStudies: ProjectCaseStudy[] = [
 ];
 
 const rfqHref = '/contact#rfq-form';
-const caseStudyDetailSlugs = new Set(listCaseStudySlugs());
 
 const localizedProjectCaseStudies: Partial<Record<Locale, Record<string, LocalizedProjectCaseStudy>>> = {
   fa: {
@@ -1395,10 +1383,6 @@ function getFilterOptions(locale: Locale) {
   return locale === 'fa' ? filterOptions.filter((filter) => filter.id !== 'envelope') : filterOptions;
 }
 
-function hasCaseStudyDetailPage(slug: string) {
-  return caseStudyDetailSlugs.has(slug);
-}
-
 function formatProjectArea(area: string, locale: Locale) {
   if (locale !== 'fa') {
     return area;
@@ -1528,18 +1512,6 @@ export default async function ProjectsOverviewPage({params}: Props) {
                         </ul>
                       </div>
 
-                      <div className="projects-index-card__footer">
-                        {hasCaseStudyDetailPage(project.slug) ? (
-                          /* track: case_study_click */
-                          <Link href={`/projects/${project.slug}`} className="projects-index-card__cta">
-                            {content.openCaseStudy}
-                          </Link>
-                        ) : (
-                          <span className="projects-index-card__cta projects-index-card__cta--disabled" aria-disabled="true">
-                            {content.detailComingSoon}
-                          </span>
-                        )}
-                      </div>
                     </div>
                   </article>
                 );
@@ -1607,18 +1579,6 @@ export default async function ProjectsOverviewPage({params}: Props) {
                       </div>
                     ) : null}
 
-                    <div className="projects-index-card__footer">
-                      {hasCaseStudyDetailPage(project.slug) ? (
-                        /* track: case_study_click */
-                        <Link href={`/projects/${project.slug}`} className="projects-index-card__cta">
-                          {content.openCaseStudy}
-                        </Link>
-                      ) : (
-                        <span className="projects-index-card__cta projects-index-card__cta--disabled" aria-disabled="true">
-                          {content.detailComingSoon}
-                        </span>
-                      )}
-                    </div>
                   </div>
                 </article>
               );

@@ -140,12 +140,25 @@ function getTemplateLabels(locale: Locale) {
       fa: 'تماس تلفنی',
       ar: 'اتصال هاتفي',
       ru: 'Позвонить'
+    }[locale],
+    caseStudy: {
+      en: 'Case Study',
+      fa: 'مطالعه موردی',
+      ar: 'دراسة حالة',
+      ru: 'Кейс-стади'
+    }[locale],
+    relatedCaseStudies: {
+      en: 'Related Case Studies',
+      fa: 'مطالعه موردی مرتبط',
+      ar: 'دراسات حالة ذات صلة',
+      ru: 'Связанные кейсы'
     }[locale]
   };
 }
 
 export function CaseStudyPageTemplate({locale, page}: Props) {
   const dir = getDirection(locale);
+  const isCaseStudyOnly = page.detailLayout === 'case-study-only';
   const content = page.localeContent[locale];
   const labels = getTemplateLabels(locale);
   const galleryItems = useMemo(
@@ -165,6 +178,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
   const previousFocusRef = useRef<HTMLElement | null>(null);
   const activeAsset = activeAssetIndex !== null ? galleryItems[activeAssetIndex] : null;
   const hasImage = Boolean(activeAsset?.image);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
   const phoneHref = buildPhoneHref();
   const whatsappHref = buildWhatsappHref();
 
@@ -226,6 +240,28 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
     };
   }, [activeAssetIndex]);
 
+  useEffect(() => {
+    const video = heroVideoRef.current;
+
+    if (!video) {
+      return;
+    }
+
+    const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function apply() {
+      if (mql.matches) {
+        video?.pause();
+      } else {
+        video?.play().catch(() => {});
+      }
+    }
+
+    apply();
+    mql.addEventListener('change', apply);
+    return () => mql.removeEventListener('change', apply);
+  }, []);
+
   return (
     <article className="case-study-page" data-case-study-page="" dir={dir}>
       <SchemaPlaceholder schema={buildCaseStudyArticleSchema(locale, page)} />
@@ -268,7 +304,26 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
           </div>
 
           <div className="case-study-hero__visual">
-            {content.hero.heroImage ? (
+            {content.hero.heroVideo ? (
+              <div className="case-study-hero__video-wrap">
+                <video
+                  ref={heroVideoRef}
+                  className="case-study-hero__video"
+                  src={content.hero.heroVideo.src}
+                  poster={content.hero.heroVideo.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={content.hero.heroVideo.title}
+                  title={content.hero.heroVideo.title}
+                />
+                <span className="case-study-hero__video-label">
+                  {{en: 'Project Video', fa: 'ویدئوی پروژه', ar: 'فيديو المشروع', ru: 'Видео проекта'}[locale]}
+                </span>
+              </div>
+            ) : content.hero.heroImage ? (
               <Image
                 src={content.hero.heroImage}
                 alt={content.hero.heroAlt}
@@ -287,6 +342,14 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
           </div>
         </div>
       </section>
+
+      {isCaseStudyOnly ? (
+        <div className="case-study-group-heading" data-section="case_study_group">
+          <div className="container-shell">
+            <h2 id="case-study-group-title">{labels.caseStudy}</h2>
+          </div>
+        </div>
+      ) : null}
 
       <section className="case-study-section case-study-section--light" data-section="project_snapshot" aria-labelledby="case-study-snapshot-title">
         <div className="container-shell case-study-section__inner">
@@ -365,48 +428,50 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
-      <section className="case-study-section case-study-section--light" data-section="technical_proof_gallery" aria-labelledby="case-study-proof-title">
-        <div className="container-shell case-study-section__inner">
-          <header className="case-study-section__header">
-            <h2 id="case-study-proof-title">{content.technicalProofGallery.title}</h2>
-            <p>{content.technicalProofGallery.pendingLabel}</p>
-          </header>
-          <div className="case-study-gallery" role="list" aria-label={content.technicalProofGallery.title}>
-            {galleryItems.map((asset, index) => (
-              <button
-                key={asset.title}
-                className={asset.image ? 'case-study-gallery-card' : 'case-study-gallery-card is-pending'}
-                type="button"
-                role="listitem"
-                aria-label={`${content.technicalProofGallery.openLabel}: ${asset.title}`}
-                onClick={() => {
-                  previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-                  setActiveAssetIndex(index);
-                }}
-              >
-                {/* track: technical_proof_open */}
-                <div className="case-study-gallery-card__media">
-                  {asset.image ? (
-                    <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 82vw, 30vw" />
-                  ) : (
-                    <div className="case-study-placeholder" aria-hidden="true">
-                      <span />
-                      <span />
-                      <span />
-                      <em>{asset.title}</em>
-                    </div>
-                  )}
-                </div>
-                <div className="case-study-gallery-card__content">
-                  <span>{asset.assetType ?? 'project_image'}</span>
-                  <h3>{asset.title}</h3>
-                  <p>{asset.description ?? content.technicalProofGallery.pendingLabel}</p>
-                </div>
-              </button>
-            ))}
+      {!isCaseStudyOnly ? (
+        <section className="case-study-section case-study-section--light" data-section="technical_proof_gallery" aria-labelledby="case-study-proof-title">
+          <div className="container-shell case-study-section__inner">
+            <header className="case-study-section__header">
+              <h2 id="case-study-proof-title">{content.technicalProofGallery.title}</h2>
+              <p>{content.technicalProofGallery.pendingLabel}</p>
+            </header>
+            <div className="case-study-gallery" role="list" aria-label={content.technicalProofGallery.title}>
+              {galleryItems.map((asset, index) => (
+                <button
+                  key={asset.title}
+                  className={asset.image ? 'case-study-gallery-card' : 'case-study-gallery-card is-pending'}
+                  type="button"
+                  role="listitem"
+                  aria-label={`${content.technicalProofGallery.openLabel}: ${asset.title}`}
+                  onClick={() => {
+                    previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                    setActiveAssetIndex(index);
+                  }}
+                >
+                  {/* track: technical_proof_open */}
+                  <div className="case-study-gallery-card__media">
+                    {asset.image ? (
+                      <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 82vw, 30vw" />
+                    ) : (
+                      <div className="case-study-placeholder" aria-hidden="true">
+                        <span />
+                        <span />
+                        <span />
+                        <em>{asset.title}</em>
+                      </div>
+                    )}
+                  </div>
+                  <div className="case-study-gallery-card__content">
+                    <span>{asset.assetType ?? 'project_image'}</span>
+                    <h3>{asset.title}</h3>
+                    <p>{asset.description ?? content.technicalProofGallery.pendingLabel}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="case-study-section" data-section="measured_result_section" aria-labelledby="case-study-result-title">
         <div className="container-shell case-study-section__inner">
@@ -441,30 +506,32 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
-      <section className="case-study-section" data-section="related_services" aria-labelledby="case-study-services-title">
-        <div className="container-shell case-study-section__inner">
-          <header className="case-study-section__header">
-            <h2 id="case-study-services-title">{content.relatedServices.title}</h2>
-          </header>
-          <div className="service-card-grid case-study-service-grid">
-            {content.relatedServices.links.map((service) => (
-              <article className="service-card case-study-service-card" key={service.href}>
-                <h3>{service.title}</h3>
-                {service.description ? <p>{service.description}</p> : null}
-                {/* track: related_service_click */}
-                <Link href={service.href} className="case-study-service-card__link">
-                  {labels.viewSystem}
-                </Link>
-              </article>
-            ))}
+      {!isCaseStudyOnly ? (
+        <section className="case-study-section" data-section="related_services" aria-labelledby="case-study-services-title">
+          <div className="container-shell case-study-section__inner">
+            <header className="case-study-section__header">
+              <h2 id="case-study-services-title">{content.relatedServices.title}</h2>
+            </header>
+            <div className="service-card-grid case-study-service-grid">
+              {content.relatedServices.links.map((service) => (
+                <article className="service-card case-study-service-card" key={service.href}>
+                  <h3>{service.title}</h3>
+                  {service.description ? <p>{service.description}</p> : null}
+                  {/* track: related_service_click */}
+                  <Link href={service.href} className="case-study-service-card__link">
+                    {labels.viewSystem}
+                  </Link>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="case-study-section case-study-section--light" data-section="related_case_studies" aria-labelledby="case-study-related-title">
         <div className="container-shell case-study-section__inner">
           <header className="case-study-section__header">
-            <h2 id="case-study-related-title">{content.relatedCaseStudies.title}</h2>
+            <h2 id="case-study-related-title">{isCaseStudyOnly ? labels.relatedCaseStudies : content.relatedCaseStudies.title}</h2>
           </header>
           <div className="case-study-related-grid">
             {relatedStudies.map((study, index) => (
@@ -541,7 +608,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
-      {activeAsset ? (
+      {activeAsset && !isCaseStudyOnly ? (
         <div className="case-study-gallery-modal" role="dialog" aria-modal="true" aria-label={content.technicalProofGallery.title}>
           <div className="case-study-gallery-modal__backdrop" onClick={closeGalleryModal} aria-hidden="true" />
           <div className="case-study-gallery-modal__panel">

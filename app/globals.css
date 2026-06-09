@@ -6103,6 +6103,53 @@ button[aria-disabled='true'] {
   min-height: 280px;
 }
 
+.case-study-group-heading {
+  background: var(--color-white);
+  padding-block: 48px 0;
+}
+
+.case-study-group-heading h2 {
+  margin: 0;
+  border-block-end: 2px solid var(--color-orange-primary);
+  color: var(--color-text-primary);
+  padding-block-end: 16px;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.case-study-hero__video-wrap {
+  display: grid;
+  gap: 8px;
+}
+
+.case-study-hero__video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-card);
+  background: var(--color-black-primary);
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study-hero__video {
+    animation: none;
+  }
+
+  .case-study-hero__video[autoplay] {
+    content-visibility: auto;
+  }
+}
+
+.case-study-hero__video-label {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .case-study-section {
   background: var(--color-white);
   padding-block: 56px;

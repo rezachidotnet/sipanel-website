@@ -123,6 +123,11 @@ export type CaseStudyLocaleContent = {
     trustMicrocopy: string;
     heroAlt: string;
     heroImage?: StaticImageData;
+    heroVideo?: {
+      src: string;
+      poster: string;
+      title: string;
+    };
   };
   projectSnapshot: {
     title: string;
@@ -199,6 +204,7 @@ export type CaseStudyLocaleContent = {
 export type CaseStudyPageData = {
   slug: string;
   routes: Record<Locale, string>;
+  detailLayout?: 'full' | 'case-study-only';
   localeContent: Record<Locale, CaseStudyLocaleContent>;
 };
 
@@ -208,6 +214,7 @@ type LocalizedText = Record<Locale, string>;
 
 type InitialCaseStudyConfig = {
   slug: string;
+  detailLayout?: 'full' | 'case-study-only';
   projectName: LocalizedText;
   projectType: LocalizedText;
   mainService: LocalizedText;
@@ -222,6 +229,11 @@ type InitialCaseStudyConfig = {
   riskPrevented?: string[];
   cardImage?: StaticImageData;
   heroImage?: StaticImageData;
+  heroVideo?: {
+    src: string;
+    poster: string;
+    title: LocalizedText;
+  };
   secondaryService?: {
     title: LocalizedText;
     href: string;
@@ -265,6 +277,7 @@ const claddingService: LocalizedText = {
 const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
     slug: 'army-hospital',
+    detailLayout: 'case-study-only',
     projectName: {
       en: '32-Bed Military Hospital',
       fa: 'بیمارستان ۳۲ تختخوابی ارتش',
@@ -287,6 +300,16 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     executionDetail: 'Execution followed a compressed 50-day schedule covering excavation, construction, sandwich panel cladding, internal partitioning, and installation to operational readiness.',
     measuredResult: 'A fully operational 32-bed military hospital was delivered from excavation to readiness in less than 50 days during the COVID-19 emergency.',
     riskPrevented: ['Schedule overrun beyond 50-day target', 'Coordination failures across EPC disciplines', 'Envelope weather protection delays', 'Internal partition installation bottlenecks'],
+    heroVideo: {
+      src: '/videos/projects/army-hospital/army-hospital-case-study.mp4',
+      poster: '/videos/projects/army-hospital/army-hospital-case-study-poster.jpg',
+      title: {
+        en: 'Army Hospital Project Video',
+        fa: 'ویدئوی پروژه بیمارستان ارتش',
+        ar: 'فيديو مشروع مستشفى الجيش',
+        ru: 'Видео проекта военного госпиталя'
+      }
+    },
     resourceTitle: {
       en: 'Panel Selection Guide',
       fa: 'راهنمای انتخاب پانل',
@@ -1152,6 +1175,7 @@ function buildInitialCaseStudyPage(config: InitialCaseStudyConfig): CaseStudyPag
   return {
     slug: config.slug,
     routes: buildLocalizedCaseStudyRoutes(config.slug),
+    detailLayout: config.detailLayout,
     localeContent: Object.fromEntries(
       locales.map((locale) => [locale, buildInitialLocaleContent(config, locale)])
     ) as Record<Locale, CaseStudyLocaleContent>
@@ -1198,7 +1222,12 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       secondaryCta: caseStudyCopy[locale].secondaryCta,
       trustMicrocopy: caseStudyCopy[locale].trustMicrocopy,
       heroAlt: caseStudyCopy[locale].heroAlt(projectName),
-      heroImage: config.heroImage
+      heroImage: config.heroImage,
+      heroVideo: config.heroVideo ? {
+        src: config.heroVideo.src,
+        poster: config.heroVideo.poster,
+        title: config.heroVideo.title[locale]
+      } : undefined
     },
     projectSnapshot: {
       title: caseStudyCopy[locale].snapshotTitle,
