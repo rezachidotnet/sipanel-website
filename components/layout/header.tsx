@@ -1,15 +1,22 @@
 'use client';
 
 import Image from 'next/image';
-import {useRef, useState} from 'react';
+import {useRef, useState, useEffect, useCallback} from 'react';
 import {useTranslations} from 'next-intl';
 import logo from '@/assets/brand/logos/logo.png';
 import {Link, locales, usePathname, type Locale} from '@/i18n/routing';
 import {LanguageSwitcher} from '@/components/localization/language-switcher';
 import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
-import {trackCatalogEvent} from '@/lib/analytics/events';
+import {trackCatalogEvent, trackLanguageChange, trackEvent} from '@/lib/analytics/events';
 
-const navKeys = ['home', 'systems', 'projects', 'process', 'resources', 'about', 'contact'] as const;
+const localeLabels: Record<Locale, {short: string; full: string}> = {
+  fa: {short: 'FA', full: 'فارسی'},
+  en: {short: 'EN', full: 'English'},
+  ar: {short: 'AR', full: 'العربية'},
+  ru: {short: 'RU', full: 'Русский'},
+};
+
+const navKeys = ['home', 'systems', 'projects', 'resources', 'process', 'about', 'contact'] as const;
 const navHref: Record<(typeof navKeys)[number], string> = {
   home: '/',
   systems: '/systems',
@@ -63,7 +70,36 @@ export function Header({locale}: Props) {
   const header = useTranslations('header');
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+  const langDropdownRef = useRef<HTMLDivElement>(null);
   const [catalogOpen, setCatalogOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', onScroll, {passive: true});
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!langOpen) return;
+    function onClickOutside(e: MouseEvent) {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener('click', onClickOutside, true);
+    return () => document.removeEventListener('click', onClickOutside, true);
+  }, [langOpen]);
+
+  const handleLangKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setLangOpen(false);
+    }
+  }, []);
 
   function closeMobileMenu() {
     if (mobileMenuRef.current) {
@@ -78,15 +114,15 @@ export function Header({locale}: Props) {
   }
 
   return (
-    <header className="site-header">
+    <header className={scrolled ? 'site-header is-scrolled' : 'site-header'}>
       <div className="main-header">
         <div className="container-shell main-header__inner">
           <Link href="/" className="brand-link" aria-label="SIPANEL home">
             <Image
               src={logo}
               alt="SIPANEL"
-              width={220}
-              height={110}
+              width={1547}
+              height={330}
               priority
               className="brand-link__logo"
             />
@@ -116,8 +152,44 @@ export function Header({locale}: Props) {
               {header('cta')}
             </button>
             {/* track: language_switcher_open, language_change */}
-            <div className="desktop-language">
-              <LanguageSwitcher activeLocale={locale} />
+            <div className="desktop-language-dropdown" ref={langDropdownRef} onKeyDown={handleLangKeyDown}>
+              <button
+                type="button"
+                className="lang-trigger"
+                aria-expanded={langOpen}
+                aria-haspopup="true"
+                aria-label={header('selectLanguage')}
+                onClick={() => {
+                  setLangOpen((prev) => !prev);
+                  trackEvent('language_switcher_open', {component_id: 'language_dropdown'});
+                }}
+              >
+                {localeLabels[locale].short}
+                <svg className="lang-trigger__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                  <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              {langOpen && (
+                <nav className="lang-dropdown" aria-label={header('selectLanguage')}>
+                  {locales.map((loc) => (
+                    <Link
+                      key={loc}
+                      href={pathname}
+                      locale={loc}
+                      aria-current={loc === locale ? 'true' : undefined}
+                      className={loc === locale ? 'lang-dropdown__item is-active' : 'lang-dropdown__item'}
+                      onClick={() => {
+                        setLangOpen(false);
+                        if (loc !== locale) {
+                          trackLanguageChange(locale, loc);
+                        }
+                      }}
+                    >
+                      {localeLabels[loc].full}
+                    </Link>
+                  ))}
+                </nav>
+              )}
             </div>
             <details className="mobile-menu" ref={mobileMenuRef}>
               {/* track: mobile_menu_open */}

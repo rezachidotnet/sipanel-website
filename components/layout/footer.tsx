@@ -32,7 +32,7 @@ export function Footer() {
       <div className="container-shell site-footer__inner">
         <div className="site-footer__brand">
           <Link href="/" className="footer-logo" aria-label="SIPANEL home">
-            <Image src={logo} alt="SIPANEL" width={190} height={95} className="footer-logo__image" />
+            <Image src={logo} alt="SIPANEL" width={1547} height={330} className="footer-logo__image" />
           </Link>
           <p className="site-footer__slogan">ENGINEERING POWER. CONTROLLED EXECUTION.</p>
           <p className="site-footer__message">PRECISE DESIGN | SMART PROCUREMENT | ENGINEERED INSTALLATION</p>
