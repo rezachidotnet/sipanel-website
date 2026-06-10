@@ -25,31 +25,42 @@ function SchemaPlaceholder({schema}: {schema: unknown}) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />;
 }
 
-function LinkedPersianText({text}: {text: string}) {
-  const phrase = 'فضاسازه نقش جهان';
-  const parts = text.split(phrase);
+const linkedPhrases = [
+  {phrase: 'فضاسازه نقش جهان', href: 'https://www.fazasazeh.ir'},
+  {phrase: 'Fazasazeh Naghsh-e-Jahan', href: 'https://www.fazasazeh.ir'},
+  {phrase: 'Global Innovative Co.', href: 'https://spaceframeco.com'},
+  {phrase: 'spaceframeco.com', href: 'https://spaceframeco.com'}
+];
 
-  if (parts.length === 1) {
+function LinkedText({text}: {text: string}) {
+  const matches = linkedPhrases.filter((p) => text.includes(p.phrase));
+
+  if (matches.length === 0) {
     return text;
   }
 
-  return parts.map((part, index) => (
-    <span key={`${part}-${index}`}>
-      {part}
-      {index < parts.length - 1 ? (
-        <a className="about-inline-link" href="https://www.fazasazeh.ir" target="_blank" rel="noopener noreferrer">
-          {phrase}
+  const pattern = new RegExp(`(${matches.map((m) => m.phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`);
+  const segments = text.split(pattern);
+
+  return segments.map((segment, index) => {
+    const match = matches.find((m) => m.phrase === segment);
+
+    if (match) {
+      return (
+        <a key={index} className="about-inline-link" href={match.href} target="_blank" rel="noopener noreferrer">
+          {segment}
         </a>
-      ) : null}
-    </span>
-  ));
+      );
+    }
+
+    return <span key={index}>{segment}</span>;
+  });
 }
 
 function HeritageHeroSection({content}: SectionProps) {
   const heritageParagraphs = content.companyStory.paragraphs ?? [];
   const hasHeritageStory = heritageParagraphs.length > 0;
-  const supportingText =
-    'سی‌پانل با تکیه بر تجربه اجرایی مدیران فضاسازه نقش جهان، راهکارهای مهندسی‌شده پوشش صنعتی را برای کاهش ریسک اجرا، کنترل کیفیت و بهینه‌سازی عملکرد پروژه‌ها توسعه داده است.';
+  const supportingText = content.hero.subheadline;
 
   return (
     <section className="about-section about-section--heritage about-heritage-hero" data-section="heritage_hero" aria-labelledby="about-page-title">
@@ -60,20 +71,22 @@ function HeritageHeroSection({content}: SectionProps) {
             {hasHeritageStory ? content.companyStory.title : content.hero.h1}
           </h1>
           <p className="about-story__intro">
-            {hasHeritageStory ? <LinkedPersianText text={supportingText} /> : content.hero.subheadline}
+            {hasHeritageStory ? <LinkedText text={supportingText} /> : content.hero.subheadline}
           </p>
           <Link href="/contact" className="button-primary about-story__cta">
             {content.hero.primaryCta}
           </Link>
-          <p className={hasHeritageStory ? 'about-story__kicker' : 'about-story__lead'} id="about-story-title">
-            {hasHeritageStory ? <LinkedPersianText text={content.companyStory.lead} /> : content.companyStory.lead}
-          </p>
+          {content.companyStory.lead ? (
+            <p className={hasHeritageStory ? 'about-story__kicker' : 'about-story__lead'} id="about-story-title">
+              {hasHeritageStory ? <LinkedText text={content.companyStory.lead} /> : content.companyStory.lead}
+            </p>
+          ) : null}
         </div>
 
         <div className="about-story__visual">
           <div className="about-story__visual-note">
             <strong>SIPANEL</strong>
-            <p>{content.hero.trustMicrocopy}</p>
+            <p><LinkedText text={content.hero.trustMicrocopy} /></p>
           </div>
         </div>
 
@@ -82,7 +95,7 @@ function HeritageHeroSection({content}: SectionProps) {
             <div className="about-story__paragraphs">
               {heritageParagraphs.map((paragraph) => (
                 <p key={paragraph}>
-                  <LinkedPersianText text={paragraph} />
+                  <LinkedText text={paragraph} />
                 </p>
               ))}
             </div>
@@ -104,7 +117,7 @@ function HeritageHeroSection({content}: SectionProps) {
                   <span>{item.label}</span>
                   <h3>{item.title}</h3>
                   <p>
-                    <LinkedPersianText text={item.description} />
+                    <LinkedText text={item.description} />
                   </p>
                 </article>
               ))}

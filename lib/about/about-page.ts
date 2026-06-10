@@ -98,10 +98,10 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'execu
       eyebrow: 'About SIPANEL',
       h1: 'Engineering-Controlled Industrial Envelope Systems.',
       subheadline:
-        'SIPANEL helps industrial projects reduce leakage risk, material waste, coordination errors, and execution uncertainty through engineering review, smart procurement, and controlled installation.',
+        'SIPANEL was developed based on the executive experience of Fazasazeh Naghsh-e-Jahan managers, delivering engineered industrial envelope solutions to reduce execution risk, control quality, and optimize project performance.',
       primaryCta: 'Request Technical Consultation',
       secondaryCta: 'Explore Systems',
-      trustMicrocopy: 'Built around industrial execution control, not just material supply.',
+      trustMicrocopy: 'Built on the engineering heritage of Fazasazeh Naghsh-e-Jahan, operating internationally through Global Innovative Co.',
       visualAlt: 'Industrial SIPANEL project collage'
     },
     conversionCta: {
@@ -128,10 +128,10 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'execu
       eyebrow: 'درباره SIPANEL',
       h1: 'درباره SIPANEL',
       subheadline:
-        'SIPANEL با بازبینی مهندسی، تامین هوشمند و نصب کنترل‌شده به پروژه‌های صنعتی کمک می‌کند تا ریسک نشتی، پرت مصالح، خطاهای هماهنگی و عدم‌قطعیت اجرا را کاهش دهند.',
+        'سی‌پانل با تکیه بر تجربه اجرایی مدیران فضاسازه نقش جهان، راهکارهای مهندسی‌شده پوشش صنعتی را برای کاهش ریسک اجرا، کنترل کیفیت و بهینه‌سازی عملکرد پروژه‌ها توسعه داده است.',
       primaryCta: 'درخواست مشاوره فنی',
       secondaryCta: 'مشاهده سیستم‌ها',
-      trustMicrocopy: 'بر پایه کنترل اجرای صنعتی، نه فقط تامین مصالح.',
+      trustMicrocopy: 'بر پایه تجربه اجرایی مدیران فضاسازه نقش جهان',
       visualAlt: 'کلاژ پروژه صنعتی SIPANEL'
     },
     conversionCta: {
@@ -161,7 +161,7 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'execu
         'تساعد SIPANEL المشاريع الصناعية على تقليل خطر التسرب، وهدر المواد، وأخطاء التنسيق، وعدم اليقين في التنفيذ عبر المراجعة الهندسية، والمشتريات الذكية، والتركيب المنضبط.',
       primaryCta: 'طلب استشارة فنية',
       secondaryCta: 'عرض الأنظمة',
-      trustMicrocopy: 'مبنية على ضبط التنفيذ الصناعي، وليس مجرد توريد المواد.',
+      trustMicrocopy: 'تستند إلى الخبرة الهندسية لشركة Fazasazeh Naghsh-e-Jahan وتدير عملياتها الدولية من خلال Global Innovative Co.',
       visualAlt: 'كولاج مشروع صناعي من SIPANEL'
     },
     conversionCta: {
@@ -191,7 +191,7 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'execu
         'SIPANEL помогает промышленным проектам снижать риск протечек, перерасхода материалов, ошибок координации и неопределённости исполнения через инженерную проверку, умные закупки и контролируемый монтаж.',
       primaryCta: 'Запросить техническую консультацию',
       secondaryCta: 'Посмотреть системы',
-      trustMicrocopy: 'Основано на контроле промышленного исполнения, а не только на поставке материалов.',
+      trustMicrocopy: 'Создана на основе инженерного опыта Fazasazeh Naghsh-e-Jahan, международная деятельность через Global Innovative Co.',
       visualAlt: 'Коллаж промышленного проекта SIPANEL'
     },
     conversionCta: {
@@ -211,29 +211,50 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'execu
 
 const companyStory = {
   en: {
-    title: 'Why SIPANEL Exists',
-    lead:
-      'Industrial envelope problems usually begin long before installation: unclear drawings, weak system selection, poor sequencing, and unplanned coordination.',
+    title: 'The Experience That Shaped SIPANEL',
+    lead: '',
+    paragraphs: [
+      'Sian Sanat Iranian was founded in 2015, drawing on the technical expertise and hands-on experience of the management team at Fazasazeh Naghsh-e-Jahan. With Fazasazeh focused on constructing industrial halls using space frame structural systems, the need for specialized envelope solutions led to the creation of the SIPANEL brand.',
+      'Technical experience in designing, extracting and preparing shop drawings, combined with involvement in projects with diverse architectures and applications, has given us deep expertise in designing and executing industrial envelope systems. In addition, continuous multi-year collaboration with domestic and international manufacturers has provided us with precise knowledge of the quality, performance and capabilities of different materials, allowing us to recommend the most suitable envelope system for each project.',
+      'Executing hundreds of industrial projects across Iran and neighboring countries, under diverse climatic conditions, has generated invaluable experience. SIPANEL is built on the engineering heritage of Fazasazeh Naghsh-e-Jahan and conducts its international operations through Global Innovative Co.'
+    ],
     points: [
       {
-        title: 'Problem in the market',
+        title: 'Executive heritage',
         description:
-          'Projects often start with materials, not with a system review. That creates leakage risk, waste, and execution drift.'
+          'Sian Sanat Iranian was established building on the technical expertise of the Fazasazeh Naghsh-e-Jahan management team.'
       },
       {
-        title: 'Why execution fails',
+        title: 'Industrial envelope expertise',
         description:
-          'When drawings, drainage logic, accessories, and site sequencing are not aligned, site teams spend time correcting avoidable issues.'
+          'Experience in design, shop drawing preparation, and execution across diverse projects forms the foundation of SIPANEL\'s specialization.'
       },
       {
-        title: 'Why engineering matters',
+        title: 'Material knowledge',
         description:
-          'Engineering review reduces uncertainty before procurement and installation, when changes are still inexpensive to make.'
+          'Continuous collaboration with domestic and international manufacturers enables recommending the optimal envelope system for each project.'
       },
       {
-        title: 'How SIPANEL approaches projects',
+        title: 'Controlled execution',
         description:
-          'SIPANEL works from system review to controlled installation so the project stays coordinated, measurable, and technically defensible.'
+          'Experience across various climates and project types has shaped a design, procurement, and controlled execution approach.'
+      }
+    ],
+    heritageItems: [
+      {
+        label: '2015',
+        title: 'Sian Sanat Iranian Founded',
+        description: 'Established building on the technical expertise of Fazasazeh Naghsh-e-Jahan managers.'
+      },
+      {
+        label: 'Executive Roots',
+        title: 'Industrial Hall Construction',
+        description: 'Recognizing project needs for specialized envelope solutions alongside space frame systems.'
+      },
+      {
+        label: 'Specialization Path',
+        title: 'SIPANEL',
+        description: 'Focused on design, procurement, and controlled execution of industrial envelope systems.'
       }
     ],
     visual: {
@@ -243,7 +264,7 @@ const companyStory = {
   },
   fa: {
     title: 'تجربه‌ای که سی‌پانل را شکل داد',
-    lead: 'بر پایه تجربه اجرایی مدیران فضاسازه نقش جهان',
+    lead: '',
     paragraphs: [
       'شرکت سیان صنعت ایرانیان در سال ۱۳۹۴ با اتکا به تجربه و دانش فنی جمعی از مدیران شرکت فضاسازه نقش جهان تأسیس شد. با توجه به تمرکز فضاسازه نقش جهان بر احداث سالن‌های صنعتی با سیستم سازه فضایی، نیاز پروژه‌ها به راهکارهای تخصصی پوشش، زمینه شکل‌گیری برند SIPANEL را فراهم کرد.',
       'تجربه فنی در طراحی، استخراج و تهیه نقشه‌های شاپ، همراه با حضور در پروژه‌هایی با معماری‌ها و کاربری‌های متنوع، ما را در طراحی و اجرای انواع سیستم‌های پوشانه صنعتی به تخصصی عمیق رسانده است. از سوی دیگر، همکاری مستمر و چندین‌ساله با تولیدکنندگان داخلی و خارجی، شناخت دقیقی از کیفیت، عملکرد و قابلیت‌های متریال‌های مختلف در اختیار ما قرار داده تا بتوانیم مناسب‌ترین سیستم پوشش را متناسب با نیاز هر پروژه پیشنهاد دهیم.',
@@ -290,29 +311,46 @@ const companyStory = {
     }
   },
   ar: {
-    title: 'لماذا وُجدت SIPANEL',
-    lead:
-      'غالبًا ما تبدأ مشكلات الغلاف الصناعي قبل التركيب بفترة طويلة: رسومات غير واضحة، اختيار نظام ضعيف، وتسلسل غير منظم، وتنسيق غير مخطط.',
+    title: 'التجربة التي شكّلت SIPANEL',
+    lead: '',
+    paragraphs: [
+      'تأسست شركة سيان صنعت إيرانيان عام ٢٠١٥ بالاعتماد على الخبرة الفنية والتنفيذية لفريق إدارة شركة Fazasazeh Naghsh-e-Jahan. مع تركيز فضاسازه على بناء القاعات الصناعية باستخدام أنظمة الهياكل الفراغية، أدت الحاجة إلى حلول غلاف متخصصة إلى إنشاء علامة SIPANEL التجارية.',
+      'الخبرة الفنية في التصميم وإعداد رسومات الشوب، إلى جانب المشاركة في مشاريع ذات تصاميم واستخدامات متنوعة، منحتنا تخصصاً عميقاً في تصميم وتنفيذ أنظمة الغلاف الصناعي.',
+      'تنفيذ مئات المشاريع الصناعية في مختلف أنحاء إيران والدول المجاورة تحت ظروف مناخية متنوعة وفّر خبرات لا تُقدّر بثمن. تستند SIPANEL إلى الخبرة الهندسية لشركة Fazasazeh Naghsh-e-Jahan وتدير عملياتها الدولية من خلال Global Innovative Co.'
+    ],
     points: [
       {
-        title: 'مشكلة السوق',
-        description:
-          'تبدأ المشاريع غالبًا بالمواد وليس بمراجعة النظام، وهذا يخلق خطر التسرب والهدر والانحراف في التنفيذ.'
+        title: 'الجذور التنفيذية',
+        description: 'تأسست سيان صنعت إيرانيان بالاعتماد على الخبرة الفنية لفريق إدارة Fazasazeh Naghsh-e-Jahan.'
       },
       {
-        title: 'لماذا يفشل التنفيذ',
-        description:
-          'عندما لا تكون الرسومات ومنطق التصريف والملحقات وتسلسل الموقع متناسقة، يقضي فريق التنفيذ الوقت في معالجة مشكلات كان يمكن تجنبها.'
+        title: 'تخصص الغلاف الصناعي',
+        description: 'الخبرة في التصميم وإعداد رسومات الشوب والتنفيذ عبر مشاريع متنوعة تشكل أساس تخصص SIPANEL.'
       },
       {
-        title: 'لماذا تهم الهندسة',
-        description:
-          'تقلل المراجعة الهندسية عدم اليقين قبل الشراء والتركيب، عندما لا تزال التعديلات منخفضة التكلفة.'
+        title: 'معرفة المواد',
+        description: 'التعاون المستمر مع المصنعين المحليين والدوليين يتيح التوصية بنظام الغلاف الأمثل لكل مشروع.'
       },
       {
-        title: 'كيف تتعامل SIPANEL مع المشاريع',
-        description:
-          'تعمل SIPANEL من مراجعة النظام حتى التركيب المنضبط بحيث يبقى المشروع منسقًا وقابلًا للقياس ومدافعًا عنه فنيًا.'
+        title: 'التنفيذ المنضبط',
+        description: 'الخبرة في مناخات وأنواع مشاريع متعددة شكّلت نهج التصميم والتوريد والتنفيذ المنضبط.'
+      }
+    ],
+    heritageItems: [
+      {
+        label: '٢٠١٥',
+        title: 'تأسيس سيان صنعت إيرانيان',
+        description: 'بداية المسيرة بالاعتماد على الخبرة الفنية لمديري Fazasazeh Naghsh-e-Jahan.'
+      },
+      {
+        label: 'الجذور التنفيذية',
+        title: 'بناء القاعات الصناعية',
+        description: 'إدراك حاجة المشاريع لحلول غلاف متخصصة إلى جانب أنظمة الهياكل الفراغية.'
+      },
+      {
+        label: 'مسار التخصص',
+        title: 'SIPANEL',
+        description: 'التركيز على تصميم وتوريد وتنفيذ منضبط لأنظمة الغلاف الصناعي.'
       }
     ],
     visual: {
@@ -321,29 +359,46 @@ const companyStory = {
     }
   },
   ru: {
-    title: 'Почему существует SIPANEL',
-    lead:
-      'Проблемы промышленной оболочки обычно начинаются задолго до монтажа: неясные чертежи, слабый выбор системы, плохая последовательность и несогласованность работ.',
+    title: 'Опыт, сформировавший SIPANEL',
+    lead: '',
+    paragraphs: [
+      'Компания Sian Sanat Iranian была основана в 2015 году, опираясь на технический опыт и практические знания управленческой команды Fazasazeh Naghsh-e-Jahan. Поскольку Fazasazeh специализировалась на строительстве промышленных залов с использованием пространственных каркасных систем, потребность проектов в специализированных решениях оболочки привела к созданию бренда SIPANEL.',
+      'Технический опыт в проектировании и подготовке рабочих чертежей в сочетании с участием в проектах различных архитектурных решений и назначений дал нам глубокую экспертизу в проектировании и выполнении систем промышленной оболочки.',
+      'Выполнение сотен промышленных проектов по всему Ирану и в соседних странах в различных климатических условиях принесло бесценный опыт. SIPANEL создана на основе инженерного опыта Fazasazeh Naghsh-e-Jahan и осуществляет международную деятельность через Global Innovative Co.'
+    ],
     points: [
       {
-        title: 'Проблема рынка',
-        description:
-          'Проекты часто начинают с материалов, а не с проверки системы. Это создаёт риск протечек, потерь и отклонений в выполнении.'
+        title: 'Исполнительные корни',
+        description: 'Sian Sanat Iranian основана на техническом опыте управленческой команды Fazasazeh Naghsh-e-Jahan.'
       },
       {
-        title: 'Почему выполнение срывается',
-        description:
-          'Когда чертежи, логика водоотвода, комплектующие и последовательность работ не согласованы, команда тратит время на исправление предотвратимых проблем.'
+        title: 'Экспертиза промышленной оболочки',
+        description: 'Опыт проектирования, подготовки рабочих чертежей и выполнения разнообразных проектов — основа специализации SIPANEL.'
       },
       {
-        title: 'Почему важна инженерия',
-        description:
-          'Инженерная проверка снижает неопределённость до закупки и монтажа, когда изменения ещё недороги.'
+        title: 'Знание материалов',
+        description: 'Постоянное сотрудничество с отечественными и зарубежными производителями позволяет рекомендовать оптимальную систему оболочки для каждого проекта.'
       },
       {
-        title: 'Как SIPANEL ведёт проекты',
-        description:
-          'SIPANEL работает от проверки системы до контролируемого монтажа, чтобы проект оставался согласованным, измеримым и технически обоснованным.'
+        title: 'Контролируемое выполнение',
+        description: 'Опыт работы в различных климатах и типах проектов сформировал подход проектирования, снабжения и контролируемого выполнения.'
+      }
+    ],
+    heritageItems: [
+      {
+        label: '2015',
+        title: 'Основание Sian Sanat Iranian',
+        description: 'Начало пути на основе технического опыта руководителей Fazasazeh Naghsh-e-Jahan.'
+      },
+      {
+        label: 'Исполнительные корни',
+        title: 'Строительство промышленных залов',
+        description: 'Осознание потребности проектов в специализированных решениях оболочки наряду с каркасными системами.'
+      },
+      {
+        label: 'Путь специализации',
+        title: 'SIPANEL',
+        description: 'Фокус на проектировании, снабжении и контролируемом выполнении систем промышленной оболочки.'
       }
     ],
     visual: {

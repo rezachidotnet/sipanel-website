@@ -7401,6 +7401,19 @@ button[aria-disabled='true'] {
   color: var(--color-orange-primary);
 }
 
+.about-story__visual-note .about-inline-link,
+.about-conversion .about-inline-link,
+.about-story__timeline .about-inline-link {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration-color: rgba(255, 106, 0, 0.7);
+}
+
+.about-story__visual-note .about-inline-link:hover,
+.about-conversion .about-inline-link:hover,
+.about-story__timeline .about-inline-link:hover {
+  color: var(--color-orange-primary);
+}
+
 [dir='ltr'] .about-story__paragraphs p {
   padding: 0 0 0 16px;
 }
