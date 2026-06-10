@@ -25,6 +25,7 @@
     "systemsSandwich": "Sandwich Panels",
     "systemsStanding": "Standing Seam",
     "systemsCladding": "Aluminium Cladding",
+    "systemsDaylighting": "Daylighting & Transparent Roofing",
     "projects": "Projects",
     "projectsSandwich": "Sandwich Panel Projects",
     "projectsZipRoofing": "ZIP Roofing Projects",
@@ -329,9 +330,10 @@
     "secondaryFieldsLabel": "Additional contact details (optional)",
     "technicalGroupMicrocopy": "If you have drawings or technical notes, add them here. You can submit the form without a file.",
     "guidanceCards": {
-      "panel": {"title": "Panel System Projects", "description": "Panel selection, layout coordination, accessory planning, flashing logic, and installation sequencing."},
-      "roofing": {"title": "Roofing Projects", "description": "Standing seam, ZIP Tech, drainage paths, slope review, gutters, flashings, and leakage prevention."},
-      "cladding": {"title": "Cladding Projects", "description": "Facade layout, fixing logic, material optimization, joint alignment, edge details, and exterior execution."}
+      "panel": {"title": "Sandwich Panel Projects", "description": "Panel selection, layout coordination, accessory planning, flashing logic, and installation sequencing."},
+      "roofing": {"title": "Standing Seam (ZIP Panel) Projects", "description": "Standing seam, ZIP Panel, drainage paths, slope review, gutters, flashings, and leakage prevention."},
+      "cladding": {"title": "Aluminium Cladding Projects", "description": "Facade layout, fixing logic, material optimization, joint alignment, edge details, and exterior execution."},
+      "transparent": {"title": "Skylight & Transparent Projects", "description": "Glass skylights, polycarbonate systems, transparent roofing, and natural lighting solutions for industrial and commercial spaces."}
     },
     "projectStages": {
       "concept": "Concept / Early Planning",
@@ -407,7 +409,9 @@
     "standingSeam": "Standing Seam & ZIP Roofing",
     "standingSeamDesc": "Concealed-fastener roofing with long-term waterproofing and flashing coordination.",
     "aluminiumCladding": "Aluminium Cladding & Covering",
-    "aluminiumCladdingDesc": "Facade cladding systems with flashing details and weatherproofing for industrial envelopes."
+    "aluminiumCladdingDesc": "Facade cladding systems with flashing details and weatherproofing for industrial envelopes.",
+    "daylighting": "Daylighting & Transparent Roofing",
+    "daylightingDesc": "Polycarbonate, glass skylights, and transparent roofing systems for natural daylight in industrial spaces."
   },
   "whySipanel": {
     "title": "Why SIPANEL",

@@ -120,7 +120,6 @@ export function getRfqContactPageData() {
     form: getRfqContactSection('rfq_form'),
     guidance: getRfqContactSection('project_type_guidance'),
     trust: getRfqContactSection('trust_before_submit'),
-    location: getRfqContactSection('location_section'),
     faq: getRfqContactSection('faq_section')
   };
 }

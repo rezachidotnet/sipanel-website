@@ -18,7 +18,6 @@ type ContactPageData = {
   form: Extract<RfqContactSection, {id: 'rfq_form'}>;
   guidance: Extract<RfqContactSection, {id: 'project_type_guidance'}>;
   trust: Extract<RfqContactSection, {id: 'trust_before_submit'}>;
-  location: Extract<RfqContactSection, {id: 'location_section'}>;
   faq: Extract<RfqContactSection, {id: 'faq_section'}>;
 };
 
@@ -188,7 +187,6 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
   const quickMicrocopy = t('quickMicrocopy');
   const trustTitle = t('trustTitle');
   const trustItems = [0, 1, 2, 3].map((i) => ({title: t(`trustItems.${i}.title`), description: t(`trustItems.${i}.description`)}));
-  const locationTitle = t('locationTitle');
   const resolver = useMemo(() => createContactResolver(t), [t]);
   const [activeStep, setActiveStep] = useState(0);
   const [submitState, setSubmitState] = useState<SubmitState>('idle');
@@ -444,7 +442,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             </div>
             <p className="rfq-form__microcopy">{quickMicrocopy}</p>
             <div className="contact-guidance__list">
-              {(['panel', 'roofing', 'cladding'] as const).map((key) => (
+              {(['panel', 'roofing', 'cladding', 'transparent'] as const).map((key) => (
                 <article key={key}>
                   <h3>{t(`guidanceCards.${key}.title`)}</h3>
                   <p>{t(`guidanceCards.${key}.description`)}</p>
@@ -637,15 +635,6 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
               </p>
             </div>
           </form>
-        </div>
-      </section>
-
-      <section className="contact-section" data-section="location_section" aria-labelledby="location-section-title">
-        <div className="container-shell contact-location">
-          <div>
-            <h2 id="location-section-title">{locationTitle}</h2>
-            {locale === 'fa' || locale === 'ar' ? <p>{localizedAddress}</p> : <LtrText as="p">{localizedAddress}</LtrText>}
-          </div>
         </div>
       </section>
 

@@ -63,10 +63,10 @@
           "meta_description": "SIPANEL engineers sandwich panel systems through precise layout, smart procurement, waterproofing logic, and controlled installation for industrial buildings."
         },
         "hero": {
-          "eyebrow": "Industrial Panel Systems",
-          "h1": "Sandwich Panel Systems Engineered Before Installation.",
-          "subheadline": "SIPANEL coordinates panel layout, accessories, flashings, procurement quantities, and installation sequence to reduce waste, leakage risk, and execution errors.",
-          "primary_cta": "Request Panel Engineering Review",
+          "eyebrow": "Sandwich Panel Systems",
+          "h1": "Panel Layout, Waterproofing, and Installation — Reviewed Before Procurement.",
+          "subheadline": "SIPANEL identifies panel selection risks, flashing coordination gaps, and quantity errors before materials are ordered — reducing leakage, waste, and site rework.",
+          "primary_cta": "Request Engineering Review",
           "secondary_cta": "View Related Projects",
           "visual_direction": "real sandwich panel industrial building, technical grid overlay, shop drawing detail preview"
         },
@@ -128,22 +128,42 @@
         ],
         "faq": [
           {
-            "question": "How does SIPANEL reduce sandwich panel waste?",
-            "answer": "By reviewing layout, quantities, cutting logic, and accessories before procurement and installation."
+            "question": "How does SIPANEL select the right panel type for a project?",
+            "answer": "Panel type, insulation core (PIR, PUR, mineral wool, EPS), and thickness are reviewed based on project climate, structural loads, fire regulations, and intended use."
           },
           {
-            "question": "Does SIPANEL only supply panels?",
-            "answer": "No. SIPANEL focuses on engineering-controlled panel system execution, including review, procurement coordination, and installation."
+            "question": "How is roof leakage risk controlled in sandwich panel systems?",
+            "answer": "Roof slope, drainage paths, flashing details, joint sealing, and installation sequence are reviewed and coordinated before panels are procured."
           },
           {
-            "question": "Can SIPANEL help select the correct panel type?",
-            "answer": "Yes. Panel choice is reviewed according to project use, insulation needs, environment, fire considerations, and execution conditions."
+            "question": "Does SIPANEL prepare shop drawings before procurement?",
+            "answer": "Yes. Panel layout, cut lists, flashing positions, accessory quantities, and installation sequence are documented in shop drawings before materials are ordered."
+          },
+          {
+            "question": "How does SIPANEL reduce material waste?",
+            "answer": "Through coordinated layout planning, accurate BOM extraction, cut list optimization, and accessory quantity verification before procurement."
+          },
+          {
+            "question": "Does SIPANEL work with specific panel manufacturers?",
+            "answer": "SIPANEL is not tied to a single manufacturer. Panel brand and specification are recommended based on project requirements, not supplier agreements."
+          },
+          {
+            "question": "What happens during the engineering review?",
+            "answer": "Project drawings, envelope requirements, insulation needs, waterproofing logic, and site conditions are reviewed. A coordinated execution plan is prepared before procurement."
+          },
+          {
+            "question": "Can SIPANEL coordinate procurement and accessories?",
+            "answer": "Yes. Panels, flashings, fasteners, trims, sealants, and ridge/eave accessories are planned together to prevent site delays and missing components."
+          },
+          {
+            "question": "Does SIPANEL only supply panels or also handle installation?",
+            "answer": "SIPANEL provides engineering-controlled execution — from system review and shop drawings through procurement coordination and controlled installation."
           }
         ],
         "conversion_cta": {
-          "headline": "Need a Safer Panel System Plan?",
-          "text": "Request an engineering review before procurement and installation.",
-          "button": "Get Free Engineering Review"
+          "headline": "Identify Panel System Risks Before Procurement Starts.",
+          "text": "Send project drawings or scope details. SIPANEL reviews panel selection, layout coordination, and waterproofing logic before materials are ordered.",
+          "button": "Request Engineering Review"
         }
       },
       {
@@ -340,6 +360,104 @@
           "headline": "Need a More Controlled Facade Execution Plan?",
           "text": "Request a technical consultation for aluminium cladding layout, details, and installation strategy.",
           "button": "Request Cladding Consultation"
+        }
+      },
+      {
+        "id": "daylighting_transparent_roofing",
+        "route": {
+          "en": "/en/systems/daylighting-transparent-roofing",
+          "fa": "/fa/systems/daylighting-transparent-roofing",
+          "ar": "/ar/systems/daylighting-transparent-roofing",
+          "ru": "/ru/systems/daylighting-transparent-roofing"
+        },
+        "seo": {
+          "primary_keyword": "daylighting transparent roofing",
+          "title": "Daylighting & Transparent Roofing | SIPANEL Industrial Skylight Systems",
+          "meta_description": "SIPANEL engineers daylighting and transparent roofing systems with polycarbonate panels, glass skylights, and hybrid solutions for industrial and commercial buildings."
+        },
+        "hero": {
+          "eyebrow": "Daylighting & Transparent Systems",
+          "h1": "Transparent Roofing Systems Engineered for Performance.",
+          "subheadline": "SIPANEL coordinates skylight layout, polycarbonate selection, structural integration, thermal performance, and weather resistance for industrial daylighting projects.",
+          "primary_cta": "Request Daylighting Review",
+          "secondary_cta": "View Related Projects",
+          "visual_direction": "industrial skylight, polycarbonate roof panels, natural daylight in factory hall"
+        },
+        "problem_context": {
+          "title": "Most Daylighting Problems Begin Before Installation.",
+          "cards": [
+            "Incorrect material selection for UV and thermal conditions",
+            "Poor structural coordination between skylight and primary frame",
+            "Leakage risk from weak flashing and sealing at transparent panels",
+            "Inadequate thermal performance leading to condensation",
+            "Reduced light transmission due to wrong panel specification",
+            "Project delays caused by unclear detailing or missing accessories"
+          ]
+        },
+        "engineering_approach": {
+          "title": "How SIPANEL Controls Daylighting System Risk",
+          "steps": [
+            {
+              "title": "Daylighting System Review",
+              "description": "Project requirements, light transmission needs, thermal loads, UV exposure, and structural conditions are reviewed before material selection."
+            },
+            {
+              "title": "Material and Detail Coordination",
+              "description": "Polycarbonate type, glass specification, flashing details, expansion joints, and sealing logic are coordinated before procurement."
+            },
+            {
+              "title": "Structural Integration Planning",
+              "description": "Skylight connections, purlin coordination, load paths, and drainage slopes are verified against the primary structure."
+            },
+            {
+              "title": "Controlled Installation",
+              "description": "Execution follows approved details, sealing checkpoints, alignment verification, and weather protection protocols."
+            }
+          ]
+        },
+        "applications": [
+          "Industrial factory skylights",
+          "Warehouse daylighting strips",
+          "Commercial atrium roofing",
+          "Sports hall transparent roofing",
+          "Cold storage controlled-light solutions",
+          "Continuous ridge daylighting systems"
+        ],
+        "technical_proof": {
+          "required_visuals": [
+            "skylight layout plan",
+            "polycarbonate panel detail",
+            "flashing and sealing detail",
+            "structural connection detail"
+          ],
+          "interaction": "fullscreen diagram viewer with zoom"
+        },
+        "quality_checkpoints": [
+          "Panel type and UV protection verification",
+          "Structural connection and load path review",
+          "Flashing and sealing detail coordination",
+          "Thermal and condensation risk assessment",
+          "Drainage slope and water path verification",
+          "Final visual and weather resistance inspection"
+        ],
+        "faq": [
+          {
+            "question": "What transparent roofing materials does SIPANEL work with?",
+            "answer": "SIPANEL works with multiwall polycarbonate, solid polycarbonate, glass skylights, and hybrid transparent envelope systems."
+          },
+          {
+            "question": "How is leakage risk controlled in skylight installations?",
+            "answer": "Through coordinated flashing details, sealing logic, expansion joint planning, and drainage path verification before installation."
+          },
+          {
+            "question": "Can SIPANEL help select the right daylighting material?",
+            "answer": "Yes. Material selection is reviewed based on light transmission needs, UV exposure, thermal performance, structural loads, and project budget."
+          }
+        ],
+        "conversion_cta": {
+          "headline": "Need Controlled Daylighting for Your Project?",
+          "text": "Request an engineering review for skylight layout, material selection, and installation coordination.",
+          "button": "Request Daylighting Review"
         }
       }
     ],

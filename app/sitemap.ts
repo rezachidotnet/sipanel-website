@@ -11,6 +11,7 @@ import {withBaseUrl, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {aluminiumCladdingCoveringSpec} from '@/lib/services/aluminium-cladding-covering';
 import {sandwichPanelSystemsSpec} from '@/lib/services/sandwich-panel-systems';
 import {standingSeamZipTechRoofingSpec} from '@/lib/services/standing-seam-zip-tech-roofing';
+import {daylightingTransparentRoofingSpec} from '@/lib/services/daylighting-transparent-roofing';
 
 const homeRoutes: LocalizedRouteMap = {
   en: '/en',
@@ -39,6 +40,7 @@ const routeMaps: LocalizedRouteMap[] = [
   sandwichPanelSystemsSpec.route,
   standingSeamZipTechRoofingSpec.route,
   aluminiumCladdingCoveringSpec.route,
+  daylightingTransparentRoofingSpec.route,
   projectsOverviewRoutes,
   rfqContactPage.route,
   engineeringInsightsPage.routes,

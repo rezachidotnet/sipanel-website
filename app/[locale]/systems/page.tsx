@@ -16,6 +16,8 @@ import standingSeamDesktop from '@/assets/systems/standing-seam/cover-desktop.we
 import standingSeamMobile from '@/assets/systems/standing-seam/cover-mobile.webp';
 import aluminiumDesktop from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
 import aluminiumMobile from '@/assets/systems/aluminium-claddin/cover-mobile.webp';
+import daylightingDesktop from '@/assets/systems/transparent-roofing/cover-desktop.webp';
+import daylightingMobile from '@/assets/systems/transparent-roofing/cover-mobile.webp';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -73,8 +75,8 @@ const copy: Record<
     proofTitle: 'زنجیره مهندسی SIPANEL',
     proofItems: [
       {title: 'طراحی شاپ', description: 'کنترل کامل جزئیات اجرایی و نقشه\u200Cهای شاپ'},
-      {title: 'BOM و متریال', description: 'لیست کامل متریال با کنترل کیفیت و ردیابی'},
       {title: 'منطق آب\u200Cبندی', description: 'طراحی سیستم\u200Cهای آب\u200Cبندی بر اساس عملکرد و اقلیم'},
+      {title: 'BOM و متریال', description: 'لیست کامل متریال با کنترل کیفیت و ردیابی'},
       {title: 'تأمین هوشمند', description: 'تأمین به\u200Cموقع، کنترل کیفیت و کاهش هزینه\u200Cهای پروژه'},
       {title: 'نصب مهندسی', description: 'اجرا توسط تیم\u200Cهای متخصص و کنترل\u200Cشده'}
     ],
@@ -131,8 +133,8 @@ const copy: Record<
     proofTitle: 'SIPANEL Engineering Chain',
     proofItems: [
       {title: 'Shop Drawing', description: 'Full control over execution details and shop drawings'},
-      {title: 'BOM & Materials', description: 'Complete material list with QC and tracking'},
       {title: 'Waterproofing Logic', description: 'Climate and performance-based waterproofing design'},
+      {title: 'BOM & Materials', description: 'Complete material list with QC and tracking'},
       {title: 'Smart Procurement', description: 'On-time procurement, QC and project cost reduction'},
       {title: 'Engineered Installation', description: 'Execution by specialized, controlled teams'}
     ],
@@ -162,8 +164,8 @@ const copy: Record<
     proofTitle: 'سلسلة SIPANEL الهندسية',
     proofItems: [
       {title: 'رسومات الورشة', description: 'تحكم كامل في تفاصيل التنفيذ'},
-      {title: 'BOM والمواد', description: 'قائمة مواد كاملة مع مراقبة الجودة'},
       {title: 'منطق العزل المائي', description: 'تصميم العزل المائي حسب الأداء والمناخ'},
+      {title: 'BOM والمواد', description: 'قائمة مواد كاملة مع مراقبة الجودة'},
       {title: 'التوريد الذكي', description: 'توريد في الوقت المناسب وخفض التكاليف'},
       {title: 'التركيب الهندسي', description: 'تنفيذ بواسطة فرق متخصصة'}
     ],
@@ -198,8 +200,8 @@ const copy: Record<
     proofTitle: 'Инженерная цепочка SIPANEL',
     proofItems: [
       {title: 'Цеховые чертежи', description: 'Полный контроль деталей исполнения'},
-      {title: 'BOM и материалы', description: 'Полный список материалов с контролем качества'},
       {title: 'Логика гидроизоляции', description: 'Проектирование на основе климата и эксплуатации'},
+      {title: 'BOM и материалы', description: 'Полный список материалов с контролем качества'},
       {title: 'Умные закупки', description: 'Своевременные поставки и снижение затрат'},
       {title: 'Инженерный монтаж', description: 'Выполнение специализированными бригадами'}
     ],
@@ -320,6 +322,41 @@ const systems = [
       ar: '/systems/aluminium-cladding-covering',
       ru: '/systems/aluminium-cladding-covering'
     }
+  },
+  {
+    id: 'daylighting-transparent',
+    imageDesktop: daylightingDesktop,
+    imageMobile: daylightingMobile,
+    alt: {
+      fa: 'سیستم نورگیر و پوشش شفاف صنعتی',
+      en: 'Industrial daylighting and transparent roofing system',
+      ar: 'نظام الإضاءة الطبيعية والأسقف الشفافة الصناعية',
+      ru: 'Промышленная система естественного освещения и прозрачных покрытий'
+    },
+    title: {
+      fa: 'نورگیرها و پوشش\u200Cهای شفاف',
+      en: 'Daylighting & Transparent Roofing',
+      ar: 'أنظمة الإضاءة الطبيعية والتغطيات الشفافة',
+      ru: 'Системы естественного освещения и прозрачных покрытий'
+    },
+    subtitle: {
+      fa: 'مهندسی نور طبیعی صنعتی',
+      en: 'Engineered for Performance.',
+      ar: 'مهندسة للأداء',
+      ru: 'Инженерия естественного света.'
+    },
+    description: {
+      fa: 'سی\u200Cپانل سیستم\u200Cهای نورگیر و پوشش شفاف را با پلی\u200Cکربنات، شیشه و راهکارهای ترکیبی برای نور طبیعی ساختمان\u200Cهای صنعتی و تجاری مهندسی می\u200Cکند.',
+      en: 'SIPANEL engineers daylighting and transparent roofing systems with polycarbonate, glass skylights, and hybrid solutions for industrial and commercial natural lighting.',
+      ar: 'تقدم SIPANEL أنظمة الإضاءة الطبيعية والأسقف الشفافة مع البولي كربونات والمناور الزجاجية لتوفير الإضاءة الطبيعية في المنشآت الصناعية والتجارية.',
+      ru: 'SIPANEL проектирует системы естественного освещения с поликарбонатом, стеклянными фонарями и гибридными решениями для промышленных и коммерческих объектов.'
+    },
+    routes: {
+      en: '/systems/daylighting-transparent-roofing',
+      fa: '/systems/daylighting-transparent-roofing',
+      ar: '/systems/daylighting-transparent-roofing',
+      ru: '/systems/daylighting-transparent-roofing'
+    }
   }
 ];
 
@@ -336,15 +373,15 @@ const proofIcons = [
     <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor" strokeWidth="1.5" />
     <path d="M8 10h12M8 14h8M8 18h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>,
-  /* BOM */
-  <svg key="icon-1" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="6" y="3" width="16" height="22" rx="2" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M10 9h8M10 13h6M10 17h7M10 21h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>,
   /* Waterproofing */
-  <svg key="icon-2" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg key="icon-1" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M14 4s-7 8-7 13a7 7 0 0014 0c0-5-7-13-7-13z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     <path d="M11 18a3 3 0 003 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>,
+  /* BOM */
+  <svg key="icon-2" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="6" y="3" width="16" height="22" rx="2" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M10 9h8M10 13h6M10 17h7M10 21h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>,
   /* Procurement */
   <svg key="icon-3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

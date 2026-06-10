@@ -28,6 +28,7 @@ export function Footer() {
             <Link href="/systems/sandwich-panel-systems" className="site-footer__link">{footer('systemsSandwich')}</Link>
             <Link href="/systems/standing-seam-zip-tech-roofing" className="site-footer__link">{footer('systemsStanding')}</Link>
             <Link href="/systems/aluminium-cladding-covering" className="site-footer__link">{footer('systemsCladding')}</Link>
+            <Link href="/systems/daylighting-transparent-roofing" className="site-footer__link">{footer('systemsDaylighting')}</Link>
           </div>
 
           <div className="site-footer__column">

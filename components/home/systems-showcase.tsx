@@ -4,6 +4,7 @@ import {Link} from '@/i18n/routing';
 import sandwichPanelCover from '@/assets/systems/sandwich-panel/cover-desktop.webp';
 import standingSeamCover from '@/assets/systems/standing-seam/cover-desktop.webp';
 import aluminiumCladdingCover from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
+import daylightingCover from '@/assets/systems/transparent-roofing/cover-desktop.webp';
 
 const systems = [
   {
@@ -26,6 +27,13 @@ const systems = [
     image: aluminiumCladdingCover,
     nameKey: 'aluminiumCladding' as const,
     descKey: 'aluminiumCladdingDesc' as const
+  },
+  {
+    id: 'daylighting-transparent',
+    href: '/systems/daylighting-transparent-roofing',
+    image: daylightingCover,
+    nameKey: 'daylighting' as const,
+    descKey: 'daylightingDesc' as const
   }
 ] as const;
 

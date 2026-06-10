@@ -639,6 +639,7 @@ function getRelatedLinkLabel(locale: Locale, href: string) {
       '/systems/sandwich-panel-systems': 'Sandwich Panel Systems',
       '/systems/standing-seam-zip-tech-roofing': 'Standing Seam Roofing',
       '/systems/aluminium-cladding-covering': 'Aluminium Cladding',
+      '/systems/daylighting-transparent-roofing': 'Daylighting & Transparent Roofing',
       '/solutions/industrial-envelope-systems': 'Industrial Envelope Systems',
       '/solutions/panel-material-optimization': 'Panel Material Optimization',
       '/solutions/shop-drawing-review-panel-projects': 'Shop Drawing Review',
@@ -652,6 +653,7 @@ function getRelatedLinkLabel(locale: Locale, href: string) {
       '/systems/sandwich-panel-systems': 'سیستم‌های پنل ساندویچی',
       '/systems/standing-seam-zip-tech-roofing': 'سقف Standing Seam',
       '/systems/aluminium-cladding-covering': 'کلادینگ آلومینیومی',
+      '/systems/daylighting-transparent-roofing': 'نورگیرها و پوشش‌های شفاف',
       '/solutions/industrial-envelope-systems': 'سیستم‌های پوسته صنعتی',
       '/solutions/panel-material-optimization': 'بهینه‌سازی متریال پنل',
       '/solutions/shop-drawing-review-panel-projects': 'بازبینی شاپ‌دراوینگ',
@@ -665,6 +667,7 @@ function getRelatedLinkLabel(locale: Locale, href: string) {
       '/systems/sandwich-panel-systems': 'أنظمة ألواح الساندويش',
       '/systems/standing-seam-zip-tech-roofing': 'سقف Standing Seam',
       '/systems/aluminium-cladding-covering': 'كسوة الألمنيوم',
+      '/systems/daylighting-transparent-roofing': 'أنظمة الإضاءة الطبيعية والتغطيات الشفافة',
       '/solutions/industrial-envelope-systems': 'أنظمة الغلاف الصناعي',
       '/solutions/panel-material-optimization': 'تحسين مواد الألواح',
       '/solutions/shop-drawing-review-panel-projects': 'مراجعة الرسومات التنفيذية',
@@ -678,6 +681,7 @@ function getRelatedLinkLabel(locale: Locale, href: string) {
       '/systems/sandwich-panel-systems': 'Сэндвич-панели',
       '/systems/standing-seam-zip-tech-roofing': 'Кровля Standing Seam',
       '/systems/aluminium-cladding-covering': 'Алюминиевая облицовка',
+      '/systems/daylighting-transparent-roofing': 'Системы естественного освещения',
       '/solutions/industrial-envelope-systems': 'Системы промышленной оболочки',
       '/solutions/panel-material-optimization': 'Оптимизация материалов панелей',
       '/solutions/shop-drawing-review-panel-projects': 'Проверка рабочих чертежей',
@@ -723,7 +727,8 @@ function buildLocaleContent(locale: Locale): FaqLocaleContent {
       cards: [
         {title: getRelatedLinkLabel(locale, '/systems/sandwich-panel-systems'), href: '/systems/sandwich-panel-systems'},
         {title: getRelatedLinkLabel(locale, '/systems/standing-seam-zip-tech-roofing'), href: '/systems/standing-seam-zip-tech-roofing'},
-        {title: getRelatedLinkLabel(locale, '/systems/aluminium-cladding-covering'), href: '/systems/aluminium-cladding-covering'}
+        {title: getRelatedLinkLabel(locale, '/systems/aluminium-cladding-covering'), href: '/systems/aluminium-cladding-covering'},
+        {title: getRelatedLinkLabel(locale, '/systems/daylighting-transparent-roofing'), href: '/systems/daylighting-transparent-roofing'}
       ]
     },
     relatedResources: {

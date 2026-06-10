@@ -75,6 +75,15 @@ export type ServicePageTemplateData = {
     title: string;
     steps: ServiceStep[];
   };
+  independentRecommendations?: {
+    title: string;
+    intro: string;
+    points: Array<{title: string; description: string}>;
+    comparison: {
+      traditional: {label: string; items: string[]};
+      sipanel: {label: string; items: string[]};
+    };
+  };
   systemApplications: {
     title: string;
     applications: string[];
@@ -95,6 +104,7 @@ export type ServicePageTemplateData = {
   };
   relatedCaseStudies: {
     title: string;
+    intro?: string;
     cases?: ServiceCaseStudy[];
   };
   faq: {
@@ -187,7 +197,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
             <div className="service-hero__actions">
               {/* track: service_primary_cta_click */}
               {/* track: hero_primary_cta_click */}
-              <Link href="/#rfq" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: page.id})}>
+              <Link href="/contact#rfq-form" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: page.id})}>
                 {page.hero.primaryCta}
               </Link>
               {page.hero.secondaryCta ? (
@@ -261,6 +271,43 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
         </div>
       </section>
 
+      {page.independentRecommendations ? (
+        <section className="service-section service-section--light" data-section="independent_recommendations" aria-labelledby="service-recommendations-title">
+          <div className="container-shell service-section__inner">
+            <header>
+              <h2 id="service-recommendations-title">{page.independentRecommendations.title}</h2>
+              <p>{page.independentRecommendations.intro}</p>
+            </header>
+            <div className="service-recommendations-grid">
+              {page.independentRecommendations.points.map((point) => (
+                <article className="service-recommendations-card" key={point.title}>
+                  <h3>{point.title}</h3>
+                  <p>{point.description}</p>
+                </article>
+              ))}
+            </div>
+            <div className="service-comparison">
+              <div className="service-comparison__column service-comparison__column--traditional">
+                <h3>{page.independentRecommendations.comparison.traditional.label}</h3>
+                <ul>
+                  {page.independentRecommendations.comparison.traditional.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="service-comparison__column service-comparison__column--sipanel">
+                <h3>{page.independentRecommendations.comparison.sipanel.label}</h3>
+                <ul>
+                  {page.independentRecommendations.comparison.sipanel.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section
         className="service-section service-section--light"
         data-section="system_applications"
@@ -311,28 +358,30 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
         </section>
       ) : null}
 
-      <section
-        className="service-section service-section--light"
-        data-section="process_workflow"
-        aria-labelledby="service-process-title"
-      >
-        <div className="container-shell service-section__inner">
-          <header>
-            <h2 id="service-process-title">{page.processWorkflow.title}</h2>
-          </header>
-          <div className="service-process-list">
-            {page.processWorkflow.steps.map((step, index) => (
-              <article className="service-process-item" key={step.title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                </div>
-              </article>
-            ))}
+      {page.processWorkflow.steps.length > 0 ? (
+        <section
+          className="service-section service-section--light"
+          data-section="process_workflow"
+          aria-labelledby="service-process-title"
+        >
+          <div className="container-shell service-section__inner">
+            <header>
+              <h2 id="service-process-title">{page.processWorkflow.title}</h2>
+            </header>
+            <div className="service-process-list">
+              {page.processWorkflow.steps.map((step, index) => (
+                <article className="service-process-item" key={step.title}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="service-section" data-section="quality_checkpoints" aria-labelledby="service-quality-title">
         <div className="container-shell service-section__inner">
@@ -356,6 +405,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
         <div className="container-shell service-section__inner">
           <header>
             <h2 id="service-cases-title">{page.relatedCaseStudies.title}</h2>
+            {page.relatedCaseStudies.intro ? <p>{page.relatedCaseStudies.intro}</p> : null}
           </header>
           {hasCaseStudies ? (
             <div className="service-case-grid" data-asset-status="available">
@@ -422,7 +472,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
           <div className="service-conversion-cta__actions">
             {/* track: rfq_start */}
             {/* track: roof_review_cta_click */}
-            <Link href="/#rfq" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: `${page.id}_conversion_cta`})}>
+            <Link href="/contact#rfq-form" className="button-primary" onClick={() => trackRfqEvent('rfq_start', {component_id: `${page.id}_conversion_cta`})}>
               {page.conversionCta.button}
             </Link>
             {page.conversionCta.secondaryButton ? (
