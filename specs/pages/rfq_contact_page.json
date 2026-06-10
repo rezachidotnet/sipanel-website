@@ -349,24 +349,40 @@
       {
         "id": "faq_section",
         "priority": "high",
-        "title": "Contact & RFQ Questions",
+        "title": "Common Questions Before Submitting",
         "schema": "FAQPage",
         "items": [
           {
-            "question": "What information should I send for a project review?",
-            "answer": "Send the project type, location, estimated area, current stage, main concern, and any drawings or technical documents if available."
+            "question": "Is the initial engineering review free?",
+            "answer": "Yes. The first technical review of your project scope, system risks, and execution requirements is provided at no cost."
           },
           {
-            "question": "Can I request only a technical consultation?",
-            "answer": "Yes. You can request a review for system selection, leakage risk, shop drawings, procurement planning, or installation coordination."
+            "question": "How quickly will SIPANEL respond?",
+            "answer": "Initial feedback is typically provided within 1-2 business days after receiving project details."
           },
           {
-            "question": "Does SIPANEL handle full industrial envelope projects?",
-            "answer": "Yes. SIPANEL supports sandwich panel systems, standing seam and ZIP Tech roofing, aluminium cladding, and related industrial envelope execution."
+            "question": "Can I contact SIPANEL if the project is still in design phase?",
+            "answer": "Yes. Early-stage consultation helps identify system selection, waterproofing, and coordination risks before they become costly during execution."
           },
           {
-            "question": "Can I send drawings or project files?",
-            "answer": "Yes. The RFQ form can support optional file upload for PDF, JPG, PNG, and DWG files if enabled in the backend."
+            "question": "What documents can I submit?",
+            "answer": "Drawings, site photos, or technical specifications in PDF, JPG, PNG, or DWG format. Documents are optional — you can start with a project description only."
+          },
+          {
+            "question": "What happens after I submit the request?",
+            "answer": "SIPANEL reviews the submitted information, identifies key engineering risks, and contacts you with initial technical feedback and recommended next steps."
+          },
+          {
+            "question": "Does SIPANEL only work on large industrial projects?",
+            "answer": "No. SIPANEL reviews projects of various scales — from single-building roofing to multi-structure industrial facilities."
+          },
+          {
+            "question": "Can SIPANEL review an existing leakage or execution problem?",
+            "answer": "Yes. Existing problems including roof leakage, flashing failures, panel damage, and drainage issues can be reviewed for corrective engineering solutions."
+          },
+          {
+            "question": "Can international projects be reviewed?",
+            "answer": "Yes. SIPANEL has experience with projects in Iran and neighboring countries and can review international project requirements remotely."
           }
         ]
       }

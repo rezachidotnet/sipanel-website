@@ -45,67 +45,35 @@ type ContactFormValues = {
 
 type SubmitState = 'idle' | 'success' | 'error';
 
-const faContactUxCopy = {
-  hero: {
-    eyebrow: 'درخواست مشاوره فنی',
-    h1: 'مشاوره فنی برای انتخاب و اجرای پوشش صنعتی',
-    subheadline:
-      'جزئیات پروژه را ارسال کنید تا سی‌پانل نوع پوشش، ریسک خرید، منطق آب‌بندی و الزامات اجرای سقف یا نما را پیش از تصمیم‌گیری بررسی کند.',
-    primaryCta: 'شروع مشاوره',
-    secondaryCta: 'ارتباط در واتساپ',
-    trustMicrocopy: 'برای شروع مشاوره فقط نام و شماره تماس کافی است.'
-  },
-  contactTitle: 'راه‌های ارتباط مستقیم با سی‌پانل',
-  contactLabels: {
-    phone: 'تلفن',
-    whatsapp: 'واتساپ',
-    email: 'ایمیل',
-    address: 'آدرس'
-  } as Record<string, string>,
-  contactCtas: {
-    phone: 'تماس با سی‌پانل',
-    whatsapp: 'ارسال پیام در واتساپ',
-    email: 'ارسال ایمیل',
-    address: 'نمایش نقشه پس از تایید'
-  } as Record<string, string>,
-  formTitle: 'درخواست بررسی پروژه',
-  formIntro: 'ابتدا فقط اطلاعات تماس را وارد کنید. جزئیات پروژه اختیاری است و می‌تواند بعد از تماس تکمیل شود.',
-  quickMicrocopy: 'برای شروع مشاوره فقط نام و شماره تماس کافی است.',
-  optionalGroupMicrocopy: 'اطلاعات این بخش اختیاری است؛ تکمیل آن به بررسی دقیق‌تر پروژه کمک می‌کند.',
-  technicalGroupMicrocopy: 'اگر نقشه یا توضیح فنی دارید اضافه کنید. بدون فایل هم می‌توانید فرم را ارسال کنید.',
-  steps: ['اطلاعات تماس', 'جزئیات پروژه', 'توضیحات فنی'],
-  projectTypes: {
-    'Sandwich Panel Systems': 'سیستم‌های ساندویچ پانل',
-    'Standing Seam & ZIP Tech Roofing': 'سقف ایستادرز و ZIP Tech',
-    'Aluminium Cladding & Covering': 'پوشش و کلادینگ آلومینیومی',
-    'Full Industrial Envelope': 'پوشش کامل سازه صنعتی',
-    'Technical Review / Consultation': 'بررسی فنی / مشاوره',
-    Other: 'سایر'
-  } as Record<string, string>,
-  projectStages: {
-    'Concept / Early Planning': 'ایده اولیه / برنامه‌ریزی',
-    'Design Review': 'بازبینی طراحی',
-    Procurement: 'خرید و تامین',
-    'Before Installation': 'پیش از نصب',
-    'During Installation': 'حین نصب',
-    'Existing Problem / Leakage': 'مشکل موجود / نشتی'
-  } as Record<string, string>,
-  concerns: {
-    'Leakage Risk': 'ریسک نشتی',
-    'Material Waste': 'پرت متریال',
-    'Cost Control': 'کنترل هزینه',
-    'Execution Delay': 'تاخیر اجرا',
-    'System Selection': 'انتخاب سیستم',
-    'Shop Drawing Review': 'بازبینی نقشه شاپ',
-    'Installation Quality': 'کیفیت نصب',
-    'Procurement Planning': 'برنامه‌ریزی خرید'
-  } as Record<string, string>,
-  trustTitle: 'پس از ارسال درخواست چه چیزی بررسی می‌شود؟',
-  trustBenefits: ['بررسی مهندسی اولیه', 'پیشنهاد مناسب‌ترین پوشش', 'کاهش ریسک اجرا و خرید'],
-  address: 'اصفهان، خیابان هزارجریب، کوی ازادگان، پلاک ۶',
-  locationTitle: 'دفتر سی‌پانل',
-  mapPending: 'لینک نقشه پس از تایید موقعیت رسمی اضافه می‌شود.'
+const projectTypeKeyMap: Record<string, string> = {
+  'Sandwich Panel Systems': 'sandwichPanel',
+  'Standing Seam & ZIP Tech Roofing': 'standingSeam',
+  'Aluminium Cladding & Covering': 'aluminiumCladding',
+  'Full Industrial Envelope': 'fullEnvelope',
+  'Technical Review / Consultation': 'technicalReview',
+  'Other': 'other'
 };
+
+const projectStageKeyMap: Record<string, string> = {
+  'Concept / Early Planning': 'concept',
+  'Design Review': 'designReview',
+  'Procurement': 'procurement',
+  'Before Installation': 'beforeInstallation',
+  'During Installation': 'duringInstallation',
+  'Existing Problem / Leakage': 'existingProblem'
+};
+
+const concernKeyMap: Record<string, string> = {
+  'Leakage Risk': 'leakageRisk',
+  'Material Waste': 'materialWaste',
+  'Cost Control': 'costControl',
+  'Execution Delay': 'executionDelay',
+  'System Selection': 'systemSelection',
+  'Shop Drawing Review': 'shopDrawingReview',
+  'Installation Quality': 'installationQuality',
+  'Procurement Planning': 'procurementPlanning'
+};
+
 
 function createContactSchema(t: ReturnType<typeof useTranslations<'rfq'>>) {
   const required = t('validation.required');
@@ -205,25 +173,22 @@ function getContactValue(type: string, contact: ProductionContactInfo) {
 export function RfqContactPage({locale, page}: ContactPageProps) {
   const t = useTranslations('rfq');
   const dir = getDirection(locale);
-  const isFa = locale === 'fa';
-  const localizedAddress = isFa ? faContactUxCopy.address : page.contact.address;
-  const heroContent = isFa ? faContactUxCopy.hero : {
-    eyebrow: page.hero.content.eyebrow,
-    h1: page.hero.content.h1,
-    subheadline: page.hero.content.subheadline,
-    primaryCta: page.hero.content.primary_cta,
-    secondaryCta: page.hero.content.secondary_cta,
-    trustMicrocopy: page.hero.content.trust_microcopy
+  const localizedAddress = t.has('contact.address') ? t('contact.address') : page.contact.address;
+  const heroContent = {
+    eyebrow: t('heroEyebrow'),
+    h1: t('heroH1'),
+    subheadline: t('heroSubheadline'),
+    primaryCta: t('heroPrimaryCta'),
+    secondaryCta: t('heroSecondaryCta'),
+    trustMicrocopy: t('heroTrustMicrocopy')
   };
-  const contactTitle = isFa ? faContactUxCopy.contactTitle : page.options.title;
-  const formTitle = isFa ? faContactUxCopy.formTitle : page.form.title;
-  const guidanceIntro = isFa ? faContactUxCopy.formIntro : t('privacy');
-  const quickMicrocopy = isFa ? faContactUxCopy.quickMicrocopy : t('quickMicrocopy');
-  const trustTitle = isFa ? faContactUxCopy.trustTitle : page.trust.title;
-  const trustBenefits = isFa ? faContactUxCopy.trustBenefits : page.trust.benefits;
-  const locationTitle = isFa ? faContactUxCopy.locationTitle : page.location.title;
-  const mapPending = isFa ? faContactUxCopy.mapPending : 'Verified map URL pending.';
-  const heroPanelMessage = isFa ? t('success') : page.form.submit.success_message;
+  const contactTitle = t('contactTitle');
+  const formTitle = t('formTitle');
+  const guidanceIntro = t('formIntro');
+  const quickMicrocopy = t('quickMicrocopy');
+  const trustTitle = t('trustTitle');
+  const trustItems = [0, 1, 2, 3].map((i) => ({title: t(`trustItems.${i}.title`), description: t(`trustItems.${i}.description`)}));
+  const locationTitle = t('locationTitle');
   const resolver = useMemo(() => createContactResolver(t), [t]);
   const [activeStep, setActiveStep] = useState(0);
   const [submitState, setSubmitState] = useState<SubmitState>('idle');
@@ -392,9 +357,11 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
               </a>
             </div>
           </div>
-          <aside className="contact-hero__panel" data-backend-integration="api-route">
-            <strong>{t('backendReady')}</strong>
-            <p>{heroPanelMessage}</p>
+          <aside className="contact-hero__panel">
+            <strong>{t('heroPanelTitle')}</strong>
+            <p>{t('heroPanelStep1')}</p>
+            <p>{t('heroPanelStep2')}</p>
+            <p>{t('heroPanelStep3')}</p>
           </aside>
         </div>
       </section>
@@ -406,25 +373,30 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             {page.options.cards.map((card) => {
               const href = getContactHref(card.type, page.contact);
               const value = card.type === 'address' ? localizedAddress : getContactValue(card.type, page.contact);
-              const label = isFa ? faContactUxCopy.contactLabels[card.type] : card.label;
-              const cta = isFa ? faContactUxCopy.contactCtas[card.type] : card.cta;
+              const label = t(`contactLabels.${card.type}`);
+              const cta = t(`contactCtas.${card.type}`);
+
+              const hint = t(`contactHints.${card.type}`);
 
               return (
                 <article className="contact-option-card" key={card.type}>
                   <div className="contact-option-card__head">
                     <ContactIcon type={card.type} />
-                    <span className="contact-option-card__label">{label}</span>
+                    <div>
+                      <span className="contact-option-card__label">{label}</span>
+                      {hint ? <span className="contact-option-card__hint">{hint}</span> : null}
+                    </div>
                   </div>
                   {href ? (
                     <LtrText as="a" className="contact-option-card__value" href={href}>
                       {value}
                     </LtrText>
-                  ) : card.type === 'address' && isFa ? (
+                  ) : card.type === 'address' && (locale === 'fa' || locale === 'ar') ? (
                     <strong>{value}</strong>
                   ) : (
                     <LtrText as="strong">{value}</LtrText>
                   )}
-                  {href ? (
+                  {href && cta ? (
                     <>
                       {/* track: phone_click */}
                       {/* track: whatsapp_click */}
@@ -440,15 +412,24 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                         {cta}
                       </a>
                     </>
-                  ) : (
-                    <>
-                      {/* track: address_click */}
-                      <em data-status="pending">{cta}</em>
-                    </>
-                  )}
+                  ) : null}
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-section contact-section--light" data-section="what_we_review" aria-labelledby="contact-review-title">
+        <div className="container-shell contact-section__inner">
+          <h2 id="contact-review-title">{trustTitle}</h2>
+          <div className="contact-review-grid">
+            {trustItems.map((item) => (
+              <article className="contact-review-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -463,10 +444,10 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             </div>
             <p className="rfq-form__microcopy">{quickMicrocopy}</p>
             <div className="contact-guidance__list">
-              {page.guidance.cards.map((card) => (
-                <article key={card.title}>
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
+              {(['panel', 'roofing', 'cladding'] as const).map((key) => (
+                <article key={key}>
+                  <h3>{t(`guidanceCards.${key}.title`)}</h3>
+                  <p>{t(`guidanceCards.${key}.description`)}</p>
                 </article>
               ))}
             </div>
@@ -506,52 +487,57 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                   type="button"
                 >
                   <span>{String(index + 1).padStart(2, '0')}</span>
-                  {isFa ? faContactUxCopy.steps[index] : step.title}
+                  {t(`steps.${index}`)}
                 </button>
               ))}
             </div>
 
             <input className="rfq-form__honeypot" tabIndex={-1} autoComplete="off" {...register('website')} aria-hidden="true" />
 
+            <p className="rfq-form__start-prompt">{t('minimalStartPrompt')}</p>
+
             <fieldset className={activeStep === 0 ? 'rfq-fieldset is-active' : 'rfq-fieldset'}>
-              <legend>{isFa ? faContactUxCopy.steps[0] : page.form.steps[0].title}</legend>
+              <legend>{t('steps.0')}</legend>
               <label className="rfq-field">
                 <FieldLabel label={t('fields.name')} required />
                 <input {...register('name')} aria-invalid={Boolean(errors.name)} aria-required="true" autoComplete="name" />
                 {errors.name?.message ? <strong>{errors.name.message}</strong> : null}
               </label>
               <label className="rfq-field">
-                <FieldLabel label={t('fields.company')} />
-                <input {...register('company')} aria-invalid={Boolean(errors.company)} autoComplete="organization" />
-                {errors.company?.message ? <strong>{errors.company.message}</strong> : null}
-              </label>
-              <label className="rfq-field">
                 <FieldLabel label={t('fields.phone')} required />
                 <input {...register('phone')} aria-invalid={Boolean(errors.phone)} aria-required="true" autoComplete="tel" dir="ltr" type="tel" />
                 {errors.phone?.message ? <strong>{errors.phone.message}</strong> : null}
               </label>
-              <label className="rfq-field">
-                <FieldLabel label={t('fields.whatsapp')} />
-                <input {...register('whatsapp')} aria-invalid={Boolean(errors.whatsapp)} dir="ltr" type="tel" />
-                {errors.whatsapp?.message ? <strong>{errors.whatsapp.message}</strong> : null}
-              </label>
-              <label className="rfq-field">
-                <FieldLabel label={t('fields.email')} />
-                <input {...register('email')} aria-invalid={Boolean(errors.email)} autoComplete="email" dir="ltr" type="email" />
-                {errors.email?.message ? <strong>{errors.email.message}</strong> : null}
-              </label>
+              <div className="rfq-fieldset__secondary">
+                <p className="rfq-fieldset__secondary-label">{t('secondaryFieldsLabel')}</p>
+                <label className="rfq-field">
+                  <FieldLabel label={t('fields.company')} />
+                  <input {...register('company')} aria-invalid={Boolean(errors.company)} autoComplete="organization" />
+                  {errors.company?.message ? <strong>{errors.company.message}</strong> : null}
+                </label>
+                <label className="rfq-field">
+                  <FieldLabel label={t('fields.whatsapp')} />
+                  <input {...register('whatsapp')} aria-invalid={Boolean(errors.whatsapp)} dir="ltr" type="tel" />
+                  {errors.whatsapp?.message ? <strong>{errors.whatsapp.message}</strong> : null}
+                </label>
+                <label className="rfq-field">
+                  <FieldLabel label={t('fields.email')} />
+                  <input {...register('email')} aria-invalid={Boolean(errors.email)} autoComplete="email" dir="ltr" type="email" />
+                  {errors.email?.message ? <strong>{errors.email.message}</strong> : null}
+                </label>
+              </div>
             </fieldset>
 
             <fieldset className={activeStep === 1 ? 'rfq-fieldset is-active' : 'rfq-fieldset'}>
-              <legend>{isFa ? faContactUxCopy.steps[1] : page.form.steps[1].title}</legend>
-              <p className="rfq-fieldset__helper">{isFa ? faContactUxCopy.optionalGroupMicrocopy : t('quickMicrocopy')}</p>
+              <legend>{t('steps.1')}</legend>
+              <p className="rfq-fieldset__helper">{t('optionalGroupMicrocopy')}</p>
               <label className="rfq-field">
                 <FieldLabel label={t('fields.project_type')} />
                 <select {...register('project_type')} aria-invalid={Boolean(errors.project_type)}>
                   <option value="">{t('placeholders.select')}</option>
                   {projectTypeOptions.map((option) => (
                     <option key={option} value={option}>
-                      {isFa ? faContactUxCopy.projectTypes[option] ?? option : option}
+                      {projectTypeKeyMap[option] ? t(`projectTypes.${projectTypeKeyMap[option]}`) : option}
                     </option>
                   ))}
                 </select>
@@ -571,7 +557,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                   <option value="">{t('placeholders.select')}</option>
                   {projectStageOptions.map((option) => (
                     <option key={option} value={option}>
-                      {isFa ? faContactUxCopy.projectStages[option] ?? option : option}
+                      {projectStageKeyMap[option] ? t(`projectStages.${projectStageKeyMap[option]}`) : option}
                     </option>
                   ))}
                 </select>
@@ -579,15 +565,15 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             </fieldset>
 
             <fieldset className={activeStep === 2 ? 'rfq-fieldset is-active' : 'rfq-fieldset'}>
-              <legend>{isFa ? faContactUxCopy.steps[2] : page.form.steps[2].title}</legend>
-              <p className="rfq-fieldset__helper">{isFa ? faContactUxCopy.technicalGroupMicrocopy : t('fileHelp')}</p>
+              <legend>{t('steps.2')}</legend>
+              <p className="rfq-fieldset__helper">{t('technicalGroupMicrocopy')}</p>
               <div className="rfq-field rfq-field--full">
                 <FieldLabel label={t('fields.main_concern')} />
                 <div className="contact-check-grid">
                   {concernOptions.map((option) => (
                     <label key={option}>
                       <input type="checkbox" value={option} {...register('main_concern')} />
-                      {isFa ? faContactUxCopy.concerns[option] ?? option : option}
+                      {concernKeyMap[option] ? t(`concerns.${concernKeyMap[option]}`) : option}
                     </label>
                   ))}
                 </div>
@@ -631,20 +617,20 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             <div className="rfq-form__spam">{t('spamPlaceholder')}</div>
 
             <div className="rfq-form__assurance" aria-label={trustTitle}>
-              {trustBenefits.map((benefit) => (
-                <span key={benefit}>{benefit}</span>
+              {trustItems.map((item) => (
+                <span key={item.title}>{item.title}</span>
               ))}
             </div>
 
             <button className="rfq-form__submit" disabled={isSubmitting || submitState === 'success'} type="submit">
-              {submitState === 'success' ? t('sent') : isSubmitting ? page.form.submit.loading_label : page.form.submit.label}
+              {submitState === 'success' ? t('sent') : isSubmitting ? t('submitting') : t('submit')}
             </button>
 
             <p className="rfq-form__privacy">{t('privacy')}</p>
 
             <div className="rfq-form__feedback" aria-live="polite" ref={feedbackRef} tabIndex={-1}>
               <p className="rfq-form__success" hidden={submitState !== 'success'} role="status">
-                {page.form.submit.success_title} {page.form.submit.success_message}
+                {t('success')}
               </p>
               <p className="rfq-form__error" hidden={submitState !== 'error'} role="alert">
                 {t('error')}
@@ -654,36 +640,24 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
         </div>
       </section>
 
-      <section className="contact-section contact-section--light" data-section="trust_before_submit" aria-labelledby="trust-before-submit-title">
-        <div className="container-shell contact-section__inner">
-          <h2 id="trust-before-submit-title">{trustTitle}</h2>
-          <div className="contact-benefit-grid">
-            {trustBenefits.map((benefit) => (
-              <article key={benefit}>{benefit}</article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="contact-section" data-section="location_section" aria-labelledby="location-section-title">
         <div className="container-shell contact-location">
           <div>
             <h2 id="location-section-title">{locationTitle}</h2>
-            {isFa ? <p>{localizedAddress}</p> : <LtrText as="p">{localizedAddress}</LtrText>}
-            <em>{mapPending}</em>
+            {locale === 'fa' || locale === 'ar' ? <p>{localizedAddress}</p> : <LtrText as="p">{localizedAddress}</LtrText>}
           </div>
         </div>
       </section>
 
       <section className="contact-section contact-section--light" data-section="faq_section" aria-labelledby="contact-faq-title">
         <div className="container-shell contact-section__inner">
-          <h2 id="contact-faq-title">{page.faq.title}</h2>
+          <h2 id="contact-faq-title">{t('faq.title')}</h2>
           <div className="service-faq-list">
-            {page.faq.items.map((item) => (
-              <details className="service-faq-item" key={item.question}>
+            {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+              <details className="service-faq-item" key={i}>
                 {/* track: faq_expand */}
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
+                <summary>{t(`faq.items.${i}.question`)}</summary>
+                <p>{t(`faq.items.${i}.answer`)}</p>
               </details>
             ))}
           </div>
@@ -694,7 +668,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
         {/* track: sticky_mobile_cta_click */}
         <a href="#rfq-form">{heroContent.primaryCta}</a>
         {/* track: whatsapp_click */}
-        <a href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>{isFa ? 'واتساپ' : 'WhatsApp'}</a>
+        <a href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>{t('contactLabels.whatsapp')}</a>
       </div>
     </article>
   );

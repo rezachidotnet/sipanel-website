@@ -292,7 +292,87 @@
     "submitting": "Sending Request...",
     "sent": "Request sent",
     "success": "Your request has been received. SIPANEL will review the project details and contact you through the provided information.",
-    "error": "The request could not be sent safely. Please review the fields and try again."
+    "error": "The request could not be sent safely. Please review the fields and try again.",
+    "heroEyebrow": "Engineering Review",
+    "heroH1": "Submit Project Details. Receive Engineering Feedback.",
+    "heroSubheadline": "SIPANEL reviews system selection, waterproofing risks, and execution requirements before procurement begins.",
+    "heroPrimaryCta": "Request Engineering Review",
+    "heroSecondaryCta": "Contact via WhatsApp",
+    "heroTrustMicrocopy": "Name and phone number are enough to start.",
+    "heroPanelTitle": "How it works",
+    "heroPanelStep1": "1. Submit project details",
+    "heroPanelStep2": "2. SIPANEL reviews risks and requirements",
+    "heroPanelStep3": "3. Receive engineering feedback",
+    "contactTitle": "Contact SIPANEL Directly",
+    "contactLabels": {
+      "phone": "Office Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Technical Email",
+      "address": "Office Address"
+    },
+    "contactHints": {
+      "phone": "Call during business hours",
+      "whatsapp": "Fast response for project inquiries",
+      "email": "For drawings, documents, or detailed requests",
+      "address": "Isfahan, Iran"
+    },
+    "contactCtas": {
+      "phone": "Call SIPANEL",
+      "whatsapp": "Message on WhatsApp",
+      "email": "Send Email",
+      "address": ""
+    },
+    "formTitle": "Request Project Review",
+    "formIntro": "Start with your contact details. Project information is optional and can be completed after the initial consultation.",
+    "optionalGroupMicrocopy": "This section is optional; completing it helps us review your project more accurately.",
+    "minimalStartPrompt": "To start the engineering review, your name and phone number are enough.",
+    "secondaryFieldsLabel": "Additional contact details (optional)",
+    "technicalGroupMicrocopy": "If you have drawings or technical notes, add them here. You can submit the form without a file.",
+    "guidanceCards": {
+      "panel": {"title": "Panel System Projects", "description": "Panel selection, layout coordination, accessory planning, flashing logic, and installation sequencing."},
+      "roofing": {"title": "Roofing Projects", "description": "Standing seam, ZIP Tech, drainage paths, slope review, gutters, flashings, and leakage prevention."},
+      "cladding": {"title": "Cladding Projects", "description": "Facade layout, fixing logic, material optimization, joint alignment, edge details, and exterior execution."}
+    },
+    "projectStages": {
+      "concept": "Concept / Early Planning",
+      "designReview": "Design Review",
+      "procurement": "Procurement",
+      "beforeInstallation": "Before Installation",
+      "duringInstallation": "During Installation",
+      "existingProblem": "Existing Problem / Leakage"
+    },
+    "concerns": {
+      "leakageRisk": "Leakage Risk",
+      "materialWaste": "Material Waste",
+      "costControl": "Cost Control",
+      "executionDelay": "Execution Delay",
+      "systemSelection": "System Selection",
+      "shopDrawingReview": "Shop Drawing Review",
+      "installationQuality": "Installation Quality",
+      "procurementPlanning": "Procurement Planning"
+    },
+    "trustTitle": "What SIPANEL Reviews",
+    "trustItems": {
+      "0": {"title": "System Selection", "description": "Panel type, insulation core, and roof/facade system matched to project climate, loads, and usage."},
+      "1": {"title": "Waterproofing & Leakage Risk", "description": "Drainage paths, flashing details, sealing points, and joint logic checked before procurement."},
+      "2": {"title": "Execution & Coordination", "description": "Installation sequence, shop drawings, accessory scope, and site constraints reviewed before work begins."},
+      "3": {"title": "Material Optimization", "description": "Panel quantities, cut lists, and accessory planning coordinated to reduce waste and delay."}
+    },
+    "locationTitle": "SIPANEL Office",
+    "mapPending": "Verified map location pending.",
+    "faq": {
+      "title": "Common Questions Before Submitting",
+      "items": [
+        {"question": "Is the initial engineering review free?", "answer": "Yes. The first technical review of your project scope, system risks, and execution requirements is provided at no cost."},
+        {"question": "How quickly will SIPANEL respond?", "answer": "Initial feedback is typically provided within 1-2 business days after receiving project details."},
+        {"question": "Can I contact SIPANEL if the project is still in design phase?", "answer": "Yes. Early-stage consultation helps identify system selection, waterproofing, and coordination risks before they become costly during execution."},
+        {"question": "What documents can I submit?", "answer": "Drawings, site photos, or technical specifications in PDF, JPG, PNG, or DWG format. Documents are optional — you can start with a project description only."},
+        {"question": "What happens after I submit the request?", "answer": "SIPANEL reviews the submitted information, identifies key engineering risks, and contacts you with initial technical feedback and recommended next steps."},
+        {"question": "Does SIPANEL only work on large industrial projects?", "answer": "No. SIPANEL reviews projects of various scales — from single-building roofing to multi-structure industrial facilities."},
+        {"question": "Can SIPANEL review an existing leakage or execution problem?", "answer": "Yes. Existing problems including roof leakage, flashing failures, panel damage, and drainage issues can be reviewed for corrective engineering solutions."},
+        {"question": "Can international projects be reviewed?", "answer": "Yes. SIPANEL has experience with projects in Iran and neighboring countries and can review international project requirements remotely."}
+      ]
+    }
   },
   "hero": {
     "headline": "Industrial Building Envelopes, from Design to Execution",
