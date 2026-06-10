@@ -55,34 +55,27 @@ export type AboutLocaleContent = {
     }>;
     visual: AboutVisual;
   };
-  corePrinciples: {
+  executionApproach: {
     title: string;
-    principles: Array<{
+    intro: string;
+    pillars: Array<{
       title: string;
       description: string;
     }>;
   };
-  systemsOverview: {
+  leadership: {
     title: string;
-    systems: Array<{
-      title: string;
-      description: string;
-      cta: string;
-      href: string;
-    }>;
-  };
-  workflowProcess: {
-    title: string;
-    steps: Array<{
-      title: string;
-      description: string;
-    }>;
+    name: string;
+    role: string;
+    bio: string;
+    imageAlt: string;
   };
   conversionCta: {
     headline: string;
     text: string;
     primaryCta: string;
     secondaryCta: string;
+    phoneCta: string;
     contactHint: string;
   };
   stickyMobileCta: {
@@ -93,7 +86,7 @@ export type AboutLocaleContent = {
 
 const routeMap = aboutSipanelSpec.route as AboutRouteMap;
 
-const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'corePrinciples' | 'systemsOverview' | 'workflowProcess'>> = {
+const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'executionApproach' | 'leadership'>> = {
   en: {
     seo: {
       title: 'About SIPANEL | Industrial Envelope Engineering & Controlled Execution',
@@ -116,6 +109,7 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'coreP
       text: 'Request a technical consultation for your industrial panel, roofing, or cladding project.',
       primaryCta: 'Request Technical Consultation',
       secondaryCta: 'Contact via WhatsApp',
+      phoneCta: 'Call Us',
       contactHint: 'Verified contact data only.'
     },
     stickyMobileCta: {
@@ -145,6 +139,7 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'coreP
       text: 'برای پروژه پنل صنعتی، سقف یا کلادینگ خود مشاوره فنی درخواست کنید.',
       primaryCta: 'درخواست مشاوره فنی',
       secondaryCta: 'تماس از طریق واتساپ',
+      phoneCta: 'تماس تلفنی',
       contactHint: 'فقط اطلاعات تماس تاییدشده.'
     },
     stickyMobileCta: {
@@ -174,6 +169,7 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'coreP
       text: 'اطلب استشارة فنية لمشروع الألواح أو الأسقف أو الكسوة الصناعية.',
       primaryCta: 'طلب استشارة فنية',
       secondaryCta: 'التواصل عبر واتساب',
+      phoneCta: 'اتصل بنا',
       contactHint: 'بيانات التواصل الموثقة فقط.'
     },
     stickyMobileCta: {
@@ -203,6 +199,7 @@ const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'coreP
       text: 'Запросите техническую консультацию для вашего проекта панелей, кровли или облицовки.',
       primaryCta: 'Запросить техническую консультацию',
       secondaryCta: 'Связаться через WhatsApp',
+      phoneCta: 'Позвонить',
       contactHint: 'Только проверенные контактные данные.'
     },
     stickyMobileCta: {
@@ -366,296 +363,86 @@ const companyStory = {
   }
 >;
 
-const corePrinciples = {
+const executionApproach = {
   en: {
-    title: 'Core Execution Principles',
-    principles: [
-      {title: 'Engineering Before Installation', description: 'Project risk should be reviewed before site execution begins.'},
-      {
-        title: 'Waterproofing Logic Matters',
-        description: 'Drainage, flashings, overlaps, seams, and penetrations determine long-term roof performance.'
-      },
-      {
-        title: 'Layout Controls Quality',
-        description: 'Panel rhythm, facade alignment, and quantity planning affect execution quality and waste.'
-      },
-      {
-        title: 'Execution Needs Coordination',
-        description: 'Installation quality depends on sequencing, drawings, procurement, and inspection checkpoints.'
-      },
-      {
-        title: 'Technical Proof Over Claims',
-        description: 'Real details, diagrams, and execution proof matter more than marketing language.'
-      },
-      {
-        title: 'Industrial Projects Need Control',
-        description: 'Large industrial systems require planning, verification, and engineering discipline.'
-      }
+    title: 'How SIPANEL Controls Execution',
+    intro: 'Every industrial envelope project carries risk — in panel selection, waterproofing details, procurement timing, and installation quality. SIPANEL controls these risks through four engineering disciplines applied before and during execution.',
+    pillars: [
+      {title: 'Engineering Review Before Procurement', description: 'Project conditions, roof geometry, panel layout, drainage, flashing, and execution risks are reviewed before procurement starts.'},
+      {title: 'Technical Coordination Before Installation', description: 'Drawings, accessories, overlaps, installation sequence, and site constraints are coordinated before installation begins.'},
+      {title: 'Waterproofing and Detail Control', description: 'Drainage paths, gutters, flashing, sealing points, and foam continuity are planned and checked.'},
+      {title: 'Controlled Execution and Handover', description: 'Installation follows approved details, site checks, alignment control, and final review before handover.'}
     ]
   },
   fa: {
-    title: 'اصول اصلی اجرا',
-    principles: [
-      {title: 'مهندسی پیش از نصب', description: 'ریسک پروژه باید پیش از شروع اجرای سایت بررسی شود.'},
-      {
-        title: 'منطق آب‌بندی مهم است',
-        description: 'زهکشی، فلاشینگ‌ها، همپوشانی‌ها، درزها و نفوذها عملکرد بلندمدت سقف را تعیین می‌کنند.'
-      },
-      {
-        title: 'چیدمان کیفیت را کنترل می‌کند',
-        description: 'ریتم پنل، هم‌راستایی نما و برنامه‌ریزی مقدار، کیفیت اجرا و پرت را تحت تاثیر قرار می‌دهند.'
-      },
-      {
-        title: 'اجرا به هماهنگی نیاز دارد',
-        description: 'کیفیت نصب به توالی، نقشه‌ها، تامین و نقاط بازرسی وابسته است.'
-      },
-      {
-        title: 'شواهد فنی مهم‌تر از ادعاست',
-        description: 'جزئیات واقعی، دیاگرام‌ها و شواهد اجرا از زبان بازاریابی مهم‌ترند.'
-      },
-      {
-        title: 'پروژه‌های صنعتی کنترل می‌خواهند',
-        description: 'سیستم‌های صنعتی بزرگ به برنامه‌ریزی، تایید و انضباط مهندسی نیاز دارند.'
-      }
+    title: 'رویکرد اجرایی SIPANEL',
+    intro: 'هر پروژه پوشش صنعتی ریسک دارد — در انتخاب پنل، جزئیات آب‌بندی، زمان‌بندی تأمین و کیفیت نصب. سی‌پانل این ریسک‌ها را با چهار رویکرد مهندسی پیش و حین اجرا کنترل می‌کند.',
+    pillars: [
+      {title: 'بازبینی مهندسی پیش از خرید', description: 'شرایط پروژه، هندسه سقف، چیدمان پانل، زهکشی، فلاشینگ و ریسک‌های اجرا پیش از شروع تأمین بررسی می‌شوند.'},
+      {title: 'هماهنگی فنی پیش از نصب', description: 'نقشه‌ها، متعلقات، همپوشانی‌ها، ترتیب نصب و محدودیت‌های سایت پیش از شروع نصب هماهنگ می‌شوند.'},
+      {title: 'کنترل آب‌بندی و جزئیات اجرایی', description: 'مسیرهای زهکشی، ناودان‌ها، فلاشینگ، نقاط آب‌بندی و تداوم فوم برنامه‌ریزی و بازبینی می‌شوند.'},
+      {title: 'اجرای کنترل‌شده و تحویل', description: 'نصب بر اساس جزئیات تأییدشده، بازبینی سایت، کنترل هم‌راستایی و بررسی نهایی پیش از تحویل انجام می‌شود.'}
     ]
   },
   ar: {
-    title: 'مبادئ التنفيذ الأساسية',
-    principles: [
-      {title: 'الهندسة قبل التركيب', description: 'يجب مراجعة مخاطر المشروع قبل بدء التنفيذ في الموقع.'},
-      {
-        title: 'منطق العزل المائي مهم',
-        description: 'التصريف والفلاشينغ والتراكبات والدرزات والاختراقات تحدد أداء السقف على المدى الطويل.'
-      },
-      {
-        title: 'التوزيع يتحكم في الجودة',
-        description: 'إيقاع الألواح، ومحاذاة الواجهات، وتخطيط الكميات تؤثر في جودة التنفيذ والهدر.'
-      },
-      {
-        title: 'التنفيذ يحتاج تنسيقًا',
-        description: 'تعتمد جودة التركيب على التسلسل والرسومات والمشتريات ونقاط الفحص.'
-      },
-      {
-        title: 'الدليل الفني أهم من الادعاء',
-        description: 'التفاصيل الحقيقية والرسومات وشواهد التنفيذ أهم من لغة التسويق.'
-      },
-      {
-        title: 'المشاريع الصناعية تحتاج ضبطًا',
-        description: 'تحتاج الأنظمة الصناعية الكبيرة إلى التخطيط والتحقق والانضباط الهندسي.'
-      }
+    title: 'نهج SIPANEL في ضبط التنفيذ',
+    intro: 'كل مشروع غلاف صناعي يحمل مخاطر — في اختيار الألواح وتفاصيل العزل المائي وتوقيت التوريد وجودة التركيب. تضبط SIPANEL هذه المخاطر عبر أربعة مبادئ هندسية تُطبق قبل وأثناء التنفيذ.',
+    pillars: [
+      {title: 'المراجعة الهندسية قبل الشراء', description: 'تُراجع ظروف المشروع وهندسة السقف وتوزيع الألواح والتصريف والفلاشينغ ومخاطر التنفيذ قبل بدء التوريد.'},
+      {title: 'التنسيق الفني قبل التركيب', description: 'تُنسق الرسومات والملحقات والتراكبات وتسلسل التركيب وقيود الموقع قبل بدء التركيب.'},
+      {title: 'ضبط العزل المائي والتفاصيل', description: 'تُخطط وتُفحص مسارات التصريف والمزاريب والفلاشينغ ونقاط الختم واستمرارية العزل.'},
+      {title: 'التنفيذ المنضبط والتسليم', description: 'يتبع التركيب التفاصيل المعتمدة وفحوص الموقع وضبط المحاذاة والمراجعة النهائية قبل التسليم.'}
     ]
   },
   ru: {
-    title: 'Основные принципы выполнения',
-    principles: [
-      {title: 'Сначала инженерия, потом монтаж', description: 'Риск проекта нужно проверять до начала работ на площадке.'},
-      {
-        title: 'Логика гидроизоляции имеет значение',
-        description: 'Водоотвод, примыкания, нахлёсты, швы и проходки определяют долговечность кровли.'
-      },
-      {
-        title: 'Раскладка управляет качеством',
-        description: 'Ритм панелей, выравнивание фасада и планирование объёмов влияют на качество и отходы.'
-      },
-      {
-        title: 'Выполнение требует координации',
-        description: 'Качество монтажа зависит от последовательности, чертежей, закупок и точек контроля.'
-      },
-      {
-        title: 'Техническое доказательство важнее заявлений',
-        description: 'Реальные узлы, схемы и доказательства выполнения важнее маркетинговых формулировок.'
-      },
-      {
-        title: 'Промышленные проекты требуют контроля',
-        description: 'Крупные промышленные системы требуют планирования, проверки и инженерной дисциплины.'
-      }
+    title: 'Как SIPANEL контролирует выполнение',
+    intro: 'Каждый проект промышленной оболочки несёт риск — в выборе панелей, деталях гидроизоляции, сроках поставок и качестве монтажа. SIPANEL контролирует эти риски с помощью четырёх инженерных дисциплин, применяемых до и во время выполнения.',
+    pillars: [
+      {title: 'Инженерная проверка до закупки', description: 'Условия проекта, геометрия кровли, раскладка панелей, водоотвод, примыкания и риски выполнения проверяются до начала закупок.'},
+      {title: 'Техническая координация до монтажа', description: 'Чертежи, комплектующие, нахлёсты, последовательность монтажа и ограничения площадки согласуются до начала монтажа.'},
+      {title: 'Контроль гидроизоляции и деталей', description: 'Пути водоотвода, желоба, примыкания, точки герметизации и непрерывность утепления планируются и проверяются.'},
+      {title: 'Контролируемый монтаж и сдача', description: 'Монтаж выполняется по утверждённым деталям с проверками на площадке, контролем выравнивания и финальной ревизией перед сдачей.'}
     ]
   }
-} as Record<Locale, {title: string; principles: Array<{title: string; description: string}>}>;
+} as Record<Locale, {title: string; intro: string; pillars: Array<{title: string; description: string}>}>;
 
-const systemsOverview = {
+const leadership = {
   en: {
-    title: 'Industrial Envelope Systems',
-    systems: [
-      {
-        title: 'Sandwich Panel Systems',
-        description: 'Panel layout, insulation systems, accessories, flashing coordination, and installation control.',
-        cta: 'Explore Panel Systems',
-        href: '/systems/sandwich-panel-systems'
-      },
-      {
-        title: 'Standing Seam & ZIP Tech Roofing',
-        description: 'Waterproof roofing systems designed around drainage logic, concealed fastening, and controlled execution.',
-        cta: 'Explore Roofing Systems',
-        href: '/systems/standing-seam-zip-tech-roofing'
-      },
-      {
-        title: 'Aluminium Cladding & Covering',
-        description: 'Industrial facade systems coordinated through layout control, fixing logic, and precise execution.',
-        cta: 'Explore Cladding Systems',
-        href: '/systems/aluminium-cladding-covering'
-      }
-    ]
+    title: 'Technical Leadership',
+    name: 'A.M. Taleghani',
+    role: 'CEO & Technical Director',
+    bio: 'SIPANEL was built to bridge the gap between design, procurement, and execution in industrial building envelope projects. Its technical leadership focuses on reducing execution errors, coordinating before procurement, controlling waterproofing details, and delivering reliable industrial envelope systems.',
+    imageAlt: 'A.M. Taleghani — CEO & Technical Director of SIPANEL'
   },
   fa: {
-    title: 'سیستم های پوشش صنعتی',
-    systems: [
-      {
-        title: 'سیستم‌های پنل ساندویچی',
-        description: 'چیدمان پنل، عایق، متعلقات، هماهنگی فلاشینگ و کنترل نصب.',
-        cta: 'مشاهده سیستم‌های پنل',
-        href: '/systems/sandwich-panel-systems'
-      },
-      {
-        title: 'سقف Standing Seam و ZIP Tech',
-        description: 'سیستم‌های سقف آب‌بند بر پایه منطق زهکشی، اتصال پنهان و اجرای کنترل‌شده.',
-        cta: 'مشاهده سیستم‌های سقف',
-        href: '/systems/standing-seam-zip-tech-roofing'
-      },
-      {
-        title: 'کلادینگ و پوشش آلومینیومی',
-        description: 'سیستم‌های نمای صنعتی با کنترل چیدمان، منطق فیکسینگ و اجرای دقیق.',
-        cta: 'مشاهده سیستم‌های کلادینگ',
-        href: '/systems/aluminium-cladding-covering'
-      }
-    ]
+    title: 'رهبری فنی',
+    name: 'A.M. Taleghani',
+    role: 'مدیرعامل و مدیر فنی',
+    bio: 'SIPANEL با نگاه مهندسی به فاصله میان طراحی، تأمین و اجرای سیستم‌های پوشش صنعتی شکل گرفته است. تمرکز مدیریت فنی شرکت بر کاهش خطاهای اجرایی، هماهنگی پیش از خرید، کنترل آب‌بندی و تحویل قابل اتکا در پروژه‌های صنعتی است.',
+    imageAlt: 'A.M. Taleghani — مدیرعامل و مدیر فنی SIPANEL'
   },
   ar: {
-    title: 'أنظمة الغلاف الصناعي',
-    systems: [
-      {
-        title: 'أنظمة ألواح الساندويش',
-        description: 'توزيع الألواح، والعزل، والملحقات، وتنسيق الفلاشينغ، وضبط التركيب.',
-        cta: 'استكشاف أنظمة الألواح',
-        href: '/systems/sandwich-panel-systems'
-      },
-      {
-        title: 'Standing Seam وZIP Tech للأسقف',
-        description: 'أنظمة أسقف مقاومة للماء مبنية على منطق التصريف، والتثبيت المخفي، والتنفيذ المنضبط.',
-        cta: 'استكشاف أنظمة الأسقف',
-        href: '/systems/standing-seam-zip-tech-roofing'
-      },
-      {
-        title: 'كسوة وتغطية الألمنيوم',
-        description: 'أنظمة واجهات صناعية بتنسيق التوزيع ومنطق التثبيت والتنفيذ الدقيق.',
-        cta: 'استكشاف أنظمة الكسوة',
-        href: '/systems/aluminium-cladding-covering'
-      }
-    ]
+    title: 'القيادة الفنية',
+    name: 'A.M. Taleghani',
+    role: 'الرئيس التنفيذي والمدير الفني',
+    bio: 'تأسست SIPANEL لسد الفجوة بين التصميم والتوريد والتنفيذ في مشاريع الغلاف الصناعي. تركز القيادة الفنية على تقليل أخطاء التنفيذ والتنسيق قبل الشراء وضبط تفاصيل العزل المائي وتسليم أنظمة غلاف صناعية موثوقة.',
+    imageAlt: 'A.M. Taleghani — الرئيس التنفيذي والمدير الفني لـ SIPANEL'
   },
   ru: {
-    title: 'Системы промышленной оболочки',
-    systems: [
-      {
-        title: 'Системы сэндвич-панелей',
-        description: 'Раскладка панелей, утепление, комплектующие, согласование примыканий и контроль монтажа.',
-        cta: 'Смотреть системы панелей',
-        href: '/systems/sandwich-panel-systems'
-      },
-      {
-        title: 'Кровля Standing Seam и ZIP Tech',
-        description: 'Гидроизоляционные кровли, спроектированные вокруг логики водоотвода, скрытого крепежа и контролируемого выполнения.',
-        cta: 'Смотреть системы кровли',
-        href: '/systems/standing-seam-zip-tech-roofing'
-      },
-      {
-        title: 'Алюминиевая облицовка и покрытие',
-        description: 'Промышленные фасадные системы с контролем раскладки, логики крепления и точного выполнения.',
-        cta: 'Смотреть системы облицовки',
-        href: '/systems/aluminium-cladding-covering'
-      }
-    ]
+    title: 'Техническое руководство',
+    name: 'A.M. Taleghani',
+    role: 'Генеральный директор и технический директор',
+    bio: 'SIPANEL создан для устранения разрыва между проектированием, снабжением и выполнением в проектах промышленных оболочек. Техническое руководство сосредоточено на сокращении ошибок выполнения, координации до закупки, контроле гидроизоляции и надёжной поставке промышленных оболочек.',
+    imageAlt: 'A.M. Taleghani — Генеральный и технический директор SIPANEL'
   }
-} as Record<
-  Locale,
-  {
-    title: string;
-    systems: Array<{title: string; description: string; cta: string; href: string}>;
-  }
->;
-
-const workflowProcess = {
-  en: {
-    title: 'How SIPANEL Approaches Industrial Projects',
-    steps: [
-      {title: 'Project Review', description: 'Review project conditions, system requirements, and execution risks.'},
-      {
-        title: 'Technical Coordination',
-        description: 'Coordinate drawings, drainage logic, details, accessories, and procurement planning.'
-      },
-      {
-        title: 'Execution Planning',
-        description: 'Define installation sequencing, inspection points, and quality control flow.'
-      },
-      {
-        title: 'Controlled Installation',
-        description: 'Execute according to technical standards, coordination logic, and engineering review.'
-      }
-    ]
-  },
-  fa: {
-    title: 'SIPANEL چگونه پروژه‌های صنعتی را پیش می‌برد',
-    steps: [
-      {title: 'بازبینی پروژه', description: 'شرایط پروژه، نیازهای سیستم و ریسک‌های اجرا بررسی می‌شوند.'},
-      {
-        title: 'هماهنگی فنی',
-        description: 'نقشه‌ها، منطق زهکشی، جزئیات، متعلقات و برنامه‌ریزی تامین هماهنگ می‌شوند.'
-      },
-      {
-        title: 'برنامه‌ریزی اجرا',
-        description: 'توالی نصب، نقاط بازرسی و جریان کنترل کیفیت تعریف می‌شود.'
-      },
-      {
-        title: 'نصب کنترل‌شده',
-        description: 'اجرا مطابق استانداردهای فنی، منطق هماهنگی و بازبینی مهندسی انجام می‌شود.'
-      }
-    ]
-  },
-  ar: {
-    title: 'كيف تتعامل SIPANEL مع المشاريع الصناعية',
-    steps: [
-      {title: 'مراجعة المشروع', description: 'تُراجع ظروف المشروع ومتطلبات النظام ومخاطر التنفيذ.'},
-      {
-        title: 'التنسيق الفني',
-        description: 'تُنسق الرسومات ومنطق التصريف والتفاصيل والملحقات وتخطيط المشتريات.'
-      },
-      {
-        title: 'تخطيط التنفيذ',
-        description: 'يُحدد تسلسل التركيب ونقاط الفحص ومسار ضبط الجودة.'
-      },
-      {
-        title: 'تركيب منضبط',
-        description: 'يُنفذ العمل وفق المعايير الفنية ومنطق التنسيق والمراجعة الهندسية.'
-      }
-    ]
-  },
-  ru: {
-    title: 'Как SIPANEL подходит к промышленным проектам',
-    steps: [
-      {title: 'Проверка проекта', description: 'Проверяются условия проекта, требования системы и риски выполнения.'},
-      {
-        title: 'Техническая координация',
-        description: 'Согласуются чертежи, логика водоотвода, детали, комплектующие и закупки.'
-      },
-      {
-        title: 'Планирование выполнения',
-        description: 'Определяются последовательность монтажа, точки контроля и поток качества.'
-      },
-      {
-        title: 'Контролируемый монтаж',
-        description: 'Выполнение идёт по техническим стандартам, логике координации и инженерной проверке.'
-      }
-    ]
-  }
-} as Record<Locale, {title: string; steps: Array<{title: string; description: string}>}>;
+} as Record<Locale, {title: string; name: string; role: string; bio: string; imageAlt: string}>;
 
 function buildLocaleContent(locale: Locale): AboutLocaleContent {
   return {
     ...aboutCopy[locale],
     companyStory: companyStory[locale],
-    corePrinciples: corePrinciples[locale],
-    systemsOverview: systemsOverview[locale],
-    workflowProcess: workflowProcess[locale]
+    executionApproach: executionApproach[locale],
+    leadership: leadership[locale]
   };
 }
 

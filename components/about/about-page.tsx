@@ -1,8 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import {useState} from 'react';
-import {LtrText} from '@/components/bidi/ltr-text';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import {
   buildAboutBreadcrumbSchema,
@@ -11,9 +9,7 @@ import {
   type AboutLocaleContent,
   type AboutPageData
 } from '@/lib/about/about-page';
-import aboutHeroMain from '@/assets/projects/mahshahr_taxi/photos/mahshahr_taxi-hero-desktop.webp';
-import aboutHeroSmallB from '@/assets/projects/tabas/photos/tabas-card.webp';
-import aboutHeroSmallC from '@/assets/projects/megaparsmall-atrium/photos/megaparsmall-atrium-card.webp';
+import leadershipPhoto from '@/assets/about/leadership/am-taleghani.webp';
 
 type Props = {
   locale: Locale;
@@ -49,61 +45,6 @@ function LinkedPersianText({text}: {text: string}) {
   ));
 }
 
-function ProjectPhotoCollage({alt}: {alt: string}) {
-  return (
-    <div className="about-story__collage" aria-label={alt}>
-      <div className="about-story__collage-main">
-        <Image src={aboutHeroMain} alt={alt} fill priority sizes="(max-width: 767px) 100vw, 36vw" />
-      </div>
-      <div className="about-story__collage-stack">
-        <div>
-          <Image src={aboutHeroSmallB} alt={alt} fill sizes="(max-width: 767px) 50vw, 16vw" />
-        </div>
-        <div>
-          <Image src={aboutHeroSmallC} alt={alt} fill sizes="(max-width: 767px) 50vw, 16vw" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function CorePrinciplesAccordion({locale, title, principles}: {locale: Locale; title: string; principles: Array<{title: string; description: string}>}) {
-  const [active, setActive] = useState(principles[0]?.title ?? '');
-  const dir = getDirection(locale);
-
-  return (
-    <div className="about-principles" dir={dir}>
-      <header className="about-section__header">
-        <h2>{title}</h2>
-      </header>
-      <div className="about-principles__grid">
-        {principles.map((principle, index) => {
-          const isOpen = active === principle.title;
-
-          return (
-            <article className={isOpen ? 'about-principle-card is-open' : 'about-principle-card'} key={principle.title}>
-              <h3>
-                <button
-                  aria-expanded={isOpen}
-                  className="about-principle-card__button"
-                  onClick={() => setActive((current) => (current === principle.title ? '' : principle.title))}
-                  type="button"
-                >
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  {principle.title}
-                </button>
-              </h3>
-              <div className="about-principle-card__panel" hidden={!isOpen}>
-                <p>{principle.description}</p>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 function HeritageHeroSection({content}: SectionProps) {
   const heritageParagraphs = content.companyStory.paragraphs ?? [];
   const hasHeritageStory = heritageParagraphs.length > 0;
@@ -130,13 +71,6 @@ function HeritageHeroSection({content}: SectionProps) {
         </div>
 
         <div className="about-story__visual">
-          {hasHeritageStory ? (
-            <ProjectPhotoCollage alt={content.companyStory.visual.alt} />
-          ) : (
-            <div className="about-story__image">
-              <Image src={content.companyStory.visual.image} alt={content.companyStory.visual.alt} fill sizes="(max-width: 767px) 100vw, 40vw" />
-            </div>
-          )}
           <div className="about-story__visual-note">
             <strong>SIPANEL</strong>
             <p>{content.hero.trustMicrocopy}</p>
@@ -182,32 +116,20 @@ function HeritageHeroSection({content}: SectionProps) {
   );
 }
 
-function CorePrinciplesSection({locale, content}: SectionProps) {
+function UnifiedExecutionApproachSection({content}: SectionProps) {
   return (
-    <section className="about-section about-section--light" data-section="core_principles" aria-labelledby="about-principles-title">
-      <div className="container-shell about-section__inner">
-        <CorePrinciplesAccordion locale={locale} title={content.corePrinciples.title} principles={content.corePrinciples.principles} />
-      </div>
-    </section>
-  );
-}
-
-function SystemsOverviewSection({content}: {content: AboutLocaleContent}) {
-  return (
-    <section className="about-section" data-section="systems_overview" aria-labelledby="about-systems-title" id="systems-overview">
+    <section className="about-section about-section--light" data-section="execution_approach" aria-labelledby="about-approach-title">
       <div className="container-shell about-section__inner">
         <header className="about-section__header">
-          <h2 id="about-systems-title">{content.systemsOverview.title}</h2>
+          <h2 id="about-approach-title">{content.executionApproach.title}</h2>
+          <p>{content.executionApproach.intro}</p>
         </header>
-        <div className="service-card-grid about-systems-grid">
-          {content.systemsOverview.systems.map((system) => (
-            <article className="service-card about-system-card" key={system.title}>
-              <h3>{system.title}</h3>
-              <p>{system.description}</p>
-              {/* track: system_card_click */}
-              <Link href={system.href} className="about-system-card__link">
-                {system.cta}
-              </Link>
+        <div className="about-approach-grid">
+          {content.executionApproach.pillars.map((pillar, index) => (
+            <article className="about-approach-card" key={pillar.title}>
+              <span className="about-approach-card__number">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.description}</p>
             </article>
           ))}
         </div>
@@ -216,23 +138,28 @@ function SystemsOverviewSection({content}: {content: AboutLocaleContent}) {
   );
 }
 
-function WorkflowProcessSection({content}: {content: AboutLocaleContent}) {
+function LeadershipSection({content}: SectionProps) {
   return (
-    <section className="about-section about-section--light" data-section="workflow_process" aria-labelledby="about-workflow-title">
+    <section className="about-section" data-section="leadership" aria-labelledby="about-leadership-title">
       <div className="container-shell about-section__inner">
         <header className="about-section__header">
-          <h2 id="about-workflow-title">{content.workflowProcess.title}</h2>
+          <h2 id="about-leadership-title">{content.leadership.title}</h2>
         </header>
-        <div className="service-process-list about-workflow-list">
-          {content.workflowProcess.steps.map((step, index) => (
-            <article className="service-process-item about-process-item" key={step.title}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </div>
-            </article>
-          ))}
+        <div className="about-leadership">
+          <div className="about-leadership__photo">
+            {/* TODO: Replace with final approved founder portrait when available */}
+            <Image
+              src={leadershipPhoto}
+              alt={content.leadership.imageAlt}
+              fill
+              sizes="(max-width: 767px) 100vw, 280px"
+            />
+          </div>
+          <div className="about-leadership__content">
+            <h3>{content.leadership.name}</h3>
+            <span className="about-leadership__role">{content.leadership.role}</span>
+            <p>{content.leadership.bio}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -257,10 +184,10 @@ function FinalCTASection({content, page}: {content: AboutLocaleContent; page: Ab
           <a className="button-secondary" href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>
             {content.conversionCta.secondaryCta}
           </a>
-          <div className="about-conversion__contact">
-            {/* track: phone_click */}
-            <LtrText as="a" href={`tel:${page.contact.phone.replace(/\s/g, '')}`}>{page.contact.phone}</LtrText>
-          </div>
+          {/* track: phone_click */}
+          <a className="button-secondary" href={`tel:${page.contact.phone.replace(/\s/g, '')}`}>
+            {content.conversionCta.phoneCta}
+          </a>
         </div>
       </div>
     </section>
@@ -289,9 +216,8 @@ export function AboutPage({locale, page}: Props) {
       <SchemaPlaceholder schema={buildAboutOrganizationSchema(locale)} />
 
       <HeritageHeroSection locale={locale} content={content} />
-      <CorePrinciplesSection locale={locale} content={content} />
-      <SystemsOverviewSection content={content} />
-      <WorkflowProcessSection content={content} />
+      <UnifiedExecutionApproachSection locale={locale} content={content} />
+      <LeadershipSection locale={locale} content={content} />
       <FinalCTASection content={content} page={page} />
       <StickyMobileCTA content={content} page={page} />
     </article>

@@ -7614,13 +7614,88 @@ button[aria-disabled='true'] {
   text-underline-offset: 4px;
 }
 
-.about-workflow-list {
+.about-approach-grid {
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
-.about-process-item {
-  align-items: start;
+.about-approach-card {
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  padding: 20px;
+}
+
+.about-approach-card__number {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-orange-primary);
+  border-radius: 50%;
+  color: var(--color-orange-primary);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.about-approach-card h3 {
+  margin: 12px 0 8px;
+  color: var(--color-text-primary);
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.about-approach-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.about-leadership {
+  display: grid;
+  gap: 24px;
+}
+
+.about-leadership__photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-width: 220px;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-card);
+  background: var(--color-gray-background);
+}
+
+.about-leadership__photo img {
+  object-fit: cover;
+}
+
+.about-leadership__content h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 22px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.about-leadership__role {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-orange-primary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.about-leadership__content p {
+  margin: 16px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 60ch;
 }
 
 .about-conversion {
@@ -8974,6 +9049,15 @@ button[aria-disabled='true'] {
 
   .about-principles__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-approach-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-leadership {
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
   }
 
   .about-conversion__inner {
