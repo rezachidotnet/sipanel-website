@@ -5,6 +5,9 @@ import armyHospitalCard from '@/assets/projects/army-hospital/photos/army-hospit
 import tabasCard from '@/assets/projects/tabas/photos/tabas-card.webp';
 import mahshahrTaxiCard from '@/assets/projects/mahshahr_taxi/photos/mahshahr_taxi-card.webp';
 import sandwichPanelHero from '@/assets/systems/sandwich-panel/hero-desktop.webp';
+import shopDrawingsImage from '@/assets/technical/shop-drawings/shop-drawings-main.webp';
+import gutterFlashingImage from '@/assets/technical/waterproofing/gutter-flashing-desktop.webp';
+import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 
 type ServiceSystemPageSpec = {
   id: string;
@@ -325,7 +328,10 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
       secondaryCta: isFa ? fa.hero.secondaryCta : page.hero.secondary_cta,
       visualDirection: page.hero.visual_direction,
       visual: sandwichPanelHero,
-      visualAlt: isFa ? 'نصب ساندویچ پانل سقف صنعتی' : 'Industrial sandwich panel roof installation'
+      visualAlt: isFa ? 'نصب ساندویچ پانل سقف صنعتی' : 'Industrial sandwich panel roof installation',
+      trustMicrocopy: isFa
+        ? 'بیش از ۲۰۰ پروژه صنعتی با هماهنگی مهندسی SIPANEL اجرا شده است.'
+        : '200+ industrial projects executed with SIPANEL engineering coordination.'
     },
     problemContext: {
       title: isFa ? fa.problemContext.title : page.problem_context.title,
@@ -380,10 +386,29 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
       applications: isFa ? fa.systemApplications.applications : page.applications
     },
     technicalProof: {
-      title: isFa ? fa.technicalProof.title : 'Technical Proof',
+      title: isFa ? fa.technicalProof.title : 'Engineering Proof',
       description: '',
       requiredVisuals: [],
-      assets: isFa ? fa.technicalProof.assets.map((a) => ({title: a.title, description: a.description})) : undefined
+      assets: [
+        {
+          title: isFa ? 'نقشه شاپ‌دراوینگ' : 'Shop Drawing',
+          description: isFa ? 'نقشه چیدمان پانل و جزئیات اتصال پیش از تأمین' : 'Panel layout and connection details coordinated before procurement.',
+          image: shopDrawingsImage,
+          alt: isFa ? 'نمونه شاپ‌دراوینگ ساندویچ پانل' : 'Sandwich panel shop drawing example'
+        },
+        {
+          title: isFa ? 'جزئیات آب‌بندی' : 'Waterproofing Detail',
+          description: isFa ? 'جزئیات فلاشینگ، ناودان و آب‌بندی درز' : 'Flashing, gutter, and joint sealing details reviewed before installation.',
+          image: gutterFlashingImage,
+          alt: isFa ? 'جزئیات فلاشینگ و آب‌بندی' : 'Flashing and waterproofing detail'
+        },
+        {
+          title: isFa ? 'فهرست متریال (BOM)' : 'BOM / Material Takeoff',
+          description: isFa ? 'فهرست متریال و برآورد حجم تأمین هماهنگ با شاپ‌دراوینگ' : 'Material list and quantity takeoff coordinated with shop drawings.',
+          image: bomMtoImage,
+          alt: isFa ? 'نمونه فهرست متریال و BOM' : 'BOM and material takeoff example'
+        }
+      ]
     },
     processWorkflow: {
       title: '',

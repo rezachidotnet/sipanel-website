@@ -254,7 +254,53 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
         </div>
       </section>
 
-      <section className="service-section" data-section="sipanel_engineering_approach" aria-labelledby="service-approach-title">
+      <section
+        id="service-related-case-studies"
+        className="service-section"
+        data-section="related_case_studies"
+        aria-labelledby="service-cases-title"
+      >
+        <div className="container-shell service-section__inner">
+          <header>
+            <h2 id="service-cases-title">{page.relatedCaseStudies.title}</h2>
+            {page.relatedCaseStudies.intro ? <p>{page.relatedCaseStudies.intro}</p> : null}
+          </header>
+          {hasCaseStudies ? (
+            <div className="service-case-grid" data-asset-status="available">
+              {page.relatedCaseStudies.cases?.map((project) => (
+                <article className="service-case-card" key={project.projectName}>
+                  <div className="service-case-card__media" data-asset-status={project.image ? 'available' : 'pending_project_proof'}>
+                    {project.image ? (
+                      <Image src={project.image} alt={project.projectName} fill sizes="(max-width: 767px) 84vw, 30vw" />
+                    ) : (
+                      <div className="service-technical-placeholder" aria-label={project.projectName} role="img">
+                        <span />
+                        <span />
+                        <span />
+                      </div>
+                    )}
+                  </div>
+                  <h3>{project.projectName}</h3>
+                  <p>{project.location}{project.areaM2 ? ` — ${project.areaM2}` : ''}</p>
+                  <dl>
+                    <dt>{labels.challenge}</dt>
+                    <dd>{project.challenge}</dd>
+                    <dt>{labels.result}</dt>
+                    <dd>{project.measuredResult}</dd>
+                  </dl>
+                  {project.href ? (
+                    <Link href={project.href} onClick={() => trackCaseStudyEvent('related_case_study_click', {component_id: page.id, case_study_name: project.projectName})}>
+                      {labels.viewProject}
+                    </Link>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="service-section service-section--light" data-section="sipanel_engineering_approach" aria-labelledby="service-approach-title">
         <div className="container-shell service-section__inner">
           <header>
             <h2 id="service-approach-title">{page.engineeringApproach.title}</h2>
@@ -393,52 +439,6 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
               <li key={checkpoint}>{checkpoint}</li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section
-        id="service-related-case-studies"
-        className="service-section service-section--light"
-        data-section="related_case_studies"
-        aria-labelledby="service-cases-title"
-      >
-        <div className="container-shell service-section__inner">
-          <header>
-            <h2 id="service-cases-title">{page.relatedCaseStudies.title}</h2>
-            {page.relatedCaseStudies.intro ? <p>{page.relatedCaseStudies.intro}</p> : null}
-          </header>
-          {hasCaseStudies ? (
-            <div className="service-case-grid" data-asset-status="available">
-              {page.relatedCaseStudies.cases?.map((project) => (
-                <article className="service-case-card" key={project.projectName}>
-                  <div className="service-case-card__media" data-asset-status={project.image ? 'available' : 'pending_project_proof'}>
-                    {project.image ? (
-                      <Image src={project.image} alt={project.projectName} fill sizes="(max-width: 767px) 84vw, 30vw" />
-                    ) : (
-                      <div className="service-technical-placeholder" aria-label={project.projectName} role="img">
-                        <span />
-                        <span />
-                        <span />
-                      </div>
-                    )}
-                  </div>
-                  <h3>{project.projectName}</h3>
-                  <p>{project.location}{project.areaM2 ? ` — ${project.areaM2}` : ''}</p>
-                  <dl>
-                    <dt>{labels.challenge}</dt>
-                    <dd>{project.challenge}</dd>
-                    <dt>{labels.result}</dt>
-                    <dd>{project.measuredResult}</dd>
-                  </dl>
-                  {project.href ? (
-                    <Link href={project.href} onClick={() => trackCaseStudyEvent('related_case_study_click', {component_id: page.id, case_study_name: project.projectName})}>
-                      {labels.viewProject}
-                    </Link>
-                  ) : null}
-                </article>
-              ))}
-            </div>
-          ) : null}
         </div>
       </section>
 
