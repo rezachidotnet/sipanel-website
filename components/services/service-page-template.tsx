@@ -288,11 +288,6 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                     <dt>{labels.result}</dt>
                     <dd>{project.measuredResult}</dd>
                   </dl>
-                  {project.href ? (
-                    <Link href={project.href} onClick={() => trackCaseStudyEvent('related_case_study_click', {component_id: page.id, case_study_name: project.projectName})}>
-                      {labels.viewProject}
-                    </Link>
-                  ) : null}
                 </article>
               ))}
             </div>
