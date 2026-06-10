@@ -481,6 +481,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
               trackRfqStartOnce();
             }}
             onSubmit={(event) => {
+              event.preventDefault();
               hasSubmittedRef.current = true;
               const form = formRef.current;
               if (form) {
@@ -488,11 +489,11 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                 for (const field of textFields) {
                   const el = form.elements.namedItem(field) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
                   if (el) {
-                    setValue(field, el.value, {shouldValidate: false});
+                    setValue(field, el.value, {shouldValidate: false, shouldDirty: true});
                   }
                 }
               }
-              handleSubmit(onSubmit, onInvalidSubmit)(event);
+              void handleSubmit(onSubmit, onInvalidSubmit)();
             }}
           >
             <div className="rfq-steps" aria-label={t('stepsLabel')}>

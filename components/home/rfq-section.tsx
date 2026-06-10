@@ -184,6 +184,7 @@ export function RfqSection() {
           noValidate
           onFocus={() => trackRfqStartOnce()}
           onSubmit={(event) => {
+            event.preventDefault();
             hasSubmittedRef.current = true;
             const form = formRef.current;
             if (form) {
@@ -191,11 +192,11 @@ export function RfqSection() {
               for (const field of fields) {
                 const el = form.elements.namedItem(field) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
                 if (el) {
-                  setValue(field, el.value, {shouldValidate: false});
+                  setValue(field, el.value, {shouldValidate: false, shouldDirty: true});
                 }
               }
             }
-            handleSubmit(onSubmit)(event);
+            void handleSubmit(onSubmit)();
           }}
         >
           <p className="rfq-form__microcopy">{t('quickMicrocopy')}</p>
