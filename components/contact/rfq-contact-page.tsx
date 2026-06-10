@@ -232,9 +232,12 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
   const hasSubmittedRef = useRef(false);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
+  const formRef = useRef<HTMLFormElement>(null);
+
   const {
     register,
     handleSubmit,
+    setValue,
     trigger,
     formState: {errors, isSubmitting}
   } = useForm<ContactFormValues>({
@@ -470,6 +473,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
           </aside>
 
           <form
+            ref={formRef}
             className="rfq-form contact-rfq-form"
             noValidate
             onFocus={() => {
@@ -478,6 +482,16 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             }}
             onSubmit={(event) => {
               hasSubmittedRef.current = true;
+              const form = formRef.current;
+              if (form) {
+                const textFields: Array<keyof ContactFormValues> = ['name', 'company', 'phone', 'whatsapp', 'email', 'project_type', 'project_location', 'estimated_area', 'project_stage', 'message', 'website'];
+                for (const field of textFields) {
+                  const el = form.elements.namedItem(field) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+                  if (el) {
+                    setValue(field, el.value, {shouldValidate: false});
+                  }
+                }
+              }
               handleSubmit(onSubmit, onInvalidSubmit)(event);
             }}
           >
