@@ -73,9 +73,12 @@ export function RfqSection() {
   const feedbackRef = useRef<HTMLDivElement>(null);
   const resolver = useMemo(() => createQuickResolver(t), [t]);
 
+  const formRef = useRef<HTMLFormElement>(null);
+
   const {
     register,
     handleSubmit,
+    setValue,
     formState: {errors, isSubmitting}
   } = useForm<QuickFormValues>({
     resolver,
@@ -176,11 +179,22 @@ export function RfqSection() {
         </aside>
 
         <form
+          ref={formRef}
           className="rfq-form rfq-form--quick"
           noValidate
           onFocus={() => trackRfqStartOnce()}
           onSubmit={(event) => {
             hasSubmittedRef.current = true;
+            const form = formRef.current;
+            if (form) {
+              const fields: Array<keyof QuickFormValues> = ['name', 'phone', 'project_type', 'message', 'website'];
+              for (const field of fields) {
+                const el = form.elements.namedItem(field) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+                if (el) {
+                  setValue(field, el.value, {shouldValidate: false});
+                }
+              }
+            }
             handleSubmit(onSubmit)(event);
           }}
         >
