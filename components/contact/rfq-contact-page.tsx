@@ -229,6 +229,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
   const [submitState, setSubmitState] = useState<SubmitState>('idle');
   const [selectedFileName, setSelectedFileName] = useState('');
   const [hasStarted, setHasStarted] = useState(false);
+  const hasSubmittedRef = useRef(false);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
   const {
@@ -239,6 +240,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
   } = useForm<ContactFormValues>({
     resolver,
     mode: 'onBlur',
+    shouldFocusError: false,
     defaultValues: {
       name: '',
       company: '',
@@ -265,7 +267,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
   ];
 
   useEffect(() => {
-    if (submitState === 'idle') {
+    if (submitState === 'idle' || !hasSubmittedRef.current) {
       return;
     }
 
@@ -474,7 +476,10 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
               /* track: rfq_start */
               trackRfqStartOnce();
             }}
-            onSubmit={handleSubmit(onSubmit, onInvalidSubmit)}
+            onSubmit={(event) => {
+              hasSubmittedRef.current = true;
+              handleSubmit(onSubmit, onInvalidSubmit)(event);
+            }}
           >
             <div className="rfq-steps" aria-label={t('stepsLabel')}>
               {page.form.steps.map((step, index) => (

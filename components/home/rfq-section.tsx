@@ -69,6 +69,7 @@ export function RfqSection() {
   const localizedAddress = t.has('contact.address') ? t('contact.address') : '';
   const [submitState, setSubmitState] = useState<SubmitState>('idle');
   const [hasStarted, setHasStarted] = useState(false);
+  const hasSubmittedRef = useRef(false);
   const feedbackRef = useRef<HTMLDivElement>(null);
   const resolver = useMemo(() => createQuickResolver(t), [t]);
 
@@ -79,6 +80,7 @@ export function RfqSection() {
   } = useForm<QuickFormValues>({
     resolver,
     mode: 'onBlur',
+    shouldFocusError: false,
     defaultValues: {
       name: '',
       phone: '',
@@ -89,7 +91,7 @@ export function RfqSection() {
   });
 
   useEffect(() => {
-    if (submitState === 'idle') {
+    if (submitState === 'idle' || !hasSubmittedRef.current) {
       return;
     }
 
@@ -177,7 +179,10 @@ export function RfqSection() {
           className="rfq-form rfq-form--quick"
           noValidate
           onFocus={() => trackRfqStartOnce()}
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={(event) => {
+            hasSubmittedRef.current = true;
+            handleSubmit(onSubmit)(event);
+          }}
         >
           <p className="rfq-form__microcopy">{t('quickMicrocopy')}</p>
 
