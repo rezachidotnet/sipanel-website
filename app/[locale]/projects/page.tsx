@@ -1,5 +1,6 @@
 import Image, {type StaticImageData} from 'next/image';
 import type {Metadata} from 'next';
+import {Suspense} from 'react';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
@@ -7,6 +8,7 @@ import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 import {CatalogDownloadButton} from '@/components/home/catalog-download-button';
+import {ProjectsFilterActivator} from '@/components/projects/projects-filter-activator';
 import armyHospitalCard from '@/assets/projects/army-hospital/photos/army-hospital-card.webp';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
 import bazargolCard from '@/assets/projects/bazargol/photos/bazargol-card.webp';
@@ -96,8 +98,7 @@ const copy: Record<
       sandwich: string;
       standing: string;
       cladding: string;
-      glass: string;
-      polycarbonate: string;
+      'transparent-roofing': string;
       envelope: string;
     };
     primaryCta: string;
@@ -128,8 +129,7 @@ const copy: Record<
       sandwich: 'Sandwich panel systems',
       standing: 'Standing seam roofing',
       cladding: 'Aluminium cladding',
-      glass: 'Glass Systems',
-      polycarbonate: 'Polycarbonate Systems',
+      'transparent-roofing': 'Glass & Polycarbonate',
       envelope: 'Industrial envelope'
     },
     primaryCta: 'Get Free Engineering Review',
@@ -159,8 +159,7 @@ const copy: Record<
       sandwich: 'ساندویچ پانل',
       standing: 'سقف ایستادرز',
       cladding: 'کلادینگ آلومینیومی',
-      glass: 'سیستم‌های شیشه‌ای',
-      polycarbonate: 'سیستم‌های پلی‌کربنات',
+      'transparent-roofing': 'شیشه و پلی‌کربنات',
       envelope: 'پوشش صنعتی ساختمان'
     },
     primaryCta: 'دریافت بررسی مهندسی رایگان',
@@ -191,8 +190,7 @@ const copy: Record<
       sandwich: 'أنظمة ألواح الساندويش',
       standing: 'أسقف ستاندينغ سيم',
       cladding: 'كسوة الألمنيوم',
-      glass: 'أنظمة الزجاج',
-      polycarbonate: 'أنظمة البولي كربونات',
+      'transparent-roofing': 'الزجاج والبولي كربونات',
       envelope: 'الغلاف الصناعي'
     },
     primaryCta: 'Get Free Engineering Review',
@@ -222,8 +220,7 @@ const copy: Record<
       sandwich: 'Системы сэндвич-панелей',
       standing: 'Кровля standing seam',
       cladding: 'Алюминиевая облицовка',
-      glass: 'Стеклянные системы',
-      polycarbonate: 'Поликарбонатные системы',
+      'transparent-roofing': 'Стекло и поликарбонат',
       envelope: 'Промышленная оболочка'
     },
     primaryCta: 'Get Free Engineering Review',
@@ -1374,13 +1371,19 @@ const filterOptions = [
   {id: 'sandwich'},
   {id: 'standing'},
   {id: 'cladding'},
-  {id: 'glass'},
-  {id: 'polycarbonate'},
+  {id: 'transparent-roofing'},
   {id: 'envelope'}
 ] as const;
 
 function getFilterOptions(locale: Locale) {
   return locale === 'fa' ? filterOptions.filter((filter) => filter.id !== 'envelope') : filterOptions;
+}
+
+function buildFilterString(filters: string[]) {
+  const merged = filters.some((f) => f === 'glass' || f === 'polycarbonate')
+    ? [...filters, 'transparent-roofing']
+    : filters;
+  return merged.join(' ');
 }
 
 function formatProjectArea(area: string, locale: Locale) {
@@ -1434,6 +1437,9 @@ export default async function ProjectsOverviewPage({params}: Props) {
 
       <section className="projects-index-section" data-section="projects_case_studies" aria-label={content.allProjects}>
         <div className="container-shell projects-index-section__inner">
+          <Suspense fallback={null}>
+            <ProjectsFilterActivator />
+          </Suspense>
           <div className="projects-index-filter" aria-label={content.allProjects}>
             {/* track: project_filter_use */}
             {visibleFilterOptions.map((filter, index) => (
@@ -1454,7 +1460,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
             {projects.map((project) => {
               if (!isPersianProjectsPage) {
                 return (
-                  <article className="projects-index-card" key={project.slug} data-filter={project.filters.join(' ')} data-project-slug={project.slug}>
+                  <article className="projects-index-card" key={project.slug} data-filter={buildFilterString(project.filters)} data-project-slug={project.slug}>
                     <div className="projects-index-card__image">
                       <Image
                         src={project.image}
@@ -1525,7 +1531,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
               const risks = project.riskPrevented.filter((risk) => risk.trim().length > 0);
 
               return (
-                <article className="projects-index-card" key={project.slug} data-filter={project.filters.join(' ')} data-project-slug={project.slug}>
+                <article className="projects-index-card" key={project.slug} data-filter={buildFilterString(project.filters)} data-project-slug={project.slug}>
                   <div className="projects-index-card__image">
                     <Image
                       src={project.image}
