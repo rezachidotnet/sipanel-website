@@ -357,12 +357,14 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
             <h2 id="case-study-snapshot-title">{content.projectSnapshot.title}</h2>
           </header>
           <div className="case-study-snapshot-grid">
-            {content.projectSnapshot.items.map((item) => (
-              <article className={isPendingValue(item.value) || item.pending ? 'case-study-snapshot-card is-pending' : 'case-study-snapshot-card'} key={item.label}>
-                <span>{item.label}</span>
-                <strong>{isPendingValue(item.value) || item.pending ? content.projectSnapshot.pendingLabel : item.value}</strong>
-              </article>
-            ))}
+            {content.projectSnapshot.items
+              .filter((item) => !isCaseStudyOnly || (!item.pending && !isPendingValue(item.value)))
+              .map((item) => (
+                <article className={isPendingValue(item.value) || item.pending ? 'case-study-snapshot-card is-pending' : 'case-study-snapshot-card'} key={item.label}>
+                  <span>{item.label}</span>
+                  <strong>{isPendingValue(item.value) || item.pending ? content.projectSnapshot.pendingLabel : item.value}</strong>
+                </article>
+              ))}
           </div>
         </div>
       </section>
@@ -477,15 +479,17 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
         <div className="container-shell case-study-section__inner">
           <header className="case-study-section__header">
             <h2 id="case-study-result-title">{content.measuredResult.title}</h2>
-            <p>{content.measuredResult.pendingLabel}</p>
+            {!isCaseStudyOnly ? <p>{content.measuredResult.pendingLabel}</p> : null}
           </header>
           <div className="case-study-result-grid">
-            {content.measuredResult.items.map((item) => (
-              <article className={item.verificationStatus === 'pending' || isPendingValue(item.value) ? 'case-study-result-card is-pending' : 'case-study-result-card'} key={item.label}>
-                <span>{item.label}</span>
-                <strong>{isPendingValue(item.value) ? content.measuredResult.pendingLabel : item.value}</strong>
-              </article>
-            ))}
+            {content.measuredResult.items
+              .filter((item) => !isCaseStudyOnly || (item.verificationStatus !== 'pending' && !isPendingValue(item.value)))
+              .map((item) => (
+                <article className={item.verificationStatus === 'pending' || isPendingValue(item.value) ? 'case-study-result-card is-pending' : 'case-study-result-card'} key={item.label}>
+                  <span>{item.label}</span>
+                  <strong>{isPendingValue(item.value) ? content.measuredResult.pendingLabel : item.value}</strong>
+                </article>
+              ))}
           </div>
         </div>
       </section>
@@ -558,14 +562,18 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                   <dt>{labels.result}</dt>
                   <dd>{study.measuredResult}</dd>
                 </dl>
-                {/* track: related_case_study_click */}
-                {study.href ? (
-                  <Link href={study.href} className="case-study-related-card__link">
-                    {content.relatedCaseStudies.cta}
-                  </Link>
-                ) : (
-                  <span className="case-study-related-card__pending">{content.relatedCaseStudies.pendingLabel}</span>
-                )}
+                {!isCaseStudyOnly ? (
+                  <>
+                    {/* track: related_case_study_click */}
+                    {study.href ? (
+                      <Link href={study.href} className="case-study-related-card__link">
+                        {content.relatedCaseStudies.cta}
+                      </Link>
+                    ) : (
+                      <span className="case-study-related-card__pending">{content.relatedCaseStudies.pendingLabel}</span>
+                    )}
+                  </>
+                ) : null}
               </article>
             ))}
           </div>

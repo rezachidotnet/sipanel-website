@@ -240,6 +240,24 @@ type InitialCaseStudyConfig = {
     description: LocalizedText;
   };
   resourceTitle: LocalizedText;
+  localeOverrides?: Partial<Record<Locale, CaseStudyLocaleOverrides>>;
+};
+
+type CaseStudyLocaleOverrides = {
+  shortSummary?: string;
+  trustMicrocopy?: string;
+  primaryCta?: string;
+  snapshotDuration?: string;
+  challenge?: string;
+  challengePoints?: string[];
+  sipanelSolution?: string;
+  engineeringDecision?: string;
+  executionDetail?: string;
+  measuredResult?: string;
+  riskItems?: Array<{risk: string; explanation: string}>;
+  conversionHeadline?: string;
+  conversionText?: string;
+  conversionPrimaryCta?: string;
 };
 
 const pendingLabels: LocalizedText = {
@@ -315,6 +333,67 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
       fa: 'راهنمای انتخاب پانل',
       ar: 'دليل اختيار الألواح',
       ru: 'Руководство по выбору панелей'
+    },
+    localeOverrides: {
+      fa: {
+        shortSummary: 'تحویل بیمارستان عملیاتی از خاکبرداری تا آمادگی بهره‌برداری در کمتر از ۵۰ روز، در شرایط اضطراری کرونا.',
+        trustMicrocopy: 'تحویل کامل مهندسی، تأمین و اجرا توسط سی‌پانل',
+        primaryCta: 'برای پروژه‌های زمان‌بحرانی مشاوره بگیرید',
+        snapshotDuration: 'کمتر از ۵۰ روز',
+        challenge: 'در شرایط اضطراری کرونا، بیمارستان نظامی ۳۲ تختخوابی از خاکبرداری تا آمادگی بهره‌برداری در کمتر از ۵۰ روز نیاز بود و هماهنگی کامل EPC ضروری بود.',
+        challengePoints: [
+          'تأخیر زمانی فراتر از هدف ۵۰ روزه',
+          'ناهماهنگی بین رشته‌های مهندسی، تأمین و اجرا',
+          'تأخیر در نصب پوشانه و حفاظت آب‌وهوایی',
+          'گلوگاه نصب پارتیشن‌های داخلی'
+        ],
+        sipanelSolution: 'سی‌پانل تمام محدوده پروژه شامل مهندسی، شاپ‌دراوینگ، خاکبرداری، ساخت، پوشانه ساندویچ پانل، پارتیشن‌های داخلی و آماده‌سازی نهایی نصب را تحویل داد.',
+        engineeringDecision: 'تیم‌های مهندسی تحویل کامل EPC را هماهنگ کردند — از خاکبرداری و ساخت سازه تا پوشانه ساندویچ پانل، پارتیشن‌های داخلی و آماده‌سازی نهایی — در چارچوب زمان‌بندی اضطراری.',
+        executionDetail: 'اجرا طبق برنامه فشرده ۵۰ روزه شامل خاکبرداری، ساخت، نصب ساندویچ پانل، پارتیشن‌بندی داخلی و آماده‌سازی تا بهره‌برداری انجام شد.',
+        measuredResult: 'بیمارستان نظامی ۳۲ تختخوابی از خاکبرداری تا آمادگی بهره‌برداری در کمتر از ۵۰ روز در شرایط اضطراری کرونا تحویل داده شد.',
+        riskItems: [
+          {risk: 'تأخیر زمانی فراتر از هدف ۵۰ روزه', explanation: 'برنامه‌ریزی فشرده و هماهنگی روزانه تیم‌های مهندسی، تأمین و اجرا برای جلوگیری از تأخیر.'},
+          {risk: 'ناهماهنگی بین رشته‌های EPC', explanation: 'مدیریت یکپارچه EPC از خاکبرداری تا تحویل نهایی برای حذف ریسک ناهماهنگی.'},
+          {risk: 'تأخیر در حفاظت آب‌وهوایی پوشانه', explanation: 'نصب کنترل‌شده ساندویچ پانل سقف و دیوار طبق برنامه زمانی مهندسی‌شده.'},
+          {risk: 'گلوگاه نصب پارتیشن‌های داخلی', explanation: 'هماهنگی نصب پارتیشن‌های داخلی با تیم سازه و تأسیسات برای جلوگیری از گلوگاه.'}
+        ],
+        conversionHeadline: 'پروژه زمان‌بحرانی دارید؟',
+        conversionText: 'نقشه‌ها یا اطلاعات پروژه را ارسال کنید تا تیم مهندسی سی‌پانل محدوده، ریسک‌ها و زمان‌بندی را بررسی کند.',
+        conversionPrimaryCta: 'برای پروژه‌های زمان‌بحرانی مشاوره بگیرید'
+      },
+      en: {
+        shortSummary: 'Operational hospital delivered from excavation to readiness in less than 50 days during the COVID-19 emergency.',
+        trustMicrocopy: 'Full EPC delivery by SIPANEL — engineering, procurement, and construction.',
+        primaryCta: 'Discuss a Time-Critical Project',
+        snapshotDuration: 'Less than 50 days',
+        riskItems: [
+          {risk: 'Schedule overrun beyond 50-day target', explanation: 'Compressed scheduling with daily coordination across engineering, procurement, and execution teams.'},
+          {risk: 'Coordination failures across EPC disciplines', explanation: 'Integrated EPC management from excavation to final handover, eliminating coordination gaps.'},
+          {risk: 'Envelope weather protection delays', explanation: 'Controlled sandwich panel installation for roof and walls following an engineered timeline.'},
+          {risk: 'Internal partition installation bottlenecks', explanation: 'Coordinated interior partition sequencing with structural and MEP teams to prevent bottlenecks.'}
+        ],
+        conversionHeadline: 'Have a time-critical project?',
+        conversionText: 'Send project drawings or context so SIPANEL engineering can review scope, risks, and timeline.',
+        conversionPrimaryCta: 'Discuss a Time-Critical Project'
+      },
+      ar: {
+        shortSummary: 'تسليم مستشفى جاهز للتشغيل من الحفر حتى الجاهزية في أقل من ٥٠ يوماً خلال جائحة كورونا.',
+        trustMicrocopy: 'تسليم EPC كامل بواسطة SIPANEL — الهندسة والتوريد والتنفيذ.',
+        primaryCta: 'ناقش مشروعاً حرجاً زمنياً',
+        snapshotDuration: 'أقل من ٥٠ يوماً',
+        conversionHeadline: 'لديك مشروع حرج زمنياً؟',
+        conversionText: 'أرسل رسومات المشروع أو سياقه ليراجع فريق SIPANEL الهندسي النطاق والمخاطر والجدول الزمني.',
+        conversionPrimaryCta: 'ناقش مشروعاً حرجاً زمنياً'
+      },
+      ru: {
+        shortSummary: 'Операционный госпиталь сдан от котлована до готовности менее чем за 50 дней в условиях пандемии COVID-19.',
+        trustMicrocopy: 'Полная поставка EPC от SIPANEL — проектирование, снабжение и строительство.',
+        primaryCta: 'Обсудить срочный проект',
+        snapshotDuration: 'Менее 50 дней',
+        conversionHeadline: 'Есть срочный проект?',
+        conversionText: 'Отправьте чертежи или описание проекта для оценки объёма, рисков и сроков командой SIPANEL.',
+        conversionPrimaryCta: 'Обсудить срочный проект'
+      }
     }
   },
   {
@@ -1184,6 +1263,7 @@ function buildInitialCaseStudyPage(config: InitialCaseStudyConfig): CaseStudyPag
 
 function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Locale): CaseStudyLocaleContent {
   const pendingLabel = pendingLabels[locale];
+  const overrides = config.localeOverrides?.[locale];
   const projectName = config.projectName[locale];
   const serviceTitle = config.mainService[locale];
   const relatedStudies = initialCaseStudies
@@ -1215,12 +1295,13 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       projectType: config.projectType[locale],
       location: config.location ?? pendingLabel,
       mainService: serviceTitle,
-      shortSummary: hasVerifiedProjectFields
-        ? `${projectName} case study for ${serviceTitle}, focused on engineering coordination, controlled execution, and project risk reduction.`
-        : caseStudyCopy[locale].shortSummary(serviceTitle),
-      primaryCta: caseStudyCopy[locale].primaryCta,
+      shortSummary: overrides?.shortSummary
+        ?? (hasVerifiedProjectFields
+          ? `${projectName} case study for ${serviceTitle}, focused on engineering coordination, controlled execution, and project risk reduction.`
+          : caseStudyCopy[locale].shortSummary(serviceTitle)),
+      primaryCta: overrides?.primaryCta ?? caseStudyCopy[locale].primaryCta,
       secondaryCta: caseStudyCopy[locale].secondaryCta,
-      trustMicrocopy: caseStudyCopy[locale].trustMicrocopy,
+      trustMicrocopy: overrides?.trustMicrocopy ?? caseStudyCopy[locale].trustMicrocopy,
       heroAlt: caseStudyCopy[locale].heroAlt(projectName),
       heroImage: config.heroImage,
       heroVideo: config.heroVideo ? {
@@ -1236,26 +1317,26 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
         {label: caseStudyCopy[locale].snapshotLabels.projectType, value: config.projectType[locale]},
         {label: caseStudyCopy[locale].snapshotLabels.location, value: config.location ?? pendingLabel, pending: !config.location},
         {label: caseStudyCopy[locale].snapshotLabels.area, value: config.area ?? pendingLabel, pending: !config.area},
-        {label: caseStudyCopy[locale].snapshotLabels.duration, value: pendingLabel, pending: true},
+        {label: caseStudyCopy[locale].snapshotLabels.duration, value: overrides?.snapshotDuration ?? pendingLabel, pending: !overrides?.snapshotDuration},
         {label: caseStudyCopy[locale].snapshotLabels.metrics, value: pendingLabel, pending: true}
       ]
     },
     challenge: {
       title: caseStudyCopy[locale].challengeTitle,
-      summary: config.challenge ?? caseStudyCopy[locale].challengeSummary(serviceTitle),
-      points: config.riskPrevented ?? caseStudyCopy[locale].challengePoints,
-      risk: config.challenge ?? caseStudyCopy[locale].riskStatement
+      summary: overrides?.challenge ?? config.challenge ?? caseStudyCopy[locale].challengeSummary(serviceTitle),
+      points: overrides?.challengePoints ?? config.riskPrevented ?? caseStudyCopy[locale].challengePoints,
+      risk: overrides?.challenge ?? config.challenge ?? caseStudyCopy[locale].riskStatement
     },
     engineeringDecision: {
       title: caseStudyCopy[locale].decisionTitle,
-      summary: config.sipanelSolution ?? caseStudyCopy[locale].decisionSummary(serviceTitle),
-      technicalReasoning: config.engineeringDecision ?? caseStudyCopy[locale].technicalReasoning,
+      summary: overrides?.sipanelSolution ?? config.sipanelSolution ?? caseStudyCopy[locale].decisionSummary(serviceTitle),
+      technicalReasoning: overrides?.engineeringDecision ?? config.engineeringDecision ?? caseStudyCopy[locale].technicalReasoning,
       selectedSystemLogic: caseStudyCopy[locale].selectedSystemLogic(serviceTitle),
       coordinationNote: caseStudyCopy[locale].coordinationNote
     },
     executionDetail: {
       title: caseStudyCopy[locale].executionTitle,
-      installationSequence: config.executionDetail ?? caseStudyCopy[locale].installationSequence,
+      installationSequence: overrides?.executionDetail ?? config.executionDetail ?? caseStudyCopy[locale].installationSequence,
       procurementControl: caseStudyCopy[locale].procurementControl,
       qualityCheckpoints: caseStudyCopy[locale].qualityCheckpoints,
       coordinationWithSiteTeam: caseStudyCopy[locale].coordinationWithSiteTeam
@@ -1296,17 +1377,19 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       items: [
         {
           label: caseStudyCopy[locale].resultLabels.completion,
-          value: config.measuredResult ?? pendingLabel,
-          verificationStatus: config.measuredResult ? 'verified' : 'pending'
+          value: overrides?.measuredResult ?? config.measuredResult ?? pendingLabel,
+          verificationStatus: (overrides?.measuredResult || config.measuredResult) ? 'verified' : 'pending'
         },
         {label: caseStudyCopy[locale].resultLabels.waterproofing, value: pendingLabel, verificationStatus: 'pending'},
-        {label: caseStudyCopy[locale].resultLabels.schedule, value: pendingLabel, verificationStatus: 'pending'},
+        {label: caseStudyCopy[locale].resultLabels.schedule, value: overrides?.snapshotDuration ?? pendingLabel, verificationStatus: overrides?.snapshotDuration ? 'verified' : 'pending'},
         {label: caseStudyCopy[locale].resultLabels.cost, value: pendingLabel, verificationStatus: 'pending'}
       ]
     },
     riskPrevented: {
       title: caseStudyCopy[locale].riskTitle,
-      items: config.riskPrevented
+      items: overrides?.riskItems
+        ? overrides.riskItems
+        : config.riskPrevented
         ? config.riskPrevented.slice(0, 4).map((risk) => ({
             risk,
             explanation: `${risk} was controlled through engineering review, coordinated detailing, and installation checkpoints.`
@@ -1357,9 +1440,9 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       pendingLabel
     },
     conversionCta: {
-      headline: caseStudyCopy[locale].conversionHeadline,
-      text: caseStudyCopy[locale].conversionText,
-      primaryCta: caseStudyCopy[locale].primaryCta,
+      headline: overrides?.conversionHeadline ?? caseStudyCopy[locale].conversionHeadline,
+      text: overrides?.conversionText ?? caseStudyCopy[locale].conversionText,
+      primaryCta: overrides?.conversionPrimaryCta ?? caseStudyCopy[locale].primaryCta,
       secondaryCta: caseStudyCopy[locale].whatsappCta
     }
   };
