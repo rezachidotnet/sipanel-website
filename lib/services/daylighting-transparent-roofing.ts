@@ -771,27 +771,27 @@ function getRelatedCaseStudies(locale: Locale) {
       image: shahroodUniversityCard
     },
     {
-      projectName: isFa ? 'وید مرکزی شرکت توانیر شهرکرد'
-        : isAr ? 'الأتريوم المركزي لشركة توانير شهرکرد'
-        : isRu ? 'Центральный атриум компании Tavanir'
-        : 'Tavanir Shahrekord Central Atrium',
+      projectName: isFa ? 'نورگیر مرکزی شهرکرد'
+        : isAr ? 'الإضاءة الطبيعية المركزية في شهركرد'
+        : isRu ? 'Центральный световой фонарь Шахрекорд'
+        : 'Shahrekord Central Daylighting Atrium',
       location: isFa ? 'شهرکرد، ایران' : isAr ? 'شهركرد، إيران' : isRu ? 'Шахрекорд, Иран' : 'Shahrekord, Iran',
       areaM2: '350 m²',
-      projectType: isFa ? 'آتریوم شفاف اداری' : isAr ? 'أتريوم شفاف إداري' : isRu ? 'Прозрачный офисный атриум' : 'Transparent office atrium',
+      projectType: isFa ? 'سیستم نورگیر شفاف پلی‌کربنات' : isAr ? 'نظام إضاءة طبيعية بالبولي كربونات' : isRu ? 'Светопрозрачная поликарбонатная система' : 'Polycarbonate daylighting system',
       challenge: isFa
-        ? 'حداکثر نور طبیعی و شفافیت با حفظ کارایی سازه‌ای نیازمند هماهنگی دقیق بود.'
+        ? 'آتریوم مرکزی نیازمند حداکثر نور طبیعی با کنترل وزن سازه، عایق‌بندی حرارتی و آب‌بندی پوشش شفاف بود.'
         : isAr
-        ? 'تطلب تحقيق أقصى إضاءة طبيعية وشفافية مع الحفاظ على الكفاءة الهيكلية تنسيقاً دقيقاً.'
+        ? 'تطلب الأتريوم المركزي إضاءة طبيعية قصوى مع التحكم في الأحمال الهيكلية والعزل الحراري وعزل الغلاف الشفاف.'
         : isRu
-        ? 'Максимальное естественное освещение и прозрачность при сохранении конструктивной эффективности потребовали точной координации.'
-        : 'Maximum daylight and transparency while maintaining structural efficiency required precise coordination.',
+        ? 'Центральный атриум потребовал максимального естественного освещения с контролем нагрузок, теплоизоляции и герметичности светопрозрачного ограждения.'
+        : 'Central atrium required maximum natural daylight with structural load control, thermal insulation, and transparent envelope waterproofing.',
       measuredResult: isFa
-        ? 'پوشش شفاف آتریوم با نور طبیعی و محافظت در برابر آب‌وهوا تحویل شد.'
+        ? 'پوشش شفاف ۳۵۰ مترمربع با نور طبیعی یکنواخت، حفاظت آب‌وهوایی و بدون انسداد بصری تحویل شد.'
         : isAr
-        ? 'تم تسليم غلاف أتريوم شفاف مع إضاءة طبيعية وحماية من الطقس.'
+        ? 'تم تسليم غلاف شفاف بمساحة 350 م² مع إضاءة طبيعية موحدة وحماية من الطقس بدون عوائق بصرية.'
         : isRu
-        ? 'Сдано прозрачное ограждение атриума с естественным освещением и погодозащитой.'
-        : 'Transparent atrium enclosure delivered with natural daylight and weather protection.',
+        ? 'Сдано 350 м² светопрозрачного ограждения с равномерным естественным освещением, погодозащитой и без визуальных препятствий.'
+        : '350 m² transparent enclosure delivered with uniform natural daylight, weather protection, and no visual obstruction.',
       href: `/${locale}/projects/tavanir-shahrekord-central-atrium`,
       image: tavanirCard
     }
