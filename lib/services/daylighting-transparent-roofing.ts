@@ -6,7 +6,7 @@ import gutterFlashingImage from '@/assets/technical/waterproofing/gutter-flashin
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import fadakMallCard from '@/assets/projects/fadak-mall-glass-skylight/photos/fadak-mall-glass-skylight-card.webp';
 import shahroodUniversityCard from '@/assets/projects/shahrood-azad-university-skylight/photos/shahrood-azad-university-skylight-card.webp';
-import tavanirCard from '@/assets/projects/tavanir-shahrekord-central-atrium/photos/tavanir-shahrekord-central-atrium-card.webp';
+import kermanshahCard from '@/assets/projects/kermanshah-industrial-university-petroleum-faculty/photos/kermanshah-industrial-university-petroleum-faculty-card.webp';
 
 export const daylightingTransparentRoofingSpec = {
   route: {
@@ -771,29 +771,29 @@ function getRelatedCaseStudies(locale: Locale) {
       image: shahroodUniversityCard
     },
     {
-      projectName: isFa ? 'نورگیر مرکزی شهرکرد'
-        : isAr ? 'الإضاءة الطبيعية المركزية في شهركرد'
-        : isRu ? 'Центральный световой фонарь Шахрекорд'
-        : 'Shahrekord Central Daylighting Atrium',
-      location: isFa ? 'شهرکرد، ایران' : isAr ? 'شهركرد، إيران' : isRu ? 'Шахрекорд, Иран' : 'Shahrekord, Iran',
-      areaM2: '350 m²',
-      projectType: isFa ? 'سیستم نورگیر شفاف پلی‌کربنات' : isAr ? 'نظام إضاءة طبيعية بالبولي كربونات' : isRu ? 'Светопрозрачная поликарбонатная система' : 'Polycarbonate daylighting system',
+      projectName: isFa ? 'دانشکده نفت دانشگاه صنعتی کرمانشاه'
+        : isAr ? 'كلية النفط في الجامعة الصناعية بكرمانشاه'
+        : isRu ? 'Нефтяной факультет Промышленного университета Керманшаха'
+        : 'Kermanshah Industrial University Petroleum Faculty',
+      location: isFa ? 'کرمانشاه، ایران' : isAr ? 'كرمانشاه، إيران' : isRu ? 'Керманшах, Иран' : 'Kermanshah, Iran',
+      areaM2: '1,000 m²',
+      projectType: isFa ? 'نمای شیشه‌ای مقاوم زلزله' : isAr ? 'واجهة زجاجية مقاومة للزلازل' : isRu ? 'Сейсмостойкий стеклянный фасад' : 'Seismic-resistant glass facade',
       challenge: isFa
-        ? 'آتریوم مرکزی نیازمند حداکثر نور طبیعی با کنترل وزن سازه، عایق‌بندی حرارتی و آب‌بندی پوشش شفاف بود.'
+        ? 'طراحی اتصالات نما به‌گونه‌ای که حرکت سازه در زلزله باعث آسیب یا شکست پنل‌های شیشه‌ای نشود.'
         : isAr
-        ? 'تطلب الأتريوم المركزي إضاءة طبيعية قصوى مع التحكم في الأحمال الهيكلية والعزل الحراري وعزل الغلاف الشفاف.'
+        ? 'تصميم وصلات الواجهة بحيث لا تؤدي الحركة الهيكلية أثناء الزلازل إلى تلف أو كسر الألواح الزجاجية.'
         : isRu
-        ? 'Центральный атриум потребовал максимального естественного освещения с контролем нагрузок, теплоизоляции и герметичности светопрозрачного ограждения.'
-        : 'Central atrium required maximum natural daylight with structural load control, thermal insulation, and transparent envelope waterproofing.',
+        ? 'Проектирование узлов крепления фасада так, чтобы сейсмические перемещения конструкции не повреждали стеклянные панели.'
+        : 'Facade connections designed so that structural movement during earthquakes would not damage or break the glass panels.',
       measuredResult: isFa
-        ? 'پوشش شفاف ۳۵۰ مترمربع با نور طبیعی یکنواخت، حفاظت آب‌وهوایی و بدون انسداد بصری تحویل شد.'
+        ? 'اجرای ۱,۰۰۰ مترمربع نمای شیشه‌ای که در زلزله کرمانشاه بدون آسیب به شیشه عمل کرد.'
         : isAr
-        ? 'تم تسليم غلاف شفاف بمساحة 350 م² مع إضاءة طبيعية موحدة وحماية من الطقس بدون عوائق بصرية.'
+        ? 'تنفيذ 1,000 م² من الواجهة الزجاجية التي صمدت دون ضرر خلال زلزال كرمانشاه.'
         : isRu
-        ? 'Сдано 350 м² светопрозрачного ограждения с равномерным естественным освещением, погодозащитой и без визуальных препятствий.'
-        : '350 m² transparent enclosure delivered with uniform natural daylight, weather protection, and no visual obstruction.',
-      href: `/${locale}/projects/tavanir-shahrekord-central-atrium`,
-      image: tavanirCard
+        ? 'Выполнено 1 000 м² стеклянного фасада, выдержавшего Керманшахское землетрясение без повреждения стёкол.'
+        : '1,000 m² glass facade executed, reportedly performed without glass damage during the Kermanshah earthquake.',
+      href: `/${locale}/projects/kermanshah-industrial-university-petroleum-faculty`,
+      image: kermanshahCard
     }
   ];
 }
