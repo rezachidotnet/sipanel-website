@@ -5,7 +5,7 @@ import shopDrawingsImage from '@/assets/technical/shop-drawings/shop-drawings-ma
 import gutterFlashingImage from '@/assets/technical/waterproofing/gutter-flashing-desktop.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import fadakMallCard from '@/assets/projects/fadak-mall-glass-skylight/photos/fadak-mall-glass-skylight-card.webp';
-import shahroodUniversityCard from '@/assets/projects/shahrood-azad-university-skylight/photos/shahrood-azad-university-skylight-card.webp';
+import atlasHotelCard from '@/assets/projects/atlas-hotel-shahinshahr-atrium/photos/atlas-hotel-shahinshahr-atrium-card.webp';
 import kermanshahCard from '@/assets/projects/kermanshah-industrial-university-petroleum-faculty/photos/kermanshah-industrial-university-petroleum-faculty-card.webp';
 
 export const daylightingTransparentRoofingSpec = {
@@ -746,29 +746,29 @@ function getRelatedCaseStudies(locale: Locale) {
       image: fadakMallCard
     },
     {
-      projectName: isFa ? 'سقف نورگیر ساختمان مرکزی دانشگاه آزاد شاهرود'
-        : isAr ? 'السقف الزجاجي للمبنى المركزي بجامعة آزاد شاهرود'
-        : isRu ? 'Светопрозрачный купол центрального корпуса Университета Азад Шахруд'
-        : 'Shahrood Azad University Central Skylight',
-      location: isFa ? 'شاهرود، ایران' : isAr ? 'شاهرود، إيران' : isRu ? 'Шахруд, Иран' : 'Shahrood, Iran',
-      areaM2: '400 m²',
-      projectType: isFa ? 'نورگیر سازه‌ای دانشگاهی' : isAr ? 'منور هيكلي جامعي' : isRu ? 'Конструктивный световой фонарь университета' : 'University structural skylight',
+      projectName: isFa ? 'آتریوم هتل اطلس'
+        : isAr ? 'أتريوم فندق أطلس'
+        : isRu ? 'Атриум отеля Atlas'
+        : 'Atlas Hotel Atrium',
+      location: isFa ? 'شاهین‌شهر، اصفهان، ایران' : isAr ? 'شاهين شهر، أصفهان، إيران' : isRu ? 'Шахиншахр, Исфахан, Иран' : 'Shahin Shahr, Isfahan, Iran',
+      areaM2: '700 m²',
+      projectType: isFa ? 'آتریوم مرکزی هتل' : isAr ? 'أتريوم مركزي للفندق' : isRu ? 'Центральный атриум отеля' : 'Hotel Central Atrium',
       challenge: isFa
-        ? 'نصب نورگیر روی سازه سقف موجود نیازمند کنترل دقیق بار مرده و آب‌بندی بود.'
+        ? 'آتریوم به‌عنوان فضای عمومی اصلی هتل نیازمند پوشش سبک و نورگذر با حفظ کیفیت معماری بود.'
         : isAr
-        ? 'تطلب تركيب المنور على هيكل السقف الحالي تحكماً دقيقاً في الحمل الميت والعزل المائي.'
+        ? 'كان الأتريوم الفضاء العام الرئيسي للفندق وتطلب غلافاً خفيفاً شفافاً مع الحفاظ على الجودة المعمارية.'
         : isRu
-        ? 'Установка светового фонаря на существующую конструкцию кровли потребовала точного контроля собственного веса и гидроизоляции.'
-        : 'Skylight installation on existing roof structure required careful dead load and waterproofing control.',
+        ? 'Атриум являлся главным общественным пространством отеля и требовал лёгкого светопрозрачного ограждения с сохранением архитектурного качества.'
+        : 'The atrium served as the focal public space of the hotel and required a lightweight, translucent enclosure capable of delivering natural daylight while preserving architectural quality.',
       measuredResult: isFa
-        ? 'فضای ۴۰۰ مترمربعی با نور طبیعی بدون تکیه‌گاه‌های میانی تحویل شد.'
+        ? 'اجرای موفق ۷۰۰ مترمربع پوشش پلی‌کربنات آتریوم با ایجاد فضای روشن و مطلوب مهمان‌نوازی.'
         : isAr
-        ? 'تم تسليم مساحة 400 م² مضاءة طبيعياً بدون دعامات وسيطة.'
+        ? 'إنجاز 700 م² من غلاف الأتريوم بالبولي كربونات مما خلق بيئة ضيافة مشرقة ومرحبة.'
         : isRu
-        ? 'Сдано естественно освещённое пространство площадью 400 м² без промежуточных опор.'
-        : '400 m² naturally illuminated space delivered without intermediate supports.',
-      href: `/${locale}/projects/shahrood-azad-university-skylight`,
-      image: shahroodUniversityCard
+        ? 'Успешное выполнение 700 м² поликарбонатного ограждения атриума, создание светлой и комфортной гостиничной среды.'
+        : '700 m² polycarbonate atrium enclosure completed, creating a bright and welcoming hospitality environment.',
+      href: `/${locale}/projects/atlas-hotel-shahinshahr-atrium`,
+      image: atlasHotelCard
     },
     {
       projectName: isFa ? 'دانشکده نفت دانشگاه صنعتی کرمانشاه'

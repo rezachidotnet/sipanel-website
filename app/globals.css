@@ -4134,6 +4134,88 @@ button[aria-disabled='true'] {
   line-height: 1.55;
 }
 
+.resource-detail-system-grid,
+.resource-detail-project-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.resource-system-card,
+.resource-project-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-subtle);
+  transition: box-shadow 0.2s ease;
+}
+
+.resource-system-card:hover,
+.resource-project-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.resource-system-card__image,
+.resource-project-card__image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-gray-background);
+}
+
+.resource-system-card__image img,
+.resource-project-card__image img {
+  object-fit: cover;
+}
+
+.resource-system-card__body,
+.resource-project-card__body {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.resource-system-card__name,
+.resource-project-card__name {
+  color: var(--color-text-primary);
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.resource-system-card__body p,
+.resource-project-card__body p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.resource-project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.resource-project-card__meta em {
+  color: var(--color-text-muted);
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.resource-system-card__cta,
+.resource-project-card__cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 4px;
+  color: var(--color-orange-primary);
+  font-size: 14px;
+  font-weight: 850;
+}
+
 .resource-card__cta {
   display: flex;
   width: 100%;
@@ -9195,6 +9277,16 @@ button[aria-disabled='true'] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .resource-detail-system-grid,
+  .resource-detail-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resource-system-card,
+  .resource-project-card {
+    grid-template-rows: auto 1fr;
+  }
+
   .resource-detail-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 22px;
@@ -9364,6 +9456,11 @@ button[aria-disabled='true'] {
   .resource-detail-preview-grid,
   .resource-detail-list-grid,
   .resource-detail-link-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .resource-detail-system-grid,
+  .resource-detail-project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 

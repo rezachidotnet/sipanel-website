@@ -1803,6 +1803,12 @@ export function getCaseStudyPageData(slug: string) {
   return caseStudyPages[slug] ?? null;
 }
 
+export function getCaseStudyCardMeta(slug: string): {cardImage?: StaticImageData; area?: string} | null {
+  const config = initialCaseStudies.find((item) => item.slug === slug);
+  if (!config) return null;
+  return {cardImage: config.cardImage, area: config.area};
+}
+
 export function listCaseStudySlugs() {
   return Object.keys(caseStudyPages);
 }

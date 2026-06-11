@@ -7,7 +7,8 @@ import standingSeamCover from '@/assets/systems/standing-seam/cover-desktop.webp
 import bomMtoPreview from '@/assets/technical/procurement/bom-mto-preview.webp';
 import shopDrawingsPreview from '@/assets/technical/shop-drawings/shop-drawings-main.webp';
 import gutterFlashingPreview from '@/assets/technical/waterproofing/gutter-flashing-desktop.webp';
-import {getCaseStudyPageData} from '@/lib/case-studies/case-study-pages';
+import {getCaseStudyPageData, getCaseStudyCardMeta} from '@/lib/case-studies/case-study-pages';
+import daylightingCover from '@/assets/systems/transparent-roofing/cover-desktop.webp';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 
@@ -126,6 +127,8 @@ export type RelatedProject = {
   systemType: string;
   reason?: string;
   href: string;
+  image?: StaticImageData;
+  area?: string;
 };
 
 export type ResourceDetailContent = {
@@ -738,7 +741,11 @@ export type ResourceHubUiLabels = {
   rfqConversionSecondary: string;
   rfqConversionTrust: string[];
   detailConsultationTitle: string;
+  detailConsultationDescription: string;
   detailConsultationButton: string;
+  detailCatalogButton: string;
+  exploreSystemLabel: string;
+  viewProjectLabel: string;
   contextualSystemPrefix: string;
   contextualSystemSuffix: string;
   contextualProjectPrefix: string;
@@ -816,8 +823,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     rfqConversionPrimary: 'Get Free Engineering Review',
     rfqConversionSecondary: 'Send Project Information',
     rfqConversionTrust: ['Executed industrial project experience', 'Engineering review before procurement', 'Detail and installation coordination'],
-    detailConsultationTitle: 'Need more guidance for your project?',
+    detailConsultationTitle: 'Need Technical Guidance For Your Project?',
+    detailConsultationDescription: 'Whether you are evaluating systems, comparing suppliers, reviewing quantities, or preparing execution drawings, our engineering team can help before procurement begins.',
     detailConsultationButton: 'Request Engineering Review',
+    detailCatalogButton: 'Download Technical Catalog',
+    exploreSystemLabel: 'Explore System',
+    viewProjectLabel: 'View Project',
     contextualSystemPrefix: 'For more context on this solution, review',
     contextualSystemSuffix: 'as the related system.',
     contextualProjectPrefix: 'For an executed example of this approach, see',
@@ -893,8 +904,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     rfqConversionPrimary: 'دریافت بررسی مهندسی رایگان',
     rfqConversionSecondary: 'ارسال اطلاعات پروژه',
     rfqConversionTrust: ['تجربه پروژه‌های صنعتی اجراشده', 'بررسی مهندسی پیش از خرید', 'هماهنگی دیتیل و نصب'],
-    detailConsultationTitle: 'برای پروژه خود به راهنمایی بیشتری نیاز دارید؟',
+    detailConsultationTitle: 'به راهنمایی فنی برای پروژه‌تان نیاز دارید؟',
+    detailConsultationDescription: 'چه در حال ارزیابی سیستم‌ها باشید، چه مقایسه تأمین‌کنندگان، بررسی متراژ یا تهیه نقشه‌های اجرایی، تیم مهندسی ما می‌تواند پیش از شروع تدارکات کمک کند.',
     detailConsultationButton: 'درخواست بررسی مهندسی',
+    detailCatalogButton: 'دانلود کاتالوگ فنی',
+    exploreSystemLabel: 'مشاهده سیستم',
+    viewProjectLabel: 'مشاهده پروژه',
     contextualSystemPrefix: 'برای آشنایی بیشتر با این راهکار، صفحه',
     contextualSystemSuffix: 'را ببینید.',
     contextualProjectPrefix: 'نمونه اجرای این راهکار را در پروژه',
@@ -970,8 +985,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     rfqConversionPrimary: 'احصل على مراجعة هندسية مجانية',
     rfqConversionSecondary: 'إرسال معلومات المشروع',
     rfqConversionTrust: ['خبرة في مشاريع صناعية منفذة', 'مراجعة هندسية قبل الشراء', 'تنسيق التفاصيل والتركيب'],
-    detailConsultationTitle: 'هل تحتاج إلى إرشاد إضافي لمشروعك؟',
+    detailConsultationTitle: 'هل تحتاج إلى إرشاد فني لمشروعك؟',
+    detailConsultationDescription: 'سواء كنت تقيّم الأنظمة أو تقارن الموردين أو تراجع الكميات أو تعد رسومات التنفيذ، يمكن لفريقنا الهندسي المساعدة قبل بدء التوريد.',
     detailConsultationButton: 'طلب مراجعة هندسية',
+    detailCatalogButton: 'تحميل الكتالوج الفني',
+    exploreSystemLabel: 'استكشاف النظام',
+    viewProjectLabel: 'عرض المشروع',
     contextualSystemPrefix: 'لمزيد من السياق حول هذا الحل، راجع',
     contextualSystemSuffix: 'كنظام ذي صلة.',
     contextualProjectPrefix: 'لرؤية مثال منفذ لهذا النهج، راجع',
@@ -1047,8 +1066,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     rfqConversionPrimary: 'Получить бесплатную инженерную проверку',
     rfqConversionSecondary: 'Отправить данные проекта',
     rfqConversionTrust: ['Опыт реализованных промышленных проектов', 'Инженерная проверка до закупки', 'Координация узлов и монтажа'],
-    detailConsultationTitle: 'Нужна дополнительная консультация для вашего проекта?',
+    detailConsultationTitle: 'Нужна техническая консультация для вашего проекта?',
+    detailConsultationDescription: 'Оцениваете системы, сравниваете поставщиков, проверяете объёмы или готовите рабочие чертежи — наша инженерная команда поможет до начала закупок.',
     detailConsultationButton: 'Запросить инженерную проверку',
+    detailCatalogButton: 'Скачать технический каталог',
+    exploreSystemLabel: 'Изучить систему',
+    viewProjectLabel: 'Смотреть проект',
     contextualSystemPrefix: 'Для дополнительного контекста по этому решению смотрите',
     contextualSystemSuffix: 'как связанную систему.',
     contextualProjectPrefix: 'Пример реализации этого подхода смотрите в проекте',
@@ -1065,34 +1088,46 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
   }
 };
 
-type SystemKey = 'sandwich_panel' | 'standing_seam_zip' | 'aluminium_cladding';
+type SystemKey = 'sandwich_panel' | 'standing_seam_zip' | 'aluminium_cladding' | 'daylighting';
 
 const systemRoutes: Record<SystemKey, string> = {
   sandwich_panel: '/systems/sandwich-panel-systems',
   standing_seam_zip: '/systems/standing-seam-zip-tech-roofing',
-  aluminium_cladding: '/systems/aluminium-cladding-covering'
+  aluminium_cladding: '/systems/aluminium-cladding-covering',
+  daylighting: '/systems/daylighting-transparent-roofing'
+};
+
+const systemImages: Record<SystemKey, StaticImageData> = {
+  sandwich_panel: sandwichPanelCover,
+  standing_seam_zip: standingSeamCover,
+  aluminium_cladding: aluminiumCladdingCover,
+  daylighting: daylightingCover
 };
 
 const systemLabels: Record<Locale, Record<SystemKey, {name: string; description: string}>> = {
   en: {
     sandwich_panel: {name: 'Sandwich Panel Systems', description: 'Insulated wall and roof panels with thermal insulation cores for industrial buildings.'},
     standing_seam_zip: {name: 'Standing Seam & ZIP Roofing', description: 'Concealed-fastener roofing with long-term waterproofing, flashing coordination, and gutter integration.'},
-    aluminium_cladding: {name: 'Aluminium Cladding & Covering', description: 'Facade cladding systems with flashing details and weatherproofing for industrial envelopes.'}
+    aluminium_cladding: {name: 'Aluminium Cladding & Covering', description: 'Facade cladding systems with flashing details and weatherproofing for industrial envelopes.'},
+    daylighting: {name: 'Glass & Polycarbonate Daylighting', description: 'Skylight and transparent roofing systems for natural light delivery in commercial and industrial buildings.'}
   },
   fa: {
     sandwich_panel: {name: 'سیستم\u200cهای ساندویچ پانل', description: 'پانل\u200cهای عایق دیوار و سقف با هسته عایق حرارتی برای ساختمان\u200cهای صنعتی.'},
     standing_seam_zip: {name: 'سقف ایستادرز و ZIP', description: 'سقف فلزی با اتصال مخفی، آب\u200cبندی بلندمدت، هماهنگی فلاشینگ و ادغام آبرو.'},
-    aluminium_cladding: {name: 'کلادینگ و پوشش آلومینیومی', description: 'سیستم\u200cهای نمای آلومینیومی با دیتیل فلاشینگ و حفاظت آب\u200cوهوایی برای پوسته\u200cهای صنعتی.'}
+    aluminium_cladding: {name: 'کلادینگ و پوشش آلومینیومی', description: 'سیستم\u200cهای نمای آلومینیومی با دیتیل فلاشینگ و حفاظت آب\u200cوهوایی برای پوسته\u200cهای صنعتی.'},
+    daylighting: {name: 'نورگیر شیشه‌ای و پلی‌کربنات', description: 'سیستم‌های نورگیر و سقف شفاف برای تأمین نور طبیعی در ساختمان‌های تجاری و صنعتی.'}
   },
   ar: {
     sandwich_panel: {name: 'أنظمة ألواح الساندويتش', description: 'ألواح معزولة بقلب عازل حراري للجدران والأسقف في المباني الصناعية.'},
     standing_seam_zip: {name: 'أسقف قائمة و ZIP', description: 'أسقف معدنية بتثبيت مخفي مع عزل مائي طويل الأمد وتنسيق فلاشينغ وتكامل مزاريب.'},
-    aluminium_cladding: {name: 'كلادينج وتغطية ألومنيوم', description: 'أنظمة واجهات ألومنيوم مع تفاصيل فلاشينغ وحماية من العوامل الجوية للأغلفة الصناعية.'}
+    aluminium_cladding: {name: 'كلادينج وتغطية ألومنيوم', description: 'أنظمة واجهات ألومنيوم مع تفاصيل فلاشينغ وحماية من العوامل الجوية للأغلفة الصناعية.'},
+    daylighting: {name: 'إضاءة طبيعية زجاجية وبولي كربونات', description: 'أنظمة المناور والأسقف الشفافة لتوصيل الضوء الطبيعي في المباني التجارية والصناعية.'}
   },
   ru: {
     sandwich_panel: {name: 'Сэндвич-панельные системы', description: 'Утеплённые панели с теплоизоляционным сердечником для стен и кровли промышленных зданий.'},
     standing_seam_zip: {name: 'Фальцевая и ZIP-кровля', description: 'Металлическая кровля со скрытым креплением, долгосрочной гидроизоляцией, координацией примыканий и желобов.'},
-    aluminium_cladding: {name: 'Алюминиевый фасадный клад', description: 'Фасадные системы с узлами примыканий и защитой от атмосферных воздействий для промышленных оболочек.'}
+    aluminium_cladding: {name: 'Алюминиевый фасадный клад', description: 'Фасадные системы с узлами примыканий и защитой от атмосферных воздействий для промышленных оболочек.'},
+    daylighting: {name: 'Светопрозрачные системы', description: 'Системы световых фонарей и прозрачных кровель для естественного освещения коммерческих и промышленных зданий.'}
   }
 };
 
@@ -1110,6 +1145,7 @@ export type RelatedSystem = {
   name: string;
   description: string;
   href: string;
+  image: StaticImageData;
 };
 
 const relatedServiceByCategory: Record<ResourceCategoryId, string> = {
@@ -1759,13 +1795,16 @@ export function getResourceDetailPage(locale: Locale, slug: string): ResourceDet
       const caseStudy = getCaseStudyPageData(projectSlug);
       if (!caseStudy) return null;
       const hero = caseStudy.localeContent[locale].hero;
+      const cardMeta = getCaseStudyCardMeta(projectSlug);
       return {
         slug: projectSlug,
         name: hero.projectName,
         location: hero.location,
         systemType: hero.projectType,
         reason: resourceProjectReasons[resource.id]?.[projectSlug]?.[locale],
-        href: `/projects/${projectSlug}`
+        href: `/projects/${projectSlug}`,
+        image: cardMeta?.cardImage,
+        area: cardMeta?.area
       };
     })
     .filter((item): item is RelatedProject => item !== null);
@@ -1779,7 +1818,8 @@ export function getResourceDetailPage(locale: Locale, slug: string): ResourceDet
       key,
       name: systemLabels[locale][key].name,
       description: systemLabels[locale][key].description,
-      href: systemRoutes[key]
+      href: systemRoutes[key],
+      image: systemImages[key]
     })),
     relatedResources: relatedResources.length > 0 ? relatedResources : content.featuredResources.filter((item) => item.slug !== resource.slug).slice(0, 3),
     relatedProjects,

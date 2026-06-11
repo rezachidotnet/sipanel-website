@@ -1,6 +1,7 @@
 'use client';
 
 import {useState, type FormEvent} from 'react';
+import Image from 'next/image';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import type {ResourceDetailPageData} from '@/lib/resources/engineering-resource-hub';
 import {formatResourceDate, getResourceTypeLabel} from '@/lib/resources/engineering-resource-hub';
@@ -361,24 +362,6 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
-      {page.relatedSystems.length > 0 && (
-        <section className="resource-detail-section resource-detail-section--light" data-section="related_systems" aria-labelledby="resource-related-systems-title">
-          <div className="container-shell resource-detail-section__inner">
-            <header>
-              <h2 id="resource-related-systems-title">{ui.relatedSystemsTitle}</h2>
-            </header>
-            <div className="resource-detail-link-grid">
-              {page.relatedSystems.map((system) => (
-                <Link className="resource-related-card resource-related-card--system" href={system.href} key={system.key}>
-                  <span>{system.name}</span>
-                  <em>{system.description}</em>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       <section className="resource-detail-section" data-section="related_resources" aria-labelledby="resource-related-resources-title">
         <div className="container-shell resource-detail-section__inner">
           <header>
@@ -396,20 +379,54 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
+      {page.relatedSystems.length > 0 && (
+        <section className="resource-detail-section resource-detail-section--light" data-section="related_systems" aria-labelledby="resource-related-systems-title">
+          <div className="container-shell resource-detail-section__inner">
+            <header>
+              <h2 id="resource-related-systems-title">{ui.relatedSystemsTitle}</h2>
+            </header>
+            <div className="resource-detail-system-grid">
+              {page.relatedSystems.map((system) => (
+                <Link className="resource-system-card" href={system.href} key={system.key}>
+                  <div className="resource-system-card__image">
+                    <Image src={system.image} alt={system.name} fill sizes="(max-width: 768px) 100vw, 400px" />
+                  </div>
+                  <div className="resource-system-card__body">
+                    <span className="resource-system-card__name">{system.name}</span>
+                    <p>{system.description}</p>
+                    <span className="resource-system-card__cta">{ui.exploreSystemLabel}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {page.relatedProjects.length > 0 && (
-        <section className="resource-detail-section resource-detail-section--light" data-section="related_projects" aria-labelledby="resource-related-projects-title">
+        <section className="resource-detail-section" data-section="related_projects" aria-labelledby="resource-related-projects-title">
           <div className="container-shell resource-detail-section__inner">
             <header>
               <h2 id="resource-related-projects-title">{ui.relatedProjectsTitle}</h2>
               <p>{ui.relatedProjectsProofIntro}</p>
             </header>
-            <div className="resource-detail-link-grid">
+            <div className="resource-detail-project-grid">
               {page.relatedProjects.map((project) => (
-                <Link className="resource-related-card resource-related-card--project" href={project.href} key={project.slug}>
-                  <span>{project.name}</span>
-                  {project.reason ? <p>{project.reason}</p> : null}
-                  <em>{project.location}</em>
-                  <em>{project.systemType}</em>
+                <Link className="resource-project-card" href={project.href} key={project.slug}>
+                  {project.image ? (
+                    <div className="resource-project-card__image">
+                      <Image src={project.image} alt={project.name} fill sizes="(max-width: 768px) 100vw, 400px" />
+                    </div>
+                  ) : null}
+                  <div className="resource-project-card__body">
+                    <span className="resource-project-card__name">{project.name}</span>
+                    {project.reason ? <p>{project.reason}</p> : null}
+                    <div className="resource-project-card__meta">
+                      {project.area ? <em>{project.area}</em> : null}
+                      <em>{project.location}</em>
+                    </div>
+                    <span className="resource-project-card__cta">{ui.viewProjectLabel}</span>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -421,12 +438,15 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         <div className="container-shell resource-detail-conversion">
           <div>
             <h2 id="resource-detail-cta-title">{ui.detailConsultationTitle}</h2>
-            <p>{ui.rfqConversionHelper}</p>
+            <p>{ui.detailConsultationDescription}</p>
           </div>
           <div className="resource-detail-conversion__actions">
             {/* track: rfq_start */}
             <Link href="/contact#rfq-form" className="button-primary">
               {ui.detailConsultationButton}
+            </Link>
+            <Link href="/resources" className="button-secondary">
+              {ui.detailCatalogButton}
             </Link>
           </div>
         </div>
