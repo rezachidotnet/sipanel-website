@@ -435,7 +435,11 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
       button: isFa ? fa.conversionCta.button : page.conversion_cta.button,
       secondaryButton: isFa ? fa.conversionCta.secondaryButton : undefined
     },
-    breadcrumbs: isFa ? fa.breadcrumbs : undefined,
-    caseStudyLabels: isFa ? fa.caseStudyLabels : undefined
+    breadcrumbs: isFa ? fa.breadcrumbs : [
+      {label: locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', href: `/${locale}`},
+      {label: locale === 'ar' ? 'الأنظمة' : locale === 'ru' ? 'Системы' : 'Systems', href: `/${locale}/systems`},
+      {label: locale === 'ar' ? 'أنظمة ألواح الساندويتش' : locale === 'ru' ? 'Сэндвич-панельные системы' : 'Sandwich Panel Systems', href: `/${locale}/systems/sandwich-panel-systems`}
+    ],
+    caseStudyLabels: isFa ? fa.caseStudyLabels : locale === 'ar' ? {challenge: 'التحدي', result: 'النتيجة', viewProject: 'عرض المشروع'} : locale === 'ru' ? {challenge: 'Задача', result: 'Результат', viewProject: 'Посмотреть проект'} : {challenge: 'Challenge', result: 'Result', viewProject: 'View Project'}
   };
 }

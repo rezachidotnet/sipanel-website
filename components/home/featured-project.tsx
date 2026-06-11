@@ -117,7 +117,7 @@ export function FeaturedProject() {
               </ul>
             </div>
 
-            <Link href="/projects/army-hospital" className="featured-project__cta button-primary">
+            <Link href="/projects/army-hospital" className="featured-project__cta button-secondary">
               {t('cta')}
             </Link>
           </div>

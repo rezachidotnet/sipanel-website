@@ -11,6 +11,7 @@ import {RfqSection} from '@/components/home/rfq-section';
 import {StickyMobileCta} from '@/components/home/sticky-mobile-cta';
 import {TrustBar} from '@/components/home/trust-bar';
 import {ClientLogosSection} from '@/components/trust/client-logos-section';
+import {RevealSection} from '@/components/reveal-section';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {locales, type Locale} from '@/i18n/routing';
 import {buildLocalBusinessSchema, buildOrganizationSchema} from '@/lib/seo/schema';
@@ -43,16 +44,34 @@ export default async function HomePage({params}: Props) {
       <SchemaScript schema={localizedLocalBusinessSchema} />
       <HeroSection />
       <TrustBar />
-      <ClientLogosSection variant="carousel" />
-      <FeaturedProject />
-      <WhySipanel />
-      <EngineeringProofSnapshot />
-      <SystemsShowcase />
+      <RevealSection>
+        <ClientLogosSection variant="carousel" />
+      </RevealSection>
+      <RevealSection>
+        <FeaturedProject />
+      </RevealSection>
+      <RevealSection>
+        <WhySipanel />
+      </RevealSection>
+      <RevealSection>
+        <EngineeringProofSnapshot />
+      </RevealSection>
+      <RevealSection>
+        <SystemsShowcase />
+      </RevealSection>
       <StickyMobileCta />
-      <ProcessSection />
-      <CaseStudiesPreview />
-      <ComparisonSection />
-      <RfqSection />
+      <RevealSection>
+        <ProcessSection />
+      </RevealSection>
+      <RevealSection>
+        <CaseStudiesPreview />
+      </RevealSection>
+      <RevealSection>
+        <ComparisonSection />
+      </RevealSection>
+      <RevealSection>
+        <RfqSection />
+      </RevealSection>
     </>
   );
 }

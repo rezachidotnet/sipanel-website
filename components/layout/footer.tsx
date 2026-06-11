@@ -49,6 +49,9 @@ export function Footer() {
 
           <div className="site-footer__column site-footer__contact">
             <h2>{footer('contact')}</h2>
+            <Link href="/contact" className="site-footer__review-link">
+              {footer('requestReview')}
+            </Link>
             <address className="site-footer__address-list">
               <span className="site-footer__address-item site-footer__address-item--address">
                 <span className="site-footer__address-label">{footer('addressLabel')}</span>

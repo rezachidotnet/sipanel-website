@@ -12,8 +12,6 @@ type Props = {
   params: Promise<{locale: string}>;
 };
 
-const pageData = getAluminiumCladdingCoveringPage();
-
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
@@ -29,10 +27,12 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 
   setRequestLocale(validLocale);
 
+  const pageData = getAluminiumCladdingCoveringPage(validLocale);
+
   return buildPageMetadata({
     locale: validLocale,
-    title: aluminiumCladdingCoveringSpec.seo.title,
-    description: aluminiumCladdingCoveringSpec.seo.meta_description,
+    title: pageData.seo.title,
+    description: pageData.seo.metaDescription,
     routes: aluminiumCladdingCoveringSpec.route
   });
 }
@@ -47,6 +47,8 @@ export default async function AluminiumCladdingCoveringPage({params}: Props) {
   const validLocale = locale as Locale;
 
   setRequestLocale(validLocale);
+
+  const pageData = getAluminiumCladdingCoveringPage(validLocale);
 
   return (
     <>

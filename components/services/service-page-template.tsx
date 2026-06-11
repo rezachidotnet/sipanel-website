@@ -187,6 +187,25 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, page)} />
       <SchemaPlaceholder schema={buildOrganizationSchema(locale, page)} />
 
+      {page.breadcrumbs && page.breadcrumbs.length > 0 ? (
+        <nav className="service-breadcrumb" aria-label="Breadcrumb">
+          <ol className="container-shell service-breadcrumb__list">
+            {page.breadcrumbs.map((crumb, index) => {
+              const isLast = index === page.breadcrumbs!.length - 1;
+              return (
+                <li key={crumb.href} className="service-breadcrumb__item">
+                  {isLast ? (
+                    <span aria-current="page">{crumb.label}</span>
+                  ) : (
+                    <a href={crumb.href}>{crumb.label}</a>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
+      ) : null}
+
       <section className="service-hero" data-section="service_hero" aria-labelledby="service-page-title">
         <div className="container-shell service-hero__inner">
           <div className="service-hero__copy">
