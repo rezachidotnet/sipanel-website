@@ -1,0 +1,12 @@
+output/
+docs/
+assets/brand/guidelines/
+assets/projects/army-hospital/raw-video/
+assets/projects/army-hospital/scripts/
+assets/projects/galaxy/
+*.heic
+*.mp4
+*.mov
+*.gif
+*.avi
+video-editing-plan.md

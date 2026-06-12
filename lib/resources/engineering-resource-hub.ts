@@ -152,7 +152,8 @@ export type ResourceHubCard = {
   readTime: string;
   cta: string;
   leadCapture: boolean;
-  assetStatus: 'pending_resource_file';
+  assetStatus: 'pending_resource_file' | 'available';
+  downloadPath?: string;
   leadCaptureStatus: 'pending_lead_capture' | 'not_required';
   relatedServiceHref: string;
   preview: ResourcePreviewMeta;
@@ -790,12 +791,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     previewNote: 'A structured overview of the key sections covered in this resource.',
     downloadTitle: 'Get This Resource',
     downloadNote: 'To receive the file and enable technical follow-up, please enter your contact details.',
-    downloadPendingNote: 'Direct download will be available soon. Submit your contact details to receive the current version.',
+    downloadPendingNote: 'This resource is currently being prepared by our engineering team. Submit your contact details and we will reach out to you directly.',
     downloadRequested: 'Requested resource',
     downloadSubmit: 'Get Resource',
     downloadSending: 'Sending...',
-    downloadSuccess: 'Your request has been received. The resource link or follow-up details will be sent to you.',
-    downloadSuccessPending: 'Your request has been received. The resource link or follow-up details will be sent to you.',
+    downloadSuccess: 'Your request has been received. Your download will begin shortly.',
+    downloadSuccessPending: 'Your request has been received. This resource is currently being prepared. Our engineering team will contact you shortly.',
     downloadError: 'Could not send your request. Please check the fields and try again.',
     sectionBrowse: 'Browse by Engineering Topic',
     sectionFeatured: 'Featured Resources',
@@ -871,12 +872,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     previewNote: 'مروری ساختاری بر بخش\u200cهای اصلی این منبع فنی.',
     downloadTitle: 'دریافت فایل فنی',
     downloadNote: 'برای ارسال فایل و امکان پیگیری فنی، لطفاً اطلاعات تماس خود را وارد کنید.',
-    downloadPendingNote: 'دریافت مستقیم این فایل به\u200cزودی فعال می\u200cشود. برای دریافت نسخه فعلی، اطلاعات تماس خود را ارسال کنید.',
+    downloadPendingNote: 'این منبع در حال آماده‌سازی توسط تیم مهندسی ماست. اطلاعات تماس خود را ارسال کنید تا مستقیماً با شما تماس بگیریم.',
     downloadRequested: 'منبع درخواست\u200cشده',
     downloadSubmit: 'دریافت فایل',
     downloadSending: 'در حال ارسال...',
-    downloadSuccess: 'درخواست شما ثبت شد. لینک فایل یا اطلاعات تکمیلی برای شما ارسال می\u200cشود.',
-    downloadSuccessPending: 'درخواست شما ثبت شد. لینک فایل یا اطلاعات تکمیلی برای شما ارسال می\u200cشود.',
+    downloadSuccess: 'درخواست شما ثبت شد. دانلود فایل به‌زودی آغاز می‌شود.',
+    downloadSuccessPending: 'درخواست شما ثبت شد. این منبع در حال آماده‌سازی است. تیم مهندسی ما به‌زودی با شما تماس خواهد گرفت.',
     downloadError: 'ارسال درخواست ممکن نشد. لطفاً فیلدها را بررسی کنید و دوباره تلاش کنید.',
     sectionBrowse: 'مرور بر اساس موضوع مهندسی',
     sectionFeatured: 'منابع پیشنهادی',
@@ -952,12 +953,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     previewNote: 'نظرة عامة منظمة على الأقسام الرئيسية في هذا المورد.',
     downloadTitle: 'الحصول على هذا المورد',
     downloadNote: 'لإرسال الملف وتمكين المتابعة الفنية، يرجى إدخال بيانات التواصل.',
-    downloadPendingNote: 'سيكون التحميل المباشر متاحًا قريبًا. أرسل بيانات التواصل للحصول على النسخة الحالية.',
+    downloadPendingNote: 'هذا المورد قيد الإعداد من قبل فريقنا الهندسي. أرسل بيانات التواصل وسنتصل بك مباشرة.',
     downloadRequested: 'المورد المطلوب',
     downloadSubmit: 'الحصول على المورد',
     downloadSending: 'جارٍ الإرسال...',
-    downloadSuccess: 'تم استلام طلبك. سيتم إرسال رابط الملف أو تفاصيل المتابعة إليك.',
-    downloadSuccessPending: 'تم استلام طلبك. سيتم إرسال رابط الملف أو تفاصيل المتابعة إليك.',
+    downloadSuccess: 'تم استلام طلبك. سيبدأ التحميل قريبًا.',
+    downloadSuccessPending: 'تم استلام طلبك. هذا المورد قيد الإعداد حاليًا. سيتواصل معك فريقنا الهندسي قريبًا.',
     downloadError: 'تعذر إرسال الطلب. يرجى مراجعة الحقول والمحاولة مرة أخرى.',
     sectionBrowse: 'تصفح حسب الموضوع الهندسي',
     sectionFeatured: 'الموارد المميزة',
@@ -1033,12 +1034,12 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     previewNote: 'Структурированный обзор основных разделов данного ресурса.',
     downloadTitle: 'Получить ресурс',
     downloadNote: 'Для отправки файла и технической поддержки, пожалуйста, укажите контактные данные.',
-    downloadPendingNote: 'Прямая загрузка скоро будет доступна. Оставьте контактные данные, чтобы получить текущую версию.',
+    downloadPendingNote: 'Этот ресурс готовится нашей инженерной командой. Оставьте контактные данные, и мы свяжемся с вами напрямую.',
     downloadRequested: 'Запрашиваемый ресурс',
     downloadSubmit: 'Получить ресурс',
     downloadSending: 'Отправка...',
-    downloadSuccess: 'Ваш запрос получен. Ссылка на файл или дополнительная информация будет отправлена вам.',
-    downloadSuccessPending: 'Ваш запрос получен. Ссылка на файл или дополнительная информация будет отправлена вам.',
+    downloadSuccess: 'Ваш запрос получен. Загрузка начнётся в ближайшее время.',
+    downloadSuccessPending: 'Ваш запрос получен. Этот ресурс сейчас готовится. Наша инженерная команда свяжется с вами в ближайшее время.',
     downloadError: 'Не удалось отправить запрос. Проверьте поля и попробуйте снова.',
     sectionBrowse: 'Обзор по инженерной теме',
     sectionFeatured: 'Рекомендуемые материалы',
@@ -1365,6 +1366,15 @@ const breadcrumbLabels: Record<Locale, {home: string; resources: string}> = {
   ru: {home: 'Главная', resources: 'Ресурсы'}
 };
 
+/**
+ * Map resource IDs to their download file paths under /public/resources/.
+ * When a PDF is ready, add its slug here. The file must exist at /public/resources/{filename}.
+ * Resources not listed here will show as "pending" with an honest unavailable message.
+ */
+const resourceDownloadPaths: Record<string, string> = {
+  // Example: sandwich_panel_selection_guide: '/resources/sandwich-panel-selection-guide.pdf',
+};
+
 function buildFeaturedResources(): ResourceHubCard[] {
   const resourcesSection = resourceHubSpec.page_sections.find(
     (section): section is Extract<ResourceHubSpec['page_sections'][number], {id: 'featured_resources'}> =>
@@ -1390,7 +1400,8 @@ function buildFeaturedResources(): ResourceHubCard[] {
       readTime: resource.read_time,
       cta: resource.cta,
       leadCapture: resource.lead_capture,
-      assetStatus: 'pending_resource_file' as const,
+      assetStatus: resourceDownloadPaths[resource.id] ? 'available' as const : 'pending_resource_file' as const,
+      downloadPath: resourceDownloadPaths[resource.id],
       leadCaptureStatus: resource.lead_capture ? 'pending_lead_capture' as const : 'not_required' as const,
       relatedServiceHref: relatedServiceByCategory[resource.category],
       preview,

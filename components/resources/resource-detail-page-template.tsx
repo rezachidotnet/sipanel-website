@@ -20,6 +20,15 @@ type Props = {
 
 type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
+function triggerResourceDownload(path: string) {
+  const link = document.createElement('a');
+  link.href = path;
+  link.download = path.split('/').pop() ?? 'resource.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 function SchemaPlaceholder({schema}: {schema: unknown}) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />;
 }
@@ -160,11 +169,14 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       }
 
       setSubmitState('success');
-      setFeedback(
-        page.resource.assetStatus === 'pending_resource_file'
-          ? ui.downloadSuccessPending
-          : ui.downloadSuccess
-      );
+
+      if (page.resource.assetStatus === 'available' && page.resource.downloadPath) {
+        setFeedback(ui.downloadSuccess);
+        triggerResourceDownload(page.resource.downloadPath);
+      } else {
+        setFeedback(ui.downloadSuccessPending);
+      }
+
       form.reset();
     } catch {
       setSubmitState('error');

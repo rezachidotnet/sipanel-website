@@ -276,13 +276,15 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
   const dir = getDirection(locale);
   const content = page.localeContent[locale];
   const featuredResources = content.featuredResources.slice(0, 3);
+  const featuredIds = new Set(featuredResources.map((r) => r.id));
+  const libraryResources = content.featuredResources.filter((r) => !featuredIds.has(r.id));
   const categoryLabelById = new Map(content.categories.map((category) => [category.id, category.label]));
-  const categoryCounts = content.featuredResources.reduce((counts, resource) => {
+  const libraryCategoryCounts = libraryResources.reduce((counts, resource) => {
     counts.set(resource.category, (counts.get(resource.category) ?? 0) + 1);
     return counts;
   }, new Map<ResourceHubCategory['id'], number>());
-  const filterCategories = content.categories.filter((category) => (categoryCounts.get(category.id) ?? 0) > 0);
-  const totalResourceCount = content.featuredResources.length;
+  const filterCategories = content.categories.filter((category) => (libraryCategoryCounts.get(category.id) ?? 0) > 0);
+  const totalLibraryCount = libraryResources.length;
 
   return (
     <article className="resource-hub-page" data-resource-hub="" dir={dir}>
@@ -363,18 +365,18 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
             <div>
               <h2 id="resource-grid-title">{content.ui.sectionLibrary}</h2>
             </div>
-            <span className="resource-hub-count">{formatResourceCount(totalResourceCount, locale)}</span>
+            <span className="resource-hub-count">{formatResourceCount(totalLibraryCount, locale)}</span>
           </header>
 
           <div className="resource-hub-filter-shell">
             <div className="resource-hub-filter-bar">
               <ResourceFilters
                 categories={filterCategories}
-                counts={categoryCounts}
+                counts={libraryCategoryCounts}
                 groupId="grid"
                 allLabel={content.allResourcesLabel}
                 locale={locale}
-                totalCount={totalResourceCount}
+                totalCount={totalLibraryCount}
                 filterAriaLabel={content.ui.filterAriaLabel}
               />
               <ResourceSortControl
@@ -386,11 +388,11 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
                   sortShorterRead: content.ui.sortShorterRead
                 }}
                 gridSelector=".resource-hub-grid"
-                hasReadTime={content.featuredResources.some((r) => r.sortReadTime > 0)}
+                hasReadTime={libraryResources.some((r) => r.sortReadTime > 0)}
               />
             </div>
             <div className="resource-hub-grid">
-              {content.featuredResources.map((resource) => (
+              {libraryResources.map((resource) => (
                 <ResourceCard key={resource.id} resource={resource} categoryLabel={categoryLabelById.get(resource.category) ?? resource.category} locale={locale} ui={content.ui} />
               ))}
             </div>
