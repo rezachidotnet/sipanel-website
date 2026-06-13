@@ -221,14 +221,24 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           <div className="resource-detail-hero__visual">
             {page.resource.preview.image ? (
               <div className="resource-detail-hero__image">
-                <Image
-                  src={page.resource.preview.image}
-                  alt={page.resource.preview.imageAlt?.[locale] ?? page.resource.title}
-                  fill
-                  className="resource-detail-hero__image-media"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
+                <picture>
+                  {page.resource.preview.imageMobile ? (
+                    <source
+                      media="(max-width: 767px)"
+                      srcSet={page.resource.preview.imageMobile.src}
+                      width={page.resource.preview.imageMobile.width}
+                      height={page.resource.preview.imageMobile.height}
+                    />
+                  ) : null}
+                  <Image
+                    src={page.resource.preview.image}
+                    alt={page.resource.preview.imageAlt?.[locale] ?? page.resource.title}
+                    fill
+                    className="resource-detail-hero__image-media"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                </picture>
               </div>
             ) : (
               <ResourcePreviewGraphic label={page.resource.assetStatus === 'pending_resource_file' ? ui.pendingBadge : ui.verifiedBadge} />

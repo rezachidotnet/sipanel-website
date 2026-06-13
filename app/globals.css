@@ -8190,6 +8190,7 @@ button[aria-disabled='true'] {
   background: var(--color-white);
   color: var(--color-text-primary);
   overflow-x: clip;
+  max-width: 100vw;
 }
 
 .projects-index-hero {
@@ -8271,6 +8272,22 @@ button[aria-disabled='true'] {
   padding-inline: var(--container-padding);
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  max-width: 100%;
+  /* `layout` containment (not just inline-size) is required: it stops the RTL
+     scroll overflow of this carousel from propagating to the document root,
+     which caused a 10324px horizontal overflow on /fa/projects. `layout` (not
+     `paint`) preserves card shadow bleed on the desktop grid. */
+  contain: layout inline-size;
+}
+
+/* RTL scroll-snap overflow containment — Chromium fa-locale quirk (mobile carousel only).
+   Scoped to [lang='fa'] so the also-RTL ar locale (which is unaffected) is not regressed. */
+@media (max-width: 767px) {
+  [lang='fa'] .projects-index-grid {
+    overflow-x: auto;
+    max-width: 100vw;
+    overscroll-behavior-x: contain;
+  }
 }
 
 .projects-index-filter {

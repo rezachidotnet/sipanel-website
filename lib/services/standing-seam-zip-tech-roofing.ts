@@ -2,7 +2,9 @@ import type {ServicePageTemplateData} from '@/components/services/service-page-t
 import type {Locale} from '@/i18n/routing';
 import standingSeamHero from '@/assets/systems/standing-seam/standing-seam-hero.webp';
 import clipInstallImg from '@/assets/systems/standing-seam/clip-installation.webp';
+import clipInstallMobileImg from '@/assets/systems/standing-seam/clip-installation-mobile.webp';
 import seamDetailImg from '@/assets/systems/standing-seam/seam-detail.webp';
+import seamDetailMobileImg from '@/assets/systems/standing-seam/seam-detail-mobile.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import ahvazAirportCard from '@/assets/projects/ahvaz-airport-passenger-terminal/photos/ahvaz-airport-passenger-terminal-card.webp';
 import megaparsCard from '@/assets/projects/megaparsmall-atrium/photos/megaparsmall-atrium-card.webp';
@@ -829,12 +831,14 @@ export function getStandingSeamZipTechRoofingPage(locale: Locale): ServicePageTe
           title: content.technicalProof.assets[0].title,
           description: content.technicalProof.assets[0].description,
           image: clipInstallImg,
+          imageMobile: clipInstallMobileImg,
           alt: content.technicalProof.assets[0].alt
         },
         {
           title: content.technicalProof.assets[1].title,
           description: content.technicalProof.assets[1].description,
           image: seamDetailImg,
+          imageMobile: seamDetailMobileImg,
           alt: content.technicalProof.assets[1].alt
         },
         {

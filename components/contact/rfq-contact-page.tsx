@@ -12,6 +12,7 @@ import type {ProductionContactInfo, RfqContactSection} from '@/lib/contact/rfq-c
 import {rfqAllowedFileExtensions, rfqApiEndpoint, rfqMaxFileSizeBytes} from '@/lib/rfq/constants';
 import {trackContactClick, trackEvent, trackRfqEvent} from '@/lib/analytics/events';
 import contactTrustImg from '@/assets/contact/contact-trust-image.webp';
+import contactTrustMobileImg from '@/assets/contact/contact-trust-image-mobile.webp';
 
 type ContactPageData = {
   contact: ProductionContactInfo;
@@ -440,13 +441,16 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
             <h2 id="rfq-contact-title">{formTitle}</h2>
             <p>{guidanceIntro}</p>
             <div className="contact-guidance__image">
-              <Image
-                src={contactTrustImg}
-                alt="SIPANEL project management"
-                fill
-                className="contact-guidance__image-media"
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
+              <picture>
+                <source media="(max-width: 767px)" srcSet={contactTrustMobileImg.src} width={contactTrustMobileImg.width} height={contactTrustMobileImg.height} />
+                <Image
+                  src={contactTrustImg}
+                  alt="SIPANEL project management"
+                  fill
+                  className="contact-guidance__image-media"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </picture>
             </div>
             <div className="rfq-form__status" data-status="ready">
               {t('backendReady')}

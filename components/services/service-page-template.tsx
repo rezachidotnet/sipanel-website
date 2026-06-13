@@ -21,6 +21,7 @@ type ServiceTechnicalAsset = {
   title: string;
   description?: string;
   image?: StaticImageData;
+  imageMobile?: StaticImageData;
   alt?: string;
   assetStatus?: 'available' | 'pending';
 };
@@ -406,7 +407,12 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                 >
                   {asset.image ? (
                     <div className="service-proof-card__preview">
-                      <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 84vw, 30vw" />
+                      <picture>
+                        {asset.imageMobile ? (
+                          <source media="(max-width: 767px)" srcSet={asset.imageMobile.src} width={asset.imageMobile.width} height={asset.imageMobile.height} />
+                        ) : null}
+                        <Image src={asset.image} alt={asset.alt ?? asset.title} fill sizes="(max-width: 767px) 84vw, 30vw" />
+                      </picture>
                     </div>
                   ) : null}
                   <h3>{asset.title}</h3>

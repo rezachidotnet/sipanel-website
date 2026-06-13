@@ -2,7 +2,9 @@ import type {ServicePageTemplateData} from '@/components/services/service-page-t
 import type {Locale} from '@/i18n/routing';
 import daylightingHero from '@/assets/systems/transparent-roofing/cover-desktop.webp';
 import daylightInteriorImg from '@/assets/systems/transparent-roofing/interior-view.webp';
+import daylightInteriorMobileImg from '@/assets/systems/transparent-roofing/interior-view-mobile.webp';
 import daylightJunctionImg from '@/assets/systems/transparent-roofing/junction-detail.webp';
+import daylightJunctionMobileImg from '@/assets/systems/transparent-roofing/junction-detail-mobile.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import fadakMallCard from '@/assets/projects/fadak-mall-glass-skylight/photos/fadak-mall-glass-skylight-card.webp';
 import atlasHotelCard from '@/assets/projects/atlas-hotel-shahinshahr-atrium/photos/atlas-hotel-shahinshahr-atrium-card.webp';
@@ -835,12 +837,14 @@ export function getDaylightingTransparentRoofingPage(locale: Locale): ServicePag
           title: content.technicalProof.assets[0].title,
           description: content.technicalProof.assets[0].description,
           image: daylightInteriorImg,
+          imageMobile: daylightInteriorMobileImg,
           alt: content.technicalProof.assets[0].alt
         },
         {
           title: content.technicalProof.assets[1].title,
           description: content.technicalProof.assets[1].description,
           image: daylightJunctionImg,
+          imageMobile: daylightJunctionMobileImg,
           alt: content.technicalProof.assets[1].alt
         },
         {

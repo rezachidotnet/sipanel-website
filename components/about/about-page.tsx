@@ -11,6 +11,7 @@ import {
 } from '@/lib/about/about-page';
 import leadershipPhoto from '@/assets/about/leadership/am-taleghani.webp';
 import aboutHeroImg from '@/assets/about/about-hero.webp';
+import aboutHeroMobileImg from '@/assets/about/about-hero-mobile.webp';
 
 type Props = {
   locale: Locale;
@@ -86,13 +87,16 @@ function HeritageHeroSection({content}: SectionProps) {
 
         <div className="about-story__visual">
           <div className="about-story__visual-image">
-            <Image
-              src={aboutHeroImg}
-              alt="SIPANEL engineering facility"
-              className="about-story__visual-media"
-              sizes="(max-width: 768px) 100vw, 60vw"
-              priority
-            />
+            <picture>
+              <source media="(max-width: 767px)" srcSet={aboutHeroMobileImg.src} width={aboutHeroMobileImg.width} height={aboutHeroMobileImg.height} />
+              <Image
+                src={aboutHeroImg}
+                alt="SIPANEL engineering facility"
+                className="about-story__visual-media"
+                sizes="(max-width: 768px) 100vw, 60vw"
+                priority
+              />
+            </picture>
           </div>
           <div className="about-story__visual-note">
             <strong>SIPANEL</strong>

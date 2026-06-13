@@ -2,7 +2,9 @@ import type {ServicePageTemplateData} from '@/components/services/service-page-t
 import type {Locale} from '@/i18n/routing';
 import aluminiumCladdingHero from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
 import aluminiumInstallImg from '@/assets/systems/aluminium-claddin/installation.webp';
+import aluminiumInstallMobileImg from '@/assets/systems/aluminium-claddin/installation-mobile.webp';
 import aluminiumJointImg from '@/assets/systems/aluminium-claddin/joint-detail.webp';
+import aluminiumJointMobileImg from '@/assets/systems/aluminium-claddin/joint-detail-mobile.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import babakSardarbCard from '@/assets/projects/babak_sardarb/photos/babak_sardarb-card.webp';
 import parandCard from '@/assets/projects/parand/photos/parand-card.webp';
@@ -835,12 +837,14 @@ export function getAluminiumCladdingCoveringPage(locale: Locale): ServicePageTem
           title: content.technicalProof.assets[0].title,
           description: content.technicalProof.assets[0].description,
           image: aluminiumInstallImg,
+          imageMobile: aluminiumInstallMobileImg,
           alt: content.technicalProof.assets[0].alt
         },
         {
           title: content.technicalProof.assets[1].title,
           description: content.technicalProof.assets[1].description,
           image: aluminiumJointImg,
+          imageMobile: aluminiumJointMobileImg,
           alt: content.technicalProof.assets[1].alt
         },
         {

@@ -10,6 +10,12 @@ import shopDrawingReviewPreview from '@/assets/resources/shop-drawing-review-gui
 import standingSeamNotesPreview from '@/assets/resources/standing-seam-roof-detail-notes.webp';
 import aluminiumCladdingChecklistPreview from '@/assets/resources/aluminium-cladding-layout-checklist.webp';
 import mtoProcurementPreview from '@/assets/resources/mto-procurement-planning-sheet.webp';
+import roofLeakagePreviewMobile from '@/assets/resources/roof-leakage-prevention-checklist-mobile.webp';
+import sandwichPanelSelectionPreviewMobile from '@/assets/resources/sandwich-panel-selection-guide-mobile.webp';
+import shopDrawingReviewPreviewMobile from '@/assets/resources/shop-drawing-review-guide-mobile.webp';
+import standingSeamNotesPreviewMobile from '@/assets/resources/standing-seam-roof-detail-notes-mobile.webp';
+import aluminiumCladdingChecklistPreviewMobile from '@/assets/resources/aluminium-cladding-layout-checklist-mobile.webp';
+import mtoProcurementPreviewMobile from '@/assets/resources/mto-procurement-planning-sheet-mobile.webp';
 import {getCaseStudyPageData, getCaseStudyCardMeta} from '@/lib/case-studies/case-study-pages';
 import daylightingCover from '@/assets/systems/transparent-roofing/cover-desktop.webp';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
@@ -113,6 +119,7 @@ export type ResourcePreviewMeta = {
   format?: string;
   updatedAt?: string;
   image?: StaticImageData;
+  imageMobile?: StaticImageData;
   imageAlt?: Record<Locale, string>;
 };
 
@@ -283,6 +290,7 @@ const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
     format: 'PDF',
     updatedAt: '2026-03',
     image: roofLeakagePreview,
+    imageMobile: roofLeakagePreviewMobile,
     imageAlt: {
       en: 'Preview of the industrial roof leakage prevention checklist',
       fa: 'پیش‌نمایش چک‌لیست پیشگیری از نشتی سقف صنعتی',
@@ -297,6 +305,7 @@ const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
     format: 'PDF',
     updatedAt: '2026-03',
     image: sandwichPanelSelectionPreview,
+    imageMobile: sandwichPanelSelectionPreviewMobile,
     imageAlt: {
       en: 'Preview of the sandwich panel selection guide',
       fa: 'پیش‌نمایش راهنمای انتخاب ساندویچ پانل',
@@ -311,6 +320,7 @@ const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
     format: 'PDF',
     updatedAt: '2026-02',
     image: shopDrawingReviewPreview,
+    imageMobile: shopDrawingReviewPreviewMobile,
     imageAlt: {
       en: 'Shop drawing preview for panel project review',
       fa: 'پیش‌نمایش شاپ دراوینگ برای بازبینی پروژه پانل',
@@ -324,6 +334,7 @@ const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
     format: 'PDF',
     updatedAt: '2026-03',
     image: standingSeamNotesPreview,
+    imageMobile: standingSeamNotesPreviewMobile,
     imageAlt: {
       en: 'Standing seam roof detail preview',
       fa: 'تصویر دیتیل اجرایی سقف ایستادرز',
@@ -338,6 +349,7 @@ const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
     format: 'PDF',
     updatedAt: '2026-02',
     image: aluminiumCladdingChecklistPreview,
+    imageMobile: aluminiumCladdingChecklistPreviewMobile,
     imageAlt: {
       en: 'Preview of the aluminium cladding layout checklist',
       fa: 'پیش‌نمایش چک‌لیست چیدمان کلادینگ آلومینیومی',
@@ -352,6 +364,7 @@ const resourcePreviewData: Record<string, ResourcePreviewMeta> = {
     format: 'PDF',
     updatedAt: '2026-03',
     image: mtoProcurementPreview,
+    imageMobile: mtoProcurementPreviewMobile,
     imageAlt: {
       en: 'Preview of the MTO and procurement planning sheet',
       fa: 'پیش‌نمایش برگه برنامه‌ریزی MTO و خرید',

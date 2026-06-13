@@ -6,7 +6,9 @@ import tabasCard from '@/assets/projects/tabas/photos/tabas-card.webp';
 import mahshahrTaxiCard from '@/assets/projects/mahshahr_taxi/photos/mahshahr_taxi-card.webp';
 import sandwichPanelHero from '@/assets/systems/sandwich-panel/hero-desktop.webp';
 import installationImg from '@/assets/systems/sandwich-panel/installation.webp';
+import installationMobileImg from '@/assets/systems/sandwich-panel/installation-mobile.webp';
 import technicalDetailImg from '@/assets/systems/sandwich-panel/technical-detail.webp';
+import technicalDetailMobileImg from '@/assets/systems/sandwich-panel/technical-detail-mobile.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 
 type ServiceSystemPageSpec = {
@@ -394,12 +396,14 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
           title: isFa ? 'نقشه شاپ‌دراوینگ' : 'Shop Drawing',
           description: isFa ? 'نقشه چیدمان پانل و جزئیات اتصال پیش از تأمین' : 'Panel layout and connection details coordinated before procurement.',
           image: installationImg,
+          imageMobile: installationMobileImg,
           alt: isFa ? 'نمونه شاپ‌دراوینگ ساندویچ پانل' : 'Sandwich panel shop drawing example'
         },
         {
           title: isFa ? 'جزئیات آب‌بندی' : 'Waterproofing Detail',
           description: isFa ? 'جزئیات فلاشینگ، ناودان و آب‌بندی درز' : 'Flashing, gutter, and joint sealing details reviewed before installation.',
           image: technicalDetailImg,
+          imageMobile: technicalDetailMobileImg,
           alt: isFa ? 'جزئیات فلاشینگ و آب‌بندی' : 'Flashing and waterproofing detail'
         },
         {

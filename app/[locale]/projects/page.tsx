@@ -45,6 +45,7 @@ import tavanirShahrekordCentralAtriumCard from '@/assets/projects/tavanir-shahre
 import tehranMallRoofGardenFoodcourtCard from '@/assets/projects/tehran-mall-roof-garden-foodcourt/photos/tehran-mall-roof-garden-foodcourt-card.webp';
 import toranjKishRestaurantCard from '@/assets/projects/toranj-kish-restaurant/photos/toranj-kish-restaurant-card.webp';
 import projectsHeroImg from '@/assets/projects/projects-index-hero.webp';
+import projectsHeroMobileImg from '@/assets/projects/projects-index-hero-mobile.webp';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -1422,7 +1423,10 @@ export default async function ProjectsOverviewPage({params}: Props) {
             </div>
           </div>
           <div className="projects-index-hero__visual" aria-hidden="true">
-            <Image src={projectsHeroImg} alt="" fill priority sizes="(max-width: 767px) 100vw, 45vw" />
+            <picture>
+              <source media="(max-width: 767px)" srcSet={projectsHeroMobileImg.src} width={projectsHeroMobileImg.width} height={projectsHeroMobileImg.height} />
+              <Image src={projectsHeroImg} alt="" fill priority sizes="(max-width: 767px) 100vw, 45vw" />
+            </picture>
           </div>
         </div>
       </section>
