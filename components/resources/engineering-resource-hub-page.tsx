@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import resourcesHero from '@/assets/resources/resources-hero.webp';
 import {Link, type Locale, getDirection} from '@/i18n/routing';
 import {
   formatResourceDate,
@@ -326,12 +327,14 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
             </div>
           </div>
 
-          <div className="resource-hub-hero__visual" aria-label={content.hero.visualFallback} role="img">
-            <div className="resource-hub-doc-stack">
-              <ResourceHubDocumentPreview label={content.hero.visualFallback} />
-              <ResourceHubDocumentPreview label={content.ui.heroVisualLabel1} />
-              <ResourceHubDocumentPreview label={content.ui.heroVisualLabel2} />
-            </div>
+          <div className="resource-hub-hero__visual resource-hub-hero__visual--image">
+            <Image
+              src={resourcesHero}
+              alt={content.hero.visualFallback}
+              sizes="(max-width: 1024px) 100vw, 48vw"
+              priority
+              placeholder="blur"
+            />
           </div>
         </div>
       </section>

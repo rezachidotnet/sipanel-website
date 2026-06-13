@@ -3125,6 +3125,18 @@ button[aria-disabled='true'] {
   padding: 18px;
 }
 
+.resource-hub-hero__visual--image {
+  padding: 0;
+}
+
+.resource-hub-hero__visual--image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .resource-hub-doc-stack {
   display: grid;
   gap: 12px;
