@@ -699,6 +699,7 @@ export type ResourceHubUiLabels = {
   summaryReadTime: string;
   summaryFileStatus: string;
   summaryFileStatusPending: string;
+  summaryFileStatusAvailable: string;
   preparedByLabel: string;
   reviewedByLabel: string;
   lastUpdatedLabel: string;
@@ -781,6 +782,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     summaryReadTime: 'Read time',
     summaryFileStatus: 'Availability',
     summaryFileStatusPending: 'Available upon request',
+    summaryFileStatusAvailable: 'Ready for download (PDF)',
     preparedByLabel: 'Prepared by',
     reviewedByLabel: 'Technical review',
     lastUpdatedLabel: 'Last updated',
@@ -862,6 +864,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     summaryReadTime: 'زمان مطالعه',
     summaryFileStatus: 'وضعیت دسترسی',
     summaryFileStatusPending: 'قابل دریافت با ارسال درخواست',
+    summaryFileStatusAvailable: 'آماده دریافت (PDF)',
     preparedByLabel: 'تهیه‌شده توسط',
     reviewedByLabel: 'بازبینی فنی',
     lastUpdatedLabel: 'آخرین به‌روزرسانی',
@@ -943,6 +946,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     summaryReadTime: 'وقت القراءة',
     summaryFileStatus: 'التوفر',
     summaryFileStatusPending: 'متاح عند الطلب',
+    summaryFileStatusAvailable: 'جاهز للتنزيل (PDF)',
     preparedByLabel: 'أعده',
     reviewedByLabel: 'المراجعة الفنية',
     lastUpdatedLabel: 'آخر تحديث',
@@ -1024,6 +1028,7 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     summaryReadTime: 'Время чтения',
     summaryFileStatus: 'Доступность',
     summaryFileStatusPending: 'Доступен по запросу',
+    summaryFileStatusAvailable: 'Готов к загрузке (PDF)',
     preparedByLabel: 'Подготовлено',
     reviewedByLabel: 'Техническая проверка',
     lastUpdatedLabel: 'Последнее обновление',
@@ -1370,13 +1375,24 @@ const breadcrumbLabels: Record<Locale, {home: string; resources: string}> = {
 };
 
 /**
- * Map resource IDs to their download file paths under /public/resources/.
- * When a PDF is ready, add its slug here. The file must exist at /public/resources/{filename}.
- * Resources not listed here will show as "pending" with an honest unavailable message.
+ * Resource IDs that have downloadable PDFs. Localised files live at
+ * /public/downloads/{locale}/{slug}.pdf where slug = id with underscores replaced
+ * by hyphens. PDFs are generated for every supported locale (en, fa, ar, ru).
+ * Resources not listed here show as "pending" with an honest unavailable message.
  */
-const resourceDownloadPaths: Record<string, string> = {
-  // Example: sandwich_panel_selection_guide: '/resources/sandwich-panel-selection-guide.pdf',
-};
+const downloadableResourceIds = new Set<string>([
+  'roof_leakage_prevention_checklist',
+  'sandwich_panel_selection_guide',
+  'shop_drawing_review_guide',
+  'standing_seam_roof_detail_notes',
+  'aluminium_cladding_layout_checklist',
+  'mto_procurement_planning_sheet'
+]);
+
+function resourceDownloadPath(resourceId: string, locale: Locale): string | undefined {
+  if (!downloadableResourceIds.has(resourceId)) return undefined;
+  return `/downloads/${locale}/${resourceId.replaceAll('_', '-')}.pdf`;
+}
 
 function buildFeaturedResources(): ResourceHubCard[] {
   const resourcesSection = resourceHubSpec.page_sections.find(
@@ -1403,8 +1419,8 @@ function buildFeaturedResources(): ResourceHubCard[] {
       readTime: resource.read_time,
       cta: resource.cta,
       leadCapture: resource.lead_capture,
-      assetStatus: resourceDownloadPaths[resource.id] ? 'available' as const : 'pending_resource_file' as const,
-      downloadPath: resourceDownloadPaths[resource.id],
+      assetStatus: downloadableResourceIds.has(resource.id) ? 'available' as const : 'pending_resource_file' as const,
+      downloadPath: undefined,
       leadCaptureStatus: resource.lead_capture ? 'pending_lead_capture' as const : 'not_required' as const,
       relatedServiceHref: relatedServiceByCategory[resource.category],
       preview,
@@ -1758,7 +1774,8 @@ function buildLocaleContentMap() {
             authorRole: resourceAuthority.authorRole ?? defaultAuthority.authorRole,
             reviewedBy: resourceAuthority.reviewedBy ?? defaultAuthority.reviewedBy,
             reviewedByRole: resourceAuthority.reviewedByRole ?? defaultAuthority.reviewedByRole,
-            updatedAt: resource.updatedAt ?? resource.preview.updatedAt
+            updatedAt: resource.updatedAt ?? resource.preview.updatedAt,
+            downloadPath: resourceDownloadPath(resource.id, locale)
           };
         }),
         faq: faqData[locale]

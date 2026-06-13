@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import resourcesHero from '@/assets/resources/resources-hero.webp';
+import leadCapturePreview from '@/assets/resources/lead-capture-preview.webp';
 import {Link, type Locale, getDirection} from '@/i18n/routing';
 import {
   formatResourceDate,
@@ -51,19 +52,6 @@ function buildBreadcrumbSchema(locale: Locale, page: ResourceHubPageData) {
 
 function buildOrganizationSchema(locale: Locale) {
   return buildSharedOrganizationSchema(locale, `/${locale}#organization`);
-}
-
-function ResourceHubDocumentPreview({label}: {label: string}) {
-  return (
-    <div className="resource-hub-doc-preview" aria-hidden="true">
-      <div className="resource-hub-doc-preview__sheet">
-        <span />
-        <span />
-        <span />
-      </div>
-      <em>{label}</em>
-    </div>
-  );
 }
 
 function formatResourceCount(count: number, locale: Locale) {
@@ -448,7 +436,14 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
           <div className="resource-lead-flow__copy">
             <h2 id="resource-lead-title">{content.ui.indexLeadTitle}</h2>
             <p>{content.ui.indexLeadNote}</p>
-            <ResourceHubDocumentPreview label={content.ui.pendingBadge} />
+            <div className="resource-lead-flow__visual">
+              <Image
+                src={leadCapturePreview}
+                alt={content.ui.indexLeadTitle}
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                placeholder="blur"
+              />
+            </div>
           </div>
 
           <form className="resource-lead-form" aria-label={content.ui.indexLeadTitle}>

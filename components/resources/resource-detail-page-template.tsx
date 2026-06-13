@@ -147,14 +147,14 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({
-          name: formData.get('name'),
-          company: formData.get('company'),
-          phone: formData.get('phone'),
-          email: formData.get('email'),
-          project_type: formData.get('project_type'),
-          project_stage: formData.get('project_stage'),
-          message: formData.get('message'),
-          website: formData.get('website'),
+          name: formData.get('name') ?? '',
+          company: formData.get('company') ?? '',
+          phone: formData.get('phone') ?? '',
+          email: formData.get('email') ?? '',
+          project_type: formData.get('project_type') ?? '',
+          project_stage: formData.get('project_stage') ?? '',
+          message: formData.get('message') ?? '',
+          website: formData.get('website') ?? '',
           resource_slug: page.resource.slug,
           resource_title: page.resource.title,
           source_page: `/resources/${page.resource.slug}`,
@@ -248,7 +248,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
             </div>
             <div>
               <dt>{ui.summaryFileStatus}</dt>
-              <dd>{ui.summaryFileStatusPending}</dd>
+              <dd>{page.resource.assetStatus === 'pending_resource_file' ? ui.summaryFileStatusPending : ui.summaryFileStatusAvailable}</dd>
             </div>
           </dl>
         </div>
