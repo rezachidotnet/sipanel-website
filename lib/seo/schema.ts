@@ -41,6 +41,20 @@ export function buildOrganizationSchema(locale: Locale, id = `/${locale}#organiz
   return organizationBase(locale, id);
 }
 
+export function buildWebsiteSchema(locale: Locale, id = `/${locale}#website`) {
+  return compactObject({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': withBaseUrl(id),
+    url: withBaseUrl('/'),
+    name: productionContactInfo.company_name || 'SIPANEL',
+    inLanguage: locale,
+    // Reference the Organization node that is actually emitted on this page
+    // (locale-scoped @id) so the publisher link resolves instead of dangling.
+    publisher: {'@id': withBaseUrl(`/${locale}#organization`)}
+  });
+}
+
 export function buildLocalBusinessSchema(locale: Locale, id = `/${locale}#local-business`) {
   const contact = productionContactInfo;
 

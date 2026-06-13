@@ -14,7 +14,7 @@ import {ClientLogosSection} from '@/components/trust/client-logos-section';
 import {RevealSection} from '@/components/reveal-section';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {locales, type Locale} from '@/i18n/routing';
-import {buildLocalBusinessSchema, buildOrganizationSchema} from '@/lib/seo/schema';
+import {buildLocalBusinessSchema, buildOrganizationSchema, buildWebsiteSchema} from '@/lib/seo/schema';
 import {notFound} from 'next/navigation';
 
 type Props = {
@@ -37,9 +37,11 @@ export default async function HomePage({params}: Props) {
   const localBusinessSchema = buildLocalBusinessSchema(validLocale, `/${validLocale}#local-business`);
   const localizedOrganizationSchema = localizedAddress ? {...organizationSchema, address: localizedAddress} : organizationSchema;
   const localizedLocalBusinessSchema = localizedAddress ? {...localBusinessSchema, address: localizedAddress} : localBusinessSchema;
+  const websiteSchema = buildWebsiteSchema(validLocale, `/${validLocale}#website`);
 
   return (
     <>
+      <SchemaScript schema={websiteSchema} />
       <SchemaScript schema={localizedOrganizationSchema} />
       <SchemaScript schema={localizedLocalBusinessSchema} />
       <HeroSection />
