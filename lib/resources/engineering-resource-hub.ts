@@ -390,13 +390,23 @@ const defaultResourceAuthority: Record<Locale, Required<ResourceAuthorityMeta>> 
 
 const resourceAuthorityData: Record<string, Partial<Record<Locale, ResourceAuthorityMeta>>> = {};
 
+// SIPANEL Project Prioritization (see CLAUDE.md): resources may only link to the five approved
+// project detail pages (army-hospital, ahvaz-airport-passenger-terminal, mehrabad-aircraft-hangar,
+// mahshahr-taxi-parking, kermanshah-industrial-university-petroleum-faculty), matched to each
+// resource's topic. No non-approved project detail pages.
 const resourceRelatedProjects: Record<string, string[]> = {
-  roof_leakage_prevention_checklist: ['shahre-babak-hall', 'andimeshk-stadium'],
-  sandwich_panel_selection_guide: ['tabas-railway-facility', 'mahshahr-taxi-parking', 'tiran-gas-station'],
-  shop_drawing_review_guide: ['sepehan-flower-market', 'absaar-water-park'],
-  standing_seam_roof_detail_notes: ['shahre-babak-hall', 'megaparsmall-atrium'],
-  aluminium_cladding_layout_checklist: ['shahr-babak-stadium-entrance', 'parand-city-entrance'],
-  mto_procurement_planning_sheet: ['andimeshk-stadium', 'tabas-railway-facility']
+  // Roofing / large-span roof leakage control
+  roof_leakage_prevention_checklist: ['mehrabad-aircraft-hangar', 'ahvaz-airport-passenger-terminal'],
+  // Sandwich panel delivery / EPC envelope
+  sandwich_panel_selection_guide: ['army-hospital', 'mahshahr-taxi-parking', 'mehrabad-aircraft-hangar'],
+  // Shop-drawing coordination / glass facade detailing
+  shop_drawing_review_guide: ['kermanshah-industrial-university-petroleum-faculty', 'mehrabad-aircraft-hangar'],
+  // Standing seam / ZIP roofing
+  standing_seam_roof_detail_notes: ['ahvaz-airport-passenger-terminal', 'mehrabad-aircraft-hangar'],
+  // Aluminium cladding / structural glazing facade
+  aluminium_cladding_layout_checklist: ['kermanshah-industrial-university-petroleum-faculty'],
+  // MTO / procurement coordination
+  mto_procurement_planning_sheet: ['army-hospital', 'mahshahr-taxi-parking']
 };
 
 const resourceProjectReasons: Record<string, Record<string, Record<Locale, string>>> = {

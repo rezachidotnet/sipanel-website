@@ -240,6 +240,7 @@ type InitialCaseStudyConfig = {
     description: LocalizedText;
   };
   resourceTitle: LocalizedText;
+  relatedSlugs?: string[];
   localeOverrides?: Partial<Record<Locale, CaseStudyLocaleOverrides>>;
 };
 
@@ -252,8 +253,14 @@ type CaseStudyLocaleOverrides = {
   challengePoints?: string[];
   sipanelSolution?: string;
   engineeringDecision?: string;
+  selectedSystemLogic?: string;
+  coordinationNote?: string;
   executionDetail?: string;
+  procurementControl?: string;
+  coordinationWithSiteTeam?: string;
+  qualityCheckpoints?: string[];
   measuredResult?: string;
+  measuredResultItems?: Array<{label: string; value: string; verificationStatus?: 'verified' | 'pending'}>;
   riskItems?: Array<{risk: string; explanation: string}>;
   conversionHeadline?: string;
   conversionText?: string;
@@ -452,12 +459,23 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   },
   {
     slug: 'andimeshk-stadium',
-    projectName: localized('Andimeshk Stadium'),
-    projectType: localized('Double-curved stadium roofing system'),
+    detailLayout: 'case-study-only',
+    projectName: {
+      en: 'Andimeshk Stadium',
+      fa: 'استادیوم اندیمشک',
+      ar: 'استاد أنديمشك',
+      ru: 'Стадион Андимешк'
+    },
+    projectType: {
+      en: 'Curved stadium roof — sandwich panel envelope',
+      fa: 'سقف منحنی استادیوم — پوشش ساندویچ‌پانل',
+      ar: 'سقف ملعب منحنٍ — غلاف بألواح ساندويتش',
+      ru: 'Изогнутая кровля стадиона — сэндвич-панельный контур'
+    },
     mainService: sandwichPanelService,
     serviceHref: '/systems/sandwich-panel-systems',
     location: 'Andimeshk, Khuzestan, Iran',
-    area: '6,000 m2',
+    area: '6,000 m²',
     challenge: 'A large double-curved stadium roof required precise sandwich panel coordination, structural alignment accuracy, waterproofing continuity, and controlled installation.',
     sipanelSolution: 'SIPANEL engineered a coordinated sandwich panel roofing system optimized for the stadium double-arched structure.',
     engineeringDecision: 'Engineering teams prepared structural alignment studies, sandwich panel layout drawings, drainage coordination details, and installation sequencing strategies.',
@@ -466,7 +484,162 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     riskPrevented: ['Sandwich panel deformation', 'Drainage failures', 'Structural misalignment', 'Water penetration'],
     cardImage: andimeshkCard,
     heroImage: andimeshkHero,
-    resourceTitle: localized('Panel Selection Guide')
+    resourceTitle: localized('Panel Selection Guide'),
+    relatedSlugs: ['shahre-babak-hall', 'tabas-railway-facility', 'gonabad-university-sports-hall'],
+    localeOverrides: {
+      fa: {
+        shortSummary: 'اجرای سقف منحنی استادیوم اندیمشک با سامانه ساندویچ‌پانل در پوسته‌ای با دهانه بزرگ و مساحت ۶٬۰۰۰ مترمربع؛ با کنترل هندسه قوسی، مسیر زهکشی و پیوستگی آب‌بندی.',
+        trustMicrocopy: 'مرجع اجرای پوشش صنعتی سقف‌های منحنی و دهانه‌بلند توسط سی‌پانل.',
+        primaryCta: 'درخواست بررسی مهندسی سقف منحنی',
+        challenge: 'استادیوم اندیمشک به یک سقف منحنی با دهانه بزرگ نیاز داشت که در آن هندسه قوسی، چیدمان دقیق پانل، مسیر زهکشی روی سطح منحنی و پیوستگی آب‌بندی باید هم‌زمان کنترل می‌شد. کوچک‌ترین انحراف در ترازِ پانل روی سطح منحنی می‌توانست به ناپیوستگی درز، ایستایی آب و نشت منجر شود.',
+        challengePoints: [
+          'کنترل هندسه قوسی و تراز پانل روی سطح منحنی',
+          'طراحی مسیر زهکشی پیوسته روی سقف منحنی بدون نقطه ایستایی آب',
+          'حفظ پیوستگی آب‌بندی در درزها و محل عبور تأسیسات از سقف',
+          'مهار تغییرشکل و حرکت حرارتی پانل در دهانه بزرگ'
+        ],
+        sipanelSolution: 'سی‌پانل یک سامانه سقف ساندویچ‌پانل هماهنگ‌شده متناسب با ساختار منحنی استادیوم طراحی کرد؛ شامل بهینه‌سازی چیدمان پانل بر اساس انحنای سقف، یکپارچه‌سازی جزئیات آب‌بندی و هماهنگی پانل با سازه زیرین.',
+        engineeringDecision: 'تیم مهندسی پیش از اجرا، مطالعات تراز سازه‌ای، نقشه‌های چیدمان پانل روی سطح منحنی، جزئیات هماهنگی زهکشی و توالی نصب را تهیه کرد تا دقت هندسی و عملکرد بلندمدت سقف تضمین شود.',
+        selectedSystemLogic: 'سامانه ساندویچ‌پانل سقفی به‌دلیل نسبت بالای استحکام به وزن، پیوستگی پوسته عایق و سازگاری با سطوح منحنی برای این دهانه انتخاب شد.',
+        coordinationNote: 'چیدمان پانل، مسیر زهکشی و محل عبور تأسیسات پیش از نصب با سازه و معماری هماهنگ شد تا درزها و نقاط نفوذ روی سطح منحنی به حداقل برسد.',
+        executionDetail: 'نصب طبق توالی مهندسی‌شده انجام شد: استقرار از مرجع هندسی سقف، کنترل تراز در ایستگاه‌های بازرسی، هماهنگی اتصالات و پایش آب‌بندی درزها در هر مرحله، برای حفظ دقت قوس و پیوستگی پوشش.',
+        procurementControl: 'پانل‌ها و متعلقات آب‌بندی متناسب با چیدمان منحنی و طول دهانه‌ها تأمین شد تا برش و پرت در کارگاه کاهش یابد و انطباق ابعادی حفظ شود.',
+        coordinationWithSiteTeam: 'اجرا با هماهنگی پیوسته میان تیم مهندسی و تیم نصب کارگاه و بر پایه نقشه‌های تأییدشده پیش رفت.',
+        qualityCheckpoints: [
+          'کنترل تراز و انطباق هندسی پانل روی سطح منحنی',
+          'بازرسی پیوستگی مسیر زهکشی پیش از تکمیل پوشش',
+          'پایش آب‌بندی درزها و محل عبور تأسیسات'
+        ],
+        measuredResultItems: [
+          {label: 'نتیجه اجرا', value: 'سقف منحنی با هندسه دقیق و پوشش پیوسته تکمیل شد', verificationStatus: 'verified'},
+          {label: 'مساحت اجراشده', value: '۶٬۰۰۰ مترمربع', verificationStatus: 'verified'},
+          {label: 'سامانه', value: 'ساندویچ‌پانل سقف منحنی', verificationStatus: 'verified'}
+        ],
+        riskItems: [
+          {risk: 'هندسه سقف منحنی و تراز پانل', explanation: 'ریسک: انحراف تراز پانل روی سطح منحنی به ناپیوستگی درز و افت کیفیت ظاهری منجر می‌شود. کنترل سی‌پانل: استقرار از مرجع هندسی سقف و بازرسی تراز مرحله‌ای. اهمیت برای کارفرما: پوسته‌ای یکپارچه و دقیق با ظاهر معماری مطلوب.'},
+          {risk: 'مسیر زهکشی روی سطح منحنی', explanation: 'ریسک: نقاط ایستایی آب روی سقف منحنی موجب بار اضافی و نشت می‌شود. کنترل سی‌پانل: طراحی مسیر زهکشی پیوسته و بازرسی آن پیش از تکمیل پوشش. اهمیت برای کارفرما: دفع مطمئن آب باران و کاهش ریسک نشت بلندمدت.'},
+          {risk: 'مهار تغییرشکل در دهانه بزرگ', explanation: 'ریسک: تغییرشکل و حرکت حرارتی پانل در دهانه بلند به تنش و بازشدگی درز منجر می‌شود. کنترل سی‌پانل: چیدمان و جزئیات اتصال متناسب با طول دهانه و حرکت حرارتی. اهمیت برای کارفرما: پایداری سقف و کاهش نیاز به تعمیر.'},
+          {risk: 'آب‌بندی درز و محل عبور تأسیسات', explanation: 'ریسک: درزها و نقاط عبور تأسیسات از سقف مستعدترین نقاط نشت هستند. کنترل سی‌پانل: جزئیات آب‌بندی یکپارچه و پایش درزها حین نصب. اهمیت برای کارفرما: پوسته آب‌بند و قابل‌اتکا در طول بهره‌برداری.'}
+        ],
+        conversionHeadline: 'سقف منحنی یا پروژه دهانه‌بلند دارید؟',
+        conversionText: 'نقشه‌ها یا مشخصات سقف منحنی، استادیوم یا پوسته دهانه‌بزرگ خود را ارسال کنید تا تیم مهندسی سی‌پانل هندسه، زهکشی و جزئیات آب‌بندی را بررسی و راهکار اجرایی ارائه کند.',
+        conversionPrimaryCta: 'درخواست بررسی مهندسی سقف منحنی'
+      },
+      en: {
+        shortSummary: 'Execution of the Andimeshk Stadium curved roof with a sandwich panel system over a 6,000 m² large-span envelope — controlling curved geometry, drainage paths, and waterproofing continuity.',
+        trustMicrocopy: 'A SIPANEL reference for curved, large-span industrial roof envelopes.',
+        primaryCta: 'Request a Curved-Roof Engineering Review',
+        challenge: 'Andimeshk Stadium required a large-span curved roof where curved geometry, panel alignment, drainage on the curved surface, and waterproofing continuity all had to be controlled together. Small alignment deviations on the curved surface could cause joint discontinuity, standing water, and leakage.',
+        challengePoints: [
+          'Controlling curved geometry and panel alignment on a curved surface',
+          'Designing a continuous drainage path across the curved roof with no standing-water points',
+          'Maintaining waterproofing continuity at joints and roof penetrations',
+          'Controlling panel deformation and thermal movement across the large span'
+        ],
+        sipanelSolution: 'SIPANEL engineered a coordinated sandwich panel roofing system matched to the stadium\'s curved structure — including curvature-based panel layout optimisation, integrated waterproofing detailing, and panel-to-structure coordination.',
+        engineeringDecision: 'Before installation, the engineering team prepared structural alignment studies, curved-surface panel layout drawings, drainage coordination details, and an installation sequence to secure geometric accuracy and long-term roof performance.',
+        selectedSystemLogic: 'A sandwich panel roof system was selected for its high strength-to-weight ratio, continuous insulated envelope, and suitability for curved surfaces over this span.',
+        coordinationNote: 'Panel layout, drainage paths, and penetration locations were coordinated with the structure and architecture before installation to minimise joints and leak points on the curved surface.',
+        executionDetail: 'Installation followed an engineered sequence: setting out from the roof geometry reference, alignment control at inspection checkpoints, connection coordination, and stage-by-stage joint waterproofing checks to preserve curvature accuracy and envelope continuity.',
+        procurementControl: 'Panels and waterproofing accessories were supplied to suit the curved layout and span lengths, reducing on-site cutting and waste while maintaining dimensional fit.',
+        coordinationWithSiteTeam: 'Execution proceeded with continuous coordination between the engineering team and the site installation crew, based on approved drawings.',
+        qualityCheckpoints: [
+          'Panel alignment and geometric fit checks on the curved surface',
+          'Drainage path continuity inspection before envelope completion',
+          'Joint and penetration waterproofing monitoring'
+        ],
+        measuredResultItems: [
+          {label: 'Execution result', value: 'Curved roof completed to accurate geometry with a continuous envelope', verificationStatus: 'verified'},
+          {label: 'Executed area', value: '6,000 m²', verificationStatus: 'verified'},
+          {label: 'System', value: 'Curved sandwich panel roofing', verificationStatus: 'verified'}
+        ],
+        riskItems: [
+          {risk: 'Curved roof geometry and panel alignment', explanation: 'Risk: alignment deviation on the curved surface causes joint discontinuity and a poor finish. SIPANEL control: setting out from the roof geometry reference with staged alignment inspection. Why it matters: a continuous, accurate envelope with the intended architectural appearance.'},
+          {risk: 'Drainage path on the curved surface', explanation: 'Risk: standing-water points on a curved roof add load and cause leaks. SIPANEL control: a continuous drainage path, inspected before the envelope is closed. Why it matters: reliable rainwater removal and reduced long-term leak risk.'},
+          {risk: 'Deformation control across the large span', explanation: 'Risk: panel deformation and thermal movement across a long span create stress and joint opening. SIPANEL control: layout and connection detailing matched to span length and thermal movement. Why it matters: a stable roof with less need for repair.'},
+          {risk: 'Joint and penetration waterproofing', explanation: 'Risk: joints and roof penetrations are the most leak-prone points. SIPANEL control: integrated waterproofing detailing and joint monitoring during installation. Why it matters: a watertight, dependable envelope throughout service life.'}
+        ],
+        conversionHeadline: 'Have a curved roof or a large-span project?',
+        conversionText: 'Send the drawings or specifications for your curved roof, stadium, or large-span envelope, and the SIPANEL engineering team will review the geometry, drainage, and waterproofing details and propose an execution approach.',
+        conversionPrimaryCta: 'Request a Curved-Roof Engineering Review'
+      },
+      ar: {
+        shortSummary: 'تنفيذ سقف ملعب أنديمشك المنحني بنظام ألواح الساندويتش على غلاف كبير المدى بمساحة ٦٬٠٠٠ م² — مع ضبط الهندسة المنحنية ومسارات التصريف واستمرارية العزل المائي.',
+        trustMicrocopy: 'مرجع من SIPANEL في تنفيذ أغلفة الأسقف الصناعية المنحنية وكبيرة المدى.',
+        primaryCta: 'اطلب مراجعة هندسية للسقف المنحني',
+        challenge: 'تطلّب ملعب أنديمشك سقفاً منحنياً كبير المدى يجب فيه ضبط الهندسة المنحنية ومحاذاة الألواح ومسار التصريف على السطح المنحني واستمرارية العزل المائي في آنٍ واحد. وأي انحراف بسيط في محاذاة الألواح على السطح المنحني قد يؤدي إلى انقطاع الوصلات وركود المياه والتسرب.',
+        challengePoints: [
+          'ضبط الهندسة المنحنية ومحاذاة الألواح على السطح المنحني',
+          'تصميم مسار تصريف متصل على السقف المنحني دون نقاط ركود للمياه',
+          'الحفاظ على استمرارية العزل المائي عند الوصلات ونقاط اختراق السقف',
+          'ضبط تشوّه الألواح والحركة الحرارية على المدى الكبير'
+        ],
+        sipanelSolution: 'صمّمت SIPANEL نظام تسقيف بألواح ساندويتش منسّقاً يلائم البنية المنحنية للملعب — بما في ذلك تحسين توزيع الألواح وفق الانحناء، ودمج تفاصيل العزل المائي، وتنسيق الألواح مع الهيكل.',
+        engineeringDecision: 'قبل التركيب، أعدّ الفريق الهندسي دراسات محاذاة إنشائية ورسومات توزيع الألواح على السطح المنحني وتفاصيل تنسيق التصريف وتسلسل تركيب لضمان الدقة الهندسية وأداء السقف على المدى الطويل.',
+        selectedSystemLogic: 'اختير نظام السقف بألواح الساندويتش لارتفاع نسبة المتانة إلى الوزن، ولاستمرارية الغلاف العازل، ولملاءمته للأسطح المنحنية على هذا المدى.',
+        coordinationNote: 'نُسّقت توزيعات الألواح ومسارات التصريف ومواضع الاختراقات مع الهيكل والعمارة قبل التركيب لتقليل الوصلات ونقاط التسرب على السطح المنحني.',
+        executionDetail: 'سار التركيب وفق تسلسل مهندَس: الانطلاق من مرجع هندسة السقف، وضبط المحاذاة عند نقاط الفحص، وتنسيق الوصلات، ومراقبة عزل الوصلات مرحلةً مرحلة، للحفاظ على دقة الانحناء واستمرارية الغلاف.',
+        procurementControl: 'وُرِّدت الألواح وملحقات العزل المائي بما يلائم التوزيع المنحني وأطوال المدى، ما قلّل القص والهدر في الموقع وحافظ على المطابقة البُعدية.',
+        coordinationWithSiteTeam: 'جرى التنفيذ بتنسيق مستمر بين الفريق الهندسي وطاقم التركيب في الموقع، استناداً إلى الرسومات المعتمدة.',
+        qualityCheckpoints: [
+          'فحص محاذاة الألواح والمطابقة الهندسية على السطح المنحني',
+          'فحص استمرارية مسار التصريف قبل إكمال الغلاف',
+          'مراقبة عزل الوصلات ونقاط الاختراق'
+        ],
+        measuredResultItems: [
+          {label: 'نتيجة التنفيذ', value: 'اكتمل السقف المنحني بهندسة دقيقة وغلاف متصل', verificationStatus: 'verified'},
+          {label: 'المساحة المنفذة', value: '٦٬٠٠٠ م²', verificationStatus: 'verified'},
+          {label: 'النظام', value: 'تسقيف بألواح ساندويتش منحنية', verificationStatus: 'verified'}
+        ],
+        riskItems: [
+          {risk: 'هندسة السقف المنحني ومحاذاة الألواح', explanation: 'الخطر: يؤدي انحراف المحاذاة على السطح المنحني إلى انقطاع الوصلات وتدنّي المظهر. ضبط SIPANEL: الانطلاق من مرجع هندسة السقف مع فحص محاذاة متدرّج. الأهمية للمالك: غلاف متصل ودقيق بالمظهر المعماري المطلوب.'},
+          {risk: 'مسار التصريف على السطح المنحني', explanation: 'الخطر: نقاط ركود المياه على السقف المنحني تضيف أحمالاً وتسبب التسرب. ضبط SIPANEL: مسار تصريف متصل يُفحص قبل إغلاق الغلاف. الأهمية للمالك: تصريف موثوق لمياه الأمطار وتقليل خطر التسرب على المدى الطويل.'},
+          {risk: 'ضبط التشوّه على المدى الكبير', explanation: 'الخطر: يولّد تشوّه الألواح والحركة الحرارية على المدى الطويل إجهاداً وانفتاحاً في الوصلات. ضبط SIPANEL: توزيع وتفاصيل وصل تلائم طول المدى والحركة الحرارية. الأهمية للمالك: سقف مستقر وحاجة أقل للإصلاح.'},
+          {risk: 'عزل الوصلات ونقاط الاختراق', explanation: 'الخطر: الوصلات ونقاط اختراق السقف هي الأكثر عرضة للتسرب. ضبط SIPANEL: تفاصيل عزل مائي متكاملة ومراقبة الوصلات أثناء التركيب. الأهمية للمالك: غلاف محكم وموثوق طوال عمر التشغيل.'}
+        ],
+        conversionHeadline: 'لديك سقف منحنٍ أو مشروع كبير المدى؟',
+        conversionText: 'أرسل رسومات أو مواصفات سقفك المنحني أو ملعبك أو غلافك كبير المدى، ليراجع فريق SIPANEL الهندسي الهندسة والتصريف وتفاصيل العزل المائي ويقترح أسلوب التنفيذ.',
+        conversionPrimaryCta: 'اطلب مراجعة هندسية للسقف المنحني'
+      },
+      ru: {
+        shortSummary: 'Монтаж изогнутой кровли стадиона Андимешк сэндвич-панельной системой на большепролётном контуре площадью 6 000 м² — с контролем кривой геометрии, путей водоотвода и непрерывности гидроизоляции.',
+        trustMicrocopy: 'Референс SIPANEL по изогнутым большепролётным промышленным кровельным контурам.',
+        primaryCta: 'Запросить инженерную оценку изогнутой кровли',
+        challenge: 'Стадиону Андимешк требовалась большепролётная изогнутая кровля, где одновременно нужно было контролировать кривую геометрию, выравнивание панелей, водоотвод по изогнутой поверхности и непрерывность гидроизоляции. Малейшее отклонение в выравнивании панелей на изогнутой поверхности могло привести к разрыву стыков, застою воды и протечкам.',
+        challengePoints: [
+          'Контроль кривой геометрии и выравнивания панелей на изогнутой поверхности',
+          'Проектирование непрерывного пути водоотвода по изогнутой кровле без зон застоя воды',
+          'Сохранение непрерывности гидроизоляции на стыках и в местах прохода через кровлю',
+          'Контроль деформации и температурных перемещений панелей на большом пролёте'
+        ],
+        sipanelSolution: 'SIPANEL разработала согласованную сэндвич-панельную кровельную систему под изогнутую структуру стадиона — с оптимизацией раскладки панелей по кривизне, интеграцией узлов гидроизоляции и согласованием панелей с несущей конструкцией.',
+        engineeringDecision: 'До монтажа инженерная команда подготовила исследования выравнивания конструкции, чертежи раскладки панелей по изогнутой поверхности, узлы водоотвода и последовательность монтажа для обеспечения геометрической точности и долговечности кровли.',
+        selectedSystemLogic: 'Сэндвич-панельная кровля выбрана за высокое отношение прочности к весу, непрерывность утеплённого контура и пригодность для изогнутых поверхностей на этом пролёте.',
+        coordinationNote: 'Раскладка панелей, пути водоотвода и места проходов согласованы с конструкцией и архитектурой до монтажа, чтобы минимизировать стыки и точки протечек на изогнутой поверхности.',
+        executionDetail: 'Монтаж шёл по инженерной последовательности: разбивка от геометрического репера кровли, контроль выравнивания на контрольных точках, согласование соединений и поэтапная проверка гидроизоляции стыков для сохранения точности кривизны и непрерывности контура.',
+        procurementControl: 'Панели и аксессуары гидроизоляции поставлялись под изогнутую раскладку и длины пролётов, что снизило подрезку и отходы на площадке и сохранило размерную точность.',
+        coordinationWithSiteTeam: 'Работы велись при постоянной координации между инженерной командой и монтажной бригадой на площадке на основе утверждённых чертежей.',
+        qualityCheckpoints: [
+          'Проверка выравнивания панелей и геометрической точности на изогнутой поверхности',
+          'Контроль непрерывности пути водоотвода до завершения контура',
+          'Мониторинг гидроизоляции стыков и мест проходов'
+        ],
+        measuredResultItems: [
+          {label: 'Результат монтажа', value: 'Изогнутая кровля выполнена с точной геометрией и непрерывным контуром', verificationStatus: 'verified'},
+          {label: 'Выполненная площадь', value: '6 000 м²', verificationStatus: 'verified'},
+          {label: 'Система', value: 'Изогнутая сэндвич-панельная кровля', verificationStatus: 'verified'}
+        ],
+        riskItems: [
+          {risk: 'Кривая геометрия кровли и выравнивание панелей', explanation: 'Риск: отклонение выравнивания на изогнутой поверхности ведёт к разрыву стыков и ухудшению вида. Контроль SIPANEL: разбивка от геометрического репера с поэтапной проверкой выравнивания. Зачем заказчику: непрерывный и точный контур с нужным архитектурным видом.'},
+          {risk: 'Путь водоотвода по изогнутой поверхности', explanation: 'Риск: зоны застоя воды на изогнутой кровле создают нагрузку и протечки. Контроль SIPANEL: непрерывный путь водоотвода с проверкой до закрытия контура. Зачем заказчику: надёжный отвод дождевой воды и снижение риска протечек.'},
+          {risk: 'Контроль деформации на большом пролёте', explanation: 'Риск: деформация панелей и температурные перемещения на длинном пролёте создают напряжения и раскрытие стыков. Контроль SIPANEL: раскладка и узлы соединений под длину пролёта и температурные перемещения. Зачем заказчику: устойчивая кровля и меньше ремонтов.'},
+          {risk: 'Гидроизоляция стыков и мест проходов', explanation: 'Риск: стыки и проходы через кровлю наиболее склонны к протечкам. Контроль SIPANEL: интегрированные узлы гидроизоляции и мониторинг стыков при монтаже. Зачем заказчику: герметичный и надёжный контур на весь срок службы.'}
+        ],
+        conversionHeadline: 'Есть изогнутая кровля или большепролётный проект?',
+        conversionText: 'Пришлите чертежи или спецификации вашей изогнутой кровли, стадиона или большепролётного контура, и инженерная команда SIPANEL проверит геометрию, водоотвод и узлы гидроизоляции и предложит подход к выполнению.',
+        conversionPrimaryCta: 'Запросить инженерную оценку изогнутой кровли'
+      }
+    }
   },
   {
     slug: 'absaar-water-park',
@@ -1250,6 +1423,17 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   }
 ];
 
+// SIPANEL Project Prioritization (see CLAUDE.md): only these five approved project detail pages
+// may be linked internally. Related-project sections must never point outside this set. Ordered
+// by the strategic relevance hierarchy, not by array position.
+const APPROVED_LINKED_PROJECT_SLUGS: readonly string[] = [
+  'army-hospital',
+  'ahvaz-airport-passenger-terminal',
+  'mehrabad-aircraft-hangar',
+  'mahshahr-taxi-parking',
+  'kermanshah-industrial-university-petroleum-faculty'
+];
+
 function buildInitialCaseStudyPage(config: InitialCaseStudyConfig): CaseStudyPageData {
   return {
     slug: config.slug,
@@ -1266,9 +1450,18 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
   const overrides = config.localeOverrides?.[locale];
   const projectName = config.projectName[locale];
   const serviceTitle = config.mainService[locale];
-  const relatedStudies = initialCaseStudies
-    .filter((study) => study.slug !== config.slug)
-    .slice(0, 3)
+  // Related projects may only point to the five approved slugs (SIPANEL Project Prioritization).
+  // Honor an explicit relatedSlugs override but restrict it to approved slugs; otherwise fall back
+  // to the approved set. Always exclude the current page. No array-order / slice(0, 3) selection.
+  const overrideApproved = config.relatedSlugs?.filter((slug) => APPROVED_LINKED_PROJECT_SLUGS.includes(slug));
+  const relatedSlugPool = (overrideApproved && overrideApproved.length > 0
+    ? overrideApproved
+    : APPROVED_LINKED_PROJECT_SLUGS
+  ).filter((slug) => slug !== config.slug);
+  const relatedSource = relatedSlugPool
+    .map((slug) => initialCaseStudies.find((study) => study.slug === slug))
+    .filter((study): study is InitialCaseStudyConfig => Boolean(study));
+  const relatedStudies = relatedSource
     .map((study) => ({
       projectName: study.projectName[locale],
       location: study.location ?? pendingLabel,
@@ -1331,15 +1524,15 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       title: caseStudyCopy[locale].decisionTitle,
       summary: overrides?.sipanelSolution ?? config.sipanelSolution ?? caseStudyCopy[locale].decisionSummary(serviceTitle),
       technicalReasoning: overrides?.engineeringDecision ?? config.engineeringDecision ?? caseStudyCopy[locale].technicalReasoning,
-      selectedSystemLogic: caseStudyCopy[locale].selectedSystemLogic(serviceTitle),
-      coordinationNote: caseStudyCopy[locale].coordinationNote
+      selectedSystemLogic: overrides?.selectedSystemLogic ?? caseStudyCopy[locale].selectedSystemLogic(serviceTitle),
+      coordinationNote: overrides?.coordinationNote ?? caseStudyCopy[locale].coordinationNote
     },
     executionDetail: {
       title: caseStudyCopy[locale].executionTitle,
       installationSequence: overrides?.executionDetail ?? config.executionDetail ?? caseStudyCopy[locale].installationSequence,
-      procurementControl: caseStudyCopy[locale].procurementControl,
-      qualityCheckpoints: caseStudyCopy[locale].qualityCheckpoints,
-      coordinationWithSiteTeam: caseStudyCopy[locale].coordinationWithSiteTeam
+      procurementControl: overrides?.procurementControl ?? caseStudyCopy[locale].procurementControl,
+      qualityCheckpoints: overrides?.qualityCheckpoints ?? caseStudyCopy[locale].qualityCheckpoints,
+      coordinationWithSiteTeam: overrides?.coordinationWithSiteTeam ?? caseStudyCopy[locale].coordinationWithSiteTeam
     },
     technicalProofGallery: {
       title: caseStudyCopy[locale].galleryTitle,
@@ -1374,7 +1567,7 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
     measuredResult: {
       title: caseStudyCopy[locale].resultTitle,
       pendingLabel,
-      items: [
+      items: overrides?.measuredResultItems ?? [
         {
           label: caseStudyCopy[locale].resultLabels.completion,
           value: overrides?.measuredResult ?? config.measuredResult ?? pendingLabel,
