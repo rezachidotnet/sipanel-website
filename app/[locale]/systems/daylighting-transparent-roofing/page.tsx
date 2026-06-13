@@ -30,7 +30,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     locale: validLocale,
     title: pageData.seo.title,
     description: pageData.seo.metaDescription,
-    routes: daylightingTransparentRoofingSpec.route
+    routes: daylightingTransparentRoofingSpec.route,
+    section: 'systems'
   });
 }
 

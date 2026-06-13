@@ -33,7 +33,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     locale: validLocale,
     title: pageData.seo.title,
     description: pageData.seo.metaDescription,
-    routes: aluminiumCladdingCoveringSpec.route
+    routes: aluminiumCladdingCoveringSpec.route,
+    section: 'systems'
   });
 }
 

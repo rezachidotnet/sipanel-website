@@ -10,6 +10,7 @@ import {
   type AboutPageData
 } from '@/lib/about/about-page';
 import leadershipPhoto from '@/assets/about/leadership/am-taleghani.webp';
+import aboutHeroImg from '@/assets/about/about-hero.webp';
 
 type Props = {
   locale: Locale;
@@ -84,6 +85,15 @@ function HeritageHeroSection({content}: SectionProps) {
         </div>
 
         <div className="about-story__visual">
+          <div className="about-story__visual-image">
+            <Image
+              src={aboutHeroImg}
+              alt="SIPANEL engineering facility"
+              className="about-story__visual-media"
+              sizes="(max-width: 768px) 100vw, 60vw"
+              priority
+            />
+          </div>
           <div className="about-story__visual-note">
             <strong>SIPANEL</strong>
             <p><LinkedText text={content.hero.trustMicrocopy} /></p>

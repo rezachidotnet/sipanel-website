@@ -1,6 +1,7 @@
 'use client';
 
 import {useEffect, useMemo, useRef, useState} from 'react';
+import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import {useForm, type FieldErrors, type Resolver} from 'react-hook-form';
 import {z} from 'zod';
@@ -10,6 +11,7 @@ import {getDirection} from '@/i18n/routing';
 import type {ProductionContactInfo, RfqContactSection} from '@/lib/contact/rfq-contact-page';
 import {rfqAllowedFileExtensions, rfqApiEndpoint, rfqMaxFileSizeBytes} from '@/lib/rfq/constants';
 import {trackContactClick, trackEvent, trackRfqEvent} from '@/lib/analytics/events';
+import contactTrustImg from '@/assets/contact/contact-trust-image.webp';
 
 type ContactPageData = {
   contact: ProductionContactInfo;
@@ -437,6 +439,15 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
           <aside className="contact-guidance">
             <h2 id="rfq-contact-title">{formTitle}</h2>
             <p>{guidanceIntro}</p>
+            <div className="contact-guidance__image">
+              <Image
+                src={contactTrustImg}
+                alt="SIPANEL project management"
+                fill
+                className="contact-guidance__image-media"
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+            </div>
             <div className="rfq-form__status" data-status="ready">
               {t('backendReady')}
             </div>

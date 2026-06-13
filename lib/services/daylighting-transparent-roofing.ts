@@ -1,8 +1,8 @@
 import type {ServicePageTemplateData} from '@/components/services/service-page-template';
 import type {Locale} from '@/i18n/routing';
 import daylightingHero from '@/assets/systems/transparent-roofing/cover-desktop.webp';
-import shopDrawingsImage from '@/assets/technical/shop-drawings/shop-drawings-main.webp';
-import gutterFlashingImage from '@/assets/technical/waterproofing/gutter-flashing-desktop.webp';
+import daylightInteriorImg from '@/assets/systems/transparent-roofing/interior-view.webp';
+import daylightJunctionImg from '@/assets/systems/transparent-roofing/junction-detail.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import fadakMallCard from '@/assets/projects/fadak-mall-glass-skylight/photos/fadak-mall-glass-skylight-card.webp';
 import atlasHotelCard from '@/assets/projects/atlas-hotel-shahinshahr-atrium/photos/atlas-hotel-shahinshahr-atrium-card.webp';
@@ -834,13 +834,13 @@ export function getDaylightingTransparentRoofingPage(locale: Locale): ServicePag
         {
           title: content.technicalProof.assets[0].title,
           description: content.technicalProof.assets[0].description,
-          image: shopDrawingsImage,
+          image: daylightInteriorImg,
           alt: content.technicalProof.assets[0].alt
         },
         {
           title: content.technicalProof.assets[1].title,
           description: content.technicalProof.assets[1].description,
-          image: gutterFlashingImage,
+          image: daylightJunctionImg,
           alt: content.technicalProof.assets[1].alt
         },
         {

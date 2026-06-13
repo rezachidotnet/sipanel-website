@@ -1,8 +1,8 @@
 import type {ServicePageTemplateData} from '@/components/services/service-page-template';
 import type {Locale} from '@/i18n/routing';
 import aluminiumCladdingHero from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
-import shopDrawingsImage from '@/assets/technical/shop-drawings/shop-drawings-main.webp';
-import gutterFlashingImage from '@/assets/technical/waterproofing/gutter-flashing-desktop.webp';
+import aluminiumInstallImg from '@/assets/systems/aluminium-claddin/installation.webp';
+import aluminiumJointImg from '@/assets/systems/aluminium-claddin/joint-detail.webp';
 import bomMtoImage from '@/assets/technical/procurement/bom-mto-preview.webp';
 import babakSardarbCard from '@/assets/projects/babak_sardarb/photos/babak_sardarb-card.webp';
 import parandCard from '@/assets/projects/parand/photos/parand-card.webp';
@@ -834,13 +834,13 @@ export function getAluminiumCladdingCoveringPage(locale: Locale): ServicePageTem
         {
           title: content.technicalProof.assets[0].title,
           description: content.technicalProof.assets[0].description,
-          image: shopDrawingsImage,
+          image: aluminiumInstallImg,
           alt: content.technicalProof.assets[0].alt
         },
         {
           title: content.technicalProof.assets[1].title,
           description: content.technicalProof.assets[1].description,
-          image: gutterFlashingImage,
+          image: aluminiumJointImg,
           alt: content.technicalProof.assets[1].alt
         },
         {

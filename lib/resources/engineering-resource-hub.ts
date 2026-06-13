@@ -1812,7 +1812,8 @@ export function getEngineeringResourceHubMetadata(locale: Locale) {
     locale,
     title: content.localeSeo.title,
     description: content.localeSeo.meta_description,
-    routes: engineeringResourceHubPage.routes
+    routes: engineeringResourceHubPage.routes,
+    section: 'resources'
   });
 }
 
@@ -1896,7 +1897,8 @@ export function getResourceDetailMetadata(locale: Locale, slug: string) {
     title: `${page.resource.title} | ${content.localeSeo.detailSuffix}`,
     description: page.detailContent.seoDescription,
     routes: page.route,
-    type: 'article'
+    type: 'article',
+    section: 'resources'
   });
 }
 

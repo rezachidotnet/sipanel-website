@@ -413,7 +413,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     locale: validLocale,
     title: content.title,
     description: content.description,
-    routes
+    routes,
+    section: 'systems'
   });
 }
 

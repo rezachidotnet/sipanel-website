@@ -44,6 +44,7 @@ import tarbiatModaresResearchGreenhouseCard from '@/assets/projects/tarbiat-moda
 import tavanirShahrekordCentralAtriumCard from '@/assets/projects/tavanir-shahrekord-central-atrium/photos/tavanir-shahrekord-central-atrium-card.webp';
 import tehranMallRoofGardenFoodcourtCard from '@/assets/projects/tehran-mall-roof-garden-foodcourt/photos/tehran-mall-roof-garden-foodcourt-card.webp';
 import toranjKishRestaurantCard from '@/assets/projects/toranj-kish-restaurant/photos/toranj-kish-restaurant-card.webp';
+import projectsHeroImg from '@/assets/projects/projects-index-hero.webp';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -1335,7 +1336,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     locale: validLocale,
     title: content.title,
     description: content.description,
-    routes
+    routes,
+    section: 'projects'
   });
 }
 
@@ -1420,7 +1422,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
             </div>
           </div>
           <div className="projects-index-hero__visual" aria-hidden="true">
-            <Image src={tabasCard} alt="" fill priority sizes="(max-width: 767px) 100vw, 45vw" />
+            <Image src={projectsHeroImg} alt="" fill priority sizes="(max-width: 767px) 100vw, 45vw" />
           </div>
         </div>
       </section>
