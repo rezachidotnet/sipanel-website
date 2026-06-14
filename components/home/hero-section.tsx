@@ -1,22 +1,11 @@
-'use client';
-
-import {useState} from 'react';
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import heroDesktop from '@/assets/home/hero/hero-desktop.webp';
 import heroMobile from '@/assets/home/hero/hero-mobile.webp';
-import {Link} from '@/i18n/routing';
-import {trackCtaClick, trackCatalogEvent} from '@/lib/analytics/events';
-import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
+import {HeroActions} from '@/components/home/hero-actions';
 
 export function HeroSection() {
   const t = useTranslations('hero');
-  const [catalogOpen, setCatalogOpen] = useState(false);
-
-  function handleCatalogClick() {
-    trackCatalogEvent('catalog_cta_clicked', {component_id: 'homepage_hero'});
-    setCatalogOpen(true);
-  }
 
   return (
     <section className="hero-section" aria-labelledby="homepage-hero-title">
@@ -25,24 +14,7 @@ export function HeroSection() {
           <h1 id="homepage-hero-title">{t('headline')}</h1>
           <p className="hero-copy__subheadline">{t('subheadline')}</p>
 
-          <div className="hero-copy__actions">
-            {/* track: hero_primary_cta_click */}
-            <Link
-              href="/contact"
-              className="button-primary"
-              onClick={() => trackCtaClick('homepage_hero', t('primaryCta'), 'hero_primary_cta_click')}
-            >
-              {t('primaryCta')}
-            </Link>
-            {/* track: catalog_cta_clicked */}
-            <button
-              type="button"
-              className="button-secondary"
-              onClick={handleCatalogClick}
-            >
-              {t('secondaryCta')}
-            </button>
-          </div>
+          <HeroActions primaryLabel={t('primaryCta')} secondaryLabel={t('secondaryCta')} />
         </div>
 
         <div className="hero-visual">
@@ -60,8 +32,6 @@ export function HeroSection() {
           <div className="hero-visual__overlay" aria-hidden="true" />
         </div>
       </div>
-
-      <CatalogDownloadModal isOpen={catalogOpen} onClose={() => setCatalogOpen(false)} />
     </section>
   );
 }
