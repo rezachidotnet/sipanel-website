@@ -10,8 +10,7 @@ import {
   type AboutPageData
 } from '@/lib/about/about-page';
 import leadershipPhoto from '@/assets/about/leadership/am-taleghani.webp';
-import aboutHeroImg from '@/assets/about/about-hero.webp';
-import aboutHeroMobileImg from '@/assets/about/about-hero-mobile.webp';
+import fazasazehImg from '@/assets/about/fazasazeh.jpg';
 
 type Props = {
   locale: Locale;
@@ -88,9 +87,9 @@ function HeritageHeroSection({content}: SectionProps) {
         <div className="about-story__visual">
           <div className="about-story__visual-image">
             <picture>
-              <source media="(max-width: 767px)" srcSet={aboutHeroMobileImg.src} width={aboutHeroMobileImg.width} height={aboutHeroMobileImg.height} />
+              <source media="(max-width: 767px)" srcSet={fazasazehImg.src} width={fazasazehImg.width} height={fazasazehImg.height} />
               <Image
-                src={aboutHeroImg}
+                src={fazasazehImg}
                 alt="SIPANEL engineering facility"
                 className="about-story__visual-media"
                 sizes="(max-width: 768px) 100vw, 60vw"
