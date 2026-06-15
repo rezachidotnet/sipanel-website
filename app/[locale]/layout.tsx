@@ -10,6 +10,10 @@ import {getDirection, locales, type Locale} from '@/i18n/routing';
 import {buildPageMetadata, getSiteBaseUrl} from '@/lib/seo/metadata';
 import '../globals.css';
 
+// Secondary (non-fa) fonts: deferred, not preloaded. The @font-face + CSS
+// variable are still emitted so en/ru (Inter) and ar (IBM Plex) render
+// correctly via `display: swap`; only the high-priority <link rel="preload">
+// is dropped so it no longer competes with the LCP image on /fa.
 const inter = localFont({
   src: [
     {
@@ -30,9 +34,10 @@ const inter = localFont({
   ],
   display: 'swap',
   variable: '--font-inter',
-  preload: true
+  preload: false
 });
 
+// Primary font for /fa (source-of-truth locale) — the only font preloaded.
 const vazirmatn = localFont({
   src: '../../assets/fonts/vazirmatn/Vazirmatn-Arabic.woff2',
   display: 'swap',
@@ -66,7 +71,7 @@ const ibmPlexSansArabic = localFont({
   ],
   display: 'swap',
   variable: '--font-ibm-plex-sans-arabic',
-  preload: true
+  preload: false
 });
 
 type Props = {
