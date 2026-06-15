@@ -1,3 +1,5 @@
+import './resources.css';
+
 type BreadcrumbItem = {
   label: string;
   href: string;

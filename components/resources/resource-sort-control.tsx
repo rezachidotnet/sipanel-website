@@ -1,5 +1,6 @@
 'use client';
 
+import './resources.css';
 import {useCallback, useRef, type ChangeEvent} from 'react';
 
 type SortOption = 'recommended' | 'newest' | 'oldest' | 'shorter_read';

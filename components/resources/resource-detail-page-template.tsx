@@ -1,5 +1,6 @@
 'use client';
 
+import './resources.css';
 import {useState, type FormEvent} from 'react';
 import Image from 'next/image';
 import {Link, getDirection, type Locale} from '@/i18n/routing';

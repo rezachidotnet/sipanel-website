@@ -1,3 +1,4 @@
+import './resources.css';
 import Image from 'next/image';
 import resourcesHero from '@/assets/resources/resources-hero.webp';
 import leadCapturePreview from '@/assets/resources/lead-capture-preview.webp';
