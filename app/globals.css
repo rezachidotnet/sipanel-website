@@ -3522,6 +3522,30 @@ button[aria-disabled='true'] {
   gap: 14px;
 }
 
+/* Mobile fix: the library grid sits inside `.resource-hub-filter-shell` — an extra grid
+   level the featured grid lacks — alongside the filter bar, whose chip row
+   (`.resource-filter-controls`) is an `overflow-x: auto` scroller. Grid items default to
+   `min-width: auto` and the shell's implicit column is an `auto` (max-content) track, so
+   the scroller's full content width (~481px fa / ~732px en at a 390px screen) propagates
+   up and widens the whole shell. The card grid inherits that width and its content/CTA get
+   clipped off-screen. Pin every level to a single container-width column and let the
+   shrinkable parts collapse so the chip row scrolls instead of expanding the layout.
+   Desktop column templates live in the `min-width: 768px` blocks and are untouched. */
+@media (max-width: 767px) {
+  .resource-hub-filter-shell,
+  .resource-hub-featured-grid,
+  .resource-hub-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resource-hub-filter-shell,
+  .resource-hub-filter-bar,
+  .resource-filter-controls,
+  .resource-hub-grid {
+    min-width: 0;
+  }
+}
+
 .resource-hub-filter-shell:has(#resource-filter-grid-technical_guides:checked) .resource-hub-card:not([data-resource-category='technical_guides']),
 .resource-hub-filter-shell:has(#resource-filter-grid-execution_details:checked) .resource-hub-card:not([data-resource-category='execution_details']),
 .resource-hub-filter-shell:has(#resource-filter-grid-procurement_and_supply:checked) .resource-hub-card:not([data-resource-category='procurement_and_supply']),
@@ -4284,6 +4308,36 @@ button[aria-disabled='true'] {
   display: grid;
   gap: 28px;
   padding-block: 40px 56px;
+}
+
+/* Mobile fix: the hero is a single-column grid whose implicit `auto` track is sized to
+   the hero image's intrinsic width (`aspect-ratio: 16/9` x `min-height: 280px` ≈ 498px).
+   The copy column inherits that 498px and overflows a ~390px viewport by ~128px; because
+   `.resource-detail-page` uses `overflow-x: clip` there is no scrollbar, so the content is
+   silently clipped (left edge in RTL, right edge in LTR). Pin every detail-page grid to a
+   single container-width column and let items + long localized text shrink/wrap. Desktop
+   column templates live in the `min-width: 768px`/`1025px` blocks and are untouched. */
+@media (max-width: 767px) {
+  .resource-detail-hero__inner,
+  .resource-detail-system-grid,
+  .resource-detail-project-grid,
+  .resource-detail-preview-grid,
+  .resource-detail-link-grid,
+  .resource-detail-list-grid,
+  .resource-detail-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resource-detail-hero__copy,
+  .resource-detail-hero__visual {
+    min-width: 0;
+  }
+
+  .resource-detail-hero__copy h1,
+  .resource-detail-hero__copy p,
+  .resource-detail-prose p {
+    overflow-wrap: break-word;
+  }
 }
 
 .resource-detail-hero__copy {
