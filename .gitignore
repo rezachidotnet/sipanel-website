@@ -27,3 +27,10 @@ yarn-error.log*
 
 .next.stale-*/
 .vercel
+
+# Generated audit & report docs
+*_AUDIT.md
+*_AUDIT_matrix.csv
+*_AUDIT_scorecard.csv
+*_REPORT.md
+POST_DEPLOY_SEO_CHECK.md

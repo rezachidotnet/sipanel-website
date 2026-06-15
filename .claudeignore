@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output & framework caches
+.next/
+.next.stale-*/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+
+# Test artifacts & fixtures
+coverage/
+playwright-report/
+test-results/
+qa-screenshots/
+
+# Runtime / generated lead data
+private/rfq-submissions/
+
+# Generated & lock files
+package-lock.json
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Generated audit & report docs
+*_AUDIT.md
+*_AUDIT_matrix.csv
+*_AUDIT_scorecard.csv
+*_REPORT.md
+POST_DEPLOY_SEO_CHECK.md
+
+# Logs & caches
+*.log
+npm-debug.log*
+.DS_Store
+
+# VCS
+.git/

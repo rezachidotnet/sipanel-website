@@ -1,38 +1,51 @@
 # SIPANEL Website
 
-## Project Overview
+Industrial building-envelope engineering site. Next.js 16 App Router · React 18 · TypeScript (strict) · next-intl v4 · Tailwind 3 · Zod.
 
-SIPANEL is an industrial building envelope engineering website.
+## Commands
 
-Primary systems:
+- Dev server: `npm run dev`
+- Production build: `npm run build`
+- Serve prod build: `npm start`
+- Lint: `npm run lint`
+- Typecheck: `npm run typecheck`
+- SEO audit (prod URL): `npm run seo:audit`
+- Image pipeline (PNG → WebP/JPG variants): `node scripts/convert-images.mjs`
 
-- Sandwich Panel Systems
-- Standing Seam & ZIP Roofing
-- Aluminium Cladding
-- Glass & Polycarbonate Daylighting
+## Architecture
 
-Supported locales:
+- `app/[locale]/` — localized App Router pages; dynamic segments (`[slug]`) for projects, systems, solutions, resources, insights.
+- `app/api/` — `lead` is the single lead/RFQ endpoint; `rfq` proxies to it (legacy).
+- `lib/` — typed content modules (per-locale objects, sourced from `specs/pages/*.json`), SEO builders, analytics event allowlist.
+- `components/` — server + client-island UI, grouped by feature.
+- `i18n/` — `routing.ts` (locales, default, RTL, `getDirection`) and `request.ts` (next-intl config).
+- `messages/{fa,en,ar,ru}.json` — UI string translations.
+- `specs/` — JSON content/spec source of truth consumed by `lib/`.
+- `assets/` — fonts + source images (imported in TS); `public/` — static served files (OG, robots assets).
+- `private/rfq-submissions/` — runtime lead storage (not served, not committed).
+- `middleware.ts` — redirects `/` to the default locale.
 
-- fa (primary source of truth)
-- en
-- ar
-- ru
+## Localization (critical)
 
-## SIPANEL Project Prioritization
+- Locales: `fa` (default + source of truth), `en`, `ar`, `ru`. RTL: `fa`, `ar`.
+- `fa` content is authoritative; keep all four `messages/*.json` files key-synchronized.
+- Never break next-intl routing; preserve the `[locale]` structure and `localePrefix: 'always'`.
+- Import locale helpers from `@/i18n/routing` (`locales`, `defaultLocale`, `getDirection`, `Link`). Path alias: `@/*` → repo root.
 
-The following projects are strategic proof projects defined by SIPANEL management. They should receive priority consideration when evaluating:
+## SEO (critical)
 
-- Internal linking
-- Related projects
-- Homepage proof sections
-- Resource-to-project relationships
-- Featured case studies
-- Conversion journeys
-- Buyer trust signals
-- Engineering showcase content
-- Commercial visibility
+- Preserve canonical URLs, hreflang, structured data, and per-page metadata.
+- Build metadata via `lib/seo/metadata.ts`; structured data via `lib/seo/schema.ts`.
+- Production host is `https://www.sipanelco.ir` (apex → www is a 308).
 
-### Tier A — Strategic Commercial Proof Projects
+## Analytics (critical)
+
+- Never remove or break existing tracking.
+- Only fire events listed in `approvedAnalyticsEvents` (`lib/analytics/events.ts`); add the name there before using it.
+
+## Project prioritization (critical)
+
+Tier A strategic proof projects — prioritize for internal linking, related projects, homepage proof, featured slots, trust signals. Treat this list (not current links/array order/UI) as the authoritative hierarchy; surface gaps as findings.
 
 | Project | Slug |
 | --- | --- |
@@ -48,77 +61,12 @@ The following projects are strategic proof projects defined by SIPANEL managemen
 | Andimeshk Stadium | `andimeshk-stadium` |
 | Parand City Entrance Gate | `parand-city-entrance` |
 
-### How to apply this hierarchy
+Do NOT infer importance from existing links, `relatedSlugs`/`slice(0,3)` logic, current UI visibility, data-file order, or asset count.
 
-When making recommendations or audits, do NOT infer a project's importance from:
+## Workflow constraints
 
-- existing internal links or current link popularity
-- current related-project selections (e.g. the `relatedSlugs` / `slice(0, 3)` logic in `lib/case-studies/case-study-pages.ts`)
-- current visibility in the UI
-- array ordering in data files
-- existing resource-to-project relationships
-- image or asset count alone
-
-Instead, treat the Tier A list above as the authoritative strategic hierarchy. Prioritize these projects unless there is a strong, explicitly stated business reason not to. When current implementation (links, related logic, featured slots) does not reflect this hierarchy, surface that gap as a finding rather than treating the current state as intent.
-
-## Development Philosophy
-
-Fast iteration mode.
-
-The user reviews all changes locally before pushing to Git.
-
-Do not run build, lint, or typecheck automatically after every task.
-
-Only run them when:
-
-- explicitly requested
-- routing changes
-- localization changes
-- new pages are added
-- major refactors are completed
-- TypeScript data structures are modified
-
-## Existing Architecture
-
-Before modifying any component, inspect and respect existing patterns.
-
-Do not create duplicate implementations.
-
-Prefer extending existing components.
-
-## Localization Rules
-
-- Never break next-intl routing.
-- Preserve locale structure.
-- Persian content is the source of truth.
-- Keep all locales synchronized when appropriate.
-
-## SEO Rules
-
-- Preserve metadata.
-- Preserve canonical URLs.
-- Preserve hreflang implementation.
-- Preserve structured data.
-
-## Analytics Rules
-
-Never remove or break existing analytics tracking.
-
-## UI Rules
-
-Prefer consistency over redesign.
-
-Follow existing SIPANEL design patterns unless the user explicitly requests changes.
-
-## Delivery Rules
-
-After completing a task:
-
-1. Report modified files.
-2. Explain what changed.
-3. Mention any risks.
-4. Do not run build unless required by the rules above.
-
-## Important
-
-The user prefers rapid implementation and visual verification on localhost before Git push and Vercel deployment.
+- Fast-iteration mode: the user reviews changes locally before push/deploy. Do not auto-run build/lint/typecheck after every task.
+- Run build/lint/typecheck only when: explicitly requested, routing changes, localization changes, new pages, major refactors, or TS data-structure changes.
+- Extend existing components/patterns; do not create duplicate implementations.
+- Prefer consistency over redesign; change design only when explicitly asked.
+- After a task: report modified files, explain changes, note risks.
