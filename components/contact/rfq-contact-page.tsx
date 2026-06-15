@@ -1,5 +1,6 @@
 'use client';
 
+import './contact.css';
 import {useEffect, useMemo, useRef, useState} from 'react';
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';

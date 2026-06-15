@@ -1,6 +1,7 @@
 import Image, {type StaticImageData} from 'next/image';
 import type {Metadata} from 'next';
 import {Suspense} from 'react';
+import '@/components/projects/projects-index.css';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';

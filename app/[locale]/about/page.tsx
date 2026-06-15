@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import '@/components/about/about.css';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {AboutPage} from '@/components/about/about-page';
