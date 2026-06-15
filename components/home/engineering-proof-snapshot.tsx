@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from 'react';
 import {useTranslations} from 'next-intl';
-import type {StaticImageData} from 'next/image';
+import {getImageProps, type StaticImageData} from 'next/image';
 import {trackProofEvent} from '@/lib/analytics/events';
 import bomMtoMobile from '@/assets/technical/procurement/bom-mto-mobile.webp';
 import bomMtoDesktop from '@/assets/technical/procurement/bom-mto-preview.webp';
@@ -167,17 +167,31 @@ function ResponsiveDiagramImage({
   eager?: boolean;
   mobileAsset: StaticImageData;
 }) {
+  // Use next/image's getImageProps so each art-directed source gets an
+  // optimized, responsive srcSet (the bare <picture>/<img> shipped the full
+  // 1024px-wide source on mobile). sizes mirrors the real layout:
+  // mobile = 1 col (100vw minus container + card padding); desktop = 2 cols
+  // (≥768px) then 3 cols inside the 1200px shell (≥1025px).
+  const common = {alt, quality: 75, loading: eager ? 'eager' : 'lazy'} as const;
+
+  const {
+    props: {srcSet: mobileSrcSet, sizes: mobileSizes}
+  } = getImageProps({
+    ...common,
+    src: mobileAsset,
+    sizes: '(max-width: 767px) calc(100vw - 64px), 1px'
+  });
+
+  const {props: desktopProps} = getImageProps({
+    ...common,
+    src: desktopAsset,
+    sizes: '(min-width: 1025px) 360px, (min-width: 768px) 45vw, 100vw'
+  });
+
   return (
     <picture className="proof-diagram">
-      <source media="(max-width: 767px)" srcSet={mobileAsset.src} />
-      <img
-        alt={alt}
-        decoding="async"
-        height={desktopAsset.height}
-        loading={eager ? 'eager' : 'lazy'}
-        src={desktopAsset.src}
-        width={desktopAsset.width}
-      />
+      <source media="(max-width: 767px)" srcSet={mobileSrcSet} sizes={mobileSizes} />
+      <img {...desktopProps} decoding="async" />
     </picture>
   );
 }
