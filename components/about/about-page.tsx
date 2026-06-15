@@ -91,6 +91,7 @@ function HeritageHeroSection({content}: SectionProps) {
               alt="SIPANEL engineering facility"
               className="about-story__visual-media"
               sizes="(max-width: 768px) 100vw, 60vw"
+              quality={65}
               priority
             />
           </div>

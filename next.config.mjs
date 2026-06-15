@@ -5,7 +5,8 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp']
+    formats: ['image/avif', 'image/webp'],
+    qualities: [65, 75]
   },
   // Permanent (308) apex -> www canonicalization, code source of truth.
   // NOTE: in the current production setup the apex redirect is served by Vercel
