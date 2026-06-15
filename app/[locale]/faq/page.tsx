@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import '@/components/faq/faq.css';
 import {Suspense} from 'react';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';

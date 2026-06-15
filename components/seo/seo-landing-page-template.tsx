@@ -1,5 +1,6 @@
 'use client';
 
+import '@/components/services/service-seo.css';
 import './seo-landing.css';
 import '@/components/resources/resources.css';
 import Image, {type StaticImageData} from 'next/image';

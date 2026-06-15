@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import './systems-overview.css';
 import Image from 'next/image';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';

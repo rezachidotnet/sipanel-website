@@ -1,5 +1,6 @@
 'use client';
 
+import './faq.css';
 import {useEffect, useId, useMemo, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {Link, getDirection, usePathname, useRouter, type Locale} from '@/i18n/routing';

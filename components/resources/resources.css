@@ -1977,3 +1977,20 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* resources page styles
+   Extracted from app/globals.css to keep render-blocking global CSS minimal.
+   Loaded only on the routes that use these styles. */
+
+.resource-filter-pill.is-active,
+.resource-filter-input:checked + .resource-filter-pill {
+  border-color: rgba(255, 106, 0, 0.45);
+  background: var(--color-orange-soft);
+  color: var(--color-text-primary);
+  box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.18);
+}
+
+@keyframes resource-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

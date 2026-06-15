@@ -1,5 +1,6 @@
 'use client';
 
+import './case-study.css';
 import Image from 'next/image';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';

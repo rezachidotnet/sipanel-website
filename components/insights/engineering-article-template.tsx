@@ -1,3 +1,4 @@
+import './insights.css';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import type {EngineeringInsightArticle} from '@/lib/insights/engineering-insights';
 import {getInsightCategoryLabel} from '@/lib/insights/engineering-insights';
