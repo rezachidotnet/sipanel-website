@@ -1,5 +1,6 @@
 'use client';
 
+import './insights.css';
 import {useMemo, useState} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import type {EngineeringInsightsPageData, InsightCategoryId} from '@/lib/insights/engineering-insights';

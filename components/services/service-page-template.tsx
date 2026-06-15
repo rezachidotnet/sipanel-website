@@ -1,5 +1,6 @@
 'use client';
 
+import './service-seo.css';
 import Image, {type StaticImageData} from 'next/image';
 import {Link, type Locale, getDirection, locales} from '@/i18n/routing';
 import {
