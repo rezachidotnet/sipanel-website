@@ -1426,7 +1426,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
           <div className="projects-index-hero__visual" aria-hidden="true">
             <picture>
               <source media="(max-width: 767px)" srcSet={projectsHeroMobileImg.src} width={projectsHeroMobileImg.width} height={projectsHeroMobileImg.height} />
-              <Image src={projectsHeroImg} alt="" fill priority sizes="(max-width: 767px) 100vw, 45vw" />
+              <Image src={projectsHeroImg} alt="" fill priority quality={65} sizes="(max-width: 767px) 100vw, 45vw" />
             </picture>
           </div>
         </div>

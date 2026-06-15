@@ -322,6 +322,7 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
               alt={content.hero.visualFallback}
               sizes="(max-width: 1024px) 100vw, 48vw"
               priority
+              quality={65}
               placeholder="blur"
             />
           </div>

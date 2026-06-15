@@ -12,10 +12,12 @@ const HERO_SIZES = '(max-width: 767px) 100vw, (max-width: 1024px) 90vw, 45vw';
 // Mirrors next/image's default-loader srcSet for the desktop asset so the
 // media-scoped desktop preload matches the rendered <img srcSet> exactly.
 const HERO_DESKTOP_WIDTHS = [384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840];
+// q=65 mirrors the <Image quality={65}> below so the preload matches the
+// rendered candidate exactly (no double download).
 const heroDesktopSrcSet = HERO_DESKTOP_WIDTHS.map(
-  (w) => `/_next/image?url=${encodeURIComponent(heroDesktop.src)}&w=${w}&q=75 ${w}w`
+  (w) => `/_next/image?url=${encodeURIComponent(heroDesktop.src)}&w=${w}&q=65 ${w}w`
 ).join(', ');
-const heroDesktopPreloadHref = `/_next/image?url=${encodeURIComponent(heroDesktop.src)}&w=1920&q=75`;
+const heroDesktopPreloadHref = `/_next/image?url=${encodeURIComponent(heroDesktop.src)}&w=1920&q=65`;
 
 export function HeroSection() {
   const t = useTranslations('hero');
@@ -66,6 +68,7 @@ export function HeroSection() {
                 alt={t('visualAlt')}
                 fill
                 loading="eager"
+                quality={65}
                 sizes={HERO_SIZES}
                 className="hero-visual__image"
               />

@@ -329,6 +329,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                 alt={content.hero.heroAlt}
                 fill
                 priority
+                quality={65}
                 sizes="(max-width: 767px) 100vw, 45vw"
               />
             ) : (

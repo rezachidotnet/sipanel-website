@@ -248,6 +248,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
                 alt={content.hero.heroVisualAlt}
                 fill
                 priority
+                quality={65}
                 sizes="(max-width: 767px) 100vw, (max-width: 1024px) 90vw, 40vw"
               />
             ) : (

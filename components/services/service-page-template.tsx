@@ -242,6 +242,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                 alt={page.hero.visualAlt ?? page.hero.visualDirection}
                 fill
                 priority
+                quality={65}
                 sizes="(max-width: 767px) 100vw, (max-width: 1024px) 90vw, 45vw"
               />
             ) : (

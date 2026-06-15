@@ -498,6 +498,7 @@ export default async function SystemsOverviewPage({params}: Props) {
               alt={heroAlt[locale]}
               fill
               priority
+              quality={65}
               placeholder="blur"
               sizes="(max-width: 767px) 100vw, 55vw"
             />
@@ -508,6 +509,7 @@ export default async function SystemsOverviewPage({params}: Props) {
               aria-hidden="true"
               fill
               priority
+              quality={65}
               placeholder="blur"
               sizes="100vw"
             />

@@ -238,6 +238,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
                     className="resource-detail-hero__image-media"
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority
+                    quality={65}
                   />
                 </picture>
               </div>
