@@ -86,16 +86,13 @@ function HeritageHeroSection({content}: SectionProps) {
 
         <div className="about-story__visual">
           <div className="about-story__visual-image">
-            <picture>
-              <source media="(max-width: 767px)" srcSet={fazasazehImg.src} width={fazasazehImg.width} height={fazasazehImg.height} />
-              <Image
-                src={fazasazehImg}
-                alt="SIPANEL engineering facility"
-                className="about-story__visual-media"
-                sizes="(max-width: 768px) 100vw, 60vw"
-                priority
-              />
-            </picture>
+            <Image
+              src={fazasazehImg}
+              alt="SIPANEL engineering facility"
+              className="about-story__visual-media"
+              sizes="(max-width: 768px) 100vw, 60vw"
+              priority
+            />
           </div>
           <div className="about-story__visual-note">
             <strong>SIPANEL</strong>
