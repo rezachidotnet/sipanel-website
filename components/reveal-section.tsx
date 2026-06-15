@@ -1,42 +1,22 @@
-'use client';
-
-import {useScrollReveal} from '@/lib/use-scroll-reveal';
+import type {ReactNode} from 'react';
 
 interface RevealSectionProps {
-  children: React.ReactNode;
+  children: ReactNode;
   /** HTML tag to render */
   as?: 'section' | 'div';
   /** Additional className */
   className?: string;
-  /** Stagger delay in ms for child card animations */
-  staggerDelay?: number;
 }
 
+// Server component: a plain block wrapper. The previous client implementation
+// used an IntersectionObserver + hydration to toggle `.scroll-reveal` classes,
+// but those classes have no CSS (the reveal animation was removed), so the JS
+// produced no visual effect — only main-thread cost on every wrapped section.
+// Rendering on the server keeps the identical DOM wrapper with zero hydration.
 export function RevealSection({
   children,
   as: Tag = 'div',
   className = '',
-  staggerDelay,
 }: RevealSectionProps) {
-  const {ref, mounted, isVisible} = useScrollReveal();
-
-  // Before JS hydrates: no scroll-reveal class → content is fully visible.
-  // After hydration: scroll-reveal is added (opacity:0), then observer reveals it.
-  const revealClass = mounted
-    ? `scroll-reveal ${isVisible ? 'scroll-reveal--visible' : ''}`
-    : '';
-
-  return (
-    <Tag
-      ref={ref}
-      className={`${revealClass} ${className}`.trim() || undefined}
-      style={
-        staggerDelay !== undefined
-          ? ({'--reveal-stagger': `${staggerDelay}ms`} as React.CSSProperties)
-          : undefined
-      }
-    >
-      {children}
-    </Tag>
-  );
+  return <Tag className={className || undefined}>{children}</Tag>;
 }

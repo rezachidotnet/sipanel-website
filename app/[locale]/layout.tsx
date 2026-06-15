@@ -157,9 +157,6 @@ export default async function LocaleLayout({children, params}: Props) {
       className={`${inter.variable} ${vazirmatn.variable} ${ibmPlexSansArabic.variable} typography-${validLocale}`}
     >
       <body className={localeFontClass}>
-        <noscript>
-          <style>{`.scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}`}</style>
-        </noscript>
         <NextIntlClientProvider messages={messages}>
           <LocaleRuntime locale={validLocale} dir={dir} />
           <Header locale={validLocale} />

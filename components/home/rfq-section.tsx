@@ -3,7 +3,6 @@
 import {useEffect, useMemo, useRef, useState} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
 import {useForm, type FieldErrors, type Resolver} from 'react-hook-form';
-import {z} from 'zod';
 import {LtrText} from '@/components/bidi/ltr-text';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {rfqApiEndpoint} from '@/lib/rfq/constants';
@@ -28,21 +27,21 @@ type QuickFormValues = {
 
 type SubmitState = 'idle' | 'success' | 'error';
 
-function createQuickSchema(t: ReturnType<typeof useTranslations<'rfq'>>) {
-  const required = t('validation.required');
-
-  return z.object({
-    name: z.string().trim().min(2, required),
-    phone: z.string().trim().min(5, required),
-    project_type: z.string().trim(),
-    message: z.string().trim(),
-    website: z.string().max(0, t('validation.spam'))
-  });
-}
-
 function createQuickResolver(t: ReturnType<typeof useTranslations<'rfq'>>): Resolver<QuickFormValues> {
   return async (values) => {
-    const parsed = createQuickSchema(t).safeParse(values);
+    // Load Zod on first validation (blur/submit) instead of at module load, so
+    // it stays out of the initial homepage bundle. The form is below the fold
+    // and validation only runs on interaction.
+    const {z} = await import('zod');
+    const required = t('validation.required');
+    const schema = z.object({
+      name: z.string().trim().min(2, required),
+      phone: z.string().trim().min(5, required),
+      project_type: z.string().trim(),
+      message: z.string().trim(),
+      website: z.string().max(0, t('validation.spam'))
+    });
+    const parsed = schema.safeParse(values);
 
     if (parsed.success) {
       return {values: parsed.data, errors: {}};

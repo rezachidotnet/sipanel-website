@@ -1,9 +1,16 @@
 'use client';
 
 import {useState} from 'react';
+import dynamic from 'next/dynamic';
 import {Link} from '@/i18n/routing';
 import {trackCtaClick, trackCatalogEvent} from '@/lib/analytics/events';
-import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
+
+// Above-fold CTA island stays light: the catalog modal (its own form +
+// next-intl usage) loads only on first click, not during initial hydration.
+const CatalogDownloadModal = dynamic(
+  () => import('@/components/home/catalog-download-modal').then((m) => m.CatalogDownloadModal),
+  {ssr: false}
+);
 
 type Props = {
   primaryLabel: string;
@@ -39,7 +46,9 @@ export function HeroActions({primaryLabel, secondaryLabel}: Props) {
         </button>
       </div>
 
-      <CatalogDownloadModal isOpen={catalogOpen} onClose={() => setCatalogOpen(false)} />
+      {catalogOpen && (
+        <CatalogDownloadModal isOpen onClose={() => setCatalogOpen(false)} />
+      )}
     </>
   );
 }
