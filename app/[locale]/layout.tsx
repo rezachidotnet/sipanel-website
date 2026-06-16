@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import {NextIntlClientProvider} from 'next-intl';
+import {SpeedInsights} from '@vercel/speed-insights/next';
 import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {Footer} from '@/components/layout/footer';
@@ -163,6 +164,7 @@ export default async function LocaleLayout({children, params}: Props) {
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
