@@ -7,9 +7,14 @@ import {trackContactClick, trackEvent} from '@/lib/analytics/events';
 
 const whatsappHref = `https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`;
 
+// Mobile-landscape only: hide on scroll-down, reveal on scroll-up.
+const LANDSCAPE_QUERY = '(orientation: landscape) and (max-height: 520px) and (max-width: 950px)';
+const SCROLL_DIRECTION_THRESHOLD = 10;
+
 export function StickyMobileCta() {
   const t = useTranslations('stickyCta');
   const [isVisible, setIsVisible] = useState(false);
+  const [hiddenByScroll, setHiddenByScroll] = useState(false);
 
   useEffect(() => {
     let animationFrame = 0;
@@ -40,10 +45,61 @@ export function StickyMobileCta() {
     };
   }, []);
 
+  // Landscape phones: collapse the bar when scrolling down, restore on scroll up.
+  useEffect(() => {
+    const landscape = window.matchMedia(LANDSCAPE_QUERY);
+    let lastScrollY = window.scrollY;
+    let animationFrame = 0;
+
+    function evaluate() {
+      if (!landscape.matches) {
+        setHiddenByScroll(false);
+        lastScrollY = window.scrollY;
+        return;
+      }
+
+      const current = window.scrollY;
+      const delta = current - lastScrollY;
+      if (Math.abs(delta) < SCROLL_DIRECTION_THRESHOLD) return;
+
+      // Scrolling down (and past the very top) hides; scrolling up shows.
+      setHiddenByScroll(delta > 0 && current > 0);
+      lastScrollY = current;
+    }
+
+    function onScroll() {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(evaluate);
+    }
+
+    function onOrientationChange() {
+      lastScrollY = window.scrollY;
+      if (!landscape.matches) setHiddenByScroll(false);
+    }
+
+    onOrientationChange();
+    window.addEventListener('scroll', onScroll, {passive: true});
+    landscape.addEventListener('change', onOrientationChange);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('scroll', onScroll);
+      landscape.removeEventListener('change', onOrientationChange);
+    };
+  }, []);
+
+  const className = [
+    'sticky-mobile-cta',
+    isVisible ? 'is-visible' : '',
+    hiddenByScroll ? 'is-hidden-landscape' : ''
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <aside
       aria-label={t('label')}
-      className={isVisible ? 'sticky-mobile-cta is-visible' : 'sticky-mobile-cta'}
+      className={className}
     >
       {/* track: sticky_mobile_cta_click */}
       <a className="sticky-mobile-cta__primary" href="#rfq" onClick={() => trackEvent('sticky_cta_click', {component_id: 'sticky_mobile_cta'})}>

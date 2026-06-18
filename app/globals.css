@@ -436,6 +436,8 @@ img {
   flex: 0 0 auto;
   align-items: center;
   min-width: 144px;
+  /* Comfortable tap target on mobile without changing the logo size */
+  padding-block: 6px;
 }
 
 .brand-link__logo {
@@ -3325,6 +3327,21 @@ button[aria-disabled='true'] {
 
 .sticky-mobile-cta.is-visible {
     transform: none;
+  }
+}
+
+/* Mobile landscape (short-height phones): keep the bottom CTA available, but
+   slide it away on scroll-down and reveal it on scroll-up. Wider tablets and
+   desktops never match (guarded by max-height) so their layout is untouched. */
+@media (orientation: landscape) and (max-height: 520px) and (max-width: 950px) {
+.sticky-mobile-cta {
+    display: grid;
+  }
+
+.sticky-mobile-cta.is-visible.is-hidden-landscape {
+    transform: translateY(120%);
+    pointer-events: none;
+    transition: transform 220ms ease;
   }
 }
 

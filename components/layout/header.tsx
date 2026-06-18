@@ -117,7 +117,7 @@ export function Header({locale}: Props) {
     <header className={scrolled ? 'site-header is-scrolled' : 'site-header'}>
       <div className="main-header">
         <div className="container-shell main-header__inner">
-          <Link href="/" className="brand-link" aria-label="SIPANEL home">
+          <Link href="/" className="brand-link" aria-label={header('home')}>
             <Image
               src={logo}
               alt="SIPANEL"
