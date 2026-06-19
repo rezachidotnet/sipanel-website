@@ -107,6 +107,7 @@ const copy: Record<
     costReviewCta: string;
     conversionTitle: string;
     conversionText: string;
+    scrollCue: string;
     home: string;
   }
 > = {
@@ -137,6 +138,7 @@ const copy: Record<
     costReviewCta: 'Download Technical Catalog',
     conversionTitle: 'Need this level of control for your project?',
     conversionText: 'Send the project type, location, approximate area, drawings if available, and the main risk you want SIPANEL to review.',
+    scrollCue: 'View projects',
     home: 'Home'
   },
   fa: {
@@ -167,6 +169,7 @@ const copy: Record<
     conversionTitle: 'برای انتخاب پوشش مناسب پروژه، ابتدا ریسک‌های فنی را بررسی کنید.',
     conversionText:
       'تیم SIPANEL می‌تواند بر اساس نقشه‌ها، موقعیت پروژه و نوع سازه، پیشنهاد اولیه فنی و مسیر اجرای مناسب را بررسی کند.',
+    scrollCue: 'مشاهده پروژه‌ها',
     home: 'خانه'
   },
   ar: {
@@ -196,6 +199,7 @@ const copy: Record<
     costReviewCta: 'تحميل الكتالوج الفني',
     conversionTitle: 'هل تحتاج هذا المستوى من التحكم لمشروعك؟',
     conversionText: 'أرسل نوع المشروع والموقع والمساحة التقريبية والرسومات إن وجدت والمخاطر الأساسية التي تريد من SIPANEL مراجعتها.',
+    scrollCue: 'عرض المشاريع',
     home: 'الرئيسية'
   },
   ru: {
@@ -225,6 +229,7 @@ const copy: Record<
     costReviewCta: 'Скачать технический каталог',
     conversionTitle: 'Нужен такой уровень контроля для вашего проекта?',
     conversionText: 'Отправьте тип проекта, локацию, примерную площадь, чертежи при наличии и главный риск, который SIPANEL должен проверить.',
+    scrollCue: 'Смотреть проекты',
     home: 'Главная'
   }
 };
@@ -1430,9 +1435,15 @@ export default async function ProjectsOverviewPage({params}: Props) {
             </picture>
           </div>
         </div>
+        <a href="#projects-list" className="projects-index-hero__scroll" aria-label={content.scrollCue}>
+          <span className="projects-index-hero__scroll-text">{content.scrollCue}</span>
+          <svg className="projects-index-hero__scroll-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </a>
       </section>
 
-      <section className="projects-index-section" data-section="projects_case_studies" aria-label={content.allProjects}>
+      <section id="projects-list" className="projects-index-section" data-section="projects_case_studies" aria-label={content.allProjects}>
         <div className="container-shell projects-index-section__inner">
           <Suspense fallback={null}>
             <ProjectsFilterActivator />
