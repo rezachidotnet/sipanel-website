@@ -80,7 +80,7 @@ export function Footer() {
           <div className="site-footer__bottom-links">
             <span>{footer('privacy')}</span>
             <span>{footer('terms')}</span>
-            <Link href="/sitemap.xml" className="site-footer__bottom-link">{footer('sitemap')}</Link>
+            <a href="/sitemap.xml" className="site-footer__bottom-link">{footer('sitemap')}</a>
           </div>
         </div>
       </div>
