@@ -13,6 +13,7 @@ import {
   buildOrganizationSchema as buildSharedOrganizationSchema
 } from '@/lib/seo/schema';
 import {withBaseUrl} from '@/lib/seo/metadata';
+import {trackResourceEvent} from '@/lib/analytics/events';
 
 type Props = {
   locale: Locale;
@@ -174,6 +175,11 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       if (page.resource.assetStatus === 'available' && page.resource.downloadPath) {
         setFeedback(ui.downloadSuccess);
         triggerResourceDownload(page.resource.downloadPath);
+        trackResourceEvent('resource_download_complete', {
+          component_id: page.resource.slug,
+          resource_type: page.resource.type,
+          submission_method: 'api_route'
+        });
       } else {
         setFeedback(ui.downloadSuccessPending);
       }
@@ -210,11 +216,32 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
             <ResourceAuthorityBlock locale={locale} page={page} />
             <div className="resource-detail-hero__actions">
               {/* track: resource_download_start */}
-              <a className="button-primary" href="#download-lead-capture-form">
+              <a
+                className="button-primary"
+                href="#download-lead-capture-form"
+                data-analytics-event="resource_download_start"
+                data-analytics-owner="application"
+                data-analytics-component="resource_detail_hero"
+                data-analytics-location="resource_detail_hero"
+                data-analytics-label="download"
+                onClick={() => trackResourceEvent('resource_download_start', {
+                  component_id: page.resource.slug,
+                  resource_type: page.resource.type,
+                  interaction_type: 'click'
+                })}
+              >
                 {page.resource.cta}
               </a>
               {/* track: rfq_start */}
-              <Link className="button-secondary" href="/contact#rfq-form">
+              <Link
+                className="button-secondary"
+                href="/contact#rfq-form"
+                data-analytics-event="rfq_start"
+                data-analytics-owner="application"
+                data-analytics-component="resource_detail_hero"
+                data-analytics-location="resource_detail_hero"
+                data-analytics-label="consultation"
+              >
                 {ui.requestConsultation}
               </Link>
             </div>
@@ -406,7 +433,16 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           </header>
           <div className="resource-detail-link-grid">
             {page.relatedResources.map((resource) => (
-              <Link className="resource-related-card resource-related-card--resource" href={`/resources/${resource.slug}`} key={resource.slug}>
+              <Link
+                className="resource-related-card resource-related-card--resource"
+                href={`/resources/${resource.slug}`}
+                key={resource.slug}
+                data-analytics-event="related_resource_click"
+                data-analytics-owner="application"
+                data-analytics-component="resource_detail_related_resources"
+                data-analytics-location="resource_detail_related"
+                data-analytics-label={resource.title}
+              >
                 {/* track: related_resource_click */}
                 <span>{resource.title}</span>
                 <em>{resource.assetStatus === 'pending_resource_file' ? ui.pendingBadge : ui.verifiedBadge}</em>

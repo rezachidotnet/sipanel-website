@@ -5,6 +5,7 @@ import Image from 'next/image';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
+import {trackCaseStudyEvent, trackProofEvent} from '@/lib/analytics/events';
 import {
   buildCaseStudyArticleSchema,
   buildCaseStudyBreadcrumbSchema,
@@ -184,9 +185,18 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
   const whatsappHref = buildWhatsappHref();
 
   const closeGalleryModal = useCallback(() => {
+    const closingAsset = activeAssetIndex !== null ? galleryItems[activeAssetIndex] : null;
+
+    if (closingAsset) {
+      trackProofEvent('diagram_close', {
+        component_id: page.slug,
+        diagram_type: closingAsset.assetType ?? 'project_image'
+      });
+    }
+
     setActiveAssetIndex(null);
     previousFocusRef.current?.focus();
-  }, []);
+  }, [activeAssetIndex, galleryItems, page.slug]);
 
   useEffect(() => {
     if (activeAssetIndex === null) {
@@ -292,13 +302,29 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
             </dl>
             <span>{content.hero.trustMicrocopy}</span>
             <div className="case-study-hero__actions">
-              {/* track: conversion_cta_click */}
-              {/* track: rfq_start */}
-              <Link href="/contact#rfq-form" className="button-primary">
+              {/* track: case_study_cta_click */}
+              <Link
+                href="/contact#rfq-form"
+                className="button-primary"
+                data-analytics-event="case_study_cta_click"
+                data-analytics-owner="application"
+                data-analytics-component={`${page.slug}_hero`}
+                data-analytics-location="case_study_hero"
+                data-analytics-label={content.hero.primaryCta}
+                onClick={() => trackCaseStudyEvent('case_study_cta_click', {component_id: `${page.slug}_hero`, cta_text: content.hero.primaryCta})}
+              >
                 {content.hero.primaryCta}
               </Link>
               {/* track: related_service_click */}
-              <Link href={content.relatedServices.links[0]?.href ?? '/systems'} className="button-secondary">
+              <Link
+                href={content.relatedServices.links[0]?.href ?? '/systems'}
+                className="button-secondary"
+                data-analytics-event="related_service_click"
+                data-analytics-owner="unassigned"
+                data-analytics-component={`${page.slug}_hero_related_service`}
+                data-analytics-location="case_study_hero"
+                data-analytics-label={content.hero.secondaryCta}
+              >
                 {content.hero.secondaryCta}
               </Link>
             </div>
@@ -449,6 +475,10 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                   aria-label={`${content.technicalProofGallery.openLabel}: ${asset.title}`}
                   onClick={() => {
                     previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                    trackProofEvent('technical_proof_open', {
+                      component_id: page.slug,
+                      diagram_type: asset.assetType ?? 'project_image'
+                    });
                     setActiveAssetIndex(index);
                   }}
                 >
@@ -524,7 +554,15 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                   <h3>{service.title}</h3>
                   {service.description ? <p>{service.description}</p> : null}
                   {/* track: related_service_click */}
-                  <Link href={service.href} className="case-study-service-card__link">
+                  <Link
+                    href={service.href}
+                    className="case-study-service-card__link"
+                    data-analytics-event="related_service_click"
+                    data-analytics-owner="unassigned"
+                    data-analytics-component={`${page.slug}_related_service`}
+                    data-analytics-location="case_study_related_services"
+                    data-analytics-label={service.title}
+                  >
                     {labels.viewSystem}
                   </Link>
                 </article>
@@ -589,15 +627,31 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
             <p>{content.conversionCta.text}</p>
           </div>
             <div className="case-study-conversion__actions">
-            {/* track: conversion_cta_click */}
-            {/* track: rfq_start */}
-            <Link href="/contact#rfq-form" className="button-primary">
+            {/* track: case_study_cta_click */}
+            <Link
+              href="/contact#rfq-form"
+              className="button-primary"
+              data-analytics-event="case_study_cta_click"
+              data-analytics-owner="application"
+              data-analytics-component={`${page.slug}_conversion_cta`}
+              data-analytics-location="case_study_conversion"
+              data-analytics-label={content.conversionCta.primaryCta}
+              onClick={() => trackCaseStudyEvent('case_study_cta_click', {component_id: `${page.slug}_conversion_cta`, cta_text: content.conversionCta.primaryCta})}
+            >
               {content.conversionCta.primaryCta}
             </Link>
             {whatsappHref ? (
               <>
                 {/* track: whatsapp_click */}
-                <a href={whatsappHref} className="button-secondary">
+                <a
+                  href={whatsappHref}
+                  className="button-secondary"
+                  data-analytics-event="whatsapp_click"
+                  data-analytics-owner="unassigned"
+                  data-analytics-component="case_study_conversion_cta"
+                  data-analytics-location="case_study_page"
+                  data-analytics-label="whatsapp"
+                >
                   {content.conversionCta.secondaryCta}
                 </a>
               </>
@@ -609,7 +663,15 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
             {phoneHref ? (
               <>
                 {/* track: phone_click */}
-                <a href={phoneHref} className="button-secondary">
+                <a
+                  href={phoneHref}
+                  className="button-secondary"
+                  data-analytics-event="phone_click"
+                  data-analytics-owner="unassigned"
+                  data-analytics-component="case_study_conversion_cta"
+                  data-analytics-location="case_study_page"
+                  data-analytics-label="phone"
+                >
                   {labels.phone}
                 </a>
               </>
@@ -627,14 +689,28 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
               <div className="case-study-gallery-modal__actions">
                 <button
                   type="button"
-                  onClick={() => setZoom((current) => Math.min(current + 0.25, 2.5))}
+                  onClick={() => {
+                    trackProofEvent('diagram_zoom', {
+                      component_id: page.slug,
+                      diagram_type: activeAsset.assetType ?? 'project_image',
+                      interaction_type: 'zoom_in'
+                    });
+                    setZoom((current) => Math.min(current + 0.25, 2.5));
+                  }}
                 >
                   {/* track: technical_proof_zoom */}
                   {content.technicalProofGallery.zoomInLabel}
                 </button>
                 <button
                   type="button"
-                  onClick={() => setZoom((current) => Math.max(current - 0.25, 1))}
+                  onClick={() => {
+                    trackProofEvent('diagram_zoom', {
+                      component_id: page.slug,
+                      diagram_type: activeAsset.assetType ?? 'project_image',
+                      interaction_type: 'zoom_out'
+                    });
+                    setZoom((current) => Math.max(current - 0.25, 1));
+                  }}
                 >
                   {/* track: technical_proof_zoom */}
                   {content.technicalProofGallery.zoomOutLabel}

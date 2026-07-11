@@ -1,0 +1,1127 @@
+{
+  "spec_type": "sipanel_gtm_phase_2_cutover_plan",
+  "version": 2,
+  "ready_for_gtm_preview": [
+    {
+      "event_name": "hero_primary_cta_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "click",
+      "selector": "[data-analytics-event=\"hero_primary_cta_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"hero_primary_cta_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "homepage_hero_primary_cta",
+          "location": "homepage_hero",
+          "source_file": "components/home/hero-actions.tsx:35-40",
+          "selector": "[data-analytics-event=\"hero_primary_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "catalog_cta_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "click",
+      "selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "homepage_hero_catalog_cta",
+          "location": "homepage_hero",
+          "source_file": "components/home/hero-actions.tsx:44-49",
+          "selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "projects_hero_catalog_cta",
+          "location": "projects_hero",
+          "source_file": "components/home/catalog-download-button.tsx:7-24",
+          "selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "projects_conversion_catalog_cta",
+          "location": "projects_conversion",
+          "source_file": "components/home/catalog-download-button.tsx:7-24",
+          "selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "header_desktop_catalog_cta",
+          "location": "global_header",
+          "source_file": "components/layout/header.tsx:154-160",
+          "selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "header_mobile_catalog_cta",
+          "location": "mobile_menu",
+          "source_file": "components/layout/header.tsx:235-242",
+          "selector": "[data-analytics-event=\"catalog_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "sticky_cta_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "click",
+      "selector": "[data-analytics-event=\"sticky_cta_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"sticky_cta_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "homepage_sticky_cta",
+          "location": "homepage",
+          "source_file": "components/home/sticky-mobile-cta.tsx:104-113",
+          "selector": "[data-analytics-event=\"sticky_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "contact_sticky_cta",
+          "location": "contact_page",
+          "source_file": "components/contact/rfq-contact-page.tsx:713-720",
+          "selector": "[data-analytics-event=\"sticky_cta_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Confirm the selector is stable in production markup.",
+            "Publish the GTM trigger only after Preview validation."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm the contact page does not double-fire through app code."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "phone_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"phone_click\"]",
+      "future_selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element", "Click URL"],
+      "pii_risk": "medium_if_click_url_is_forwarded",
+      "targets": [
+        {
+          "component": "homepage_rfq_contact",
+          "location": "homepage_rfq",
+          "source_file": "components/home/rfq-section.tsx:173-181",
+          "selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward tel: URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "contact_option_phone_value",
+          "location": "contact_options",
+          "source_file": "components/contact/rfq-contact-page.tsx:423-429",
+          "selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Publish only after the selector is verified in production markup.",
+            "Do not forward tel: URLs to GA4."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "contact_option_phone_cta",
+          "location": "contact_options",
+          "source_file": "components/contact/rfq-contact-page.tsx:438-445",
+          "selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward tel: URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "faq_conversion_phone",
+          "location": "faq_page",
+          "source_file": "components/faq/faq-page.tsx:420-425",
+          "selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward tel: URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "about_conversion_phone",
+          "location": "about_page",
+          "source_file": "components/about/about-page.tsx:219-226",
+          "selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward tel: URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "case_study_conversion_phone",
+          "location": "case_study_conversion",
+          "source_file": "components/case-studies/case-study-page-template.tsx:649-670",
+          "selector": "[data-analytics-event=\"phone_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward tel: URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone number is sent as an event parameter."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "whatsapp_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"whatsapp_click\"]",
+      "future_selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element", "Click URL"],
+      "pii_risk": "medium_if_click_url_is_forwarded",
+      "targets": [
+        {
+          "component": "homepage_rfq_contact",
+          "location": "homepage_rfq",
+          "source_file": "components/home/rfq-section.tsx:185-193",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "homepage_sticky_whatsapp",
+          "location": "homepage",
+          "source_file": "components/home/sticky-mobile-cta.tsx:117-123",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "contact_hero_whatsapp",
+          "location": "contact_hero",
+          "source_file": "components/contact/rfq-contact-page.tsx:372-380",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "contact_option_whatsapp_value",
+          "location": "contact_options",
+          "source_file": "components/contact/rfq-contact-page.tsx:423-429",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone or WhatsApp number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "contact_option_whatsapp_cta",
+          "location": "contact_options",
+          "source_file": "components/contact/rfq-contact-page.tsx:438-445",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "contact_sticky_whatsapp",
+          "location": "contact_page",
+          "source_file": "components/contact/rfq-contact-page.tsx:724-728",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone or WhatsApp number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "faq_conversion_whatsapp",
+          "location": "faq_page",
+          "source_file": "components/faq/faq-page.tsx:409-418",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone or WhatsApp number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "about_conversion_whatsapp",
+          "location": "about_page",
+          "source_file": "components/about/about-page.tsx:207-217",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone or WhatsApp number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "about_sticky_whatsapp",
+          "location": "about_page",
+          "source_file": "components/about/about-page.tsx:242-249",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone or WhatsApp number is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "case_study_conversion_whatsapp",
+          "location": "case_study_conversion",
+          "source_file": "components/case-studies/case-study-page-template.tsx:629-645",
+          "selector": "[data-analytics-event=\"whatsapp_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward wa.me URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no phone or WhatsApp number is sent as an event parameter."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "email_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"email_click\"]",
+      "future_selector": "[data-analytics-event=\"email_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element", "Click URL"],
+      "pii_risk": "medium_if_click_url_is_forwarded",
+      "targets": [
+        {
+          "component": "homepage_rfq_contact",
+          "location": "homepage_rfq",
+          "source_file": "components/home/rfq-section.tsx:193-201",
+          "selector": "[data-analytics-event=\"email_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward mailto: URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "contact_option_email_value",
+          "location": "contact_options",
+          "source_file": "components/contact/rfq-contact-page.tsx:423-429",
+          "selector": "[data-analytics-event=\"email_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward mailto: URLs to GA4.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no email address is sent as an event parameter."
+          ]
+        },
+        {
+          "component": "contact_option_email_cta",
+          "location": "contact_options",
+          "source_file": "components/contact/rfq-contact-page.tsx:438-445",
+          "selector": "[data-analytics-event=\"email_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "section_id", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward mailto: URLs to GA4.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "case_study_cta_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "click",
+      "selector": "[data-analytics-event=\"case_study_cta_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"case_study_cta_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "case_study_hero_cta",
+          "location": "case_study_hero",
+          "source_file": "components/case-studies/case-study-page-template.tsx:305-314",
+          "selector": "[data-analytics-event=\"case_study_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "case_study_conversion_cta",
+          "location": "case_study_conversion",
+          "source_file": "components/case-studies/case-study-page-template.tsx:614-623",
+          "selector": "[data-analytics-event=\"case_study_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "service_hero_secondary_cta",
+          "location": "service_hero",
+          "source_file": "components/services/service-page-template.tsx:226-236",
+          "selector": "[data-analytics-event=\"case_study_cta_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "related_case_study_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"related_case_study_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"related_case_study_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "seo_related_case_study",
+          "location": "seo_related_case_studies",
+          "source_file": "components/seo/seo-landing-page-template.tsx:133-146",
+          "selector": "[data-analytics-event=\"related_case_study_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["case_study_name", "component_id"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "related_resource_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"related_resource_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"related_resource_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "seo_related_resource",
+          "location": "seo_related_resources",
+          "source_file": "components/seo/seo-landing-page-template.tsx:162-180",
+          "selector": "[data-analytics-event=\"related_resource_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["resource_type", "component_id"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "resource_detail_related_resources",
+          "location": "resource_detail_related",
+          "source_file": "components/resources/resource-detail-page-template.tsx:437-448",
+          "selector": "[data-analytics-event=\"related_resource_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["resource_type", "component_id"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "related_service_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"related_service_click\"]",
+      "future_selector": "[data-analytics-event=\"related_service_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "seo_related_service",
+          "location": "seo_related_services",
+          "source_file": "components/seo/seo-landing-page-template.tsx:360-391",
+          "selector": "[data-analytics-event=\"related_service_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "case_study_hero_related_service",
+          "location": "case_study_hero",
+          "source_file": "components/case-studies/case-study-page-template.tsx:318-326",
+          "selector": "[data-analytics-event=\"related_service_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text"],
+          "cutover_procedure": [
+            "Publish only after the selector is verified in production markup.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no duplicate event is sent by application code."
+          ]
+        },
+        {
+          "component": "case_study_related_services",
+          "location": "case_study_related_services",
+          "source_file": "components/case-studies/case-study-page-template.tsx:548-561",
+          "selector": "[data-analytics-event=\"related_service_click\"][data-analytics-owner=\"unassigned\"]",
+          "application_dispatch_present": false,
+          "current_owner": "unassigned",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text"],
+          "cutover_procedure": [
+            "Publish only after the selector is verified in production markup.",
+            "Validate in GTM Preview before publishing."
+          ],
+          "validation_procedure": [
+            "Confirm one GA4 DebugView event.",
+            "Confirm no duplicate event is sent by application code."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "resource_download_start",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "link_click",
+      "selector": "[data-analytics-event=\"resource_download_start\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"resource_download_start\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element", "Click URL"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "resource_hub_hero_primary",
+          "location": "resource_hub_hero",
+          "source_file": "components/resources/engineering-resource-hub-page.tsx:298-320",
+          "selector": "[data-analytics-event=\"resource_download_start\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "resource_type", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward download URLs with query strings.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        },
+        {
+          "component": "resource_detail_hero_primary",
+          "location": "resource_detail_hero",
+          "source_file": "components/resources/resource-detail-page-template.tsx:218-229",
+          "selector": "[data-analytics-event=\"resource_download_start\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "resource_type", "interaction_type"],
+          "cutover_procedure": [
+            "Do not forward download URLs with query strings.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    },
+    {
+      "event_name": "service_page_click",
+      "ownership": "gtm_dom_candidate",
+      "trigger_type": "click",
+      "selector": "[data-analytics-event=\"service_page_click\"][data-analytics-owner=\"application\"]",
+      "future_selector": "[data-analytics-event=\"service_page_click\"][data-analytics-owner=\"gtm\"]",
+      "required_variables": ["Click Element"],
+      "pii_risk": "low",
+      "targets": [
+        {
+          "component": "service_conversion_cta",
+          "location": "service_conversion_cta",
+          "source_file": "components/services/service-page-template.tsx:504-520",
+          "selector": "[data-analytics-event=\"service_page_click\"][data-analytics-owner=\"application\"]",
+          "application_dispatch_present": true,
+          "current_owner": "application",
+          "future_owner": "gtm",
+          "required_gtm_parameters": ["component_id", "cta_text", "interaction_type"],
+          "cutover_procedure": [
+            "Configure the GTM trigger on the stable selector.",
+            "Validate in GTM Preview before any code removal."
+          ],
+          "validation_procedure": [
+            "Confirm one dataLayer event.",
+            "Confirm one GA4 DebugView event."
+          ]
+        }
+      ]
+    }
+  ],
+  "manual_decisions": [
+    {
+      "event_name": "hero_secondary_cta_click",
+      "reason": "The same surface is currently represented by other canonical events or by non-canonical comments; it is not a clean standalone owner.",
+      "references": [
+        "components/services/service-page-template.tsx:226-227",
+        "components/seo/seo-landing-page-template.tsx:237-240"
+      ]
+    },
+    {
+      "event_name": "sticky_call_click",
+      "reason": "No verified sticky call element exists in the repository with a stable selector.",
+      "references": []
+    },
+    {
+      "event_name": "sticky_whatsapp_click",
+      "reason": "Active sticky WhatsApp surfaces already use the canonical whatsapp_click event; a second alias would duplicate tracking.",
+      "references": []
+    },
+    {
+      "event_name": "header_cta_click",
+      "reason": "The header CTA is already represented by catalog_cta_click, so a second alias would double-report the same interaction.",
+      "references": [
+        "components/layout/header.tsx:154-160",
+        "components/layout/header.tsx:235-242"
+      ]
+    },
+    {
+      "event_name": "map_click",
+      "reason": "No confirmed map element or selector exists in the current codebase.",
+      "references": []
+    },
+    {
+      "event_name": "resource_filter_use",
+      "reason": "The current resource filters are not exposed as reliable application-state selectors for cutover.",
+      "references": [
+        "components/resources/engineering-resource-hub-page.tsx:99-108"
+      ]
+    },
+    {
+      "event_name": "project_filter_use",
+      "reason": "The project page contains only a comment marker; no live filter event is dispatched.",
+      "references": [
+        "app/[locale]/projects/page.tsx:1452"
+      ]
+    },
+    {
+      "event_name": "case_study_expand",
+      "reason": "The preview component contains only a marker comment; no real expansion interaction exists.",
+      "references": [
+        "components/home/case-studies-preview.tsx:213"
+      ]
+    },
+    {
+      "event_name": "faq_search",
+      "reason": "Search text is user-entered and the code currently has only marker comments, so ownership needs a debounce/threshold decision first.",
+      "references": [
+        "components/faq/faq-page.tsx:125",
+        "components/faq/faq-page.tsx:216"
+      ]
+    },
+    {
+      "event_name": "language_switcher_open",
+      "reason": "The interaction is real, but the selector ownership is split across desktop and mobile header paths and still needs a dedicated GTM decision.",
+      "references": [
+        "components/layout/header.tsx:163-173",
+        "components/layout/header.tsx:211-219"
+      ]
+    },
+    {
+      "event_name": "consultation_cta_click",
+      "reason": "This is a page-specific label rather than a canonical event name, so it needs a naming decision before migration.",
+      "references": [
+        "components/about/about-page.tsx:203-217",
+        "components/about/about-page.tsx:240-249"
+      ]
+    },
+    {
+      "event_name": "resource_card_click",
+      "reason": "The resource hub marker is documentation-only and does not yet map to a stable canonical event.",
+      "references": [
+        "components/resources/engineering-resource-hub-page.tsx:249"
+      ]
+    },
+    {
+      "event_name": "resource_detail_view",
+      "reason": "The marker is page/view oriented rather than a discrete user action, so it needs a separate analytics ownership decision.",
+      "references": [
+        "components/resources/engineering-resource-hub-page.tsx:253",
+        "components/resources/resource-detail-page-template.tsx:196"
+      ]
+    }
+  ],
+  "scroll_depth_events": [
+    {
+      "event_name": "scroll_25",
+      "ownership": "gtm_scroll_depth",
+      "trigger_type": "scroll_depth",
+      "selector": "GTM built-in Scroll Depth trigger at 25%",
+      "required_variables": ["Page Path", "Scroll Depth Threshold", "Scroll Depth Units"],
+      "event_parameters": {
+        "page_path": "Page Path",
+        "scroll_threshold": "25",
+        "interaction_type": "scroll"
+      },
+      "validation_steps": [
+        "Fire once per page.",
+        "Exclude API, admin, preview, and non-public routes."
+      ]
+    },
+    {
+      "event_name": "scroll_50",
+      "ownership": "gtm_scroll_depth",
+      "trigger_type": "scroll_depth",
+      "selector": "GTM built-in Scroll Depth trigger at 50%",
+      "required_variables": ["Page Path", "Scroll Depth Threshold", "Scroll Depth Units"],
+      "event_parameters": {
+        "page_path": "Page Path",
+        "scroll_threshold": "50",
+        "interaction_type": "scroll"
+      },
+      "validation_steps": [
+        "Fire once per page.",
+        "Exclude API, admin, preview, and non-public routes."
+      ]
+    },
+    {
+      "event_name": "scroll_75",
+      "ownership": "gtm_scroll_depth",
+      "trigger_type": "scroll_depth",
+      "selector": "GTM built-in Scroll Depth trigger at 75%",
+      "required_variables": ["Page Path", "Scroll Depth Threshold", "Scroll Depth Units"],
+      "event_parameters": {
+        "page_path": "Page Path",
+        "scroll_threshold": "75",
+        "interaction_type": "scroll"
+      },
+      "validation_steps": [
+        "Fire once per page.",
+        "Exclude API, admin, preview, and non-public routes."
+      ]
+    },
+    {
+      "event_name": "scroll_100",
+      "ownership": "gtm_scroll_depth",
+      "trigger_type": "scroll_depth",
+      "selector": "GTM built-in Scroll Depth trigger at 100%",
+      "required_variables": ["Page Path", "Scroll Depth Threshold", "Scroll Depth Units"],
+      "event_parameters": {
+        "page_path": "Page Path",
+        "scroll_threshold": "100",
+        "interaction_type": "scroll"
+      },
+      "validation_steps": [
+        "Fire once per page.",
+        "Exclude API, admin, preview, and non-public routes."
+      ]
+    }
+  ],
+  "not_eligible_for_gtm_dom_tracking": [
+    {
+      "event_name": "rfq_start",
+      "reason": "This must remain application-originated so the first reliable form interaction is not confused with a CTA click.",
+      "references": [
+        "components/contact/rfq-contact-page.tsx:368-372",
+        "components/contact/rfq-contact-page.tsx:515-521",
+        "components/faq/faq-page.tsx:171-175",
+        "components/faq/faq-page.tsx:406-414",
+        "components/insights/engineering-article-template.tsx:243",
+        "components/insights/insights-index-page.tsx:53",
+        "components/resources/engineering-resource-hub-page.tsx:312-320",
+        "components/resources/engineering-resource-hub-page.tsx:495-512",
+        "components/resources/resource-detail-page-template.tsx:235-245",
+        "components/resources/resource-detail-page-template.tsx:495-518",
+        "components/seo/seo-landing-page-template.tsx:458-466",
+        "components/services/service-page-template.tsx:504-514"
+      ]
+    },
+    {
+      "event_name": "rfq_step_complete",
+      "reason": "This is application-state driven and must track validated step progression, not a DOM click.",
+      "references": [
+        "components/contact/rfq-contact-page.tsx:269-276"
+      ]
+    },
+    {
+      "event_name": "rfq_submit",
+      "reason": "This must only fire on confirmed submit handling, not on a button click.",
+      "references": [
+        "components/contact/rfq-contact-page.tsx:331-340",
+        "components/home/rfq-section.tsx:142-150"
+      ]
+    },
+    {
+      "event_name": "rfq_error",
+      "reason": "This only exists when validation or submission actually fails.",
+      "references": [
+        "components/contact/rfq-contact-page.tsx:284-290",
+        "components/contact/rfq-contact-page.tsx:338-343",
+        "components/home/rfq-section.tsx:149-156"
+      ]
+    },
+    {
+      "event_name": "file_upload_attempt",
+      "reason": "The event captures form field state and must stay in the application helper.",
+      "references": [
+        "components/contact/rfq-contact-page.tsx:647-651"
+      ]
+    },
+    {
+      "event_name": "language_change",
+      "reason": "Locale changes are application state and should stay in the app helper.",
+      "references": [
+        "components/layout/header.tsx:163-173",
+        "components/layout/header.tsx:211-219",
+        "components/localization/language-switcher.tsx:43-48"
+      ]
+    },
+    {
+      "event_name": "faq_category_filter",
+      "reason": "Filter state is application-owned and should not become a click-only GTM trigger.",
+      "references": [
+        "components/faq/faq-page.tsx:112-120"
+      ]
+    },
+    {
+      "event_name": "catalog_form_submitted",
+      "reason": "This depends on a successful form submission and must remain in application code.",
+      "references": [
+        "components/home/catalog-download-modal.tsx:83-93"
+      ]
+    },
+    {
+      "event_name": "catalog_download_started",
+      "reason": "This follows successful application flow and should not be reduced to a raw click.",
+      "references": [
+        "components/home/catalog-download-modal.tsx:91-97"
+      ]
+    },
+    {
+      "event_name": "resource_download_complete",
+      "reason": "This requires a successful download or API confirmation.",
+      "references": [
+        "components/resources/resource-detail-page-template.tsx:178-186"
+      ]
+    },
+    {
+      "event_name": "proof_card_expand",
+      "reason": "This is tied to proof-state expansion and should stay application-owned.",
+      "references": [
+        "components/home/engineering-proof-snapshot.tsx:61-68"
+      ]
+    },
+    {
+      "event_name": "diagram_open",
+      "reason": "This opens a proof modal and depends on application state.",
+      "references": [
+        "components/home/engineering-proof-snapshot.tsx:65-73"
+      ]
+    },
+    {
+      "event_name": "diagram_zoom",
+      "reason": "This depends on active modal state and zoom state, not a simple DOM click.",
+      "references": [
+        "components/home/engineering-proof-snapshot.tsx:90-96",
+        "components/case-studies/case-study-page-template.tsx:677-701"
+      ]
+    },
+    {
+      "event_name": "diagram_close",
+      "reason": "This is modal-state cleanup and should remain application-owned.",
+      "references": [
+        "components/home/engineering-proof-snapshot.tsx:46-53",
+        "components/case-studies/case-study-page-template.tsx:191-199"
+      ]
+    },
+    {
+      "event_name": "technical_proof_open",
+      "reason": "This opens verified technical proof content and is tied to application state.",
+      "references": [
+        "components/case-studies/case-study-page-template.tsx:470-477",
+        "components/insights/engineering-article-template.tsx:45-52",
+        "components/seo/seo-landing-page-template.tsx:86-96",
+        "components/services/service-page-template.tsx:417-423"
+      ]
+    }
+  ]
+}

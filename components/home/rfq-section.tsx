@@ -167,11 +167,42 @@ export function RfqSection() {
           <h2 id="rfq-title">{t('title')}</h2>
           <p>{t('intro')}</p>
           <div className="rfq-contact__details">
-            <LtrText as="a" href={`tel:${productionContactInfo.phone.replace(/\s/g, '')}`} onClick={() => trackContactClick('phone', 'homepage_rfq_contact')}>{productionContactInfo.phone}</LtrText>
-            <LtrText as="a" href={`https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`} onClick={() => trackContactClick('whatsapp', 'homepage_rfq_contact')}>
+            <LtrText
+              as="a"
+              href={`tel:${productionContactInfo.phone.replace(/\s/g, '')}`}
+              data-analytics-event="phone_click"
+              data-analytics-owner="application"
+              data-analytics-component="homepage_rfq_contact"
+              data-analytics-location="homepage_rfq"
+              data-analytics-label="phone"
+              onClick={() => trackContactClick('phone', 'homepage_rfq_contact')}
+            >
+              {productionContactInfo.phone}
+            </LtrText>
+            <LtrText
+              as="a"
+              href={`https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`}
+              data-analytics-event="whatsapp_click"
+              data-analytics-owner="application"
+              data-analytics-component="homepage_rfq_contact"
+              data-analytics-location="homepage_rfq"
+              data-analytics-label="whatsapp"
+              onClick={() => trackContactClick('whatsapp', 'homepage_rfq_contact')}
+            >
               {productionContactInfo.whatsapp}
             </LtrText>
-            <LtrText as="a" href={`mailto:${productionContactInfo.email}`} onClick={() => trackContactClick('email', 'homepage_rfq_contact')}>{productionContactInfo.email}</LtrText>
+            <LtrText
+              as="a"
+              href={`mailto:${productionContactInfo.email}`}
+              data-analytics-event="email_click"
+              data-analytics-owner="application"
+              data-analytics-component="homepage_rfq_contact"
+              data-analytics-location="homepage_rfq"
+              data-analytics-label="email"
+              onClick={() => trackContactClick('email', 'homepage_rfq_contact')}
+            >
+              {productionContactInfo.email}
+            </LtrText>
             {localizedAddress ? <span>{localizedAddress}</span> : <LtrText>{productionContactInfo.address}</LtrText>}
           </div>
           {contactNote ? <p className="rfq-contact__note">{contactNote}</p> : null}

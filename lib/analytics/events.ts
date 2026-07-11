@@ -4,67 +4,35 @@ import {sendGTMEvent} from '@next/third-parties/google';
 import type {Locale} from '@/i18n/routing';
 
 export const approvedAnalyticsEvents = [
-  'mobile_menu_open',
-  'mobile_menu_item_click',
-  'language_switcher_open',
   'language_change',
-  'technical_quick_access_click',
   'hero_primary_cta_click',
-  'hero_secondary_cta_click',
-  'hero_visibility_duration',
-  'trust_bar_view',
   'proof_card_expand',
-  'proof_diagram_zoom',
-  'case_study_view',
-  'case_study_swipe',
-  'case_study_expand',
   'case_study_cta_click',
-  'case_study_gallery_open',
-  'case_study_image_zoom',
   'related_case_study_click',
   'diagram_open',
   'diagram_zoom',
   'diagram_close',
-  'accordion_expand',
   'technical_proof_open',
-  'resource_filter_use',
-  'resource_download',
   'resource_download_start',
   'resource_download_complete',
-  'resource_card_click',
   'related_resource_click',
   'sticky_cta_click',
-  'sticky_call_click',
-  'sticky_whatsapp_click',
   'rfq_start',
   'rfq_step_complete',
   'rfq_submit',
   'rfq_error',
-  'rfq_abandon',
   'file_upload_attempt',
-  'contact_page_view',
   'phone_click',
   'whatsapp_click',
   'email_click',
-  'address_click',
-  'map_click',
-  'blog_card_click',
-  'internal_link_click',
   'related_service_click',
   'service_page_click',
-  'faq_page_view',
-  'faq_search',
   'faq_category_filter',
   'faq_expand',
-  'faq_related_link_click',
-  'faq_cta_click',
-  'catalog_cta_clicked',
+  'catalog_cta_click',
   'catalog_form_submitted',
   'catalog_download_started',
-  'scroll_25',
-  'scroll_50',
-  'scroll_75',
-  'scroll_100'
+  'language_switcher_open'
 ] as const;
 
 export type AnalyticsEventName = (typeof approvedAnalyticsEvents)[number];
@@ -205,7 +173,7 @@ export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParam
   return true;
 }
 
-export function trackCtaClick(component_id: string, cta_text: string, eventName: AnalyticsEventName = 'internal_link_click') {
+export function trackCtaClick(component_id: string, cta_text: string, eventName: AnalyticsEventName) {
   return trackEvent(eventName, {
     component_id,
     cta_text,
@@ -213,7 +181,7 @@ export function trackCtaClick(component_id: string, cta_text: string, eventName:
   });
 }
 
-export function trackRfqEvent(eventName: 'rfq_start' | 'rfq_step_complete' | 'rfq_submit' | 'rfq_error' | 'rfq_abandon', params: AnalyticsParams = {}) {
+export function trackRfqEvent(eventName: 'rfq_start' | 'rfq_step_complete' | 'rfq_submit' | 'rfq_error', params: AnalyticsParams = {}) {
   return trackEvent(eventName, {
     lead_type: 'rfq',
     ...params
@@ -229,35 +197,34 @@ export function trackLanguageChange(previous_language: string, selected_language
   });
 }
 
-export function trackProofEvent(eventName: 'proof_card_expand' | 'proof_diagram_zoom' | 'diagram_open' | 'diagram_zoom' | 'diagram_close' | 'technical_proof_open', params: AnalyticsParams = {}) {
+export function trackProofEvent(eventName: 'proof_card_expand' | 'diagram_open' | 'diagram_zoom' | 'diagram_close' | 'technical_proof_open', params: AnalyticsParams = {}) {
   return trackEvent(eventName, params);
 }
 
-export function trackFaqEvent(eventName: 'faq_search' | 'faq_category_filter' | 'faq_expand' | 'faq_related_link_click' | 'faq_cta_click', params: AnalyticsParams = {}) {
+export function trackFaqEvent(eventName: 'faq_category_filter' | 'faq_expand', params: AnalyticsParams = {}) {
   return trackEvent(eventName, params);
 }
 
-export function trackResourceEvent(eventName: 'resource_filter_use' | 'resource_download' | 'resource_download_start' | 'resource_download_complete' | 'resource_card_click' | 'related_resource_click', params: AnalyticsParams = {}) {
+export function trackResourceEvent(eventName: 'resource_download_start' | 'resource_download_complete' | 'related_resource_click', params: AnalyticsParams = {}) {
   return trackEvent(eventName, params);
 }
 
-export function trackCaseStudyEvent(eventName: 'case_study_view' | 'case_study_swipe' | 'case_study_expand' | 'case_study_cta_click' | 'case_study_gallery_open' | 'case_study_image_zoom' | 'related_case_study_click', params: AnalyticsParams = {}) {
+export function trackCaseStudyEvent(eventName: 'case_study_cta_click' | 'related_case_study_click', params: AnalyticsParams = {}) {
   return trackEvent(eventName, params);
 }
 
-export function trackCatalogEvent(eventName: 'catalog_cta_clicked' | 'catalog_form_submitted' | 'catalog_download_started', params: AnalyticsParams = {}) {
+export function trackCatalogEvent(eventName: 'catalog_cta_click' | 'catalog_form_submitted' | 'catalog_download_started', params: AnalyticsParams = {}) {
   return trackEvent(eventName, {
     lead_type: 'catalog_download',
     ...params
   });
 }
 
-export function trackContactClick(type: 'phone' | 'whatsapp' | 'email' | 'map', component_id?: string) {
+export function trackContactClick(type: 'phone' | 'whatsapp' | 'email', component_id?: string) {
   const eventName = {
     phone: 'phone_click',
     whatsapp: 'whatsapp_click',
-    email: 'email_click',
-    map: 'map_click'
+    email: 'email_click'
   }[type] as AnalyticsEventName;
 
   return trackEvent(eventName, {

@@ -101,12 +101,30 @@ export function StickyMobileCta() {
       aria-label={t('label')}
       className={className}
     >
-      {/* track: sticky_mobile_cta_click */}
-      <a className="sticky-mobile-cta__primary" href="#rfq" onClick={() => trackEvent('sticky_cta_click', {component_id: 'sticky_mobile_cta'})}>
+      {/* track: sticky_cta_click */}
+      <a
+        className="sticky-mobile-cta__primary"
+        href="#rfq"
+        data-analytics-event="sticky_cta_click"
+        data-analytics-owner="application"
+        data-analytics-component="sticky_mobile_cta"
+        data-analytics-location="homepage"
+        data-analytics-label="primary"
+        onClick={() => trackEvent('sticky_cta_click', {component_id: 'sticky_mobile_cta'})}
+      >
         {t('primary')}
       </a>
       {/* track: whatsapp_click */}
-      <a className="sticky-mobile-cta__secondary" href={whatsappHref} onClick={() => trackContactClick('whatsapp', 'sticky_mobile_cta')}>
+      <a
+        className="sticky-mobile-cta__secondary"
+        href={whatsappHref}
+        data-analytics-event="whatsapp_click"
+        data-analytics-owner="application"
+        data-analytics-component="sticky_mobile_cta"
+        data-analytics-location="homepage"
+        data-analytics-label="whatsapp"
+        onClick={() => trackContactClick('whatsapp', 'sticky_mobile_cta')}
+      >
         {t('whatsapp')}
       </a>
     </aside>

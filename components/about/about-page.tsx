@@ -205,11 +205,27 @@ function FinalCTASection({content, page}: {content: AboutLocaleContent; page: Ab
             {content.conversionCta.primaryCta}
           </Link>
           {/* track: whatsapp_click */}
-          <a className="button-secondary" href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>
+          <a
+            className="button-secondary"
+            href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+            data-analytics-event="whatsapp_click"
+            data-analytics-owner="unassigned"
+            data-analytics-component="about_conversion_cta"
+            data-analytics-location="about_page"
+            data-analytics-label="whatsapp"
+          >
             {content.conversionCta.secondaryCta}
           </a>
           {/* track: phone_click */}
-          <a className="button-secondary" href={`tel:${page.contact.phone.replace(/\s/g, '')}`}>
+          <a
+            className="button-secondary"
+            href={`tel:${page.contact.phone.replace(/\s/g, '')}`}
+            data-analytics-event="phone_click"
+            data-analytics-owner="unassigned"
+            data-analytics-component="about_conversion_cta"
+            data-analytics-location="about_page"
+            data-analytics-label="phone"
+          >
             {content.conversionCta.phoneCta}
           </a>
         </div>
@@ -224,7 +240,16 @@ function StickyMobileCTA({content, page}: {content: AboutLocaleContent; page: Ab
       {/* track: consultation_cta_click */}
       <Link href="/contact#rfq-form">{content.stickyMobileCta.label}</Link>
       {/* track: whatsapp_click */}
-      <a href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>{content.stickyMobileCta.secondaryAction}</a>
+      <a
+        href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+        data-analytics-event="whatsapp_click"
+        data-analytics-owner="unassigned"
+        data-analytics-component="about_sticky_cta"
+        data-analytics-location="about_page"
+        data-analytics-label="whatsapp"
+      >
+        {content.stickyMobileCta.secondaryAction}
+      </a>
     </div>
   );
 }

@@ -132,7 +132,16 @@ function SeoCaseStudyCard({caseStudy}: {caseStudy: SeoCaseStudy}) {
       </dl>
       {/* track: related_case_study_click */}
       {caseStudy.href ? (
-        <Link href={caseStudy.href} className="seo-case-card__link" onClick={() => trackCaseStudyEvent('related_case_study_click', {case_study_name: caseStudy.projectName})}>
+        <Link
+          href={caseStudy.href}
+          className="seo-case-card__link"
+          data-analytics-event="related_case_study_click"
+          data-analytics-owner="application"
+          data-analytics-component="seo_related_case_study"
+          data-analytics-location="seo_related_case_studies"
+          data-analytics-label={caseStudy.projectName}
+          onClick={() => trackCaseStudyEvent('related_case_study_click', {case_study_name: caseStudy.projectName})}
+        >
           {caseStudy.projectType ?? 'View project proof'}
         </Link>
       ) : (
@@ -161,7 +170,16 @@ function SeoResourceCardView({resource}: {resource: SeoResourceCard}) {
         )}
         {/* track: related_resource_click */}
         {resource.href ? (
-          <Link href={resource.href} className="resource-card__cta" onClick={() => trackResourceEvent('related_resource_click', {resource_type: resource.resourceType, component_id: resource.title})}>
+          <Link
+            href={resource.href}
+            className="resource-card__cta"
+            data-analytics-event="related_resource_click"
+            data-analytics-owner="application"
+            data-analytics-component="seo_related_resource"
+            data-analytics-location="seo_related_resources"
+            data-analytics-label={resource.title}
+            onClick={() => trackResourceEvent('related_resource_click', {resource_type: resource.resourceType, component_id: resource.title})}
+          >
             {resource.cta}
           </Link>
         ) : (
@@ -357,7 +375,17 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
           {content.applicationDetails.relatedServices?.length ? (
             <div className="seo-inline-links" aria-label="Related systems">
               {content.applicationDetails.relatedServices.map((item) => (
-                <Link key={item.href} href={item.href} className="seo-inline-link" onClick={() => trackEvent('related_service_click', {component_id: page.slug, cta_text: item.title})}>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="seo-inline-link"
+                  data-analytics-event="related_service_click"
+                  data-analytics-owner="application"
+                  data-analytics-component="seo_related_service"
+                  data-analytics-location="seo_related_services"
+                  data-analytics-label={item.title}
+                  onClick={() => trackEvent('related_service_click', {component_id: page.slug, cta_text: item.title})}
+                >
                   {/* track: related_service_click */}
                   {item.title}
                 </Link>

@@ -108,7 +108,7 @@ export function Header({locale}: Props) {
   }
 
   function handleCatalogClick() {
-    trackCatalogEvent('catalog_cta_clicked', {component_id: 'header_cta'});
+    trackCatalogEvent('catalog_cta_click', {component_id: 'header_cta'});
     closeMobileMenu();
     setCatalogOpen(true);
   }
@@ -147,8 +147,17 @@ export function Header({locale}: Props) {
           </nav>
 
           <div className="main-header__actions">
-            {/* track: catalog_cta_clicked */}
-            <button type="button" className="header-cta" onClick={handleCatalogClick}>
+            {/* track: catalog_cta_click */}
+            <button
+              type="button"
+              className="header-cta"
+              data-analytics-event="catalog_cta_click"
+              data-analytics-owner="application"
+              data-analytics-component="header_cta"
+              data-analytics-location="global_header"
+              data-analytics-label="catalog"
+              onClick={handleCatalogClick}
+            >
               {header('cta')}
             </button>
             {/* track: language_switcher_open, language_change */}
@@ -220,7 +229,16 @@ export function Header({locale}: Props) {
                     );
                   })}
                 </nav>
-                <button type="button" className="mobile-menu__cta" onClick={handleCatalogClick}>
+                <button
+                  type="button"
+                  className="mobile-menu__cta"
+                  data-analytics-event="catalog_cta_click"
+                  data-analytics-owner="application"
+                  data-analytics-component="header_cta"
+                  data-analytics-location="mobile_menu"
+                  data-analytics-label="catalog"
+                  onClick={handleCatalogClick}
+                >
                   {header('cta')}
                 </button>
               </div>

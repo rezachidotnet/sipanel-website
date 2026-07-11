@@ -8,13 +8,22 @@ export function CatalogDownloadButton({label, componentId}: {label: string; comp
   const [catalogOpen, setCatalogOpen] = useState(false);
 
   function handleClick() {
-    trackCatalogEvent('catalog_cta_clicked', {component_id: componentId});
+    trackCatalogEvent('catalog_cta_click', {component_id: componentId});
     setCatalogOpen(true);
   }
 
   return (
     <>
-      <button type="button" className="button-catalog-download" onClick={handleClick}>
+      <button
+        type="button"
+        className="button-catalog-download"
+        data-analytics-event="catalog_cta_click"
+        data-analytics-owner="application"
+        data-analytics-component={componentId}
+        data-analytics-location="homepage"
+        data-analytics-label="catalog"
+        onClick={handleClick}
+      >
         {label}
       </button>
       <CatalogDownloadModal isOpen={catalogOpen} onClose={() => setCatalogOpen(false)} />

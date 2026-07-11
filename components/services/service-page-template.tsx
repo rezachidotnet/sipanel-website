@@ -224,8 +224,17 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
               {page.hero.secondaryCta ? (
                 <>
                   {/* track: service_secondary_cta_click */}
-                  {/* track: hero_secondary_cta_click */}
-                  <Link href="#service-related-case-studies" className="button-secondary" onClick={() => trackCaseStudyEvent('case_study_view', {component_id: page.id})}>
+                  {/* track: case_study_cta_click */}
+                  <Link
+                    href="#service-related-case-studies"
+                    className="button-secondary"
+                    data-analytics-event="case_study_cta_click"
+                    data-analytics-owner="application"
+                    data-analytics-component={`${page.id}_hero`}
+                    data-analytics-location="service_hero"
+                    data-analytics-label={page.hero.secondaryCta}
+                    onClick={() => trackCaseStudyEvent('case_study_cta_click', {component_id: `${page.id}_hero`, cta_text: page.hero.secondaryCta})}
+                  >
                     {page.hero.secondaryCta}
                   </Link>
                 </>
@@ -498,7 +507,16 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
               {page.conversionCta.button}
             </Link>
             {page.conversionCta.secondaryButton ? (
-              <Link href="#service-related-case-studies" className="button-secondary" onClick={() => trackEvent('service_page_click', {component_id: `${page.id}_conversion_cta`, cta_text: page.conversionCta.secondaryButton})}>
+              <Link
+                href="#service-related-case-studies"
+                className="button-secondary"
+                data-analytics-event="service_page_click"
+                data-analytics-owner="application"
+                data-analytics-component="service_conversion_cta"
+                data-analytics-location="service_conversion_cta"
+                data-analytics-label={page.conversionCta.secondaryButton}
+                onClick={() => trackEvent('service_page_click', {component_id: `${page.id}_conversion_cta`, cta_text: page.conversionCta.secondaryButton})}
+              >
                 {page.conversionCta.secondaryButton}
               </Link>
             ) : null}

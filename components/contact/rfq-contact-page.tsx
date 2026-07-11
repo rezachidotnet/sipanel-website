@@ -157,6 +157,22 @@ function getContactHref(type: string, contact: ProductionContactInfo) {
   return null;
 }
 
+function getContactAnalyticsEvent(type: string) {
+  if (type === 'phone') {
+    return 'phone_click';
+  }
+
+  if (type === 'whatsapp') {
+    return 'whatsapp_click';
+  }
+
+  if (type === 'email') {
+    return 'email_click';
+  }
+
+  return undefined;
+}
+
 function getContactValue(type: string, contact: ProductionContactInfo) {
   if (type === 'phone') {
     return contact.phone;
@@ -354,7 +370,16 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                 {heroContent.primaryCta}
               </a>
               {/* track: whatsapp_click */}
-              <a className="button-secondary" href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`} onClick={() => trackContactClick('whatsapp', 'contact_hero')}>
+              <a
+                className="button-secondary"
+                href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+                data-analytics-event="whatsapp_click"
+                data-analytics-owner="application"
+                data-analytics-component="contact_hero"
+                data-analytics-location="contact_hero"
+                data-analytics-label="whatsapp"
+                onClick={() => trackContactClick('whatsapp', 'contact_hero')}
+              >
                 {heroContent.secondaryCta}
               </a>
             </div>
@@ -377,6 +402,7 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
               const value = card.type === 'address' ? localizedAddress : getContactValue(card.type, page.contact);
               const label = t(`contactLabels.${card.type}`);
               const cta = t(`contactCtas.${card.type}`);
+              const analyticsEvent = getContactAnalyticsEvent(card.type);
 
               const hint = t(`contactHints.${card.type}`);
 
@@ -390,7 +416,16 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                     </div>
                   </div>
                   {href ? (
-                    <LtrText as="a" className="contact-option-card__value" href={href}>
+                    <LtrText
+                      as="a"
+                      className="contact-option-card__value"
+                      href={href}
+                      data-analytics-event={analyticsEvent}
+                      data-analytics-owner="unassigned"
+                      data-analytics-component={`contact_option_${card.type}`}
+                      data-analytics-location="contact_options"
+                      data-analytics-label="value"
+                    >
                       {value}
                     </LtrText>
                   ) : card.type === 'address' && (locale === 'fa' || locale === 'ar') ? (
@@ -405,6 +440,11 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                       {/* track: email_click */}
                       <a
                         href={href}
+                        data-analytics-event={analyticsEvent}
+                        data-analytics-owner="application"
+                        data-analytics-component={`contact_option_${card.type}`}
+                        data-analytics-location="contact_options"
+                        data-analytics-label="cta"
                         onClick={() => {
                           if (card.type === 'phone' || card.type === 'whatsapp' || card.type === 'email') {
                             trackContactClick(card.type, `contact_option_${card.type}`);
@@ -670,10 +710,28 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
       </section>
 
       <div className="contact-sticky-cta">
-        {/* track: sticky_mobile_cta_click */}
-        <a href="#rfq-form">{heroContent.primaryCta}</a>
+        {/* track: sticky_cta_click */}
+        <a
+          href="#rfq-form"
+          data-analytics-event="sticky_cta_click"
+          data-analytics-owner="unassigned"
+          data-analytics-component="contact_sticky_cta"
+          data-analytics-location="contact_page"
+          data-analytics-label="primary"
+        >
+          {heroContent.primaryCta}
+        </a>
         {/* track: whatsapp_click */}
-        <a href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>{t('contactLabels.whatsapp')}</a>
+        <a
+          href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+          data-analytics-event="whatsapp_click"
+          data-analytics-owner="unassigned"
+          data-analytics-component="contact_sticky_cta"
+          data-analytics-location="contact_page"
+          data-analytics-label="whatsapp"
+        >
+          {t('contactLabels.whatsapp')}
+        </a>
       </div>
     </article>
   );

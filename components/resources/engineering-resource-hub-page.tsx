@@ -301,11 +301,27 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
                   {content.hero.primaryCta}
                 </span>
               ) : content.hero.primaryCtaHref.startsWith('#') ? (
-                <a href={content.hero.primaryCtaHref} className="button-primary">
+                <a
+                  href={content.hero.primaryCtaHref}
+                  className="button-primary"
+                  data-analytics-event="resource_download_start"
+                  data-analytics-owner="application"
+                  data-analytics-component="resource_hub_hero"
+                  data-analytics-location="resource_hub_hero"
+                  data-analytics-label="primary"
+                >
                   {content.hero.primaryCta}
                 </a>
               ) : (
-                <Link href={content.hero.primaryCtaHref} className="button-primary">
+                <Link
+                  href={content.hero.primaryCtaHref}
+                  className="button-primary"
+                  data-analytics-event="resource_download_start"
+                  data-analytics-owner="application"
+                  data-analytics-component="resource_hub_hero"
+                  data-analytics-location="resource_hub_hero"
+                  data-analytics-label="primary"
+                >
                   {content.hero.primaryCta}
                 </Link>
               )}

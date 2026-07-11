@@ -4,6 +4,7 @@ import './faq.css';
 import {useEffect, useId, useMemo, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {Link, getDirection, usePathname, useRouter, type Locale} from '@/i18n/routing';
+import {trackFaqEvent} from '@/lib/analytics/events';
 import {
   getFaqRelatedLinkLabel,
   buildBreadcrumbSchema,
@@ -109,6 +110,14 @@ export function FaqPage({locale, page}: Props) {
 
   function updateCategory(nextCategory: string) {
     /* track: faq_category_filter */
+    if (nextCategory !== activeCategory) {
+      trackFaqEvent('faq_category_filter', {
+        component_id: 'faq_category_filter',
+        category: nextCategory,
+        interaction_type: 'click'
+      });
+    }
+
     updateQuery({category: nextCategory});
   }
 
@@ -120,13 +129,29 @@ export function FaqPage({locale, page}: Props) {
 
   function toggleExpanded(id: string) {
     /* track: faq_expand */
-    setExpandedIds((current) =>
-      current.includes(id) ? current.filter((itemId) => itemId !== id) : [...current, id]
-    );
+    const isExpanded = expandedIds.includes(id);
+
+    if (!isExpanded) {
+      trackFaqEvent('faq_expand', {
+        component_id: id,
+        category: activeCategory,
+        interaction_type: 'expand'
+      });
+    }
+
+    setExpandedIds((current) => (current.includes(id) ? current.filter((itemId) => itemId !== id) : [...current, id]));
   }
 
   function setAllExpanded(expand: boolean) {
     /* track: faq_expand */
+    if (expand) {
+      trackFaqEvent('faq_expand', {
+        component_id: 'faq_expand_all',
+        category: activeCategory,
+        interaction_type: 'expand_all'
+      });
+    }
+
     setExpandedIds(expand ? visibleItems.map((item) => item.id) : []);
   }
 
@@ -382,10 +407,26 @@ export function FaqPage({locale, page}: Props) {
             <Link className="button-primary" href="/contact#rfq-form">
               {content.conversionCta.primaryCta}
             </Link>
-            <a className="button-secondary" href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}>
+            <a
+              className="button-secondary"
+              href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+              data-analytics-event="whatsapp_click"
+              data-analytics-owner="unassigned"
+              data-analytics-component="faq_conversion_cta"
+              data-analytics-location="faq_page"
+              data-analytics-label="whatsapp"
+            >
               {content.conversionCta.secondaryCta}
             </a>
-            <a className="button-secondary" href={`tel:${page.contact.phone.replace(/\s/g, '')}`}>
+            <a
+              className="button-secondary"
+              href={`tel:${page.contact.phone.replace(/\s/g, '')}`}
+              data-analytics-event="phone_click"
+              data-analytics-owner="unassigned"
+              data-analytics-component="faq_conversion_cta"
+              data-analytics-location="faq_page"
+              data-analytics-label="phone"
+            >
               {content.conversionCta.tertiaryCta}
             </a>
           </div>
