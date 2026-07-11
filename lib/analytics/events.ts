@@ -1,5 +1,6 @@
 'use client';
 
+import {sendGTMEvent} from '@next/third-parties/google';
 import type {Locale} from '@/i18n/routing';
 
 export const approvedAnalyticsEvents = [
@@ -70,6 +71,7 @@ export type AnalyticsEventName = (typeof approvedAnalyticsEvents)[number];
 
 export type AnalyticsParams = Partial<{
   page_url: string;
+  page_path: string;
   page_title: string;
   device_type: 'mobile' | 'tablet' | 'desktop';
   viewport_width: number;
@@ -95,23 +97,32 @@ export type AnalyticsParams = Partial<{
 }>;
 
 type WindowWithAnalytics = Window & {
-  dataLayer?: Array<Record<string, unknown>>;
-  gtag?: (command: 'event', eventName: string, params?: Record<string, unknown>) => void;
+  dataLayer?: unknown[];
+};
+
+type GtmEvent = {
+  event: string;
+  [key: string]: string | number | boolean | undefined;
 };
 
 const approvedEventSet = new Set<string>(approvedAnalyticsEvents);
+const missingGtmWarnings = new Set<string>();
 
 function isBrowser() {
   return typeof window !== 'undefined' && typeof document !== 'undefined';
 }
 
-function hasAnalyticsConfig(win: WindowWithAnalytics) {
-  return Boolean(
-    process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ||
-      process.env.NEXT_PUBLIC_GTM_ID ||
-      win.gtag ||
-      win.dataLayer
-  );
+function hasGtmTransport(win: WindowWithAnalytics) {
+  return Boolean(process.env.NEXT_PUBLIC_GTM_ID || win.dataLayer);
+}
+
+function warnMissingGtmTransport(eventName: AnalyticsEventName) {
+  if (process.env.NODE_ENV !== 'development' || missingGtmWarnings.has(eventName)) {
+    return;
+  }
+
+  missingGtmWarnings.add(eventName);
+  console.warn(`[analytics] GTM/dataLayer unavailable; skipped "${eventName}".`);
 }
 
 function getDeviceType(width: number): AnalyticsParams['device_type'] {
@@ -126,14 +137,7 @@ function getDeviceType(width: number): AnalyticsParams['device_type'] {
   return 'desktop';
 }
 
-function getTrafficSource(win: WindowWithAnalytics) {
-  const params = new URLSearchParams(win.location.search);
-  const utmSource = params.get('utm_source');
-
-  if (utmSource) {
-    return utmSource;
-  }
-
+function getTrafficSource() {
   if (document.referrer) {
     try {
       return new URL(document.referrer).hostname;
@@ -151,13 +155,15 @@ function getLanguage() {
 
 function buildCommonParams(): AnalyticsParams {
   const width = window.innerWidth;
+  const pagePath = window.location.pathname;
 
   return {
-    page_url: window.location.href,
+    page_url: `${window.location.origin}${pagePath}`,
+    page_path: pagePath,
     page_title: document.title,
     device_type: getDeviceType(width),
     viewport_width: width,
-    traffic_source: getTrafficSource(window),
+    traffic_source: getTrafficSource(),
     language: getLanguage()
   };
 }
@@ -179,7 +185,8 @@ export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParam
 
   const win = window as WindowWithAnalytics;
 
-  if (!hasAnalyticsConfig(win)) {
+  if (!hasGtmTransport(win)) {
+    warnMissingGtmTransport(eventName);
     return false;
   }
 
@@ -188,17 +195,12 @@ export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParam
     ...params
   });
 
-  if (process.env.NEXT_PUBLIC_GTM_ID || win.dataLayer) {
-    win.dataLayer = win.dataLayer ?? [];
-    win.dataLayer.push({
-      event: eventName,
-      ...payload
-    });
-  }
+  const gtmPayload: GtmEvent = {
+    event: eventName,
+    ...payload
+  };
 
-  if (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || win.gtag) {
-    win.gtag?.('event', eventName, payload);
-  }
+  sendGTMEvent(gtmPayload);
 
   return true;
 }

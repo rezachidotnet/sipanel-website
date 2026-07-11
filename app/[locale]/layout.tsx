@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
+import {GoogleTagManager} from '@next/third-parties/google';
 import {NextIntlClientProvider} from 'next-intl';
 import {SpeedInsights} from '@vercel/speed-insights/next';
 import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
@@ -74,6 +75,9 @@ const ibmPlexSansArabic = localFont({
   variable: '--font-ibm-plex-sans-arabic',
   preload: false
 });
+
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+const isValidGtmId = typeof gtmId === 'string' && /^GTM-[A-Z0-9]+$/i.test(gtmId);
 
 type Props = {
   children: React.ReactNode;
@@ -166,6 +170,7 @@ export default async function LocaleLayout({children, params}: Props) {
         </NextIntlClientProvider>
         <SpeedInsights />
       </body>
+      {isValidGtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
     </html>
   );
 }
