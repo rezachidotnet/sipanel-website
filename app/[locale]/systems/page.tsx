@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
-import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
+import {getDirection, getLocalizedPath, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 
@@ -25,10 +25,10 @@ type Props = {
 };
 
 const routes: LocalizedRouteMap = {
-  en: '/en/systems',
-  fa: '/fa/systems',
-  ar: '/ar/systems',
-  ru: '/ru/systems'
+  en: getLocalizedPath('en', '/systems'),
+  fa: getLocalizedPath('fa', '/systems'),
+  ar: getLocalizedPath('ar', '/systems'),
+  ru: getLocalizedPath('ru', '/systems')
 };
 
 const copy: Record<

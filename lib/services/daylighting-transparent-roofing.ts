@@ -1,5 +1,5 @@
 import type {ServicePageTemplateData} from '@/components/services/service-page-template';
-import type {Locale} from '@/i18n/routing';
+import {getLocalizedPath, type Locale} from '@/i18n/routing';
 import daylightingHero from '@/assets/systems/transparent-roofing/cover-desktop.webp';
 import daylightInteriorImg from '@/assets/systems/transparent-roofing/interior-view.webp';
 import daylightInteriorMobileImg from '@/assets/systems/transparent-roofing/interior-view-mobile.webp';
@@ -12,10 +12,10 @@ import kermanshahCard from '@/assets/projects/kermanshah-industrial-university-p
 
 export const daylightingTransparentRoofingSpec = {
   route: {
-    en: '/en/systems/daylighting-transparent-roofing',
-    fa: '/fa/systems/daylighting-transparent-roofing',
-    ar: '/ar/systems/daylighting-transparent-roofing',
-    ru: '/ru/systems/daylighting-transparent-roofing'
+    en: getLocalizedPath('en', '/systems/daylighting-transparent-roofing'),
+    fa: getLocalizedPath('fa', '/systems/daylighting-transparent-roofing'),
+    ar: getLocalizedPath('ar', '/systems/daylighting-transparent-roofing'),
+    ru: getLocalizedPath('ru', '/systems/daylighting-transparent-roofing')
   },
   seo: {
     primary_keyword: 'daylighting transparent roofing',

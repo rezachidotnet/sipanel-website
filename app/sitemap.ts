@@ -1,5 +1,5 @@
 import type {MetadataRoute} from 'next';
-import {defaultLocale, locales, type Locale} from '@/i18n/routing';
+import {defaultLocale, getLocalizedPath, locales, normalizeCanonicalPath, type Locale} from '@/i18n/routing';
 import {aboutPageData} from '@/lib/about/about-page';
 import {caseStudyPages} from '@/lib/case-studies/case-study-pages';
 import {rfqContactPage} from '@/lib/contact/rfq-contact-page';
@@ -14,24 +14,24 @@ import {standingSeamZipTechRoofingSpec} from '@/lib/services/standing-seam-zip-t
 import {daylightingTransparentRoofingSpec} from '@/lib/services/daylighting-transparent-roofing';
 
 const homeRoutes: LocalizedRouteMap = {
-  en: '/en',
-  fa: '/fa',
-  ar: '/ar',
-  ru: '/ru'
+  en: getLocalizedPath('en'),
+  fa: getLocalizedPath('fa'),
+  ar: getLocalizedPath('ar'),
+  ru: getLocalizedPath('ru')
 };
 
 const systemsOverviewRoutes: LocalizedRouteMap = {
-  en: '/en/systems',
-  fa: '/fa/systems',
-  ar: '/ar/systems',
-  ru: '/ru/systems'
+  en: getLocalizedPath('en', '/systems'),
+  fa: getLocalizedPath('fa', '/systems'),
+  ar: getLocalizedPath('ar', '/systems'),
+  ru: getLocalizedPath('ru', '/systems')
 };
 
 const projectsOverviewRoutes: LocalizedRouteMap = {
-  en: '/en/projects',
-  fa: '/fa/projects',
-  ar: '/ar/projects',
-  ru: '/ru/projects'
+  en: getLocalizedPath('en', '/projects'),
+  fa: getLocalizedPath('fa', '/projects'),
+  ar: getLocalizedPath('ar', '/projects'),
+  ru: getLocalizedPath('ru', '/projects')
 };
 
 const routeMaps: LocalizedRouteMap[] = [
@@ -66,8 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locales.map((locale) => ({
       url: withBaseUrl(routes[locale]),
       lastModified: new Date(),
-      changeFrequency: locale === defaultLocale && routes[locale] === `/${defaultLocale}` ? 'weekly' : 'monthly',
-      priority: routes[locale] === `/${locale}` ? 1 : 0.7,
+      changeFrequency: locale === defaultLocale && normalizeCanonicalPath(routes[locale]) === '/' ? 'weekly' : 'monthly',
+      priority: normalizeCanonicalPath(routes[locale]) === getLocalizedPath(locale) ? 1 : 0.7,
       alternates: alternatesFor(routes)
     }))
   );

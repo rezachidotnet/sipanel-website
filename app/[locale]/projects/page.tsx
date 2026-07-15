@@ -5,7 +5,7 @@ import '@/components/projects/projects-index.css';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
-import {getDirection, locales, type Locale, Link} from '@/i18n/routing';
+import {getDirection, getLocalizedPath, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 import {CatalogDownloadButton} from '@/components/home/catalog-download-button';
@@ -73,10 +73,10 @@ type ProjectCaseStudy = {
 type LocalizedProjectCaseStudy = Omit<ProjectCaseStudy, 'slug' | 'displayPriority' | 'filters' | 'secondaryCategory' | 'image'>;
 
 const routes: LocalizedRouteMap = {
-  en: '/en/projects',
-  fa: '/fa/projects',
-  ar: '/ar/projects',
-  ru: '/ru/projects'
+  en: getLocalizedPath('en', '/projects'),
+  fa: getLocalizedPath('fa', '/projects'),
+  ar: getLocalizedPath('ar', '/projects'),
+  ru: getLocalizedPath('ru', '/projects')
 };
 
 const copy: Record<

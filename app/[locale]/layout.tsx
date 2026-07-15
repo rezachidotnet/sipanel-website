@@ -8,7 +8,7 @@ import {notFound} from 'next/navigation';
 import {Footer} from '@/components/layout/footer';
 import {Header} from '@/components/layout/header';
 import {LocaleRuntime} from '@/components/localization/locale-runtime';
-import {getDirection, locales, type Locale} from '@/i18n/routing';
+import {getDirection, getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {buildPageMetadata, getSiteBaseUrl} from '@/lib/seo/metadata';
 import '../globals.css';
 
@@ -107,10 +107,10 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
       title: t('title'),
       description: t('description'),
       routes: {
-        en: '/en',
-        fa: '/fa',
-        ar: '/ar',
-        ru: '/ru'
+        en: getLocalizedPath('en'),
+        fa: getLocalizedPath('fa'),
+        ar: getLocalizedPath('ar'),
+        ru: getLocalizedPath('ru')
       }
     }),
     icons: {

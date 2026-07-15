@@ -1,5 +1,5 @@
 import type {ServicePageTemplateData} from '@/components/services/service-page-template';
-import type {Locale} from '@/i18n/routing';
+import {getLocalizedPath, type Locale} from '@/i18n/routing';
 import standingSeamHero from '@/assets/systems/standing-seam/standing-seam-hero.webp';
 import clipInstallImg from '@/assets/systems/standing-seam/clip-installation.webp';
 import clipInstallMobileImg from '@/assets/systems/standing-seam/clip-installation-mobile.webp';
@@ -12,10 +12,10 @@ import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahr
 
 export const standingSeamZipTechRoofingSpec = {
   route: {
-    en: '/en/systems/standing-seam-zip-tech-roofing',
-    fa: '/fa/systems/standing-seam-zip-tech-roofing',
-    ar: '/ar/systems/standing-seam-zip-tech-roofing',
-    ru: '/ru/systems/standing-seam-zip-tech-roofing'
+    en: getLocalizedPath('en', '/systems/standing-seam-zip-tech-roofing'),
+    fa: getLocalizedPath('fa', '/systems/standing-seam-zip-tech-roofing'),
+    ar: getLocalizedPath('ar', '/systems/standing-seam-zip-tech-roofing'),
+    ru: getLocalizedPath('ru', '/systems/standing-seam-zip-tech-roofing')
   },
   seo: {
     primary_keyword: 'standing seam roofing',

@@ -13,7 +13,7 @@ import {TrustBar} from '@/components/home/trust-bar';
 import {ClientLogosSection} from '@/components/trust/client-logos-section';
 import {RevealSection} from '@/components/reveal-section';
 import {SchemaScript} from '@/components/seo/schema-script';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {buildLocalBusinessSchema, buildOrganizationSchema, buildWebsiteSchema} from '@/lib/seo/schema';
 import {notFound} from 'next/navigation';
 
@@ -33,11 +33,12 @@ export default async function HomePage({params}: Props) {
   setRequestLocale(validLocale);
   const rfq = await getTranslations({locale: validLocale, namespace: 'rfq'});
   const localizedAddress = rfq.has('contact.address') ? rfq('contact.address') : '';
-  const organizationSchema = buildOrganizationSchema(validLocale, `/${validLocale}#organization`);
-  const localBusinessSchema = buildLocalBusinessSchema(validLocale, `/${validLocale}#local-business`);
+  const homePath = getLocalizedPath(validLocale);
+  const organizationSchema = buildOrganizationSchema(validLocale, `${homePath}#organization`);
+  const localBusinessSchema = buildLocalBusinessSchema(validLocale, `${homePath}#local-business`);
   const localizedOrganizationSchema = localizedAddress ? {...organizationSchema, address: localizedAddress} : organizationSchema;
   const localizedLocalBusinessSchema = localizedAddress ? {...localBusinessSchema, address: localizedAddress} : localBusinessSchema;
-  const websiteSchema = buildWebsiteSchema(validLocale, `/${validLocale}#website`);
+  const websiteSchema = buildWebsiteSchema(validLocale, `${homePath}#website`);
 
   return (
     <>

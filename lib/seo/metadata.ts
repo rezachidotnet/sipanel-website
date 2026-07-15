@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {defaultLocale, locales, type Locale} from '@/i18n/routing';
+import {defaultLocale, locales, normalizeCanonicalPath, type Locale} from '@/i18n/routing';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 
 export type LocalizedRouteMap = Record<Locale, string>;
@@ -40,18 +40,18 @@ export function getSiteBaseUrl() {
 
 export function withBaseUrl(path: string) {
   if (path.startsWith('http')) {
-    return path;
+    return normalizeCanonicalPath(path);
   }
 
-  return `${getSiteBaseUrl()}${path.startsWith('/') ? path : `/${path}`}`;
+  return `${getSiteBaseUrl()}${normalizeCanonicalPath(path)}`;
 }
 
 export function buildAlternates(locale: Locale, routes: LocalizedRouteMap) {
   return {
-    canonical: routes[locale],
+    canonical: normalizeCanonicalPath(routes[locale]),
     languages: {
-      ...Object.fromEntries(locales.map((item) => [item, routes[item]])),
-      'x-default': routes[defaultLocale]
+      ...Object.fromEntries(locales.map((item) => [item, normalizeCanonicalPath(routes[item])])),
+      'x-default': normalizeCanonicalPath(routes[defaultLocale])
     }
   };
 }
@@ -67,7 +67,7 @@ export function buildPageMetadata({locale, title, description, routes, type = 'w
       title,
       description,
       locale,
-      url: routes[locale],
+      url: normalizeCanonicalPath(routes[locale]),
       type,
       images: [
         {

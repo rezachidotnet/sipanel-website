@@ -2,7 +2,7 @@
 
 import './service-seo.css';
 import Image, {type StaticImageData} from 'next/image';
-import {Link, type Locale, getDirection, locales} from '@/i18n/routing';
+import {Link, type Locale, getDirection, getLocalizedPath, locales, normalizeCanonicalPath} from '@/i18n/routing';
 import {
   buildBreadcrumbListSchema,
   buildFaqPageSchema,
@@ -153,8 +153,8 @@ function buildFaqSchema(locale: Locale, page: ServicePageTemplateData) {
 
 function buildBreadcrumbSchema(locale: Locale, page: ServicePageTemplateData) {
   const breadcrumbs = page.breadcrumbs ?? [
-    {label: 'Home', href: `/${locale}`},
-    {label: 'Systems', href: `/${locale}/systems`},
+    {label: 'Home', href: getLocalizedPath(locale)},
+    {label: 'Systems', href: getLocalizedPath(locale, '/systems')},
     {label: page.hero.h1, href: page.routes[locale]}
   ];
 
@@ -199,7 +199,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                   {isLast ? (
                     <span aria-current="page">{crumb.label}</span>
                   ) : (
-                    <a href={crumb.href}>{crumb.label}</a>
+                    <a href={normalizeCanonicalPath(crumb.href)}>{crumb.label}</a>
                   )}
                 </li>
               );
@@ -526,7 +526,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
 
       <nav className="service-locale-routes" aria-label="Localized service routes">
         {locales.map((itemLocale) => (
-          <a key={itemLocale} href={page.routes[itemLocale]} hrefLang={itemLocale}>
+          <a key={itemLocale} href={normalizeCanonicalPath(page.routes[itemLocale])} hrefLang={itemLocale}>
             {itemLocale.toUpperCase()}
           </a>
         ))}

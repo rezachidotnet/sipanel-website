@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import type {StaticImageData} from 'next/image';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 import {
   buildArticleSchema,
@@ -2076,10 +2076,10 @@ function contentTitle(page: CaseStudyPageData, locale: Locale) {
 
 export function buildLocalizedCaseStudyRoutes(slug: string) {
   return {
-    en: `/en/projects/${slug}`,
-    fa: `/fa/projects/${slug}`,
-    ar: `/ar/projects/${slug}`,
-    ru: `/ru/projects/${slug}`
+    en: getLocalizedPath('en', `/projects/${slug}`),
+    fa: getLocalizedPath('fa', `/projects/${slug}`),
+    ar: getLocalizedPath('ar', `/projects/${slug}`),
+    ru: getLocalizedPath('ru', `/projects/${slug}`)
   };
 }
 

@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'SIPANEL',
     short_name: 'SIPANEL',
     description: 'Industrial building envelope engineering by SIPANEL.',
-    start_url: '/fa',
+    start_url: '/',
     scope: '/',
     display: 'standalone',
     background_color: '#FFFFFF',

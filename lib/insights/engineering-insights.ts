@@ -1,4 +1,4 @@
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {getEngineeringResourceHubPage, type ResourceHubCard} from '@/lib/resources/engineering-resource-hub';
 
@@ -82,10 +82,10 @@ export type EngineeringInsightsPageData = {
 };
 
 const routes: LocalizedRouteMap = {
-  en: '/en/insights',
-  fa: '/fa/insights',
-  ar: '/ar/insights',
-  ru: '/ru/insights'
+  en: getLocalizedPath('en', '/insights'),
+  fa: getLocalizedPath('fa', '/insights'),
+  ar: getLocalizedPath('ar', '/insights'),
+  ru: getLocalizedPath('ru', '/insights')
 };
 
 const categoryLabels: Record<InsightCategoryId, string> = {
@@ -109,7 +109,7 @@ function relatedResourceLinks(category: InsightCategoryId): EngineeringInsightLi
 }
 
 function articleRoute(slug: string): LocalizedRouteMap {
-  return Object.fromEntries(locales.map((locale) => [locale, `/${locale}/insights/${slug}`])) as LocalizedRouteMap;
+  return Object.fromEntries(locales.map((locale) => [locale, getLocalizedPath(locale, `/insights/${slug}`)])) as LocalizedRouteMap;
 }
 
 export const engineeringInsightArticles: EngineeringInsightArticle[] = [

@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test:routing": "node scripts/test-routing.mjs",
     "seo:audit": "node scripts/production-seo-audit.mjs"
   },
   "dependencies": {

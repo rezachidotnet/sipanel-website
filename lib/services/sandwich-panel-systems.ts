@@ -1,6 +1,6 @@
 import serviceSystemPages from '@/specs/pages/service_system_pages.json';
 import type {ServicePageTemplateData} from '@/components/services/service-page-template';
-import type {Locale} from '@/i18n/routing';
+import {getLocalizedPath, type Locale} from '@/i18n/routing';
 import armyHospitalCard from '@/assets/projects/army-hospital/photos/army-hospital-card.webp';
 import tabasCard from '@/assets/projects/tabas/photos/tabas-card.webp';
 import mahshahrTaxiCard from '@/assets/projects/mahshahr_taxi/photos/mahshahr_taxi-card.webp';
@@ -67,7 +67,15 @@ function getRequiredSandwichPanelSystemsSpec(): ServiceSystemPageSpec {
   return page;
 }
 
-export const sandwichPanelSystemsSpec = getRequiredSandwichPanelSystemsSpec();
+export const sandwichPanelSystemsSpec = {
+  ...getRequiredSandwichPanelSystemsSpec(),
+  route: {
+    en: getLocalizedPath('en', '/systems/sandwich-panel-systems'),
+    fa: getLocalizedPath('fa', '/systems/sandwich-panel-systems'),
+    ar: getLocalizedPath('ar', '/systems/sandwich-panel-systems'),
+    ru: getLocalizedPath('ru', '/systems/sandwich-panel-systems')
+  }
+};
 
 type LocalizedContent = {
   seo: {
@@ -440,9 +448,9 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
       secondaryButton: isFa ? fa.conversionCta.secondaryButton : undefined
     },
     breadcrumbs: isFa ? fa.breadcrumbs : [
-      {label: locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', href: `/${locale}`},
-      {label: locale === 'ar' ? 'الأنظمة' : locale === 'ru' ? 'Системы' : 'Systems', href: `/${locale}/systems`},
-      {label: locale === 'ar' ? 'أنظمة ألواح الساندويتش' : locale === 'ru' ? 'Сэндвич-панельные системы' : 'Sandwich Panel Systems', href: `/${locale}/systems/sandwich-panel-systems`}
+      {label: locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', href: getLocalizedPath(locale)},
+      {label: locale === 'ar' ? 'الأنظمة' : locale === 'ru' ? 'Системы' : 'Systems', href: getLocalizedPath(locale, '/systems')},
+      {label: locale === 'ar' ? 'أنظمة ألواح الساندويتش' : locale === 'ru' ? 'Сэндвич-панельные системы' : 'Sandwich Panel Systems', href: getLocalizedPath(locale, '/systems/sandwich-panel-systems')}
     ],
     caseStudyLabels: isFa ? fa.caseStudyLabels : locale === 'ar' ? {challenge: 'التحدي', result: 'النتيجة', viewProject: 'عرض المشروع'} : locale === 'ru' ? {challenge: 'Задача', result: 'Результат', viewProject: 'Посмотреть проект'} : {challenge: 'Challenge', result: 'Result', viewProject: 'View Project'}
   };

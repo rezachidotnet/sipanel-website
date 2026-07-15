@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import faqSystemSpec from '@/specs/pages/faq_system.json';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {productionContactInfo, type ProductionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 import {
@@ -626,11 +626,7 @@ function localizeInternalHref(locale: Locale, href: string) {
     return href;
   }
 
-  if (href.startsWith(`/${locale}`)) {
-    return href;
-  }
-
-  return `/${locale}${href.startsWith('/') ? href : `/${href}`}`;
+  return getLocalizedPath(locale, href);
 }
 
 function getRelatedLinkLabel(locale: Locale, href: string) {

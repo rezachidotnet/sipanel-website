@@ -1,5 +1,5 @@
 import type {ServicePageTemplateData} from '@/components/services/service-page-template';
-import type {Locale} from '@/i18n/routing';
+import {getLocalizedPath, type Locale} from '@/i18n/routing';
 import aluminiumCladdingHero from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
 import aluminiumInstallImg from '@/assets/systems/aluminium-claddin/installation.webp';
 import aluminiumInstallMobileImg from '@/assets/systems/aluminium-claddin/installation-mobile.webp';
@@ -12,10 +12,10 @@ import erbilEyeHospitalCard from '@/assets/projects/erbil-eye-hospital-entrance-
 
 export const aluminiumCladdingCoveringSpec = {
   route: {
-    en: '/en/systems/aluminium-cladding-covering',
-    fa: '/fa/systems/aluminium-cladding-covering',
-    ar: '/ar/systems/aluminium-cladding-covering',
-    ru: '/ru/systems/aluminium-cladding-covering'
+    en: getLocalizedPath('en', '/systems/aluminium-cladding-covering'),
+    fa: getLocalizedPath('fa', '/systems/aluminium-cladding-covering'),
+    ar: getLocalizedPath('ar', '/systems/aluminium-cladding-covering'),
+    ru: getLocalizedPath('ru', '/systems/aluminium-cladding-covering')
   },
   seo: {
     primary_keyword: 'aluminium cladding systems',
