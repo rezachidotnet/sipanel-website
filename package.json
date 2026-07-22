@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test": "npm run test:seo",
     "test:routing": "node scripts/test-routing.mjs",
+    "test:seo": "node scripts/test-seo-structured-data.mjs",
     "seo:audit": "node scripts/production-seo-audit.mjs"
   },
   "dependencies": {

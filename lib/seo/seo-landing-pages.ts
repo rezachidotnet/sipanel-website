@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import type {StaticImageData} from 'next/image';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 
 export type SeoProofAsset = {
@@ -206,10 +206,10 @@ type SeoLandingPageDefinition = {
 
 function buildLocalizedRoutes(routeSlug: string): Record<Locale, string> {
   return {
-    en: `/en/solutions/${routeSlug}`,
-    fa: `/fa/solutions/${routeSlug}`,
-    ar: `/ar/solutions/${routeSlug}`,
-    ru: `/ru/solutions/${routeSlug}`
+    en: getLocalizedPath('en', `/solutions/${routeSlug}`),
+    fa: getLocalizedPath('fa', `/solutions/${routeSlug}`),
+    ar: getLocalizedPath('ar', `/solutions/${routeSlug}`),
+    ru: getLocalizedPath('ru', `/solutions/${routeSlug}`)
   };
 }
 

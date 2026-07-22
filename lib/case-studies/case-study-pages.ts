@@ -6,7 +6,8 @@ import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
   buildOrganizationSchema,
-  buildServiceSchema
+  buildServiceSchema,
+  buildWebPageSchema
 } from '@/lib/seo/schema';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
 import shahrBabakHallHero from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-hero-desktop.webp';
@@ -2056,18 +2057,28 @@ export function buildCaseStudyServiceSchema(locale: Locale, page: CaseStudyPageD
   });
 }
 
+export function buildCaseStudyWebPageSchema(locale: Locale, page: CaseStudyPageData) {
+  const content = page.localeContent[locale];
+
+  return buildWebPageSchema(locale, {
+    name: content.seo.h1,
+    description: content.seo.metaDescription,
+    url: page.routes[locale]
+  });
+}
+
 export function buildCaseStudyBreadcrumbSchema(locale: Locale, page: CaseStudyPageData) {
   const labels = getCaseStudyBreadcrumbLabels(locale);
 
   return buildBreadcrumbListSchema(locale, `${page.routes[locale]}#breadcrumb`, [
-    {name: labels.home, item: `/${locale}`},
-    {name: labels.projects, item: `/${locale}/projects`},
+    {name: labels.home, item: getLocalizedPath(locale)},
+    {name: labels.projects, item: getLocalizedPath(locale, '/projects')},
     {name: contentTitle(page, locale), item: page.routes[locale]}
   ]);
 }
 
-export function buildCaseStudyOrganizationSchema(locale: Locale, page: CaseStudyPageData) {
-  return buildOrganizationSchema(locale, `${page.routes[locale]}#organization`);
+export function buildCaseStudyOrganizationSchema(locale: Locale, _page: CaseStudyPageData) {
+  return buildOrganizationSchema(locale);
 }
 
 function contentTitle(page: CaseStudyPageData, locale: Locale) {

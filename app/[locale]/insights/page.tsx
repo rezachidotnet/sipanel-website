@@ -3,7 +3,7 @@ import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {InsightsIndexPage} from '@/components/insights/insights-index-page';
 import {SchemaScript} from '@/components/seo/schema-script';
-import {getDirection, locales, type Locale} from '@/i18n/routing';
+import {getDirection, getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {getEngineeringInsightsMetadata, getEngineeringInsightsPage} from '@/lib/insights/engineering-insights';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 
@@ -26,11 +26,11 @@ function InsightsSchema({locale}: {locale: Locale}) {
       />
       <SchemaScript
         schema={buildBreadcrumbListSchema(locale, `${page.routes[locale]}#breadcrumb`, [
-          {name: 'Home', item: `/${locale}`},
+          {name: 'Home', item: getLocalizedPath(locale)},
           {name: 'Insights', item: page.routes[locale]}
         ])}
       />
-      <SchemaScript schema={buildOrganizationSchema(locale, `${page.routes[locale]}#organization`)} />
+      <SchemaScript schema={buildOrganizationSchema(locale)} />
     </>
   );
 }

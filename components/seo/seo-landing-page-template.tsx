@@ -4,7 +4,7 @@ import '@/components/services/service-seo.css';
 import './seo-landing.css';
 import '@/components/resources/resources.css';
 import Image, {type StaticImageData} from 'next/image';
-import {Link, getDirection, locales, type Locale} from '@/i18n/routing';
+import {Link, getDirection, getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {
   getSeoBreadcrumbLabels,
   type SeoLandingPageData,
@@ -18,7 +18,8 @@ import {
   buildBreadcrumbListSchema,
   buildFaqPageSchema,
   buildOrganizationSchema as buildSharedOrganizationSchema,
-  buildServiceSchema as buildSharedServiceSchema
+  buildServiceSchema as buildSharedServiceSchema,
+  buildWebPageSchema
 } from '@/lib/seo/schema';
 import {trackCaseStudyEvent, trackEvent, trackFaqEvent, trackProofEvent, trackResourceEvent, trackRfqEvent} from '@/lib/analytics/events';
 
@@ -50,14 +51,14 @@ function buildFaqSchema(locale: Locale, page: SeoLandingPageData, content: SeoLa
 function buildBreadcrumbSchema(locale: Locale, page: SeoLandingPageData, content: SeoLandingPageLocaleContent) {
   const labels = getSeoBreadcrumbLabels(locale);
   return buildBreadcrumbListSchema(locale, `${page.routes[locale]}#breadcrumb`, [
-    {name: labels.home, item: `/${locale}`},
-    {name: labels.solutions, item: `/${locale}/solutions`},
+    {name: labels.home, item: getLocalizedPath(locale)},
+    {name: labels.solutions, item: getLocalizedPath(locale, '/solutions')},
     {name: content.seo.h1, item: page.routes[locale]}
   ]);
 }
 
-function buildOrganizationSchema(locale: Locale, page: SeoLandingPageData) {
-  return buildSharedOrganizationSchema(locale, `${page.routes[locale]}#organization`);
+function buildOrganizationSchema(locale: Locale, _page: SeoLandingPageData) {
+  return buildSharedOrganizationSchema(locale);
 }
 
 function SeoTechnicalPlaceholder({title}: {title: string}) {
@@ -234,6 +235,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
 
   return (
     <article className="seo-page-template" data-seo-slug={page.slug} dir={dir}>
+      <SchemaPlaceholder schema={buildWebPageSchema(locale, {name: content.seo.h1, description: content.seo.metaDescription, url: page.routes[locale]})} />
       {content.schemas?.service !== false ? <SchemaPlaceholder schema={buildServiceSchema(locale, page, content)} /> : null}
       {content.schemas?.article ? <SchemaPlaceholder schema={buildArticleSchema(locale, page, content)} /> : null}
       {content.schemas?.faq !== false ? <SchemaPlaceholder schema={buildFaqSchema(locale, page, content)} /> : null}

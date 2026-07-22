@@ -257,9 +257,9 @@ const faContent: LocalizedContent = {
     secondaryButton: 'مشاهده پروژه‌های مرتبط'
   },
   breadcrumbs: [
-    {label: 'خانه', href: '/fa'},
-    {label: 'پوشانه‌ها', href: '/fa/systems'},
-    {label: 'سیستم‌های ساندویچ پانل', href: '/fa/systems/sandwich-panel-systems'}
+    {label: 'خانه', href: getLocalizedPath('fa')},
+    {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')},
+    {label: 'سیستم‌های ساندویچ پانل', href: getLocalizedPath('fa', '/systems/sandwich-panel-systems')}
   ],
   caseStudyLabels: {
     challenge: 'چالش',
@@ -281,7 +281,7 @@ function getRelatedCaseStudies(locale: Locale) {
       measuredResult: locale === 'fa'
         ? 'تحویل کامل از خاکبرداری تا بهره‌برداری در کمتر از ۵۰ روز. پوشانه ساندویچ پانل سقف و دیوار با هماهنگی EPC یکپارچه.'
         : 'Delivered from excavation to operational readiness in under 50 days. Sandwich panel roof and wall envelope coordinated through integrated EPC.',
-      href: `/${locale}/projects/army-hospital`,
+      href: getLocalizedPath(locale, '/projects/army-hospital'),
       image: armyHospitalCard
     },
     {
@@ -295,7 +295,7 @@ function getRelatedCaseStudies(locale: Locale) {
       measuredResult: locale === 'fa'
         ? 'سیستم سقف ساندویچ پانل ۱۰,۰۰۰ مترمربع با عملکرد سازه‌ای قابل‌اتکا و کنترل نصب هماهنگ تحویل شد.'
         : '10,000 m² sandwich panel roofing system delivered with controlled installation and reliable structural performance across double-curved spans.',
-      href: `/${locale}/projects/tabas-railway-facility`,
+      href: getLocalizedPath(locale, '/projects/tabas-railway-facility'),
       image: tabasCard
     },
     {
@@ -309,7 +309,7 @@ function getRelatedCaseStudies(locale: Locale) {
       measuredResult: locale === 'fa'
         ? 'سیستم سقف ساندویچ پانل ۴,۰۰۰ مترمربع با مدیریت آب باران کنترل‌شده و حفاظت بلندمدت در محیط ساحلی تحویل شد.'
         : '4,000 m² sandwich panel roofing delivered with controlled rainwater management and long-term weather protection in a coastal environment.',
-      href: `/${locale}/projects/mahshahr-taxi-parking`,
+      href: getLocalizedPath(locale, '/projects/mahshahr-taxi-parking'),
       image: mahshahrTaxiCard
     }
   ];

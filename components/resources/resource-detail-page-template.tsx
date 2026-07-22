@@ -3,14 +3,15 @@
 import './resources.css';
 import {useState, type FormEvent} from 'react';
 import Image from 'next/image';
-import {Link, getDirection, type Locale} from '@/i18n/routing';
+import {Link, getDirection, getLanguageTag, type Locale} from '@/i18n/routing';
 import type {ResourceDetailPageData} from '@/lib/resources/engineering-resource-hub';
 import {formatResourceDate, getResourceTypeLabel} from '@/lib/resources/engineering-resource-hub';
 import {ResourceBreadcrumb} from '@/components/resources/resource-breadcrumb';
 import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
-  buildOrganizationSchema as buildSharedOrganizationSchema
+  buildOrganizationSchema as buildSharedOrganizationSchema,
+  buildWebPageSchema
 } from '@/lib/seo/schema';
 import {withBaseUrl} from '@/lib/seo/metadata';
 import {trackResourceEvent} from '@/lib/analytics/events';
@@ -51,11 +52,12 @@ function buildDigitalDocumentSchema(locale: Locale, page: ResourceDetailPageData
     name: page.resource.title,
     description: page.resource.description,
     url: withBaseUrl(page.route[locale]),
-    inLanguage: locale,
+    inLanguage: getLanguageTag(locale),
     encodingFormat: 'application/pdf',
     isAccessibleForFree: true,
     provider: {
       '@type': 'Organization',
+      '@id': withBaseUrl('/#organization'),
       name: 'SIPANEL'
     }
   };
@@ -194,6 +196,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
   return (
     <article className="resource-detail-page" data-resource-detail="" dir={dir}>
       {/* track: resource_detail_view */}
+      <SchemaPlaceholder schema={buildWebPageSchema(locale, {name: page.resource.title, description: page.detailContent.seoDescription, url: page.route[locale]})} />
       <SchemaPlaceholder schema={buildArticleSchema(locale, `${page.route[locale]}#article`, {
         headline: page.resource.title,
         description: page.detailContent.seoDescription,
@@ -201,7 +204,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       })} />
       <SchemaPlaceholder schema={buildDigitalDocumentSchema(locale, page)} />
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, page)} />
-      <SchemaPlaceholder schema={buildSharedOrganizationSchema(locale, `${page.route[locale]}#organization`)} />
+      <SchemaPlaceholder schema={buildSharedOrganizationSchema(locale)} />
 
       <div className="container-shell">
         <ResourceBreadcrumb items={page.breadcrumbs} ariaLabel={ui.breadcrumbAriaLabel} />

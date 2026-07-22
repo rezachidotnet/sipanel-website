@@ -9,6 +9,7 @@ import {locales, type Locale} from '@/i18n/routing';
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
+  buildFaqWebPageSchema,
   buildOrganizationSchema,
   getFaqPageData,
   getFaqPageMetadata
@@ -25,6 +26,7 @@ function FaqSeoFallback({locale}: {locale: Locale}) {
 
   return (
     <article className="faq-page" dir={locale === 'fa' || locale === 'ar' ? 'rtl' : 'ltr'}>
+      <SchemaScript schema={buildFaqWebPageSchema(locale)} />
       <SchemaScript schema={buildFaqSchema(locale)} />
       <SchemaScript schema={buildBreadcrumbSchema(locale)} />
       <SchemaScript schema={buildOrganizationSchema(locale)} />

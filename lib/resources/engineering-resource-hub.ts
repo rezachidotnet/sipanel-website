@@ -1,6 +1,6 @@
 import engineeringResourceHubSpec from '@/specs/pages/engineering_resource_hub.json';
 import type {StaticImageData} from 'next/image';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, normalizeLocalizedRouteMap, type Locale} from '@/i18n/routing';
 import sandwichPanelCover from '@/assets/systems/sandwich-panel/cover-desktop.webp';
 import aluminiumCladdingCover from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
 import standingSeamCover from '@/assets/systems/standing-seam/cover-desktop.webp';
@@ -1810,7 +1810,7 @@ function buildLocaleContentMap() {
 }
 
 export const engineeringResourceHubPage: ResourceHubPageData = {
-  routes: resourceHubSpec.route,
+  routes: normalizeLocalizedRouteMap(resourceHubSpec.route),
   localeContent: buildLocaleContentMap()
 };
 
@@ -1839,7 +1839,7 @@ export function getResourceDetailPage(locale: Locale, slug: string): ResourceDet
   }
 
   const categoryLabel = content.categories.find((category) => category.id === resource.category)?.label ?? resource.category;
-  const route = Object.fromEntries(locales.map((item) => [item, `/${item}/resources/${resource.slug}`])) as Record<Locale, string>;
+  const route = Object.fromEntries(locales.map((item) => [item, getLocalizedPath(item, `/resources/${resource.slug}`)])) as Record<Locale, string>;
   const relatedResources = content.featuredResources
     .filter((item) => item.slug !== resource.slug)
     .filter((item) => item.category === resource.category || item.leadCapture === resource.leadCapture)
@@ -1919,7 +1919,7 @@ export function getEngineeringResourceHubBreadcrumbs(locale: Locale) {
   const labels = breadcrumbLabels[locale];
 
   return [
-    {label: labels.home, href: `/${locale}`},
+    {label: labels.home, href: getLocalizedPath(locale)},
     {label: labels.resources, href: engineeringResourceHubPage.routes[locale]}
   ];
 }

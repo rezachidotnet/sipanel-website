@@ -1,5 +1,7 @@
 const baseUrl = process.env.SEO_AUDIT_BASE_URL ?? 'http://127.0.0.1:3000';
-const locales = ['en', 'fa', 'ar', 'ru'];
+const productionOrigin = 'https://www.sipanelco.ir';
+const locales = ['fa', 'en', 'ar', 'ru'];
+const languageTags = {fa: 'fa-IR', en: 'en', ar: 'ar', ru: 'ru'};
 const requiredSchemaTypes = ['Organization', 'BreadcrumbList', 'Service', 'FAQPage', 'Article', 'CollectionPage', 'ContactPage'];
 
 function stripScripts(html) {
@@ -59,7 +61,21 @@ function pathFromUrl(url) {
 }
 
 function expectedLocale(pathname) {
-  return pathname.split('/').filter(Boolean)[0];
+  const firstSegment = pathname.split('/').filter(Boolean)[0];
+  return locales.includes(firstSegment) && firstSegment !== 'fa' ? firstSegment : 'fa';
+}
+
+function unprefixedPersianPath(pathname) {
+  return pathname.replace(/^\/(?:en|ar|ru)(?=\/|$)/, '') || '/';
+}
+
+function localizedPath(locale, pathname) {
+  const persianPath = unprefixedPersianPath(pathname);
+  return locale === 'fa' ? persianPath : persianPath === '/' ? `/${locale}` : `/${locale}${persianPath}`;
+}
+
+function productionUrl(pathname) {
+  return pathname === '/' ? productionOrigin : `${productionOrigin}${pathname}`;
 }
 
 async function fetchText(path) {
@@ -105,8 +121,9 @@ for (const routePath of routePaths) {
   }
 
   for (const locale of locales) {
-    if (!hrefLangs.some((item) => item.lang === locale && item.href.includes(`/${locale}`))) {
-      failures.push(`${routePath}: missing hreflang ${locale}`);
+    const expectedHref = productionUrl(localizedPath(locale, routePath));
+    if (!hrefLangs.some((item) => item.lang === languageTags[locale] && item.href === expectedHref)) {
+      failures.push(`${routePath}: missing hreflang ${languageTags[locale]}`);
     }
   }
 
@@ -122,9 +139,8 @@ for (const routePath of routePaths) {
     failures.push(`${routePath}: missing BreadcrumbList schema`);
   }
 
-  const locale = expectedLocale(routePath);
-  if (!locales.includes(locale)) {
-    failures.push(`${routePath}: route is not localized`);
+  if (routePath.startsWith('/fa/') || routePath === '/fa') {
+    failures.push(`${routePath}: route uses legacy /fa prefix`);
   }
 }
 
@@ -136,6 +152,10 @@ for (const schemaType of requiredSchemaTypes) {
 
 if (sitemapXml.includes('http://127.0.0.1') || sitemapXml.includes('localhost')) {
   failures.push('sitemap: contains local development host');
+}
+
+if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(sitemapXml)) {
+  failures.push('sitemap: contains redirected /fa URL');
 }
 
 if (failures.length > 0) {

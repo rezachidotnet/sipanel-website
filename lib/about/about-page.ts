@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import type {StaticImageData} from 'next/image';
 import aboutSipanelSpec from '@/specs/pages/about_sipanel.json';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, normalizeLocalizedRouteMap, type Locale} from '@/i18n/routing';
 import {productionContactInfo, type ProductionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 import {
@@ -84,7 +84,7 @@ export type AboutLocaleContent = {
   };
 };
 
-const routeMap = aboutSipanelSpec.route as AboutRouteMap;
+const routeMap = normalizeLocalizedRouteMap(aboutSipanelSpec.route as AboutRouteMap);
 
 const aboutCopy: Record<Locale, Omit<AboutLocaleContent, 'companyStory' | 'executionApproach' | 'leadership'>> = {
   en: {
@@ -537,7 +537,7 @@ export function buildAboutPageSchema(locale: Locale) {
 
 export function buildAboutBreadcrumbSchema(locale: Locale) {
   return buildBreadcrumbListSchema(locale, `${aboutPageData.routes[locale]}#breadcrumb`, [
-    {name: locale === 'fa' ? 'خانه' : locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', item: `/${locale}`},
+    {name: locale === 'fa' ? 'خانه' : locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', item: getLocalizedPath(locale)},
     {
       name: locale === 'fa' ? 'درباره SIPANEL' : locale === 'ar' ? 'حول SIPANEL' : locale === 'ru' ? 'О SIPANEL' : 'About SIPANEL',
       item: aboutPageData.routes[locale]
@@ -546,7 +546,7 @@ export function buildAboutBreadcrumbSchema(locale: Locale) {
 }
 
 export function buildAboutOrganizationSchema(locale: Locale) {
-  return buildSharedOrganizationSchema(locale, `${aboutPageData.routes[locale]}#organization`);
+  return buildSharedOrganizationSchema(locale);
 }
 
 export function getAboutPageStickyCopy(locale: Locale) {

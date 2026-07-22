@@ -19,6 +19,10 @@ function stripLegacyPersianPrefix(pathname: string) {
   return pathname.slice('/fa'.length);
 }
 
+function isLocalePrefixedSitemapPath(pathname: string) {
+  return /^\/(?:fa|en|ar|ru)\/sitemap\.xml$/.test(pathname);
+}
+
 function getForwardedProtocol(request: NextRequest) {
   return request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '');
 }
@@ -32,7 +36,10 @@ export default function middleware(request: NextRequest) {
   const requestHostname = getRequestHostname(request);
   let shouldRedirect = false;
 
-  if (isLegacyPersianPath(url.pathname)) {
+  if (isLocalePrefixedSitemapPath(url.pathname)) {
+    url.pathname = '/sitemap.xml';
+    shouldRedirect = true;
+  } else if (isLegacyPersianPath(url.pathname)) {
     url.pathname = stripLegacyPersianPrefix(url.pathname);
     shouldRedirect = true;
   }
@@ -59,5 +66,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/(fa|en|ar|ru)/sitemap.xml']
 };

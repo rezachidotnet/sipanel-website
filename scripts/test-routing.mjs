@@ -87,7 +87,7 @@ async function expectHomepageMetadata() {
   const html = await response.text();
 
   expectIncludes(html, '<link rel="canonical" href="https://www.sipanelco.ir"/>', 'homepage canonical');
-  expectIncludes(html, '<link rel="alternate" hrefLang="fa" href="https://www.sipanelco.ir"/>', 'fa alternate');
+  expectIncludes(html, '<link rel="alternate" hrefLang="fa-IR" href="https://www.sipanelco.ir"/>', 'fa alternate');
   expectIncludes(html, '<link rel="alternate" hrefLang="en" href="https://www.sipanelco.ir/en"/>', 'en alternate');
   expectIncludes(html, '<link rel="alternate" hrefLang="ar" href="https://www.sipanelco.ir/ar"/>', 'ar alternate');
   expectIncludes(html, '<link rel="alternate" hrefLang="ru" href="https://www.sipanelco.ir/ru"/>', 'ru alternate');
@@ -131,9 +131,24 @@ async function run() {
   await expectRedirect('/fa/', '/');
   await expectRedirect('/fa/systems', '/systems');
   await expectRedirect('/fa/systems?utm=1', '/systems?utm=1');
+  await expectRedirect('/fa/projects', '/projects');
+  await expectRedirect('/fa/sitemap.xml', '/sitemap.xml');
+  await expectRedirect('/en/sitemap.xml', '/sitemap.xml');
+  await expectRedirect('/ar/sitemap.xml', '/sitemap.xml');
+  await expectRedirect('/ru/sitemap.xml', '/sitemap.xml');
 
-  for (const path of ['/systems', '/en', '/ar', '/ru']) {
+  for (const path of ['/projects', '/en/projects', '/ar/projects', '/ru/projects', '/systems', '/en', '/ar', '/ru']) {
     await expectStatus(path, 200);
+  }
+
+  for (const [path, headers] of [
+    ['/projects', {'Accept-Language': 'en-US,en;q=0.9'}],
+    ['/en/projects', {'Accept-Language': 'fa-IR,fa;q=0.9'}]
+  ]) {
+    const response = await request(path, headers);
+    if (response.status !== 200) {
+      fail(`${path} expected 200 regardless of Accept-Language, received ${response.status}`);
+    }
   }
 
   await expectSitemap();

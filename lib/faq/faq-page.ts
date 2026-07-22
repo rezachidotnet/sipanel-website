@@ -1,12 +1,13 @@
 import type {Metadata} from 'next';
 import faqSystemSpec from '@/specs/pages/faq_system.json';
-import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, normalizeLocalizedRouteMap, type Locale} from '@/i18n/routing';
 import {productionContactInfo, type ProductionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 import {
   buildBreadcrumbListSchema,
   buildFaqPageSchema,
-  buildOrganizationSchema as buildSharedOrganizationSchema
+  buildOrganizationSchema as buildSharedOrganizationSchema,
+  buildWebPageSchema
 } from '@/lib/seo/schema';
 
 type FaqCategoryId =
@@ -99,7 +100,7 @@ export type FaqPageData = {
   localeContent: Record<Locale, FaqLocaleContent>;
 };
 
-const routeMap = faqSystemSpec.route as Record<Locale, string>;
+const routeMap = normalizeLocalizedRouteMap(faqSystemSpec.route as Record<Locale, string>);
 
 const categoryLabels: Record<FaqCategoryId, FaqLocalizedText> = {
   general: {
@@ -839,17 +840,27 @@ export function buildFaqSchema(locale: Locale) {
   );
 }
 
+export function buildFaqWebPageSchema(locale: Locale) {
+  const content = faqPageData.localeContent[locale];
+
+  return buildWebPageSchema(locale, {
+    name: content.seo.h1,
+    description: content.seo.metaDescription,
+    url: faqPageData.routes[locale]
+  });
+}
+
 export function buildBreadcrumbSchema(locale: Locale) {
   const labels = getFaqBreadcrumbLabels(locale);
 
   return buildBreadcrumbListSchema(locale, `${faqPageData.routes[locale]}#breadcrumb`, [
-    {name: labels.home, item: `/${locale}`},
+    {name: labels.home, item: getLocalizedPath(locale)},
     {name: labels.faq, item: faqPageData.routes[locale]}
   ]);
 }
 
 export function buildOrganizationSchema(locale: Locale) {
-  return buildSharedOrganizationSchema(locale, `${faqPageData.routes[locale]}#organization`);
+  return buildSharedOrganizationSchema(locale);
 }
 
 export function getFaqRelatedLinkLabel(locale: Locale, href: string) {

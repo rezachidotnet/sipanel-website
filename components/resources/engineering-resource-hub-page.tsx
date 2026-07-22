@@ -52,7 +52,7 @@ function buildBreadcrumbSchema(locale: Locale, page: ResourceHubPageData) {
 }
 
 function buildOrganizationSchema(locale: Locale) {
-  return buildSharedOrganizationSchema(locale, `/${locale}#organization`);
+  return buildSharedOrganizationSchema(locale);
 }
 
 function formatResourceCount(count: number, locale: Locale) {

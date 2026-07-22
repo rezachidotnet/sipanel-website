@@ -1,12 +1,13 @@
 import './insights.css';
-import {Link, getDirection, type Locale} from '@/i18n/routing';
+import {Link, getDirection, getLocalizedPath, type Locale} from '@/i18n/routing';
 import type {EngineeringInsightArticle} from '@/lib/insights/engineering-insights';
 import {getInsightCategoryLabel} from '@/lib/insights/engineering-insights';
 import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
   buildFaqPageSchema,
-  buildOrganizationSchema
+  buildOrganizationSchema,
+  buildWebPageSchema
 } from '@/lib/seo/schema';
 
 type Props = {
@@ -20,8 +21,8 @@ function SchemaPlaceholder({schema}: {schema: unknown}) {
 
 function buildBreadcrumbSchema(locale: Locale, article: EngineeringInsightArticle) {
   return buildBreadcrumbListSchema(locale, `${article.routes[locale]}#breadcrumb`, [
-    {name: 'Home', item: `/${locale}`},
-    {name: 'Insights', item: `/${locale}/insights`},
+    {name: 'Home', item: getLocalizedPath(locale)},
+    {name: 'Insights', item: getLocalizedPath(locale, '/insights')},
     {name: article.title, item: article.routes[locale]}
   ]);
 }
@@ -70,6 +71,7 @@ export function EngineeringArticleTemplate({locale, article}: Props) {
     <article className="insight-article-page" data-insight-article={article.slug} dir={dir}>
       {/* track: article_view */}
       {/* track: article_scroll_depth */}
+      <SchemaPlaceholder schema={buildWebPageSchema(locale, {name: article.title, description: article.metaDescription, url: article.routes[locale]})} />
       <SchemaPlaceholder
         schema={buildArticleSchema(locale, `${article.routes[locale]}#article`, {
           headline: article.title,
@@ -79,7 +81,7 @@ export function EngineeringArticleTemplate({locale, article}: Props) {
       />
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, article)} />
       <SchemaPlaceholder schema={buildFaqPageSchema(locale, `${article.routes[locale]}#faq`, article.faqs)} />
-      <SchemaPlaceholder schema={buildOrganizationSchema(locale, `${article.routes[locale]}#organization`)} />
+      <SchemaPlaceholder schema={buildOrganizationSchema(locale)} />
 
       <section className="insight-article-hero" data-section="article_hero" aria-labelledby="insight-article-title">
         <div className="container-shell insight-article-hero__inner">

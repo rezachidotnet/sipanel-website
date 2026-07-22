@@ -235,9 +235,9 @@ const fa: LocalizedContent = {
     secondaryButton: 'مشاهده پروژه‌های نورگیر'
   },
   breadcrumbs: [
-    {label: 'خانه', href: '/fa'},
-    {label: 'پوشانه‌ها', href: '/fa/systems'},
-    {label: 'نورگیرها و پوشش‌های شفاف', href: '/fa/systems/daylighting-transparent-roofing'}
+    {label: 'خانه', href: getLocalizedPath('fa')},
+    {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')},
+    {label: 'نورگیرها و پوشش‌های شفاف', href: getLocalizedPath('fa', '/systems/daylighting-transparent-roofing')}
   ],
   caseStudyLabels: {
     challenge: 'چالش',
@@ -744,7 +744,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Сдан стеклянный световой фонарь площадью 500 м², обеспечивающий естественное освещение атриума торгового центра.'
         : '500 m² glass skylight delivered, providing natural daylight to the mall atrium.',
-      href: `/${locale}/projects/fadak-mall-glass-skylight`,
+      href: getLocalizedPath(locale, '/projects/fadak-mall-glass-skylight'),
       image: fadakMallCard
     },
     {
@@ -769,7 +769,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Успешное выполнение 700 м² поликарбонатного ограждения атриума, создание светлой и комфортной гостиничной среды.'
         : '700 m² polycarbonate atrium enclosure completed, creating a bright and welcoming hospitality environment.',
-      href: `/${locale}/projects/atlas-hotel-shahinshahr-atrium`,
+      href: getLocalizedPath(locale, '/projects/atlas-hotel-shahinshahr-atrium'),
       image: atlasHotelCard
     },
     {
@@ -794,7 +794,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Выполнено 1 000 м² стеклянного фасада, выдержавшего Керманшахское землетрясение без повреждения стёкол.'
         : '1,000 m² glass facade executed, reportedly performed without glass damage during the Kermanshah earthquake.',
-      href: `/${locale}/projects/kermanshah-industrial-university-petroleum-faculty`,
+      href: getLocalizedPath(locale, '/projects/kermanshah-industrial-university-petroleum-faculty'),
       image: kermanshahCard
     }
   ];

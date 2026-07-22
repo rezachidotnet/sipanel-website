@@ -1,5 +1,5 @@
 import type {MetadataRoute} from 'next';
-import {defaultLocale, getLocalizedPath, locales, normalizeCanonicalPath, type Locale} from '@/i18n/routing';
+import {defaultLocale, getLanguageTag, getLocalizedPath, locales, normalizeCanonicalPath} from '@/i18n/routing';
 import {aboutPageData} from '@/lib/about/about-page';
 import {caseStudyPages} from '@/lib/case-studies/case-study-pages';
 import {rfqContactPage} from '@/lib/contact/rfq-contact-page';
@@ -55,7 +55,7 @@ const routeMaps: LocalizedRouteMap[] = [
 function alternatesFor(routes: LocalizedRouteMap) {
   return {
     languages: {
-      ...Object.fromEntries(locales.map((locale) => [locale, withBaseUrl(routes[locale])])) as Record<Locale, string>,
+      ...Object.fromEntries(locales.map((locale) => [getLanguageTag(locale), withBaseUrl(routes[locale])])),
       'x-default': withBaseUrl(routes[defaultLocale])
     }
   };

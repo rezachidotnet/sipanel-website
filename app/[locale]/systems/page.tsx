@@ -435,7 +435,7 @@ function buildCollectionSchema(locale: Locale) {
 
 function buildBreadcrumbSchema(locale: Locale) {
   return buildBreadcrumbListSchema(locale, `${routes[locale]}#breadcrumb`, [
-    {name: copy[locale].home, item: `/${locale}`},
+    {name: copy[locale].home, item: getLocalizedPath(locale)},
     {name: copy[locale].title, item: routes[locale]}
   ]);
 }
@@ -457,7 +457,7 @@ export default async function SystemsOverviewPage({params}: Props) {
     <article className="systems-overview" dir={dir}>
       <SchemaScript schema={buildCollectionSchema(locale)} />
       <SchemaScript schema={buildBreadcrumbSchema(locale)} />
-      <SchemaScript schema={buildOrganizationSchema(locale, `${routes[locale]}#organization`)} />
+      <SchemaScript schema={buildOrganizationSchema(locale)} />
 
       {/* ── Hero ── */}
       <section className="systems-hero" aria-labelledby="systems-hero-title">

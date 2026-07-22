@@ -9,6 +9,7 @@ import {
   getFaqRelatedLinkLabel,
   buildBreadcrumbSchema,
   buildFaqSchema,
+  buildFaqWebPageSchema,
   buildOrganizationSchema,
   type FaqPageData,
   type FaqLocaleContent,
@@ -157,6 +158,7 @@ export function FaqPage({locale, page}: Props) {
 
   return (
     <article className="faq-page" data-faq-page="" dir={dir}>
+      <SchemaPlaceholder schema={buildFaqWebPageSchema(locale)} />
       <SchemaPlaceholder schema={buildFaqSchema(locale)} />
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale)} />
       <SchemaPlaceholder schema={buildOrganizationSchema(locale)} />

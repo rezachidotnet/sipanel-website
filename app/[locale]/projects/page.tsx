@@ -1358,14 +1358,14 @@ function buildCollectionSchema(locale: Locale) {
     url: routes[locale],
     items: projects.map((project) => ({
       name: project.projectName,
-      url: `/${locale}/projects/${project.slug}`
+      url: getLocalizedPath(locale, `/projects/${project.slug}`)
     }))
   });
 }
 
 function buildBreadcrumbSchema(locale: Locale) {
   return buildBreadcrumbListSchema(locale, `${routes[locale]}#breadcrumb`, [
-    {name: copy[locale].home, item: `/${locale}`},
+    {name: copy[locale].home, item: getLocalizedPath(locale)},
     {name: copy[locale].title, item: routes[locale]}
   ]);
 }
@@ -1413,7 +1413,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
       {/* track: projects_page_view */}
       <SchemaScript schema={buildCollectionSchema(locale)} />
       <SchemaScript schema={buildBreadcrumbSchema(locale)} />
-      <SchemaScript schema={buildOrganizationSchema(locale, `${routes[locale]}#organization`)} />
+      <SchemaScript schema={buildOrganizationSchema(locale)} />
 
       <section className="projects-index-hero" data-section="projects_index_hero" aria-labelledby="projects-index-title">
         {/* track: case_study_view */}

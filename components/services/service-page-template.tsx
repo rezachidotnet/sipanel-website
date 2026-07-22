@@ -7,7 +7,8 @@ import {
   buildBreadcrumbListSchema,
   buildFaqPageSchema,
   buildOrganizationSchema as buildSharedOrganizationSchema,
-  buildServiceSchema as buildSharedServiceSchema
+  buildServiceSchema as buildSharedServiceSchema,
+  buildWebPageSchema
 } from '@/lib/seo/schema';
 import {trackCaseStudyEvent, trackEvent, trackFaqEvent, trackProofEvent, trackRfqEvent} from '@/lib/analytics/events';
 
@@ -165,8 +166,8 @@ function buildBreadcrumbSchema(locale: Locale, page: ServicePageTemplateData) {
   );
 }
 
-function buildOrganizationSchema(locale: Locale, page: ServicePageTemplateData) {
-  return buildSharedOrganizationSchema(locale, `${page.routes[locale]}#organization`);
+function buildOrganizationSchema(locale: Locale, _page: ServicePageTemplateData) {
+  return buildSharedOrganizationSchema(locale);
 }
 
 function getCaseStudyLabels(page: ServicePageTemplateData): CaseStudyLabels {
@@ -184,6 +185,7 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
 
   return (
     <article className="service-page-template" data-service-id={page.id} dir={dir}>
+      <SchemaPlaceholder schema={buildWebPageSchema(locale, {name: page.hero.h1, description: page.seo.metaDescription, url: page.routes[locale]})} />
       <SchemaPlaceholder schema={buildServiceSchema(locale, page)} />
       <SchemaPlaceholder schema={buildFaqSchema(locale, page)} />
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, page)} />

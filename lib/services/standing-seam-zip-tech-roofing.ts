@@ -235,9 +235,9 @@ const fa: LocalizedContent = {
     secondaryButton: 'مشاهده پروژه‌های سقف'
   },
   breadcrumbs: [
-    {label: 'خانه', href: '/fa'},
-    {label: 'پوشانه‌ها', href: '/fa/systems'},
-    {label: 'سقف استندینگ سیم', href: '/fa/systems/standing-seam-zip-tech-roofing'}
+    {label: 'خانه', href: getLocalizedPath('fa')},
+    {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')},
+    {label: 'سقف استندینگ سیم', href: getLocalizedPath('fa', '/systems/standing-seam-zip-tech-roofing')}
   ],
   caseStudyLabels: {
     challenge: 'چالش',
@@ -744,7 +744,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Успешное выполнение 4 000 м² ZIP-TECH и алюминиевой облицовки с сохранением криволинейной архитектурной формы и финального качества.'
         : 'Successful execution of 4,000 m² ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.',
-      href: `/${locale}/projects/ahvaz-airport-passenger-terminal`,
+      href: getLocalizedPath(locale, '/projects/ahvaz-airport-passenger-terminal'),
       image: ahvazAirportCard
     },
     {
@@ -766,7 +766,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Кровля атриума сдана с надёжной гидроизоляцией, точным монтажом фальцевой системы и контролем качества на большом пролёте.'
         : 'Atrium roof delivered with reliable waterproofing, precise standing seam execution, and controlled long-span installation quality.',
-      href: `/${locale}/projects/megaparsmall-atrium`,
+      href: getLocalizedPath(locale, '/projects/megaparsmall-atrium'),
       image: megaparsCard
     },
     {
@@ -788,7 +788,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Три купольных борцовских зала сданы с надёжной работой ZIP-кровли и контролируемым качеством монтажа.'
         : 'Three structurally coordinated dome-shaped wrestling halls delivered with reliable ZIP panel roof performance and controlled installation quality.',
-      href: `/${locale}/projects/shahre-babak-hall`,
+      href: getLocalizedPath(locale, '/projects/shahre-babak-hall'),
       image: shahrBabakHallCard
     }
   ];

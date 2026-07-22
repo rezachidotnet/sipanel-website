@@ -1,4 +1,4 @@
-import type {Locale} from '@/i18n/routing';
+import {getLanguageTag, type Locale} from '@/i18n/routing';
 import {productionContactInfo, type ProductionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {getSiteBaseUrl, withBaseUrl} from '@/lib/seo/metadata';
 
@@ -23,7 +23,11 @@ function contactUrl(contact: ProductionContactInfo) {
   return contact.website.startsWith('http') ? contact.website : getSiteBaseUrl();
 }
 
-function organizationBase(locale: Locale, id: string, contact: ProductionContactInfo = productionContactInfo) {
+function webPageId(url: string) {
+  return withBaseUrl(`${url}#webpage`);
+}
+
+function organizationBase(_locale: Locale, id: string, contact: ProductionContactInfo = productionContactInfo) {
   return compactObject({
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -32,30 +36,27 @@ function organizationBase(locale: Locale, id: string, contact: ProductionContact
     url: contactUrl(contact),
     telephone: contact.phone || undefined,
     email: contact.email || undefined,
-    address: contact.address || undefined,
-    inLanguage: locale
+    address: contact.address || undefined
   });
 }
 
-export function buildOrganizationSchema(locale: Locale, id = `/${locale}#organization`) {
+export function buildOrganizationSchema(locale: Locale, id = '/#organization') {
   return organizationBase(locale, id);
 }
 
-export function buildWebsiteSchema(locale: Locale, id = `/${locale}#website`) {
+export function buildWebsiteSchema(locale: Locale, id = '/#website') {
   return compactObject({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': withBaseUrl(id),
     url: withBaseUrl('/'),
     name: productionContactInfo.company_name || 'SIPANEL',
-    inLanguage: locale,
-    // Reference the Organization node that is actually emitted on this page
-    // (locale-scoped @id) so the publisher link resolves instead of dangling.
-    publisher: {'@id': withBaseUrl(`/${locale}#organization`)}
+    inLanguage: getLanguageTag(locale),
+    publisher: {'@id': withBaseUrl('/#organization')}
   });
 }
 
-export function buildLocalBusinessSchema(locale: Locale, id = `/${locale}#local-business`) {
+export function buildLocalBusinessSchema(locale: Locale, id = '/#local-business') {
   const contact = productionContactInfo;
 
   return compactObject({
@@ -69,7 +70,6 @@ export function buildBreadcrumbListSchema(locale: Locale, id: string, items: Bre
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     '@id': withBaseUrl(id),
-    inLanguage: locale,
     itemListElement: items.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -91,7 +91,7 @@ export function buildFaqPageSchema(
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': withBaseUrl(id),
-    inLanguage: locale,
+    inLanguage: getLanguageTag(locale),
     mainEntity: items.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -122,10 +122,10 @@ export function buildServiceSchema(
     serviceType: input.serviceType,
     provider: {
       '@type': 'Organization',
+      '@id': withBaseUrl('/#organization'),
       name: productionContactInfo.company_name || 'SIPANEL'
     },
-    url: withBaseUrl(input.url),
-    inLanguage: locale
+    url: withBaseUrl(input.url)
   });
 }
 
@@ -145,9 +145,10 @@ export function buildArticleSchema(
     headline: input.headline,
     description: input.description,
     url: withBaseUrl(input.url),
-    inLanguage: locale,
+    inLanguage: getLanguageTag(locale),
     author: {
       '@type': 'Organization',
+      '@id': withBaseUrl('/#organization'),
       name: productionContactInfo.company_name || 'SIPANEL'
     }
   };
@@ -155,7 +156,7 @@ export function buildArticleSchema(
 
 export function buildAboutPageSchema(
   locale: Locale,
-  id: string,
+  _id: string,
   input: {
     name: string;
     description: string;
@@ -165,17 +166,17 @@ export function buildAboutPageSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    '@id': withBaseUrl(id),
+    '@id': webPageId(input.url),
     name: input.name,
     description: input.description,
     url: withBaseUrl(input.url),
-    inLanguage: locale
+    inLanguage: getLanguageTag(locale)
   };
 }
 
 export function buildContactPageSchema(
   locale: Locale,
-  id: string,
+  _id: string,
   input: {
     name: string;
     description: string;
@@ -185,17 +186,47 @@ export function buildContactPageSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    '@id': withBaseUrl(id),
+    '@id': webPageId(input.url),
     name: input.name,
     description: input.description,
     url: withBaseUrl(input.url),
-    inLanguage: locale
+    inLanguage: getLanguageTag(locale)
+  };
+}
+
+export function buildWebPageSchema(
+  locale: Locale,
+  input: {
+    name: string;
+    description: string;
+    url: string;
+  }
+) {
+  const canonicalUrl = withBaseUrl(input.url);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: input.name,
+    description: input.description,
+    inLanguage: getLanguageTag(locale),
+    isPartOf: {
+      '@id': withBaseUrl('/#website')
+    },
+    about: {
+      '@id': withBaseUrl('/#organization')
+    },
+    breadcrumb: {
+      '@id': `${canonicalUrl}#breadcrumb`
+    }
   };
 }
 
 export function buildCollectionPageSchema(
   locale: Locale,
-  id: string,
+  _id: string,
   input: {
     name: string;
     description: string;
@@ -206,11 +237,11 @@ export function buildCollectionPageSchema(
   return compactObject({
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': withBaseUrl(id),
+    '@id': webPageId(input.url),
     name: input.name,
     description: input.description,
     url: withBaseUrl(input.url),
-    inLanguage: locale,
+    inLanguage: getLanguageTag(locale),
     hasPart: input.items?.map((item) =>
       compactObject({
         '@type': 'CreativeWork',

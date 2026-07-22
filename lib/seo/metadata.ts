@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {defaultLocale, locales, normalizeCanonicalPath, type Locale} from '@/i18n/routing';
+import {defaultLocale, getLanguageTag, locales, normalizeCanonicalPath, type Locale} from '@/i18n/routing';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 
 export type LocalizedRouteMap = Record<Locale, string>;
@@ -50,7 +50,7 @@ export function buildAlternates(locale: Locale, routes: LocalizedRouteMap) {
   return {
     canonical: normalizeCanonicalPath(routes[locale]),
     languages: {
-      ...Object.fromEntries(locales.map((item) => [item, normalizeCanonicalPath(routes[item])])),
+      ...Object.fromEntries(locales.map((item) => [getLanguageTag(item), normalizeCanonicalPath(routes[item])])),
       'x-default': normalizeCanonicalPath(routes[defaultLocale])
     }
   };
@@ -66,7 +66,7 @@ export function buildPageMetadata({locale, title, description, routes, type = 'w
     openGraph: {
       title,
       description,
-      locale,
+      locale: getLanguageTag(locale),
       url: normalizeCanonicalPath(routes[locale]),
       type,
       images: [

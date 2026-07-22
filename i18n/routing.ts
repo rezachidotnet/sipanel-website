@@ -10,7 +10,8 @@ export const rtlLocales: Locale[] = ['fa', 'ar'];
 export const routing = defineRouting({
   locales,
   defaultLocale,
-  localePrefix: 'as-needed'
+  localePrefix: 'as-needed',
+  localeDetection: false
 });
 
 export const {Link, redirect, usePathname, useRouter} =
@@ -44,6 +45,20 @@ export function getLocalizedPath(locale: Locale, path = '/') {
   }
 
   return normalizedPath === '/' ? `/${locale}` : `/${locale}${normalizedPath}`;
+}
+
+export function getLanguageTag(locale: Locale) {
+  return locale === 'fa' ? 'fa-IR' : locale;
+}
+
+export function normalizeLocalizedRouteMap<T extends Record<Locale, string>>(routes: T): T {
+  return Object.fromEntries(
+    locales.map((locale) => {
+      const routePath = normalizeCanonicalPath(routes[locale]);
+      const unprefixedPath = routePath.replace(/^\/(?:en|ar|ru)(?=\/|$)/, '') || '/';
+      return [locale, getLocalizedPath(locale, unprefixedPath)];
+    })
+  ) as T;
 }
 
 export function getDirection(locale: Locale) {

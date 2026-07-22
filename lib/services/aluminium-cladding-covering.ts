@@ -235,9 +235,9 @@ const fa: LocalizedContent = {
     secondaryButton: 'مشاهده پروژه‌های نما'
   },
   breadcrumbs: [
-    {label: 'خانه', href: '/fa'},
-    {label: 'پوشانه‌ها', href: '/fa/systems'},
-    {label: 'نمای آلومینیومی', href: '/fa/systems/aluminium-cladding-covering'}
+    {label: 'خانه', href: getLocalizedPath('fa')},
+    {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')},
+    {label: 'نمای آلومینیومی', href: getLocalizedPath('fa', '/systems/aluminium-cladding-covering')}
   ],
   caseStudyLabels: {
     challenge: 'چالش',
@@ -744,7 +744,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Визуально выразительный алюминиевый вход стадиона сдан с контролируемым качеством.'
         : 'Visually distinctive aluminium-clad stadium entrance delivered with controlled quality.',
-      href: `/${locale}/projects/shahr-babak-stadium-entrance`,
+      href: getLocalizedPath(locale, '/projects/shahr-babak-stadium-entrance'),
       image: babakSardarbCard
     },
     {
@@ -769,7 +769,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Выразительные входные ворота города с алюминиевой облицовкой сданы с контролируемым качеством.'
         : 'Distinctive aluminium-clad city entrance gate delivered with controlled quality.',
-      href: `/${locale}/projects/parand-city-entrance`,
+      href: getLocalizedPath(locale, '/projects/parand-city-entrance'),
       image: parandCard
     },
     {
@@ -794,7 +794,7 @@ function getRelatedCaseStudies(locale: Locale) {
         : isRu
         ? 'Успешное выполнение 1 500 м² навеса входной зоны с сохранением формы глаза и контролируемым качеством.'
         : 'Successful completion of 1,500 m² entrance canopy preserving the eye-shaped identity with controlled quality.',
-      href: `/${locale}/projects/erbil-eye-hospital-entrance-canopy`,
+      href: getLocalizedPath(locale, '/projects/erbil-eye-hospital-entrance-canopy'),
       image: erbilEyeHospitalCard
     }
   ];

@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {RfqContactPage} from '@/components/contact/rfq-contact-page';
-import {locales, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {getRfqContactPageData, rfqContactPage} from '@/lib/contact/rfq-contact-page';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 import {
@@ -32,7 +32,7 @@ function buildContactPageSchema(locale: Locale) {
 }
 
 function buildOrganizationSchema(locale: Locale) {
-  return buildSharedOrganizationSchema(locale, `${rfqContactPage.route[locale]}#organization`);
+  return buildSharedOrganizationSchema(locale);
 }
 
 function buildLocalBusinessSchema(locale: Locale) {
@@ -41,7 +41,7 @@ function buildLocalBusinessSchema(locale: Locale) {
 
 function buildBreadcrumbSchema(locale: Locale) {
   return buildBreadcrumbListSchema(locale, `${rfqContactPage.route[locale]}#breadcrumb`, [
-    {name: locale === 'fa' ? 'خانه' : locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', item: `/${locale}`},
+    {name: locale === 'fa' ? 'خانه' : locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', item: getLocalizedPath(locale)},
     {name: locale === 'fa' ? 'تماس' : locale === 'ar' ? 'اتصل بنا' : locale === 'ru' ? 'Контакты' : 'Contact', item: rfqContactPage.route[locale]}
   ]);
 }

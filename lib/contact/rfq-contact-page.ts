@@ -1,6 +1,6 @@
 import mergedSpec from '@/specs/0_Sipanel_website_merged_2.json';
 import rfqContactSpec from '@/specs/pages/rfq_contact_page.json';
-import type {Locale} from '@/i18n/routing';
+import {normalizeLocalizedRouteMap, type Locale} from '@/i18n/routing';
 
 type LocalizedRoutes = Record<Locale, string>;
 
@@ -94,7 +94,10 @@ export type RfqContactPageSpec = {
   page_sections: RfqContactSection[];
 };
 
-export const rfqContactPage = rfqContactSpec as RfqContactPageSpec;
+export const rfqContactPage = {
+  ...(rfqContactSpec as RfqContactPageSpec),
+  route: normalizeLocalizedRouteMap((rfqContactSpec as RfqContactPageSpec).route)
+};
 export const productionContactInfo =
   mergedSpec.Sipanel_website_top_rank_deep_merged.production_contact_info as ProductionContactInfo;
 

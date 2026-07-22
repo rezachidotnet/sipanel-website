@@ -11,6 +11,7 @@ import {
   buildCaseStudyBreadcrumbSchema,
   buildCaseStudyOrganizationSchema,
   buildCaseStudyServiceSchema,
+  buildCaseStudyWebPageSchema,
   type CaseStudyPageData,
   type CaseStudyProofAsset,
   type CaseStudyRelatedStudy
@@ -275,6 +276,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
 
   return (
     <article className="case-study-page" data-case-study-page="" dir={dir}>
+      <SchemaPlaceholder schema={buildCaseStudyWebPageSchema(locale, page)} />
       <SchemaPlaceholder schema={buildCaseStudyArticleSchema(locale, page)} />
       <SchemaPlaceholder schema={buildCaseStudyServiceSchema(locale, page)} />
       <SchemaPlaceholder schema={buildCaseStudyBreadcrumbSchema(locale, page)} />
