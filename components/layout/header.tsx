@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {useRef, useState, useEffect, useCallback} from 'react';
 import {useTranslations} from 'next-intl';
 import logo from '@/assets/brand/logos/logo-black-transparency.svg';
-import {Link, locales, usePathname, type Locale} from '@/i18n/routing';
+import {getLocalizedPath, Link, locales, usePathname, type Locale} from '@/i18n/routing';
 import {LanguageSwitcher} from '@/components/localization/language-switcher';
 import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
 import {trackCatalogEvent, trackLanguageChange, trackEvent} from '@/lib/analytics/events';
@@ -181,10 +181,9 @@ export function Header({locale}: Props) {
               {langOpen && (
                 <nav className="lang-dropdown" aria-label={header('selectLanguage')}>
                   {locales.map((loc) => (
-                    <Link
+                    <a
                       key={loc}
-                      href={pathname}
-                      locale={loc}
+                      href={getLocalizedPath(loc, pathname)}
                       aria-current={loc === locale ? 'true' : undefined}
                       className={loc === locale ? 'lang-dropdown__item is-active' : 'lang-dropdown__item'}
                       onClick={() => {
@@ -195,7 +194,7 @@ export function Header({locale}: Props) {
                       }}
                     >
                       {localeLabels[loc].full}
-                    </Link>
+                    </a>
                   ))}
                 </nav>
               )}

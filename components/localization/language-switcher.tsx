@@ -1,7 +1,7 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
-import {Link, locales, type Locale, usePathname} from '@/i18n/routing';
+import {getLocalizedPath, locales, type Locale, usePathname} from '@/i18n/routing';
 import {trackLanguageChange, trackEvent} from '@/lib/analytics/events';
 
 const labels: Record<Locale, string> = {
@@ -30,10 +30,9 @@ export function LanguageSwitcher({activeLocale, compact = false, onNavigate}: Pr
         LANG
       </span>
       {locales.map((locale) => (
-        <Link
+        <a
           key={locale}
-          href={pathname}
-          locale={locale}
+          href={getLocalizedPath(locale, pathname)}
           aria-current={locale === activeLocale ? 'true' : undefined}
           className="language-switcher__item"
           onClick={() => {
@@ -48,7 +47,7 @@ export function LanguageSwitcher({activeLocale, compact = false, onNavigate}: Pr
           }}
         >
           {labels[locale]}
-        </Link>
+        </a>
       ))}
     </nav>
   );

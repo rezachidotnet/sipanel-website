@@ -242,6 +242,10 @@ async function assertRoute(route) {
     fail(`${route.path} contains locale-prefixed sitemap link`);
   }
 
+  if (/\bhref=["']\/fa(?:\/|["'#?])/.test(html) || html.includes('https://www.sipanelco.ir/fa/')) {
+    fail(`${route.path} contains legacy /fa internal link`);
+  }
+
   const schema = getJsonLd(html);
   assertNoInvalidInLanguage(schema);
   assertNoBadUrls(schema);
