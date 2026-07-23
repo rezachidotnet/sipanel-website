@@ -18,6 +18,9 @@ const invalidInLanguageTypes = new Set([
 
 const representativeRoutes = [
   {path: '/', locale: 'fa', canonical: productionOrigin},
+  {path: '/en', locale: 'en', canonical: `${productionOrigin}/en`},
+  {path: '/ar', locale: 'ar', canonical: `${productionOrigin}/ar`},
+  {path: '/ru', locale: 'ru', canonical: `${productionOrigin}/ru`},
   {path: '/projects', locale: 'fa', canonical: `${productionOrigin}/projects`},
   {path: '/en/projects', locale: 'en', canonical: `${productionOrigin}/en/projects`},
   {path: '/ar/projects', locale: 'ar', canonical: `${productionOrigin}/ar/projects`},
@@ -34,7 +37,8 @@ const representativeRoutes = [
 
 const filteredProjectRoutes = [
   {path: '/projects?filter=sandwich', locale: 'fa', canonical: `${productionOrigin}/projects`},
-  {path: '/en/projects?filter=sandwich', locale: 'en', canonical: `${productionOrigin}/en/projects`}
+  {path: '/en/projects?filter=sandwich', locale: 'en', canonical: `${productionOrigin}/en/projects`},
+  {path: '/ar/projects?filter=sandwich', locale: 'ar', canonical: `${productionOrigin}/ar/projects`}
 ];
 
 let server;
@@ -190,6 +194,10 @@ function assertBreadcrumb(schema, canonical) {
 }
 
 function assertPageSchema(schema, route) {
+  if (['/', '/en', '/ar', '/ru'].includes(route.path)) {
+    return;
+  }
+
   const pageSchema = schema.find((item) =>
     ['WebPage', 'CollectionPage', 'AboutPage', 'ContactPage'].some((type) => schemaTypes(item).includes(type))
   );

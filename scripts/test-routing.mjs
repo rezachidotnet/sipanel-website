@@ -76,6 +76,16 @@ async function expectRedirect(path, target) {
   }
 }
 
+async function expectNoRedirect(path) {
+  const response = await request(path);
+
+  if (response.status >= 300 && response.status < 400) {
+    fail(`${path} must not redirect; received ${response.status} Location ${locationPath(response) ?? 'missing'}`);
+  }
+
+  return response;
+}
+
 function expectIncludes(text, needle, label) {
   if (!text.includes(needle)) {
     fail(`Missing ${label}: ${needle}`);
@@ -132,13 +142,26 @@ async function run() {
   await expectRedirect('/fa/systems', '/systems');
   await expectRedirect('/fa/systems?utm=1', '/systems?utm=1');
   await expectRedirect('/fa/projects', '/projects');
+  await expectRedirect('/fa/projects/', '/projects');
   await expectRedirect('/fa/sitemap.xml', '/sitemap.xml');
   await expectRedirect('/en/sitemap.xml', '/sitemap.xml');
   await expectRedirect('/ar/sitemap.xml', '/sitemap.xml');
   await expectRedirect('/ru/sitemap.xml', '/sitemap.xml');
+  await expectRedirect('/en/', '/en');
+  await expectRedirect('/ar/', '/ar');
+  await expectRedirect('/ru/', '/ru');
+  await expectRedirect('/projects/', '/projects');
+  await expectRedirect('/en/projects/', '/en/projects');
+  await expectRedirect('/ar/projects/', '/ar/projects');
+  await expectRedirect('/ru/projects/', '/ru/projects');
+  await expectRedirect('/en/projects/?filter=sandwich', '/en/projects?filter=sandwich');
 
   for (const path of ['/projects', '/en/projects', '/ar/projects', '/ru/projects', '/systems', '/en', '/ar', '/ru']) {
     await expectStatus(path, 200);
+  }
+
+  for (const path of ['/favicon.ico', '/robots.txt', '/sitemap.xml', '/_next/static/not-found.txt']) {
+    await expectNoRedirect(path);
   }
 
   for (const [path, headers] of [

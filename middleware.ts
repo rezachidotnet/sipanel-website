@@ -23,6 +23,10 @@ function isLocalePrefixedSitemapPath(pathname: string) {
   return /^\/(?:fa|en|ar|ru)\/sitemap\.xml$/.test(pathname);
 }
 
+function shouldNormalizeTrailingSlash(pathname: string) {
+  return pathname !== '/' && pathname.endsWith('/');
+}
+
 function getForwardedProtocol(request: NextRequest) {
   return request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '');
 }
@@ -32,7 +36,7 @@ function getRequestHostname(request: NextRequest) {
 }
 
 export default function middleware(request: NextRequest) {
-  const url = request.nextUrl.clone();
+  const url = new URL(request.url);
   const requestHostname = getRequestHostname(request);
   let shouldRedirect = false;
 
@@ -41,6 +45,11 @@ export default function middleware(request: NextRequest) {
     shouldRedirect = true;
   } else if (isLegacyPersianPath(url.pathname)) {
     url.pathname = stripLegacyPersianPrefix(url.pathname);
+    shouldRedirect = true;
+  }
+
+  if (shouldNormalizeTrailingSlash(url.pathname)) {
+    url.pathname = url.pathname.replace(/\/+$/, '');
     shouldRedirect = true;
   }
 
