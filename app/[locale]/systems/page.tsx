@@ -6,7 +6,7 @@ import {notFound} from 'next/navigation';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {getDirection, getLocalizedPath, locales, type Locale, Link} from '@/i18n/routing';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
-import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
+import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildFaqPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 
 /* ── Static image imports ── */
 import heroDesktop from '@/assets/systems/hero/systems-hero-desktop.webp';
@@ -24,6 +24,20 @@ type Props = {
   params: Promise<{locale: string}>;
 };
 
+type GuidanceItem = {
+  title: string;
+  description: string;
+};
+
+type SystemSelectionItem = GuidanceItem & {
+  systemId: string;
+};
+
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 const routes: LocalizedRouteMap = {
   en: getLocalizedPath('en', '/systems'),
   fa: getLocalizedPath('fa', '/systems'),
@@ -36,16 +50,41 @@ const copy: Record<
   {
     title: string;
     description: string;
+    primaryKeyword: string;
     eyebrow: string;
     headline: string;
     supporting: string;
+    introTitle: string;
+    introBody: string;
+    introLinks: {
+      systems: string;
+      projects: string;
+      contact: string;
+    };
     primaryCta: string;
     secondaryCta: string;
     trustPoints: string[];
     sectionTitle: string;
     sectionDescription: string;
     cta: string;
+    projectCta: string;
     home: string;
+    guidanceTitle: string;
+    guidanceIntro: string;
+    guidanceItems: GuidanceItem[];
+    selectionTitle: string;
+    selectionIntro: string;
+    systemSelection: SystemSelectionItem[];
+    engineeringTitle: string;
+    engineeringIntro: string;
+    engineeringItems: GuidanceItem[];
+    faqTitle: string;
+    faqIntro: string;
+    faqItems: FaqItem[];
+    closingTitle: string;
+    closingText: string;
+    closingContactCta: string;
+    closingProjectsCta: string;
     proofTitle: string;
     comparisonTitle: string;
     proofItems: Array<{title: string; description: string}>;
@@ -54,12 +93,22 @@ const copy: Record<
   }
 > = {
   fa: {
-    title: 'سیستم‌های پوشش صنعتی | SIPANEL',
+    title: 'سیستم‌های پوشش صنعتی سقف و نما | SIPANEL',
     description:
-      'طراحی شاپ، انتخاب متریال، تأمین کنترل‌شده و نصب مهندسی برای پروژه‌های صنعتی. سیستم‌های ساندویچ پانل، سقف ایستادرز و نمای آلومینیومی.',
+      'سیستم‌های پوشش صنعتی سقف و نما برای پروژه‌های صنعتی؛ انتخاب ساندویچ پانل، ایستادرز، نمای آلومینیومی و نورگیر با طراحی شاپ، کنترل متریال و اجرای مهندسی.',
+    primaryKeyword: 'سیستم‌های پوشش صنعتی سقف و نما',
     eyebrow: 'پوشانه\u200Cهای سازه\u200Cهای صنعتی',
-    headline: 'راهکارهای مهندسی\u200Cشده\nبرای پوشش سقف و نما',
-    supporting: 'طراحی شاپ، انتخاب متریال، تأمین کنترل\u200Cشده و نصب مهندسی برای پروژه\u200Cهای صنعتی.',
+    headline: 'سیستم\u200Cهای پوشش صنعتی\nبرای سقف و نما',
+    supporting:
+      'سی\u200Cپانل سیستم پوشش را بر اساس کاربری، دهانه، اقلیم، مسیر آب، جزئیات اتصال، برنامه تأمین و توان اجرای پروژه انتخاب و مهندسی می\u200Cکند.',
+    introTitle: 'انتخاب سیستم پوشش صنعتی از یک تصمیم فنی شروع می\u200Cشود',
+    introBody:
+      'در پروژه صنعتی، انتخاب پوشش سقف و نما فقط مقایسه قیمت متریال نیست. سیستم باید با سازه، شیب و زهکشی، بازشوها، الزامات حرارتی و صوتی، سرعت اجرا، دسترسی نصب و نگهداری آینده هماهنگ باشد. سی\u200Cپانل این تصمیم را قبل از خرید متریال و شروع نصب، با بررسی نقشه\u200Cها، شاپ\u200Cدراوینگ و ریسک\u200Cهای اجرایی کنترل می\u200Cکند.',
+    introLinks: {
+      systems: 'مشاهده جزئیات سیستم\u200Cها',
+      projects: 'بررسی پروژه\u200Cهای اجراشده',
+      contact: 'درخواست بررسی فنی'
+    },
     primaryCta: 'دریافت مشاوره فنی رایگان',
     secondaryCta: 'مشاهده پروژه\u200Cها',
     trustPoints: [
@@ -72,7 +121,116 @@ const copy: Record<
     sectionDescription:
       'طراحی، تأمین و اجرای سیستم\u200Cهای پوشش سقف و نما با کنترل کامل بر کیفیت، آب\u200Cبندی و زمان\u200Cبندی.',
     cta: 'مشاهده سیستم',
+    projectCta: 'نمونه پروژه\u200Cهای مرتبط',
     home: 'خانه',
+    guidanceTitle: 'راهنمای انتخاب سیستم در مرحله طراحی و خرید',
+    guidanceIntro:
+      'برای انتخاب سیستم مناسب، ابتدا باید عملکرد مورد انتظار پوشش مشخص شود. سی\u200Cپانل هر گزینه را بر اساس معیارهای اجرایی و بهره\u200Cبرداری بررسی می\u200Cکند تا تصمیم نهایی فقط متکی به قیمت اولیه نباشد.',
+    guidanceItems: [
+      {
+        title: 'کاربری و عملکرد ساختمان',
+        description:
+          'برای سالن تولید، انبار، ترمینال، فضای تجاری یا بخش اداری، نیازهای عایق حرارتی، عایق صوتی، نور طبیعی، دوام و ظاهر نما متفاوت است.'
+      },
+      {
+        title: 'شرایط سازه، دهانه و شیب',
+        description:
+          'وزن سیستم، طول پنل یا ورق، زیرسازی، فاصله پرلین\u200Cها، شیب سقف و مسیر انتقال بار باید قبل از سفارش متریال با نقشه\u200Cهای سازه هماهنگ شود.'
+      },
+      {
+        title: 'اقلیم، آب\u200Cبندی و نگهداری',
+        description:
+          'بارندگی، باد، گردوغبار، رطوبت، تابش و دسترسی تعمیرات روی جزئیات فلاشینگ، همپوشانی، آبرو، درزها و نقاط نفوذ اثر مستقیم دارد.'
+      }
+    ],
+    selectionTitle: 'سی\u200Cپانل چطور بین سیستم\u200Cها انتخاب می\u200Cکند؟',
+    selectionIntro:
+      'هر سیستم جای مناسب خود را دارد. تصمیم نهایی معمولاً ترکیبی از عملکرد فنی، سرعت اجرا، محدودیت سازه، ظاهر معماری و هزینه چرخه عمر است.',
+    systemSelection: [
+      {
+        systemId: 'sandwich-panel',
+        title: 'ساندویچ پانل برای پوشش سریع و عایق',
+        description:
+          'وقتی سرعت نصب، وزن کنترل\u200Cشده و عملکرد حرارتی اهمیت دارد، ساندویچ پانل گزینه اصلی است؛ اما چیدمان، جهت نصب، آب\u200Cبندی درزها و جزئیات اطراف بازشوها باید قبل از تأمین نهایی شود.'
+      },
+      {
+        systemId: 'standing-seam',
+        title: 'ایستادرز و ZIP برای سقف\u200Cهای حساس به آب\u200Cبندی',
+        description:
+          'برای سقف\u200Cهایی با طول زیاد، نیاز به اتصال مخفی یا کنترل بهتر مسیر آب، ایستادرز و ZIP Tech بررسی می\u200Cشود. تمرکز اصلی روی شیب، آبرو، فلاشینگ و نقاط نفوذ است.'
+      },
+      {
+        systemId: 'aluminium-cladding',
+        title: 'نمای آلومینیومی برای کنترل ظاهر و جزئیات اتصال',
+        description:
+          'در نماهایی که مدول، خط درز، دوام سطح و هماهنگی با بازشوها مهم است، کلادینگ آلومینیومی با زیرسازی و دیتیل اتصال کنترل\u200Cشده انتخاب می\u200Cشود.'
+      },
+      {
+        systemId: 'daylighting-transparent',
+        title: 'نورگیر و پوشش شفاف برای نور طبیعی کنترل\u200Cشده',
+        description:
+          'وقتی نور طبیعی بخشی از عملکرد پروژه است، پلی\u200Cکربنات، شیشه یا راهکار ترکیبی بر اساس ایمنی، کنترل حرارت، آب\u200Cبندی و جزئیات اتصال به پوشش اصلی بررسی می\u200Cشود.'
+      }
+    ],
+    engineeringTitle: 'کنترل مهندسی از آب\u200Cبندی تا نصب',
+    engineeringIntro:
+      'کیفیت سیستم پوشش فقط به برند متریال وابسته نیست. بخش مهم ریسک در اتصال\u200Cها، ترتیب نصب، کنترل سفارش و هماهنگی جزئیات قبل از اجرا ایجاد یا حذف می\u200Cشود.',
+    engineeringItems: [
+      {
+        title: 'منطق زهکشی و آب\u200Cبندی',
+        description:
+          'مسیر آب، آبروها، فلاشینگ\u200Cها، همپوشانی\u200Cها، پیچ\u200Cها، نفوذ تأسیسات و اتصال سقف به نما پیش از اجرا بررسی می\u200Cشود تا تصمیم\u200Cها در محل پروژه حداقلی باشد.'
+      },
+      {
+        title: 'تأمین و کنترل متریال',
+        description:
+          'لیست متریال، ابعاد، رنگ، ضخامت، متعلقات، پیچ\u200Cها و فلاشینگ\u200Cها بر اساس شاپ و برنامه اجرا کنترل می\u200Cشود تا پرت، کمبود و سفارش دوباره کاهش یابد.'
+      },
+      {
+        title: 'کنترل نصب و تحویل',
+        description:
+          'توالی نصب، نقاط کنترل کیفیت، هماهنگی اکیپ\u200Cها و اصلاحات اجرایی در طول کار مدیریت می\u200Cشود؛ هدف، اجرای قابل ردیابی و قابل نگهداری است.'
+      }
+    ],
+    faqTitle: 'پرسش\u200Cهای متداول انتخاب سیستم پوشش صنعتی',
+    faqIntro: 'این پرسش\u200Cها در شروع بررسی فنی به کارفرما و طراح کمک می\u200Cکند مسیر انتخاب سیستم را دقیق\u200Cتر مشخص کنند.',
+    faqItems: [
+      {
+        question: 'کدام سیستم پوشش صنعتی برای پروژه من مناسب است؟',
+        answer:
+          'پاسخ به کاربری ساختمان، دهانه و شیب، اقلیم، نیاز عایق\u200Cکاری، ظاهر نما، سرعت اجرا و بودجه چرخه عمر بستگی دارد. سی\u200Cپانل ابتدا نقشه\u200Cها و محدودیت\u200Cهای پروژه را بررسی می\u200Cکند و سپس بین ساندویچ پانل، ایستادرز، نمای آلومینیومی یا نورگیر پیشنهاد فنی می\u200Cدهد.'
+      },
+      {
+        question: 'تفاوت ساندویچ پانل با سقف ایستادرز یا ZIP چیست؟',
+        answer:
+          'ساندویچ پانل برای پوشش سریع با عایق حرارتی یکپارچه مناسب است. ایستادرز و ZIP معمولاً برای سقف\u200Cهایی انتخاب می\u200Cشوند که طول ورق، اتصال مخفی، کنترل آب\u200Cبندی و جزئیات زهکشی اهمیت بیشتری دارد.'
+      },
+      {
+        question: 'سی\u200Cپانل چطور ریسک نشتی را کاهش می\u200Cدهد؟',
+        answer:
+          'ریسک نشتی با طراحی مسیر آب، کنترل شیب، هماهنگی فلاشینگ، جزئیات اطراف بازشوها و نفوذها، انتخاب اتصال مناسب و کنترل نصب کاهش می\u200Cیابد. این تصمیم\u200Cها باید قبل از خرید متریال و شروع نصب مشخص شوند.'
+      },
+      {
+        question: 'سی\u200Cپانل فقط متریال تأمین می\u200Cکند یا مهندسی و اجرا هم انجام می\u200Cدهد؟',
+        answer:
+          'تمرکز سی\u200Cپانل فقط فروش متریال نیست. خدمات می\u200Cتواند شامل بررسی فنی، شاپ\u200Cدراوینگ، انتخاب متریال، برنامه تأمین، کنترل کیفیت و اجرای مهندسی\u200Cشده باشد.'
+      },
+      {
+        question: 'برای بررسی فنی چه اطلاعاتی لازم است؟',
+        answer:
+          'نقشه معماری و سازه، کاربری فضا، موقعیت و اقلیم پروژه، ابعاد و دهانه\u200Cها، شیب سقف، محل بازشوها و تجهیزات، انتظار عایق\u200Cکاری، محدودیت زمان اجرا و سطح مورد انتظار ظاهر نما اطلاعات اصلی هستند.'
+      },
+      {
+        question: 'انتخاب سیستم چه اثری روی هزینه، سرعت و عملکرد بلندمدت دارد؟',
+        answer:
+          'سیستم ارزان\u200Cتر در خرید اولیه همیشه کم\u200Cهزینه\u200Cترین انتخاب در اجرا و نگهداری نیست. وزن، پرت متریال، سرعت نصب، ریسک نشتی، تعمیرپذیری و دوام سطح باید همزمان بررسی شود.'
+      }
+    ],
+    closingTitle: 'برای انتخاب سیستم، نقشه\u200Cها را قبل از سفارش بررسی کنید',
+    closingText:
+      'اگر پروژه در مرحله طراحی، برآورد یا تأمین است، بررسی فنی زودهنگام می\u200Cتواند از تغییر سفارش، پرت متریال و ریسک اجرایی جلوگیری کند.',
+    closingContactCta: 'ارسال درخواست بررسی فنی',
+    closingProjectsCta: 'مشاهده نمونه پروژه\u200Cها',
     proofTitle: 'زنجیره مهندسی SIPANEL',
     proofItems: [
       {title: 'طراحی شاپ', description: 'کنترل کامل جزئیات اجرایی و نقشه\u200Cهای شاپ'},
@@ -112,12 +270,22 @@ const copy: Record<
     ]
   },
   en: {
-    title: 'Industrial Covering Systems | SIPANEL',
+    title: 'Industrial Building Envelope Systems | SIPANEL',
     description:
-      'Shop drawing, material selection, controlled procurement and engineered installation for industrial projects.',
+      'Industrial building envelope systems for roof and facade projects: sandwich panels, standing seam/ZIP roofing, aluminium cladding, and daylighting with engineering review, material control, and installation QA.',
+    primaryKeyword: 'industrial building envelope systems',
     eyebrow: 'Industrial Envelope Systems',
-    headline: 'Engineered Solutions\nfor Roof & Facade Covering',
-    supporting: 'Shop drawing, material selection, controlled procurement and engineered installation for industrial projects.',
+    headline: 'Industrial Building\nEnvelope Systems',
+    supporting:
+      'SIPANEL selects and engineers roof and facade systems around use case, span, climate, drainage path, fixing details, procurement control, and installation constraints.',
+    introTitle: 'Industrial envelope selection starts as an engineering decision',
+    introBody:
+      'For an industrial building, the envelope system is not only a material purchase. It has to work with the structure, slope, drainage, openings, thermal and acoustic targets, installation access, schedule, and future maintenance. SIPANEL reviews these constraints before material procurement and installation so the selected system is technically coherent.',
+    introLinks: {
+      systems: 'Review system details',
+      projects: 'See completed projects',
+      contact: 'Request engineering review'
+    },
     primaryCta: 'Get Free Technical Consultation',
     secondaryCta: 'View Projects',
     trustPoints: [
@@ -130,7 +298,116 @@ const copy: Record<
     sectionDescription:
       'Design, procurement and execution of roof and facade covering systems with full control over quality, waterproofing and scheduling.',
     cta: 'View System',
+    projectCta: 'Related projects',
     home: 'Home',
+    guidanceTitle: 'System selection guidance for design and procurement',
+    guidanceIntro:
+      'The right system depends on performance, execution, and lifecycle priorities. SIPANEL evaluates each option before procurement so the decision is not reduced to initial material price.',
+    guidanceItems: [
+      {
+        title: 'Building use and performance',
+        description:
+          'Production halls, warehouses, terminals, commercial spaces, and office zones have different needs for insulation, acoustic control, daylight, durability, and facade appearance.'
+      },
+      {
+        title: 'Structure, span, and slope',
+        description:
+          'System weight, sheet or panel length, substructure, purlin spacing, roof slope, and load path must be coordinated with structural drawings before ordering.'
+      },
+      {
+        title: 'Climate, waterproofing, and maintenance',
+        description:
+          'Rain, wind, dust, humidity, solar exposure, and maintenance access directly affect flashing, gutters, overlaps, seams, fasteners, and penetrations.'
+      }
+    ],
+    selectionTitle: 'How SIPANEL chooses between envelope systems',
+    selectionIntro:
+      'Each system has a proper use case. The final recommendation usually balances technical performance, installation speed, structural limits, architectural appearance, and lifecycle cost.',
+    systemSelection: [
+      {
+        systemId: 'sandwich-panel',
+        title: 'Sandwich panels for fast insulated covering',
+        description:
+          'When installation speed, controlled weight, and thermal performance matter, sandwich panels are usually the primary option. Layout, installation direction, seam sealing, and opening details still need engineering before procurement.'
+      },
+      {
+        systemId: 'standing-seam',
+        title: 'Standing seam and ZIP for waterproofing-sensitive roofs',
+        description:
+          'For long roof runs, concealed fixing, and better water-path control, standing seam or ZIP Tech systems are reviewed around slope, gutter position, flashing, and penetrations.'
+      },
+      {
+        systemId: 'aluminium-cladding',
+        title: 'Aluminium cladding for facade control',
+        description:
+          'When joint rhythm, surface durability, module control, and coordination with openings are important, aluminium cladding is engineered with controlled substructure and fixing details.'
+      },
+      {
+        systemId: 'daylighting-transparent',
+        title: 'Daylighting systems for controlled natural light',
+        description:
+          'When daylight is part of building performance, polycarbonate, glass, or hybrid systems are reviewed for safety, heat control, waterproofing, and connection to the main roof.'
+      }
+    ],
+    engineeringTitle: 'Engineering control from drainage to installation',
+    engineeringIntro:
+      'Envelope quality is not defined by material brand alone. Most execution risk is created or removed through connections, sequence, procurement control, and detail coordination before site work starts.',
+    engineeringItems: [
+      {
+        title: 'Waterproofing and drainage logic',
+        description:
+          'Water path, gutters, flashing, overlaps, fasteners, equipment penetrations, and roof-to-facade transitions are reviewed before installation to reduce site interpretation.'
+      },
+      {
+        title: 'Procurement and material control',
+        description:
+          'Material lists, dimensions, colors, thicknesses, accessories, screws, and flashing parts are checked against shop drawings and installation sequence to reduce waste and reordering.'
+      },
+      {
+        title: 'Installation QA and handover',
+        description:
+          'Installation sequence, inspection points, crew coordination, and field adjustments are managed during execution so the final envelope is traceable and maintainable.'
+      }
+    ],
+    faqTitle: 'Industrial envelope systems FAQ',
+    faqIntro: 'These questions help owners and designers frame the first technical review before selecting a roof or facade system.',
+    faqItems: [
+      {
+        question: 'Which industrial covering system is suitable for my project?',
+        answer:
+          'It depends on the building use, span, slope, climate, insulation needs, facade appearance, execution speed, and lifecycle budget. SIPANEL reviews the drawings and constraints before recommending sandwich panels, standing seam/ZIP, aluminium cladding, daylighting, or a combination.'
+      },
+      {
+        question: 'What is the difference between sandwich panels and standing seam or ZIP roofing?',
+        answer:
+          'Sandwich panels provide fast insulated covering in one assembly. Standing seam and ZIP roofing are usually selected when long roof runs, concealed fixing, drainage control, and waterproofing details are the stronger priorities.'
+      },
+      {
+        question: 'How does SIPANEL reduce leakage risk?',
+        answer:
+          'Leakage risk is reduced by designing the water path, checking roof slope, coordinating flashing, detailing openings and penetrations, selecting the right fixing method, and controlling installation before decisions are left to site interpretation.'
+      },
+      {
+        question: 'Does SIPANEL only supply material or also handle engineering and execution?',
+        answer:
+          'SIPANEL is not limited to material supply. The scope can include engineering review, shop drawings, material selection, procurement planning, quality control, and engineered installation.'
+      },
+      {
+        question: 'What information is needed for an engineering review?',
+        answer:
+          'Architectural and structural drawings, building use, project location and climate, spans and dimensions, roof slope, openings and equipment locations, insulation expectations, schedule limits, and facade appearance requirements are the key inputs.'
+      },
+      {
+        question: 'How does system choice affect cost, speed, and long-term performance?',
+        answer:
+          'The lowest initial material price is not always the lowest project cost. Weight, waste, installation speed, leakage risk, repair access, and surface durability should be reviewed together.'
+      }
+    ],
+    closingTitle: 'Review the drawings before ordering the envelope system',
+    closingText:
+      'If the project is in design, estimation, or procurement, early engineering review can reduce reordering, material waste, and execution risk.',
+    closingContactCta: 'Request engineering review',
+    closingProjectsCta: 'View project references',
     proofTitle: 'SIPANEL Engineering Chain',
     proofItems: [
       {title: 'Shop Drawing', description: 'Full control over execution details and shop drawings'},
@@ -150,18 +427,138 @@ const copy: Record<
     ]
   },
   ar: {
-    title: 'أنظمة التغطية الصناعية | SIPANEL',
-    description: 'رسومات الورشة، اختيار المواد، التوريد المتحكم والتركيب الهندسي للمشاريع الصناعية.',
+    title: 'أنظمة أغلفة المباني الصناعية | SIPANEL',
+    description:
+      'أنظمة أغلفة المباني الصناعية للأسقف والواجهات: ألواح ساندويتش، درز قائم وZIP، كسوة ألمنيوم وأنظمة إضاءة طبيعية مع مراجعة هندسية وتحكم في المواد والتنفيذ.',
+    primaryKeyword: 'أنظمة أغلفة المباني الصناعية',
     eyebrow: 'أنظمة الغلاف الصناعي',
-    headline: 'حلول هندسية\nلتغطية السقف والواجهة',
-    supporting: 'رسومات الورشة، اختيار المواد، التوريد المتحكم والتركيب الهندسي للمشاريع الصناعية.',
+    headline: 'أنظمة أغلفة المباني\nالصناعية',
+    supporting:
+      'تختار SIPANEL نظام السقف والواجهة وفق استخدام المبنى والبحور والمناخ ومسار تصريف المياه وتفاصيل التثبيت وضوابط التوريد والتنفيذ.',
+    introTitle: 'اختيار غلاف المبنى الصناعي قرار هندسي قبل أن يكون شراء مواد',
+    introBody:
+      'في المباني الصناعية لا يكفي اختيار المادة الأرخص أو المتوفرة. يجب أن يعمل النظام مع الهيكل، الميل، التصريف، الفتحات، متطلبات العزل، الوصول للتركيب، الجدول الزمني والصيانة المستقبلية. تراجع SIPANEL هذه القيود قبل التوريد والتركيب حتى يكون النظام المختار منسقاً فنياً.',
+    introLinks: {
+      systems: 'مراجعة تفاصيل الأنظمة',
+      projects: 'مشاهدة مشاريع منفذة',
+      contact: 'طلب مراجعة هندسية'
+    },
     primaryCta: 'احصل على استشارة فنية مجانية',
     secondaryCta: 'عرض المشاريع',
     trustPoints: ['تصميم دقيق وهندسي', 'توريد ذكي ومراقبة الجودة', 'منطق العزل المائي', 'تركيب هندسي متحكم'],
     sectionTitle: 'ثلاثة أنظمة. منطق هندسي واحد.',
     sectionDescription: 'تصميم وتوريد وتنفيذ أنظمة تغطية السقف والواجهة مع تحكم كامل.',
     cta: 'عرض النظام',
+    projectCta: 'مشاريع مرتبطة',
     home: 'الرئيسية',
+    guidanceTitle: 'إرشادات اختيار النظام في مرحلة التصميم والتوريد',
+    guidanceIntro:
+      'يعتمد النظام المناسب على الأداء والتنفيذ وتكلفة التشغيل على المدى الطويل. تراجع SIPANEL الخيارات قبل التوريد حتى لا يكون القرار مبنياً على سعر المادة فقط.',
+    guidanceItems: [
+      {
+        title: 'استخدام المبنى والأداء المطلوب',
+        description:
+          'قاعات الإنتاج والمستودعات والمحطات والمساحات التجارية والمكاتب تختلف في احتياجات العزل الحراري والصوتي والضوء الطبيعي والمتانة ومظهر الواجهة.'
+      },
+      {
+        title: 'الهيكل والبحور وميل السقف',
+        description:
+          'وزن النظام وطول اللوح أو الصاج والتثبيت السفلي وتباعد البرلينات وميل السقف ومسار الأحمال يجب تنسيقها مع الرسومات الإنشائية قبل الطلب.'
+      },
+      {
+        title: 'المناخ والعزل المائي والصيانة',
+        description:
+          'الأمطار والرياح والغبار والرطوبة والشمس وإمكانية الصيانة تؤثر مباشرة في الفلاشينغ والمزاريب والتراكبات والفواصل والمثبتات ونقاط الاختراق.'
+      }
+    ],
+    selectionTitle: 'كيف تختار SIPANEL بين الأنظمة؟',
+    selectionIntro:
+      'لكل نظام مجال استخدام مناسب. التوصية النهائية توازن عادة بين الأداء الفني وسرعة التركيب وحدود الهيكل والمظهر المعماري وتكلفة دورة الحياة.',
+    systemSelection: [
+      {
+        systemId: 'sandwich-panel',
+        title: 'ألواح الساندويتش للتغطية السريعة المعزولة',
+        description:
+          'عندما تكون سرعة التركيب والوزن المضبوط والعزل الحراري أولويات رئيسية، تكون ألواح الساندويتش خياراً أساسياً. لكن التخطيط واتجاه التركيب وإغلاق الفواصل وتفاصيل الفتحات تحتاج إلى هندسة مسبقة.'
+      },
+      {
+        systemId: 'standing-seam',
+        title: 'الدرز القائم وZIP للأسقف الحساسة للعزل المائي',
+        description:
+          'للأسقف الطويلة أو التي تحتاج إلى تثبيت مخفي وتحكم أفضل في مسار المياه، تتم مراجعة أنظمة الدرز القائم وZIP حول الميل والمزراب والفلاشينغ ونقاط الاختراق.'
+      },
+      {
+        systemId: 'aluminium-cladding',
+        title: 'الكسوة الألمنيوم للتحكم في الواجهة',
+        description:
+          'عندما يكون إيقاع الفواصل ومتانة السطح والتحكم في الموديول والتنسيق مع الفتحات مهماً، يتم تصميم الكسوة الألمنيوم مع تثبيت وتفاصيل اتصال مضبوطة.'
+      },
+      {
+        systemId: 'daylighting-transparent',
+        title: 'أنظمة الإضاءة الطبيعية لضوء مضبوط',
+        description:
+          'عندما يكون الضوء الطبيعي جزءاً من أداء المبنى، تتم مراجعة البولي كربونات أو الزجاج أو الحلول المختلطة من ناحية السلامة والحرارة والعزل المائي والاتصال بالسقف الرئيسي.'
+      }
+    ],
+    engineeringTitle: 'تحكم هندسي من التصريف إلى التركيب',
+    engineeringIntro:
+      'جودة الغلاف لا تحددها علامة المادة فقط. جزء كبير من المخاطر يظهر أو يختفي في الوصلات وتسلسل التركيب وضبط التوريد وتنسيق التفاصيل قبل بدء العمل في الموقع.',
+    engineeringItems: [
+      {
+        title: 'منطق التصريف والعزل المائي',
+        description:
+          'يتم فحص مسار المياه والمزاريب والفلاشينغ والتراكبات والمثبتات واختراقات المعدات وانتقالات السقف إلى الواجهة قبل التركيب لتقليل القرارات الارتجالية في الموقع.'
+      },
+      {
+        title: 'التوريد والتحكم في المواد',
+        description:
+          'تتم مطابقة قوائم المواد والأبعاد والألوان والسماكات والملحقات والبراغي وقطع الفلاشينغ مع رسومات الورشة وتسلسل التنفيذ لتقليل الهدر وإعادة الطلب.'
+      },
+      {
+        title: 'جودة التركيب والتسليم',
+        description:
+          'تتم إدارة تسلسل التركيب ونقاط الفحص وتنسيق الفرق والتعديلات الميدانية أثناء التنفيذ حتى يكون الغلاف النهائي قابلاً للتتبع والصيانة.'
+      }
+    ],
+    faqTitle: 'أسئلة شائعة حول أنظمة أغلفة المباني الصناعية',
+    faqIntro: 'تساعد هذه الأسئلة المالك والمصمم على تحديد مسار المراجعة الفنية قبل اختيار نظام السقف أو الواجهة.',
+    faqItems: [
+      {
+        question: 'أي نظام تغطية صناعي يناسب مشروعي؟',
+        answer:
+          'يعتمد ذلك على استخدام المبنى والبحور والميل والمناخ واحتياجات العزل ومظهر الواجهة وسرعة التنفيذ وميزانية دورة الحياة. تراجع SIPANEL الرسومات والقيود قبل اقتراح ألواح ساندويتش أو درز قائم/ZIP أو كسوة ألمنيوم أو نظام إضاءة طبيعية أو مزيج بينها.'
+      },
+      {
+        question: 'ما الفرق بين ألواح الساندويتش وسقف الدرز القائم أو ZIP؟',
+        answer:
+          'ألواح الساندويتش توفر تغطية سريعة مع عزل مدمج. أما الدرز القائم وZIP فيتم اختيارهما غالباً عندما تكون أطوال السقف والتثبيت المخفي والتحكم في التصريف وتفاصيل العزل المائي أكثر أهمية.'
+      },
+      {
+        question: 'كيف تقلل SIPANEL مخاطر التسرب؟',
+        answer:
+          'يتم تقليل مخاطر التسرب عبر تصميم مسار المياه وفحص ميل السقف وتنسيق الفلاشينغ وتفاصيل الفتحات والاختراقات واختيار طريقة التثبيت المناسبة وضبط التركيب قبل ترك القرارات لتفسير الموقع.'
+      },
+      {
+        question: 'هل توفر SIPANEL المواد فقط أم تشمل الهندسة والتنفيذ؟',
+        answer:
+          'لا يقتصر نطاق SIPANEL على توريد المواد. يمكن أن يشمل مراجعة هندسية ورسومات ورشة واختيار مواد وتخطيط توريد ومراقبة جودة وتركيباً هندسياً.'
+      },
+      {
+        question: 'ما المعلومات المطلوبة للمراجعة الهندسية؟',
+        answer:
+          'الرسومات المعمارية والإنشائية، استخدام المبنى، موقع المشروع ومناخه، الأبعاد والبحور، ميل السقف، الفتحات ومواقع المعدات، متطلبات العزل، حدود الجدول الزمني ومتطلبات مظهر الواجهة هي المدخلات الأساسية.'
+      },
+      {
+        question: 'كيف يؤثر اختيار النظام في التكلفة والسرعة والأداء طويل الأمد؟',
+        answer:
+          'أقل سعر أولي للمادة ليس دائماً أقل تكلفة للمشروع. يجب مراجعة الوزن والهدر وسرعة التركيب ومخاطر التسرب وإمكانية الصيانة ومتانة السطح معاً.'
+      }
+    ],
+    closingTitle: 'راجع الرسومات قبل طلب نظام الغلاف',
+    closingText:
+      'إذا كان المشروع في مرحلة التصميم أو التقدير أو التوريد، فإن المراجعة الهندسية المبكرة يمكن أن تقلل إعادة الطلب وهدر المواد ومخاطر التنفيذ.',
+    closingContactCta: 'طلب مراجعة هندسية',
+    closingProjectsCta: 'عرض مراجع المشاريع',
     proofTitle: 'سلسلة SIPANEL الهندسية',
     proofItems: [
       {title: 'رسومات الورشة', description: 'تحكم كامل في تفاصيل التنفيذ'},
@@ -181,11 +578,22 @@ const copy: Record<
     ]
   },
   ru: {
-    title: 'Промышленные системы покрытий | SIPANEL',
-    description: 'Цеховые чертежи, подбор материалов, контролируемые поставки и инженерный монтаж.',
+    title: 'Промышленные ограждающие системы | SIPANEL',
+    description:
+      'Промышленные ограждающие системы для кровли и фасадов: сэндвич-панели, фальцевая/ZIP кровля, алюминиевая облицовка и системы естественного освещения с инженерной проверкой, контролем материалов и монтажом.',
+    primaryKeyword: 'промышленные ограждающие системы',
     eyebrow: 'Промышленные ограждающие системы',
-    headline: 'Инженерные решения\nдля кровли и фасадов',
-    supporting: 'Цеховые чертежи, подбор материалов, контролируемые поставки и инженерный монтаж для промышленных объектов.',
+    headline: 'Промышленные\nограждающие системы',
+    supporting:
+      'SIPANEL подбирает и проектирует кровельные и фасадные системы с учетом назначения здания, пролетов, климата, водоотвода, узлов крепления, поставок и ограничений монтажа.',
+    introTitle: 'Выбор промышленной оболочки начинается с инженерной оценки',
+    introBody:
+      'Для промышленного здания ограждающая система не является только закупкой материала. Она должна работать со структурой, уклоном, водоотводом, проемами, требованиями к тепло- и звукоизоляции, доступом для монтажа, графиком и будущим обслуживанием. SIPANEL проверяет эти ограничения до закупки и монтажа, чтобы выбранная система была технически согласованной.',
+    introLinks: {
+      systems: 'Изучить системы',
+      projects: 'Посмотреть проекты',
+      contact: 'Запросить инженерную проверку'
+    },
     primaryCta: 'Получить бесплатную консультацию',
     secondaryCta: 'Посмотреть проекты',
     trustPoints: [
@@ -197,7 +605,116 @@ const copy: Record<
     sectionTitle: 'Три системы. Одна инженерная логика.',
     sectionDescription: 'Проектирование, поставка и монтаж систем покрытия с полным контролем качества.',
     cta: 'Открыть систему',
+    projectCta: 'Связанные проекты',
     home: 'Главная',
+    guidanceTitle: 'Как выбрать систему на этапе проектирования и закупки',
+    guidanceIntro:
+      'Подходящая система зависит от требуемых характеристик, условий монтажа и долгосрочной эксплуатации. SIPANEL оценивает варианты до закупки, чтобы решение не сводилось только к начальной цене материала.',
+    guidanceItems: [
+      {
+        title: 'Назначение здания и эксплуатация',
+        description:
+          'Производственные залы, склады, терминалы, коммерческие зоны и офисные части имеют разные требования к теплоизоляции, акустике, естественному свету, долговечности и внешнему виду фасада.'
+      },
+      {
+        title: 'Конструкция, пролеты и уклон',
+        description:
+          'Вес системы, длина листа или панели, подсистема, шаг прогонов, уклон кровли и передача нагрузок должны быть согласованы с конструктивными чертежами до заказа.'
+      },
+      {
+        title: 'Климат, гидроизоляция и обслуживание',
+        description:
+          'Дождь, ветер, пыль, влажность, солнце и доступ для обслуживания напрямую влияют на примыкания, водостоки, нахлесты, швы, крепеж и проходки.'
+      }
+    ],
+    selectionTitle: 'Как SIPANEL выбирает между системами',
+    selectionIntro:
+      'У каждой системы есть свое назначение. Итоговая рекомендация обычно балансирует технические характеристики, скорость монтажа, ограничения конструкции, архитектурный вид и стоимость жизненного цикла.',
+    systemSelection: [
+      {
+        systemId: 'sandwich-panel',
+        title: 'Сэндвич-панели для быстрой утепленной оболочки',
+        description:
+          'Когда важны скорость монтажа, контролируемый вес и теплотехнические свойства, сэндвич-панели часто становятся основным вариантом. При этом раскладка, направление монтажа, герметизация швов и узлы проемов должны быть проработаны заранее.'
+      },
+      {
+        systemId: 'standing-seam',
+        title: 'Фальцевая и ZIP кровля для водозащитных задач',
+        description:
+          'Для длинных скатов, скрытого крепления и лучшего контроля водоотвода рассматриваются фальцевые или ZIP Tech системы с проверкой уклона, водостока, примыканий и проходок.'
+      },
+      {
+        systemId: 'aluminium-cladding',
+        title: 'Алюминиевая облицовка для контроля фасада',
+        description:
+          'Когда важны ритм швов, стойкость поверхности, модульность и координация с проемами, алюминиевая облицовка проектируется вместе с подсистемой и узлами крепления.'
+      },
+      {
+        systemId: 'daylighting-transparent',
+        title: 'Системы естественного освещения для контролируемого света',
+        description:
+          'Если естественный свет является частью работы здания, поликарбонат, стекло или гибридные решения проверяются по безопасности, тепловому режиму, гидроизоляции и соединению с основной кровлей.'
+      }
+    ],
+    engineeringTitle: 'Инженерный контроль от водоотвода до монтажа',
+    engineeringIntro:
+      'Качество оболочки определяется не только маркой материала. Значительная часть риска создается или устраняется в узлах, последовательности монтажа, контроле поставки и координации деталей до выхода на площадку.',
+    engineeringItems: [
+      {
+        title: 'Логика водоотвода и гидроизоляции',
+        description:
+          'Путь воды, водостоки, примыкания, нахлесты, крепеж, проходки оборудования и переходы кровли к фасаду проверяются до монтажа, чтобы снизить количество решений на площадке.'
+      },
+      {
+        title: 'Поставка и контроль материалов',
+        description:
+          'Спецификации, размеры, цвета, толщины, комплектующие, крепеж и элементы примыканий сверяются с рабочими чертежами и последовательностью монтажа для снижения отходов и повторных заказов.'
+      },
+      {
+        title: 'Контроль монтажа и сдача',
+        description:
+          'Последовательность монтажа, точки проверки, координация бригад и полевые корректировки контролируются во время работ, чтобы итоговая оболочка была прослеживаемой и обслуживаемой.'
+      }
+    ],
+    faqTitle: 'Вопросы по промышленным ограждающим системам',
+    faqIntro: 'Эти вопросы помогают заказчику и проектировщику сформировать первую техническую проверку перед выбором кровельной или фасадной системы.',
+    faqItems: [
+      {
+        question: 'Какая промышленная система покрытия подходит моему проекту?',
+        answer:
+          'Это зависит от назначения здания, пролетов, уклона, климата, требований к изоляции, внешнего вида фасада, скорости работ и бюджета жизненного цикла. SIPANEL проверяет чертежи и ограничения перед рекомендацией сэндвич-панелей, фальцевой/ZIP кровли, алюминиевой облицовки, систем естественного освещения или их комбинации.'
+      },
+      {
+        question: 'Чем сэндвич-панели отличаются от фальцевой или ZIP кровли?',
+        answer:
+          'Сэндвич-панели дают быструю утепленную оболочку в одном элементе. Фальцевая и ZIP кровля чаще выбираются, когда важнее длинные скаты, скрытое крепление, контроль водоотвода и гидроизоляционные узлы.'
+      },
+      {
+        question: 'Как SIPANEL снижает риск протечек?',
+        answer:
+          'Риск протечек снижается через проектирование пути воды, проверку уклона, координацию примыканий, деталировку проемов и проходок, выбор крепления и контроль монтажа до того, как решения останутся на усмотрение площадки.'
+      },
+      {
+        question: 'SIPANEL только поставляет материалы или также выполняет инженеринг и монтаж?',
+        answer:
+          'SIPANEL не ограничивается поставкой материалов. Объем может включать инженерную проверку, рабочие чертежи, подбор материалов, планирование поставки, контроль качества и инженерный монтаж.'
+      },
+      {
+        question: 'Какая информация нужна для инженерной проверки?',
+        answer:
+          'Нужны архитектурные и конструктивные чертежи, назначение здания, локация и климат, пролеты и размеры, уклон кровли, проемы и оборудование, требования к изоляции, ограничения графика и требования к виду фасада.'
+      },
+      {
+        question: 'Как выбор системы влияет на стоимость, скорость и долгосрочную работу?',
+        answer:
+          'Самая низкая начальная цена материала не всегда означает минимальную стоимость проекта. Вес, отходы, скорость монтажа, риск протечек, доступ для ремонта и стойкость поверхности нужно оценивать вместе.'
+      }
+    ],
+    closingTitle: 'Проверьте чертежи до заказа ограждающей системы',
+    closingText:
+      'Если проект находится на стадии проектирования, оценки или закупки, ранняя инженерная проверка может снизить повторные заказы, отходы материалов и риск выполнения.',
+    closingContactCta: 'Запросить инженерную проверку',
+    closingProjectsCta: 'Посмотреть проекты',
     proofTitle: 'Инженерная цепочка SIPANEL',
     proofItems: [
       {title: 'Цеховые чертежи', description: 'Полный контроль деталей исполнения'},
@@ -440,6 +957,10 @@ function buildBreadcrumbSchema(locale: Locale) {
   ]);
 }
 
+function buildFaqSchema(locale: Locale) {
+  return buildFaqPageSchema(locale, `${routes[locale]}#faq`, copy[locale].faqItems);
+}
+
 export default async function SystemsOverviewPage({params}: Props) {
   const {locale: requestedLocale} = await params;
 
@@ -457,6 +978,7 @@ export default async function SystemsOverviewPage({params}: Props) {
     <article className="systems-overview" dir={dir}>
       <SchemaScript schema={buildCollectionSchema(locale)} />
       <SchemaScript schema={buildBreadcrumbSchema(locale)} />
+      <SchemaScript schema={buildFaqSchema(locale)} />
       <SchemaScript schema={buildOrganizationSchema(locale)} />
 
       {/* ── Hero ── */}
@@ -506,6 +1028,7 @@ export default async function SystemsOverviewPage({params}: Props) {
             <Image
               className="systems-hero__mobile-img"
               src={heroMobile}
+              /* Duplicate responsive crop of the desktop hero; decorative to avoid repeated image alt text. */
               alt=""
               aria-hidden="true"
               fill
@@ -515,6 +1038,21 @@ export default async function SystemsOverviewPage({params}: Props) {
               sizes="100vw"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="systems-intro" aria-labelledby="systems-intro-title">
+        <div className="container-shell systems-intro__inner">
+          <div className="systems-intro__copy">
+            <p className="service-eyebrow">{content.primaryKeyword}</p>
+            <h2 id="systems-intro-title">{content.introTitle}</h2>
+            <p>{content.introBody}</p>
+          </div>
+          <nav className="systems-intro__links" aria-label={content.introTitle}>
+            <a href="#systems-cards-title">{content.introLinks.systems}</a>
+            <Link href="/projects">{content.introLinks.projects}</Link>
+            <Link href="/contact#rfq-form">{content.introLinks.contact}</Link>
+          </nav>
         </div>
       </section>
 
@@ -541,6 +1079,7 @@ export default async function SystemsOverviewPage({params}: Props) {
                   <Image
                     className="systems-card__mobile-img"
                     src={system.imageMobile}
+                    /* Duplicate responsive crop of the desktop card image; decorative to avoid repeated image alt text. */
                     alt=""
                     aria-hidden="true"
                     fill
@@ -570,7 +1109,75 @@ export default async function SystemsOverviewPage({params}: Props) {
                       />
                     </svg>
                   </Link>
+                  <Link href="/projects" className="systems-card__project-link">
+                    {content.projectCta}
+                  </Link>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="systems-guidance" aria-labelledby="systems-guidance-title">
+        <div className="container-shell systems-guidance__inner">
+          <header className="systems-section-header">
+            <h2 id="systems-guidance-title">{content.guidanceTitle}</h2>
+            <p>{content.guidanceIntro}</p>
+          </header>
+          <div className="systems-guidance__grid">
+            {content.guidanceItems.map((item) => (
+              <article className="systems-guidance__item" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="systems-selection" aria-labelledby="systems-selection-title">
+        <div className="container-shell systems-selection__inner">
+          <header className="systems-section-header">
+            <h2 id="systems-selection-title">{content.selectionTitle}</h2>
+            <p>{content.selectionIntro}</p>
+          </header>
+          <div className="systems-selection__list">
+            {content.systemSelection.map((item) => {
+              const system = systems.find((candidate) => candidate.id === item.systemId);
+
+              if (!system) {
+                return null;
+              }
+
+              return (
+                <article className="systems-selection__item" key={item.systemId}>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                  <div className="systems-selection__actions">
+                    <Link href={system.routes[locale]}>{system.title[locale]}</Link>
+                    <Link href="/projects">{content.projectCta}</Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="systems-engineering" aria-labelledby="systems-engineering-title">
+        <div className="container-shell systems-engineering__inner">
+          <header className="systems-section-header">
+            <h2 id="systems-engineering-title">{content.engineeringTitle}</h2>
+            <p>{content.engineeringIntro}</p>
+          </header>
+          <div className="systems-engineering__grid">
+            {content.engineeringItems.map((item) => (
+              <article className="systems-engineering__item" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>
@@ -620,6 +1227,40 @@ export default async function SystemsOverviewPage({params}: Props) {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="systems-faq" aria-labelledby="systems-faq-title">
+        <div className="container-shell systems-faq__inner">
+          <header className="systems-section-header">
+            <h2 id="systems-faq-title">{content.faqTitle}</h2>
+            <p>{content.faqIntro}</p>
+          </header>
+          <div className="systems-faq__list">
+            {content.faqItems.map((item) => (
+              <details className="systems-faq__item" key={item.question}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="systems-closing" aria-labelledby="systems-closing-title">
+        <div className="container-shell systems-closing__inner">
+          <div>
+            <h2 id="systems-closing-title">{content.closingTitle}</h2>
+            <p>{content.closingText}</p>
+          </div>
+          <div className="systems-closing__actions">
+            <Link href="/contact#rfq-form" className="button-primary">
+              {content.closingContactCta}
+            </Link>
+            <Link href="/projects" className="button-secondary">
+              {content.closingProjectsCta}
+            </Link>
           </div>
         </div>
       </section>
