@@ -33,10 +33,10 @@ export function Footer() {
 
           <div className="site-footer__column">
             <h2>{footer('projects')}</h2>
-            <Link href={{pathname: '/projects', query: {filter: 'sandwich'}}} className="site-footer__link">{footer('projectsSandwich')}</Link>
-            <Link href={{pathname: '/projects', query: {filter: 'standing'}}} className="site-footer__link">{footer('projectsZipRoofing')}</Link>
-            <Link href={{pathname: '/projects', query: {filter: 'transparent-roofing'}}} className="site-footer__link">{footer('projectsGlass')}</Link>
-            <Link href={{pathname: '/projects', query: {filter: 'cladding'}}} className="site-footer__link">{footer('projectsCladding')}</Link>
+            <Link href="/projects" className="site-footer__link">{footer('projectsSandwich')}</Link>
+            <Link href="/projects" className="site-footer__link">{footer('projectsZipRoofing')}</Link>
+            <Link href="/projects" className="site-footer__link">{footer('projectsGlass')}</Link>
+            <Link href="/projects" className="site-footer__link">{footer('projectsCladding')}</Link>
             <Link href="/projects" className="site-footer__link">{footer('projectsAll')}</Link>
           </div>
 

@@ -13,6 +13,7 @@ type BuildPageMetadataInput = {
   routes: LocalizedRouteMap;
   type?: 'website' | 'article';
   section?: OgSection;
+  includeLanguageAlternates?: boolean;
 };
 
 const OG_IMAGES: Record<OgSection, string> = {
@@ -56,13 +57,24 @@ export function buildAlternates(locale: Locale, routes: LocalizedRouteMap) {
   };
 }
 
-export function buildPageMetadata({locale, title, description, routes, type = 'website', section = 'default'}: BuildPageMetadataInput): Metadata {
+export function buildPageMetadata({
+  locale,
+  title,
+  description,
+  routes,
+  type = 'website',
+  section = 'default',
+  includeLanguageAlternates = true
+}: BuildPageMetadataInput): Metadata {
   const ogImage = getOgImage(section);
+  const alternates = includeLanguageAlternates
+    ? buildAlternates(locale, routes)
+    : {canonical: normalizeCanonicalPath(routes[locale])};
 
   return {
     title,
     description,
-    alternates: buildAlternates(locale, routes),
+    alternates,
     openGraph: {
       title,
       description,

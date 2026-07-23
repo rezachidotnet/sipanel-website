@@ -32,6 +32,11 @@ const representativeRoutes = [
   {path: '/insights/sandwich-panel-joint-leakage-risk', locale: 'fa', canonical: `${productionOrigin}/insights/sandwich-panel-joint-leakage-risk`}
 ];
 
+const filteredProjectRoutes = [
+  {path: '/projects?filter=sandwich', locale: 'fa', canonical: `${productionOrigin}/projects`},
+  {path: '/en/projects?filter=sandwich', locale: 'en', canonical: `${productionOrigin}/en/projects`}
+];
+
 let server;
 
 function fail(message) {
@@ -146,6 +151,18 @@ function assertNoBadUrls(node) {
   });
 }
 
+function assertNoProjectQuerySchemaUrls(node) {
+  walk(node, (item) => {
+    for (const [key, value] of Object.entries(item)) {
+      if (!['@id', 'url', 'item', 'href'].includes(key) || typeof value !== 'string') continue;
+
+      if (value.includes('/projects?')) {
+        fail(`Schema URL contains project filter query for ${key}: ${value}`);
+      }
+    }
+  });
+}
+
 function assertBreadcrumb(schema, canonical) {
   const breadcrumbs = schema.filter((item) => schemaTypes(item).includes('BreadcrumbList'));
 
@@ -216,14 +233,13 @@ function assertDuplicateIds(schema) {
 
 async function assertRoute(route) {
   const html = await fetchHtml(route.path);
-  const head = getHead(html);
-  const canonicalLinks = getCanonicalLinks(head);
+  const canonicalLinks = getCanonicalLinks(html);
 
   if (canonicalLinks.length !== 1 || canonicalLinks[0] !== route.canonical) {
     fail(`${route.path} canonical mismatch: ${canonicalLinks.join(', ') || 'missing'}`);
   }
 
-  const hrefLangs = getHrefLangs(head);
+  const hrefLangs = getHrefLangs(html);
   for (const locale of locales) {
     const expectedPath = locale === 'fa' ? route.path.replace(/^\/(?:en|ar|ru)(?=\/|$)/, '') || '/' : `/${locale}${route.path.replace(/^\/(?:en|ar|ru)(?=\/|$)/, '')}`;
     const normalizedExpectedPath = expectedPath === `/${locale}/` ? `/${locale}` : expectedPath;
@@ -246,9 +262,44 @@ async function assertRoute(route) {
     fail(`${route.path} contains legacy /fa internal link`);
   }
 
+  if (/href=["'][^"']*(?:\/projects\?|\?filter=)/.test(html)) {
+    fail(`${route.path} contains crawlable project filter href`);
+  }
+
   const schema = getJsonLd(html);
   assertNoInvalidInLanguage(schema);
   assertNoBadUrls(schema);
+  assertNoProjectQuerySchemaUrls(schema);
+  assertDuplicateIds(schema);
+  assertBreadcrumb(schema, route.canonical);
+  assertPageSchema(schema, route);
+}
+
+async function assertFilteredProjectRoute(route) {
+  const html = await fetchHtml(route.path);
+  const canonicalLinks = getCanonicalLinks(html);
+
+  if (canonicalLinks.length !== 1 || canonicalLinks[0] !== route.canonical) {
+    fail(`${route.path} canonical mismatch: ${canonicalLinks.join(', ') || 'missing'}`);
+  }
+
+  const hrefLangs = getHrefLangs(html);
+  if (hrefLangs.length !== 0) {
+    fail(`${route.path} expected no hreflang annotations, found ${hrefLangs.map((item) => item.lang).join(', ')}`);
+  }
+
+  if (/<meta\s+[^>]*(?:name|property)=["']robots["'][^>]*noindex/i.test(html)) {
+    fail(`${route.path} must not emit noindex`);
+  }
+
+  if (/href=["'][^"']*(?:\/projects\?|\?filter=)/.test(html)) {
+    fail(`${route.path} contains crawlable project filter href`);
+  }
+
+  const schema = getJsonLd(html);
+  assertNoInvalidInLanguage(schema);
+  assertNoBadUrls(schema);
+  assertNoProjectQuerySchemaUrls(schema);
   assertDuplicateIds(schema);
   assertBreadcrumb(schema, route.canonical);
   assertPageSchema(schema, route);
@@ -275,6 +326,7 @@ async function assertSitemap() {
   const xml = await response.text();
   if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(xml)) fail('Sitemap contains /fa URL');
   if (/\/(?:fa|en|ar|ru)\/sitemap\.xml/.test(xml)) fail('Sitemap contains locale-prefixed sitemap URL');
+  if (/\/projects\?filter=/.test(xml)) fail('Sitemap contains parameterized project filter URL');
 }
 
 async function run() {
@@ -291,6 +343,10 @@ async function run() {
 
   for (const route of representativeRoutes) {
     await assertRoute(route);
+  }
+
+  for (const route of filteredProjectRoutes) {
+    await assertFilteredProjectRoute(route);
   }
 
   await assertLocaleHeaders();

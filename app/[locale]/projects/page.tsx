@@ -50,6 +50,7 @@ import projectsHeroMobileImg from '@/assets/projects/projects-index-hero-mobile.
 
 type Props = {
   params: Promise<{locale: string}>;
+  searchParams?: Promise<{filter?: string | string[]}>;
 };
 
 type ProjectCaseStudy = {
@@ -1329,7 +1330,23 @@ export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-export async function generateMetadata({params}: Props): Promise<Metadata> {
+const recognizedProjectFilters = new Set([
+  'sandwich',
+  'standing',
+  'standing-seam',
+  'cladding',
+  'aluminium',
+  'transparent-roofing',
+  'daylighting'
+]);
+
+function hasRecognizedProjectFilter(searchParams?: {filter?: string | string[]}) {
+  const filter = searchParams?.filter;
+
+  return typeof filter === 'string' && recognizedProjectFilters.has(filter);
+}
+
+export async function generateMetadata({params, searchParams}: Props): Promise<Metadata> {
   const {locale} = await params;
 
   if (!locales.includes(locale as Locale)) {
@@ -1338,13 +1355,15 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 
   const validLocale = locale as Locale;
   const content = copy[validLocale];
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
 
   return buildPageMetadata({
     locale: validLocale,
     title: content.title,
     description: content.description,
     routes,
-    section: 'projects'
+    section: 'projects',
+    includeLanguageAlternates: !hasRecognizedProjectFilter(resolvedSearchParams)
   });
 }
 
