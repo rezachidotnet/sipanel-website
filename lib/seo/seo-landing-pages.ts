@@ -214,10 +214,31 @@ function buildLocalizedRoutes(routeSlug: string): Record<Locale, string> {
 }
 
 function buildRelatedServices(locale: Locale, links: SeoRelatedServiceLink[]): SeoLinkCard[] {
+  const serviceLabels: Record<string, Record<Locale, {title: string; description: string}>> = {
+    '/systems/sandwich-panel-systems': {
+      en: {title: 'Sandwich Panel Systems', description: 'Panel system engineering and installation control'},
+      fa: {title: 'سیستم‌های ساندویچ پانل', description: 'مهندسی سیستم پانل و کنترل نصب'},
+      ar: {title: 'أنظمة ألواح الساندويتش', description: 'هندسة نظام الألواح وضبط التركيب'},
+      ru: {title: 'Системы сэндвич-панелей', description: 'Инженерия панельной системы и контроль монтажа'}
+    },
+    '/systems/standing-seam-zip-tech-roofing': {
+      en: {title: 'Standing Seam & ZIP Tech Roofing', description: 'Roof waterproofing and drainage control'},
+      fa: {title: 'سقف استندینگ سیم و ZIP Tech', description: 'کنترل آب‌بندی و زهکشی سقف'},
+      ar: {title: 'أسقف ستاندينغ سيم و ZIP Tech', description: 'ضبط العزل المائي وتصريف السقف'},
+      ru: {title: 'Фальцевая кровля и ZIP Tech', description: 'Контроль гидроизоляции и водоотвода кровли'}
+    },
+    '/systems/aluminium-cladding-covering': {
+      en: {title: 'Aluminium Cladding & Covering', description: 'Facade joint and material planning'},
+      fa: {title: 'کلادینگ و پوشش آلومینیومی', description: 'برنامه‌ریزی درز نما و متریال'},
+      ar: {title: 'الكسوة والتغطية بالألمنيوم', description: 'تخطيط فواصل الواجهة والمواد'},
+      ru: {title: 'Алюминиевая облицовка и покрытие', description: 'Планирование фасадных стыков и материалов'}
+    }
+  };
+
   return links.map((link) => ({
-    title: link.title,
+    title: serviceLabels[link.path]?.[locale]?.title ?? link.title,
     href: link.path,
-    description: link.description
+    description: serviceLabels[link.path]?.[locale]?.description ?? link.description
   }));
 }
 
@@ -242,6 +263,245 @@ function buildSeoFaqItems(keyword: string, focus: string) {
   ];
 }
 
+const localizedSolutionNames: Record<string, Record<Locale, string>> = {
+  'industrial-sandwich-panel-installation': {
+    en: 'Industrial sandwich panel installation',
+    fa: 'اجرای صنعتی ساندویچ پانل',
+    ar: 'تركيب ألواح الساندويتش الصناعية',
+    ru: 'Монтаж промышленных сэндвич-панелей'
+  },
+  'sandwich-panel-for-factory-buildings': {
+    en: 'Sandwich panel for factory buildings',
+    fa: 'ساندویچ پانل برای ساختمان‌های کارخانه',
+    ar: 'ألواح الساندويتش لمباني المصانع',
+    ru: 'Сэндвич-панели для заводских зданий'
+  },
+  'standing-seam-roofing-industrial-buildings': {
+    en: 'Standing seam roofing for industrial buildings',
+    fa: 'سقف استندینگ سیم برای ساختمان‌های صنعتی',
+    ar: 'أسقف ستاندينغ سيم للمباني الصناعية',
+    ru: 'Фальцевая кровля для промышленных зданий'
+  },
+  'industrial-roof-leakage-prevention': {
+    en: 'Industrial roof leakage prevention',
+    fa: 'پیشگیری از نشت سقف صنعتی',
+    ar: 'منع تسرب الأسقف الصناعية',
+    ru: 'Предотвращение протечек промышленных кровель'
+  },
+  'aluminium-cladding-industrial-facades': {
+    en: 'Aluminium cladding for industrial facades',
+    fa: 'نمای آلومینیومی برای نماهای صنعتی',
+    ar: 'الكسوة بالألمنيوم للواجهات الصناعية',
+    ru: 'Алюминиевая облицовка промышленных фасадов'
+  },
+  'shop-drawing-review-panel-projects': {
+    en: 'Shop drawing review for panel projects',
+    fa: 'بازبینی شاپ‌دراوینگ پروژه‌های پانلی',
+    ar: 'مراجعة رسومات الورشة لمشاريع الألواح',
+    ru: 'Проверка рабочих чертежей панельных проектов'
+  },
+  'industrial-envelope-systems': {
+    en: 'Industrial envelope systems',
+    fa: 'سیستم‌های پوشانه صنعتی',
+    ar: 'أنظمة أغلفة المباني الصناعية',
+    ru: 'Промышленные ограждающие системы'
+  },
+  'panel-material-optimization': {
+    en: 'Panel material optimization',
+    fa: 'بهینه‌سازی متریال پانل',
+    ar: 'تحسين مواد الألواح',
+    ru: 'Оптимизация материалов панелей'
+  }
+};
+
+const localizedSolutionUi = {
+  fa: {
+    titleSuffix: ' | SIPANEL',
+    eyebrow: 'راهکار مهندسی',
+    trust: 'بازبینی مهندسی پیش از تأمین، اجرا و تحویل پروژه.',
+    primaryCta: 'درخواست مشاوره فنی',
+    secondaryCta: 'بررسی هزینه پروژه',
+    problem: 'ریسک‌های اصلی پیش از اجرا',
+    context: 'الزامات فنی',
+    solution: 'سی‌پانل چگونه ریسک را کاهش می‌دهد',
+    workflow: 'گردش‌کار مهندسی',
+    proof: 'شواهد فنی پیش از اجرا',
+    pending: 'در انتظار سند فنی تاییدشده',
+    applications: 'کاربردها',
+    quality: 'چک‌پوینت‌های کیفیت',
+    cases: 'شواهد پروژه‌ای مرتبط',
+    resources: 'منابع مهندسی مرتبط',
+    faq: 'سوالات متداول',
+    conversion: 'پیش از شروع اجرا، ریسک پروژه را بررسی کنید',
+    conversionText: 'نقشه‌ها و اطلاعات پروژه را ارسال کنید تا تیم مهندسی سی‌پانل محدوده، جزئیات و ریسک اجرا را بررسی کند.',
+    resourceCta: 'مشاهده منبع مهندسی',
+    casesCta: 'مشاهده پروژه‌ها'
+  },
+  ar: {
+    titleSuffix: ' | SIPANEL',
+    eyebrow: 'حل هندسي',
+    trust: 'مراجعة هندسية قبل التوريد والتنفيذ وتسليم المشروع.',
+    primaryCta: 'اطلب استشارة فنية',
+    secondaryCta: 'راجع تكلفة المشروع',
+    problem: 'المخاطر الرئيسية قبل التنفيذ',
+    context: 'المتطلبات الفنية',
+    solution: 'كيف تقلل SIPANEL مخاطر المشروع',
+    workflow: 'مسار العمل الهندسي',
+    proof: 'الإثبات الفني قبل التنفيذ',
+    pending: 'بانتظار مستند فني موثق',
+    applications: 'الاستخدامات',
+    quality: 'نقاط ضبط الجودة',
+    cases: 'إثباتات مشاريع مرتبطة',
+    resources: 'موارد هندسية مرتبطة',
+    faq: 'أسئلة شائعة',
+    conversion: 'راجع مخاطر المشروع قبل بدء التنفيذ',
+    conversionText: 'أرسل الرسومات ومعلومات المشروع حتى يراجع فريق SIPANEL الهندسي النطاق والتفاصيل ومخاطر التنفيذ.',
+    resourceCta: 'عرض المورد الهندسي',
+    casesCta: 'عرض المشاريع'
+  },
+  ru: {
+    titleSuffix: ' | SIPANEL',
+    eyebrow: 'Инженерное решение',
+    trust: 'Инженерная проверка до поставки, монтажа и сдачи проекта.',
+    primaryCta: 'Запросить техническую консультацию',
+    secondaryCta: 'Проверить стоимость проекта',
+    problem: 'Ключевые риски до выполнения',
+    context: 'Технические требования',
+    solution: 'Как SIPANEL снижает риск проекта',
+    workflow: 'Инженерный процесс',
+    proof: 'Техническое подтверждение до выполнения',
+    pending: 'Ожидается подтвержденный технический документ',
+    applications: 'Применение',
+    quality: 'Контрольные точки качества',
+    cases: 'Связанные проектные доказательства',
+    resources: 'Связанные инженерные ресурсы',
+    faq: 'Вопросы и ответы',
+    conversion: 'Проверьте риски проекта до начала выполнения',
+    conversionText: 'Отправьте чертежи и данные проекта, чтобы инженерная команда SIPANEL проверила объем, детали и риски выполнения.',
+    resourceCta: 'Смотреть инженерный ресурс',
+    casesCta: 'Смотреть проекты'
+  }
+} satisfies Record<Exclude<Locale, 'en'>, Record<string, string>>;
+
+function localizedSolutionContent(def: SeoLandingPageDefinition, locale: Locale): SeoLandingPageLocaleContent {
+  if (locale === 'en') {
+    return {
+      seo: {
+        primaryKeyword: def.keyword,
+        title: def.seoTitle,
+        metaDescription: def.metaDescription,
+        h1: def.h1,
+        shortIntro: def.shortIntro
+      },
+      hero: {
+        eyebrow: def.heroEyebrow,
+        h1: def.h1,
+        shortIntro: def.shortIntro,
+        trustMicrocopy: def.heroTrustMicrocopy,
+        primaryCta: def.primaryCta,
+        secondaryCta: def.heroSecondaryCta,
+        heroVisualDirection: def.heroVisualDirection,
+        heroVisualAlt: def.heroVisualAlt
+      },
+      searchIntentProblem: {title: def.problemTitle, cards: def.problemCards},
+      technicalContext: {title: def.technicalContextTitle, intro: def.technicalContextIntro, points: def.technicalContextPoints},
+      sipanelSolution: {title: def.solutionTitle, pillars: def.solutionPillars},
+      engineeringWorkflow: {title: def.workflowTitle, steps: def.workflowSteps},
+      technicalProof: {title: def.technicalProofTitle, description: def.technicalProofDescription, pendingLabel: def.technicalProofPendingLabel},
+      applicationDetails: {title: def.applicationTitle, items: def.applications, relatedServices: buildRelatedServices(locale, def.relatedServiceLinks)},
+      qualityCheckpoints: {title: def.qualityCheckpointsTitle, items: def.qualityCheckpoints},
+      relatedCaseStudies: {title: def.relatedCaseStudiesTitle, pendingLabel: def.relatedCaseStudiesPendingLabel, cta: def.relatedCaseStudiesCta},
+      relatedResources: {title: def.relatedResourcesTitle, pendingLabel: def.relatedResourcesPendingLabel, cta: def.relatedResourcesCta},
+      faq: {title: `${def.keyword} Questions`, items: buildSeoFaqItems(def.keyword, def.faqFocus)},
+      conversionCta: {headline: def.conversionHeadline, text: def.conversionText, primaryCta: def.primaryCta, secondaryCta: def.conversionSecondaryCta},
+      schemas: {service: true, article: true, faq: true, breadcrumb: true}
+    };
+  }
+
+  const ui = localizedSolutionUi[locale];
+  const name = localizedSolutionNames[def.slug]?.[locale] ?? def.keyword;
+
+  return {
+    seo: {
+      primaryKeyword: name,
+      title: `${name}${ui.titleSuffix}`,
+      metaDescription: locale === 'fa'
+        ? `${name} با تمرکز بر هماهنگی مهندسی، کنترل تأمین، جزئیات اجرایی و کاهش ریسک پیش از شروع پروژه.`
+        : locale === 'ar'
+        ? `${name} مع تركيز على التنسيق الهندسي وضبط التوريد وتفاصيل التنفيذ وتقليل المخاطر قبل بدء المشروع.`
+        : `${name}: инженерная координация, контроль поставки, исполнительные детали и снижение рисков до начала проекта.`,
+      h1: name,
+      shortIntro: locale === 'fa'
+        ? `سی‌پانل ${name} را به‌عنوان یک بسته مهندسی هماهنگ بررسی می‌کند تا ریسک طراحی، تأمین و نصب پیش از اجرا کنترل شود.`
+        : locale === 'ar'
+        ? `تراجع SIPANEL ${name} كحزمة هندسية منسقة حتى تتم إدارة مخاطر التصميم والتوريد والتركيب قبل التنفيذ.`
+        : `SIPANEL рассматривает ${name} как согласованный инженерный пакет, чтобы контролировать риски проектирования, поставки и монтажа до выполнения.`
+    },
+    hero: {
+      eyebrow: ui.eyebrow,
+      h1: name,
+      shortIntro: locale === 'fa'
+        ? `تمرکز این صفحه بر کنترل فنی ${name} پیش از سفارش متریال و شروع کارگاه است.`
+        : locale === 'ar'
+        ? `تركز هذه الصفحة على الضبط الفني لـ ${name} قبل طلب المواد وبدء العمل في الموقع.`
+        : `Эта страница посвящена техническому контролю ${name} до заказа материалов и начала работ.`,
+      trustMicrocopy: ui.trust,
+      primaryCta: ui.primaryCta,
+      secondaryCta: ui.secondaryCta,
+      heroVisualDirection: ui.pending,
+      heroVisualAlt: ui.pending
+    },
+    searchIntentProblem: {
+      title: ui.problem,
+      cards: [
+        {title: locale === 'ru' ? 'Координация' : locale === 'ar' ? 'التنسيق' : 'هماهنگی', description: ui.conversionText},
+        {title: locale === 'ru' ? 'Поставка' : locale === 'ar' ? 'التوريد' : 'تأمین', description: locale === 'fa' ? 'اقلام، اکسسوری‌ها و توالی خرید باید با نقشه و برنامه اجرا هماهنگ باشد.' : locale === 'ar' ? 'يجب أن تتوافق المواد والملحقات وتسلسل الشراء مع الرسومات وخطة التنفيذ.' : 'Материалы, аксессуары и порядок закупки должны соответствовать чертежам и плану работ.'},
+        {title: locale === 'ru' ? 'Монтаж' : locale === 'ar' ? 'التركيب' : 'نصب', description: locale === 'fa' ? 'جزئیات نصب و نقاط کنترل کیفیت پیش از شروع کارگاه مشخص می‌شود.' : locale === 'ar' ? 'تحدد تفاصيل التركيب ونقاط ضبط الجودة قبل بدء العمل في الموقع.' : 'Монтажные детали и контрольные точки качества определяются до начала работ.'}
+      ]
+    },
+    technicalContext: {
+      title: ui.context,
+      intro: locale === 'fa' ? `${name} نیازمند بررسی نقشه، مرزهای محدوده، دیتیل اتصال، متریال و توالی اجرا است.` : locale === 'ar' ? `يتطلب ${name} مراجعة الرسومات وحدود النطاق وتفاصيل الوصلات والمواد وتسلسل التنفيذ.` : `${name} требует проверки чертежей, границ объема, узлов, материалов и последовательности работ.`,
+      points: [ui.problem, ui.context, ui.quality]
+    },
+    sipanelSolution: {
+      title: ui.solution,
+      pillars: [
+        {title: locale === 'ru' ? 'Проектирование' : locale === 'ar' ? 'التصميم' : 'طراحی', description: ui.trust},
+        {title: locale === 'ru' ? 'Поставка' : locale === 'ar' ? 'التوريد' : 'تأمین', description: locale === 'fa' ? 'فهرست متریال و اکسسوری‌ها پیش از خرید با نقشه هماهنگ می‌شود.' : locale === 'ar' ? 'تنسق قائمة المواد والملحقات مع الرسومات قبل الشراء.' : 'Ведомость материалов и аксессуаров согласуется с чертежами до закупки.'},
+        {title: locale === 'ru' ? 'Выполнение' : locale === 'ar' ? 'التنفيذ' : 'اجرا', description: locale === 'fa' ? 'توالی نصب و کنترل کیفیت برای کاهش دوباره‌کاری تعریف می‌شود.' : locale === 'ar' ? 'يحدد تسلسل التركيب وضبط الجودة لتقليل إعادة العمل.' : 'Последовательность монтажа и контроль качества задаются для снижения переделок.'}
+      ]
+    },
+    engineeringWorkflow: {
+      title: ui.workflow,
+      steps: ['review', 'details', 'procurement', 'execution', 'verification'].map((_, index) => ({
+        title: [ui.context, ui.problem, ui.resources, ui.quality, ui.proof][index],
+        description: ui.conversionText
+      }))
+    },
+    technicalProof: {title: ui.proof, description: ui.pending, pendingLabel: ui.pending},
+    applicationDetails: {
+      title: ui.applications,
+      items: [
+        {title: name, description: locale === 'fa' ? 'برای پروژه‌هایی که به هماهنگی مهندسی پیش از اجرا نیاز دارند.' : locale === 'ar' ? 'للمشاريع التي تحتاج إلى تنسيق هندسي قبل التنفيذ.' : 'Для проектов, которым нужна инженерная координация до выполнения.'}
+      ],
+      relatedServices: buildRelatedServices(locale, def.relatedServiceLinks)
+    },
+    qualityCheckpoints: {title: ui.quality, items: [ui.context, ui.resources, ui.proof]},
+    relatedCaseStudies: {title: ui.cases, pendingLabel: ui.pending, cta: ui.casesCta},
+    relatedResources: {title: ui.resources, pendingLabel: ui.pending, cta: ui.resourceCta},
+    faq: {
+      title: ui.faq,
+      items: [
+        {question: locale === 'fa' ? `بازبینی ${name} شامل چه مواردی است؟` : locale === 'ar' ? `ماذا تشمل مراجعة ${name}؟` : `Что включает проверка ${name}?`, answer: ui.conversionText},
+        {question: locale === 'fa' ? 'آیا پیش از خرید قابل بررسی است؟' : locale === 'ar' ? 'هل يمكن المراجعة قبل الشراء؟' : 'Можно ли проверить до закупки?', answer: ui.trust}
+      ]
+    },
+    conversionCta: {headline: ui.conversion, text: ui.conversionText, primaryCta: ui.primaryCta, secondaryCta: ui.secondaryCta},
+    schemas: {service: true, article: true, faq: true, breadcrumb: true}
+  };
+}
+
 function buildSeoLandingPage(def: SeoLandingPageDefinition): SeoLandingPageData {
   const routes = buildLocalizedRoutes(def.routeSlug);
 
@@ -249,85 +509,7 @@ function buildSeoLandingPage(def: SeoLandingPageDefinition): SeoLandingPageData 
     slug: def.slug,
     routes,
     localeContent: Object.fromEntries(
-      locales.map((locale) => [
-        locale,
-        {
-          seo: {
-            primaryKeyword: def.keyword,
-            title: def.seoTitle,
-            metaDescription: def.metaDescription,
-            h1: def.h1,
-            shortIntro: def.shortIntro
-          },
-          hero: {
-            eyebrow: def.heroEyebrow,
-            h1: def.h1,
-            shortIntro: def.shortIntro,
-            trustMicrocopy: def.heroTrustMicrocopy,
-            primaryCta: def.primaryCta,
-            secondaryCta: def.heroSecondaryCta,
-            heroVisualDirection: def.heroVisualDirection,
-            heroVisualAlt: def.heroVisualAlt
-          },
-          searchIntentProblem: {
-            title: def.problemTitle,
-            cards: def.problemCards
-          },
-          technicalContext: {
-            title: def.technicalContextTitle,
-            intro: def.technicalContextIntro,
-            points: def.technicalContextPoints
-          },
-          sipanelSolution: {
-            title: def.solutionTitle,
-            pillars: def.solutionPillars
-          },
-          engineeringWorkflow: {
-            title: def.workflowTitle,
-            steps: def.workflowSteps
-          },
-          technicalProof: {
-            title: def.technicalProofTitle,
-            description: def.technicalProofDescription,
-            pendingLabel: def.technicalProofPendingLabel
-          },
-          applicationDetails: {
-            title: def.applicationTitle,
-            items: def.applications,
-            relatedServices: buildRelatedServices(locale, def.relatedServiceLinks)
-          },
-          qualityCheckpoints: {
-            title: def.qualityCheckpointsTitle,
-            items: def.qualityCheckpoints
-          },
-          relatedCaseStudies: {
-            title: def.relatedCaseStudiesTitle,
-            pendingLabel: def.relatedCaseStudiesPendingLabel,
-            cta: def.relatedCaseStudiesCta
-          },
-          relatedResources: {
-            title: def.relatedResourcesTitle,
-            pendingLabel: def.relatedResourcesPendingLabel,
-            cta: def.relatedResourcesCta
-          },
-          faq: {
-            title: `${def.keyword} Questions`,
-            items: buildSeoFaqItems(def.keyword, def.faqFocus)
-          },
-          conversionCta: {
-            headline: def.conversionHeadline,
-            text: def.conversionText,
-            primaryCta: def.primaryCta,
-            secondaryCta: def.conversionSecondaryCta
-          },
-          schemas: {
-            service: true,
-            article: true,
-            faq: true,
-            breadcrumb: true
-          }
-        }
-      ])
+      locales.map((locale) => [locale, localizedSolutionContent(def, locale)])
     ) as Record<Locale, SeoLandingPageLocaleContent>
   };
 }

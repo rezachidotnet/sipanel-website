@@ -349,21 +349,215 @@ export const engineeringInsightsPage: EngineeringInsightsPageData = {
   articles: engineeringInsightArticles
 };
 
-export function getEngineeringInsightsPage() {
-  return engineeringInsightsPage;
+const insightLocaleLabels = {
+  fa: {
+    seoTitle: 'بینش‌های مهندسی | SIPANEL',
+    metaDescription: 'مقاله‌های فنی سی‌پانل درباره سیستم‌های پانلی، آب‌بندی سقف، نما، منابع مهندسی و کنترل ریسک اجرا.',
+    h1: 'بینش‌های مهندسی',
+    eyebrow: 'مهندسی SIPANEL',
+    subheadline: 'مقاله‌های فنی درباره مسئله پروژه، علت مهندسی، منطق اجرای سی‌پانل، وضعیت اثبات و منابع داخلی.',
+    all: 'همه موضوعات',
+    categories: {panel_systems: 'سیستم‌های پانلی', roofing_waterproofing: 'سقف و آب‌بندی', cladding_facades: 'نما و کلادینگ'},
+    articleEyebrow: 'بینش مهندسی',
+    readingTime: '۶ دقیقه مطالعه فنی',
+    problem: 'مسئله',
+    cause: 'علت مهندسی',
+    visual: 'نمودار فنی در انتظار',
+    execution: 'منطق راهکار SIPANEL',
+    resources: 'منابع مرتبط',
+    services: 'خدمات مرتبط',
+    projects: 'شواهد پروژه‌ای',
+    cta: 'درخواست مشاوره فنی',
+    secondary: 'مشاهده منابع مرتبط'
+  },
+  ar: {
+    seoTitle: 'رؤى هندسية | SIPANEL',
+    metaDescription: 'مقالات فنية من SIPANEL حول أنظمة الألواح وعزل الأسقف والواجهات والموارد الهندسية وضبط مخاطر التنفيذ.',
+    h1: 'رؤى هندسية',
+    eyebrow: 'هندسة SIPANEL',
+    subheadline: 'مقالات فنية حول سياق المشكلة والسبب الهندسي ومنطق تنفيذ SIPANEL وحالة الإثبات والموارد الداخلية.',
+    all: 'كل الموضوعات',
+    categories: {panel_systems: 'أنظمة الألواح', roofing_waterproofing: 'الأسقف والعزل المائي', cladding_facades: 'الواجهات والكلادينج'},
+    articleEyebrow: 'رؤية هندسية',
+    readingTime: 'قراءة فنية ٦ دقائق',
+    problem: 'المشكلة',
+    cause: 'السبب الهندسي',
+    visual: 'مخطط فني قيد التوثيق',
+    execution: 'منطق حل SIPANEL',
+    resources: 'موارد مرتبطة',
+    services: 'خدمات مرتبطة',
+    projects: 'إثباتات مشاريع',
+    cta: 'اطلب استشارة فنية',
+    secondary: 'عرض الموارد المرتبطة'
+  },
+  ru: {
+    seoTitle: 'Инженерные материалы | SIPANEL',
+    metaDescription: 'Технические статьи SIPANEL о панельных системах, гидроизоляции кровель, фасадах, инженерных ресурсах и контроле рисков выполнения.',
+    h1: 'Инженерные материалы',
+    eyebrow: 'Инженерия SIPANEL',
+    subheadline: 'Технические статьи о контексте задачи, инженерной причине, логике выполнения SIPANEL, статусе подтверждений и внутренних ресурсах.',
+    all: 'Все темы',
+    categories: {panel_systems: 'Панельные системы', roofing_waterproofing: 'Кровля и гидроизоляция', cladding_facades: 'Фасады и облицовка'},
+    articleEyebrow: 'Инженерный материал',
+    readingTime: '6 минут технического чтения',
+    problem: 'Задача',
+    cause: 'Инженерная причина',
+    visual: 'Техническая схема ожидает подтверждения',
+    execution: 'Логика решения SIPANEL',
+    resources: 'Связанные ресурсы',
+    services: 'Связанные услуги',
+    projects: 'Проектные доказательства',
+    cta: 'Запросить техническую консультацию',
+    secondary: 'Смотреть связанные ресурсы'
+  }
+} satisfies Record<Exclude<Locale, 'en'>, {
+  seoTitle: string;
+  metaDescription: string;
+  h1: string;
+  eyebrow: string;
+  subheadline: string;
+  all: string;
+  categories: Record<InsightCategoryId, string>;
+  articleEyebrow: string;
+  readingTime: string;
+  problem: string;
+  cause: string;
+  visual: string;
+  execution: string;
+  resources: string;
+  services: string;
+  projects: string;
+  cta: string;
+  secondary: string;
+}>;
+
+const localizedInsightTitles: Record<string, Record<Locale, string>> = {
+  'sandwich-panel-joint-leakage-risk': {
+    en: 'Why Sandwich Panel Joint Logic Controls Leakage Risk',
+    fa: 'چرا منطق درز ساندویچ پانل ریسک نشتی را کنترل می‌کند',
+    ar: 'لماذا تتحكم منطق وصلات ألواح الساندويتش في مخاطر التسرب',
+    ru: 'Почему логика стыков сэндвич-панелей контролирует риск протечек'
+  },
+  'standing-seam-roof-drainage-logic': {
+    en: 'Standing Seam Roof Drainage Logic Before Execution',
+    fa: 'منطق زهکشی سقف استندینگ سیم پیش از اجرا',
+    ar: 'منطق تصريف سقف ستاندينغ سيم قبل التنفيذ',
+    ru: 'Логика водоотвода фальцевой кровли до выполнения'
+  },
+  'aluminium-cladding-facade-joint-control': {
+    en: 'Aluminium Cladding Joint Control for Industrial Facades',
+    fa: 'کنترل درز نمای آلومینیومی در نماهای صنعتی',
+    ar: 'ضبط فواصل الكسوة بالألمنيوم للواجهات الصناعية',
+    ru: 'Контроль стыков алюминиевой облицовки промышленных фасадов'
+  }
+};
+
+function localizedInsightArticle(article: EngineeringInsightArticle, locale: Locale): EngineeringInsightArticle {
+  if (locale === 'en') return article;
+
+  const labels = insightLocaleLabels[locale];
+  const title = localizedInsightTitles[article.slug]?.[locale] ?? article.title;
+
+  return {
+    ...article,
+    title,
+    metaDescription: `${title}. ${labels.metaDescription}`,
+    primaryKeyword: title,
+    eyebrow: labels.articleEyebrow,
+    summary: labels.subheadline,
+    readingTime: labels.readingTime,
+    problemContext: {
+      title: labels.problem,
+      body: locale === 'fa'
+        ? 'ریسک پروژه زمانی افزایش می‌یابد که جزئیات پوسته، مسیر آب، اکسسوری‌ها و توالی نصب پیش از خرید و اجرا هماهنگ نشده باشد.'
+        : locale === 'ar'
+        ? 'تزداد مخاطر المشروع عندما لا تنسق تفاصيل الغلاف ومسار المياه والملحقات وتسلسل التركيب قبل الشراء والتنفيذ.'
+        : 'Риск проекта возрастает, когда детали оболочки, путь воды, аксессуары и последовательность монтажа не согласованы до закупки и выполнения.',
+      points: [labels.problem, labels.resources, labels.projects]
+    },
+    engineeringExplanation: {
+      title: labels.cause,
+      body: locale === 'fa'
+        ? 'بازبینی مهندسی باید نقشه، دیتیل، متریال، دسترسی نصب و نقاط کنترل کیفیت را به یک منطق اجرایی واحد وصل کند.'
+        : locale === 'ar'
+        ? 'يجب أن تربط المراجعة الهندسية الرسومات والتفاصيل والمواد وإمكانية التركيب ونقاط ضبط الجودة بمنطق تنفيذ واحد.'
+        : 'Инженерная проверка должна связать чертежи, детали, материалы, доступ монтажа и контрольные точки качества в единую логику выполнения.',
+      points: [labels.problem, labels.cause, labels.execution]
+    },
+    technicalVisual: {
+      title: labels.visual,
+      description: locale === 'fa' ? 'نمودار واقعی پس از تأیید مستندات پروژه منتشر می‌شود.' : locale === 'ar' ? 'ينشر المخطط الحقيقي بعد توثيق مستندات المشروع.' : 'Реальная схема публикуется после подтверждения проектных документов.',
+      status: 'pending_technical_proof',
+      callouts: [labels.problem, labels.cause, labels.execution]
+    },
+    executionLogic: {
+      title: labels.execution,
+      steps: [
+        {title: labels.problem, description: labels.subheadline},
+        {title: labels.resources, description: labels.metaDescription},
+        {title: labels.projects, description: labels.subheadline}
+      ]
+    },
+    faqs: [
+      {question: locale === 'fa' ? 'این بازبینی چه زمانی باید انجام شود؟' : locale === 'ar' ? 'متى يجب إجراء هذه المراجعة؟' : 'Когда нужно выполнять такую проверку?', answer: labels.subheadline},
+      {question: locale === 'fa' ? 'اگر سند فنی هنوز آماده نباشد چه می‌شود؟' : locale === 'ar' ? 'ماذا لو لم تكن الوثيقة الفنية جاهزة؟' : 'Что если технический документ еще не готов?', answer: labels.visual}
+    ],
+    relatedResources: [{title: labels.resources, href: '/resources', description: labels.metaDescription}],
+    relatedServices: [{title: labels.services, href: '/systems', description: labels.subheadline}],
+    relatedProjects: [{title: labels.projects, href: '/projects', description: labels.subheadline}],
+    relatedInsights: [],
+    conversionCta: {
+      headline: labels.cta,
+      text: labels.subheadline,
+      primaryCta: labels.cta,
+      secondaryCta: labels.secondary
+    }
+  };
+}
+
+export function getEngineeringInsightsPage(locale: Locale = 'en') {
+  if (locale === 'en') return engineeringInsightsPage;
+
+  const labels = insightLocaleLabels[locale];
+  const articles = engineeringInsightArticles.map((article) => localizedInsightArticle(article, locale));
+
+  return {
+    ...engineeringInsightsPage,
+    seo: {
+      title: labels.seoTitle,
+      metaDescription: labels.metaDescription,
+      h1: labels.h1
+    },
+    hero: {
+      eyebrow: labels.eyebrow,
+      subheadline: labels.subheadline,
+      primaryCta: labels.cta,
+      secondaryCta: labels.secondary
+    },
+    categories: [
+      {id: 'all', label: labels.all},
+      {id: 'panel_systems', label: labels.categories.panel_systems},
+      {id: 'roofing_waterproofing', label: labels.categories.roofing_waterproofing},
+      {id: 'cladding_facades', label: labels.categories.cladding_facades}
+    ] satisfies EngineeringInsightsPageData['categories'],
+    articles
+  };
 }
 
 export function getEngineeringInsightsMetadata(locale: Locale) {
+  const page = getEngineeringInsightsPage(locale);
+
   return buildPageMetadata({
     locale,
-    title: engineeringInsightsPage.seo.title,
-    description: engineeringInsightsPage.seo.metaDescription,
-    routes: engineeringInsightsPage.routes
+    title: page.seo.title,
+    description: page.seo.metaDescription,
+    routes: page.routes
   });
 }
 
 export function getEngineeringInsightArticle(locale: Locale, slug: string) {
-  return engineeringInsightArticles.find((article) => article.slug === slug && article.routes[locale]) ?? null;
+  const article = engineeringInsightArticles.find((item) => item.slug === slug && item.routes[locale]) ?? null;
+  return article ? localizedInsightArticle(article, locale) : null;
 }
 
 export function getEngineeringInsightArticleMetadata(locale: Locale, slug: string) {
@@ -373,9 +567,17 @@ export function getEngineeringInsightArticleMetadata(locale: Locale, slug: strin
     return null;
   }
 
+  const titleSuffix = locale === 'fa'
+    ? 'بینش مهندسی SIPANEL'
+    : locale === 'ar'
+    ? 'رؤية هندسية SIPANEL'
+    : locale === 'ru'
+    ? 'Инженерный материал SIPANEL'
+    : 'SIPANEL Engineering Insight';
+
   return buildPageMetadata({
     locale,
-    title: `${article.title} | SIPANEL Engineering Insight`,
+    title: `${article.title} | ${titleSuffix}`,
     description: article.metaDescription,
     routes: article.routes,
     type: 'article'

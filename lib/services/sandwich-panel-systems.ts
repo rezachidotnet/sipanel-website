@@ -269,55 +269,297 @@ const faContent: LocalizedContent = {
 };
 
 function getRelatedCaseStudies(locale: Locale) {
-  const cases = [
-    {
-      projectName: locale === 'fa' ? 'بیمارستان ۳۲ تختخوابی ارتش' : '32-Bed Military Hospital',
-      location: locale === 'fa' ? 'راز و جرگلان، خراسان شمالی، ایران' : 'Raz & Jargalan, North Khorasan, Iran',
-      areaM2: '1,000 m²',
-      projectType: locale === 'fa' ? 'بیمارستان اضطراری — تحویل کامل EPC' : 'Emergency hospital — Full EPC delivery',
-      challenge: locale === 'fa'
-        ? 'بیمارستان نظامی ۳۲ تختخوابی در شرایط اضطراری کرونا ظرف ۵۰ روز از خاکبرداری تا بهره‌برداری نیاز داشت — شامل سازه، پوشانه ساندویچ پانل و پارتیشن‌های داخلی.'
-        : 'COVID-19 emergency required a 32-bed hospital from excavation to readiness in under 50 days — including structure, sandwich panel envelope, and internal partitions.',
-      measuredResult: locale === 'fa'
-        ? 'تحویل کامل از خاکبرداری تا بهره‌برداری در کمتر از ۵۰ روز. پوشانه ساندویچ پانل سقف و دیوار با هماهنگی EPC یکپارچه.'
-        : 'Delivered from excavation to operational readiness in under 50 days. Sandwich panel roof and wall envelope coordinated through integrated EPC.',
-      href: getLocalizedPath(locale, '/projects/army-hospital'),
-      image: armyHospitalCard
-    },
-    {
-      projectName: locale === 'fa' ? 'تأسیسات راه‌آهن طبس' : 'Tabas Railway Facility',
-      location: locale === 'fa' ? 'طبس، ایران' : 'Tabas, Iran',
-      areaM2: '10,000 m²',
-      projectType: locale === 'fa' ? 'سیستم سقف ساندویچ پانل دهانه بزرگ' : 'Large-span railway roofing system',
-      challenge: locale === 'fa'
-        ? 'سازه دوقوسی راه‌آهن نیازمند هماهنگی دقیق ساندویچ پانل با هندسه غیرمعمول، تراز سازه‌ای و تداوم آب‌بندی در دهانه بزرگ بود.'
-        : 'Double-curved railway structure required sandwich panel coordination across non-standard geometry, structural alignment, and waterproofing continuity over large spans.',
-      measuredResult: locale === 'fa'
-        ? 'سیستم سقف ساندویچ پانل ۱۰,۰۰۰ مترمربع با عملکرد سازه‌ای قابل‌اتکا و کنترل نصب هماهنگ تحویل شد.'
-        : '10,000 m² sandwich panel roofing system delivered with controlled installation and reliable structural performance across double-curved spans.',
-      href: getLocalizedPath(locale, '/projects/tabas-railway-facility'),
-      image: tabasCard
-    },
-    {
-      projectName: locale === 'fa' ? 'پارکینگ تاکسیرانی ماهشهر' : 'Mahshahr Taxi Parking Facility',
-      location: locale === 'fa' ? 'بندر ماهشهر، خوزستان، ایران' : 'Bandar Mahshahr, Khuzestan, Iran',
-      areaM2: '4,000 m²',
-      projectType: locale === 'fa' ? 'سیستم سقف ساندویچ پانل تجاری' : 'Commercial parking roofing system',
-      challenge: locale === 'fa'
-        ? 'پارکینگ ساحلی در محیط خورنده خوزستان نیازمند هماهنگی ساندویچ پانل، زهکشی کنترل‌شده و دیتیل مقاوم در برابر خوردگی بود.'
-        : 'Coastal parking facility in corrosive Khuzestan environment required sandwich panel coordination, controlled rainwater drainage, and corrosion-resistant detailing.',
-      measuredResult: locale === 'fa'
-        ? 'سیستم سقف ساندویچ پانل ۴,۰۰۰ مترمربع با مدیریت آب باران کنترل‌شده و حفاظت بلندمدت در محیط ساحلی تحویل شد.'
-        : '4,000 m² sandwich panel roofing delivered with controlled rainwater management and long-term weather protection in a coastal environment.',
-      href: getLocalizedPath(locale, '/projects/mahshahr-taxi-parking'),
-      image: mahshahrTaxiCard
-    }
-  ];
+  const localized = {
+    fa: [
+      {
+        projectName: 'بیمارستان ۳۲ تختخوابی ارتش',
+        location: 'راز و جرگلان، خراسان شمالی، ایران',
+        projectType: 'بیمارستان اضطراری — تحویل کامل EPC',
+        challenge: 'بیمارستان نظامی ۳۲ تختخوابی در شرایط اضطراری کرونا ظرف ۵۰ روز از خاکبرداری تا بهره‌برداری نیاز داشت — شامل سازه، پوشانه ساندویچ پانل و پارتیشن‌های داخلی.',
+        measuredResult: 'تحویل کامل از خاکبرداری تا بهره‌برداری در کمتر از ۵۰ روز. پوشانه ساندویچ پانل سقف و دیوار با هماهنگی EPC یکپارچه.'
+      },
+      {
+        projectName: 'تأسیسات راه‌آهن طبس',
+        location: 'طبس، ایران',
+        projectType: 'سیستم سقف ساندویچ پانل دهانه بزرگ',
+        challenge: 'سازه دوقوسی راه‌آهن نیازمند هماهنگی دقیق ساندویچ پانل با هندسه غیرمعمول، تراز سازه‌ای و تداوم آب‌بندی در دهانه بزرگ بود.',
+        measuredResult: 'سیستم سقف ساندویچ پانل ۱۰,۰۰۰ مترمربع با عملکرد سازه‌ای قابل‌اتکا و کنترل نصب هماهنگ تحویل شد.'
+      },
+      {
+        projectName: 'پارکینگ تاکسیرانی ماهشهر',
+        location: 'بندر ماهشهر، خوزستان، ایران',
+        projectType: 'سیستم سقف ساندویچ پانل تجاری',
+        challenge: 'پارکینگ ساحلی در محیط خورنده خوزستان نیازمند هماهنگی ساندویچ پانل، زهکشی کنترل‌شده و دیتیل مقاوم در برابر خوردگی بود.',
+        measuredResult: 'سیستم سقف ساندویچ پانل ۴,۰۰۰ مترمربع با مدیریت آب باران کنترل‌شده و حفاظت بلندمدت در محیط ساحلی تحویل شد.'
+      }
+    ],
+    en: [
+      {
+        projectName: '32-Bed Military Hospital',
+        location: 'Raz & Jargalan, North Khorasan, Iran',
+        projectType: 'Emergency hospital — Full EPC delivery',
+        challenge: 'COVID-19 emergency required a 32-bed hospital from excavation to readiness in under 50 days — including structure, sandwich panel envelope, and internal partitions.',
+        measuredResult: 'Delivered from excavation to operational readiness in under 50 days. Sandwich panel roof and wall envelope coordinated through integrated EPC.'
+      },
+      {
+        projectName: 'Tabas Railway Facility',
+        location: 'Tabas, Iran',
+        projectType: 'Large-span railway roofing system',
+        challenge: 'Double-curved railway structure required sandwich panel coordination across non-standard geometry, structural alignment, and waterproofing continuity over large spans.',
+        measuredResult: '10,000 m² sandwich panel roofing system delivered with controlled installation and reliable structural performance across double-curved spans.'
+      },
+      {
+        projectName: 'Mahshahr Taxi Parking Facility',
+        location: 'Bandar Mahshahr, Khuzestan, Iran',
+        projectType: 'Commercial parking roofing system',
+        challenge: 'Coastal parking facility in corrosive Khuzestan environment required sandwich panel coordination, controlled rainwater drainage, and corrosion-resistant detailing.',
+        measuredResult: '4,000 m² sandwich panel roofing delivered with controlled rainwater management and long-term weather protection in a coastal environment.'
+      }
+    ],
+    ar: [
+      {
+        projectName: 'مستشفى عسكري بسعة 32 سريرا',
+        location: 'راز وجرغلان، خراسان الشمالية، إيران',
+        projectType: 'مستشفى طوارئ — تسليم EPC كامل',
+        challenge: 'تطلبت حالة الطوارئ الخاصة بكوفيد-19 تنفيذ مستشفى عسكري بسعة 32 سريرا من الحفر حتى الجاهزية خلال أقل من 50 يوما، بما يشمل الهيكل وغلاف ألواح الساندويتش والقواطع الداخلية.',
+        measuredResult: 'تم التسليم من الحفر حتى الجاهزية التشغيلية خلال أقل من 50 يوما، مع تنسيق غلاف السقف والجدران من ألواح الساندويتش ضمن تنفيذ EPC متكامل.'
+      },
+      {
+        projectName: 'منشأة سكة حديد طبس',
+        location: 'طبس، إيران',
+        projectType: 'نظام سقف واسع الامتداد بألواح الساندويتش',
+        challenge: 'احتاجت البنية ذات القوسين إلى تنسيق دقيق لألواح الساندويتش مع هندسة غير تقليدية واستواء إنشائي واستمرارية العزل المائي عبر بحور كبيرة.',
+        measuredResult: 'تم تسليم نظام سقف ألواح ساندويتش بمساحة 10,000 م² مع تركيب مضبوط وأداء إنشائي موثوق عبر البحور المنحنية.'
+      },
+      {
+        projectName: 'مرفق مواقف سيارات الأجرة في ماهشهر',
+        location: 'بندر ماهشهر، خوزستان، إيران',
+        projectType: 'نظام سقف تجاري لمواقف السيارات',
+        challenge: 'احتاج مرفق المواقف الساحلي في بيئة خوزستان المتآكلة إلى تنسيق ألواح الساندويتش وتصريف مضبوط لمياه الأمطار وتفاصيل مقاومة للتآكل.',
+        measuredResult: 'تم تسليم سقف ألواح ساندويتش بمساحة 4,000 م² مع إدارة مضبوطة لمياه الأمطار وحماية طويلة الأمد في بيئة ساحلية.'
+      }
+    ],
+    ru: [
+      {
+        projectName: 'Военный госпиталь на 32 койки',
+        location: 'Раз и Джаргалан, Северный Хорасан, Иран',
+        projectType: 'Экстренный госпиталь — полный EPC-комплекс',
+        challenge: 'Условия COVID-19 потребовали подготовить военный госпиталь на 32 койки от земляных работ до готовности менее чем за 50 дней, включая конструкцию, ограждение из сэндвич-панелей и внутренние перегородки.',
+        measuredResult: 'Объект был доведен от земляных работ до эксплуатационной готовности менее чем за 50 дней; кровля и стены из сэндвич-панелей были согласованы в рамках единого EPC-процесса.'
+      },
+      {
+        projectName: 'Железнодорожный объект в Табасе',
+        location: 'Табас, Иран',
+        projectType: 'Крупнопролетная кровельная система из сэндвич-панелей',
+        challenge: 'Двухкриволинейная железнодорожная конструкция потребовала точной координации сэндвич-панелей с нестандартной геометрией, выравниванием несущей структуры и непрерывностью гидроизоляции.',
+        measuredResult: 'Кровельная система из сэндвич-панелей площадью 10,000 м² была выполнена с контролируемым монтажом и надежной работой на больших криволинейных пролетах.'
+      },
+      {
+        projectName: 'Парковка такси в Махшехре',
+        location: 'Бендер-Махшехр, Хузестан, Иран',
+        projectType: 'Коммерческая кровельная система для парковки',
+        challenge: 'Прибрежный объект в коррозионной среде Хузестана потребовал согласования сэндвич-панелей, контролируемого отвода дождевой воды и коррозионно-стойких деталей.',
+        measuredResult: 'Кровля из сэндвич-панелей площадью 4,000 м² была выполнена с контролем дождевой воды и долговременной защитой в прибрежной среде.'
+      }
+    ]
+  } satisfies Record<Locale, Array<{
+    projectName: string;
+    location: string;
+    projectType: string;
+    challenge: string;
+    measuredResult: string;
+  }>>;
+
+  const slugs = ['army-hospital', 'tabas-railway-facility', 'mahshahr-taxi-parking'];
+  const images = [armyHospitalCard, tabasCard, mahshahrTaxiCard];
+
+  const cases = localized[locale].map((item, index) => ({
+    ...item,
+    areaM2: index === 0 ? '1,000 m²' : index === 1 ? '10,000 m²' : '4,000 m²',
+    href: getLocalizedPath(locale, `/projects/${slugs[index]}`),
+    image: images[index]
+  }));
 
   return cases;
 }
 
+function getLocalizedSandwichPanelSystemsPage(locale: Extract<Locale, 'ar' | 'ru'>): ServicePageTemplateData {
+  const isAr = locale === 'ar';
+  const labels = isAr
+    ? {
+        keyword: 'أنظمة ألواح الساندويتش',
+        title: 'أنظمة ألواح الساندويتش | SIPANEL',
+        description: 'أنظمة ألواح الساندويتش مع مراجعة هندسية للتخطيط والعزل المائي والتوريد وتسلسل التركيب قبل الشراء والتنفيذ.',
+        eyebrow: 'أنظمة أغلفة صناعية',
+        h1: 'أنظمة ألواح الساندويتش مع ضبط هندسي قبل التنفيذ',
+        subheadline: 'تراجع SIPANEL نوع اللوح وسماكة العزل والتفاصيل والملحقات وتسلسل التركيب حتى يعمل السقف والجدار كنظام واحد.',
+        primaryCta: 'اطلب استشارة فنية',
+        secondaryCta: 'عرض المشاريع المرتبطة',
+        trust: 'مراجعة هندسية للتخطيط والتوريد والتركيب في مشاريع ألواح الساندويتش.',
+        problemTitle: 'مخاطر أنظمة ألواح الساندويتش قبل التنفيذ',
+        problemCards: [
+          'اختيار اللوح دون تنسيق المفاصل والفلاشينغ يمكن أن يترك نقاط تسرب.',
+          'فصل التوريد عن رسومات الورشة يسبب نقص الملحقات أو تأخر الموقع.',
+          'عدم ضبط تسلسل التركيب يزيد إعادة العمل ومخاطر العزل المائي.'
+        ],
+        approachTitle: 'منهج SIPANEL الهندسي',
+        recommendationTitle: 'توصيات مستقلة للنظام',
+        recommendationIntro: 'تتعامل SIPANEL مع النظام كغلاف هندسي كامل، وليس كعملية بيع مواد فقط.',
+        traditional: 'توريد تقليدي',
+        sipanel: 'منهج SIPANEL',
+        applicationsTitle: 'استخدامات أنظمة ألواح الساندويتش',
+        applications: ['أسقف وجدران المصانع', 'المستودعات والقاعات الصناعية', 'الغرف الباردة والمناطق المعزولة', 'مشاريع التوسعة والتجديد'],
+        proofTitle: 'إثبات هندسي قبل التنفيذ',
+        proofItems: ['رسومات الورشة', 'تفاصيل العزل المائي', 'قائمة المواد والكميات'],
+        qualityTitle: 'نقاط ضبط الجودة',
+        checkpoints: ['مراجعة نوع اللوح والسماكة', 'فحص المفاصل والفلاشينغ', 'تأكيد كميات الملحقات', 'مراجعة تسلسل التركيب', 'فحص العزل النهائي'],
+        casesTitle: 'إثباتات مشاريع حقيقية',
+        casesIntro: 'أمثلة مشاريع مرتبطة بأنظمة ألواح الساندويتش وتنفيذ الغلاف الصناعي.',
+        challenge: 'التحدي',
+        result: 'النتيجة',
+        viewProject: 'عرض المشروع',
+        faqTitle: 'أسئلة شائعة',
+        conversionHeadline: 'راجع نظام ألواح الساندويتش قبل الشراء والتركيب',
+        conversionText: 'أرسل الرسومات ومعلومات المشروع حتى يراجع فريق SIPANEL التخطيط والتوريد ومخاطر التركيب.',
+        conversionButton: 'اطلب مراجعة هندسية'
+      }
+    : {
+        keyword: 'Системы сэндвич-панелей',
+        title: 'Системы сэндвич-панелей | SIPANEL',
+        description: 'Системы сэндвич-панелей с инженерной проверкой раскладки, гидроизоляции, поставки и последовательности монтажа до закупки и выполнения.',
+        eyebrow: 'Промышленные ограждающие системы',
+        h1: 'Системы сэндвич-панелей с инженерным контролем до выполнения',
+        subheadline: 'SIPANEL проверяет тип панели, толщину утепления, детали, аксессуары и последовательность монтажа, чтобы кровля и стены работали как единая система.',
+        primaryCta: 'Запросить техническую консультацию',
+        secondaryCta: 'Смотреть связанные проекты',
+        trust: 'Инженерная проверка раскладки, поставки и монтажа для проектов сэндвич-панелей.',
+        problemTitle: 'Риски систем сэндвич-панелей до выполнения',
+        problemCards: [
+          'Выбор панели без координации стыков и примыканий оставляет риск протечек.',
+          'Отрыв поставки от рабочих чертежей приводит к нехватке аксессуаров и задержкам.',
+          'Непроверенная последовательность монтажа повышает риск переделок и гидроизоляционных ошибок.'
+        ],
+        approachTitle: 'Инженерный подход SIPANEL',
+        recommendationTitle: 'Независимые рекомендации по системе',
+        recommendationIntro: 'SIPANEL рассматривает систему как цельную инженерную оболочку, а не как продажу материалов.',
+        traditional: 'Традиционная поставка',
+        sipanel: 'Подход SIPANEL',
+        applicationsTitle: 'Где применяются системы сэндвич-панелей',
+        applications: ['Кровли и стены заводов', 'Склады и промышленные залы', 'Холодильные и изолированные зоны', 'Расширения и реконструкции'],
+        proofTitle: 'Инженерное подтверждение до выполнения',
+        proofItems: ['Рабочие чертежи', 'Детали гидроизоляции', 'Ведомость материалов и объемов'],
+        qualityTitle: 'Контрольные точки качества',
+        checkpoints: ['Проверка типа и толщины панели', 'Проверка стыков и примыканий', 'Подтверждение количества аксессуаров', 'Проверка последовательности монтажа', 'Итоговая проверка герметизации'],
+        casesTitle: 'Доказательства реальных проектов',
+        casesIntro: 'Примеры проектов, связанных с системами сэндвич-панелей и промышленной оболочкой.',
+        challenge: 'Задача',
+        result: 'Результат',
+        viewProject: 'Смотреть проект',
+        faqTitle: 'Вопросы и ответы',
+        conversionHeadline: 'Проверьте систему сэндвич-панелей до закупки и монтажа',
+        conversionText: 'Отправьте чертежи и данные проекта, чтобы команда SIPANEL проверила раскладку, поставку и монтажные риски.',
+        conversionButton: 'Запросить инженерную проверку'
+      };
+
+  return {
+    id: sandwichPanelSystemsSpec.id,
+    routes: sandwichPanelSystemsSpec.route,
+    seo: {
+      primaryKeyword: labels.keyword,
+      title: labels.title,
+      metaDescription: labels.description
+    },
+    hero: {
+      eyebrow: labels.eyebrow,
+      h1: labels.h1,
+      subheadline: labels.subheadline,
+      primaryCta: labels.primaryCta,
+      secondaryCta: labels.secondaryCta,
+      visualDirection: labels.proofTitle,
+      visual: sandwichPanelHero,
+      visualAlt: labels.h1,
+      trustMicrocopy: labels.trust
+    },
+    problemContext: {
+      title: labels.problemTitle,
+      cards: labels.problemCards
+    },
+    engineeringApproach: {
+      title: labels.approachTitle,
+      steps: [
+        {title: labels.proofItems[0], description: labels.subheadline},
+        {title: labels.proofItems[1], description: labels.conversionText},
+        {title: labels.proofItems[2], description: labels.trust}
+      ]
+    },
+    independentRecommendations: {
+      title: labels.recommendationTitle,
+      intro: labels.recommendationIntro,
+      points: [
+        {title: labels.proofItems[0], description: labels.subheadline},
+        {title: labels.proofItems[2], description: labels.trust},
+        {title: labels.qualityTitle, description: labels.conversionText}
+      ],
+      comparison: {
+        traditional: {label: labels.traditional, items: labels.problemCards},
+        sipanel: {label: labels.sipanel, items: labels.checkpoints.slice(0, 3)}
+      }
+    },
+    systemApplications: {
+      title: labels.applicationsTitle,
+      applications: labels.applications
+    },
+    technicalProof: {
+      title: labels.proofTitle,
+      description: '',
+      requiredVisuals: [],
+      assets: [
+        {title: labels.proofItems[0], description: labels.subheadline, image: installationImg, imageMobile: installationMobileImg, alt: labels.proofItems[0]},
+        {title: labels.proofItems[1], description: labels.conversionText, image: technicalDetailImg, imageMobile: technicalDetailMobileImg, alt: labels.proofItems[1]},
+        {title: labels.proofItems[2], description: labels.trust, image: bomMtoImage, alt: labels.proofItems[2]}
+      ]
+    },
+    processWorkflow: {title: '', steps: []},
+    qualityCheckpoints: {
+      title: labels.qualityTitle,
+      checkpoints: labels.checkpoints
+    },
+    relatedCaseStudies: {
+      title: labels.casesTitle,
+      intro: labels.casesIntro,
+      cases: getRelatedCaseStudies(locale)
+    },
+    faq: {
+      title: labels.faqTitle,
+      items: [
+        {question: labels.recommendationTitle, answer: labels.recommendationIntro},
+        {question: labels.qualityTitle, answer: labels.conversionText}
+      ]
+    },
+    conversionCta: {
+      headline: labels.conversionHeadline,
+      text: labels.conversionText,
+      button: labels.conversionButton,
+      secondaryButton: labels.secondaryCta
+    },
+    breadcrumbs: [
+      {label: isAr ? 'الرئيسية' : 'Главная', href: getLocalizedPath(locale)},
+      {label: isAr ? 'الأنظمة' : 'Системы', href: getLocalizedPath(locale, '/systems')},
+      {label: labels.keyword, href: getLocalizedPath(locale, '/systems/sandwich-panel-systems')}
+    ],
+    caseStudyLabels: {
+      challenge: labels.challenge,
+      result: labels.result,
+      viewProject: labels.viewProject
+    }
+  };
+}
+
 export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplateData {
+  if (locale === 'ar' || locale === 'ru') {
+    return getLocalizedSandwichPanelSystemsPage(locale);
+  }
+
   const page = sandwichPanelSystemsSpec;
   const isFa = locale === 'fa';
   const fa = faContent;
@@ -448,10 +690,10 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
       secondaryButton: isFa ? fa.conversionCta.secondaryButton : undefined
     },
     breadcrumbs: isFa ? fa.breadcrumbs : [
-      {label: locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', href: getLocalizedPath(locale)},
-      {label: locale === 'ar' ? 'الأنظمة' : locale === 'ru' ? 'Системы' : 'Systems', href: getLocalizedPath(locale, '/systems')},
-      {label: locale === 'ar' ? 'أنظمة ألواح الساندويتش' : locale === 'ru' ? 'Сэндвич-панельные системы' : 'Sandwich Panel Systems', href: getLocalizedPath(locale, '/systems/sandwich-panel-systems')}
+      {label: 'Home', href: getLocalizedPath(locale)},
+      {label: 'Systems', href: getLocalizedPath(locale, '/systems')},
+      {label: 'Sandwich Panel Systems', href: getLocalizedPath(locale, '/systems/sandwich-panel-systems')}
     ],
-    caseStudyLabels: isFa ? fa.caseStudyLabels : locale === 'ar' ? {challenge: 'التحدي', result: 'النتيجة', viewProject: 'عرض المشروع'} : locale === 'ru' ? {challenge: 'Задача', result: 'Результат', viewProject: 'Посмотреть проект'} : {challenge: 'Challenge', result: 'Result', viewProject: 'View Project'}
+    caseStudyLabels: isFa ? fa.caseStudyLabels : {challenge: 'Challenge', result: 'Result', viewProject: 'View Project'}
   };
 }

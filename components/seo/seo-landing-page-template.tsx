@@ -72,7 +72,86 @@ function SeoTechnicalPlaceholder({title}: {title: string}) {
   );
 }
 
-function SeoProofCard({asset, pageSlug}: {asset: SeoProofAsset; pageSlug: string}) {
+const seoTemplateLabels = {
+  fa: {
+    pendingTechnicalAsset: 'دارایی فنی واقعی در انتظار است.',
+    openTechnicalViewer: 'باز کردن نمایشگر فنی',
+    projectPhotography: 'عکس پروژه',
+    projectType: 'نوع پروژه',
+    area: 'مساحت',
+    challenge: 'چالش',
+    engineeringDecision: 'تصمیم مهندسی',
+    result: 'نتیجه',
+    viewProjectProof: 'مشاهده شواهد پروژه',
+    pendingProjectLocation: 'داده پروژه تاییدشده در انتظار است',
+    pendingProjectProof: 'شواهد پروژه واقعی در انتظار است.',
+    resource: 'منبع',
+    leadCapture: 'پیش از دانلود، ثبت درخواست لازم است.',
+    verifiedResource: 'منبع تاییدشده.',
+    pendingDownload: 'منبع دانلود واقعی در انتظار است.',
+    relatedSystems: 'سیستم‌های مرتبط',
+    localizedRoutes: 'مسیرهای محلی‌سازی‌شده راهکار'
+  },
+  en: {
+    pendingTechnicalAsset: 'Pending real technical asset.',
+    openTechnicalViewer: 'Open technical viewer',
+    projectPhotography: 'project photography',
+    projectType: 'Project type',
+    area: 'Area',
+    challenge: 'Challenge',
+    engineeringDecision: 'Engineering decision',
+    result: 'Result',
+    viewProjectProof: 'View project proof',
+    pendingProjectLocation: 'Pending verified project data',
+    pendingProjectProof: 'Pending real project proof.',
+    resource: 'Resource',
+    leadCapture: 'Lead capture required before download.',
+    verifiedResource: 'Verified resource.',
+    pendingDownload: 'Pending real downloadable resource.',
+    relatedSystems: 'Related systems',
+    localizedRoutes: 'Localized solution routes'
+  },
+  ar: {
+    pendingTechnicalAsset: 'الأصل الفني الحقيقي قيد الإعداد.',
+    openTechnicalViewer: 'فتح العارض الفني',
+    projectPhotography: 'صورة المشروع',
+    projectType: 'نوع المشروع',
+    area: 'المساحة',
+    challenge: 'التحدي',
+    engineeringDecision: 'القرار الهندسي',
+    result: 'النتيجة',
+    viewProjectProof: 'عرض إثبات المشروع',
+    pendingProjectLocation: 'بيانات المشروع الموثقة قيد الإعداد',
+    pendingProjectProof: 'إثبات المشروع الحقيقي قيد الإعداد.',
+    resource: 'مورد',
+    leadCapture: 'يتطلب التسجيل قبل التنزيل.',
+    verifiedResource: 'مورد موثق.',
+    pendingDownload: 'المورد القابل للتنزيل قيد الإعداد.',
+    relatedSystems: 'أنظمة مرتبطة',
+    localizedRoutes: 'مسارات الحل المحلية'
+  },
+  ru: {
+    pendingTechnicalAsset: 'Реальный технический материал ожидается.',
+    openTechnicalViewer: 'Открыть технический просмотр',
+    projectPhotography: 'фотография проекта',
+    projectType: 'Тип проекта',
+    area: 'Площадь',
+    challenge: 'Задача',
+    engineeringDecision: 'Инженерное решение',
+    result: 'Результат',
+    viewProjectProof: 'Смотреть проектное подтверждение',
+    pendingProjectLocation: 'Проверенные данные проекта ожидаются',
+    pendingProjectProof: 'Реальное проектное подтверждение ожидается.',
+    resource: 'Ресурс',
+    leadCapture: 'Перед загрузкой требуется заявка.',
+    verifiedResource: 'Проверенный ресурс.',
+    pendingDownload: 'Реальный загружаемый ресурс ожидается.',
+    relatedSystems: 'Связанные системы',
+    localizedRoutes: 'Локализованные маршруты решения'
+  }
+} satisfies Record<Locale, Record<string, string>>;
+
+function SeoProofCard({asset, pageSlug, labels}: {asset: SeoProofAsset; pageSlug: string; labels: typeof seoTemplateLabels[Locale]}) {
   return (
     <article className="seo-proof-card" data-asset-status={asset.assetStatus ?? 'pending'}>
       <div className="seo-proof-card__preview">
@@ -83,7 +162,7 @@ function SeoProofCard({asset, pageSlug}: {asset: SeoProofAsset; pageSlug: string
         )}
       </div>
       <h3>{asset.title}</h3>
-      {asset.description ? <p>{asset.description}</p> : <p>Pending real technical asset.</p>}
+      {asset.description ? <p>{asset.description}</p> : <p>{labels.pendingTechnicalAsset}</p>}
       {/* track: technical_proof_open */}
       {/* track: diagram_zoom */}
       <button
@@ -93,18 +172,18 @@ function SeoProofCard({asset, pageSlug}: {asset: SeoProofAsset; pageSlug: string
         aria-disabled="true"
         onClick={() => trackProofEvent('technical_proof_open', {component_id: pageSlug, diagram_type: asset.title})}
       >
-        Open technical viewer
+        {labels.openTechnicalViewer}
       </button>
     </article>
   );
 }
 
-function SeoCaseStudyCard({caseStudy}: {caseStudy: SeoCaseStudy}) {
+function SeoCaseStudyCard({caseStudy, labels}: {caseStudy: SeoCaseStudy; labels: typeof seoTemplateLabels[Locale]}) {
   return (
     <article className="seo-case-card" data-asset-status={caseStudy.assetStatus ?? 'pending'}>
       <div className="seo-case-card__media">
         {caseStudy.image ? (
-          <Image src={caseStudy.image} alt={`${caseStudy.projectName} project photography`} fill sizes="(max-width: 767px) 84vw, 30vw" />
+          <Image src={caseStudy.image} alt={`${caseStudy.projectName} ${labels.projectPhotography}`} fill sizes="(max-width: 767px) 84vw, 30vw" />
         ) : (
           <SeoTechnicalPlaceholder title={caseStudy.projectName} />
         )}
@@ -114,21 +193,21 @@ function SeoCaseStudyCard({caseStudy}: {caseStudy: SeoCaseStudy}) {
       <dl>
         {caseStudy.projectType ? (
           <>
-            <dt>Project type</dt>
+            <dt>{labels.projectType}</dt>
             <dd>{caseStudy.projectType}</dd>
           </>
         ) : null}
         {caseStudy.areaM2 ? (
           <>
-            <dt>Area</dt>
+            <dt>{labels.area}</dt>
             <dd>{caseStudy.areaM2}</dd>
           </>
         ) : null}
-        <dt>Challenge</dt>
+        <dt>{labels.challenge}</dt>
         <dd>{caseStudy.challenge}</dd>
-        <dt>Engineering decision</dt>
+        <dt>{labels.engineeringDecision}</dt>
         <dd>{caseStudy.engineeringDecision}</dd>
-        <dt>Result</dt>
+        <dt>{labels.result}</dt>
         <dd>{caseStudy.measuredResult}</dd>
       </dl>
       {/* track: related_case_study_click */}
@@ -143,16 +222,16 @@ function SeoCaseStudyCard({caseStudy}: {caseStudy: SeoCaseStudy}) {
           data-analytics-label={caseStudy.projectName}
           onClick={() => trackCaseStudyEvent('related_case_study_click', {case_study_name: caseStudy.projectName})}
         >
-          {caseStudy.projectType ?? 'View project proof'}
+          {caseStudy.projectType ?? labels.viewProjectProof}
         </Link>
       ) : (
-        <span className="seo-case-card__pending">Pending verified project proof.</span>
+        <span className="seo-case-card__pending">{labels.pendingProjectProof}</span>
       )}
     </article>
   );
 }
 
-function SeoResourceCardView({resource}: {resource: SeoResourceCard}) {
+function SeoResourceCardView({resource, labels}: {resource: SeoResourceCard; labels: typeof seoTemplateLabels[Locale]}) {
   return (
     <article className="resource-card seo-resource-card" data-resource-id={resource.title} data-asset-status={resource.assetStatus ?? 'pending'}>
       <div className="resource-card__preview" aria-hidden="true">
@@ -165,9 +244,9 @@ function SeoResourceCardView({resource}: {resource: SeoResourceCard}) {
         <h3>{resource.title}</h3>
         <p>{resource.shortDescription}</p>
         {resource.assetStatus === 'available' ? (
-          <span className="resource-card__pending">{resource.leadCapture ? 'Lead capture required before download.' : 'Verified resource.'}</span>
+          <span className="resource-card__pending">{resource.leadCapture ? labels.leadCapture : labels.verifiedResource}</span>
         ) : (
-          <span className="resource-card__pending">Pending real downloadable resource.</span>
+          <span className="resource-card__pending">{labels.pendingDownload}</span>
         )}
         {/* track: related_resource_click */}
         {resource.href ? (
@@ -200,6 +279,7 @@ type SeoLandingPageTemplateProps = {
 
 export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplateProps) {
   const dir = getDirection(locale);
+  const labels = seoTemplateLabels[locale];
   const content = page.localeContent[locale];
   const hasTechnicalAssets = Boolean(content.technicalProof.assets?.length);
   const hasCaseStudies = Boolean(content.relatedCaseStudies.cases?.length);
@@ -214,10 +294,10 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
     : [
         {
           projectName: content.relatedCaseStudies.pendingLabel,
-          location: 'Pending verified project data',
-          challenge: 'Pending real project proof.',
-          engineeringDecision: 'Pending real project proof.',
-          measuredResult: 'Pending real project proof.',
+          location: labels.pendingProjectLocation,
+          challenge: labels.pendingProjectProof,
+          engineeringDecision: labels.pendingProjectProof,
+          measuredResult: labels.pendingProjectProof,
           assetStatus: 'pending'
         }
       ];
@@ -225,9 +305,9 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
     ? content.relatedResources.resources
     : [
         {
-          resourceType: 'Resource',
+          resourceType: labels.resource,
           title: content.relatedResources.pendingLabel,
-          shortDescription: 'Pending real downloadable resource.',
+          shortDescription: labels.pendingDownload,
           cta: content.relatedResources.cta,
           assetStatus: 'pending'
         }
@@ -355,7 +435,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
           </header>
           <div className="service-proof-grid" data-asset-status={hasTechnicalAssets ? 'available' : 'pending'}>
             {technicalAssets.map((asset) => (
-              <SeoProofCard key={asset.title} asset={asset} pageSlug={page.slug} />
+              <SeoProofCard key={asset.title} asset={asset} pageSlug={page.slug} labels={labels} />
             ))}
           </div>
         </div>
@@ -375,7 +455,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
             ))}
           </div>
           {content.applicationDetails.relatedServices?.length ? (
-            <div className="seo-inline-links" aria-label="Related systems">
+            <div className="seo-inline-links" aria-label={labels.relatedSystems}>
               {content.applicationDetails.relatedServices.map((item) => (
                 <Link
                   key={item.href}
@@ -417,7 +497,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
           </header>
           <div className="service-case-grid" data-asset-status={hasCaseStudies ? 'available' : 'pending'}>
             {hasCaseStudies ? (
-              caseStudies.map((caseStudy) => <SeoCaseStudyCard key={caseStudy.projectName} caseStudy={caseStudy} />)
+              caseStudies.map((caseStudy) => <SeoCaseStudyCard key={caseStudy.projectName} caseStudy={caseStudy} labels={labels} />)
             ) : (
               <article className="service-card service-card--pending">
                 <p data-asset-status="pending">{content.relatedCaseStudies.pendingLabel}</p>
@@ -434,7 +514,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
           </header>
           <div className="resource-cards" data-asset-status={hasResources ? 'available' : 'pending'}>
             {hasResources ? (
-              resources.map((resource) => <SeoResourceCardView key={resource.title} resource={resource} />)
+              resources.map((resource) => <SeoResourceCardView key={resource.title} resource={resource} labels={labels} />)
             ) : (
               <article className="resource-card" data-asset-status="pending">
                 <div className="resource-card__preview" aria-hidden="true">
@@ -443,9 +523,9 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
                   <span />
                 </div>
                 <div className="resource-card__content">
-                  <span className="resource-card__type">Resource</span>
+                  <span className="resource-card__type">{labels.resource}</span>
                   <h3>{content.relatedResources.pendingLabel}</h3>
-                  <p>Pending real downloadable resource.</p>
+                  <p>{labels.pendingDownload}</p>
                   <span className="resource-card__pending">{content.relatedResources.pendingLabel}</span>
                   <button className="resource-card__cta" type="button" disabled aria-disabled="true">
                     {content.relatedResources.cta}
@@ -500,7 +580,7 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
         </div>
       </section>
 
-      <nav className="service-locale-routes seo-locale-routes" aria-label="Localized solution routes">
+      <nav className="service-locale-routes seo-locale-routes" aria-label={labels.localizedRoutes}>
         {locales.map((itemLocale) => (
           <a key={itemLocale} href={page.routes[itemLocale]} hrefLang={itemLocale}>
             {itemLocale.toUpperCase()}

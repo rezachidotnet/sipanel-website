@@ -12,7 +12,7 @@ type Props = {
 };
 
 function InsightsSchema({locale}: {locale: Locale}) {
-  const page = getEngineeringInsightsPage();
+  const page = getEngineeringInsightsPage(locale);
 
   return (
     <>
@@ -26,8 +26,8 @@ function InsightsSchema({locale}: {locale: Locale}) {
       />
       <SchemaScript
         schema={buildBreadcrumbListSchema(locale, `${page.routes[locale]}#breadcrumb`, [
-          {name: 'Home', item: getLocalizedPath(locale)},
-          {name: 'Insights', item: page.routes[locale]}
+          {name: locale === 'fa' ? 'خانه' : locale === 'ar' ? 'الرئيسية' : locale === 'ru' ? 'Главная' : 'Home', item: getLocalizedPath(locale)},
+          {name: page.seo.h1, item: page.routes[locale]}
         ])}
       />
       <SchemaScript schema={buildOrganizationSchema(locale)} />
@@ -67,7 +67,7 @@ export default async function InsightsRoute({params}: Props) {
   return (
     <div dir={getDirection(validLocale)}>
       <InsightsSchema locale={validLocale} />
-      <InsightsIndexPage locale={validLocale} page={getEngineeringInsightsPage()} />
+      <InsightsIndexPage locale={validLocale} page={getEngineeringInsightsPage(validLocale)} />
     </div>
   );
 }

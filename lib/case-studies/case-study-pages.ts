@@ -332,6 +332,223 @@ const localizedLocations: Record<string, LocalizedText> = {
   }
 };
 
+const localizedProjectNames: Partial<Record<string, LocalizedText>> = {
+  'army-hospital': {
+    en: '32-Bed Military Hospital',
+    fa: 'بیمارستان ۳۲ تختخوابی ارتش',
+    ar: 'مستشفى عسكري بسعة 32 سريرا',
+    ru: 'Военный госпиталь на 32 койки'
+  },
+  'shahre-babak-hall': {
+    en: 'Shahr Babak Wrestling Hall',
+    fa: 'سالن کشتی شهربابک',
+    ar: 'قاعة المصارعة في شهر بابك',
+    ru: 'Зал борьбы в Шахр-Бабеке'
+  },
+  'sepehan-flower-market': {
+    en: 'Sepehan Flower Market',
+    fa: 'بازار گل سپاهان',
+    ar: 'سوق زهور سباهان',
+    ru: 'Цветочный рынок Сепахан'
+  },
+  'shahr-babak-stadium-entrance': {
+    en: 'Shahr Babak Stadium Entrance',
+    fa: 'ورودی ورزشگاه شهربابک',
+    ar: 'مدخل استاد شهر بابك',
+    ru: 'Вход стадиона Шахр-Бабек'
+  },
+  'andimeshk-stadium': {
+    en: 'Andimeshk Stadium',
+    fa: 'ورزشگاه اندیمشک',
+    ar: 'استاد أنديمشك',
+    ru: 'Стадион Анди-мешк'
+  },
+  'absaar-water-park': {
+    en: 'Absaar Water Park',
+    fa: 'پارک آبی آبسار',
+    ar: 'الحديقة المائية أبصار',
+    ru: 'Аквапарк Абсар'
+  },
+  'megaparsmall-atrium': {
+    en: 'Megapars Mall Atrium',
+    fa: 'آتریوم مگاپارس مال',
+    ar: 'أتريوم ميغابارس مول',
+    ru: 'Атриум Megapars Mall'
+  },
+  'mahshahr-taxi-parking': {
+    en: 'Mahshahr Taxi Parking Facility',
+    fa: 'پارکینگ تاکسیرانی ماهشهر',
+    ar: 'مرفق مواقف سيارات الأجرة في ماهشهر',
+    ru: 'Парковка такси в Махшехре'
+  },
+  'parand-city-entrance': {
+    en: 'Parand City Entrance Gate',
+    fa: 'دروازه ورودی شهر پرند',
+    ar: 'بوابة مدخل مدينة پرند',
+    ru: 'Въездные ворота города Паранд'
+  },
+  'tabas-railway-facility': {
+    en: 'Tabas Railway Facility',
+    fa: 'تأسیسات راه‌آهن طبس',
+    ar: 'منشأة سكة حديد طبس',
+    ru: 'Железнодорожный объект в Табасе'
+  },
+  'tiran-gas-station': {
+    en: 'Tiran Gas Station',
+    fa: 'جایگاه سوخت تیران',
+    ar: 'محطة وقود تيران',
+    ru: 'АЗС Тиран'
+  },
+  'ahvaz-airport-passenger-terminal': {
+    en: 'Ahvaz Airport Passenger Terminal',
+    fa: 'ترمینال مسافری فرودگاه اهواز',
+    ar: 'محطة الركاب في مطار الأهواز',
+    ru: 'Пассажирский терминал аэропорта Ахваз'
+  },
+  'atlas-hotel-shahinshahr-atrium': {
+    en: 'Atlas Hotel Shahinshahr Atrium',
+    fa: 'آتریوم هتل اطلس شاهین‌شهر',
+    ar: 'أتريوم فندق أطلس شاهين شهر',
+    ru: 'Атриум отеля Atlas в Шахиншахре'
+  },
+  'baharestan-prayer-hall': {
+    en: 'Baharestan Prayer Hall',
+    fa: 'سالن نماز بهارستان',
+    ar: 'قاعة صلاة بهارستان',
+    ru: 'Молитвенный зал Бахарестан'
+  },
+  'bandar-abbas-mall-atrium-roof': {
+    en: 'Bandar Abbas Mall Atrium Roof',
+    fa: 'سقف آتریوم مرکز خرید بندرعباس',
+    ar: 'سقف أتريوم مركز بندر عباس التجاري',
+    ru: 'Кровля атриума торгового центра Бендер-Аббас'
+  },
+  'bandar-mahshahr-bus-terminal': {
+    en: 'Bandar Mahshahr Bus Terminal',
+    fa: 'پایانه اتوبوس بندر ماهشهر',
+    ar: 'محطة حافلات بندر ماهشهر',
+    ru: 'Автобусный терминал Бендер-Махшехр'
+  },
+  'eftekhar-commercial-office-complex': {
+    en: 'Eftekhar Commercial Office Complex',
+    fa: 'مجتمع تجاری اداری افتخار',
+    ar: 'مجمع افتخار التجاري والإداري',
+    ru: 'Торгово-офисный комплекс Эфтехар'
+  },
+  'enghelab-club-padel-center': {
+    en: 'Enghelab Club Padel Center',
+    fa: 'مرکز پدل باشگاه انقلاب',
+    ar: 'مركز البادل في نادي انقلاب',
+    ru: 'Падел-центр клуба Энгелаб'
+  },
+  'erbil-eye-hospital-entrance-canopy': {
+    en: 'Erbil Eye Hospital Entrance Canopy',
+    fa: 'سایبان ورودی بیمارستان چشم اربیل',
+    ar: 'مظلة مدخل مستشفى العيون في أربيل',
+    ru: 'Навес входа глазной больницы Эрбиля'
+  },
+  'fadak-mall-glass-skylight': {
+    en: 'Fadak Mall Glass Skylight',
+    fa: 'نورگیر شیشه‌ای مرکز خرید فدک',
+    ar: 'سكاي لايت زجاجي في فدك مول',
+    ru: 'Стеклянный фонарь Fadak Mall'
+  },
+  'gonabad-university-sports-hall': {
+    en: 'Gonabad University Sports Hall',
+    fa: 'سالن ورزشی دانشگاه گناباد',
+    ar: 'الصالة الرياضية في جامعة گناباد',
+    ru: 'Спортивный зал университета Гонабад'
+  },
+  'imam-khomeini-airport-hajj-terminal': {
+    en: 'Imam Khomeini Airport Hajj Terminal',
+    fa: 'ترمینال حج فرودگاه امام خمینی',
+    ar: 'محطة الحج في مطار الإمام الخميني',
+    ru: 'Терминал хаджа аэропорта Имам Хомейни'
+  },
+  'kermanshah-industrial-university-petroleum-faculty': {
+    en: 'Kermanshah Industrial University Petroleum Faculty',
+    fa: 'دانشکده نفت دانشگاه صنعتی کرمانشاه',
+    ar: 'كلية النفط في جامعة كرمانشاه الصناعية',
+    ru: 'Нефтяной факультет Керманшахского индустриального университета'
+  },
+  'maku-convention-hall': {
+    en: 'Maku Convention Hall',
+    fa: 'سالن همایش ماکو',
+    ar: 'قاعة مؤتمرات ماكو',
+    ru: 'Конференц-зал Маку'
+  },
+  'marun-petrochemical-visitor-terminal': {
+    en: 'Marun Petrochemical Visitor Terminal',
+    fa: 'ترمینال بازدیدکنندگان پتروشیمی مارون',
+    ar: 'محطة زوار پتروشيمي مارون',
+    ru: 'Терминал посетителей Marun Petrochemical'
+  },
+  'mehrabad-aircraft-hangar': {
+    en: 'Mehrabad Aircraft Hangar',
+    fa: 'آشیانه هواپیما مهرآباد',
+    ar: 'حظيرة الطائرات في مهرآباد',
+    ru: 'Авиационный ангар Мехрабад'
+  },
+  'najafabad-university-amphitheater': {
+    en: 'Najafabad University Amphitheater',
+    fa: 'آمفی‌تئاتر دانشگاه نجف‌آباد',
+    ar: 'مدرج جامعة نجف آباد',
+    ru: 'Амфитеатр университета Наджафабад'
+  },
+  'payam-industrial-city-ceramic-factory': {
+    en: 'Payam Industrial City Ceramic Factory',
+    fa: 'کارخانه سرامیک شهرک صنعتی پیام',
+    ar: 'مصنع السيراميك في مدينة پيام الصناعية',
+    ru: 'Керамический завод в промышленном городе Паям'
+  },
+  'rouzbeh-charity-complex-zanjan': {
+    en: 'Rouzbeh Charity Complex Zanjan',
+    fa: 'مجتمع خیریه روزبه زنجان',
+    ar: 'مجمع روزبه الخيري في زنجان',
+    ru: 'Благотворительный комплекс Рузбех в Зенджане'
+  },
+  'shahrood-azad-university-skylight': {
+    en: 'Shahrood Azad University Skylight',
+    fa: 'نورگیر دانشگاه آزاد شاهرود',
+    ar: 'سكاي لايت جامعة آزاد شاهرود',
+    ru: 'Световой фонарь университета Азад Шахруд'
+  },
+  'shalamcheh-border-gate': {
+    en: 'Shalamcheh Border Gate',
+    fa: 'دروازه مرزی شلمچه',
+    ar: 'بوابة حدود شلمجة',
+    ru: 'Пограничные ворота Шаламче'
+  },
+  'tarbiat-modares-research-greenhouse': {
+    en: 'Tarbiat Modares Research Greenhouse',
+    fa: 'گلخانه پژوهشی تربیت مدرس',
+    ar: 'الدفيئة البحثية في جامعة تربيت مدرس',
+    ru: 'Исследовательская теплица Tarbiat Modares'
+  },
+  'tavanir-shahrekord-central-atrium': {
+    en: 'Tavanir Shahrekord Central Atrium',
+    fa: 'آتریوم مرکزی توانیر شهرکرد',
+    ar: 'الأتريوم المركزي لتوانير شهرکرد',
+    ru: 'Центральный атриум Tavanir в Шахрекорде'
+  },
+  'tehran-mall-roof-garden-foodcourt': {
+    en: 'Tehran Mall Roof Garden Foodcourt',
+    fa: 'فودکورت روف‌گاردن تهران مال',
+    ar: 'فودكورت حديقة السطح في تهران مول',
+    ru: 'Фудкорт roof garden в Tehran Mall'
+  },
+  'toranj-kish-restaurant': {
+    en: 'Toranj Kish Restaurant',
+    fa: 'رستوران ترنج کیش',
+    ar: 'مطعم ترنج كيش',
+    ru: 'Ресторан Toranj Kish'
+  }
+};
+
+function getProjectName(config: InitialCaseStudyConfig, locale: Locale) {
+  return localizedProjectNames[config.slug]?.[locale] ?? config.projectName[locale];
+}
+
 function getLocaleOverrides(config: InitialCaseStudyConfig, locale: Locale): CaseStudyLocaleOverrides {
   return {
     ...caseStudyLocaleOverrides[config.slug]?.[locale],
@@ -1825,7 +2042,7 @@ function buildInitialCaseStudyPage(config: InitialCaseStudyConfig): CaseStudyPag
 function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Locale): CaseStudyLocaleContent {
   const pendingLabel = pendingLabels[locale];
   const overrides = getLocaleOverrides(config, locale);
-  const projectName = config.projectName[locale];
+  const projectName = getProjectName(config, locale);
   const serviceTitle = config.mainService[locale];
   const projectType = config.projectType[locale];
   const location = localizeLocation(config.location, locale, pendingLabel);
@@ -1846,7 +2063,7 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       overrides: getLocaleOverrides(study, locale)
     }))
     .map(({overrides: relatedOverrides, ...study}) => ({
-      projectName: study.projectName[locale],
+      projectName: getProjectName(study, locale),
       location: localizeLocation(study.location, locale, pendingLabel),
       areaM2: study.area,
       projectType: study.projectType[locale],
