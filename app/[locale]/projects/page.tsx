@@ -50,7 +50,6 @@ import projectsHeroMobileImg from '@/assets/projects/projects-index-hero-mobile.
 
 type Props = {
   params: Promise<{locale: string}>;
-  searchParams?: Promise<{filter?: string | string[]}>;
 };
 
 type ProjectCaseStudy = {
@@ -109,6 +108,7 @@ const copy: Record<
     conversionTitle: string;
     conversionText: string;
     scrollCue: string;
+    imageAltSuffix: string;
     home: string;
   }
 > = {
@@ -140,6 +140,7 @@ const copy: Record<
     conversionTitle: 'Need this level of control for your project?',
     conversionText: 'Send the project type, location, approximate area, drawings if available, and the main risk you want SIPANEL to review.',
     scrollCue: 'View projects',
+    imageAltSuffix: 'industrial project photography',
     home: 'Home'
   },
   fa: {
@@ -171,6 +172,7 @@ const copy: Record<
     conversionText:
       'تیم SIPANEL می‌تواند بر اساس نقشه‌ها، موقعیت پروژه و نوع سازه، پیشنهاد اولیه فنی و مسیر اجرای مناسب را بررسی کند.',
     scrollCue: 'مشاهده پروژه‌ها',
+    imageAltSuffix: 'تصویر پروژه صنعتی',
     home: 'خانه'
   },
   ar: {
@@ -196,11 +198,12 @@ const copy: Record<
       cladding: 'كسوة الألمنيوم',
       'transparent-roofing': 'الزجاج والبولي كربونات'
     },
-    primaryCta: 'Get Free Engineering Review',
+    primaryCta: 'طلب مراجعة هندسية مجانية',
     costReviewCta: 'تحميل الكتالوج الفني',
     conversionTitle: 'هل تحتاج هذا المستوى من التحكم لمشروعك؟',
     conversionText: 'أرسل نوع المشروع والموقع والمساحة التقريبية والرسومات إن وجدت والمخاطر الأساسية التي تريد من SIPANEL مراجعتها.',
     scrollCue: 'عرض المشاريع',
+    imageAltSuffix: 'صورة مشروع صناعي',
     home: 'الرئيسية'
   },
   ru: {
@@ -226,11 +229,12 @@ const copy: Record<
       cladding: 'Алюминиевая облицовка',
       'transparent-roofing': 'Стекло и поликарбонат'
     },
-    primaryCta: 'Get Free Engineering Review',
+    primaryCta: 'Запросить бесплатную инженерную проверку',
     costReviewCta: 'Скачать технический каталог',
     conversionTitle: 'Нужен такой уровень контроля для вашего проекта?',
     conversionText: 'Отправьте тип проекта, локацию, примерную площадь, чертежи при наличии и главный риск, который SIPANEL должен проверить.',
     scrollCue: 'Смотреть проекты',
+    imageAltSuffix: 'фотография промышленного проекта',
     home: 'Главная'
   }
 };
@@ -1320,33 +1324,297 @@ const localizedProjectCaseStudies: Partial<Record<Locale, Record<string, Localiz
   }
 };
 
+type ProjectLocalizationTerms = {
+  names: Record<string, string>;
+  locations: Record<string, string>;
+  categories: Record<string, string>;
+  projectTypes: Record<string, string>;
+  systems: Record<string, string>;
+  challengePrefix: string;
+  challengeSuffix: string;
+  decisionPrefix: string;
+  decisionSuffix: string;
+  resultPrefix: string;
+  resultSuffix: string;
+  fallbackCategory: string;
+  riskItems: [string, string, string];
+};
+
+const projectLocalizationTerms: Record<'ar' | 'ru', ProjectLocalizationTerms> = {
+  ar: {
+    names: {
+      'army-hospital': 'مستشفى عسكري بسعة 32 سريرا',
+      'mehrabad-aircraft-hangar': 'حظيرة طائرات مطار مهرآباد',
+      'erbil-eye-hospital-entrance-canopy': 'مظلة مدخل مستشفى العيون في أربيل',
+      'tabas-railway-facility': 'منشأة سكة حديد طبس',
+      'mahshahr-taxi-parking': 'موقف سيارات الأجرة في ماهشهر',
+      'ahvaz-airport-passenger-terminal': 'محطة ركاب مطار الأهواز',
+      'tehran-mall-roof-garden-foodcourt': 'سقف روف غاردن وفودكورت وسينما تهران مال',
+      'megaparsmall-atrium': 'أتريوم ميغابارس مول',
+      'absaar-water-park': 'حديقة آبسار المائية',
+      'andimeshk-stadium': 'استاد أنديمشك',
+      'imam-khomeini-airport-hajj-terminal': 'محطة ركاب الحج في مطار الإمام الخميني',
+      'kermanshah-industrial-university-petroleum-faculty': 'كلية النفط في جامعة كرمانشاه الصناعية',
+      'shalamcheh-border-gate': 'بوابة حدود شلمجة',
+      'bandar-mahshahr-bus-terminal': 'محطة حافلات بندر ماهشهر الحضرية',
+      'najafabad-university-amphitheater': 'مدرج جامعة نجف آباد',
+      'fadak-mall-glass-skylight': 'نورگیر زجاجي في فدك مول',
+      'marun-petrochemical-visitor-terminal': 'قاعة متعددة الأغراض في بتروكيماويات مارون',
+      'toranj-kish-restaurant': 'سقف مطعم فندق ترنج كيش',
+      'baharestan-prayer-hall': 'قاعة صلاة بهارستان',
+      'enghelab-club-padel-center': 'مركز بادل نادي انقلاب',
+      'maku-convention-hall': 'قاعة مؤتمرات ماكو',
+      'gonabad-university-sports-hall': 'قاعة الرياضة في جامعة گناباد',
+      'shahre-babak-hall': 'قاعة المصارعة في شهربابك',
+      'shahr-babak-stadium-entrance': 'مدخل استاد شهربابك',
+      'payam-industrial-city-ceramic-factory': 'منشأة تصنيع السيراميك في مدينة پيام الصناعية',
+      'tavanir-shahrekord-central-atrium': 'أتريوم مركزي لشركة توانير شهرکرد',
+      'bandar-abbas-mall-atrium-roof': 'بندر عباس مول',
+      'tiran-gas-station': 'محطة وقود تيران',
+      'eftekhar-commercial-office-complex': 'مجمع افتخار التجاري والإداري',
+      'rouzbeh-charity-complex-zanjan': 'مجمع روزبه الخيري',
+      'shahrood-azad-university-skylight': 'نورگیر مركزي في جامعة آزاد شاهرود',
+      'atlas-hotel-shahinshahr-atrium': 'أتريوم فندق أطلس',
+      'tarbiat-modares-research-greenhouse': 'الدفيئة البحثية في جامعة تربيت مدرس',
+      'sepehan-flower-market': 'سوق زهور سپاهان',
+      'parand-city-entrance': 'بوابة مدخل مدينة پرند'
+    },
+    locations: {
+      'Raz & Jargalan, North Khorasan, Iran': 'راز وجرغلان، خراسان الشمالية، إيران',
+      'Tehran, Iran': 'طهران، إيران',
+      'Erbil, Kurdistan Region, Iraq': 'أربيل، إقليم كردستان، العراق',
+      'Tabas, Iran': 'طبس، إيران',
+      'Bandar Mahshahr, Khuzestan, Iran': 'بندر ماهشهر، خوزستان، إيران',
+      'Ahvaz, Iran': 'الأهواز، إيران',
+      Iran: 'إيران',
+      'Andimeshk, Khuzestan, Iran': 'أنديمشك، خوزستان، إيران',
+      'Kermanshah, Iran': 'كرمانشاه، إيران',
+      'Khuzestan, Iran': 'خوزستان، إيران',
+      'Bandar Mahshahr, Iran': 'بندر ماهشهر، إيران',
+      'Najafabad, Isfahan, Iran': 'نجف آباد، أصفهان، إيران',
+      'Isfahan, Iran': 'أصفهان، إيران',
+      'Mahshahr, Iran': 'ماهشهر، إيران',
+      'Kish Island, Iran': 'جزيرة كيش، إيران',
+      'Baharestan, Iran': 'بهارستان، إيران',
+      'Maku, Iran': 'ماكو، إيران',
+      'Gonabad, Iran': 'گناباد، إيران',
+      'Shahr Babak, Kerman, Iran': 'شهربابك، كرمان، إيران',
+      'Karaj, Iran': 'كرج، إيران',
+      'Shahrekord, Iran': 'شهرکرد، إيران',
+      'Bandar Abbas, Iran': 'بندر عباس، إيران',
+      'Zanjan, Iran': 'زنجان، إيران',
+      'Shahrood, Iran': 'شاهرود، إيران',
+      'Shahin Shahr, Isfahan, Iran': 'شاهين شهر، أصفهان، إيران',
+      'Dorcheh, Isfahan, Iran': 'درچه، أصفهان، إيران',
+      'Parand, Tehran, Iran': 'پرند، طهران، إيران'
+    },
+    categories: {
+      healthcare: 'الرعاية الصحية والطوارئ',
+      'transportation-infrastructure': 'بنية تحتية للنقل والمطارات',
+      'commercial-retail': 'مجمعات تجارية ومعمارية',
+      'sports-recreation': 'منشآت رياضية وترفيهية',
+      'education-research': 'تعليم وبحث',
+      'public-cultural': 'مرافق عامة وثقافية',
+      'oil-gas-petrochemical': 'النفط والغاز والبتروكيماويات',
+      'hospitality-tourism': 'الضيافة والسياحة',
+      'religious-community': 'مبان عامة ومجتمعية',
+      industrial: 'تصنيع صناعي',
+      'office-administrative': 'مبان إدارية',
+      'charity-institutional': 'مرافق مؤسسية وخيرية'
+    },
+    projectTypes: {
+      sandwich: 'غلاف صناعي بألواح الساندويش',
+      standing: 'سقف standing seam / ZIP',
+      cladding: 'واجهة وكسوة ألمنيوم',
+      glass: 'نورگیر أو واجهة زجاجية',
+      polycarbonate: 'غلاف بولي كربونات'
+    },
+    systems: {
+      sandwich: 'نظام ألواح الساندويش',
+      standing: 'نظام سقف standing seam / ZIP',
+      cladding: 'نظام كسوة ألمنيوم',
+      glass: 'نظام زجاج إنشائي',
+      polycarbonate: 'نظام بولي كربونات'
+    },
+    challengePrefix: 'تطلب مشروع',
+    challengeSuffix: 'تنفيذا هندسيا مضبوطا يراعي مساحة المشروع ونظام الغلاف، مع ضبط الهندسة، ومسارات المياه، وتفاصيل الاتصال، وظروف الموقع.',
+    decisionPrefix: 'ركز قرار SIPANEL الهندسي على',
+    decisionSuffix: 'من خلال تنسيق رسومات الشوب، وتسلسل التركيب، وضبط المواد، وتفاصيل العزل المائي قبل التنفيذ وأثناءه.',
+    resultPrefix: 'تم تسليم المشروع بمساحة',
+    resultSuffix: 'مع غلاف صناعي قابل للفحص، وجودة تركيب منضبطة، وحماية أفضل من مخاطر الأداء والتنفيذ.',
+    fallbackCategory: 'مشروع غلاف صناعي',
+    riskItems: ['أخطاء المحاذاة والتنسيق', 'تسرب المياه أو ضعف العزل', 'هدر المواد وتأخر التنفيذ']
+  },
+  ru: {
+    names: {
+      'army-hospital': 'Военный госпиталь на 32 койки',
+      'mehrabad-aircraft-hangar': 'Ангар самолетов аэропорта Мехрабад',
+      'erbil-eye-hospital-entrance-canopy': 'Входной навес глазной больницы в Эрбиле',
+      'tabas-railway-facility': 'Железнодорожный объект Табас',
+      'mahshahr-taxi-parking': 'Стоянка такси в Махшахре',
+      'ahvaz-airport-passenger-terminal': 'Пассажирский терминал аэропорта Ахваз',
+      'tehran-mall-roof-garden-foodcourt': 'Кровля roof garden, фудкорта и кинотеатра Tehran Mall',
+      'megaparsmall-atrium': 'Атриум Megapars Mall',
+      'absaar-water-park': 'Аквапарк Absaar',
+      'andimeshk-stadium': 'Стадион Андимешк',
+      'imam-khomeini-airport-hajj-terminal': 'Пассажирский терминал хаджа аэропорта Имама Хомейни',
+      'kermanshah-industrial-university-petroleum-faculty': 'Нефтяной факультет Индустриального университета Керманшаха',
+      'shalamcheh-border-gate': 'Пограничные ворота Шаламче',
+      'bandar-mahshahr-bus-terminal': 'Городской автобусный терминал Бендер-Махшахр',
+      'najafabad-university-amphitheater': 'Амфитеатр Университета Наджафабада',
+      'fadak-mall-glass-skylight': 'Стеклянный фонарь Fadak Mall',
+      'marun-petrochemical-visitor-terminal': 'Многофункциональный зал Marun Petrochemical',
+      'toranj-kish-restaurant': 'Кровля ресторана отеля Toranj Kish',
+      'baharestan-prayer-hall': 'Молитвенный зал Бахарестан',
+      'enghelab-club-padel-center': 'Падел-центр клуба Enghelab',
+      'maku-convention-hall': 'Конференц-зал Маку',
+      'gonabad-university-sports-hall': 'Спортивный зал Университета Гонабада',
+      'shahre-babak-hall': 'Борцовский зал Шахр-Бабак',
+      'shahr-babak-stadium-entrance': 'Вход стадиона Шахр-Бабак',
+      'payam-industrial-city-ceramic-factory': 'Производственный объект керамики в промышленном городе Payam',
+      'tavanir-shahrekord-central-atrium': 'Центральный атриум Tavanir Shahrekord',
+      'bandar-abbas-mall-atrium-roof': 'Bandar Abbas Mall',
+      'tiran-gas-station': 'АЗС Тиран',
+      'eftekhar-commercial-office-complex': 'Коммерческо-офисный комплекс Eftekhar',
+      'rouzbeh-charity-complex-zanjan': 'Благотворительный комплекс Рузбех',
+      'shahrood-azad-university-skylight': 'Центральный световой фонарь Университета Азад Шахруд',
+      'atlas-hotel-shahinshahr-atrium': 'Атриум отеля Atlas',
+      'tarbiat-modares-research-greenhouse': 'Исследовательская теплица Университета Тарбиат Модарес',
+      'sepehan-flower-market': 'Цветочный рынок Sepehan',
+      'parand-city-entrance': 'Входные ворота города Паранд'
+    },
+    locations: {
+      'Raz & Jargalan, North Khorasan, Iran': 'Раз и Джаргалан, Северный Хорасан, Иран',
+      'Tehran, Iran': 'Тегеран, Иран',
+      'Erbil, Kurdistan Region, Iraq': 'Эрбиль, Курдистанский регион, Ирак',
+      'Tabas, Iran': 'Табас, Иран',
+      'Bandar Mahshahr, Khuzestan, Iran': 'Бендер-Махшахр, Хузестан, Иран',
+      'Ahvaz, Iran': 'Ахваз, Иран',
+      Iran: 'Иран',
+      'Andimeshk, Khuzestan, Iran': 'Андимешк, Хузестан, Иран',
+      'Kermanshah, Iran': 'Керманшах, Иран',
+      'Khuzestan, Iran': 'Хузестан, Иран',
+      'Bandar Mahshahr, Iran': 'Бендер-Махшахр, Иран',
+      'Najafabad, Isfahan, Iran': 'Наджафабад, Исфахан, Иран',
+      'Isfahan, Iran': 'Исфахан, Иран',
+      'Mahshahr, Iran': 'Махшахр, Иран',
+      'Kish Island, Iran': 'Остров Киш, Иран',
+      'Baharestan, Iran': 'Бахарестан, Иран',
+      'Maku, Iran': 'Маку, Иран',
+      'Gonabad, Iran': 'Гонабад, Иран',
+      'Shahr Babak, Kerman, Iran': 'Шахр-Бабак, Керман, Иран',
+      'Karaj, Iran': 'Кередж, Иран',
+      'Shahrekord, Iran': 'Шахрекорд, Иран',
+      'Bandar Abbas, Iran': 'Бендер-Аббас, Иран',
+      'Zanjan, Iran': 'Зенджан, Иран',
+      'Shahrood, Iran': 'Шахруд, Иран',
+      'Shahin Shahr, Isfahan, Iran': 'Шахиншахр, Исфахан, Иран',
+      'Dorcheh, Isfahan, Iran': 'Дорче, Исфахан, Иран',
+      'Parand, Tehran, Iran': 'Паранд, Тегеран, Иран'
+    },
+    categories: {
+      healthcare: 'Здравоохранение и аварийные объекты',
+      'transportation-infrastructure': 'Транспортная и аэропортовая инфраструктура',
+      'commercial-retail': 'Коммерческие и архитектурные комплексы',
+      'sports-recreation': 'Спортивные и рекреационные объекты',
+      'education-research': 'Образование и исследования',
+      'public-cultural': 'Общественные и культурные объекты',
+      'oil-gas-petrochemical': 'Нефть, газ и нефтехимия',
+      'hospitality-tourism': 'Гостиничный бизнес и туризм',
+      'religious-community': 'Общественные и коммунальные здания',
+      industrial: 'Промышленное производство',
+      'office-administrative': 'Административные здания',
+      'charity-institutional': 'Институциональные и благотворительные объекты'
+    },
+    projectTypes: {
+      sandwich: 'промышленная оболочка из сэндвич-панелей',
+      standing: 'кровля standing seam / ZIP',
+      cladding: 'фасад и алюминиевая облицовка',
+      glass: 'стеклянный фонарь или фасад',
+      polycarbonate: 'поликарбонатная оболочка'
+    },
+    systems: {
+      sandwich: 'система сэндвич-панелей',
+      standing: 'кровельная система standing seam / ZIP',
+      cladding: 'система алюминиевой облицовки',
+      glass: 'конструктивная стеклянная система',
+      polycarbonate: 'поликарбонатная система'
+    },
+    challengePrefix: 'Проект',
+    challengeSuffix: 'требовал контролируемого инженерного выполнения с учетом площади, системы оболочки, геометрии, водоотвода, узлов соединения и условий площадки.',
+    decisionPrefix: 'Инженерное решение SIPANEL было сосредоточено на',
+    decisionSuffix: 'через координацию рабочих чертежей, монтажной последовательности, материалов и гидроизоляционных деталей до и во время выполнения.',
+    resultPrefix: 'Проект площадью',
+    resultSuffix: 'передан с проверяемой промышленной оболочкой, контролируемым качеством монтажа и сниженным риском эксплуатационных и исполнительных ошибок.',
+    fallbackCategory: 'Проект промышленной оболочки',
+    riskItems: ['Ошибки выравнивания и координации', 'Протечки или слабая гидроизоляция', 'Отходы материалов и задержки выполнения']
+  }
+};
+
+function getPrimarySystemKey(project: ProjectCaseStudy): keyof ProjectLocalizationTerms['systems'] {
+  if (project.filters.includes('standing')) return 'standing';
+  if (project.filters.includes('cladding')) return 'cladding';
+  if (project.filters.includes('glass')) return 'glass';
+  if (project.filters.includes('polycarbonate')) return 'polycarbonate';
+  return 'sandwich';
+}
+
+function buildGeneratedProjectLocalization(project: ProjectCaseStudy, locale: 'ar' | 'ru'): LocalizedProjectCaseStudy {
+  const terms = projectLocalizationTerms[locale];
+  const systemKey = getPrimarySystemKey(project);
+  const name = terms.names[project.slug];
+  const location = terms.locations[project.location];
+
+  if (!name || !location) {
+    throw new Error(`Missing ${locale} project localization for ${project.slug}`);
+  }
+
+  const category = terms.categories[project.secondaryCategory] ?? terms.fallbackCategory;
+  const projectType = terms.projectTypes[systemKey];
+  const systemType = terms.systems[systemKey];
+
+  return {
+    projectName: name,
+    location,
+    category,
+    projectType,
+    systemType,
+    area: project.area,
+    challenge:
+      locale === 'ar'
+        ? `${terms.challengePrefix} ${name} في ${location} ${terms.challengeSuffix}`
+        : `${terms.challengePrefix} ${name} в локации ${location} ${terms.challengeSuffix}`,
+    engineeringDecision:
+      locale === 'ar'
+        ? `${terms.decisionPrefix} ${systemType} ${terms.decisionSuffix}`
+        : `${terms.decisionPrefix} системе: ${systemType}, ${terms.decisionSuffix}`,
+    measuredResult:
+      locale === 'ar'
+        ? `${terms.resultPrefix} ${project.area} ${terms.resultSuffix}`
+        : `${terms.resultPrefix} ${project.area} ${terms.resultSuffix}`,
+    riskPrevented: terms.riskItems
+  };
+}
+
 function getProjectCaseStudy(project: ProjectCaseStudy, locale: Locale): ProjectCaseStudy {
   const localizedProject = localizedProjectCaseStudies[locale]?.[project.slug];
 
-  return localizedProject ? {...project, ...localizedProject} : project;
+  if (localizedProject) {
+    return {...project, ...localizedProject};
+  }
+
+  if (locale === 'ar' || locale === 'ru') {
+    return {...project, ...buildGeneratedProjectLocalization(project, locale)};
+  }
+
+  return project;
 }
 
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
 
-const recognizedProjectFilters = new Set([
-  'sandwich',
-  'standing',
-  'standing-seam',
-  'cladding',
-  'aluminium',
-  'transparent-roofing',
-  'daylighting'
-]);
-
-function hasRecognizedProjectFilter(searchParams?: {filter?: string | string[]}) {
-  const filter = searchParams?.filter;
-
-  return typeof filter === 'string' && recognizedProjectFilters.has(filter);
-}
-
-export async function generateMetadata({params, searchParams}: Props): Promise<Metadata> {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale} = await params;
 
   if (!locales.includes(locale as Locale)) {
@@ -1355,15 +1623,13 @@ export async function generateMetadata({params, searchParams}: Props): Promise<M
 
   const validLocale = locale as Locale;
   const content = copy[validLocale];
-  const resolvedSearchParams = searchParams ? await searchParams : undefined;
 
   return buildPageMetadata({
     locale: validLocale,
     title: content.title,
     description: content.description,
     routes,
-    section: 'projects',
-    includeLanguageAlternates: !hasRecognizedProjectFilter(resolvedSearchParams)
+    section: 'projects'
   });
 }
 
@@ -1491,7 +1757,7 @@ export default async function ProjectsOverviewPage({params}: Props) {
                     <div className="projects-index-card__image">
                       <Image
                         src={project.image}
-                        alt={`${project.projectName} industrial project photography`}
+                        alt={`${project.projectName} ${content.imageAltSuffix}`}
                         fill
                         sizes="(max-width: 767px) 86vw, (max-width: 1024px) 44vw, 31vw"
                       />
