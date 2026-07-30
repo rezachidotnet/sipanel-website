@@ -65,7 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routeMaps.flatMap((routes) =>
     locales.map((locale) => ({
       url: withBaseUrl(routes[locale]),
-      lastModified: new Date(),
       changeFrequency: locale === defaultLocale && normalizeCanonicalPath(routes[locale]) === '/' ? 'weekly' : 'monthly',
       priority: normalizeCanonicalPath(routes[locale]) === getLocalizedPath(locale) ? 1 : 0.7,
       alternates: alternatesFor(routes)
