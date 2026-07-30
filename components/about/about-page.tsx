@@ -77,6 +77,9 @@ function HeritageHeroSection({content}: SectionProps) {
           <Link href="/contact" className="button-primary about-story__cta">
             {content.hero.primaryCta}
           </Link>
+          <Link href="/systems" className="button-secondary about-story__cta">
+            {content.hero.secondaryCta}
+          </Link>
           {content.companyStory.lead ? (
             <p className={hasHeritageStory ? 'about-story__kicker' : 'about-story__lead'} id="about-story-title">
               {hasHeritageStory ? <LinkedText text={content.companyStory.lead} /> : content.companyStory.lead}
