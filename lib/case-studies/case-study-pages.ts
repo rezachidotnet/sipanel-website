@@ -880,6 +880,384 @@ const caseStudyLocaleOverrides: Partial<Record<string, Partial<Record<Locale, Ca
       conversionText: 'Отправьте схему кровли, несущую конструкцию и водоотвод, чтобы инженерная команда SIPANEL оценила риски герметизации и поставки.',
       conversionPrimaryCta: 'Запросить проверку кровли парковки'
     }
+  },
+  'ahvaz-airport-passenger-terminal': {
+    en: {
+      metaDescription: 'Ahvaz Airport Passenger Terminal case study: 4,000 m² ZIP-TECH and aluminium cladding with curved facade geometry, substructure coordination, and controlled airport-terminal finishing.',
+      shortSummary: 'A 4,000 m² airport passenger-terminal envelope where curved architectural geometry, aluminium cladding, ZIP-TECH transitions, and substructure alignment had to be coordinated before installation.',
+      trustMicrocopy: 'Verified scope: ZIP-TECH roofing, aluminium cladding, curved geometry coordination, and staged installation checks.',
+      primaryCta: 'Request Airport Envelope Review',
+      challenge: 'The passenger terminal included a curved front architectural feature where the covering had to bend in a perpendicular direction. That made geometry control, substructure alignment, aluminium panel layout, ZIP-TECH transitions, and final visual quality the main execution risks.',
+      challengePoints: ['Maintaining the curved architectural line without visual breaks', 'Coordinating aluminium cladding with ZIP-TECH roof transitions', 'Aligning substructure references before panel installation', 'Controlling finish quality on a public terminal facade'],
+      sipanelSolution: 'SIPANEL coordinated custom execution details for the curved form, aligning substructure references, aluminium panels, and ZIP-TECH components before installation.',
+      engineeringDecision: 'The engineering decision was to control geometry first: define curved references, coordinate panel and roofing interfaces, then execute the covering without interrupting the architectural line.',
+      selectedSystemLogic: 'ZIP-TECH roofing and aluminium cladding were used together because the terminal required both weather-protected roof transitions and a visually controlled architectural front.',
+      coordinationNote: 'Substructure lines, panel bending direction, roof-to-cladding transitions, and edge details were coordinated before installation so airport-terminal interfaces did not become late site corrections.',
+      executionDetail: 'Execution covered 4,000 m² of ZIP-TECH and aluminium cladding with staged checks for curved references, panel alignment, transition quality, and final visual continuity.',
+      procurementControl: 'ZIP-TECH components, aluminium panels, fasteners, and transition accessories were controlled as one coordinated package matched to the approved geometry.',
+      coordinationWithSiteTeam: 'The site team worked from agreed geometry references so cladding, roof edges, and terminal facade interfaces could be installed in a controlled order.',
+      qualityCheckpoints: ['Curved reference and substructure alignment review', 'ZIP-TECH-to-cladding transition inspection', 'Final visual continuity check across the terminal frontage'],
+      measuredResult: '4,000 m² of ZIP-TECH and aluminium cladding were executed while preserving the curved architectural form and final visual quality.',
+      measuredResultItems: [
+        {label: 'Execution result', value: 'Curved terminal envelope completed with controlled visual continuity', verificationStatus: 'verified'},
+        {label: 'Executed area', value: '4,000 m²', verificationStatus: 'verified'},
+        {label: 'System', value: 'ZIP-TECH roofing and aluminium cladding', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'Visual breaks in curved facade', explanation: 'Curved references and alignment checkpoints reduced the risk of visible discontinuity on the terminal frontage.'},
+        {risk: 'Incorrect perpendicular bending', explanation: 'Panel bending direction was reviewed against the geometry before site installation.'},
+        {risk: 'Mismatch between cladding and substructure', explanation: 'Substructure alignment was treated as a prerequisite for aluminium panel installation.'},
+        {risk: 'Loss of architectural quality', explanation: 'ZIP-TECH transitions and cladding edges were checked as part of the final visual sequence.'}
+      ],
+      conversionHeadline: 'Need an airport or terminal envelope review?',
+      conversionText: 'Send the terminal facade, roof, or canopy drawings so SIPANEL engineering can review geometry, transitions, and installation sequencing.',
+      conversionPrimaryCta: 'Request Airport Envelope Review'
+    },
+    fa: {
+      metaDescription: 'مطالعه موردی ترمینال مسافری فرودگاه اهواز: اجرای ۴٬۰۰۰ مترمربع زیپ‌تک و نمای آلومینیومی با کنترل هندسه منحنی، زیرسازی و کیفیت نهایی.',
+      shortSummary: 'پوسته ۴٬۰۰۰ مترمربعی ترمینال مسافری که در آن هندسه منحنی، نمای آلومینیومی، انتقال‌های زیپ‌تک و تراز زیرسازی باید پیش از نصب هماهنگ می‌شد.',
+      trustMicrocopy: 'محدوده تأییدشده: سقف زیپ‌تک، نمای آلومینیومی، هماهنگی هندسه منحنی و کنترل مرحله‌ای نصب.',
+      primaryCta: 'درخواست بررسی پوسته ترمینال',
+      challenge: 'در ترمینال مسافری فرودگاه اهواز یک فرم معماری منحنی در نمای اصلی وجود داشت که پوشش باید در جهت عمود خم می‌شد. بنابراین کنترل هندسه، تراز زیرسازی، چیدمان پانل آلومینیومی، انتقال‌های زیپ‌تک و کیفیت نهایی نما به ریسک‌های اصلی اجرا تبدیل شدند.',
+      challengePoints: ['حفظ خط معماری منحنی بدون شکست بصری', 'هماهنگی نمای آلومینیومی با انتقال‌های سقف زیپ‌تک', 'تراز کردن رفرنس‌های زیرسازی پیش از نصب پانل', 'کنترل کیفیت نهایی روی نمای عمومی ترمینال'],
+      sipanelSolution: 'سی‌پانل جزئیات اجرای اختصاصی فرم منحنی را هماهنگ کرد و رفرنس‌های زیرسازی، پانل‌های آلومینیومی و اجزای زیپ‌تک را پیش از نصب با هم تطبیق داد.',
+      engineeringDecision: 'تصمیم مهندسی این بود که ابتدا هندسه کنترل شود: رفرنس‌های منحنی تعریف شود، اتصال نمای آلومینیومی و سقف هماهنگ گردد و سپس پوشش بدون شکست خط معماری اجرا شود.',
+      selectedSystemLogic: 'ترکیب سقف زیپ‌تک و نمای آلومینیومی به این دلیل انتخاب شد که ترمینال هم به انتقال سقفی مقاوم در برابر آب‌وهوا و هم به نمای معماری کنترل‌شده نیاز داشت.',
+      coordinationNote: 'خطوط زیرسازی، جهت خم پانل، انتقال سقف به نما و جزئیات لبه پیش از نصب هماهنگ شد تا رابط‌های ترمینال به اصلاح دیرهنگام کارگاهی تبدیل نشود.',
+      executionDetail: 'اجرا شامل ۴٬۰۰۰ مترمربع زیپ‌تک و نمای آلومینیومی بود و با کنترل مرحله‌ای رفرنس‌های منحنی، تراز پانل، کیفیت انتقال‌ها و پیوستگی بصری نهایی انجام شد.',
+      procurementControl: 'اجزای زیپ‌تک، پانل‌های آلومینیومی، پیچ‌ها و اکسسوری‌های انتقال به‌عنوان یک بسته هماهنگ با هندسه تأییدشده کنترل شد.',
+      coordinationWithSiteTeam: 'تیم کارگاه بر اساس رفرنس‌های هندسی توافق‌شده کار کرد تا نما، لبه‌های سقف و رابط‌های ترمینال در توالی قابل کنترل نصب شوند.',
+      qualityCheckpoints: ['بازبینی رفرنس منحنی و تراز زیرسازی', 'بازرسی انتقال زیپ‌تک به نمای آلومینیومی', 'کنترل پیوستگی بصری در طول نمای ترمینال'],
+      measuredResult: '۴٬۰۰۰ مترمربع زیپ‌تک و نمای آلومینیومی اجرا شد و فرم معماری منحنی و کیفیت بصری نهایی حفظ گردید.',
+      measuredResultItems: [
+        {label: 'نتیجه اجرا', value: 'پوسته منحنی ترمینال با پیوستگی بصری کنترل‌شده تکمیل شد', verificationStatus: 'verified'},
+        {label: 'مساحت اجراشده', value: '۴٬۰۰۰ مترمربع', verificationStatus: 'verified'},
+        {label: 'سامانه', value: 'سقف زیپ‌تک و نمای آلومینیومی', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'شکست بصری در نمای منحنی', explanation: 'رفرنس‌های منحنی و کنترل‌های تراز ریسک ناپیوستگی قابل مشاهده در نمای ترمینال را کاهش داد.'},
+        {risk: 'خم‌کاری نادرست در جهت عمود', explanation: 'جهت خم پانل پیش از نصب با هندسه پروژه بازبینی شد.'},
+        {risk: 'ناهماهنگی نما و زیرسازی', explanation: 'تراز زیرسازی به‌عنوان پیش‌نیاز نصب پانل آلومینیومی کنترل شد.'},
+        {risk: 'افت کیفیت معماری', explanation: 'انتقال‌های زیپ‌تک و لبه‌های نما در توالی کنترل نهایی بررسی شدند.'}
+      ],
+      conversionHeadline: 'نیاز به بررسی پوسته فرودگاهی یا ترمینال دارید؟',
+      conversionText: 'نقشه‌های نما، سقف یا سایبان ترمینال را ارسال کنید تا تیم مهندسی سی‌پانل هندسه، انتقال‌ها و توالی نصب را بررسی کند.',
+      conversionPrimaryCta: 'درخواست بررسی پوسته ترمینال'
+    },
+    ar: {
+      metaDescription: 'دراسة حالة محطة الركاب في مطار الأهواز: تنفيذ ٤٬٠٠٠ م² من ZIP-TECH والكسوة الألمنيومية مع ضبط الهندسة المنحنية والبنية الحاملة وجودة التشطيب.',
+      shortSummary: 'غلاف محطة ركاب بمساحة ٤٬٠٠٠ م² كان يتطلب تنسيق الهندسة المنحنية والكسوة الألمنيومية وانتقالات ZIP-TECH ومحاذاة البنية الحاملة قبل التركيب.',
+      trustMicrocopy: 'النطاق المؤكد: تسقيف ZIP-TECH، كسوة ألمنيوم، تنسيق الهندسة المنحنية وفحوص تركيب مرحلية.',
+      primaryCta: 'اطلب مراجعة غلاف محطة',
+      challenge: 'تضمّنت محطة الركاب في مطار الأهواز عنصراً معمارياً أمامياً منحنياً كان يجب أن ينحني غطاؤه باتجاه عمودي. لذلك أصبحت هندسة الانحناء ومحاذاة البنية الحاملة وتخطيط ألواح الألمنيوم وانتقالات ZIP-TECH وجودة التشطيب النهائية هي مخاطر التنفيذ الرئيسية.',
+      challengePoints: ['الحفاظ على الخط المعماري المنحني دون انقطاعات بصرية', 'تنسيق الكسوة الألمنيومية مع انتقالات سقف ZIP-TECH', 'محاذاة مراجع البنية الحاملة قبل تركيب الألواح', 'ضبط جودة التشطيب على واجهة محطة عامة'],
+      sipanelSolution: 'نسّقت SIPANEL تفاصيل تنفيذ مخصصة للشكل المنحني، مع مواءمة مراجع البنية الحاملة وألواح الألمنيوم ومكونات ZIP-TECH قبل التركيب.',
+      engineeringDecision: 'كان القرار الهندسي هو ضبط الهندسة أولاً: تحديد المراجع المنحنية، وتنسيق واجهات الألواح والسقف، ثم تنفيذ الغطاء دون كسر الخط المعماري.',
+      selectedSystemLogic: 'استُخدم تسقيف ZIP-TECH مع الكسوة الألمنيومية لأن المحطة احتاجت إلى انتقالات سقفية محمية من الطقس وإلى واجهة معمارية مضبوطة بصرياً.',
+      coordinationNote: 'نُسّقت خطوط البنية الحاملة واتجاه ثني الألواح وانتقالات السقف إلى الكسوة وتفاصيل الحواف قبل التركيب حتى لا تتحول واجهات المحطة إلى تصحيحات متأخرة في الموقع.',
+      executionDetail: 'شمل التنفيذ ٤٬٠٠٠ م² من ZIP-TECH والكسوة الألمنيومية، مع فحوص مرحلية للمراجع المنحنية ومحاذاة الألواح وجودة الانتقالات والاستمرارية البصرية النهائية.',
+      procurementControl: 'تم ضبط مكونات ZIP-TECH وألواح الألمنيوم والمثبتات وملحقات الانتقال كحزمة واحدة مطابقة للهندسة المعتمدة.',
+      coordinationWithSiteTeam: 'عمل فريق الموقع وفق مراجع هندسية متفق عليها كي تُركّب الكسوة وحواف السقف وواجهات المحطة بتسلسل مضبوط.',
+      qualityCheckpoints: ['مراجعة المراجع المنحنية ومحاذاة البنية الحاملة', 'فحص انتقال ZIP-TECH إلى الكسوة الألمنيومية', 'فحص الاستمرارية البصرية على طول واجهة المحطة'],
+      measuredResult: 'تم تنفيذ ٤٬٠٠٠ م² من ZIP-TECH والكسوة الألمنيومية مع الحفاظ على الشكل المعماري المنحني وجودة التشطيب النهائية.',
+      measuredResultItems: [
+        {label: 'نتيجة التنفيذ', value: 'اكتمل غلاف المحطة المنحني باستمرارية بصرية مضبوطة', verificationStatus: 'verified'},
+        {label: 'المساحة المنفذة', value: '٤٬٠٠٠ م²', verificationStatus: 'verified'},
+        {label: 'النظام', value: 'تسقيف ZIP-TECH وكسوة ألمنيوم', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'انقطاعات بصرية في الواجهة المنحنية', explanation: 'قللت المراجع المنحنية وفحوص المحاذاة خطر ظهور انقطاع بصري في واجهة المحطة.'},
+        {risk: 'ثني غير صحيح بالاتجاه العمودي', explanation: 'تمت مراجعة اتجاه ثني الألواح مقابل الهندسة قبل التركيب في الموقع.'},
+        {risk: 'عدم تطابق الكسوة مع البنية الحاملة', explanation: 'اعتُبرت محاذاة البنية الحاملة شرطاً مسبقاً لتركيب ألواح الألمنيوم.'},
+        {risk: 'فقدان الجودة المعمارية', explanation: 'تم فحص انتقالات ZIP-TECH وحواف الكسوة ضمن تسلسل التشطيب النهائي.'}
+      ],
+      conversionHeadline: 'تحتاج إلى مراجعة غلاف مطار أو محطة؟',
+      conversionText: 'أرسل رسومات واجهة المحطة أو السقف أو المظلة ليراجع فريق SIPANEL الهندسي الهندسة والانتقالات وتسلسل التركيب.',
+      conversionPrimaryCta: 'اطلب مراجعة غلاف محطة'
+    },
+    ru: {
+      metaDescription: 'Кейс пассажирского терминала аэропорта Ахваз: 4 000 м² ZIP-TECH и алюминиевой облицовки с контролем кривой геометрии, подсистемы и качества отделки.',
+      shortSummary: 'Контур пассажирского терминала площадью 4 000 м², где кривую архитектурную геометрию, алюминиевую облицовку, переходы ZIP-TECH и выравнивание подсистемы нужно было согласовать до монтажа.',
+      trustMicrocopy: 'Подтвержденный объем: кровля ZIP-TECH, алюминиевая облицовка, координация кривой геометрии и поэтапные проверки монтажа.',
+      primaryCta: 'Запросить проверку контура терминала',
+      challenge: 'В пассажирском терминале был изогнутый передний архитектурный элемент, где покрытие должно было изгибаться в перпендикулярном направлении. Поэтому контроль геометрии, выравнивание подсистемы, раскладка алюминиевых панелей, переходы ZIP-TECH и итоговое качество вида стали основными рисками выполнения.',
+      challengePoints: ['Сохранение кривой архитектурной линии без визуальных разрывов', 'Координация алюминиевой облицовки с переходами кровли ZIP-TECH', 'Выравнивание реперов подсистемы до монтажа панелей', 'Контроль качества отделки на публичном фасаде терминала'],
+      sipanelSolution: 'SIPANEL скоординировала специальные исполнительные детали для кривой формы, согласовав реперы подсистемы, алюминиевые панели и компоненты ZIP-TECH до монтажа.',
+      engineeringDecision: 'Инженерное решение состояло в первичном контроле геометрии: задать кривые реперы, согласовать интерфейсы панелей и кровли, затем выполнить покрытие без нарушения архитектурной линии.',
+      selectedSystemLogic: 'Кровля ZIP-TECH и алюминиевая облицовка применены вместе, потому что терминалу требовались защищенные кровельные переходы и визуально контролируемый архитектурный фасад.',
+      coordinationNote: 'Линии подсистемы, направление изгиба панелей, переходы кровли к облицовке и кромочные детали были согласованы до монтажа, чтобы интерфейсы терминала не стали поздними исправлениями на площадке.',
+      executionDetail: 'Работы охватили 4 000 м² ZIP-TECH и алюминиевой облицовки с поэтапной проверкой кривых реперов, выравнивания панелей, качества переходов и итоговой визуальной непрерывности.',
+      procurementControl: 'Компоненты ZIP-TECH, алюминиевые панели, крепеж и аксессуары переходов контролировались как единый комплект под утвержденную геометрию.',
+      coordinationWithSiteTeam: 'Площадочная команда работала по согласованным геометрическим реперам, чтобы облицовка, кромки кровли и интерфейсы терминала монтировались в управляемом порядке.',
+      qualityCheckpoints: ['Проверка кривых реперов и выравнивания подсистемы', 'Инспекция перехода ZIP-TECH к алюминиевой облицовке', 'Проверка визуальной непрерывности вдоль фасада терминала'],
+      measuredResult: 'Выполнено 4 000 м² ZIP-TECH и алюминиевой облицовки с сохранением кривой архитектурной формы и итогового визуального качества.',
+      measuredResultItems: [
+        {label: 'Результат монтажа', value: 'Кривой контур терминала завершен с контролируемой визуальной непрерывностью', verificationStatus: 'verified'},
+        {label: 'Выполненная площадь', value: '4 000 м²', verificationStatus: 'verified'},
+        {label: 'Система', value: 'Кровля ZIP-TECH и алюминиевая облицовка', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'Визуальные разрывы на кривом фасаде', explanation: 'Кривые реперы и проверки выравнивания снизили риск видимых разрывов на фасаде терминала.'},
+        {risk: 'Неверный перпендикулярный изгиб', explanation: 'Направление изгиба панелей проверялось по геометрии до монтажа на площадке.'},
+        {risk: 'Несовпадение облицовки и подсистемы', explanation: 'Выравнивание подсистемы стало обязательным условием перед монтажом алюминиевых панелей.'},
+        {risk: 'Потеря архитектурного качества', explanation: 'Переходы ZIP-TECH и кромки облицовки проверялись в финальной последовательности отделки.'}
+      ],
+      conversionHeadline: 'Нужна проверка контура аэропорта или терминала?',
+      conversionText: 'Пришлите чертежи фасада, кровли или навеса терминала, и инженерная команда SIPANEL проверит геометрию, переходы и последовательность монтажа.',
+      conversionPrimaryCta: 'Запросить проверку контура терминала'
+    }
+  },
+  'kermanshah-industrial-university-petroleum-faculty': {
+    en: {
+      metaDescription: 'Kermanshah Industrial University Petroleum Faculty case study: 1,000 m² structural glass facade with movement-aware connection detailing and controlled installation.',
+      shortSummary: 'A 1,000 m² educational-building facade where glass connection details had to tolerate relative movement between the primary structure and brittle facade panels.',
+      trustMicrocopy: 'Verified scope: structural glass facade, connection-detail coordination, support tolerance control, and installation checks.',
+      primaryCta: 'Request Facade Connection Review',
+      challenge: 'The petroleum-faculty building required structural glass facade connections that could tolerate relative movement in the primary structure and reduce the risk of transferring displacement into brittle glass panels.',
+      challengePoints: ['Separating facade behavior from uncontrolled structural movement', 'Coordinating glass support tolerances before installation', 'Maintaining facade alignment across a 1,000 m² surface', 'Reducing stress transfer into glass units'],
+      sipanelSolution: 'SIPANEL engineered connection details to accommodate displacement between the building structure and glass facade while preserving facade alignment.',
+      engineeringDecision: 'The engineering decision was to separate glass performance from uncontrolled structural movement by using connection details that reduce stress transfer into the panels.',
+      selectedSystemLogic: 'A structural glass facade approach was used because the faculty building required a transparent architectural envelope with carefully controlled support interfaces.',
+      coordinationNote: 'Support points, glass unit alignment, and connection tolerances were coordinated with the primary structure before installation.',
+      executionDetail: 'Execution covered approximately 1,000 m² of glass facade with attention to connection alignment, support tolerances, and controlled installation of glass units.',
+      procurementControl: 'Glass units, connection accessories, and support components were coordinated against the approved facade layout to reduce mismatch during installation.',
+      coordinationWithSiteTeam: 'The site team checked support references before setting glass units so connection tolerances remained within the intended installation sequence.',
+      qualityCheckpoints: ['Connection-detail review before installation', 'Support tolerance and glass alignment inspection', 'Facade continuity check across the installed surface'],
+      measuredResult: 'Approximately 1,000 m² of structural glass facade was executed. The project record states that the facade reportedly remained without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.',
+      measuredResultItems: [
+        {label: 'Execution result', value: 'Structural glass facade installed with movement-aware connection details', verificationStatus: 'verified'},
+        {label: 'Executed area', value: '1,000 m²', verificationStatus: 'verified'},
+        {label: 'Recorded observation', value: 'Project record reports no glass damage during a Kermanshah earthquake in the 1390s Solar Hijri decade', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'Glass breakage under structural movement', explanation: 'Connection details were used to reduce direct stress transfer from the primary structure into glass panels.'},
+        {risk: 'Facade connection failure', explanation: 'Support points and tolerances were reviewed before glass installation.'},
+        {risk: 'Mismatch between structure and glass facade', explanation: 'Facade alignment was coordinated against the primary-structure references.'},
+        {risk: 'Reduced building-user safety', explanation: 'Movement-aware detailing reduced the risk of brittle facade-panel damage from structural displacement.'}
+      ],
+      conversionHeadline: 'Need a facade connection review?',
+      conversionText: 'Send facade drawings and support details so SIPANEL engineering can review connection logic, tolerances, and installation sequencing.',
+      conversionPrimaryCta: 'Request Facade Connection Review'
+    },
+    fa: {
+      metaDescription: 'مطالعه موردی دانشکده نفت دانشگاه صنعتی کرمانشاه: اجرای ۱٬۰۰۰ مترمربع نمای شیشه‌ای سازه‌ای با دیتیل اتصال سازگار با جابه‌جایی و کنترل نصب.',
+      shortSummary: 'نمای ۱٬۰۰۰ مترمربعی ساختمان آموزشی که در آن دیتیل اتصال شیشه باید جابه‌جایی نسبی سازه اصلی را تحمل کند و تنش را به پانل‌های شکننده منتقل نکند.',
+      trustMicrocopy: 'محدوده تأییدشده: نمای شیشه‌ای سازه‌ای، هماهنگی دیتیل اتصال، کنترل تلرانس تکیه‌گاه و بازرسی نصب.',
+      primaryCta: 'درخواست بررسی اتصال نما',
+      challenge: 'ساختمان دانشکده نفت دانشگاه صنعتی کرمانشاه به اتصالات نمای شیشه‌ای سازه‌ای نیاز داشت که بتواند جابه‌جایی نسبی در سازه اصلی را تحمل کند و ریسک انتقال تغییرمکان به پانل‌های شیشه‌ای شکننده را کاهش دهد.',
+      challengePoints: ['جدا کردن رفتار نما از حرکت کنترل‌نشده سازه اصلی', 'هماهنگی تلرانس تکیه‌گاه شیشه پیش از نصب', 'حفظ تراز نما در سطح ۱٬۰۰۰ مترمربع', 'کاهش انتقال تنش به یونیت‌های شیشه‌ای'],
+      sipanelSolution: 'سی‌پانل دیتیل‌های اتصال را طوری مهندسی کرد که جابه‌جایی بین سازه ساختمان و نمای شیشه‌ای جذب شود و هم‌زمان تراز نما حفظ گردد.',
+      engineeringDecision: 'تصمیم مهندسی این بود که عملکرد شیشه از حرکت کنترل‌نشده سازه جدا شود و با دیتیل اتصال مناسب، انتقال تنش به پانل‌ها کاهش یابد.',
+      selectedSystemLogic: 'رویکرد نمای شیشه‌ای سازه‌ای به این دلیل به کار رفت که ساختمان دانشکده به پوسته شفاف معماری با رابط‌های تکیه‌گاهی دقیق نیاز داشت.',
+      coordinationNote: 'نقاط تکیه‌گاه، تراز یونیت‌های شیشه و تلرانس اتصال پیش از نصب با سازه اصلی هماهنگ شد.',
+      executionDetail: 'اجرا حدود ۱٬۰۰۰ مترمربع نمای شیشه‌ای را پوشش داد و بر تراز اتصال، تلرانس تکیه‌گاه و نصب کنترل‌شده یونیت‌های شیشه‌ای تمرکز داشت.',
+      procurementControl: 'یونیت‌های شیشه، متعلقات اتصال و قطعات تکیه‌گاهی با چیدمان تأییدشده نما هماهنگ شد تا عدم‌انطباق در نصب کاهش یابد.',
+      coordinationWithSiteTeam: 'تیم کارگاه پیش از نصب شیشه رفرنس‌های تکیه‌گاهی را کنترل کرد تا تلرانس اتصال در توالی نصب حفظ شود.',
+      qualityCheckpoints: ['بازبینی دیتیل اتصال پیش از نصب', 'کنترل تلرانس تکیه‌گاه و تراز شیشه', 'بررسی پیوستگی نما در سطح اجراشده'],
+      measuredResult: 'حدود ۱٬۰۰۰ مترمربع نمای شیشه‌ای سازه‌ای اجرا شد. در سوابق پروژه آمده است که نما در جریان زلزله کرمانشاه در دهه ۱۳۹۰ شمسی بدون آسیب شیشه‌ای گزارش شده است.',
+      measuredResultItems: [
+        {label: 'نتیجه اجرا', value: 'نمای شیشه‌ای سازه‌ای با دیتیل اتصال سازگار با جابه‌جایی نصب شد', verificationStatus: 'verified'},
+        {label: 'مساحت اجراشده', value: '۱٬۰۰۰ مترمربع', verificationStatus: 'verified'},
+        {label: 'مشاهده ثبت‌شده', value: 'سوابق پروژه نبود آسیب شیشه‌ای در زلزله کرمانشاه دهه ۱۳۹۰ را گزارش می‌کند', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'شکست شیشه در اثر حرکت سازه', explanation: 'دیتیل اتصال برای کاهش انتقال مستقیم تنش از سازه اصلی به پانل‌های شیشه‌ای به کار رفت.'},
+        {risk: 'خرابی اتصال نما', explanation: 'نقاط تکیه‌گاه و تلرانس‌ها پیش از نصب شیشه بازبینی شدند.'},
+        {risk: 'ناهماهنگی سازه و نمای شیشه‌ای', explanation: 'تراز نما با رفرنس‌های سازه اصلی هماهنگ شد.'},
+        {risk: 'کاهش ایمنی کاربران ساختمان', explanation: 'دیتیل سازگار با جابه‌جایی ریسک آسیب پانل شیشه‌ای ناشی از تغییرمکان سازه را کاهش داد.'}
+      ],
+      conversionHeadline: 'نیاز به بررسی اتصال نما دارید؟',
+      conversionText: 'نقشه‌های نما و دیتیل‌های تکیه‌گاه را ارسال کنید تا تیم مهندسی سی‌پانل منطق اتصال، تلرانس‌ها و توالی نصب را بررسی کند.',
+      conversionPrimaryCta: 'درخواست بررسی اتصال نما'
+    },
+    ar: {
+      metaDescription: 'دراسة حالة كلية النفط في جامعة كرمانشاه الصناعية: واجهة زجاجية إنشائية بمساحة ١٬٠٠٠ م² مع تفاصيل اتصال تراعي الحركة وتركيب مضبوط.',
+      shortSummary: 'واجهة مبنى تعليمي بمساحة ١٬٠٠٠ م² احتاجت فيها وصلات الزجاج إلى تحمّل الحركة النسبية بين الهيكل الرئيسي والألواح الزجاجية الهشة.',
+      trustMicrocopy: 'النطاق المؤكد: واجهة زجاجية إنشائية، تنسيق تفاصيل الوصلات، ضبط سماحات التثبيت وفحوص التركيب.',
+      primaryCta: 'اطلب مراجعة وصلات الواجهة',
+      challenge: 'احتاج مبنى كلية النفط في جامعة كرمانشاه الصناعية إلى وصلات واجهة زجاجية إنشائية تتحمل الحركة النسبية في الهيكل الرئيسي وتقلل خطر نقل الإزاحة إلى الألواح الزجاجية الهشة.',
+      challengePoints: ['فصل أداء الواجهة عن الحركة غير المضبوطة في الهيكل الرئيسي', 'تنسيق سماحات تكييف الزجاج قبل التركيب', 'الحفاظ على محاذاة الواجهة عبر سطح بمساحة ١٬٠٠٠ م²', 'تقليل انتقال الإجهاد إلى وحدات الزجاج'],
+      sipanelSolution: 'صمّمت SIPANEL تفاصيل وصلات تستوعب الإزاحة بين هيكل المبنى والواجهة الزجاجية مع الحفاظ على محاذاة الواجهة.',
+      engineeringDecision: 'كان القرار الهندسي فصل أداء الزجاج عن الحركة غير المضبوطة للهيكل باستخدام تفاصيل وصلات تقلل انتقال الإجهاد إلى الألواح.',
+      selectedSystemLogic: 'استُخدم نهج الواجهة الزجاجية الإنشائية لأن مبنى الكلية احتاج إلى غلاف معماري شفاف بواجهات تثبيت مضبوطة بعناية.',
+      coordinationNote: 'نُسّقت نقاط التثبيت ومحاذاة وحدات الزجاج وسماحات الوصلات مع الهيكل الرئيسي قبل التركيب.',
+      executionDetail: 'غطى التنفيذ نحو ١٬٠٠٠ م² من الواجهة الزجاجية، مع التركيز على محاذاة الوصلات وسماحات التثبيت والتركيب المضبوط لوحدات الزجاج.',
+      procurementControl: 'نُسّقت وحدات الزجاج وملحقات الوصل والدعامات مع تخطيط الواجهة المعتمد لتقليل عدم التطابق أثناء التركيب.',
+      coordinationWithSiteTeam: 'تحقق فريق الموقع من مراجع التثبيت قبل تركيب وحدات الزجاج حتى تبقى سماحات الوصل ضمن التسلسل المقصود.',
+      qualityCheckpoints: ['مراجعة تفاصيل الوصلات قبل التركيب', 'فحص سماحات التثبيت ومحاذاة الزجاج', 'فحص استمرارية الواجهة عبر السطح المنفذ'],
+      measuredResult: 'تم تنفيذ نحو ١٬٠٠٠ م² من الواجهة الزجاجية الإنشائية. وتذكر سجلات المشروع أن الواجهة بقيت من دون أضرار زجاجية أثناء زلزال كرمانشاه في عقد ١٣٩٠ هجري شمسي.',
+      measuredResultItems: [
+        {label: 'نتيجة التنفيذ', value: 'تم تركيب واجهة زجاجية إنشائية بتفاصيل وصلات تراعي الحركة', verificationStatus: 'verified'},
+        {label: 'المساحة المنفذة', value: '١٬٠٠٠ م²', verificationStatus: 'verified'},
+        {label: 'ملاحظة مسجلة', value: 'تذكر سجلات المشروع عدم حدوث ضرر زجاجي خلال زلزال كرمانشاه في عقد ١٣٩٠ هجري شمسي', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'كسر الزجاج بسبب حركة الهيكل', explanation: 'استُخدمت تفاصيل وصلات تقلل نقل الإجهاد المباشر من الهيكل الرئيسي إلى الألواح الزجاجية.'},
+        {risk: 'فشل وصلات الواجهة', explanation: 'راجعت الفرق نقاط التثبيت والسماحات قبل تركيب الزجاج.'},
+        {risk: 'عدم تطابق الهيكل والواجهة الزجاجية', explanation: 'نُسّقت محاذاة الواجهة مع مراجع الهيكل الرئيسي.'},
+        {risk: 'انخفاض سلامة مستخدمي المبنى', explanation: 'قللت التفاصيل المراعية للحركة خطر تلف ألواح الواجهة الهشة نتيجة إزاحة الهيكل.'}
+      ],
+      conversionHeadline: 'تحتاج إلى مراجعة وصلات واجهة؟',
+      conversionText: 'أرسل رسومات الواجهة وتفاصيل التثبيت ليراجع فريق SIPANEL الهندسي منطق الوصلات والسماحات وتسلسل التركيب.',
+      conversionPrimaryCta: 'اطلب مراجعة وصلات الواجهة'
+    },
+    ru: {
+      metaDescription: 'Кейс нефтяного факультета Керманшахского индустриального университета: 1 000 м² структурного стеклянного фасада с узлами, учитывающими перемещения.',
+      shortSummary: 'Фасад учебного корпуса площадью 1 000 м², где узлы крепления стекла должны были выдерживать относительные перемещения между основной конструкцией и хрупкими стеклянными панелями.',
+      trustMicrocopy: 'Подтвержденный объем: структурный стеклянный фасад, координация узлов крепления, контроль допусков опор и проверки монтажа.',
+      primaryCta: 'Запросить проверку фасадных узлов',
+      challenge: 'Зданию нефтяного факультета Керманшахского индустриального университета требовались узлы структурного стеклянного фасада, способные воспринимать относительное движение основной конструкции и снижать риск передачи смещений в хрупкие стеклянные панели.',
+      challengePoints: ['Отделение работы фасада от неконтролируемого движения основной конструкции', 'Координация допусков опор стекла до монтажа', 'Сохранение выравнивания фасада на поверхности 1 000 м²', 'Снижение передачи напряжений в стеклянные блоки'],
+      sipanelSolution: 'SIPANEL разработала узлы крепления, допускающие смещения между конструкцией здания и стеклянным фасадом при сохранении выравнивания фасада.',
+      engineeringDecision: 'Инженерное решение заключалось в отделении работы стекла от неконтролируемых перемещений конструкции с помощью узлов, снижающих передачу напряжений в панели.',
+      selectedSystemLogic: 'Подход структурного стеклянного фасада применен, потому что учебному корпусу требовался прозрачный архитектурный контур с тщательно контролируемыми опорными интерфейсами.',
+      coordinationNote: 'Опорные точки, выравнивание стеклянных блоков и допуски креплений были согласованы с основной конструкцией до монтажа.',
+      executionDetail: 'Работы охватили примерно 1 000 м² стеклянного фасада с вниманием к выравниванию креплений, допускам опор и контролируемой установке стеклянных блоков.',
+      procurementControl: 'Стеклянные блоки, аксессуары креплений и опорные компоненты были согласованы с утвержденной раскладкой фасада, чтобы снизить несовпадения при монтаже.',
+      coordinationWithSiteTeam: 'Площадочная команда проверяла опорные реперы перед установкой стеклянных блоков, чтобы допуски креплений оставались в заданной последовательности монтажа.',
+      qualityCheckpoints: ['Проверка узлов крепления до монтажа', 'Инспекция допусков опор и выравнивания стекла', 'Проверка непрерывности фасада по установленной поверхности'],
+      measuredResult: 'Выполнено около 1 000 м² структурного стеклянного фасада. В проектной записи указано, что фасад, по сообщениям, остался без повреждения стекла во время землетрясения в Керманшахе в 1390-х годах солнечной хиджры.',
+      measuredResultItems: [
+        {label: 'Результат монтажа', value: 'Структурный стеклянный фасад установлен с узлами, учитывающими перемещения', verificationStatus: 'verified'},
+        {label: 'Выполненная площадь', value: '1 000 м²', verificationStatus: 'verified'},
+        {label: 'Зафиксированное наблюдение', value: 'Проектная запись сообщает об отсутствии повреждений стекла при землетрясении в Керманшахе в 1390-х годах солнечной хиджры', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'Разрушение стекла при движении конструкции', explanation: 'Узлы крепления снижали прямую передачу напряжений от основной конструкции в стеклянные панели.'},
+        {risk: 'Отказ фасадных креплений', explanation: 'Опорные точки и допуски проверялись до установки стекла.'},
+        {risk: 'Несовпадение конструкции и стеклянного фасада', explanation: 'Выравнивание фасада согласовывалось с реперами основной конструкции.'},
+        {risk: 'Снижение безопасности пользователей здания', explanation: 'Узлы, учитывающие перемещения, снижали риск повреждения хрупких фасадных панелей при смещении конструкции.'}
+      ],
+      conversionHeadline: 'Нужна проверка фасадных соединений?',
+      conversionText: 'Пришлите чертежи фасада и опорные детали, чтобы инженерная команда SIPANEL проверила логику креплений, допуски и последовательность монтажа.',
+      conversionPrimaryCta: 'Запросить проверку фасадных узлов'
+    }
+  },
+  'mehrabad-aircraft-hangar': {
+    en: {
+      metaDescription: 'Mehrabad Aircraft Hangar case study: 5,000 m² sandwich panel covering over a curved aircraft-hangar envelope with roof-wall interface and installation sequencing control.',
+      shortSummary: 'A 5,000 m² aircraft-hangar envelope where curved geometry, access sequencing, substructure coordination, and roof-wall transitions controlled the final covering quality.',
+      trustMicrocopy: 'Verified scope: sandwich panel covering, space-frame coordination, substructure alignment, roof-wall transitions, and installation checks.',
+      primaryCta: 'Request Hangar Envelope Review',
+      challenge: 'The hangar application required accurate sandwich panel covering over a continuous curved structure. Installation access, panel alignment, substructure coordination, and roof-wall transitions all affected weather protection and visual continuity.',
+      challengePoints: ['Maintaining panel alignment on a curved hangar envelope', 'Coordinating covering details with the space frame and substructure', 'Managing access and installation sequence on a large enclosure', 'Controlling roof-wall transitions against water-ingress risk'],
+      sipanelSolution: 'SIPANEL coordinated the space frame, substructure, panel layout, and installation sequence so the curved hangar form could be covered without losing geometric continuity.',
+      engineeringDecision: 'Engineering teams defined installation references from the hangar geometry, coordinated support points, and reviewed transition details before site installation.',
+      selectedSystemLogic: 'Sandwich panel covering was selected because it provides a lightweight, fast-installed industrial envelope that can be coordinated over curved roof and wall surfaces.',
+      coordinationNote: 'Roof-wall interfaces, support references, panel laps, and access sequencing were coordinated before installation to reduce late correction on the hangar envelope.',
+      executionDetail: 'Execution focused on controlled panel alignment over the curved surface, staged access, fastening checks, and transition detailing at roof and wall interfaces.',
+      procurementControl: 'Panels, fasteners, flashings, and sealing accessories were coordinated with the approved layout so the field sequence could follow the curved geometry.',
+      coordinationWithSiteTeam: 'The installation crew worked from geometry references and staged access points so alignment checks could be completed before closing each work zone.',
+      qualityCheckpoints: ['Curved-surface panel alignment review', 'Roof-wall transition and flashing inspection', 'Fastening and sealing check before zone handover'],
+      measuredResult: 'A 5,000 m² sandwich panel covering was executed while maintaining the continuous curved form of the aircraft hangar.',
+      measuredResultItems: [
+        {label: 'Execution result', value: 'Curved aircraft-hangar covering completed with controlled panel continuity', verificationStatus: 'verified'},
+        {label: 'Executed area', value: '5,000 m²', verificationStatus: 'verified'},
+        {label: 'System', value: 'Sandwich panel covering over curved hangar structure', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'Visual breaks on curved roof surface', explanation: 'Panel alignment was checked against hangar geometry references before each work zone was closed.'},
+        {risk: 'Installation errors on curved geometry', explanation: 'Staged access and installation sequencing reduced uncontrolled field adjustment.'},
+        {risk: 'Mismatch between structure and covering system', explanation: 'Substructure and support points were coordinated before panel installation.'},
+        {risk: 'Water ingress at roof-wall transitions', explanation: 'Flashings, laps, and sealing points at transitions were treated as quality checkpoints.'}
+      ],
+      conversionHeadline: 'Need a hangar or large-envelope review?',
+      conversionText: 'Send hangar geometry, roof-wall interface, or panel layout drawings so SIPANEL engineering can review sequencing and envelope-risk controls.',
+      conversionPrimaryCta: 'Request Hangar Envelope Review'
+    },
+    fa: {
+      metaDescription: 'مطالعه موردی آشیانه هواپیما مهرآباد: اجرای ۵٬۰۰۰ مترمربع پوشش ساندویچ‌پانل روی پوسته منحنی آشیانه با کنترل رابط سقف و دیوار و توالی نصب.',
+      shortSummary: 'پوسته ۵٬۰۰۰ مترمربعی آشیانه هواپیما که در آن هندسه منحنی، توالی دسترسی، هماهنگی زیرسازی و انتقال سقف به دیوار کیفیت نهایی پوشش را تعیین می‌کرد.',
+      trustMicrocopy: 'محدوده تأییدشده: پوشش ساندویچ‌پانل، هماهنگی سازه فضاکار، تراز زیرسازی، انتقال سقف به دیوار و کنترل نصب.',
+      primaryCta: 'درخواست بررسی پوسته آشیانه',
+      challenge: 'کاربری آشیانه هواپیما به اجرای دقیق پوشش ساندویچ‌پانل روی سازه منحنی پیوسته نیاز داشت. دسترسی نصب، تراز پانل، هماهنگی زیرسازی و انتقال سقف به دیوار همگی بر حفاظت در برابر آب‌وهوا و پیوستگی بصری اثر می‌گذاشتند.',
+      challengePoints: ['حفظ تراز پانل روی پوسته منحنی آشیانه', 'هماهنگی جزئیات پوشش با سازه فضاکار و زیرسازی', 'مدیریت دسترسی و توالی نصب روی پوسته بزرگ', 'کنترل انتقال سقف به دیوار برای کاهش ریسک نفوذ آب'],
+      sipanelSolution: 'سی‌پانل سازه فضاکار، زیرسازی، چیدمان پانل و توالی نصب را هماهنگ کرد تا فرم منحنی آشیانه بدون از دست رفتن پیوستگی هندسی پوشش داده شود.',
+      engineeringDecision: 'تیم مهندسی رفرنس‌های نصب را از هندسه آشیانه تعریف کرد، نقاط تکیه‌گاه را هماهنگ نمود و جزئیات انتقال را پیش از اجرای کارگاهی بازبینی کرد.',
+      selectedSystemLogic: 'پوشش ساندویچ‌پانل به دلیل وزن کم، سرعت نصب و امکان هماهنگی روی سطوح منحنی سقف و دیوار برای این پوسته صنعتی انتخاب شد.',
+      coordinationNote: 'رابط‌های سقف و دیوار، رفرنس‌های تکیه‌گاه، همپوشانی پانل و توالی دسترسی پیش از نصب هماهنگ شد تا اصلاح دیرهنگام روی پوسته آشیانه کاهش یابد.',
+      executionDetail: 'اجرا بر کنترل تراز پانل روی سطح منحنی، دسترسی مرحله‌ای، کنترل اتصال و جزئیات انتقال در رابط سقف و دیوار متمرکز بود.',
+      procurementControl: 'پانل‌ها، پیچ‌ها، فلاشینگ‌ها و اکسسوری‌های آب‌بندی با چیدمان تأییدشده هماهنگ شد تا توالی کارگاه با هندسه منحنی پیش برود.',
+      coordinationWithSiteTeam: 'تیم نصب بر اساس رفرنس‌های هندسی و نقاط دسترسی مرحله‌ای کار کرد تا پیش از بستن هر زون، کنترل تراز انجام شود.',
+      qualityCheckpoints: ['بازبینی تراز پانل روی سطح منحنی', 'بازرسی انتقال سقف به دیوار و فلاشینگ', 'کنترل اتصال و آب‌بندی پیش از تحویل هر زون'],
+      measuredResult: 'پوشش ساندویچ‌پانل ۵٬۰۰۰ مترمربعی اجرا شد و فرم منحنی پیوسته آشیانه هواپیما حفظ گردید.',
+      measuredResultItems: [
+        {label: 'نتیجه اجرا', value: 'پوشش منحنی آشیانه با پیوستگی کنترل‌شده پانل تکمیل شد', verificationStatus: 'verified'},
+        {label: 'مساحت اجراشده', value: '۵٬۰۰۰ مترمربع', verificationStatus: 'verified'},
+        {label: 'سامانه', value: 'پوشش ساندویچ‌پانل روی سازه منحنی آشیانه', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'شکست بصری روی سطح منحنی سقف', explanation: 'تراز پانل با رفرنس‌های هندسی آشیانه پیش از بسته شدن هر زون کنترل شد.'},
+        {risk: 'خطای نصب روی هندسه منحنی', explanation: 'دسترسی مرحله‌ای و توالی نصب ریسک اصلاح کنترل‌نشده در کارگاه را کاهش داد.'},
+        {risk: 'ناهماهنگی سازه و سیستم پوشش', explanation: 'زیرسازی و نقاط تکیه‌گاه پیش از نصب پانل هماهنگ شد.'},
+        {risk: 'نفوذ آب در انتقال سقف به دیوار', explanation: 'فلاشینگ، همپوشانی و نقاط آب‌بندی در انتقال‌ها به‌عنوان کنترل کیفیت بررسی شدند.'}
+      ],
+      conversionHeadline: 'نیاز به بررسی آشیانه یا پوسته بزرگ دارید؟',
+      conversionText: 'نقشه هندسه آشیانه، رابط سقف و دیوار یا چیدمان پانل را ارسال کنید تا تیم مهندسی سی‌پانل توالی اجرا و کنترل ریسک پوسته را بررسی کند.',
+      conversionPrimaryCta: 'درخواست بررسی پوسته آشیانه'
+    },
+    ar: {
+      metaDescription: 'دراسة حالة حظيرة الطائرات في مهرآباد: تغطية ٥٬٠٠٠ م² بألواح ساندويتش فوق غلاف منحني مع ضبط واجهة السقف والجدار وتسلسل التركيب.',
+      shortSummary: 'غلاف حظيرة طائرات بمساحة ٥٬٠٠٠ م² حيث حدّدت الهندسة المنحنية وتسلسل الوصول وتنسيق البنية الحاملة وانتقالات السقف إلى الجدار جودة الغطاء النهائي.',
+      trustMicrocopy: 'النطاق المؤكد: تغطية بألواح ساندويتش، تنسيق الهيكل الفراغي، محاذاة البنية الحاملة، انتقالات السقف والجدار وفحوص التركيب.',
+      primaryCta: 'اطلب مراجعة غلاف حظيرة',
+      challenge: 'تطلّب تطبيق حظيرة الطائرات تغطية دقيقة بألواح الساندويتش فوق بنية منحنية متصلة. وقد أثرت إمكانية الوصول للتركيب ومحاذاة الألواح وتنسيق البنية الحاملة وانتقالات السقف إلى الجدار في الحماية الجوية والاستمرارية البصرية.',
+      challengePoints: ['الحفاظ على محاذاة الألواح على غلاف الحظيرة المنحني', 'تنسيق تفاصيل الغطاء مع الهيكل الفراغي والبنية الحاملة', 'إدارة الوصول وتسلسل التركيب على غلاف كبير', 'ضبط انتقالات السقف والجدار لتقليل مخاطر دخول المياه'],
+      sipanelSolution: 'نسّقت SIPANEL الهيكل الفراغي والبنية الحاملة وتوزيع الألواح وتسلسل التركيب حتى يمكن تغطية شكل الحظيرة المنحني دون فقدان الاستمرارية الهندسية.',
+      engineeringDecision: 'حدّد الفريق الهندسي مراجع التركيب من هندسة الحظيرة، ونسّق نقاط الدعم، وراجع تفاصيل الانتقال قبل التركيب في الموقع.',
+      selectedSystemLogic: 'اختيرت تغطية ألواح الساندويتش لأنها توفر غلافاً صناعياً خفيفاً وسريع التركيب يمكن تنسيقه فوق أسطح السقف والجدار المنحنية.',
+      coordinationNote: 'نُسّقت واجهات السقف والجدار ومراجع الدعم وتراكبات الألواح وتسلسل الوصول قبل التركيب لتقليل التصحيحات المتأخرة على غلاف الحظيرة.',
+      executionDetail: 'ركز التنفيذ على ضبط محاذاة الألواح فوق السطح المنحني، والوصول المرحلي، وفحوص التثبيت، وتفاصيل الانتقال عند واجهات السقف والجدار.',
+      procurementControl: 'نُسّقت الألواح والمثبتات والفلاشينغ وملحقات الختم مع التوزيع المعتمد حتى يتبع تسلسل الموقع الهندسة المنحنية.',
+      coordinationWithSiteTeam: 'عمل طاقم التركيب من مراجع هندسية ونقاط وصول مرحلية كي تكتمل فحوص المحاذاة قبل إغلاق كل منطقة عمل.',
+      qualityCheckpoints: ['مراجعة محاذاة الألواح على السطح المنحني', 'فحص انتقال السقف إلى الجدار والفلاشينغ', 'فحص التثبيت والختم قبل تسليم كل منطقة'],
+      measuredResult: 'تم تنفيذ تغطية ألواح ساندويتش بمساحة ٥٬٠٠٠ م² مع الحفاظ على الشكل المنحني المتصل لحظيرة الطائرات.',
+      measuredResultItems: [
+        {label: 'نتيجة التنفيذ', value: 'اكتمل غطاء الحظيرة المنحني باستمرارية ألواح مضبوطة', verificationStatus: 'verified'},
+        {label: 'المساحة المنفذة', value: '٥٬٠٠٠ م²', verificationStatus: 'verified'},
+        {label: 'النظام', value: 'تغطية ألواح ساندويتش فوق هيكل حظيرة منحني', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'انقطاعات بصرية على سطح السقف المنحني', explanation: 'تم فحص محاذاة الألواح مقابل مراجع هندسة الحظيرة قبل إغلاق كل منطقة عمل.'},
+        {risk: 'أخطاء تركيب على الهندسة المنحنية', explanation: 'قلل الوصول المرحلي وتسلسل التركيب من التعديلات غير المضبوطة في الموقع.'},
+        {risk: 'عدم تطابق الهيكل ونظام الغطاء', explanation: 'نُسّقت البنية الحاملة ونقاط الدعم قبل تركيب الألواح.'},
+        {risk: 'دخول المياه عند انتقال السقف إلى الجدار', explanation: 'عوملت الفلاشينغ والتراكبات ونقاط الختم في الانتقالات كنقاط ضبط جودة.'}
+      ],
+      conversionHeadline: 'تحتاج إلى مراجعة حظيرة أو غلاف كبير؟',
+      conversionText: 'أرسل هندسة الحظيرة أو واجهة السقف والجدار أو رسومات توزيع الألواح ليراجع فريق SIPANEL الهندسي التسلسل وضوابط مخاطر الغلاف.',
+      conversionPrimaryCta: 'اطلب مراجعة غلاف حظيرة'
+    },
+    ru: {
+      metaDescription: 'Кейс авиационного ангара Мехрабад: 5 000 м² покрытия из сэндвич-панелей по кривому контуру ангара с контролем переходов кровли к стенам и последовательности монтажа.',
+      shortSummary: 'Контур авиационного ангара площадью 5 000 м², где кривая геометрия, доступ, координация подсистемы и переходы кровли к стенам определяли итоговое качество покрытия.',
+      trustMicrocopy: 'Подтвержденный объем: покрытие из сэндвич-панелей, координация пространственной конструкции, выравнивание подсистемы, переходы кровли к стенам и монтажные проверки.',
+      primaryCta: 'Запросить проверку контура ангара',
+      challenge: 'Ангар требовал точного покрытия из сэндвич-панелей по непрерывной кривой конструкции. Монтажный доступ, выравнивание панелей, координация подсистемы и переходы кровли к стенам влияли на погодную защиту и визуальную непрерывность.',
+      challengePoints: ['Сохранение выравнивания панелей на кривом контуре ангара', 'Координация деталей покрытия с пространственной конструкцией и подсистемой', 'Управление доступом и последовательностью монтажа на крупном контуре', 'Контроль переходов кровли к стенам для снижения риска проникновения воды'],
+      sipanelSolution: 'SIPANEL скоординировала пространственную конструкцию, подсистему, раскладку панелей и последовательность монтажа, чтобы кривую форму ангара можно было закрыть без потери геометрической непрерывности.',
+      engineeringDecision: 'Инженерная команда задала монтажные реперы от геометрии ангара, согласовала опорные точки и проверила переходные детали до работ на площадке.',
+      selectedSystemLogic: 'Покрытие из сэндвич-панелей выбрано, потому что оно дает легкий и быстро монтируемый промышленный контур, который можно согласовать по кривым поверхностям кровли и стен.',
+      coordinationNote: 'Переходы кровли к стенам, опорные реперы, нахлесты панелей и последовательность доступа были согласованы до монтажа, чтобы снизить поздние исправления на контуре ангара.',
+      executionDetail: 'Работы были сосредоточены на контролируемом выравнивании панелей по кривой поверхности, поэтапном доступе, проверке крепежа и деталях переходов кровли к стенам.',
+      procurementControl: 'Панели, крепеж, примыкания и аксессуары герметизации согласованы с утвержденной раскладкой, чтобы площадочная последовательность следовала кривой геометрии.',
+      coordinationWithSiteTeam: 'Монтажная бригада работала по геометрическим реперам и поэтапным точкам доступа, чтобы проверки выравнивания завершались до закрытия каждой зоны.',
+      qualityCheckpoints: ['Проверка выравнивания панелей на кривой поверхности', 'Инспекция переходов кровли к стенам и примыканий', 'Проверка крепежа и герметизации перед сдачей зоны'],
+      measuredResult: 'Покрытие из сэндвич-панелей площадью 5 000 м² выполнено с сохранением непрерывной кривой формы авиационного ангара.',
+      measuredResultItems: [
+        {label: 'Результат монтажа', value: 'Кривое покрытие ангара завершено с контролируемой непрерывностью панелей', verificationStatus: 'verified'},
+        {label: 'Выполненная площадь', value: '5 000 м²', verificationStatus: 'verified'},
+        {label: 'Система', value: 'Сэндвич-панельное покрытие по кривой конструкции ангара', verificationStatus: 'verified'}
+      ],
+      riskItems: [
+        {risk: 'Визуальные разрывы на кривой кровле', explanation: 'Выравнивание панелей проверялось по геометрическим реперам ангара до закрытия каждой зоны.'},
+        {risk: 'Ошибки монтажа на кривой геометрии', explanation: 'Поэтапный доступ и монтажная последовательность снизили неконтролируемые корректировки на площадке.'},
+        {risk: 'Несовпадение конструкции и системы покрытия', explanation: 'Подсистема и опорные точки согласовывались до установки панелей.'},
+        {risk: 'Проникновение воды на переходах кровли к стенам', explanation: 'Примыкания, нахлесты и точки герметизации на переходах стали контрольными точками качества.'}
+      ],
+      conversionHeadline: 'Нужна проверка ангара или крупного контура?',
+      conversionText: 'Пришлите геометрию ангара, узлы перехода кровли к стенам или раскладку панелей, и инженерная команда SIPANEL проверит последовательность и контроль рисков контура.',
+      conversionPrimaryCta: 'Запросить проверку контура ангара'
+    }
   }
 };
 
@@ -927,6 +1305,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     },
     localeOverrides: {
       fa: {
+        metaDescription: 'مطالعه موردی بیمارستان ۳۲ تختخوابی ارتش: تحویل کامل EPC از خاکبرداری تا آمادگی بهره‌برداری در کمتر از ۵۰ روز با پوشش ساندویچ‌پانل و پارتیشن داخلی.',
         shortSummary: 'تحویل بیمارستان عملیاتی از خاکبرداری تا آمادگی بهره‌برداری در کمتر از ۵۰ روز، در شرایط اضطراری کرونا.',
         trustMicrocopy: 'تحویل کامل مهندسی، تأمین و اجرا توسط سی‌پانل',
         primaryCta: 'برای پروژه‌های زمان‌بحرانی مشاوره بگیرید',
@@ -953,6 +1332,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
         conversionPrimaryCta: 'برای پروژه‌های زمان‌بحرانی مشاوره بگیرید'
       },
       en: {
+        metaDescription: '32-bed Military Hospital case study: full EPC delivery from excavation to operational readiness in less than 50 days with sandwich panel envelope and internal partitions.',
         shortSummary: 'Operational hospital delivered from excavation to readiness in less than 50 days during the COVID-19 emergency.',
         trustMicrocopy: 'Full EPC delivery by SIPANEL — engineering, procurement, and construction.',
         primaryCta: 'Discuss a Time-Critical Project',
@@ -968,6 +1348,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
         conversionPrimaryCta: 'Discuss a Time-Critical Project'
       },
       ar: {
+        metaDescription: 'دراسة حالة مستشفى عسكري بسعة ٣٢ سريراً: تسليم EPC كامل من الحفر إلى الجاهزية التشغيلية في أقل من ٥٠ يوماً مع غلاف ألواح ساندويتش وقواطع داخلية.',
         shortSummary: 'تسليم مستشفى جاهز للتشغيل من الحفر حتى الجاهزية في أقل من ٥٠ يوماً خلال جائحة كورونا.',
         trustMicrocopy: 'تسليم EPC كامل بواسطة SIPANEL — الهندسة والتوريد والتنفيذ.',
         primaryCta: 'ناقش مشروعاً حرجاً زمنياً',
@@ -977,6 +1358,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
         conversionPrimaryCta: 'ناقش مشروعاً حرجاً زمنياً'
       },
       ru: {
+        metaDescription: 'Кейс военного госпиталя на 32 койки: полный EPC от земляных работ до эксплуатационной готовности менее чем за 50 дней с оболочкой из сэндвич-панелей.',
         shortSummary: 'Операционный госпиталь сдан от котлована до готовности менее чем за 50 дней в условиях пандемии COVID-19.',
         trustMicrocopy: 'Полная поставка EPC от SIPANEL — проектирование, снабжение и строительство.',
         primaryCta: 'Обсудить срочный проект',
@@ -1263,6 +1645,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   },
   {
     slug: 'mahshahr-taxi-parking',
+    detailLayout: 'case-study-only',
     projectName: {
       en: 'Mahshahr Taxi Parking Facility',
       fa: 'پارکینگ تاکسی ماهشهر',
@@ -1345,6 +1728,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   },
   {
     slug: 'ahvaz-airport-passenger-terminal',
+    detailLayout: 'case-study-only',
     projectName: {
       en: 'Ahvaz Airport Passenger Terminal',
       fa: 'سالن انتظار فرودگاه اهواز',
@@ -1653,6 +2037,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   },
   {
     slug: 'kermanshah-industrial-university-petroleum-faculty',
+    detailLayout: 'case-study-only',
     projectName: {
       en: 'Kermanshah Industrial University Petroleum Faculty',
       fa: 'دانشکده نفت دانشگاه صنعتی کرمانشاه',
@@ -1737,6 +2122,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   },
   {
     slug: 'mehrabad-aircraft-hangar',
+    detailLayout: 'case-study-only',
     projectName: {
       en: 'Mehrabad Airport Aircraft Hangar',
       fa: 'آشیانه هواپیما فرودگاه مهرآباد',

@@ -338,7 +338,14 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
             </div>
           </div>
 
-          <div className="case-study-hero__visual">
+          <div
+            className={[
+              'case-study-hero__visual',
+              content.hero.heroVideo ? 'case-study-hero__visual--video' : '',
+              content.hero.heroImage ? 'case-study-hero__visual--image' : '',
+              !content.hero.heroVideo && !content.hero.heroImage ? 'case-study-hero__visual--placeholder' : ''
+            ].filter(Boolean).join(' ')}
+          >
             {content.hero.heroVideo ? (
               <div className="case-study-hero__video-wrap">
                 <video
@@ -363,6 +370,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                 src={content.hero.heroImage}
                 alt={content.hero.heroAlt}
                 fill
+                className="case-study-hero__image"
                 priority
                 quality={65}
                 sizes="(max-width: 767px) 100vw, 45vw"
@@ -610,17 +618,13 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                   <dt>{labels.result}</dt>
                   <dd>{study.measuredResult}</dd>
                 </dl>
-                {!isCaseStudyOnly ? (
-                  <>
-                    {/* track: related_case_study_click */}
-                    {study.href ? (
-                      <Link href={study.href} className="case-study-related-card__link">
-                        {content.relatedCaseStudies.cta}
-                      </Link>
-                    ) : (
-                      <span className="case-study-related-card__pending">{content.relatedCaseStudies.pendingLabel}</span>
-                    )}
-                  </>
+                {/* track: related_case_study_click */}
+                {study.href ? (
+                  <Link href={study.href} className="case-study-related-card__link">
+                    {content.relatedCaseStudies.cta}
+                  </Link>
+                ) : !isCaseStudyOnly ? (
+                  <span className="case-study-related-card__pending">{content.relatedCaseStudies.pendingLabel}</span>
                 ) : null}
               </article>
             ))}
@@ -634,7 +638,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
             <h2 id="case-study-cta-title">{content.conversionCta.headline}</h2>
             <p>{content.conversionCta.text}</p>
           </div>
-            <div className="case-study-conversion__actions">
+          <div className="case-study-conversion__actions">
             {/* track: case_study_cta_click */}
             <Link
               href="/contact#rfq-form"

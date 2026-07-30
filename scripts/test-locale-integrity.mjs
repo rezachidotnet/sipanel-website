@@ -6,7 +6,8 @@ const baseUrl = process.env.BASE_URL || `http://127.0.0.1:${port}`;
 const shouldStartServer = !process.env.BASE_URL;
 const productionOrigin = 'https://www.sipanelco.ir';
 const locales = ['fa', 'en', 'ar', 'ru'];
-const languageTags = {fa: 'fa', en: 'en', ar: 'ar', ru: 'ru'};
+const languageTags = {fa: 'fa-IR', en: 'en', ar: 'ar', ru: 'ru'};
+const htmlLangTags = {fa: 'fa', en: 'en', ar: 'ar', ru: 'ru'};
 const dirByLocale = {fa: 'rtl', en: 'ltr', ar: 'rtl', ru: 'ltr'};
 const focusedProjectSlugs = [
   'army-hospital',
@@ -14,6 +15,18 @@ const focusedProjectSlugs = [
   'ahvaz-airport-passenger-terminal',
   'kermanshah-industrial-university-petroleum-faculty',
   'mahshahr-taxi-parking'
+];
+const armyReferenceSectionOrder = [
+  'case_study_hero',
+  'case_study_group',
+  'project_snapshot',
+  'challenge_section',
+  'engineering_decision_section',
+  'execution_detail_section',
+  'measured_result_section',
+  'risk_prevented_section',
+  'related_case_studies',
+  'conversion_cta'
 ];
 
 let server;
@@ -129,7 +142,7 @@ function assertCanonical(path, html) {
 
 function assertHtmlLocale(path, locale, html) {
   const htmlTag = html.match(/<html[^>]*>/i)?.[0] ?? '';
-  if (!new RegExp(`lang=["']${languageTags[locale]}["']`, 'i').test(htmlTag)) {
+  if (!new RegExp(`lang=["']${htmlLangTags[locale]}["']`, 'i').test(htmlTag)) {
     fail(`${path} missing html lang for ${locale}: ${htmlTag}`);
   }
   if (!new RegExp(`dir=["']${dirByLocale[locale]}["']`, 'i').test(htmlTag)) {
@@ -155,6 +168,71 @@ function assertVisibleLanguage(path, locale, html) {
   if (locale === 'ru' && scriptRatio(text, /[\u0400-\u04FF]/g) < 0.3) fail(`${path} Cyrillic script ratio is too low`);
 }
 
+function assertArmyReferenceLayout(path, html) {
+  const sectionOrder = [...html.matchAll(/data-section=["']([^"']+)["']/g)].map((match) => match[1]);
+  if (sectionOrder.join(' > ') !== armyReferenceSectionOrder.join(' > ')) {
+    fail(`${path} section order drifted from Army Hospital reference: ${sectionOrder.join(' > ')}`);
+  }
+
+  const snapshotCards = (html.match(/class=["'][^"']*case-study-snapshot-card/g) ?? []).length;
+  if (snapshotCards < 3) fail(`${path} expected at least three populated project facts, found ${snapshotCards}`);
+
+  for (const required of [
+    'case-study-challenge-title',
+    'case-study-decision-title',
+    'case-study-execution-title',
+    'case-study-result-title',
+    'case-study-risk-title',
+    'case-study-related-title',
+    'case-study-cta-title'
+  ]) {
+    if (!html.includes(required)) fail(`${path} missing required case-study heading anchor ${required}`);
+  }
+}
+
+function assertLocalizedProjectMetadata(path, locale, html) {
+  const head = getHead(html);
+  const title = decodeHtml(head.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? '');
+  const description = decodeHtml(head.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["'][^>]*>/i)?.[1] ?? '');
+  const ogDescription = decodeHtml(head.match(/<meta\s+property=["']og:description["']\s+content=["']([^"']+)["'][^>]*>/i)?.[1] ?? '');
+  const combined = `${title} ${description} ${ogDescription}`;
+
+  if (!title || !description) fail(`${path} missing localized title or meta description`);
+  if (/placeholder case study|ساختار اولیه|بانتظار بيانات|Ожидаются подтвержденные данные/i.test(combined)) {
+    fail(`${path} metadata contains placeholder or pending copy`);
+  }
+
+  assertVisibleLanguage(path, locale, `<main>${combined}</main>`);
+}
+
+function assertLocalizedSchema(path, locale, html) {
+  const scripts = [...html.matchAll(/<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)].map((match) => decodeHtml(match[1]));
+  if (scripts.length === 0) fail(`${path} missing JSON-LD schema`);
+
+  const combined = scripts.join(' ');
+  const expectedLanguage = `"inLanguage":"${languageTags[locale]}"`;
+  if (!combined.includes(expectedLanguage)) fail(`${path} schema missing ${expectedLanguage}`);
+  if (/https:\/\/www\.sipanelco\.ir\/fa(?:\/|["'#?])/.test(combined)) fail(`${path} schema contains legacy /fa URL`);
+  if (/placeholder case study|pending verified project data/i.test(combined)) fail(`${path} schema contains placeholder English copy`);
+}
+
+function assertRelatedCaseStudyLinks(path, locale, html) {
+  const section = html.match(/<section[^>]*data-section=["']related_case_studies["'][\s\S]*?<\/section>/i)?.[0] ?? '';
+  if (!section) fail(`${path} missing related case studies section`);
+
+  const links = [...section.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+  if (links.length < 2) fail(`${path} expected crawlable related case-study links, found ${links.length}`);
+
+  for (const match of links) {
+    const href = match[1];
+    const destinationPath = href.split(/[?#]/)[0];
+    if (/^\/fa(?:\/|$)/.test(destinationPath)) fail(`${path} related card links to legacy /fa URL via ${href}`);
+    if (localeOfPath(destinationPath) !== locale) {
+      fail(`${path} related card wrong-locale href "${anchorText(match[2])}" -> ${href}`);
+    }
+  }
+}
+
 async function assertProjectPages() {
   for (const slug of focusedProjectSlugs) {
     for (const locale of locales) {
@@ -164,6 +242,10 @@ async function assertProjectPages() {
       assertHtmlLocale(path, locale, html);
       assertNoLegacyPersianLinks(path, html);
       assertVisibleLanguage(path, locale, html);
+      assertArmyReferenceLayout(path, html);
+      assertLocalizedProjectMetadata(path, locale, html);
+      assertLocalizedSchema(path, locale, html);
+      assertRelatedCaseStudyLinks(path, locale, html);
 
       if (locale !== 'en' && getHead(html).includes('placeholder case study')) {
         fail(`${path} metadata still contains English placeholder copy`);
