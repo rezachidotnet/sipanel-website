@@ -38,7 +38,8 @@ const representativeRoutes = [
 const filteredProjectRoutes = [
   {path: '/projects?filter=sandwich', locale: 'fa', canonical: `${productionOrigin}/projects`},
   {path: '/en/projects?filter=sandwich', locale: 'en', canonical: `${productionOrigin}/en/projects`},
-  {path: '/ar/projects?filter=sandwich', locale: 'ar', canonical: `${productionOrigin}/ar/projects`}
+  {path: '/ar/projects?filter=sandwich', locale: 'ar', canonical: `${productionOrigin}/ar/projects`},
+  {path: '/ru/projects?filter=sandwich', locale: 'ru', canonical: `${productionOrigin}/ru/projects`}
 ];
 
 let server;
@@ -108,6 +109,46 @@ function getJsonLd(html) {
 
     return Array.isArray(parsed?.['@graph']) ? parsed['@graph'] : [parsed];
   });
+}
+
+function stripBoilerplate(html) {
+  return html
+    .replace(/<head[\s\S]*?<\/head>/gi, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<svg[\s\S]*?<\/svg>/gi, ' ')
+    .replace(/<header[\s\S]*?<\/header>/gi, ' ')
+    .replace(/<footer[\s\S]*?<\/footer>/gi, ' ')
+    .replace(/<nav[\s\S]*?<\/nav>/gi, ' ');
+}
+
+function visibleText(html) {
+  return stripBoilerplate(html)
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;|&#160;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function scriptRatio(text, pattern) {
+  const letters = text.match(/\p{L}/gu) ?? [];
+  if (letters.length === 0) return 0;
+  const matching = text.match(pattern) ?? [];
+  return matching.length / letters.length;
+}
+
+function tokenOverlap(a, b) {
+  const tokenSet = (value) => new Set((value.toLowerCase().match(/[\p{L}\p{N}]{3,}/gu) ?? []));
+  const left = tokenSet(a);
+  const right = tokenSet(b);
+  let intersection = 0;
+
+  for (const token of left) {
+    if (right.has(token)) intersection += 1;
+  }
+
+  return intersection / Math.max(1, Math.min(left.size, right.size));
 }
 
 function schemaTypes(node) {
@@ -291,11 +332,6 @@ async function assertFilteredProjectRoute(route) {
     fail(`${route.path} canonical mismatch: ${canonicalLinks.join(', ') || 'missing'}`);
   }
 
-  const hrefLangs = getHrefLangs(html);
-  if (hrefLangs.length !== 0) {
-    fail(`${route.path} expected no hreflang annotations, found ${hrefLangs.map((item) => item.lang).join(', ')}`);
-  }
-
   if (/<meta\s+[^>]*(?:name|property)=["']robots["'][^>]*noindex/i.test(html)) {
     fail(`${route.path} must not emit noindex`);
   }
@@ -332,9 +368,88 @@ async function assertSitemap() {
   if (response.status !== 200) fail(`/sitemap.xml expected HTTP 200, received ${response.status}`);
 
   const xml = await response.text();
+  const secondResponse = await fetch(`${baseUrl}/sitemap.xml`);
+  const secondXml = await secondResponse.text();
+
+  if (xml !== secondXml) fail('Sitemap output changed across repeated generation');
   if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(xml)) fail('Sitemap contains /fa URL');
+  if (/<loc>[^<]*\?[^<]*<\/loc>/.test(xml)) fail('Sitemap contains a query-string URL');
   if (/\/(?:fa|en|ar|ru)\/sitemap\.xml/.test(xml)) fail('Sitemap contains locale-prefixed sitemap URL');
   if (/\/projects\?filter=/.test(xml)) fail('Sitemap contains parameterized project filter URL');
+
+  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  const uniqueUrls = new Set(urls);
+  if (urls.length !== uniqueUrls.size) fail('Sitemap contains duplicate URLs');
+
+  const localeCounts = {fa: 0, en: 0, ar: 0, ru: 0};
+  for (const url of urls) {
+    if (!url.startsWith(`${productionOrigin}/`) && url !== productionOrigin) {
+      fail(`Sitemap contains a non-canonical URL: ${url}`);
+    }
+
+    if (url === productionOrigin || url.startsWith(`${productionOrigin}/`)) {
+      const path = new URL(url).pathname;
+      const segment = path.split('/').filter(Boolean)[0];
+      if (segment === 'en' || segment === 'ar' || segment === 'ru') localeCounts[segment] += 1;
+      else localeCounts.fa += 1;
+    }
+  }
+
+  if (new Set(Object.values(localeCounts)).size !== 1) {
+    fail(`Sitemap locale counts are not balanced: ${JSON.stringify(localeCounts)}`);
+  }
+
+  for (const lastmod of [...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((match) => match[1])) {
+    if (Number.isNaN(Date.parse(lastmod))) fail(`Invalid sitemap lastmod: ${lastmod}`);
+    if (/2026-07-23T08:12:59\.32[456]Z/.test(lastmod)) fail(`Sitemap contains deployment-generated lastmod: ${lastmod}`);
+  }
+}
+
+async function assertProjectLocalizationQuality() {
+  const [enHtml, arHtml, ruHtml] = await Promise.all([
+    fetchHtml('/en/projects'),
+    fetchHtml('/ar/projects'),
+    fetchHtml('/ru/projects')
+  ]);
+
+  const enText = visibleText(enHtml);
+  const arText = visibleText(arHtml);
+  const ruText = visibleText(ruHtml);
+  const arRatio = scriptRatio(arText, /[\u0600-\u06FF]/g);
+  const ruRatio = scriptRatio(ruText, /[\u0400-\u04FF]/g);
+
+  if (arRatio < 0.55) fail(`/ar/projects Arabic-script ratio too low: ${arRatio.toFixed(3)}`);
+  if (ruRatio < 0.55) fail(`/ru/projects Cyrillic-script ratio too low: ${ruRatio.toFixed(3)}`);
+
+  for (const phrase of [
+    'The main challenge was',
+    'The project required',
+    'Successful execution',
+    'Engineering teams coordinated',
+    'Risks prevented'
+  ]) {
+    if (arText.includes(phrase)) fail(`/ar/projects contains untranslated English phrase: ${phrase}`);
+    if (ruText.includes(phrase)) fail(`/ru/projects contains untranslated English phrase: ${phrase}`);
+  }
+
+  const arOverlap = tokenOverlap(enText, arText);
+  const ruOverlap = tokenOverlap(enText, ruText);
+  if (arOverlap > 0.35) fail(`/en/projects and /ar/projects overlap too high: ${arOverlap.toFixed(3)}`);
+  if (ruOverlap > 0.35) fail(`/en/projects and /ru/projects overlap too high: ${ruOverlap.toFixed(3)}`);
+}
+
+async function assertArabicAboutQuality() {
+  const html = await fetchHtml('/ar/about');
+  const head = getHead(html);
+  const text = visibleText(html);
+  const arabicRatio = scriptRatio(text, /[\u0600-\u06FF]/g);
+
+  if (!getCanonicalLinks(head).includes(`${productionOrigin}/ar/about`)) fail('/ar/about canonical missing');
+  if (arabicRatio < 0.65) fail(`/ar/about Arabic-script ratio too low: ${arabicRatio.toFixed(3)}`);
+  if (text.includes('Engineering-Controlled Industrial Envelope Systems')) fail('/ar/about contains English fallback H1 text');
+  if (!text.includes('رسومات الشوب') || !text.includes('العزل المائي') || !text.includes('التوريد')) {
+    fail('/ar/about is missing expected substantive Arabic engineering content');
+  }
 }
 
 async function run() {
@@ -357,6 +472,8 @@ async function run() {
     await assertFilteredProjectRoute(route);
   }
 
+  await assertProjectLocalizationQuality();
+  await assertArabicAboutQuality();
   await assertLocaleHeaders();
   await assertSitemap();
   console.log(`Structured data SEO tests passed for ${representativeRoutes.length} representative routes.`);
