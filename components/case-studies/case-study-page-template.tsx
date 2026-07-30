@@ -155,6 +155,12 @@ function getTemplateLabels(locale: Locale) {
       fa: 'مطالعه موردی مرتبط',
       ar: 'دراسات حالة ذات صلة',
       ru: 'Связанные кейсы'
+    }[locale],
+    projectPhotography: {
+      en: 'project photography',
+      fa: 'عکس پروژه',
+      ar: 'صورة المشروع',
+      ru: 'фотография проекта'
     }[locale]
   };
 }
@@ -584,7 +590,7 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
               <article className="case-study-related-card" key={`${study.projectName}-${index}`} data-asset-status={study.assetStatus ?? 'pending'}>
                 <div className="case-study-related-card__image">
                   {study.image ? (
-                    <Image src={study.image} alt={`${study.projectName} real project photography`} fill sizes="(max-width: 767px) 82vw, 30vw" />
+                    <Image src={study.image} alt={`${study.projectName} ${labels.projectPhotography}`} fill sizes="(max-width: 767px) 82vw, 30vw" />
                   ) : (
                     <div className="case-study-placeholder" aria-hidden="true">
                       <span />

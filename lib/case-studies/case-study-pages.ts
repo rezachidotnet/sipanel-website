@@ -246,6 +246,8 @@ type InitialCaseStudyConfig = {
 };
 
 type CaseStudyLocaleOverrides = {
+  seoTitle?: string;
+  metaDescription?: string;
   shortSummary?: string;
   trustMicrocopy?: string;
   primaryCta?: string;
@@ -279,6 +281,215 @@ function localized(value: string): LocalizedText {
   return {en: value, fa: value, ar: value, ru: value};
 }
 
+const localizedLocations: Record<string, LocalizedText> = {
+  'Raz & Jargalan, North Khorasan, Iran': {
+    en: 'Raz & Jargalan, North Khorasan, Iran',
+    fa: 'راز و جرگلان، خراسان شمالی، ایران',
+    ar: 'راز وجرغلان، خراسان الشمالية، إيران',
+    ru: 'Раз и Джаргалан, Северный Хорасан, Иран'
+  },
+  'Bandar Mahshahr, Khuzestan, Iran': {
+    en: 'Bandar Mahshahr, Khuzestan, Iran',
+    fa: 'بندر ماهشهر، خوزستان، ایران',
+    ar: 'بندر ماهشهر، خوزستان، إيران',
+    ru: 'Бендер-Махшехр, Хузестан, Иран'
+  },
+  'Tehran, Iran': {
+    en: 'Tehran, Iran',
+    fa: 'تهران، ایران',
+    ar: 'طهران، إيران',
+    ru: 'Тегеран, Иран'
+  },
+  'Ahvaz, Iran': {
+    en: 'Ahvaz, Iran',
+    fa: 'اهواز، ایران',
+    ar: 'الأهواز، إيران',
+    ru: 'Ахваз, Иран'
+  },
+  'Kermanshah, Iran': {
+    en: 'Kermanshah, Iran',
+    fa: 'کرمانشاه، ایران',
+    ar: 'كرمانشاه، إيران',
+    ru: 'Керманшах, Иран'
+  },
+  'Iran': {
+    en: 'Iran',
+    fa: 'ایران',
+    ar: 'إيران',
+    ru: 'Иран'
+  },
+  'Khuzestan, Iran': {
+    en: 'Khuzestan, Iran',
+    fa: 'خوزستان، ایران',
+    ar: 'خوزستان، إيران',
+    ru: 'Хузестан, Иран'
+  },
+  'Isfahan, Iran': {
+    en: 'Isfahan, Iran',
+    fa: 'اصفهان، ایران',
+    ar: 'أصفهان، إيران',
+    ru: 'Исфахан, Иран'
+  }
+};
+
+function getLocaleOverrides(config: InitialCaseStudyConfig, locale: Locale): CaseStudyLocaleOverrides {
+  return {
+    ...caseStudyLocaleOverrides[config.slug]?.[locale],
+    ...config.localeOverrides?.[locale]
+  };
+}
+
+function localizeLocation(location: string | undefined, locale: Locale, pendingLabel: string) {
+  if (!location) return pendingLabel;
+  return localizedLocations[location]?.[locale] ?? (locale === 'en' ? location : location.replace(/, Iran$/i, locale === 'ru' ? ', Иран' : locale === 'ar' ? '، إيران' : '، ایران'));
+}
+
+function defaultShortSummary(config: InitialCaseStudyConfig, locale: Locale, projectName: string, serviceTitle: string) {
+  if (locale === 'en') {
+    return `${projectName} case study for ${serviceTitle}, focused on engineering coordination, controlled execution, and project risk reduction.`;
+  }
+
+  return {
+    fa: `مطالعه موردی ${projectName} برای ${serviceTitle}؛ با تمرکز بر هماهنگی مهندسی، کنترل اجرا و کاهش ریسک‌های پروژه.`,
+    ar: `دراسة حالة ${projectName} ضمن ${serviceTitle}، مع تركيز على التنسيق الهندسي وضبط التنفيذ وتقليل مخاطر المشروع.`,
+    ru: `Кейс ${projectName} для направления ${serviceTitle}: инженерная координация, контролируемое выполнение и снижение проектных рисков.`
+  }[locale];
+}
+
+function defaultChallenge(config: InitialCaseStudyConfig, locale: Locale, serviceTitle: string, projectType: string) {
+  if (locale === 'en') return config.challenge ?? caseStudyCopy.en.challengeSummary(serviceTitle);
+
+  return {
+    fa: `این پروژه ${projectType} به هماهنگی دقیق ${serviceTitle}، کنترل جزئیات اتصال و برنامه‌ریزی اجرای کارگاهی نیاز داشت تا ریسک‌های پوسته، زهکشی و کیفیت نصب مدیریت شود.`,
+    ar: `احتاج مشروع ${projectType} إلى تنسيق دقيق في ${serviceTitle} وضبط تفاصيل الوصلات وتخطيط التنفيذ في الموقع لإدارة مخاطر الغلاف والتصريف وجودة التركيب.`,
+    ru: `Для проекта типа ${projectType} требовалась точная координация ${serviceTitle}, контроль узлов примыкания и планирование монтажа, чтобы управлять рисками ограждающей системы, водоотвода и качества работ.`
+  }[locale];
+}
+
+function defaultChallengePoints(config: InitialCaseStudyConfig, locale: Locale) {
+  if (locale === 'en') return config.riskPrevented ?? caseStudyCopy.en.challengePoints;
+
+  return {
+    fa: [
+      'هماهنگی چیدمان و دیتیل‌های اتصال پیش از شروع اجرا',
+      'کنترل مسیر زهکشی و پیوستگی آب‌بندی در نقاط حساس',
+      'هماهنگی تأمین متریال با توالی نصب و محدودیت‌های کارگاه',
+      'بازرسی مرحله‌ای کیفیت نصب برای کاهش ریسک اصلاحات بعدی'
+    ],
+    ar: [
+      'تنسيق تخطيط النظام وتفاصيل الوصلات قبل بدء التنفيذ',
+      'ضبط مسار التصريف واستمرارية العزل المائي في النقاط الحساسة',
+      'مواءمة توريد المواد مع تسلسل التركيب وقيود الموقع',
+      'فحص مرحلي لجودة التركيب للحد من مخاطر المعالجة اللاحقة'
+    ],
+    ru: [
+      'Координация раскладки системы и узлов примыкания до начала работ',
+      'Контроль водоотвода и непрерывности гидроизоляции в критичных местах',
+      'Согласование поставки материалов с последовательностью монтажа и условиями площадки',
+      'Поэтапная проверка качества монтажа для снижения риска переделок'
+    ]
+  }[locale];
+}
+
+function defaultSolution(config: InitialCaseStudyConfig, locale: Locale, serviceTitle: string) {
+  if (locale === 'en') return config.sipanelSolution ?? caseStudyCopy.en.decisionSummary(serviceTitle);
+
+  return {
+    fa: `سی‌پانل راهکار ${serviceTitle} را بر اساس نقشه‌های اجرایی، هماهنگی زیرسازی، کنترل آب‌بندی و توالی نصب قابل اجرا تنظیم کرد.`,
+    ar: `نظمت SIPANEL حل ${serviceTitle} بالاعتماد على رسومات التنفيذ وتنسيق البنية الحاملة وضبط العزل المائي وتسلسل تركيب قابل للتنفيذ.`,
+    ru: `SIPANEL подготовила решение ${serviceTitle} на основе рабочих чертежей, координации подсистемы, контроля гидроизоляции и реализуемой последовательности монтажа.`
+  }[locale];
+}
+
+function defaultEngineeringDecision(config: InitialCaseStudyConfig, locale: Locale, serviceTitle: string) {
+  if (locale === 'en') return config.engineeringDecision ?? caseStudyCopy.en.technicalReasoning;
+
+  return {
+    fa: `تصمیم مهندسی بر کنترل هندسه، دیتیل اتصال، مسیر زهکشی و هماهنگی نصب ${serviceTitle} متمرکز شد تا عملکرد پوسته و کیفیت نهایی حفظ شود.`,
+    ar: `ركز القرار الهندسي على ضبط الهندسة وتفاصيل الوصلات ومسار التصريف وتنسيق تركيب ${serviceTitle} للحفاظ على أداء الغلاف وجودة التشطيب.`,
+    ru: `Инженерное решение было сосредоточено на геометрии, узлах примыкания, водоотводе и координации монтажа ${serviceTitle}, чтобы сохранить работу оболочки и итоговое качество.`
+  }[locale];
+}
+
+function defaultExecution(config: InitialCaseStudyConfig, locale: Locale) {
+  if (locale === 'en') return config.executionDetail ?? caseStudyCopy.en.installationSequence;
+
+  return {
+    fa: 'اجرا بر پایه نقشه‌های هماهنگ‌شده، کنترل تراز و اتصالات، تأیید متریال و بازرسی آب‌بندی در مراحل اصلی انجام شد.',
+    ar: 'تم التنفيذ وفق رسومات منسقة مع ضبط المحاذاة والوصلات واعتماد المواد وفحص العزل المائي في المراحل الرئيسية.',
+    ru: 'Работы выполнялись по согласованным чертежам с контролем выравнивания и креплений, подтверждением материалов и проверкой гидроизоляции на ключевых этапах.'
+  }[locale];
+}
+
+function defaultMeasuredResult(config: InitialCaseStudyConfig, locale: Locale, serviceTitle: string, area: string | undefined, projectType: string) {
+  if (locale === 'en') return config.measuredResult ?? pendingLabels.en;
+
+  const areaPart = area ? {
+    fa: ` با مساحت ${area}`,
+    ar: ` بمساحة ${area}`,
+    ru: ` площадью ${area}`
+  }[locale] : '';
+
+  return {
+    fa: `اجرای ${projectType}${areaPart} با تمرکز بر عملکرد ${serviceTitle}، کنترل نصب و کاهش ریسک‌های اجرایی تکمیل شد.`,
+    ar: `اكتمل تنفيذ ${projectType}${areaPart} مع التركيز على أداء ${serviceTitle} وضبط التركيب وتقليل مخاطر التنفيذ.`,
+    ru: `Выполнение проекта ${projectType}${areaPart} завершено с акцентом на работу ${serviceTitle}, контроль монтажа и снижение исполнительных рисков.`
+  }[locale];
+}
+
+function defaultSelectedSystemLogic(locale: Locale, serviceTitle: string) {
+  return {
+    en: caseStudyCopy.en.selectedSystemLogic(serviceTitle),
+    fa: `این سیستم به دلیل سازگاری با محدوده پروژه، سرعت اجرا، کنترل دیتیل‌های پوسته و امکان هماهنگی با نقشه‌های کارگاهی انتخاب شد.`,
+    ar: `اختير هذا النظام لملاءمته لنطاق المشروع وسرعة تنفيذه وإمكانية ضبط تفاصيل الغلاف وتنسيقه مع رسومات الورشة.`,
+    ru: `Система выбрана из-за соответствия объему проекта, скорости выполнения, контроля деталей оболочки и возможности согласования с рабочими чертежами.`
+  }[locale];
+}
+
+function defaultCoordinationNote(locale: Locale) {
+  return {
+    en: caseStudyCopy.en.coordinationNote,
+    fa: 'هماهنگی میان نقشه، تأمین و نصب پیش از اجرای نقاط حساس انجام شد تا مرز مسئولیت‌ها و توالی کارگاه روشن بماند.',
+    ar: 'تم التنسيق بين الرسومات والتوريد والتركيب قبل تنفيذ النقاط الحساسة حتى تبقى حدود المسؤولية وتسلسل الموقع واضحة.',
+    ru: 'Координация чертежей, поставки и монтажа выполнялась до работ на критичных участках, чтобы зоны ответственности и последовательность площадки оставались ясными.'
+  }[locale];
+}
+
+function defaultRiskItems(config: InitialCaseStudyConfig, locale: Locale) {
+  if (locale === 'en' && config.riskPrevented) {
+    return config.riskPrevented.slice(0, 4).map((risk) => ({
+      risk,
+      explanation: `${risk} was controlled through engineering review, coordinated detailing, and installation checkpoints.`
+    }));
+  }
+
+  if (locale === 'en') {
+    return [
+      caseStudyCopy.en.riskItems.layout,
+      caseStudyCopy.en.riskItems.waterproofing,
+      caseStudyCopy.en.riskItems.procurement
+    ];
+  }
+
+  return {
+    fa: [
+      {risk: 'ریسک خطای چیدمان و دیتیل', explanation: 'با بازبینی مهندسی نقشه‌ها و کنترل نقاط اتصال پیش از نصب کاهش یافت.'},
+      {risk: 'ریسک نشت و ناپیوستگی آب‌بندی', explanation: 'با هماهنگی مسیر زهکشی، فلاشینگ‌ها و بازرسی مرحله‌ای کنترل شد.'},
+      {risk: 'ریسک ناهماهنگی تأمین و نصب', explanation: 'با تطبیق متریال و اکسسوری‌ها با توالی اجرای کارگاه مدیریت شد.'}
+    ],
+    ar: [
+      {risk: 'مخاطر أخطاء التخطيط والتفاصيل', explanation: 'تم تقليلها عبر مراجعة هندسية للرسومات وضبط نقاط الوصل قبل التركيب.'},
+      {risk: 'مخاطر التسرب وانقطاع العزل المائي', explanation: 'تم ضبطها من خلال تنسيق مسار التصريف والفلاشينغ والفحص المرحلي.'},
+      {risk: 'مخاطر عدم توافق التوريد والتركيب', explanation: 'أديرت عبر مطابقة المواد والملحقات مع تسلسل التنفيذ في الموقع.'}
+    ],
+    ru: [
+      {risk: 'Риск ошибок раскладки и деталировки', explanation: 'Снижен за счет инженерной проверки чертежей и контроля узлов до монтажа.'},
+      {risk: 'Риск протечек и разрывов гидроизоляции', explanation: 'Контролировался через согласование водоотвода, примыканий и поэтапные проверки.'},
+      {risk: 'Риск несогласованности поставки и монтажа', explanation: 'Управлялся через увязку материалов и аксессуаров с последовательностью работ на площадке.'}
+    ]
+  }[locale];
+}
+
 const sandwichPanelService: LocalizedText = {
   en: 'Sandwich Panel Systems',
   fa: 'سیستم‌های ساندویچ پانل',
@@ -298,6 +509,161 @@ const claddingService: LocalizedText = {
   fa: 'پوشش و نمای آلومینیومی',
   ar: 'الكسوة والتغطية بالألمنيوم',
   ru: 'Алюминиевая облицовка и покрытия'
+};
+
+const caseStudyLocaleOverrides: Partial<Record<string, Partial<Record<Locale, CaseStudyLocaleOverrides>>>> = {
+  'army-hospital': {
+    ar: {
+      challenge: 'خلال حالة الطوارئ المرتبطة بكوفيد-19، كان المطلوب إنشاء مستشفى عسكري بسعة ٣٢ سريراً من مرحلة الحفر حتى الجاهزية التشغيلية خلال أقل من ٥٠ يوماً، مع تنسيق كامل بين الهندسة والتوريد والتنفيذ.',
+      challengePoints: [
+        'خطر تجاوز الجدول الزمني المحدد بأقل من ٥٠ يوماً',
+        'الحاجة إلى تنسيق يومي بين الأعمال المدنية والغلاف والقواطع الداخلية',
+        'تسريع حماية الغلاف من العوامل الجوية قبل اكتمال باقي البنود',
+        'منع اختناقات تركيب القواطع الداخلية ضمن برنامج مضغوط'
+      ],
+      sipanelSolution: 'قدمت SIPANEL نطاق المشروع كاملاً، بما في ذلك الهندسة ورسومات الورشة والحفر والإنشاء وغلاف ألواح الساندويتش والقواطع الداخلية وتجهيز المشروع للجاهزية النهائية.',
+      engineeringDecision: 'تم تنظيم تسليم EPC كامل بحيث تسير أعمال الحفر والإنشاء والغلاف والقواطع الداخلية ضمن تسلسل واحد قابل للتحكم، بدلاً من فصل المسؤوليات بين أطراف متعددة في ظرف زمني حرج.',
+      selectedSystemLogic: 'اختيرت ألواح الساندويتش لأنها تدعم سرعة تركيب عالية، وغلافاً خفيفاً، وتنسيقاً واضحاً بين السقف والجدران والقواطع الداخلية في مشروع صحي عاجل.',
+      coordinationNote: 'كان التنسيق اليومي بين التصميم والتوريد والموقع ضرورياً للحفاظ على الجاهزية التشغيلية دون نشر ادعاءات غير موثقة خارج نطاق المشروع المعروف.',
+      executionDetail: 'اتبع التنفيذ برنامجاً مضغوطاً شمل الحفر والإنشاء وتركيب غلاف ألواح الساندويتش والقواطع الداخلية وصولاً إلى الجاهزية التشغيلية خلال أقل من ٥٠ يوماً.',
+      procurementControl: 'تمت مواءمة توريد الألواح والملحقات والقواطع مع تسلسل التنفيذ حتى لا يتحول التوريد إلى عامل تأخير في المشروع.',
+      coordinationWithSiteTeam: 'جرى تنسيق أعمال الغلاف والقواطع مع فرق الأعمال المدنية والموقع لضبط التسلسل وتقليل التعارضات.',
+      qualityCheckpoints: ['اعتماد نطاق EPC قبل التنفيذ', 'متابعة جاهزية مواد الغلاف والقواطع', 'فحص مراحل التركيب قبل الجاهزية النهائية'],
+      measuredResult: 'تم تسليم مستشفى عسكري جاهز بسعة ٣٢ سريراً من الحفر حتى الجاهزية في أقل من ٥٠ يوماً خلال حالة الطوارئ الصحية.',
+      riskItems: [
+        {risk: 'تجاوز مدة الخمسين يوماً', explanation: 'تم ضبطه من خلال برنامج مضغوط وتنسيق يومي بين الهندسة والتوريد والتنفيذ.'},
+        {risk: 'فشل التنسيق بين تخصصات EPC', explanation: 'ساعدت إدارة النطاق المتكامل من الحفر حتى التسليم على تقليل فجوات المسؤولية.'},
+        {risk: 'تأخر حماية الغلاف من الطقس', explanation: 'تم ترتيب تركيب السقف والجدران بألواح الساندويتش ضمن تسلسل زمني واضح.'},
+        {risk: 'اختناق تركيب القواطع الداخلية', explanation: 'تمت مواءمة القواطع الداخلية مع الأعمال المدنية وبقية فرق الموقع.'}
+      ]
+    },
+    ru: {
+      challenge: 'Во время чрезвычайной ситуации COVID-19 требовалось подготовить военный госпиталь на 32 койки от земляных работ до эксплуатационной готовности менее чем за 50 дней, с полной координацией EPC.',
+      challengePoints: [
+        'Риск выхода за целевой срок менее 50 дней',
+        'Необходимость ежедневной координации гражданских работ, ограждающей оболочки и внутренних перегородок',
+        'Ускоренная защита здания от погоды до завершения смежных работ',
+        'Предотвращение узких мест при монтаже внутренних перегородок'
+      ],
+      sipanelSolution: 'SIPANEL выполнила полный объем проекта: инженерная подготовка, рабочие чертежи, земляные работы, строительство, оболочка из сэндвич-панелей, внутренние перегородки и подготовка к итоговой готовности.',
+      engineeringDecision: 'Команда организовала полный EPC-процесс так, чтобы земляные работы, строительство, оболочка и внутренние перегородки двигались в единой управляемой последовательности.',
+      selectedSystemLogic: 'Сэндвич-панели были уместны из-за высокой скорости монтажа, малого веса оболочки и понятной координации кровли, стен и перегородок в срочном медицинском объекте.',
+      coordinationNote: 'Ежедневная координация проектирования, поставки и площадки была критична для сохранения эксплуатационной готовности в подтвержденном объеме работ.',
+      executionDetail: 'Работы велись по сжатому графику: земляные работы, строительство, монтаж сэндвич-панельной оболочки, внутренние перегородки и доведение объекта до готовности менее чем за 50 дней.',
+      procurementControl: 'Поставка панелей, аксессуаров и перегородок была увязана с монтажной последовательностью, чтобы снабжение не стало причиной задержки.',
+      coordinationWithSiteTeam: 'Работы по оболочке и перегородкам координировались с гражданскими и площадочными командами для снижения конфликтов.',
+      qualityCheckpoints: ['Подтверждение EPC-объема до выполнения', 'Контроль готовности материалов оболочки и перегородок', 'Проверка этапов монтажа перед итоговой готовностью'],
+      measuredResult: 'Военный госпиталь на 32 койки был доведен от земляных работ до готовности менее чем за 50 дней в условиях медицинской чрезвычайной ситуации.',
+      riskItems: [
+        {risk: 'Выход за срок 50 дней', explanation: 'Контролировался сжатым графиком и ежедневной координацией инженерии, поставки и выполнения.'},
+        {risk: 'Сбой координации EPC-дисциплин', explanation: 'Интегрированное управление объемом от земляных работ до сдачи снизило разрывы ответственности.'},
+        {risk: 'Задержка погодной защиты оболочки', explanation: 'Монтаж кровли и стен из сэндвич-панелей был встроен в четкую последовательность.'},
+        {risk: 'Узкое место внутренних перегородок', explanation: 'Монтаж перегородок был согласован с гражданскими и другими площадочными работами.'}
+      ]
+    }
+  },
+  'mahshahr-taxi-parking': {
+    en: {
+      metaDescription: 'Mahshahr Taxi Parking Facility case study: 4,000 m² sandwich panel roofing with coordinated drainage, waterproofing continuity, and coastal exposure risk control.',
+      shortSummary: 'A 4,000 m² transport parking roof in Bandar Mahshahr where sandwich panel layout, drainage paths, gutters, and sealing details had to work together under coastal exposure.',
+      trustMicrocopy: 'Verified scope: sandwich panel roofing, drainage coordination, gutters, flashings, downspouts, and installation checkpoints.',
+      challenge: 'The parking facility needed a durable sandwich panel roof for a high-use transport environment in Bandar Mahshahr. The useful engineering challenge was not only panel supply; it was keeping rainwater movement predictable through slopes, gutters, flashings, downspouts, and sealed transitions in a coastal climate.',
+      challengePoints: ['Coastal exposure and corrosion-aware detailing', 'Continuous drainage path from roof surface to downspouts', 'Waterproofing continuity at flashings and panel laps', 'Controlled installation sequencing for a 4,000 m² roof'],
+      sipanelSolution: 'SIPANEL coordinated the sandwich panel roof as a complete drainage and weather-protection assembly, aligning panel layout, gutter positions, downspouts, flashings, fastening, and sealing checkpoints.',
+      engineeringDecision: 'The engineering decision was to treat drainage as part of the roof system instead of a later accessory. Slopes, water-flow paths, gutter locations, and panel alignment were coordinated before installation.',
+      selectedSystemLogic: 'Sandwich panel roofing was selected because it combines fast enclosure, lightweight insulated covering, and controlled lap/seal detailing suitable for a transport parking facility.',
+      coordinationNote: 'Roof panel layout, gutters, flashing lines, and downspout positions needed to be coordinated with the supporting structure before site installation.',
+      executionDetail: 'Execution followed an ordered sequence: confirm roof references, install panels with alignment checks, set gutters and flashings, coordinate downspouts, then verify fastening and sealing at water-sensitive interfaces.',
+      procurementControl: 'Panels, flashings, gutters, sealants, fasteners, and downspout accessories were controlled as one accessory package matched to the approved roof layout.',
+      coordinationWithSiteTeam: 'The site sequence kept water-management components aligned with panel installation so drainage details were not left for late-stage correction.',
+      qualityCheckpoints: ['Panel alignment and lap verification', 'Gutter slope and downspout continuity review', 'Flashing and sealant inspection at edges and transitions'],
+      measuredResult: 'A 4,000 m² sandwich panel roofing system was delivered with coordinated rainwater management and controlled weather-protection detailing.',
+      riskItems: [
+        {risk: 'Water accumulation', explanation: 'Slope, gutter, and downspout coordination reduced the chance of standing water on the roof.'},
+        {risk: 'Roof leakage', explanation: 'Panel laps, flashings, and sealant points were treated as inspection checkpoints.'},
+        {risk: 'Coastal durability risk', explanation: 'Accessory coordination and sealing details were selected with Bandar Mahshahr exposure in mind.'},
+        {risk: 'Improper drainage flow', explanation: 'Water paths were reviewed before installation instead of being adjusted only on site.'}
+      ]
+    },
+    fa: {
+      metaDescription: 'مطالعه موردی پارکینگ تاکسی ماهشهر: اجرای ۴٬۰۰۰ مترمربع سقف ساندویچ‌پانل با هماهنگی زهکشی، آب‌بندی و کنترل ریسک اقلیم ساحلی.',
+      shortSummary: 'سقف ۴٬۰۰۰ مترمربعی پارکینگ حمل‌ونقل در بندر ماهشهر که در آن چیدمان ساندویچ‌پانل، مسیر زهکشی، گاتر، فلاشینگ و آب‌بندی باید یکپارچه عمل می‌کرد.',
+      trustMicrocopy: 'محدوده تأییدشده: سقف ساندویچ‌پانل، هماهنگی زهکشی، گاتر، فلاشینگ، داون‌اسپات و کنترل نصب.',
+      primaryCta: 'درخواست بررسی سقف پارکینگ صنعتی',
+      challenge: 'پارکینگ تاکسی ماهشهر به سقف ساندویچ‌پانل بادوام برای فضای حمل‌ونقلی پرتردد نیاز داشت. چالش مهندسی فقط تأمین پانل نبود؛ بلکه باید حرکت آب باران از طریق شیب‌بندی، گاتر، فلاشینگ، داون‌اسپات و درزهای آب‌بندی‌شده در اقلیم ساحلی قابل پیش‌بینی می‌ماند.',
+      challengePoints: ['دیتیل‌پردازی متناسب با رطوبت و خوردگی اقلیم ساحلی', 'پیوستگی مسیر زهکشی از سطح سقف تا داون‌اسپات', 'حفظ آب‌بندی در فلاشینگ‌ها و همپوشانی پانل‌ها', 'کنترل توالی نصب برای سقف ۴٬۰۰۰ مترمربعی'],
+      sipanelSolution: 'سی‌پانل سقف ساندویچ‌پانل را به‌عنوان یک مجموعه کامل زهکشی و حفاظت جوی هماهنگ کرد؛ شامل چیدمان پانل، جای گاتر، داون‌اسپات، فلاشینگ، اتصال مکانیکی و نقاط کنترل آب‌بندی.',
+      engineeringDecision: 'تصمیم مهندسی این بود که زهکشی بخشی از خود سیستم سقف دیده شود، نه اکسسوری دیرهنگام. شیب‌ها، مسیر حرکت آب، موقعیت گاتر و تراز پانل پیش از نصب هماهنگ شد.',
+      selectedSystemLogic: 'سقف ساندویچ‌پانل به دلیل سرعت بستن پوسته، وزن کم، عایق بودن و امکان کنترل همپوشانی و آب‌بندی برای پارکینگ حمل‌ونقل انتخاب شد.',
+      coordinationNote: 'چیدمان پانل، خط گاتر، فلاشینگ و موقعیت داون‌اسپات باید پیش از نصب با سازه نگهدارنده هماهنگ می‌شد.',
+      executionDetail: 'اجرا با ترتیب مشخص پیش رفت: تأیید رفرنس‌های سقف، نصب پانل با کنترل تراز، اجرای گاتر و فلاشینگ، هماهنگی داون‌اسپات و سپس بازرسی اتصال و آب‌بندی در نقاط حساس به آب.',
+      procurementControl: 'پانل، فلاشینگ، گاتر، درزگیر، پیچ و متعلقات داون‌اسپات به‌صورت یک بسته هماهنگ با چیدمان تأییدشده سقف کنترل شد.',
+      coordinationWithSiteTeam: 'توالی کارگاه اجزای مدیریت آب را هم‌زمان با نصب پانل نگه داشت تا دیتیل‌های زهکشی به اصلاح دیرهنگام تبدیل نشوند.',
+      qualityCheckpoints: ['کنترل تراز و همپوشانی پانل‌ها', 'بازبینی شیب گاتر و پیوستگی داون‌اسپات', 'بازرسی فلاشینگ و درزگیر در لبه‌ها و انتقال‌ها'],
+      measuredResult: 'سقف ساندویچ‌پانل ۴٬۰۰۰ مترمربعی با مدیریت هماهنگ آب باران و دیتیل‌های کنترل‌شده حفاظت جوی تحویل شد.',
+      riskItems: [
+        {risk: 'تجمع آب', explanation: 'هماهنگی شیب، گاتر و داون‌اسپات احتمال ایستایی آب روی سقف را کاهش داد.'},
+        {risk: 'نشتی سقف', explanation: 'همپوشانی پانل، فلاشینگ و نقاط درزگیر به‌عنوان نقاط کنترل بازرسی شدند.'},
+        {risk: 'ریسک دوام در اقلیم ساحلی', explanation: 'هماهنگی اکسسوری‌ها و دیتیل‌های آب‌بندی با شرایط بندر ماهشهر انجام شد.'},
+        {risk: 'جریان نادرست زهکشی', explanation: 'مسیر حرکت آب پیش از نصب بازبینی شد و به اصلاح صرفاً کارگاهی موکول نشد.'}
+      ],
+      conversionHeadline: 'سقف پارکینگ یا فضای حمل‌ونقل دارید؟',
+      conversionText: 'نقشه سقف، سازه نگهدارنده و مسیر زهکشی را ارسال کنید تا تیم مهندسی سی‌پانل ریسک آب‌بندی و تأمین متریال را بررسی کند.',
+      conversionPrimaryCta: 'درخواست بررسی سقف پارکینگ صنعتی'
+    },
+    ar: {
+      metaDescription: 'دراسة حالة موقف سيارات الأجرة في ماهشهر: سقف ألواح ساندويتش بمساحة ٤٬٠٠٠ م² مع تنسيق التصريف واستمرارية العزل المائي وضبط مخاطر البيئة الساحلية.',
+      shortSummary: 'سقف بمساحة ٤٬٠٠٠ م² لمرفق نقل في بندر ماهشهر، حيث كان يجب أن يعمل تخطيط الألواح ومسارات التصريف والمزاريب والفلاشينغ والعزل كمنظومة واحدة.',
+      trustMicrocopy: 'النطاق المؤكد: سقف ألواح ساندويتش، تنسيق التصريف، المزاريب، الفلاشينغ، مصارف المياه ونقاط فحص التركيب.',
+      primaryCta: 'اطلب مراجعة سقف موقف نقل',
+      challenge: 'احتاج موقف سيارات الأجرة في ماهشهر إلى سقف متين من ألواح الساندويتش لبيئة نقل كثيرة الاستخدام. لم يكن التحدي مجرد توريد الألواح، بل إبقاء حركة مياه الأمطار واضحة عبر الميول والمزاريب والفلاشينغ ومصارف المياه والوصلات المعزولة ضمن مناخ ساحلي.',
+      challengePoints: ['تفاصيل مناسبة للرطوبة والتعرض الساحلي', 'استمرارية مسار التصريف من سطح السقف إلى المصارف', 'استمرارية العزل عند الفلاشينغ وتراكبات الألواح', 'تسلسل تركيب مضبوط لسقف بمساحة ٤٬٠٠٠ م²'],
+      sipanelSolution: 'نسقت SIPANEL سقف ألواح الساندويتش كمنظومة كاملة للتصريف والحماية الجوية، تشمل تخطيط الألواح ومواقع المزاريب ومصارف المياه والفلاشينغ والتثبيت ونقاط فحص العزل.',
+      engineeringDecision: 'كان القرار الهندسي اعتبار التصريف جزءاً من نظام السقف نفسه، لا ملحقاً لاحقاً. لذلك نسقت الميول ومسارات المياه ومواقع المزاريب ومحاذاة الألواح قبل التركيب.',
+      selectedSystemLogic: 'اختير سقف ألواح الساندويتش لأنه يجمع سرعة إغلاق الغلاف وخفة الوزن والعزل وإمكانية ضبط التراكب والختم في مرفق نقل.',
+      coordinationNote: 'كان يجب تنسيق تخطيط الألواح وخطوط المزاريب والفلاشينغ ومواقع مصارف المياه مع الهيكل الحامل قبل التنفيذ.',
+      executionDetail: 'اتبع التنفيذ تسلسلاً واضحاً: تأكيد مراجع السقف، تركيب الألواح مع فحص المحاذاة، تركيب المزاريب والفلاشينغ، تنسيق المصارف، ثم التحقق من التثبيت والختم في الواجهات الحساسة للماء.',
+      procurementControl: 'تم ضبط الألواح والفلاشينغ والمزاريب ومواد الختم والمثبتات وملحقات المصارف كحزمة واحدة مطابقة لتخطيط السقف المعتمد.',
+      coordinationWithSiteTeam: 'حافظ تسلسل الموقع على مواءمة عناصر إدارة المياه مع تركيب الألواح حتى لا تتحول تفاصيل التصريف إلى تصحيحات متأخرة.',
+      qualityCheckpoints: ['فحص محاذاة الألواح وتراكباتها', 'مراجعة ميول المزاريب واستمرارية المصارف', 'فحص الفلاشينغ ومواد الختم عند الحواف والانتقالات'],
+      measuredResult: 'تم تسليم سقف ألواح ساندويتش بمساحة ٤٬٠٠٠ م² مع إدارة منسقة لمياه الأمطار وتفاصيل حماية جوية مضبوطة.',
+      riskItems: [
+        {risk: 'تجمع المياه', explanation: 'قلل تنسيق الميول والمزاريب والمصارف احتمال ركود المياه على السقف.'},
+        {risk: 'تسرب السقف', explanation: 'عوملت تراكبات الألواح والفلاشينغ ونقاط الختم كنقاط فحص أساسية.'},
+        {risk: 'مخاطر المتانة في البيئة الساحلية', explanation: 'تم اختيار تنسيق الملحقات وتفاصيل الختم وفق تعرض بندر ماهشهر.'},
+        {risk: 'تدفق تصريف غير صحيح', explanation: 'راجعت الفرق مسارات المياه قبل التركيب بدلاً من تركها لتعديلات الموقع المتأخرة.'}
+      ],
+      conversionHeadline: 'لديك سقف موقف أو مرفق نقل؟',
+      conversionText: 'أرسل رسومات السقف والهيكل الحامل ومسار التصريف حتى يراجع فريق SIPANEL مخاطر العزل وتوريد المواد.',
+      conversionPrimaryCta: 'اطلب مراجعة سقف موقف نقل'
+    },
+    ru: {
+      metaDescription: 'Кейс стоянки такси в Махшехре: 4 000 м² кровли из сэндвич-панелей с координацией водоотвода, гидроизоляции и рисков прибрежной среды.',
+      shortSummary: 'Кровля транспортной стоянки площадью 4 000 м² в Бендер-Махшехре, где раскладка панелей, водоотвод, желоба, примыкания и герметизация должны были работать как единая система.',
+      trustMicrocopy: 'Подтвержденный объем: сэндвич-панельная кровля, координация водоотвода, желоба, примыкания, водостоки и контрольные точки монтажа.',
+      primaryCta: 'Запросить проверку кровли парковки',
+      challenge: 'Стоянке такси в Махшехре требовалась долговечная кровля из сэндвич-панелей для интенсивно используемого транспортного объекта. Инженерная задача заключалась не только в поставке панелей, а в предсказуемом движении дождевой воды через уклоны, желоба, примыкания, водостоки и герметизированные переходы в прибрежной среде.',
+      challengePoints: ['Детали с учетом прибрежной влажности и коррозионной среды', 'Непрерывный путь водоотвода от кровли к водостокам', 'Непрерывность гидроизоляции на примыканиях и нахлестах панелей', 'Контролируемая последовательность монтажа кровли 4 000 м²'],
+      sipanelSolution: 'SIPANEL скоординировала сэндвич-панельную кровлю как цельную систему водоотвода и погодной защиты: раскладку панелей, положения желобов и водостоков, примыкания, крепеж и точки контроля герметизации.',
+      engineeringDecision: 'Инженерное решение состояло в том, чтобы рассматривать водоотвод как часть кровельной системы, а не как позднее дополнение. Уклоны, пути воды, желоба и выравнивание панелей были согласованы до монтажа.',
+      selectedSystemLogic: 'Сэндвич-панельная кровля выбрана из-за скорости закрытия оболочки, малого веса, теплоизоляции и контролируемых нахлестов и герметизации для транспортной стоянки.',
+      coordinationNote: 'Раскладка панелей, линии желобов, примыкания и положения водостоков должны были быть согласованы с несущей конструкцией до площадочного монтажа.',
+      executionDetail: 'Монтаж шел по порядку: проверка кровельных референсов, установка панелей с контролем выравнивания, монтаж желобов и примыканий, координация водостоков, затем проверка крепежа и герметизации в водочувствительных узлах.',
+      procurementControl: 'Панели, примыкания, желоба, герметики, крепеж и аксессуары водостоков контролировались как единый комплект под утвержденную раскладку кровли.',
+      coordinationWithSiteTeam: 'Площадочная последовательность держала элементы водоотвода синхронно с монтажом панелей, чтобы детали не исправлялись поздно.',
+      qualityCheckpoints: ['Проверка выравнивания панелей и нахлестов', 'Проверка уклона желобов и непрерывности водостоков', 'Инспекция примыканий и герметика на краях и переходах'],
+      measuredResult: 'Сэндвич-панельная кровля площадью 4 000 м² была выполнена с согласованным управлением дождевой водой и контролируемыми деталями погодной защиты.',
+      riskItems: [
+        {risk: 'Скопление воды', explanation: 'Координация уклонов, желобов и водостоков снизила вероятность стоячей воды на кровле.'},
+        {risk: 'Протечки кровли', explanation: 'Нахлесты панелей, примыкания и точки герметизации стали обязательными контрольными точками.'},
+        {risk: 'Риск долговечности в прибрежной среде', explanation: 'Аксессуары и герметизирующие детали согласованы с условиями Бендер-Махшехра.'},
+        {risk: 'Неверный водоотвод', explanation: 'Пути воды были проверены до монтажа, а не оставлены на позднюю корректировку.'}
+      ],
+      conversionHeadline: 'Есть кровля парковки или транспортного объекта?',
+      conversionText: 'Отправьте схему кровли, несущую конструкцию и водоотвод, чтобы инженерная команда SIPANEL оценила риски герметизации и поставки.',
+      conversionPrimaryCta: 'Запросить проверку кровли парковки'
+    }
+  }
 };
 
 const initialCaseStudies: InitialCaseStudyConfig[] = [
@@ -680,17 +1046,27 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   },
   {
     slug: 'mahshahr-taxi-parking',
-    projectName: localized('Mahshahr Taxi Parking Facility'),
-    projectType: localized('Commercial parking roofing system'),
+    projectName: {
+      en: 'Mahshahr Taxi Parking Facility',
+      fa: 'پارکینگ تاکسی ماهشهر',
+      ar: 'موقف سيارات الأجرة في ماهشهر',
+      ru: 'Стоянка такси в Махшехре'
+    },
+    projectType: {
+      en: 'Commercial parking roofing system',
+      fa: 'سقف پارکینگ حمل‌ونقل',
+      ar: 'نظام سقف لموقف نقل',
+      ru: 'Кровельная система транспортной стоянки'
+    },
     mainService: sandwichPanelService,
     serviceHref: '/systems/sandwich-panel-systems',
     location: 'Bandar Mahshahr, Khuzestan, Iran',
     area: '4,000 m2',
-    challenge: 'A coastal parking facility required sandwich panel coordination, controlled rainwater drainage, waterproofing continuity, and corrosion-resistant detailing.',
-    sipanelSolution: 'SIPANEL designed a coordinated sandwich panel roofing and drainage system with engineered gutters, optimized slopes, and controlled water flow paths.',
-    engineeringDecision: 'Engineering teams optimized drainage slopes, gutter positioning, downspout coordination, and sandwich panel alignment.',
-    executionDetail: 'Roof panels, gutters, flashing systems, and downspouts were installed using controlled alignment, fastening checkpoints, and sealing verification.',
-    measuredResult: 'A durable sandwich panel roofing system was delivered with reliable rainwater management, long-term weather protection, and controlled drainage performance.',
+    challenge: 'A coastal transport parking facility required sandwich panel roofing that kept rainwater movement predictable through slopes, gutters, flashings, downspouts, and sealed transitions.',
+    sipanelSolution: 'SIPANEL coordinated the sandwich panel roof as a complete drainage and weather-protection assembly, aligning panel layout, gutter positions, downspouts, flashings, fastening, and sealing checkpoints.',
+    engineeringDecision: 'Engineering teams treated drainage as part of the roof system, coordinating slopes, water-flow paths, gutter locations, and panel alignment before installation.',
+    executionDetail: 'Roof panels, gutters, flashing systems, and downspouts were installed with alignment checks, fastening checkpoints, and sealing verification at water-sensitive interfaces.',
+    measuredResult: 'A 4,000 m² sandwich panel roofing system was delivered with coordinated rainwater management and controlled weather-protection detailing.',
     riskPrevented: ['Water accumulation', 'Roof leakage', 'Corrosion-related failures', 'Improper drainage flow'],
     cardImage: mahshahrTaxiCard,
     heroImage: mahshahrTaxiHero,
@@ -768,11 +1144,11 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     serviceHref: '/systems/standing-seam-zip-tech-roofing',
     location: 'Ahvaz, Iran',
     area: '4,000 m²',
-    challenge: 'The main challenge was the curved front architectural feature, where the covering had to be bent in a perpendicular direction, making the execution technically difficult.',
-    sipanelSolution: 'Custom execution detailing, geometric control of the curved form, and precise coordination between substructure, aluminium panels, and ZIP-TECH system.',
-    engineeringDecision: 'Custom execution detailing, geometric control of the curved form, and precise coordination between substructure, aluminium panels, and ZIP-TECH system.',
-    executionDetail: 'Successful execution of 4,000 m² of ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.',
-    measuredResult: 'Successful execution of 4,000 m² of ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.',
+    challenge: 'The passenger terminal included a curved front architectural feature where the covering had to bend in a perpendicular direction, making substructure alignment, aluminium panel geometry, ZIP-TECH transitions, and final visual quality the key execution risks.',
+    sipanelSolution: 'SIPANEL coordinated custom execution details for the curved form, aligning substructure, aluminium panels, and ZIP-TECH components before installation.',
+    engineeringDecision: 'Engineering teams controlled geometry first: defining curved references, coordinating panel and roofing interfaces, then executing the covering without breaking the architectural line.',
+    executionDetail: 'Execution covered 4,000 m² of ZIP-TECH and aluminium cladding with staged checks for geometry, alignment, and transition quality.',
+    measuredResult: '4,000 m² of ZIP-TECH and aluminium cladding were executed while preserving the curved architectural form and final visual quality.',
     riskPrevented: ['Visual breaks in curved facade', 'Incorrect perpendicular bending', 'Mismatch between cladding and substructure', 'Loss of architectural quality in airport facade'],
     cardImage: ahvazAirportPassengerTerminalCard,
     heroImage: ahvazAirportPassengerTerminalHero,
@@ -1076,11 +1452,11 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     serviceHref: '/systems/sandwich-panel-systems',
     location: 'Kermanshah, Iran',
     area: '1,000 m²',
-    challenge: 'The key challenge was designing facade connections so that structural movement during earthquakes would not damage or break the glass panels.',
-    sipanelSolution: 'Connection details were engineered to accommodate relative structural displacement and reduce stress transfer to the glass facade.',
-    engineeringDecision: 'Connection details were engineered to accommodate relative structural displacement and reduce stress transfer to the glass facade.',
-    executionDetail: 'Successful execution of approximately 1,000 m² of glass facade, which reportedly performed without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.',
-    measuredResult: 'Successful execution of approximately 1,000 m² of glass facade, which reportedly performed without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.',
+    challenge: 'The petroleum-faculty building required structural glass facade connections that could tolerate relative movement in the primary structure and reduce the risk of transferring displacement into brittle glass panels.',
+    sipanelSolution: 'SIPANEL engineered connection details to accommodate displacement between the building structure and glass facade while preserving facade alignment.',
+    engineeringDecision: 'Engineering teams separated glass performance from uncontrolled structural movement by using connection details that reduce stress transfer into the panels.',
+    executionDetail: 'Execution covered approximately 1,000 m² of glass facade with attention to connection alignment, support tolerances, and controlled installation of glass units.',
+    measuredResult: 'Approximately 1,000 m² of structural glass facade was executed. The project record states that the facade reportedly remained without glass damage during the Kermanshah earthquake in the 1390s Solar Hijri decade.',
     riskPrevented: ['Glass breakage under seismic movement', 'Facade connection failure', 'Mismatch between structure and glass facade', 'Reduced building-user safety'],
     cardImage: kermanshahIndustrialUniversityPetroleumFacultyCard,
     heroImage: kermanshahIndustrialUniversityPetroleumFacultyHero,
@@ -1160,11 +1536,11 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     serviceHref: '/systems/sandwich-panel-systems',
     location: 'Tehran, Iran',
     area: '5,000 m²',
-    challenge: 'The main challenge was the severe curvature of the structure and the need for accurate sandwich panel installation over a continuous curved geometry.',
-    sipanelSolution: 'Precise coordination between the space frame, substructure, and panel installation sequence to preserve the curved form and avoid visual breaks.',
-    engineeringDecision: 'Precise coordination between the space frame, substructure, and panel installation sequence to preserve the curved form and avoid visual breaks.',
-    executionDetail: 'Successful execution of 5,000 m² of sandwich panel covering while maintaining the geometric continuity of the curved surface.',
-    measuredResult: 'Successful execution of 5,000 m² of sandwich panel covering while maintaining the geometric continuity of the curved surface.',
+    challenge: 'The hangar application required accurate sandwich panel covering over a continuous curved structure, where installation access, panel alignment, substructure coordination, and roof-wall transitions affected weather protection and visual continuity.',
+    sipanelSolution: 'SIPANEL coordinated the space frame, substructure, panel layout, and installation sequence so the curved hangar form could be covered without losing geometric continuity.',
+    engineeringDecision: 'Engineering teams defined installation references and panel sequencing from the hangar geometry, then coordinated support points and transition details before site installation.',
+    executionDetail: 'Execution focused on controlled panel alignment over the curved surface, staged access, fastening checks, and transition detailing at roof and wall interfaces.',
+    measuredResult: 'A 5,000 m² sandwich panel covering was executed while maintaining the continuous curved form of the aircraft hangar.',
     riskPrevented: ['Visual breaks on curved roof surface', 'Installation errors on curved geometry', 'Mismatch between structure and covering system', 'Poor final appearance on large-span enclosure'],
     cardImage: mehrabadAircraftHangarCard,
     heroImage: mehrabadAircraftHangarHero,
@@ -1448,9 +1824,11 @@ function buildInitialCaseStudyPage(config: InitialCaseStudyConfig): CaseStudyPag
 
 function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Locale): CaseStudyLocaleContent {
   const pendingLabel = pendingLabels[locale];
-  const overrides = config.localeOverrides?.[locale];
+  const overrides = getLocaleOverrides(config, locale);
   const projectName = config.projectName[locale];
   const serviceTitle = config.mainService[locale];
+  const projectType = config.projectType[locale];
+  const location = localizeLocation(config.location, locale, pendingLabel);
   // Related projects may only point to the five approved slugs (SIPANEL Project Prioritization).
   // Honor an explicit relatedSlugs override but restrict it to approved slugs; otherwise fall back
   // to the approved set. Always exclude the current page. No array-order / slice(0, 3) selection.
@@ -1464,13 +1842,17 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
     .filter((study): study is InitialCaseStudyConfig => Boolean(study));
   const relatedStudies = relatedSource
     .map((study) => ({
+      ...study,
+      overrides: getLocaleOverrides(study, locale)
+    }))
+    .map(({overrides: relatedOverrides, ...study}) => ({
       projectName: study.projectName[locale],
-      location: study.location ?? pendingLabel,
+      location: localizeLocation(study.location, locale, pendingLabel),
       areaM2: study.area,
       projectType: study.projectType[locale],
-      challenge: study.challenge ?? caseStudyCopy[locale].relatedChallenge,
-      engineeringDecision: study.engineeringDecision ?? caseStudyCopy[locale].relatedDecision,
-      measuredResult: study.measuredResult ?? pendingLabel,
+      challenge: relatedOverrides.challenge ?? defaultChallenge(study, locale, study.mainService[locale], study.projectType[locale]),
+      engineeringDecision: relatedOverrides.engineeringDecision ?? defaultEngineeringDecision(study, locale, study.mainService[locale]),
+      measuredResult: relatedOverrides.measuredResult ?? defaultMeasuredResult(study, locale, study.mainService[locale], study.area, study.projectType[locale]),
       href: `/projects/${study.slug}`,
       image: study.cardImage,
       assetStatus: study.cardImage ? ('available' as const) : ('pending' as const)
@@ -1479,20 +1861,17 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
 
   return {
     seo: {
-      title: caseStudyCopy[locale].seoTitle(projectName),
-      metaDescription: caseStudyCopy[locale].metaDescription(projectName, serviceTitle),
+      title: overrides?.seoTitle ?? caseStudyCopy[locale].seoTitle(projectName),
+      metaDescription: overrides?.metaDescription ?? caseStudyCopy[locale].metaDescription(projectName, serviceTitle),
       h1: projectName
     },
     hero: {
       eyebrow: caseStudyCopy[locale].eyebrow,
       projectName,
-      projectType: config.projectType[locale],
-      location: config.location ?? pendingLabel,
+      projectType,
+      location,
       mainService: serviceTitle,
-      shortSummary: overrides?.shortSummary
-        ?? (hasVerifiedProjectFields
-          ? `${projectName} case study for ${serviceTitle}, focused on engineering coordination, controlled execution, and project risk reduction.`
-          : caseStudyCopy[locale].shortSummary(serviceTitle)),
+      shortSummary: overrides?.shortSummary ?? (hasVerifiedProjectFields ? defaultShortSummary(config, locale, projectName, serviceTitle) : caseStudyCopy[locale].shortSummary(serviceTitle)),
       primaryCta: overrides?.primaryCta ?? caseStudyCopy[locale].primaryCta,
       secondaryCta: caseStudyCopy[locale].secondaryCta,
       trustMicrocopy: overrides?.trustMicrocopy ?? caseStudyCopy[locale].trustMicrocopy,
@@ -1508,8 +1887,8 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       title: caseStudyCopy[locale].snapshotTitle,
       pendingLabel,
       items: [
-        {label: caseStudyCopy[locale].snapshotLabels.projectType, value: config.projectType[locale]},
-        {label: caseStudyCopy[locale].snapshotLabels.location, value: config.location ?? pendingLabel, pending: !config.location},
+        {label: caseStudyCopy[locale].snapshotLabels.projectType, value: projectType},
+        {label: caseStudyCopy[locale].snapshotLabels.location, value: location, pending: !config.location},
         {label: caseStudyCopy[locale].snapshotLabels.area, value: config.area ?? pendingLabel, pending: !config.area},
         {label: caseStudyCopy[locale].snapshotLabels.duration, value: overrides?.snapshotDuration ?? pendingLabel, pending: !overrides?.snapshotDuration},
         {label: caseStudyCopy[locale].snapshotLabels.metrics, value: pendingLabel, pending: true}
@@ -1517,20 +1896,20 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
     },
     challenge: {
       title: caseStudyCopy[locale].challengeTitle,
-      summary: overrides?.challenge ?? config.challenge ?? caseStudyCopy[locale].challengeSummary(serviceTitle),
-      points: overrides?.challengePoints ?? config.riskPrevented ?? caseStudyCopy[locale].challengePoints,
-      risk: overrides?.challenge ?? config.challenge ?? caseStudyCopy[locale].riskStatement
+      summary: overrides?.challenge ?? (hasVerifiedProjectFields ? defaultChallenge(config, locale, serviceTitle, projectType) : caseStudyCopy[locale].challengeSummary(serviceTitle)),
+      points: overrides?.challengePoints ?? (hasVerifiedProjectFields ? defaultChallengePoints(config, locale) : caseStudyCopy[locale].challengePoints),
+      risk: overrides?.challenge ?? (hasVerifiedProjectFields ? defaultChallenge(config, locale, serviceTitle, projectType) : caseStudyCopy[locale].riskStatement)
     },
     engineeringDecision: {
       title: caseStudyCopy[locale].decisionTitle,
-      summary: overrides?.sipanelSolution ?? config.sipanelSolution ?? caseStudyCopy[locale].decisionSummary(serviceTitle),
-      technicalReasoning: overrides?.engineeringDecision ?? config.engineeringDecision ?? caseStudyCopy[locale].technicalReasoning,
-      selectedSystemLogic: overrides?.selectedSystemLogic ?? caseStudyCopy[locale].selectedSystemLogic(serviceTitle),
-      coordinationNote: overrides?.coordinationNote ?? caseStudyCopy[locale].coordinationNote
+      summary: overrides?.sipanelSolution ?? (hasVerifiedProjectFields ? defaultSolution(config, locale, serviceTitle) : caseStudyCopy[locale].decisionSummary(serviceTitle)),
+      technicalReasoning: overrides?.engineeringDecision ?? (hasVerifiedProjectFields ? defaultEngineeringDecision(config, locale, serviceTitle) : caseStudyCopy[locale].technicalReasoning),
+      selectedSystemLogic: overrides?.selectedSystemLogic ?? defaultSelectedSystemLogic(locale, serviceTitle),
+      coordinationNote: overrides?.coordinationNote ?? defaultCoordinationNote(locale)
     },
     executionDetail: {
       title: caseStudyCopy[locale].executionTitle,
-      installationSequence: overrides?.executionDetail ?? config.executionDetail ?? caseStudyCopy[locale].installationSequence,
+      installationSequence: overrides?.executionDetail ?? (hasVerifiedProjectFields ? defaultExecution(config, locale) : caseStudyCopy[locale].installationSequence),
       procurementControl: overrides?.procurementControl ?? caseStudyCopy[locale].procurementControl,
       qualityCheckpoints: overrides?.qualityCheckpoints ?? caseStudyCopy[locale].qualityCheckpoints,
       coordinationWithSiteTeam: overrides?.coordinationWithSiteTeam ?? caseStudyCopy[locale].coordinationWithSiteTeam
@@ -1545,9 +1924,9 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       items: [
         {
           title: config.heroImage ? projectName : caseStudyCopy[locale].galleryItems.projectPhoto,
-          description: config.heroImage ? config.measuredResult : pendingLabel,
+          description: config.heroImage ? overrides?.measuredResult ?? defaultMeasuredResult(config, locale, serviceTitle, config.area, projectType) : pendingLabel,
           image: config.heroImage,
-          alt: config.heroImage ? `${projectName} project photography` : undefined,
+          alt: config.heroImage ? caseStudyCopy[locale].projectImageAlt(projectName) : undefined,
           assetStatus: config.heroImage ? 'available' : 'pending',
           assetType: 'project_image'
         },
@@ -1571,8 +1950,8 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       items: overrides?.measuredResultItems ?? [
         {
           label: caseStudyCopy[locale].resultLabels.completion,
-          value: overrides?.measuredResult ?? config.measuredResult ?? pendingLabel,
-          verificationStatus: (overrides?.measuredResult || config.measuredResult) ? 'verified' : 'pending'
+          value: overrides?.measuredResult ?? (hasVerifiedProjectFields ? defaultMeasuredResult(config, locale, serviceTitle, config.area, projectType) : pendingLabel),
+          verificationStatus: (overrides?.measuredResult || hasVerifiedProjectFields) ? 'verified' : 'pending'
         },
         {label: caseStudyCopy[locale].resultLabels.waterproofing, value: pendingLabel, verificationStatus: 'pending'},
         {label: caseStudyCopy[locale].resultLabels.schedule, value: overrides?.snapshotDuration ?? pendingLabel, verificationStatus: overrides?.snapshotDuration ? 'verified' : 'pending'},
@@ -1583,25 +1962,7 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
       title: caseStudyCopy[locale].riskTitle,
       items: overrides?.riskItems
         ? overrides.riskItems
-        : config.riskPrevented
-        ? config.riskPrevented.slice(0, 4).map((risk) => ({
-            risk,
-            explanation: `${risk} was controlled through engineering review, coordinated detailing, and installation checkpoints.`
-          }))
-        : [
-            {
-              risk: caseStudyCopy[locale].riskItems.layout.risk,
-              explanation: caseStudyCopy[locale].riskItems.layout.explanation
-            },
-            {
-              risk: caseStudyCopy[locale].riskItems.waterproofing.risk,
-              explanation: caseStudyCopy[locale].riskItems.waterproofing.explanation
-            },
-            {
-              risk: caseStudyCopy[locale].riskItems.procurement.risk,
-              explanation: caseStudyCopy[locale].riskItems.procurement.explanation
-            }
-          ]
+        : defaultRiskItems(config, locale)
     },
     relatedServices: {
       title: caseStudyCopy[locale].relatedServicesTitle,
@@ -1654,6 +2015,7 @@ const caseStudyCopy = {
     secondaryCta: 'View Related System',
     trustMicrocopy: 'Proof fields are intentionally pending until verified project records are available.',
     heroAlt: (projectName: string) => `${projectName} technical placeholder`,
+    projectImageAlt: (projectName: string) => `${projectName} project photography`,
     snapshotTitle: 'Project snapshot',
     snapshotLabels: {
       projectType: 'Project type',
@@ -1740,6 +2102,7 @@ const caseStudyCopy = {
     secondaryCta: 'مشاهده سیستم مرتبط',
     trustMicrocopy: 'فیلدهای اثبات تا زمان دریافت سوابق تاییدشده عمدا در وضعیت انتظار می‌مانند.',
     heroAlt: (projectName: string) => `جایگزین فنی ${projectName}`,
+    projectImageAlt: (projectName: string) => `عکس پروژه ${projectName}`,
     snapshotTitle: 'خلاصه پروژه',
     snapshotLabels: {
       projectType: 'نوع پروژه',
@@ -1826,6 +2189,7 @@ const caseStudyCopy = {
     secondaryCta: 'عرض النظام المرتبط',
     trustMicrocopy: 'تبقى حقول الإثبات معلقة عمدا حتى تتوفر سجلات المشروع الموثقة.',
     heroAlt: (projectName: string) => `عنصر تقني بديل لـ ${projectName}`,
+    projectImageAlt: (projectName: string) => `صورة مشروع ${projectName}`,
     snapshotTitle: 'ملخص المشروع',
     snapshotLabels: {
       projectType: 'نوع المشروع',
@@ -1912,6 +2276,7 @@ const caseStudyCopy = {
     secondaryCta: 'Смотреть связанную систему',
     trustMicrocopy: 'Поля доказательств намеренно ожидают подтвержденные проектные записи.',
     heroAlt: (projectName: string) => `Технический placeholder для ${projectName}`,
+    projectImageAlt: (projectName: string) => `Фотография проекта ${projectName}`,
     snapshotTitle: 'Сводка проекта',
     snapshotLabels: {
       projectType: 'Тип проекта',
