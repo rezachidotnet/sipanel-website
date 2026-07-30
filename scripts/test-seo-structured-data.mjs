@@ -374,6 +374,7 @@ async function assertSitemap() {
   if (xml !== secondXml) fail('Sitemap output changed across repeated generation');
   if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(xml)) fail('Sitemap contains /fa URL');
   if (/<loc>[^<]*\?[^<]*<\/loc>/.test(xml)) fail('Sitemap contains a query-string URL');
+  if (/<loc>[^<]*#[^<]*<\/loc>/.test(xml)) fail('Sitemap contains a fragment URL');
   if (/\/(?:fa|en|ar|ru)\/sitemap\.xml/.test(xml)) fail('Sitemap contains locale-prefixed sitemap URL');
   if (/\/projects\?filter=/.test(xml)) fail('Sitemap contains parameterized project filter URL');
 

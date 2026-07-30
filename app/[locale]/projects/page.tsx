@@ -10,6 +10,7 @@ import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 import {CatalogDownloadButton} from '@/components/home/catalog-download-button';
 import {ProjectsFilterActivator} from '@/components/projects/projects-filter-activator';
+import {projectFilterKeys} from '@/lib/projects/project-filters';
 import armyHospitalCard from '@/assets/projects/army-hospital/photos/army-hospital-card.webp';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
 import bazargolCard from '@/assets/projects/bazargol/photos/bazargol-card.webp';
@@ -1655,13 +1656,7 @@ function buildBreadcrumbSchema(locale: Locale) {
   ]);
 }
 
-const filterOptions = [
-  {id: 'all'},
-  {id: 'sandwich'},
-  {id: 'standing'},
-  {id: 'cladding'},
-  {id: 'transparent-roofing'}
-] as const;
+const filterOptions = projectFilterKeys.map((id) => ({id}));
 
 function buildFilterString(filters: string[]) {
   const merged = filters.some((f) => f === 'glass' || f === 'polycarbonate')

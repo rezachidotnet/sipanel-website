@@ -5,6 +5,7 @@ import {LtrText} from '@/components/bidi/ltr-text';
 import {Link} from '@/i18n/routing';
 import {HashAnchorLink} from '@/components/navigation/hash-anchor-link';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
+import {ProjectFilterLink} from '@/components/projects/project-filter-link';
 
 export function Footer() {
   const footer = useTranslations('footer');
@@ -34,11 +35,11 @@ export function Footer() {
 
           <div className="site-footer__column">
             <h2>{footer('projects')}</h2>
-            <Link href="/projects" className="site-footer__link">{footer('projectsSandwich')}</Link>
-            <Link href="/projects" className="site-footer__link">{footer('projectsZipRoofing')}</Link>
-            <Link href="/projects" className="site-footer__link">{footer('projectsGlass')}</Link>
-            <Link href="/projects" className="site-footer__link">{footer('projectsCladding')}</Link>
-            <Link href="/projects" className="site-footer__link">{footer('projectsAll')}</Link>
+            <ProjectFilterLink filter="sandwich" className="site-footer__link">{footer('projectsSandwich')}</ProjectFilterLink>
+            <ProjectFilterLink filter="standing" className="site-footer__link">{footer('projectsZipRoofing')}</ProjectFilterLink>
+            <ProjectFilterLink filter="transparent-roofing" className="site-footer__link">{footer('projectsGlass')}</ProjectFilterLink>
+            <ProjectFilterLink filter="cladding" className="site-footer__link">{footer('projectsCladding')}</ProjectFilterLink>
+            <ProjectFilterLink filter="all" className="site-footer__link">{footer('projectsAll')}</ProjectFilterLink>
           </div>
 
           <div className="site-footer__column">

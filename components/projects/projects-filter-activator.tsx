@@ -2,25 +2,89 @@
 
 import {useEffect} from 'react';
 import {useSearchParams} from 'next/navigation';
+import {getProjectFilterHash, isProjectFilterKey, type ProjectFilterKey} from '@/lib/projects/project-filters';
+
+const filterInputPrefix = 'projects-filter-';
+
+function parseProjectFilterHash(hash: string): ProjectFilterKey | null | 'invalid' {
+  if (!hash.startsWith('#filter=')) return null;
+
+  const filter = new URLSearchParams(hash.slice(1)).get('filter');
+  return isProjectFilterKey(filter) ? filter : 'invalid';
+}
+
+function getRadio(filter: ProjectFilterKey) {
+  return document.getElementById(`${filterInputPrefix}${filter}`) as HTMLInputElement | null;
+}
+
+function activateFilter(filter: ProjectFilterKey) {
+  const radio = getRadio(filter);
+  if (!radio || radio.checked) return;
+
+  radio.checked = true;
+  radio.dispatchEvent(new Event('change', {bubbles: true}));
+}
+
+function removeProjectFilterHash() {
+  const url = new URL(window.location.href);
+  url.hash = '';
+  window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}`);
+}
+
+function syncUrlToFilter(filter: ProjectFilterKey) {
+  const url = new URL(window.location.href);
+  url.searchParams.delete('filter');
+  url.hash = getProjectFilterHash(filter);
+  window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+}
 
 export function ProjectsFilterActivator() {
   const searchParams = useSearchParams();
-  const filter = searchParams.get('filter');
 
   useEffect(() => {
-    if (!filter) {
-      return;
+    function activateFromUrl() {
+      const hashFilter = parseProjectFilterHash(window.location.hash);
+
+      if (hashFilter === 'invalid') {
+        activateFilter('all');
+        removeProjectFilterHash();
+        return;
+      }
+
+      if (hashFilter) {
+        activateFilter(hashFilter);
+        return;
+      }
+
+      const queryFilter = searchParams.get('filter');
+      activateFilter(isProjectFilterKey(queryFilter) ? queryFilter : 'all');
     }
 
-    const radio = document.getElementById(`projects-filter-${filter}`) as HTMLInputElement | null;
+    function handleChange(event: Event) {
+      const radio = event.target as HTMLInputElement | null;
+      if (!radio?.checked || radio.name !== 'projects-filter' || !radio.id.startsWith(filterInputPrefix)) {
+        return;
+      }
 
-    if (!radio) {
-      return;
+      const filter = radio.id.slice(filterInputPrefix.length);
+      if (isProjectFilterKey(filter)) {
+        syncUrlToFilter(filter);
+      }
     }
 
-    radio.checked = true;
-    radio.dispatchEvent(new Event('change', {bubbles: true}));
-  }, [filter]);
+    activateFromUrl();
+    document.addEventListener('change', handleChange);
+    window.addEventListener('hashchange', activateFromUrl);
+    window.addEventListener('popstate', activateFromUrl);
+    document.documentElement.dataset.projectsFilterActivator = 'ready';
+
+    return () => {
+      document.removeEventListener('change', handleChange);
+      window.removeEventListener('hashchange', activateFromUrl);
+      window.removeEventListener('popstate', activateFromUrl);
+      delete document.documentElement.dataset.projectsFilterActivator;
+    };
+  }, [searchParams]);
 
   return null;
 }
