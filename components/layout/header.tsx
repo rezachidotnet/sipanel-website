@@ -7,6 +7,7 @@ import logo from '@/assets/brand/logos/logo-black-transparency.svg';
 import {getLocalizedPath, Link, locales, usePathname, type Locale} from '@/i18n/routing';
 import {LanguageSwitcher} from '@/components/localization/language-switcher';
 import {CatalogDownloadModal} from '@/components/home/catalog-download-modal';
+import {HashAnchorLink} from '@/components/navigation/hash-anchor-link';
 import {trackCatalogEvent, trackLanguageChange, trackEvent} from '@/lib/analytics/events';
 
 const localeLabels: Record<Locale, {short: string; full: string}> = {
@@ -132,16 +133,17 @@ export function Header({locale}: Props) {
             {navKeys.map((key) => {
               const isActive = isNavItemActive(key, pathname);
               const href = getNavHref(key);
+              const NavLink = key === 'process' ? HashAnchorLink : Link;
 
               return (
-                <Link
+                <NavLink
                   key={key}
                   href={href}
                   aria-current={isActive ? 'page' : undefined}
                   className={isActive ? 'desktop-nav__item is-active' : 'desktop-nav__item'}
                 >
                   {nav(key)}
-                </Link>
+                </NavLink>
               );
             })}
           </nav>
@@ -213,10 +215,11 @@ export function Header({locale}: Props) {
                   {navKeys.map((key) => {
                     const isActive = isNavItemActive(key, pathname);
                     const href = getNavHref(key);
+                    const NavLink = key === 'process' ? HashAnchorLink : Link;
 
                     return (
                       /* track: mobile_menu_item_click */
-                      <Link
+                      <NavLink
                         key={key}
                         href={href}
                         aria-current={isActive ? 'page' : undefined}
@@ -224,7 +227,7 @@ export function Header({locale}: Props) {
                         onClick={closeMobileMenu}
                       >
                         {nav(key)}
-                      </Link>
+                      </NavLink>
                     );
                   })}
                 </nav>

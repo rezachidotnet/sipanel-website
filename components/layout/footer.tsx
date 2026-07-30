@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 import logo from '@/assets/brand/logos/logo-white-transparency.svg';
 import {LtrText} from '@/components/bidi/ltr-text';
 import {Link} from '@/i18n/routing';
+import {HashAnchorLink} from '@/components/navigation/hash-anchor-link';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 
 export function Footer() {
@@ -43,7 +44,7 @@ export function Footer() {
           <div className="site-footer__column">
             <h2>{footer('company')}</h2>
             <Link href="/about" className="site-footer__link">{footer('companyAbout')}</Link>
-            <Link href="/#process" className="site-footer__link">{footer('companyProcess')}</Link>
+            <HashAnchorLink href="/#process" className="site-footer__link">{footer('companyProcess')}</HashAnchorLink>
             <Link href="/contact" className="site-footer__link">{footer('companyContact')}</Link>
           </div>
 

@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "npm run test:seo && npm run test:locale",
+    "test": "npm run test:seo && npm run test:locale && npm run test:anchors",
     "test:routing": "node scripts/test-routing.mjs",
     "test:seo": "node scripts/test-seo-structured-data.mjs",
     "test:locale": "node scripts/test-locale-integrity.mjs",
+    "test:anchors": "node scripts/test-anchor-navigation.mjs",
     "seo:audit": "node scripts/production-seo-audit.mjs"
   },
   "dependencies": {
