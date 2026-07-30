@@ -98,6 +98,18 @@ async function expectVisibleCount(page, expected, label) {
   if (actual !== expected) fail(`${label}: expected ${expected} visible cards, received ${actual}`);
 }
 
+async function scrollToFooter(page) {
+  await page.locator('footer').scrollIntoViewIfNeeded();
+  await page.waitForFunction(() => window.scrollY > 200);
+}
+
+async function expectAtTop(page, label) {
+  await page.waitForFunction(() => window.scrollY <= 4, null, {timeout: 8000});
+
+  const scrollY = await page.evaluate(() => window.scrollY);
+  if (scrollY > 4) fail(`${label}: expected page to scroll to top, received scrollY ${scrollY}`);
+}
+
 async function expectCleanSeoSignals(page, canonical) {
   const signals = await page.evaluate(() => ({
     canonical: document.querySelector('link[rel="canonical"]')?.href ?? '',
@@ -216,11 +228,98 @@ async function testFooterNavigation(page, localeConfig) {
     await page.locator(`footer a.site-footer__link[href="${href}"]`).first().click();
     await expectFilter(page, filter.key, `${localeConfig.locale} footer ${filter.key}`);
     await expectVisibleCount(page, filter.expectedVisible, `${localeConfig.locale} footer ${filter.key}`);
+    await expectAtTop(page, `${localeConfig.locale} cross-page footer ${filter.key}`);
   }
 
   await page.locator(`footer a.site-footer__link[href="${localeConfig.projects}"]`).first().click();
   await expectFilter(page, 'all', `${localeConfig.locale} footer all`);
   await expectVisibleCount(page, 35, `${localeConfig.locale} footer all`);
+  await expectAtTop(page, `${localeConfig.locale} cross-page footer all`);
+}
+
+async function testSamePageFooterScroll(page, localeConfig) {
+  for (const filter of filters) {
+    const href = `${localeConfig.projects}#filter=${filter.key}`;
+    await gotoRoute(page, href);
+    await scrollToFooter(page);
+    await page.locator(`footer a.site-footer__link[href="${href}"]`).first().click();
+    await expectFilter(page, filter.key, `${localeConfig.locale} same-page footer ${filter.key}`);
+    await expectVisibleCount(page, filter.expectedVisible, `${localeConfig.locale} same-page footer ${filter.key}`);
+    await expectAtTop(page, `${localeConfig.locale} same-page footer ${filter.key}`);
+
+    await scrollToFooter(page);
+    await page.locator(`footer a.site-footer__link[href="${href}"]`).first().click();
+    await expectFilter(page, filter.key, `${localeConfig.locale} repeated same-page footer ${filter.key}`);
+    await expectVisibleCount(page, filter.expectedVisible, `${localeConfig.locale} repeated same-page footer ${filter.key}`);
+    await expectAtTop(page, `${localeConfig.locale} repeated same-page footer ${filter.key}`);
+  }
+
+  await gotoRoute(page, `${localeConfig.projects}#filter=sandwich`);
+  await scrollToFooter(page);
+  await page.locator(`footer a.site-footer__link[href="${localeConfig.projects}"]`).first().click();
+  await expectFilter(page, 'all', `${localeConfig.locale} same-page footer all from filtered hash`);
+  await expectVisibleCount(page, 35, `${localeConfig.locale} same-page footer all from filtered hash`);
+  await expectAtTop(page, `${localeConfig.locale} same-page footer all from filtered hash`);
+
+  await scrollToFooter(page);
+  await page.locator(`footer a.site-footer__link[href="${localeConfig.projects}"]`).first().click();
+  await expectFilter(page, 'all', `${localeConfig.locale} repeated same-page footer all`);
+  await expectVisibleCount(page, 35, `${localeConfig.locale} repeated same-page footer all`);
+  await expectAtTop(page, `${localeConfig.locale} repeated same-page footer all`);
+}
+
+async function testManualSelectionDoesNotScroll(page, localeConfig) {
+  await gotoRoute(page, localeConfig.projects);
+  await page.locator('label[for="projects-filter-cladding"]').scrollIntoViewIfNeeded();
+  const before = await page.evaluate(() => window.scrollY);
+  await page.locator('label[for="projects-filter-cladding"]').click();
+  await expectFilter(page, 'cladding', `${localeConfig.locale} manual cladding without scroll reset`);
+  await page.waitForTimeout(100);
+  const after = await page.evaluate(() => window.scrollY);
+
+  if (before > 20 && after < before - 20) {
+    fail(`${localeConfig.locale}: manual filter selection unexpectedly scrolled from ${before} to ${after}`);
+  }
+}
+
+async function testReducedMotionScroll(page, localeConfig) {
+  await page.emulateMedia({reducedMotion: 'reduce'});
+  await gotoRoute(page, `${localeConfig.projects}#filter=sandwich`);
+  await scrollToFooter(page);
+  await page.evaluate(() => {
+    const originalScrollTo = window.scrollTo.bind(window);
+    window.__projectFilterLastScrollBehavior = null;
+    window.scrollTo = ((options, y) => {
+      if (typeof options === 'object' && options) {
+        window.__projectFilterLastScrollBehavior = options.behavior ?? null;
+      }
+      return originalScrollTo(options, y);
+    });
+  });
+  await page.locator(`footer a.site-footer__link[href="${localeConfig.projects}#filter=sandwich"]`).first().click();
+  await page.waitForFunction(() => window.__projectFilterLastScrollBehavior === 'auto');
+  await expectAtTop(page, `${localeConfig.locale} reduced-motion footer scroll`);
+  await page.emulateMedia({reducedMotion: 'no-preference'});
+}
+
+async function testModifiedClickIsNotIntercepted(page, localeConfig) {
+  await gotoRoute(page, localeConfig.home);
+  const href = `${localeConfig.projects}#filter=sandwich`;
+  const result = await page.locator(`footer a.site-footer__link[href="${href}"]`).first().evaluate((link) => {
+    const event = new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+      metaKey: true
+    });
+    return {
+      dispatchResult: link.dispatchEvent(event),
+      defaultPrevented: event.defaultPrevented
+    };
+  });
+
+  if (!result.dispatchResult || result.defaultPrevented) {
+    fail(`${localeConfig.locale}: modified footer click was intercepted`);
+  }
 }
 
 async function runProjectFilterTests() {
@@ -240,8 +339,25 @@ async function runProjectFilterTests() {
       await testManualAndHistory(manualPage, localeConfig);
       await manualPage.close();
 
+      const samePageScroll = await browser.newPage({viewport: {width: 1280, height: 800}});
+      await testSamePageFooterScroll(samePageScroll, localeConfig);
+      await samePageScroll.close();
+
+      const manualScroll = await browser.newPage({viewport: {width: 1280, height: 800}});
+      await testManualSelectionDoesNotScroll(manualScroll, localeConfig);
+      await manualScroll.close();
+
+      const reducedMotion = await browser.newPage({viewport: {width: 1280, height: 800}});
+      await testReducedMotionScroll(reducedMotion, localeConfig);
+      await reducedMotion.close();
+
+      const modifiedClick = await browser.newPage({viewport: {width: 1280, height: 800}});
+      await testModifiedClickIsNotIntercepted(modifiedClick, localeConfig);
+      await modifiedClick.close();
+
       const mobile = await browser.newPage({viewport: {width: 390, height: 844}});
       await testFooterNavigation(mobile, localeConfig);
+      await testSamePageFooterScroll(mobile, localeConfig);
       await mobile.close();
     }
   } finally {

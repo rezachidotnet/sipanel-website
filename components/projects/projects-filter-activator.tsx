@@ -2,7 +2,12 @@
 
 import {useEffect} from 'react';
 import {useSearchParams} from 'next/navigation';
-import {getProjectFilterHash, isProjectFilterKey, type ProjectFilterKey} from '@/lib/projects/project-filters';
+import {
+  getProjectFilterHash,
+  isProjectFilterKey,
+  projectFilterScrollStorageKey,
+  type ProjectFilterKey
+} from '@/lib/projects/project-filters';
 
 const filterInputPrefix = 'projects-filter-';
 
@@ -38,26 +43,54 @@ function syncUrlToFilter(filter: ProjectFilterKey) {
   window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
 }
 
+function shouldScrollAfterNavigation() {
+  try {
+    if (window.sessionStorage.getItem(projectFilterScrollStorageKey) !== '1') {
+      return false;
+    }
+
+    window.sessionStorage.removeItem(projectFilterScrollStorageKey);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function scrollProjectsPageToTop() {
+  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+  window.requestAnimationFrame(() => {
+    window.scrollTo({
+      top: 0,
+      behavior
+    });
+  });
+}
+
 export function ProjectsFilterActivator() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
     function activateFromUrl() {
+      const shouldScroll = shouldScrollAfterNavigation();
       const hashFilter = parseProjectFilterHash(window.location.hash);
 
       if (hashFilter === 'invalid') {
         activateFilter('all');
         removeProjectFilterHash();
+        if (shouldScroll) scrollProjectsPageToTop();
         return;
       }
 
       if (hashFilter) {
         activateFilter(hashFilter);
+        if (shouldScroll) scrollProjectsPageToTop();
         return;
       }
 
       const queryFilter = searchParams.get('filter');
       activateFilter(isProjectFilterKey(queryFilter) ? queryFilter : 'all');
+      if (shouldScroll) scrollProjectsPageToTop();
     }
 
     function handleChange(event: Event) {

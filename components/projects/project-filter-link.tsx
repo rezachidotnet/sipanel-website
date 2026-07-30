@@ -2,7 +2,12 @@
 
 import type {AnchorHTMLAttributes, MouseEvent, ReactNode} from 'react';
 import {Link} from '@/i18n/routing';
-import {getProjectFilterHref, getProjectFilterHash, type ProjectFilterKey} from '@/lib/projects/project-filters';
+import {
+  getProjectFilterHref,
+  getProjectFilterHash,
+  projectFilterScrollStorageKey,
+  type ProjectFilterKey
+} from '@/lib/projects/project-filters';
 
 type ProjectFilterLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & {
   children: ReactNode;
@@ -19,6 +24,27 @@ function normalizePathname(pathname: string) {
 
 function isModifiedClick(event: MouseEvent<HTMLAnchorElement>) {
   return event.button !== 0 || event.metaKey || event.altKey || event.ctrlKey || event.shiftKey;
+}
+
+function getScrollBehavior(): ScrollBehavior {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+}
+
+function scrollProjectsPageToTop() {
+  window.requestAnimationFrame(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: getScrollBehavior()
+    });
+  });
+}
+
+function requestPostNavigationScroll() {
+  try {
+    window.sessionStorage.setItem(projectFilterScrollStorageKey, '1');
+  } catch {
+    // Session storage may be unavailable in hardened browser contexts.
+  }
 }
 
 export function ProjectFilterLink({children, filter, onClick, target, ...props}: ProjectFilterLinkProps) {
@@ -43,6 +69,10 @@ export function ProjectFilterLink({children, filter, onClick, target, ...props}:
       destination.origin !== current.origin ||
       normalizePathname(destination.pathname) !== normalizePathname(current.pathname)
     ) {
+      if (destination.origin === current.origin) {
+        requestPostNavigationScroll();
+      }
+
       return;
     }
 
@@ -59,6 +89,7 @@ export function ProjectFilterLink({children, filter, onClick, target, ...props}:
     }
 
     window.dispatchEvent(new HashChangeEvent('hashchange', {oldURL: oldUrl, newURL: nextUrl.href}));
+    scrollProjectsPageToTop();
   }
 
   return (

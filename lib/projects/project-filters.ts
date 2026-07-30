@@ -8,6 +8,8 @@ export const projectFilterKeys = [
 
 export type ProjectFilterKey = (typeof projectFilterKeys)[number];
 
+export const projectFilterScrollStorageKey = 'sipanel:project-filter-scroll-top';
+
 export const selectableProjectFilterKeys = projectFilterKeys.filter(
   (filter) => filter !== 'all'
 ) as Exclude<ProjectFilterKey, 'all'>[];
