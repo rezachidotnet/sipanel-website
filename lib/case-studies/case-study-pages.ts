@@ -9,6 +9,7 @@ import {
   buildServiceSchema,
   buildWebPageSchema
 } from '@/lib/seo/schema';
+import armyHospitalHero from '@/assets/projects/army-hospital/photos/army-hospital-hero-desktop.webp';
 import shahrBabakHallCard from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-card.webp';
 import shahrBabakHallHero from '@/assets/projects/shahre-babak-hall/photos/shahre-babak-hall-hero-desktop.webp';
 import bazargolCard from '@/assets/projects/bazargol/photos/bazargol-card.webp';
@@ -1287,6 +1288,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     executionDetail: 'Execution followed a compressed 50-day schedule covering excavation, construction, sandwich panel cladding, internal partitioning, and installation to operational readiness.',
     measuredResult: 'A fully operational 32-bed military hospital was delivered from excavation to readiness in less than 50 days during the COVID-19 emergency.',
     riskPrevented: ['Schedule overrun beyond 50-day target', 'Coordination failures across EPC disciplines', 'Envelope weather protection delays', 'Internal partition installation bottlenecks'],
+    cardImage: armyHospitalHero,
     heroVideo: {
       src: '/videos/projects/army-hospital/army-hospital-case-study.mp4',
       poster: '/videos/projects/army-hospital/army-hospital-case-study-poster.jpg',

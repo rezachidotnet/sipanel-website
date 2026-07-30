@@ -9,6 +9,12 @@ const locales = ['fa', 'en', 'ar', 'ru'];
 const languageTags = {fa: 'fa-IR', en: 'en', ar: 'ar', ru: 'ru'};
 const htmlLangTags = {fa: 'fa', en: 'en', ar: 'ar', ru: 'ru'};
 const dirByLocale = {fa: 'rtl', en: 'ltr', ar: 'rtl', ru: 'ltr'};
+const armyHospitalTitles = {
+  fa: 'بیمارستان ۳۲ تختخوابی ارتش',
+  en: '32-Bed Military Hospital',
+  ar: 'مستشفى عسكري بسعة 32 سريرا',
+  ru: 'Военный госпиталь на 32 койки'
+};
 const focusedProjectSlugs = [
   'army-hospital',
   'mehrabad-aircraft-hangar',
@@ -16,6 +22,7 @@ const focusedProjectSlugs = [
   'kermanshah-industrial-university-petroleum-faculty',
   'mahshahr-taxi-parking'
 ];
+const priorityProjectSlugs = focusedProjectSlugs.filter((slug) => slug !== 'army-hospital');
 const armyReferenceSectionOrder = [
   'case_study_hero',
   'case_study_group',
@@ -28,6 +35,7 @@ const armyReferenceSectionOrder = [
   'related_case_studies',
   'conversion_cta'
 ];
+const checkedImageUrls = new Set();
 
 let server;
 
@@ -107,6 +115,10 @@ function anchorText(html) {
   return decodeHtml(html.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
 }
 
+function decodeAttribute(value) {
+  return decodeHtml(value).replace(/&#x2F;/g, '/');
+}
+
 function scriptRatio(text, pattern) {
   const letters = text.match(/\p{L}/gu) ?? [];
   if (letters.length === 0) return 0;
@@ -132,6 +144,18 @@ async function fetchHtml(path) {
   const response = await fetch(`${baseUrl}${path}`, {redirect: 'manual'});
   if (response.status !== 200) fail(`${path} expected HTTP 200, received ${response.status}`);
   return response.text();
+}
+
+async function assertImageUrlLoads(path, imageSrc) {
+  const decodedSrc = decodeAttribute(imageSrc);
+  const url = decodedSrc.startsWith('http') ? decodedSrc : `${baseUrl}${decodedSrc}`;
+  if (checkedImageUrls.has(url)) return;
+
+  const response = await fetch(url, {redirect: 'manual'});
+  if (response.status !== 200) fail(`${path} related-card image failed to load: ${url} returned ${response.status}`);
+  const contentType = response.headers.get('content-type') ?? '';
+  if (!contentType.startsWith('image/')) fail(`${path} related-card image is not an image: ${url} content-type ${contentType || 'missing'}`);
+  checkedImageUrls.add(url);
 }
 
 function assertCanonical(path, html) {
@@ -233,6 +257,59 @@ function assertRelatedCaseStudyLinks(path, locale, html) {
   }
 }
 
+async function assertRelatedCaseStudyImages(path, html, {required = true} = {}) {
+  const section = html.match(/<section[^>]*data-section=["']related_case_studies["'][\s\S]*?<\/section>/i)?.[0] ?? '';
+  if (!section) {
+    if (required) fail(`${path} missing related case studies section`);
+    return;
+  }
+
+  const cards = [...section.matchAll(/<article\b[^>]*class=["'][^"']*case-study-related-card[^"']*["'][^>]*>([\s\S]*?)<\/article>/gi)];
+  if (cards.length === 0) {
+    if (required) fail(`${path} has no related case-study cards`);
+    return;
+  }
+
+  for (const card of cards) {
+    const cardHtml = card[1];
+    const title = anchorText(cardHtml.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1] ?? '');
+    const href = cardHtml.match(/<a\b[^>]*href=["']([^"']+)["']/i)?.[1] ?? '';
+    const image = cardHtml.match(/<img\b[^>]*src=["']([^"']+)["'][^>]*>/i);
+    if (!image) fail(`${path} related card "${title || href || 'unknown'}" is missing an image`);
+    await assertImageUrlLoads(path, image[1]);
+  }
+}
+
+async function assertResourceProjectCardImages(path, html) {
+  const cards = [...html.matchAll(/<a\b[^>]*class=["'][^"']*resource-project-card[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi)];
+  for (const card of cards) {
+    const cardHtml = card[1];
+    const title = anchorText(cardHtml.match(/class=["'][^"']*resource-project-card__name[^"']*["'][^>]*>([\s\S]*?)<\/span>/i)?.[1] ?? '');
+    const image = cardHtml.match(/<img\b[^>]*src=["']([^"']+)["'][^>]*>/i);
+    if (!image) fail(`${path} resource project card "${title || 'unknown'}" is missing an image`);
+    await assertImageUrlLoads(path, image[1]);
+  }
+}
+
+async function assertArmyHospitalRelatedCard(path, locale, html) {
+  const section = html.match(/<section[^>]*data-section=["']related_case_studies["'][\s\S]*?<\/section>/i)?.[0] ?? '';
+  const expectedHref = localizedPath(locale, '/projects/army-hospital');
+  const cards = [...section.matchAll(/<article\b[^>]*class=["'][^"']*case-study-related-card[^"']*["'][^>]*>([\s\S]*?)<\/article>/gi)];
+  const card = cards.map((match) => match[1]).find((cardHtml) => new RegExp(`href=["']${expectedHref.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`).test(cardHtml));
+  if (!card) fail(`${path} missing Army Hospital related card linking to ${expectedHref}`);
+
+  const image = card.match(/<img\b([^>]*)>/i)?.[1] ?? '';
+  if (!image) fail(`${path} Army Hospital related card is missing an image`);
+
+  const alt = decodeAttribute(image.match(/\salt=["']([^"']+)["']/i)?.[1] ?? '');
+  if (!alt.includes(armyHospitalTitles[locale])) {
+    fail(`${path} Army Hospital related-card alt text is not localized: ${alt || 'missing'}`);
+  }
+
+  const src = image.match(/\ssrc=["']([^"']+)["']/i)?.[1] ?? '';
+  await assertImageUrlLoads(path, src);
+}
+
 async function assertProjectPages() {
   for (const slug of focusedProjectSlugs) {
     for (const locale of locales) {
@@ -246,6 +323,10 @@ async function assertProjectPages() {
       assertLocalizedProjectMetadata(path, locale, html);
       assertLocalizedSchema(path, locale, html);
       assertRelatedCaseStudyLinks(path, locale, html);
+      await assertRelatedCaseStudyImages(path, html);
+      if (priorityProjectSlugs.includes(slug)) {
+        await assertArmyHospitalRelatedCard(path, locale, html);
+      }
 
       if (locale !== 'en' && getHead(html).includes('placeholder case study')) {
         fail(`${path} metadata still contains English placeholder copy`);
@@ -268,6 +349,8 @@ async function assertInternalLinks() {
     const html = await fetchHtml(path);
     assertNoLegacyPersianLinks(path, html);
     assertVisibleLanguage(path, locale, html);
+    await assertRelatedCaseStudyImages(path, html, {required: false});
+    await assertResourceProjectCardImages(path, html);
 
     for (const match of html.matchAll(/<a\b([^>]*?)href=["']([^"']+)["']([^>]*)>([\s\S]*?)<\/a>/gi)) {
       let href = match[2];
