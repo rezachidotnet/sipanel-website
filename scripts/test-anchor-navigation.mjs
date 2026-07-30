@@ -47,6 +47,11 @@ function linkLocator(page, href) {
   return page.locator(`footer a.site-footer__link[href="${href}"]`).first();
 }
 
+async function gotoRoute(page, path, processHref) {
+  await page.goto(`${baseUrl}${path}`, {waitUntil: 'domcontentloaded'});
+  await linkLocator(page, processHref).waitFor({state: 'attached', timeout: 10_000});
+}
+
 function normalizePathname(pathname) {
   if (pathname.length > 1 && pathname.endsWith('/')) {
     return pathname.slice(0, -1);
@@ -120,7 +125,7 @@ async function runAnchorTests() {
       for (const {locale, home, other, processHref} of locales) {
         const page = await browser.newPage({viewport: {width: viewport.width, height: viewport.height}});
 
-        await page.goto(`${baseUrl}${home}`, {waitUntil: 'networkidle'});
+        await gotoRoute(page, home, processHref);
         const initialHref = await linkLocator(page, processHref).getAttribute('href');
         if (initialHref !== processHref) {
           fail(`${viewport.name} ${locale}: footer Process href mismatch, expected ${processHref}, received ${initialHref}`);
@@ -141,7 +146,7 @@ async function runAnchorTests() {
         await pressFooterProcess(page, processHref);
         await expectProcessVisible(page, `${viewport.name} ${locale} keyboard footer click`);
 
-        await page.goto(`${baseUrl}${other}`, {waitUntil: 'networkidle'});
+        await gotoRoute(page, other, processHref);
         await clickFooterProcess(page, processHref);
         await expectProcessVisible(page, `${viewport.name} ${locale} navigation from another page`);
       const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
