@@ -47,6 +47,14 @@ function linkLocator(page, href) {
   return page.locator(`footer a.site-footer__link[href="${href}"]`).first();
 }
 
+function normalizePathname(pathname) {
+  if (pathname.length > 1 && pathname.endsWith('/')) {
+    return pathname.slice(0, -1);
+  }
+
+  return pathname;
+}
+
 async function processPosition(page) {
   return page.evaluate(() => {
     const section = document.getElementById('process');
@@ -136,17 +144,17 @@ async function runAnchorTests() {
         await page.goto(`${baseUrl}${other}`, {waitUntil: 'networkidle'});
         await clickFooterProcess(page, processHref);
         await expectProcessVisible(page, `${viewport.name} ${locale} navigation from another page`);
-        const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
-        const position = await processPosition(page);
-        if (position.pathname !== expectedPathname) {
-          fail(`${viewport.name} ${locale}: expected pathname ${expectedPathname}, received ${position.pathname}`);
-        }
+      const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
+      const position = await processPosition(page);
+      if (normalizePathname(position.pathname) !== normalizePathname(expectedPathname)) {
+        fail(`${viewport.name} ${locale}: expected pathname ${expectedPathname}, received ${position.pathname}`);
+      }
 
-        await page.goBack({waitUntil: 'networkidle'});
-        const backPathname = new URL(page.url()).pathname;
-        if (backPathname !== other) {
-          fail(`${viewport.name} ${locale}: browser back did not return to ${other}, received ${backPathname}`);
-        }
+      await page.goBack({waitUntil: 'networkidle'});
+      const backPathname = new URL(page.url()).pathname;
+      if (normalizePathname(backPathname) !== normalizePathname(other)) {
+        fail(`${viewport.name} ${locale}: browser back did not return to ${other}, received ${backPathname}`);
+      }
 
         await page.close();
       }

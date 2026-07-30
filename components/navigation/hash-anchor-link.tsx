@@ -61,12 +61,18 @@ export function HashAnchorLink({href, onClick, target, ...props}: HashAnchorLink
     const destination = new URL(rawHref, window.location.href);
     const current = new URL(window.location.href);
     const targetId = getHashTarget(destination.hash);
+    const nextUrl = `${destination.pathname}${destination.search}${destination.hash}`;
 
     if (
       !targetId ||
-      destination.origin !== current.origin ||
-      normalizePathname(destination.pathname) !== normalizePathname(current.pathname)
+      destination.origin !== current.origin
     ) {
+      return;
+    }
+
+    if (normalizePathname(destination.pathname) !== normalizePathname(current.pathname)) {
+      event.preventDefault();
+      window.location.assign(nextUrl);
       return;
     }
 
@@ -76,7 +82,6 @@ export function HashAnchorLink({href, onClick, target, ...props}: HashAnchorLink
     event.preventDefault();
     scrollToHashTarget(targetElement);
 
-    const nextUrl = `${destination.pathname}${destination.search}${destination.hash}`;
     if (current.hash === destination.hash) {
       window.history.replaceState(window.history.state, '', nextUrl);
     } else {
