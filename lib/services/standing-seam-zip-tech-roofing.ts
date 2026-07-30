@@ -723,46 +723,49 @@ function getRelatedCaseStudies(locale: Locale) {
 
   return [
     {
-      projectName: isFa ? 'سالن انتظار فرودگاه اهواز'
-        : isAr ? 'صالة المسافرين في مطار الأهواز'
+      projectName: isFa ? 'ترمینال مسافری فرودگاه اهواز'
+        : isAr ? 'محطة الركاب في مطار الأهواز'
         : isRu ? 'Пассажирский терминал аэропорта Ахваз'
         : 'Ahvaz Airport Passenger Terminal',
       location: isFa ? 'اهواز، ایران' : isAr ? 'الأهواز، إيران' : isRu ? 'Ахваз, Иран' : 'Ahvaz, Iran',
       areaM2: '4,000 m²',
-      projectType: isFa ? 'سالن انتظار فرودگاه' : isAr ? 'صالة مسافرين' : isRu ? 'Пассажирский терминал аэропорта' : 'Airport Passenger Terminal',
+      projectType: isFa ? 'ترمینال مسافری فرودگاه' : isAr ? 'محطة ركاب في المطار' : isRu ? 'Пассажирский терминал аэропорта' : 'Airport Passenger Terminal',
       challenge: isFa
-        ? 'نمای خمیده معماری فرودگاه نیازمند خم‌کاری عمود پنل ZIP-TECH، کنترل هندسی فرم منحنی و هماهنگی دقیق بین زیرسازه، پنل آلومینیومی و سیستم سقف بود.'
+        ? 'فرم منحنی نمای اصلی ترمینال نیازمند خم‌کاری پوشش در جهت عمود، کنترل هندسه، تراز زیرسازی، چیدمان پنل‌های آلومینیومی و هماهنگی انتقال‌های ZIP-TECH بود.'
         : isAr
-        ? 'تطلبت الواجهة المعمارية المنحنية للمطار ثني عمودي لألواح ZIP-TECH وتحكماً هندسياً في الشكل المنحني وتنسيقاً دقيقاً بين البنية التحتية والألواح.'
+        ? 'تطلّبت الواجهة المنحنية لمحطة الركاب ثني الغطاء باتجاه عمودي، وضبط الهندسة، ومحاذاة البنية الحاملة، وتخطيط ألواح الألمنيوم، وتنسيق انتقالات ZIP-TECH.'
         : isRu
-        ? 'Изогнутый архитектурный фасад аэропорта потребовал перпендикулярного гиба панелей ZIP-TECH, геометрического контроля криволинейной формы и точной координации между подконструкцией и панелями.'
-        : 'Curved front architectural feature required perpendicular ZIP-TECH panel bending, geometric control of the curved form, and precise coordination between substructure and panels.',
+        ? 'Криволинейный фасад пассажирского терминала потребовал поперечного изгиба покрытия, контроля геометрии, выравнивания подсистемы, раскладки алюминиевых панелей и координации переходов ZIP-TECH.'
+        : 'The curved passenger-terminal frontage required perpendicular bending of the covering, geometry control, substructure alignment, aluminium panel layout, and coordination of ZIP-TECH transitions.',
       measuredResult: isFa
-        ? 'اجرای موفق ۴,۰۰۰ مترمربع ZIP-TECH و نمای آلومینیومی با حفظ فرم معماری منحنی و کیفیت نهایی.'
+        ? 'اجرای ۴٬۰۰۰ مترمربع سقف ZIP-TECH و نمای آلومینیومی با حفظ فرم منحنی و پیوستگی بصری کنترل‌شده تکمیل شد.'
         : isAr
-        ? 'تنفيذ ناجح لـ 4,000 م² من ZIP-TECH والكسوة الألومنيومية مع الحفاظ على الشكل المعماري المنحني والجودة النهائية.'
+        ? 'تم تنفيذ ٤٬٠٠٠ م² من تسقيف ZIP-TECH والكسوة الألمنيومية مع الحفاظ على الشكل المنحني والاستمرارية البصرية المنضبطة.'
         : isRu
-        ? 'Успешное выполнение 4 000 м² ZIP-TECH и алюминиевой облицовки с сохранением криволинейной архитектурной формы и финального качества.'
-        : 'Successful execution of 4,000 m² ZIP-TECH and aluminium cladding while preserving the curved architectural form and final visual quality.',
+        ? 'Выполнено 4 000 м² кровли ZIP-TECH и алюминиевой облицовки с сохранением криволинейной формы и контролируемой визуальной непрерывности.'
+        : '4,000 m² of ZIP-TECH roofing and aluminium cladding were completed while preserving the curved form and controlled visual continuity.',
       href: getLocalizedPath(locale, '/projects/ahvaz-airport-passenger-terminal'),
       image: ahvazAirportCard
     },
     {
-      projectName: 'Megapars Mall Atrium',
+      projectName: isFa ? 'آتریوم مگاپارس مال'
+        : isAr ? 'أتريوم ميغابارس مول'
+        : isRu ? 'Атриум Megapars Mall'
+        : 'Megapars Mall Atrium',
       location: isFa ? 'ایران' : isAr ? 'إيران' : isRu ? 'Иран' : 'Iran',
       areaM2: '4,500 m²',
       projectType: isFa ? 'سقف آتریوم تجاری' : isAr ? 'تسقيف أتريوم تجاري' : isRu ? 'Кровля коммерческого атриума' : 'Atrium roofing structure',
       challenge: isFa
-        ? 'سقف آتریوم تجاری دهانه بزرگ نیازمند هماهنگی پنل ZIP منحنی، تداوم آب‌بندی، کنترل انبساط حرارتی و یکپارچگی معماری بود.'
+        ? 'سقف دهانه‌بلند آتریوم تجاری نیازمند هماهنگی پنل‌های منحنی ZIP، تداوم آب‌بندی، کنترل حرکت حرارتی و یکپارچگی معماری بود.'
         : isAr
-        ? 'تطلب سقف الأتريوم التجاري الكبير تنسيق ألواح ZIP المنحنية واستمرارية العزل المائي والتحكم في التمدد الحراري والتكامل المعماري.'
+        ? 'تطلّب سقف الأتريوم التجاري واسع البحر تنسيق ألواح ZIP المنحنية، واستمرارية العزل المائي، وضبط الحركة الحرارية، والتكامل المعماري.'
         : isRu
         ? 'Кровля большепролётного коммерческого атриума потребовала координации криволинейных ZIP-панелей, непрерывности гидроизоляции, контроля теплового расширения и архитектурной интеграции.'
         : 'Large-span commercial atrium roof required curved ZIP panel coordination, waterproofing integrity, thermal movement control, and architectural integration.',
       measuredResult: isFa
-        ? 'سقف آتریوم با آب‌بندی قابل‌اتکا، اجرای دقیق استندینگ سیم و کنترل کیفیت نصب دهانه بزرگ تحویل شد.'
+        ? 'سقف آتریوم با آب‌بندی قابل‌اتکا، اجرای دقیق سیستم استندینگ سیم و کیفیت کنترل‌شده نصب در دهانه بزرگ تحویل شد.'
         : isAr
-        ? 'تم تسليم سقف الأتريوم مع عزل مائي موثوق وتنفيذ دقيق لنظام ستاندينغ سيم وضبط جودة التركيب على المدى الكبير.'
+        ? 'تم تسليم سقف الأتريوم بعزل مائي موثوق، وتنفيذ دقيق لنظام ستاندينغ سيم، وجودة تركيب منضبطة على امتداد البحر الكبير.'
         : isRu
         ? 'Кровля атриума сдана с надёжной гидроизоляцией, точным монтажом фальцевой системы и контролем качества на большом пролёте.'
         : 'Atrium roof delivered with reliable waterproofing, precise standing seam execution, and controlled long-span installation quality.',
@@ -770,23 +773,26 @@ function getRelatedCaseStudies(locale: Locale) {
       image: megaparsCard
     },
     {
-      projectName: 'Shahr Babak Wrestling Hall',
-      location: isFa ? 'شهر بابک، کرمان، ایران' : isAr ? 'شهر بابك، كرمان، إيران' : isRu ? 'Шахр Бабак, Керман, Иран' : 'Shahr Babak, Kerman, Iran',
+      projectName: isFa ? 'سالن کشتی شهربابک'
+        : isAr ? 'قاعة المصارعة في شهر بابك'
+        : isRu ? 'Зал борьбы в Шахр-Бабеке'
+        : 'Shahr Babak Wrestling Hall',
+      location: isFa ? 'شهربابک، کرمان، ایران' : isAr ? 'شهر بابك، كرمان، إيران' : isRu ? 'Шахр-Бабек, Керман, Иран' : 'Shahr Babak, Kerman, Iran',
       areaM2: '900 m²',
-      projectType: isFa ? 'مجموعه ورزشی چند گنبدی' : isAr ? 'مجمع رياضي متعدد القباب' : isRu ? 'Многокупольный спортивный комплекс' : 'Multi-dome wrestling sports complex',
+      projectType: isFa ? 'مجموعه ورزشی کشتی چندگنبدی' : isAr ? 'مجمع رياضي للمصارعة متعدد القباب' : isRu ? 'Многокупольный спортивный комплекс для борьбы' : 'Multi-dome wrestling sports complex',
       challenge: isFa
-        ? 'سالن‌های ورزشی گنبدی‌شکل نیازمند هماهنگی پنل ZIP منحنی، تراز سازه‌ای، تداوم آب‌بندی و تمامیت ظاهری سقف بودند.'
+        ? 'سالن‌های کشتی گنبدی‌شکل نیازمند هماهنگی پنل‌های منحنی ZIP، تراز سازه، تداوم آب‌بندی و یکپارچگی بصری سقف بودند.'
         : isAr
-        ? 'تطلبت صالات المصارعة ذات القباب تنسيق ألواح ZIP المنحنية ومحاذاة هيكلية واستمرارية العزل المائي وتشطيب سقف متناسق.'
+        ? 'تطلّبت قاعات المصارعة المقببة تنسيق ألواح ZIP المنحنية، ومحاذاة الهيكل، واستمرارية العزل المائي، وتشطيباً بصرياً متناسقاً للسقف.'
         : isRu
-        ? 'Купольные спортивные залы потребовали координации криволинейных ZIP-панелей, конструктивного выравнивания, непрерывности гидроизоляции и визуальной однородности кровли.'
+        ? 'Купольные залы борьбы потребовали координации криволинейных ZIP-панелей, выравнивания конструкции, непрерывности гидроизоляции и визуальной однородности кровли.'
         : 'Multiple dome-shaped sports halls required curved ZIP panel coordination, structural alignment, waterproofing continuity, and visually consistent roof finishing.',
       measuredResult: isFa
         ? 'سه سالن کشتی گنبدی‌شکل با عملکرد قابل‌اتکای سقف ZIP و کیفیت کنترل‌شده نصب تحویل شد.'
         : isAr
-        ? 'تم تسليم ثلاث صالات مصارعة ذات قباب مع أداء موثوق لسقف ZIP وجودة تركيب منضبطة.'
+        ? 'تم تسليم ثلاث قاعات مصارعة مقببة بأداء موثوق لسقف ZIP وجودة تركيب منضبطة.'
         : isRu
-        ? 'Три купольных борцовских зала сданы с надёжной работой ZIP-кровли и контролируемым качеством монтажа.'
+        ? 'Три купольных зала борьбы сданы с надёжной работой ZIP-кровли и контролируемым качеством монтажа.'
         : 'Three structurally coordinated dome-shaped wrestling halls delivered with reliable ZIP panel roof performance and controlled installation quality.',
       href: getLocalizedPath(locale, '/projects/shahre-babak-hall'),
       image: shahrBabakHallCard
