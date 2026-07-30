@@ -8,6 +8,7 @@ import {notFound} from 'next/navigation';
 import {Footer} from '@/components/layout/footer';
 import {Header} from '@/components/layout/header';
 import {LocaleRuntime} from '@/components/localization/locale-runtime';
+import {HashScrollManager} from '@/components/navigation/hash-scroll-manager';
 import {getDirection, getLocalizedPath, locales, type Locale} from '@/i18n/routing';
 import {buildPageMetadata, getSiteBaseUrl} from '@/lib/seo/metadata';
 import '../globals.css';
@@ -164,6 +165,7 @@ export default async function LocaleLayout({children, params}: Props) {
       <body className={localeFontClass}>
         <NextIntlClientProvider messages={messages}>
           <LocaleRuntime locale={validLocale} dir={dir} />
+          <HashScrollManager />
           <Header locale={validLocale} />
           <main>{children}</main>
           <Footer />

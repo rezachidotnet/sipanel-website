@@ -11,6 +11,10 @@ const locales = [
   {locale: 'ar', home: '/ar', other: '/ar/projects', processHref: '/ar/#process'},
   {locale: 'ru', home: '/ru', other: '/ru/projects', processHref: '/ru/#process'}
 ];
+const viewports = [
+  {name: 'desktop', width: 1280, height: 800},
+  {name: 'mobile', width: 390, height: 844}
+];
 
 let server;
 
@@ -104,46 +108,48 @@ async function runAnchorTests() {
   const browser = await chromium.launch({headless: true});
 
   try {
-    for (const {locale, home, other, processHref} of locales) {
-      const page = await browser.newPage({viewport: {width: 1280, height: 800}});
+    for (const viewport of viewports) {
+      for (const {locale, home, other, processHref} of locales) {
+        const page = await browser.newPage({viewport: {width: viewport.width, height: viewport.height}});
 
-      await page.goto(`${baseUrl}${home}`, {waitUntil: 'networkidle'});
-      const initialHref = await linkLocator(page, processHref).getAttribute('href');
-      if (initialHref !== processHref) {
-        fail(`${locale}: footer Process href mismatch, expected ${processHref}, received ${initialHref}`);
+        await page.goto(`${baseUrl}${home}`, {waitUntil: 'networkidle'});
+        const initialHref = await linkLocator(page, processHref).getAttribute('href');
+        if (initialHref !== processHref) {
+          fail(`${viewport.name} ${locale}: footer Process href mismatch, expected ${processHref}, received ${initialHref}`);
+        }
+
+        await clickFooterProcess(page, processHref);
+        await expectProcessVisible(page, `${viewport.name} ${locale} first homepage footer click`);
+
+        await linkLocator(page, processHref).scrollIntoViewIfNeeded();
+        const beforeRepeat = await processPosition(page);
+        await clickFooterProcess(page, processHref);
+        const afterRepeat = await expectProcessVisible(page, `${viewport.name} ${locale} repeated homepage footer click`);
+        if (afterRepeat.scrollY === beforeRepeat.scrollY) {
+          fail(`${viewport.name} ${locale}: repeated Process click did not change scroll position after scrolling away`);
+        }
+
+        await linkLocator(page, processHref).scrollIntoViewIfNeeded();
+        await pressFooterProcess(page, processHref);
+        await expectProcessVisible(page, `${viewport.name} ${locale} keyboard footer click`);
+
+        await page.goto(`${baseUrl}${other}`, {waitUntil: 'networkidle'});
+        await clickFooterProcess(page, processHref);
+        await expectProcessVisible(page, `${viewport.name} ${locale} navigation from another page`);
+        const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
+        const position = await processPosition(page);
+        if (position.pathname !== expectedPathname) {
+          fail(`${viewport.name} ${locale}: expected pathname ${expectedPathname}, received ${position.pathname}`);
+        }
+
+        await page.goBack({waitUntil: 'networkidle'});
+        const backPathname = new URL(page.url()).pathname;
+        if (backPathname !== other) {
+          fail(`${viewport.name} ${locale}: browser back did not return to ${other}, received ${backPathname}`);
+        }
+
+        await page.close();
       }
-
-      await clickFooterProcess(page, processHref);
-      await expectProcessVisible(page, `${locale} first homepage footer click`);
-
-      await linkLocator(page, processHref).scrollIntoViewIfNeeded();
-      const beforeRepeat = await processPosition(page);
-      await clickFooterProcess(page, processHref);
-      const afterRepeat = await expectProcessVisible(page, `${locale} repeated homepage footer click`);
-      if (afterRepeat.scrollY === beforeRepeat.scrollY) {
-        fail(`${locale}: repeated Process click did not change scroll position after scrolling away`);
-      }
-
-      await linkLocator(page, processHref).scrollIntoViewIfNeeded();
-      await pressFooterProcess(page, processHref);
-      await expectProcessVisible(page, `${locale} keyboard footer click`);
-
-      await page.goto(`${baseUrl}${other}`, {waitUntil: 'networkidle'});
-      await clickFooterProcess(page, processHref);
-      await expectProcessVisible(page, `${locale} navigation from another page`);
-      const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
-      const position = await processPosition(page);
-      if (position.pathname !== expectedPathname) {
-        fail(`${locale}: expected pathname ${expectedPathname}, received ${position.pathname}`);
-      }
-
-      await page.goBack({waitUntil: 'networkidle'});
-      const backPathname = new URL(page.url()).pathname;
-      if (backPathname !== other) {
-        fail(`${locale}: browser back did not return to ${other}, received ${backPathname}`);
-      }
-
-      await page.close();
     }
   } finally {
     await browser.close();

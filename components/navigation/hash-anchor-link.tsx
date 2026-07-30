@@ -29,6 +29,22 @@ function isModifiedClick(event: MouseEvent<HTMLAnchorElement>) {
   return event.button !== 0 || event.metaKey || event.altKey || event.ctrlKey || event.shiftKey;
 }
 
+function getStickyHeaderOffset() {
+  const header = document.querySelector<HTMLElement>('.site-header');
+  const headerHeight = header?.getBoundingClientRect().height ?? 0;
+
+  return headerHeight + 16;
+}
+
+export function scrollToHashTarget(targetElement: HTMLElement, behavior: ScrollBehavior = 'smooth') {
+  const top = targetElement.getBoundingClientRect().top + window.scrollY - getStickyHeaderOffset();
+
+  window.scrollTo({
+    top: Math.max(0, top),
+    behavior
+  });
+}
+
 export function HashAnchorLink({href, onClick, target, ...props}: HashAnchorLinkProps) {
   function handleClick(event: MouseEvent<HTMLAnchorElement>) {
     onClick?.(event);
@@ -58,7 +74,7 @@ export function HashAnchorLink({href, onClick, target, ...props}: HashAnchorLink
     if (!targetElement) return;
 
     event.preventDefault();
-    targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+    scrollToHashTarget(targetElement);
 
     const nextUrl = `${destination.pathname}${destination.search}${destination.hash}`;
     if (current.hash === destination.hash) {
