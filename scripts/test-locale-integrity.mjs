@@ -184,6 +184,8 @@ async function assertInternalLinks() {
   for (const path of paths) {
     const locale = localeOfPath(path);
     const html = await fetchHtml(path);
+    assertNoLegacyPersianLinks(path, html);
+    assertVisibleLanguage(path, locale, html);
 
     for (const match of html.matchAll(/<a\b([^>]*?)href=["']([^"']+)["']([^>]*)>([\s\S]*?)<\/a>/gi)) {
       let href = match[2];
@@ -236,4 +238,3 @@ run()
   .finally(() => {
     if (server) server.kill('SIGTERM');
   });
-
