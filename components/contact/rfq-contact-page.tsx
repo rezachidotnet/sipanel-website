@@ -11,6 +11,7 @@ import type {Locale} from '@/i18n/routing';
 import {getDirection} from '@/i18n/routing';
 import type {ProductionContactInfo, RfqContactSection} from '@/lib/contact/rfq-contact-page';
 import {rfqAllowedFileExtensions, rfqApiEndpoint, rfqMaxFileSizeBytes} from '@/lib/rfq/constants';
+import {isConfirmedRfqDelivery, type LeadApiResponse} from '@/lib/rfq/lead-response';
 import {trackContactClick, trackEvent, trackRfqEvent} from '@/lib/analytics/events';
 import contactTrustImg from '@/assets/contact/contact-trust-image.webp';
 import contactTrustMobileImg from '@/assets/contact/contact-trust-image-mobile.webp';
@@ -322,9 +323,9 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
         method: 'POST',
         body: formData
       });
-      const result = (await response.json()) as {ok?: boolean};
+      const result = (await response.json()) as LeadApiResponse;
 
-      if (!response.ok || !result.ok) {
+      if (!response.ok || !isConfirmedRfqDelivery(result)) {
         throw new Error('RFQ_SUBMISSION_FAILED');
       }
 

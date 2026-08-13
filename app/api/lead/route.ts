@@ -196,12 +196,24 @@ export async function POST(request: NextRequest) {
     // Create Odoo CRM lead
     const odooLead = await createOdooCrmLead(payload, submissionId, storedUpload);
 
+    if (!odooLead.delivered) {
+      throw new Error(odooLead.configured ? 'ODOO_LEAD_NOT_DELIVERED' : 'ODOO_NOT_CONFIGURED');
+    }
+
     return NextResponse.json({
       ok: true,
       message: 'Your request has been received.',
       submissionId,
       notificationConfigured,
-      odooConfigured: odooLead.configured
+      odooConfigured: odooLead.configured,
+      lead: {
+        provider: 'odoo',
+        delivered: true
+      },
+      crm: {
+        provider: 'odoo',
+        delivered: true
+      }
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'UNKNOWN_ERROR';

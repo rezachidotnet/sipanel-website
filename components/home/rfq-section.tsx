@@ -6,6 +6,7 @@ import {useForm, type FieldErrors, type Resolver} from 'react-hook-form';
 import {LtrText} from '@/components/bidi/ltr-text';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {rfqApiEndpoint} from '@/lib/rfq/constants';
+import {isConfirmedRfqDelivery, type LeadApiResponse} from '@/lib/rfq/lead-response';
 import {trackContactClick, trackRfqEvent} from '@/lib/analytics/events';
 
 const projectTypes = [
@@ -133,9 +134,9 @@ export function RfqSection() {
         method: 'POST',
         body: formData
       });
-      const result = (await response.json()) as {ok?: boolean};
+      const result = (await response.json()) as LeadApiResponse;
 
-      if (!response.ok || !result.ok) {
+      if (!response.ok || !isConfirmedRfqDelivery(result)) {
         throw new Error('RFQ_SUBMISSION_FAILED');
       }
 

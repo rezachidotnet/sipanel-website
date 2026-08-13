@@ -20,6 +20,7 @@ type OdooJsonRpcResponse<T> = {
 
 export type OdooLeadResult = {
   configured: boolean;
+  delivered: boolean;
   leadId?: number;
 };
 
@@ -159,7 +160,7 @@ export async function createOdooCrmLead(
   const config = getOdooConfig();
 
   if (!config) {
-    return {configured: false};
+    return {configured: false, delivered: false};
   }
 
   const uid = await odooJsonRpc<number>(config, 'common', 'login', [config.db, config.username, config.password]);
@@ -204,5 +205,9 @@ export async function createOdooCrmLead(
     [leadValues]
   ]);
 
-  return {configured: true, leadId};
+  if (!Number.isInteger(leadId) || leadId <= 0) {
+    throw new Error('ODOO_LEAD_NOT_CREATED');
+  }
+
+  return {configured: true, delivered: true, leadId};
 }
