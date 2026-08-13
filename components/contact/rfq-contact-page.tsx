@@ -373,6 +373,8 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
               <a
                 className="button-secondary"
                 href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 data-analytics-event="whatsapp_click"
                 data-analytics-owner="application"
                 data-analytics-component="contact_hero"
@@ -420,11 +422,18 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                       as="a"
                       className="contact-option-card__value"
                       href={href}
+                      target={card.type === 'whatsapp' ? '_blank' : undefined}
+                      rel={card.type === 'whatsapp' ? 'noopener noreferrer' : undefined}
                       data-analytics-event={analyticsEvent}
-                      data-analytics-owner="unassigned"
+                      data-analytics-owner="application"
                       data-analytics-component={`contact_option_${card.type}`}
                       data-analytics-location="contact_options"
                       data-analytics-label="value"
+                      onClick={() => {
+                        if (card.type === 'phone' || card.type === 'whatsapp' || card.type === 'email') {
+                          trackContactClick(card.type, `contact_option_${card.type}_value`);
+                        }
+                      }}
                     >
                       {value}
                     </LtrText>
@@ -440,6 +449,8 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
                       {/* track: email_click */}
                       <a
                         href={href}
+                        target={card.type === 'whatsapp' ? '_blank' : undefined}
+                        rel={card.type === 'whatsapp' ? 'noopener noreferrer' : undefined}
                         data-analytics-event={analyticsEvent}
                         data-analytics-owner="application"
                         data-analytics-component={`contact_option_${card.type}`}
@@ -724,11 +735,14 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
         {/* track: whatsapp_click */}
         <a
           href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+          target="_blank"
+          rel="noopener noreferrer"
           data-analytics-event="whatsapp_click"
-          data-analytics-owner="unassigned"
+          data-analytics-owner="application"
           data-analytics-component="contact_sticky_cta"
           data-analytics-location="contact_page"
           data-analytics-label="whatsapp"
+          onClick={() => trackContactClick('whatsapp', 'contact_sticky_cta')}
         >
           {t('contactLabels.whatsapp')}
         </a>

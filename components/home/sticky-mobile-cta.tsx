@@ -118,6 +118,8 @@ export function StickyMobileCta() {
       <a
         className="sticky-mobile-cta__secondary"
         href={whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
         data-analytics-event="whatsapp_click"
         data-analytics-owner="application"
         data-analytics-component="sticky_mobile_cta"

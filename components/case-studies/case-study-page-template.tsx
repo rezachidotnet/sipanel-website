@@ -5,7 +5,7 @@ import Image from 'next/image';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
-import {trackCaseStudyEvent, trackProofEvent} from '@/lib/analytics/events';
+import {trackCaseStudyEvent, trackContactClick, trackProofEvent} from '@/lib/analytics/events';
 import {
   buildCaseStudyArticleSchema,
   buildCaseStudyBreadcrumbSchema,
@@ -658,11 +658,14 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                 <a
                   href={whatsappHref}
                   className="button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-analytics-event="whatsapp_click"
-                  data-analytics-owner="unassigned"
+                  data-analytics-owner="application"
                   data-analytics-component="case_study_conversion_cta"
                   data-analytics-location="case_study_page"
                   data-analytics-label="whatsapp"
+                  onClick={() => trackContactClick('whatsapp', 'case_study_conversion_cta')}
                 >
                   {content.conversionCta.secondaryCta}
                 </a>
@@ -679,10 +682,11 @@ export function CaseStudyPageTemplate({locale, page}: Props) {
                   href={phoneHref}
                   className="button-secondary"
                   data-analytics-event="phone_click"
-                  data-analytics-owner="unassigned"
+                  data-analytics-owner="application"
                   data-analytics-component="case_study_conversion_cta"
                   data-analytics-location="case_study_page"
                   data-analytics-label="phone"
+                  onClick={() => trackContactClick('phone', 'case_study_conversion_cta')}
                 >
                   {labels.phone}
                 </a>

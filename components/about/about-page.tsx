@@ -9,6 +9,7 @@ import {
   type AboutLocaleContent,
   type AboutPageData
 } from '@/lib/about/about-page';
+import {trackContactClick} from '@/lib/analytics/events';
 import leadershipPhoto from '@/assets/about/leadership/am-taleghani.webp';
 import fazasazehImg from '@/assets/about/fazasazeh.jpg';
 
@@ -211,11 +212,14 @@ function FinalCTASection({content, page}: {content: AboutLocaleContent; page: Ab
           <a
             className="button-secondary"
             href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             data-analytics-event="whatsapp_click"
-            data-analytics-owner="unassigned"
+            data-analytics-owner="application"
             data-analytics-component="about_conversion_cta"
             data-analytics-location="about_page"
             data-analytics-label="whatsapp"
+            onClick={() => trackContactClick('whatsapp', 'about_conversion_cta')}
           >
             {content.conversionCta.secondaryCta}
           </a>
@@ -224,10 +228,11 @@ function FinalCTASection({content, page}: {content: AboutLocaleContent; page: Ab
             className="button-secondary"
             href={`tel:${page.contact.phone.replace(/\s/g, '')}`}
             data-analytics-event="phone_click"
-            data-analytics-owner="unassigned"
+            data-analytics-owner="application"
             data-analytics-component="about_conversion_cta"
             data-analytics-location="about_page"
             data-analytics-label="phone"
+            onClick={() => trackContactClick('phone', 'about_conversion_cta')}
           >
             {content.conversionCta.phoneCta}
           </a>
@@ -245,11 +250,14 @@ function StickyMobileCTA({content, page}: {content: AboutLocaleContent; page: Ab
       {/* track: whatsapp_click */}
       <a
         href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+        target="_blank"
+        rel="noopener noreferrer"
         data-analytics-event="whatsapp_click"
-        data-analytics-owner="unassigned"
+        data-analytics-owner="application"
         data-analytics-component="about_sticky_cta"
         data-analytics-location="about_page"
         data-analytics-label="whatsapp"
+        onClick={() => trackContactClick('whatsapp', 'about_sticky_cta')}
       >
         {content.stickyMobileCta.secondaryAction}
       </a>

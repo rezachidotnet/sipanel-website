@@ -182,6 +182,8 @@ export function RfqSection() {
             <LtrText
               as="a"
               href={`https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               data-analytics-event="whatsapp_click"
               data-analytics-owner="application"
               data-analytics-component="homepage_rfq_contact"

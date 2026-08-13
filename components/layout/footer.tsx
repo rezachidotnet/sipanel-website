@@ -1,17 +1,15 @@
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import logo from '@/assets/brand/logos/logo-white-transparency.svg';
-import {LtrText} from '@/components/bidi/ltr-text';
 import {Link} from '@/i18n/routing';
 import {HashAnchorLink} from '@/components/navigation/hash-anchor-link';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {ProjectFilterLink} from '@/components/projects/project-filter-link';
+import {FooterContactLinks} from '@/components/layout/footer-contact-links';
 
 export function Footer() {
   const footer = useTranslations('footer');
   const localizedAddress = footer.has('address') ? footer('address') : productionContactInfo.address;
-  const phoneHref = `tel:${productionContactInfo.phone}`;
-  const whatsappHref = `https://wa.me/${productionContactInfo.whatsapp.replace(/\D/g, '')}`;
 
   return (
     <footer className="site-footer">
@@ -59,18 +57,14 @@ export function Footer() {
                 <span className="site-footer__address-label">{footer('addressLabel')}</span>
                 <span className="site-footer__address-value">{localizedAddress}</span>
               </span>
-              <a href={phoneHref} className="site-footer__address-item">
-                <span className="site-footer__address-label">{footer('phoneLabel')}</span>
-                <LtrText className="site-footer__address-value">{productionContactInfo.phone}</LtrText>
-              </a>
-              <a href={whatsappHref} className="site-footer__address-item">
-                <span className="site-footer__address-label">{footer('whatsappLabel')}</span>
-                <LtrText className="site-footer__address-value">{productionContactInfo.whatsapp}</LtrText>
-              </a>
-              <a href={`mailto:${productionContactInfo.email}`} className="site-footer__address-item">
-                <span className="site-footer__address-label">{footer('emailLabel')}</span>
-                <LtrText className="site-footer__address-value">{productionContactInfo.email}</LtrText>
-              </a>
+              <FooterContactLinks
+                contact={productionContactInfo}
+                labels={{
+                  phone: footer('phoneLabel'),
+                  whatsapp: footer('whatsappLabel'),
+                  email: footer('emailLabel')
+                }}
+              />
             </address>
           </div>
         </nav>

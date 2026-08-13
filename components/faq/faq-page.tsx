@@ -4,7 +4,7 @@ import './faq.css';
 import {useEffect, useId, useMemo, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {Link, getDirection, usePathname, useRouter, type Locale} from '@/i18n/routing';
-import {trackFaqEvent} from '@/lib/analytics/events';
+import {trackContactClick, trackFaqEvent} from '@/lib/analytics/events';
 import {
   getFaqRelatedLinkLabel,
   buildBreadcrumbSchema,
@@ -412,11 +412,14 @@ export function FaqPage({locale, page}: Props) {
             <a
               className="button-secondary"
               href={`https://wa.me/${page.contact.whatsapp.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               data-analytics-event="whatsapp_click"
-              data-analytics-owner="unassigned"
+              data-analytics-owner="application"
               data-analytics-component="faq_conversion_cta"
               data-analytics-location="faq_page"
               data-analytics-label="whatsapp"
+              onClick={() => trackContactClick('whatsapp', 'faq_conversion_cta')}
             >
               {content.conversionCta.secondaryCta}
             </a>
@@ -424,10 +427,11 @@ export function FaqPage({locale, page}: Props) {
               className="button-secondary"
               href={`tel:${page.contact.phone.replace(/\s/g, '')}`}
               data-analytics-event="phone_click"
-              data-analytics-owner="unassigned"
+              data-analytics-owner="application"
               data-analytics-component="faq_conversion_cta"
               data-analytics-location="faq_page"
               data-analytics-label="phone"
+              onClick={() => trackContactClick('phone', 'faq_conversion_cta')}
             >
               {content.conversionCta.tertiaryCta}
             </a>
