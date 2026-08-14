@@ -166,7 +166,7 @@ export default async function LocaleLayout({children, params}: Props) {
       <body className={localeFontClass}>
         <NextIntlClientProvider messages={messages}>
           <LocaleRuntime locale={validLocale} dir={dir} />
-          <SpaPageViewTracker />
+          <SpaPageViewTracker pageLanguage={validLocale} />
           <HashScrollManager />
           <Header locale={validLocale} />
           <main>{children}</main>

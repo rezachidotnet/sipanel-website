@@ -4,14 +4,19 @@ import {useEffect, useRef} from 'react';
 import {usePathname} from 'next/navigation';
 import {trackSpaPageView} from '@/lib/analytics/events';
 import {createSpaPageViewState, getCanonicalPageLocation} from '@/lib/analytics/spa-page-view';
+import type {Locale} from '@/i18n/routing';
 
 type SpaPageViewState = ReturnType<typeof createSpaPageViewState>;
+
+type Props = {
+  pageLanguage: Locale;
+};
 
 function readCurrentLocation() {
   return getCanonicalPageLocation(window.location);
 }
 
-export function SpaPageViewTracker() {
+export function SpaPageViewTracker({pageLanguage}: Props) {
   const pathname = usePathname();
   const trackerRef = useRef<SpaPageViewState | null>(null);
   const handledPathnameRef = useRef<string | null>(null);
@@ -40,7 +45,7 @@ export function SpaPageViewTracker() {
         firstFrameRef.current = null;
         secondFrameRef.current = null;
 
-        const payload = trackerRef.current?.createPayload(readCurrentLocation(), document.title);
+        const payload = trackerRef.current?.createPayload(readCurrentLocation(), document.title, pageLanguage);
 
         if (payload) {
           trackSpaPageView(payload);
@@ -59,7 +64,7 @@ export function SpaPageViewTracker() {
         secondFrameRef.current = null;
       }
     };
-  }, [pathname]);
+  }, [pageLanguage, pathname]);
 
   return null;
 }

@@ -41,6 +41,7 @@ export type AnalyticsEventName = (typeof approvedAnalyticsEvents)[number];
 export type AnalyticsParams = Partial<{
   page_location: string;
   page_referrer: string;
+  page_language: Locale | string;
   page_url: string;
   page_path: string;
   page_title: string;
@@ -184,7 +185,7 @@ export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParam
   return dispatchGtmEvent(eventName, payload);
 }
 
-export function trackSpaPageView(params: Required<Pick<AnalyticsParams, 'page_location' | 'page_referrer' | 'page_title'>>) {
+export function trackSpaPageView(params: Required<Pick<AnalyticsParams, 'page_location' | 'page_referrer' | 'page_title' | 'page_language'>>) {
   return dispatchGtmEvent('spa_page_view', params);
 }
 
