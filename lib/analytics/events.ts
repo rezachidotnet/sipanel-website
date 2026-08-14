@@ -4,6 +4,7 @@ import {sendGTMEvent} from '@next/third-parties/google';
 import type {Locale} from '@/i18n/routing';
 
 export const approvedAnalyticsEvents = [
+  'spa_page_view',
   'language_change',
   'hero_primary_cta_click',
   'proof_card_expand',
@@ -38,6 +39,8 @@ export const approvedAnalyticsEvents = [
 export type AnalyticsEventName = (typeof approvedAnalyticsEvents)[number];
 
 export type AnalyticsParams = Partial<{
+  page_location: string;
+  page_referrer: string;
   page_url: string;
   page_path: string;
   page_title: string;
@@ -142,11 +145,7 @@ function sanitizeParams(params: AnalyticsParams) {
   );
 }
 
-export function isApprovedAnalyticsEvent(eventName: string): eventName is AnalyticsEventName {
-  return approvedEventSet.has(eventName);
-}
-
-export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParams = {}) {
+function dispatchGtmEvent(eventName: AnalyticsEventName, params: AnalyticsParams = {}) {
   if (!isBrowser() || !isApprovedAnalyticsEvent(eventName)) {
     return false;
   }
@@ -158,19 +157,35 @@ export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParam
     return false;
   }
 
-  const payload = sanitizeParams({
-    ...buildCommonParams(),
-    ...params
-  });
-
   const gtmPayload: GtmEvent = {
     event: eventName,
-    ...payload
+    ...sanitizeParams(params)
   };
 
   sendGTMEvent(gtmPayload);
 
   return true;
+}
+
+export function isApprovedAnalyticsEvent(eventName: string): eventName is AnalyticsEventName {
+  return approvedEventSet.has(eventName);
+}
+
+export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParams = {}) {
+  if (!isBrowser()) {
+    return false;
+  }
+
+  const payload = sanitizeParams({
+    ...buildCommonParams(),
+    ...params
+  });
+
+  return dispatchGtmEvent(eventName, payload);
+}
+
+export function trackSpaPageView(params: Required<Pick<AnalyticsParams, 'page_location' | 'page_referrer' | 'page_title'>>) {
+  return dispatchGtmEvent('spa_page_view', params);
 }
 
 export function trackCtaClick(component_id: string, cta_text: string, eventName: AnalyticsEventName) {
