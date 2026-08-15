@@ -3,11 +3,12 @@ import localFont from 'next/font/local';
 import {GoogleTagManager} from '@next/third-parties/google';
 import {NextIntlClientProvider} from 'next-intl';
 import {SpeedInsights} from '@vercel/speed-insights/next';
+import {Suspense} from 'react';
 import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {Footer} from '@/components/layout/footer';
 import {Header} from '@/components/layout/header';
-import {SpaPageViewTracker} from '@/components/analytics/spa-page-view-tracker';
+import {PageViewTracker} from '@/components/analytics/page-view-tracker';
 import {LocaleRuntime} from '@/components/localization/locale-runtime';
 import {HashScrollManager} from '@/components/navigation/hash-scroll-manager';
 import {getDirection, getLocalizedPath, locales, type Locale} from '@/i18n/routing';
@@ -166,7 +167,9 @@ export default async function LocaleLayout({children, params}: Props) {
       <body className={localeFontClass}>
         <NextIntlClientProvider messages={messages}>
           <LocaleRuntime locale={validLocale} dir={dir} />
-          <SpaPageViewTracker pageLanguage={validLocale} />
+          <Suspense fallback={null}>
+            <PageViewTracker pageLanguage={validLocale} />
+          </Suspense>
           <HashScrollManager />
           <Header locale={validLocale} />
           <main>{children}</main>

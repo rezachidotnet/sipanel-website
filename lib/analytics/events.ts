@@ -4,7 +4,6 @@ import {sendGTMEvent} from '@next/third-parties/google';
 import type {Locale} from '@/i18n/routing';
 
 export const approvedAnalyticsEvents = [
-  'spa_page_view',
   'language_change',
   'hero_primary_cta_click',
   'proof_card_expand',
@@ -183,10 +182,6 @@ export function trackEvent(eventName: AnalyticsEventName, params: AnalyticsParam
   });
 
   return dispatchGtmEvent(eventName, payload);
-}
-
-export function trackSpaPageView(params: Required<Pick<AnalyticsParams, 'page_location' | 'page_referrer' | 'page_title' | 'page_language'>>) {
-  return dispatchGtmEvent('spa_page_view', params);
 }
 
 export function trackCtaClick(component_id: string, cta_text: string, eventName: AnalyticsEventName) {

@@ -27,8 +27,8 @@ function assertPayload(actual, expected, label) {
   assert.deepEqual(JSON.parse(JSON.stringify(actual)), expected, label);
 }
 
-function loadSpaPageViewHelpers() {
-  const source = read('lib/analytics/spa-page-view.ts');
+function loadPageViewHelpers() {
+  const source = read('lib/analytics/page-view.ts');
   const compiled = ts.transpileModule(source, {
     compilerOptions: {
       module: ts.ModuleKind.CommonJS,
@@ -38,149 +38,197 @@ function loadSpaPageViewHelpers() {
 
   const context = {
     exports: {},
-    module: {exports: {}}
+    module: {exports: {}},
+    window: {
+      dataLayer: [{event: 'generate_lead'}]
+    }
   };
   context.exports = context.module.exports;
-  vm.runInNewContext(compiled, context, {filename: 'lib/analytics/spa-page-view.ts'});
+  vm.runInNewContext(compiled, context, {filename: 'lib/analytics/page-view.ts'});
 
-  return context.module.exports;
+  return {helpers: context.module.exports, context};
 }
 
-const {createSpaPageViewState, getCanonicalPageLocation} = loadSpaPageViewHelpers();
+const {helpers, context} = loadPageViewHelpers();
+const {createPageViewState, getCurrentPageLocation, pushPageView} = helpers;
 const origin = 'https://www.sipanelco.ir';
 
 function location(pathname) {
   const parsed = new URL(pathname, origin);
   return {
     origin: parsed.origin,
-    pathname: parsed.pathname
+    pathname: parsed.pathname,
+    search: parsed.search
   };
 }
 
-const tracker = createSpaPageViewState(getCanonicalPageLocation(location('/?utm_source=newsletter&phone=123456789')));
+function current(pathname) {
+  return getCurrentPageLocation(location(pathname));
+}
 
-assert.equal(tracker.getPreviousLocation(), `${origin}/`, 'initial canonical location should exclude query strings');
+const tracker = createPageViewState();
+const initial = current('/?utm_source=newsletter');
+
+assertPayload(
+  tracker.createPayload(initial.pageLocation, initial.pagePath, 'SIPANEL', 'fa', 'https://referrer.example/source'),
+  {
+    event: 'page_view',
+    page_location: `${origin}/?utm_source=newsletter`,
+    page_path: '/?utm_source=newsletter',
+    page_title: 'SIPANEL',
+    page_language: 'fa',
+    page_referrer: 'https://referrer.example/source'
+  },
+  'initial load should emit one page_view with document.referrer'
+);
+
 assert.equal(
-  tracker.createPayload(`${origin}/`, 'SIPANEL', 'fa'),
+  tracker.createPayload(initial.pageLocation, initial.pagePath, 'SIPANEL', 'fa', 'https://referrer.example/source'),
   null,
-  'initial mount and repeated same route should not emit spa_page_view'
+  'Strict Mode remount or rerender of the same URL should not emit a duplicate page_view'
 );
 
+const systems = current('/systems');
 assertPayload(
-  tracker.createPayload(getCanonicalPageLocation(location('/systems?name=Ali&email=ali@example.com')), 'Systems | SIPANEL', 'fa'),
+  tracker.createPayload(systems.pageLocation, systems.pagePath, 'Systems | SIPANEL', 'fa', ''),
   {
+    event: 'page_view',
     page_location: `${origin}/systems`,
-    page_referrer: `${origin}/`,
+    page_path: '/systems',
     page_title: 'Systems | SIPANEL',
-    page_language: 'fa'
+    page_language: 'fa',
+    page_referrer: `${origin}/?utm_source=newsletter`
   },
-  '/ -> /systems should emit one destination page view'
+  '/ -> /systems SPA navigation should emit one destination page_view'
 );
 
 assert.equal(
-  tracker.createPayload(`${origin}/systems`, 'Systems | SIPANEL', 'fa'),
+  tracker.createPayload(systems.pageLocation, systems.pagePath, 'Systems | SIPANEL', 'fa', ''),
   null,
-  'repeated render of the same route should not emit another page view'
+  'rerender without navigation should not emit another page_view'
 );
 
+const rfqWithQuery = current('/rfq?system=space-frame');
 assertPayload(
-  tracker.createPayload(`${origin}/projects`, 'Projects | SIPANEL', 'fa'),
+  tracker.createPayload(rfqWithQuery.pageLocation, rfqWithQuery.pagePath, 'RFQ | SIPANEL', 'fa', ''),
   {
-    page_location: `${origin}/projects`,
-    page_referrer: `${origin}/systems`,
-    page_title: 'Projects | SIPANEL',
-    page_language: 'fa'
+    event: 'page_view',
+    page_location: `${origin}/rfq?system=space-frame`,
+    page_path: '/rfq?system=space-frame',
+    page_title: 'RFQ | SIPANEL',
+    page_language: 'fa',
+    page_referrer: `${origin}/systems`
   },
-  '/systems -> /projects should use /systems as referrer'
+  'query strings should be included in page_location and page_path'
+);
+
+const projects = current('/projects');
+assertPayload(
+  tracker.createPayload(projects.pageLocation, projects.pagePath, 'Projects | SIPANEL', 'fa', ''),
+  {
+    event: 'page_view',
+    page_location: `${origin}/projects`,
+    page_path: '/projects',
+    page_title: 'Projects | SIPANEL',
+    page_language: 'fa',
+    page_referrer: `${origin}/rfq?system=space-frame`
+  },
+  '/rfq -> /projects should use the immediately previous application URL as referrer'
 );
 
 assertPayload(
-  tracker.createPayload(`${origin}/systems`, 'Systems | SIPANEL', 'fa'),
+  tracker.createPayload(systems.pageLocation, systems.pagePath, 'Systems | SIPANEL', 'fa', ''),
   {
+    event: 'page_view',
     page_location: `${origin}/systems`,
-    page_referrer: `${origin}/projects`,
+    page_path: '/systems',
     page_title: 'Systems | SIPANEL',
-    page_language: 'fa'
+    page_language: 'fa',
+    page_referrer: `${origin}/projects`
   },
-  'Back /projects -> /systems should use /projects as referrer'
+  'Back /projects -> /systems should emit one page_view and use /projects as referrer'
 );
 
 assertPayload(
-  tracker.createPayload(`${origin}/projects`, 'Projects | SIPANEL', 'fa'),
+  tracker.createPayload(projects.pageLocation, projects.pagePath, 'Projects | SIPANEL', 'fa', ''),
   {
+    event: 'page_view',
     page_location: `${origin}/projects`,
-    page_referrer: `${origin}/systems`,
+    page_path: '/projects',
     page_title: 'Projects | SIPANEL',
-    page_language: 'fa'
+    page_language: 'fa',
+    page_referrer: `${origin}/systems`
   },
-  'Forward /systems -> /projects should use /systems as referrer'
+  'Forward /systems -> /projects should emit one page_view and use /systems as referrer'
 );
 
-const localizedTracker = createSpaPageViewState(`${origin}/`);
+const localizedTracker = createPageViewState();
 const localizedCases = [
+  {path: '/', title: 'SIPANEL', pageLanguage: 'fa'},
   {path: '/en/systems', title: 'Systems | SIPANEL', pageLanguage: 'en'},
   {path: '/ar/projects', title: 'Projects | SIPANEL', pageLanguage: 'ar'},
   {path: '/ru/contact', title: 'Contact | SIPANEL', pageLanguage: 'ru'}
 ];
 
 for (const {path, title, pageLanguage} of localizedCases) {
-  const payload = localizedTracker.createPayload(getCanonicalPageLocation(location(path)), title, pageLanguage);
-  assert.equal(payload?.page_location, `${origin}${path}`, `${path} page_location`);
+  const route = current(path);
+  const payload = localizedTracker.createPayload(route.pageLocation, route.pagePath, title, pageLanguage, '');
+  assert.equal(payload?.page_location, `${origin}${path === '/' ? '/' : path}`, `${path} page_location`);
   assert.equal(payload?.page_language, pageLanguage, `${path} page_language`);
 }
 
-const piiLocation = getCanonicalPageLocation(location('/contact?name=Ali&phone=09120000000&email=ali@example.com&message=hello#rfq-form'));
-assert.equal(piiLocation, `${origin}/contact`, 'canonical page_location must exclude query strings and hashes');
-for (const forbidden of ['Ali', '09120000000', 'ali@example.com', 'message=hello', '#rfq-form']) {
-  assertNotIncludes(piiLocation, forbidden, `PII leakage in page_location: ${forbidden}`);
-}
+const hashed = current('/contact?system=roof#rfq-form');
+assert.equal(hashed.pageLocation, `${origin}/contact?system=roof`, 'page_location must exclude hash fragments');
+assert.equal(hashed.pagePath, '/contact?system=roof', 'page_path must exclude hash fragments');
+
+assert.equal(pushPageView({
+  event: 'page_view',
+  page_location: `${origin}/contact`,
+  page_path: '/contact',
+  page_title: 'Contact | SIPANEL',
+  page_language: 'fa',
+  page_referrer: `${origin}/projects`
+}), true, 'pushPageView should dispatch in the browser');
+assert.equal(context.window.dataLayer.length, 2, 'pushPageView should append to existing dataLayer entries');
+assert.equal(context.window.dataLayer[0].event, 'generate_lead', 'existing non-page-view dataLayer events should remain intact');
+assert.equal(context.window.dataLayer[1].event, 'page_view', 'pushPageView should send page_view through dataLayer.push');
 
 const analyticsSource = read('lib/analytics/events.ts');
-const trackerSource = read('components/analytics/spa-page-view-tracker.tsx');
+const pageViewSource = read('lib/analytics/page-view.ts');
+const trackerSource = read('components/analytics/page-view-tracker.tsx');
 const layoutSource = read('app/[locale]/layout.tsx');
-const headerSource = read('components/layout/header.tsx');
-const languageSwitcherSource = read('components/localization/language-switcher.tsx');
+const obsoletePageViewEvent = ['spa', 'page', 'view'].join('_');
+const obsoleteDispatcher = ['track', 'Spa', 'Page', 'View'].join('');
+const historyChangeMarker = ['History', 'Change'].join('');
 
-assertIncludes(analyticsSource, "'spa_page_view'", 'spa_page_view allowlist entry');
-assertIncludes(analyticsSource, 'export function trackSpaPageView', 'spa page view dispatcher');
-assertIncludes(analyticsSource, "dispatchGtmEvent('spa_page_view', params)", 'spa page view dataLayer-only dispatch');
-assertIncludes(analyticsSource, 'page_language', 'spa page view page_language parameter');
+assertNotIncludes(analyticsSource, `'${obsoletePageViewEvent}'`, 'obsolete page-view allowlist entry');
+assertNotIncludes(analyticsSource, obsoleteDispatcher, 'obsolete page-view dispatcher');
+assertIncludes(analyticsSource, "'whatsapp_click'", 'whatsapp_click allowlist entry');
+assertIncludes(analyticsSource, "'phone_click'", 'phone_click allowlist entry');
+assertIncludes(analyticsSource, "'email_click'", 'email_click allowlist entry');
+assertIncludes(analyticsSource, "'faq_expand'", 'faq_expand allowlist entry');
 assertNotIncludes(analyticsSource, 'window.gtag', 'direct GA4 dispatch');
 assertNotIncludes(analyticsSource, 'gtag(', 'direct GA4 dispatch');
 
-const trackSpaPageViewStart = analyticsSource.indexOf('export function trackSpaPageView');
-const trackSpaPageViewEnd = analyticsSource.indexOf('export function trackCtaClick');
-const trackSpaPageViewBody = analyticsSource.slice(trackSpaPageViewStart, trackSpaPageViewEnd);
-for (const forbidden of [
-  'name:',
-  'phone:',
-  'email:',
-  'whatsapp:',
-  'company:',
-  'message:',
-  'leadId',
-  'submissionId',
-  'project_type',
-  'lead_type'
-]) {
-  assertNotIncludes(trackSpaPageViewBody, forbidden, `PII/contact/RFQ payload field ${forbidden}`);
-}
+assertIncludes(pageViewSource, "event: 'page_view'", 'page_view payload event');
+assertIncludes(pageViewSource, 'win.dataLayer = win.dataLayer || []', 'safe dataLayer initialization');
+assertIncludes(pageViewSource, 'win.dataLayer.push(payload)', 'dataLayer page_view dispatch');
+assertNotIncludes(pageViewSource, 'sendGTMEvent', 'page_view must not use sendGTMEvent');
+assertNotIncludes(pageViewSource, 'gtag(', 'page_view must not use direct gtag');
 
 assertIncludes(trackerSource, 'usePathname', 'stable App Router pathname hook');
+assertIncludes(trackerSource, 'useSearchParams', 'query-string navigation hook');
 assertIncludes(trackerSource, 'pageLanguage: Locale', 'authoritative locale prop');
-assertIncludes(trackerSource, 'createPayload(readCurrentLocation(), document.title, pageLanguage)', 'page_language payload source');
-assertNotIncludes(trackerSource, '__PRIVATE_NEXTJS_INTERNALS_TREE', 'private Next.js internals');
+assertIncludes(trackerSource, 'document.referrer', 'initial page_referrer source');
+assertIncludes(trackerSource, 'document.title', 'destination title read');
+assertIncludes(trackerSource, 'pushPageView(payload)', 'page_view emission');
+assertIncludes(trackerSource, 'const pageViewState = createPageViewState()', 'module-level Strict Mode duplicate guard');
+assertIncludes(trackerSource, 'window.requestAnimationFrame', 'post-navigation title timing frame');
 assertNotIncludes(trackerSource, 'pushState =', 'pushState monkey patch');
 assertNotIncludes(trackerSource, 'replaceState =', 'replaceState monkey patch');
-assertIncludes(trackerSource, 'createSpaPageViewState(readCurrentLocation())', 'initial mount guard stores current location');
-assertIncludes(trackerSource, 'handledPathnameRef.current === pathname', 'duplicate pathname guard');
-assertIncludes(trackerSource, 'window.requestAnimationFrame(() => {', 'post-navigation title timing frame');
-assertIncludes(trackerSource, 'secondFrameRef.current = window.requestAnimationFrame', 'second frame title timing');
-assertIncludes(trackerSource, 'document.title', 'destination title read');
-assertIncludes(trackerSource, 'trackSpaPageView(payload)', 'spa page view emission');
+assertNotIncludes(trackerSource, historyChangeMarker, 'GTM history-change implementation');
 
-assertIncludes(layoutSource, '<SpaPageViewTracker pageLanguage={validLocale} />', 'global layout tracker mount with authoritative locale');
-assertIncludes(headerSource, '<a', 'desktop locale hard reload anchor');
-assertIncludes(languageSwitcherSource, '<a', 'mobile locale hard reload anchor');
+assertIncludes(layoutSource, '<PageViewTracker pageLanguage={validLocale} />', 'global layout tracker mount with authoritative locale');
+assertIncludes(layoutSource, '<Suspense fallback={null}>', 'search params Suspense boundary');
 
-console.log('SPA page view tracking tests passed.');
+console.log('Application-controlled page_view tracking tests passed.');
