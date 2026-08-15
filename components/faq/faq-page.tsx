@@ -4,7 +4,8 @@ import './faq.css';
 import {useEffect, useId, useMemo, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {Link, getDirection, usePathname, useRouter, type Locale} from '@/i18n/routing';
-import {trackContactClick, trackFaqEvent} from '@/lib/analytics/events';
+import {normalizeFaqAnalyticsId} from '@/lib/analytics/faq';
+import {trackContactClick, trackFaqEvent, trackFaqExpand} from '@/lib/analytics/events';
 import {
   getFaqRelatedLinkLabel,
   buildBreadcrumbSchema,
@@ -131,12 +132,15 @@ export function FaqPage({locale, page}: Props) {
   function toggleExpanded(id: string) {
     /* track: faq_expand */
     const isExpanded = expandedIds.includes(id);
+    const item = visibleItems.find((visibleItem) => visibleItem.id === id);
 
-    if (!isExpanded) {
-      trackFaqEvent('faq_expand', {
-        component_id: id,
-        category: activeCategory,
-        interaction_type: 'expand'
+    if (!isExpanded && item) {
+      trackFaqExpand({
+        faq_id: normalizeFaqAnalyticsId(item.id),
+        faq_question: item.question,
+        faq_category: normalizeFaqAnalyticsId(item.category),
+        faq_position: visibleItems.findIndex((visibleItem) => visibleItem.id === item.id) + 1,
+        page_language: locale
       });
     }
 
@@ -144,15 +148,6 @@ export function FaqPage({locale, page}: Props) {
   }
 
   function setAllExpanded(expand: boolean) {
-    /* track: faq_expand */
-    if (expand) {
-      trackFaqEvent('faq_expand', {
-        component_id: 'faq_expand_all',
-        category: activeCategory,
-        interaction_type: 'expand_all'
-      });
-    }
-
     setExpandedIds(expand ? visibleItems.map((item) => item.id) : []);
   }
 

@@ -200,6 +200,7 @@ const layoutSource = read('app/[locale]/layout.tsx');
 const obsoletePageViewEvent = ['spa', 'page', 'view'].join('_');
 const obsoleteDispatcher = ['track', 'Spa', 'Page', 'View'].join('');
 const historyChangeMarker = ['History', 'Change'].join('');
+const directGtagCall = ['g', 'tag('].join('');
 
 assertNotIncludes(analyticsSource, `'${obsoletePageViewEvent}'`, 'obsolete page-view allowlist entry');
 assertNotIncludes(analyticsSource, obsoleteDispatcher, 'obsolete page-view dispatcher');
@@ -208,13 +209,13 @@ assertIncludes(analyticsSource, "'phone_click'", 'phone_click allowlist entry');
 assertIncludes(analyticsSource, "'email_click'", 'email_click allowlist entry');
 assertIncludes(analyticsSource, "'faq_expand'", 'faq_expand allowlist entry');
 assertNotIncludes(analyticsSource, 'window.gtag', 'direct GA4 dispatch');
-assertNotIncludes(analyticsSource, 'gtag(', 'direct GA4 dispatch');
+assertNotIncludes(analyticsSource, directGtagCall, 'direct GA4 dispatch');
 
 assertIncludes(pageViewSource, "event: 'page_view'", 'page_view payload event');
 assertIncludes(pageViewSource, 'win.dataLayer = win.dataLayer || []', 'safe dataLayer initialization');
 assertIncludes(pageViewSource, 'win.dataLayer.push(payload)', 'dataLayer page_view dispatch');
 assertNotIncludes(pageViewSource, 'sendGTMEvent', 'page_view must not use sendGTMEvent');
-assertNotIncludes(pageViewSource, 'gtag(', 'page_view must not use direct gtag');
+assertNotIncludes(pageViewSource, directGtagCall, 'page_view must not use direct gtag');
 
 assertIncludes(trackerSource, 'usePathname', 'stable App Router pathname hook');
 assertIncludes(trackerSource, 'useSearchParams', 'query-string navigation hook');

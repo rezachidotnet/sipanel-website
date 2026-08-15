@@ -5,6 +5,8 @@ import './seo-landing.css';
 import '@/components/resources/resources.css';
 import Image, {type StaticImageData} from 'next/image';
 import {Link, getDirection, getLocalizedPath, locales, type Locale} from '@/i18n/routing';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
+import {getRequiredFaqAnalyticsId} from '@/lib/analytics/faq';
 import {
   getSeoBreadcrumbLabels,
   type SeoLandingPageData,
@@ -21,11 +23,13 @@ import {
   buildServiceSchema as buildSharedServiceSchema,
   buildWebPageSchema
 } from '@/lib/seo/schema';
-import {trackCaseStudyEvent, trackEvent, trackFaqEvent, trackProofEvent, trackResourceEvent, trackRfqEvent} from '@/lib/analytics/events';
+import {trackCaseStudyEvent, trackEvent, trackProofEvent, trackResourceEvent, trackRfqEvent} from '@/lib/analytics/events';
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />;
 }
+
+const seoFaqIdSuffixes = ['review-scope', 'pre-purchase-review', 'project-readiness', 'risk-factors'];
 
 function buildServiceSchema(locale: Locale, page: SeoLandingPageData, content: SeoLandingPageLocaleContent) {
   return buildSharedServiceSchema(locale, `${page.routes[locale]}#service`, {
@@ -543,16 +547,22 @@ export function SeoLandingPageTemplate({locale, page}: SeoLandingPageTemplatePro
             <h2 id="seo-faq-title">{content.faq.title}</h2>
           </header>
           <div className="service-faq-list">
-            {content.faq.items.map((item) => (
-              <details className="service-faq-item" key={item.question} onToggle={(event) => {
-                if (event.currentTarget.open) {
-                  trackFaqEvent('faq_expand', {component_id: page.slug, component_name: item.question});
-                }
-              }}>
+            {content.faq.items.map((item, index) => (
+              <FaqExpandDetails
+                analytics={{
+                  faqId: `${page.slug}-${getRequiredFaqAnalyticsId(seoFaqIdSuffixes, index, page.slug)}`,
+                  faqQuestion: item.question,
+                  faqCategory: page.slug,
+                  faqPosition: index + 1,
+                  pageLanguage: locale
+                }}
+                className="service-faq-item"
+                key={item.question}
+                summary={item.question}
+              >
                 {/* track: faq_expand */}
-                <summary>{item.question}</summary>
                 <p>{item.answer}</p>
-              </details>
+              </FaqExpandDetails>
             ))}
           </div>
         </div>

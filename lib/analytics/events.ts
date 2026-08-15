@@ -65,6 +65,10 @@ export type AnalyticsParams = Partial<{
   selected_language: string;
   search_query: string;
   category: string;
+  faq_id: string;
+  faq_question: string;
+  faq_category: string;
+  faq_position: number;
 }>;
 
 type WindowWithAnalytics = Window & {
@@ -74,6 +78,15 @@ type WindowWithAnalytics = Window & {
 type GtmEvent = {
   event: string;
   [key: string]: string | number | boolean | undefined;
+};
+
+type FaqExpandPayload = {
+  event: 'faq_expand';
+  faq_id: string;
+  faq_question: string;
+  faq_category: string;
+  faq_position: number;
+  page_language: Locale;
 };
 
 const approvedEventSet = new Set<string>(approvedAnalyticsEvents);
@@ -212,8 +225,29 @@ export function trackProofEvent(eventName: 'proof_card_expand' | 'diagram_open' 
   return trackEvent(eventName, params);
 }
 
-export function trackFaqEvent(eventName: 'faq_category_filter' | 'faq_expand', params: AnalyticsParams = {}) {
+export function trackFaqEvent(eventName: 'faq_category_filter', params: AnalyticsParams = {}) {
   return trackEvent(eventName, params);
+}
+
+export function trackFaqExpand(params: Omit<FaqExpandPayload, 'event'>) {
+  if (!isBrowser()) {
+    return false;
+  }
+
+  const payload: FaqExpandPayload = {
+    event: 'faq_expand',
+    faq_id: params.faq_id,
+    faq_question: params.faq_question.replace(/\s+/g, ' ').trim(),
+    faq_category: params.faq_category,
+    faq_position: params.faq_position,
+    page_language: params.page_language
+  };
+
+  const win = window as WindowWithAnalytics;
+  win.dataLayer = win.dataLayer || [];
+  win.dataLayer.push(payload);
+
+  return true;
 }
 
 export function trackResourceEvent(eventName: 'resource_download_start' | 'resource_download_complete' | 'related_resource_click', params: AnalyticsParams = {}) {

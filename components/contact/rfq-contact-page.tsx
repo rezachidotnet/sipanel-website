@@ -7,6 +7,7 @@ import {useTranslations} from 'next-intl';
 import {useForm, type FieldErrors, type Resolver} from 'react-hook-form';
 import {z} from 'zod';
 import {LtrText} from '@/components/bidi/ltr-text';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
 import type {Locale} from '@/i18n/routing';
 import {getDirection} from '@/i18n/routing';
 import type {ProductionContactInfo, RfqContactSection} from '@/lib/contact/rfq-contact-page';
@@ -77,6 +78,17 @@ const concernKeyMap: Record<string, string> = {
   'Installation Quality': 'installationQuality',
   'Procurement Planning': 'procurementPlanning'
 };
+
+const contactFaqIds = [
+  'rfq-project-info',
+  'rfq-response-time',
+  'rfq-technical-review',
+  'rfq-systems-covered',
+  'rfq-file-upload',
+  'rfq-cost-estimate',
+  'rfq-whatsapp-contact',
+  'rfq-next-steps'
+];
 
 
 function createContactSchema(t: ReturnType<typeof useTranslations<'rfq'>>) {
@@ -710,12 +722,22 @@ export function RfqContactPage({locale, page}: ContactPageProps) {
         <div className="container-shell contact-section__inner">
           <h2 id="contact-faq-title">{t('faq.title')}</h2>
           <div className="service-faq-list">
-            {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-              <details className="service-faq-item" key={i}>
+            {contactFaqIds.map((faqId, i) => (
+              <FaqExpandDetails
+                analytics={{
+                  faqId,
+                  faqQuestion: t(`faq.items.${i}.question`),
+                  faqCategory: 'rfq',
+                  faqPosition: i + 1,
+                  pageLanguage: locale
+                }}
+                className="service-faq-item"
+                key={faqId}
+                summary={t(`faq.items.${i}.question`)}
+              >
                 {/* track: faq_expand */}
-                <summary>{t(`faq.items.${i}.question`)}</summary>
                 <p>{t(`faq.items.${i}.answer`)}</p>
-              </details>
+              </FaqExpandDetails>
             ))}
           </div>
         </div>

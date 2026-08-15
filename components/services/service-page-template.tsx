@@ -3,6 +3,8 @@
 import './service-seo.css';
 import Image, {type StaticImageData} from 'next/image';
 import {Link, type Locale, getDirection, getLocalizedPath, locales, normalizeCanonicalPath} from '@/i18n/routing';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
+import {getRequiredFaqAnalyticsId} from '@/lib/analytics/faq';
 import {
   buildBreadcrumbListSchema,
   buildFaqPageSchema,
@@ -10,7 +12,7 @@ import {
   buildServiceSchema as buildSharedServiceSchema,
   buildWebPageSchema
 } from '@/lib/seo/schema';
-import {trackCaseStudyEvent, trackEvent, trackFaqEvent, trackProofEvent, trackRfqEvent} from '@/lib/analytics/events';
+import {trackCaseStudyEvent, trackEvent, trackProofEvent, trackRfqEvent} from '@/lib/analytics/events';
 
 type LocalizedRoutes = Record<Locale, string>;
 
@@ -133,6 +135,49 @@ export type ServicePageTemplateData = {
 type ServicePageTemplateProps = {
   locale: Locale;
   page: ServicePageTemplateData;
+};
+
+const serviceFaqIdSuffixesByPage: Record<string, readonly string[]> = {
+  sandwich_panel_systems: [
+    'panel-selection-method',
+    'roof-leakage-control',
+    'pre-purchase-shop-drawings',
+    'material-waste-reduction',
+    'manufacturer-independence',
+    'engineering-review-scope',
+    'accessory-procurement-coordination',
+    'supply-and-installation-scope'
+  ],
+  standing_seam_zip_tech_roofing: [
+    'industrial-roofing-fit',
+    'leakage-source',
+    'drainage-review',
+    'engineered-roofing-difference',
+    'roof-shop-drawings',
+    'supply-and-installation-scope',
+    'thermal-movement-control',
+    'roof-wall-waterproofing'
+  ],
+  daylighting_transparent_roofing: [
+    'daylighting-materials',
+    'skylight-leakage-control',
+    'material-selection-support',
+    'condensation-control',
+    'structural-integration',
+    'thermal-movement-control',
+    'skylight-roof-waterproofing',
+    'engineered-execution-difference'
+  ],
+  aluminium_cladding_covering: [
+    'industrial-commercial-fit',
+    'cladding-problem-source',
+    'substructure-review',
+    'engineered-cladding-difference',
+    'facade-shop-drawings',
+    'thermal-movement-control',
+    'facade-joint-waterproofing',
+    'supply-and-installation-scope'
+  ]
 };
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
@@ -481,16 +526,22 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
             <h2 id="service-faq-title">{page.faq.title}</h2>
           </header>
           <div className="service-faq-list">
-            {page.faq.items.map((item) => (
-              <details className="service-faq-item" key={item.question} onToggle={(event) => {
-                if (event.currentTarget.open) {
-                  trackFaqEvent('faq_expand', {component_id: page.id, component_name: item.question});
-                }
-              }}>
+            {page.faq.items.map((item, index) => (
+              <FaqExpandDetails
+                analytics={{
+                  faqId: `${page.id}-${getRequiredFaqAnalyticsId(serviceFaqIdSuffixesByPage[page.id] ?? [], index, page.id)}`,
+                  faqQuestion: item.question,
+                  faqCategory: page.id,
+                  faqPosition: index + 1,
+                  pageLanguage: locale
+                }}
+                className="service-faq-item"
+                key={item.question}
+                summary={item.question}
+              >
                 {/* track: faq_expand */}
-                <summary>{item.question}</summary>
                 <p>{item.answer}</p>
-              </details>
+              </FaqExpandDetails>
             ))}
           </div>
         </div>

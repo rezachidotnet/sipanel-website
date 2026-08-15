@@ -3,8 +3,10 @@ import './systems-overview.css';
 import Image from 'next/image';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
 import {SchemaScript} from '@/components/seo/schema-script';
 import {getDirection, getLocalizedPath, locales, type Locale, Link} from '@/i18n/routing';
+import {getRequiredFaqAnalyticsId} from '@/lib/analytics/faq';
 import {buildPageMetadata, type LocalizedRouteMap} from '@/lib/seo/metadata';
 import {buildBreadcrumbListSchema, buildCollectionPageSchema, buildFaqPageSchema, buildOrganizationSchema} from '@/lib/seo/schema';
 
@@ -37,6 +39,15 @@ type FaqItem = {
   question: string;
   answer: string;
 };
+
+const systemsOverviewFaqIds = [
+  'systems-selection-fit',
+  'systems-panel-vs-standing-seam',
+  'systems-leakage-risk',
+  'systems-engineering-and-supply',
+  'systems-technical-review-inputs',
+  'systems-cost-speed-lifecycle'
+];
 
 const routes: LocalizedRouteMap = {
   en: getLocalizedPath('en', '/systems'),
@@ -1238,11 +1249,21 @@ export default async function SystemsOverviewPage({params}: Props) {
             <p>{content.faqIntro}</p>
           </header>
           <div className="systems-faq__list">
-            {content.faqItems.map((item) => (
-              <details className="systems-faq__item" key={item.question}>
-                <summary>{item.question}</summary>
+            {content.faqItems.map((item, index) => (
+              <FaqExpandDetails
+                analytics={{
+                  faqId: getRequiredFaqAnalyticsId(systemsOverviewFaqIds, index, 'systems-overview'),
+                  faqQuestion: item.question,
+                  faqCategory: 'systems',
+                  faqPosition: index + 1,
+                  pageLanguage: locale
+                }}
+                className="systems-faq__item"
+                key={item.question}
+                summary={item.question}
+              >
                 <p>{item.answer}</p>
-              </details>
+              </FaqExpandDetails>
             ))}
           </div>
         </div>

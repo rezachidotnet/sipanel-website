@@ -3,6 +3,8 @@ import Image from 'next/image';
 import resourcesHero from '@/assets/resources/resources-hero.webp';
 import leadCapturePreview from '@/assets/resources/lead-capture-preview.webp';
 import {Link, type Locale, getDirection} from '@/i18n/routing';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
+import {getRequiredFaqAnalyticsId} from '@/lib/analytics/faq';
 import {
   formatResourceDate,
   getEngineeringResourceHubBreadcrumbs,
@@ -27,6 +29,16 @@ type Props = {
   proofMetrics: Array<{id: 'yearsExperience' | 'industrialProjects' | 'executedPanelArea'; value: string; label: string}>;
   proofLabel: string;
 };
+
+const resourceHubFaqIds = [
+  'resource-panel-selection-start',
+  'resource-standing-seam-selection',
+  'resource-engineering-advice-boundary',
+  'resource-pre-purchase-review',
+  'resource-flashing-gutter-waterproofing',
+  'resource-thermal-insulation-importance',
+  'resource-industrial-envelope-components'
+];
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />;
@@ -417,11 +429,21 @@ export function EngineeringResourceHubPage({locale, page, proofMetrics, proofLab
               <h2 id="resource-hub-faq-title">{content.faq.title}</h2>
             </header>
             <div className="resource-hub-faq-list">
-              {content.faq.items.map((item) => (
-                <details className="resource-hub-faq-item" key={item.question}>
-                  <summary>{item.question}</summary>
+              {content.faq.items.map((item, index) => (
+                <FaqExpandDetails
+                  analytics={{
+                    faqId: getRequiredFaqAnalyticsId(resourceHubFaqIds, index, 'engineering-resource-hub'),
+                    faqQuestion: item.question,
+                    faqCategory: 'engineering-resources',
+                    faqPosition: index + 1,
+                    pageLanguage: locale
+                  }}
+                  className="resource-hub-faq-item"
+                  key={item.question}
+                  summary={item.question}
+                >
                   <p>{item.answer}</p>
-                </details>
+                </FaqExpandDetails>
               ))}
             </div>
           </div>

@@ -1,5 +1,7 @@
 import './insights.css';
 import {Link, getDirection, getLocalizedPath, type Locale} from '@/i18n/routing';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
+import {getRequiredFaqAnalyticsId, normalizeFaqAnalyticsId} from '@/lib/analytics/faq';
 import type {EngineeringInsightArticle} from '@/lib/insights/engineering-insights';
 import {getInsightCategoryLabel} from '@/lib/insights/engineering-insights';
 import {
@@ -13,6 +15,12 @@ import {
 type Props = {
   locale: Locale;
   article: EngineeringInsightArticle;
+};
+
+const insightFaqIdSuffixes: Record<string, string[]> = {
+  'sandwich-panel-joint-leakage-risk': ['panel-grade-leakage-risk', 'joint-logic-review-timing'],
+  'standing-seam-roof-drainage-logic': ['seam-quality-boundary', 'pre-execution-proof'],
+  'aluminium-cladding-facade-joint-control': ['cladding-joint-procurement', 'facade-quality-timing']
 };
 
 const labelsByLocale = {
@@ -330,14 +338,25 @@ export function EngineeringArticleTemplate({locale, article}: Props) {
             </Link>
           </header>
           <div className="insight-faq-list">
-            {article.faqs.map((faq) => (
-              <details key={faq.question}>
-                <summary>
-                  {/* track: faq_expand */}
-                  {faq.question}
-                </summary>
+            {article.faqs.map((faq, index) => (
+              <FaqExpandDetails
+                analytics={{
+                  faqId: `${article.slug}-${getRequiredFaqAnalyticsId(insightFaqIdSuffixes[article.slug] ?? [], index, article.slug)}`,
+                  faqQuestion: faq.question,
+                  faqCategory: normalizeFaqAnalyticsId(article.category),
+                  faqPosition: index + 1,
+                  pageLanguage: locale
+                }}
+                key={faq.question}
+                summary={
+                  <>
+                    {/* track: faq_expand */}
+                    {faq.question}
+                  </>
+                }
+              >
                 <p>{faq.answer}</p>
-              </details>
+              </FaqExpandDetails>
             ))}
           </div>
         </div>
