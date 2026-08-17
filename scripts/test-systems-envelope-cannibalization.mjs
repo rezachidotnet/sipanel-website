@@ -149,6 +149,29 @@ async function assertFaHubAndEnvelopeAreDistinct() {
   }
 }
 
+// Step 4: ar/ru previously reused the hub's exact title/H1 (both sourced
+// from the same `localizedSolutionNames['industrial-envelope-systems']`
+// entry as the hub's primaryKeyword/headline). That entry was changed to a
+// distinct coordination-focused phrase for ar/ru only; this asserts the fix
+// holds and guards against future regression back to the shared name.
+async function assertArRuHubAndEnvelopeAreDistinct(locale) {
+  const hubHtml = await fetchHtml(hubPath(locale));
+  const envelopeHtml = await fetchHtml(envelopePath(locale));
+
+  const hubTitle = extractTag(hubHtml, 'title');
+  const envelopeTitle = extractTag(envelopeHtml, 'title');
+  const hubH1 = extractTag(hubHtml, 'h1');
+  const envelopeH1 = extractTag(envelopeHtml, 'h1');
+
+  if (!hubTitle || !envelopeTitle || hubTitle === envelopeTitle) {
+    fail(`[${locale}] hub and envelope-coordination titles must differ, got identical: "${hubTitle}"`);
+  }
+
+  if (!hubH1 || !envelopeH1 || hubH1 === envelopeH1) {
+    fail(`[${locale}] hub and envelope-coordination H1s must differ, got identical: "${hubH1}"`);
+  }
+}
+
 async function assertEnvelopeLinksToHub(locale) {
   const envelopeHtml = await fetchHtml(envelopePath(locale));
   const hub = hubPath(locale);
@@ -216,8 +239,9 @@ async function assertFaqVisibleMatchesSchema(locale) {
 async function assertNoFaLeakInOtherLocales(locale) {
   if (locale === 'fa' || locale === 'ar') {
     // Arabic script overlaps the Persian Unicode range, so it cannot be used
-    // as a leak signal for ar; ar is instead covered by exact title/H1
-    // equality checks against the known-good baseline below.
+    // as a leak signal for ar; ar is instead covered by the exact title/H1
+    // equality check against the known-good baseline below (any fa leak
+    // would necessarily fail that exact match).
     return;
   }
 
@@ -232,23 +256,32 @@ async function assertNoFaLeakInOtherLocales(locale) {
   }
 }
 
-const knownGoodNonFaBaseline = {
+// fa (Step 2) and en are unchanged by Step 4. ar/ru are updated to their
+// new, hub-distinct values (Step 4) — asserting an exact match here both
+// pins the intended copy and guarantees no fa/en fallback text is rendered
+// (any leak or regression back to the old hub-identical strings would fail
+// the match).
+const knownGoodBaselineByLocale = {
+  fa: {
+    title: 'هماهنگی مهندسی رابط‌های پوسته ساختمان صنعتی | SIPANEL',
+    h1: 'هماهنگی چند سیستم در پوسته ساختمان صنعتی'
+  },
   en: {
     title: 'Industrial Envelope Systems | SIPANEL',
     h1: 'Industrial Envelope Systems Coordinated as One Execution Package.'
   },
   ar: {
-    title: 'أنظمة أغلفة المباني الصناعية | SIPANEL',
-    h1: 'أنظمة أغلفة المباني الصناعية'
+    title: 'تنسيق الأنظمة المتعددة في الغلاف الصناعي | SIPANEL',
+    h1: 'تنسيق الأنظمة المتعددة في الغلاف الصناعي'
   },
   ru: {
-    title: 'Промышленные ограждающие системы | SIPANEL',
-    h1: 'Промышленные ограждающие системы'
+    title: 'Координация нескольких систем ограждающих конструкций | SIPANEL',
+    h1: 'Координация нескольких систем ограждающих конструкций'
   }
 };
 
-async function assertNonFaLocalesUnchanged(locale) {
-  const baseline = knownGoodNonFaBaseline[locale];
+async function assertLocaleMatchesExpectedBaseline(locale) {
+  const baseline = knownGoodBaselineByLocale[locale];
   if (!baseline) return;
 
   const html = await fetchHtml(envelopePath(locale));
@@ -256,11 +289,11 @@ async function assertNonFaLocalesUnchanged(locale) {
   const h1 = extractTag(html, 'h1');
 
   if (title !== baseline.title) {
-    fail(`[${locale}] industrial-envelope-systems title changed unexpectedly. Expected "${baseline.title}", got "${title}"`);
+    fail(`[${locale}] industrial-envelope-systems title mismatch. Expected "${baseline.title}", got "${title}"`);
   }
 
   if (h1 !== baseline.h1) {
-    fail(`[${locale}] industrial-envelope-systems H1 changed unexpectedly. Expected "${baseline.h1}", got "${h1}"`);
+    fail(`[${locale}] industrial-envelope-systems H1 mismatch. Expected "${baseline.h1}", got "${h1}"`);
   }
 }
 
@@ -278,13 +311,15 @@ async function run() {
   }
 
   await assertFaHubAndEnvelopeAreDistinct();
+  await assertArRuHubAndEnvelopeAreDistinct('ar');
+  await assertArRuHubAndEnvelopeAreDistinct('ru');
 
   for (const locale of locales) {
     await assertEnvelopeLinksToHub(locale);
     await assertCanonicalAndHreflang(locale);
     await assertFaqVisibleMatchesSchema(locale);
     await assertNoFaLeakInOtherLocales(locale);
-    await assertNonFaLocalesUnchanged(locale);
+    await assertLocaleMatchesExpectedBaseline(locale);
   }
 
   process.stdout.write(`Systems/envelope-coordination cannibalization tests passed for ${locales.length} locales.\n`);

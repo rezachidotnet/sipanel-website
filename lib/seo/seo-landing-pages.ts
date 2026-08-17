@@ -316,8 +316,15 @@ const localizedSolutionNames: Record<string, Record<Locale, string>> = {
   'industrial-envelope-systems': {
     en: 'Industrial envelope systems',
     fa: 'سیستم‌های پوشانه صنعتی',
-    ar: 'أنظمة أغلفة المباني الصناعية',
-    ru: 'Промышленные ограждающие системы'
+    // ar/ru intentionally distinct from the /systems hub's title/H1 (which is
+    // exactly 'أنظمة أغلفة المباني الصناعية' / 'Промышленные ограждающие
+    // системы'). This name feeds seo.title, hero.h1, OG title, and the
+    // Service/Article schema name/headline for this page (see
+    // localizedSolutionContent below), so it is the single source that must
+    // differ from the hub to resolve the title/H1 duplication. fa already
+    // has its own faOverride and does not use this value; en is unaffected.
+    ar: 'تنسيق الأنظمة المتعددة في الغلاف الصناعي',
+    ru: 'Координация нескольких систем ограждающих конструкций'
   },
   'panel-material-optimization': {
     en: 'Panel material optimization',

@@ -189,11 +189,15 @@ async function assertStep1LinksPreserved(locale) {
 }
 
 // 7. Step 2's industrial-envelope-systems content is preserved (fa only was rewritten).
+// fa/en pinned by Step 2 and untouched since. ar/ru were intentionally
+// updated in Step 4 (they previously duplicated the hub's exact title/H1;
+// see scripts/test-systems-envelope-cannibalization.mjs for the dedicated
+// hub-vs-detail distinctness assertions).
 const step2Baseline = {
   fa: {title: 'هماهنگی مهندسی رابط‌های پوسته ساختمان صنعتی | SIPANEL', h1: 'هماهنگی چند سیستم در پوسته ساختمان صنعتی'},
   en: {title: 'Industrial Envelope Systems | SIPANEL', h1: 'Industrial Envelope Systems Coordinated as One Execution Package.'},
-  ar: {title: 'أنظمة أغلفة المباني الصناعية | SIPANEL', h1: 'أنظمة أغلفة المباني الصناعية'},
-  ru: {title: 'Промышленные ограждающие системы | SIPANEL', h1: 'Промышленные ограждающие системы'}
+  ar: {title: 'تنسيق الأنظمة المتعددة في الغلاف الصناعي | SIPANEL', h1: 'تنسيق الأنظمة المتعددة في الغلاف الصناعي'},
+  ru: {title: 'Координация нескольких систем ограждающих конструкций | SIPANEL', h1: 'Координация нескольких систем ограждающих конструкций'}
 };
 
 async function assertStep2ContentPreserved(locale) {
