@@ -46,6 +46,9 @@ export function SystemsShowcase() {
         <header className="systems-showcase__header">
           <h2 id="systems-showcase-title">{t('title')}</h2>
           <p>{t('description')}</p>
+          <p className="systems-showcase__intro-link">
+            {t('introText')} <Link href="/systems">{t('introCta')}</Link>
+          </p>
         </header>
 
         <div className="systems-showcase__grid">

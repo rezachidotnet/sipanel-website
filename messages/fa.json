@@ -23,6 +23,7 @@
   "footer": {
     "navigationLabel": "ناوبری پابرگ",
     "systems": "پوشانه‌ها",
+    "systemsAll": "همه سیستم‌های پوشش",
     "systemsSandwich": "ساندویچ پانل",
     "systemsStanding": "Standing Seam",
     "systemsCladding": "Aluminium Cladding",
@@ -406,6 +407,8 @@
   "systemsShowcase": {
     "title": "راهکارهای پوشش صنعتی",
     "description": "از طراحی و شاپ دراوینگ تا تأمین و نصب، SIPANEL راهکارهای پوشش صنعتی را به\u200cصورت یکپارچه ارائه می\u200cکند.",
+    "introText": "بر اساس نوع ساختمان، هندسه سازه، زیرسازی و شرایط اقلیمی پروژه، می‌توانید پیش از انتخاب،",
+    "introCta": "سیستم‌های پوشش سقف و نما را مقایسه کنید",
     "learnMore": "اطلاعات بیشتر",
     "sandwichPanel": "سیستم\u200cهای ساندویچ پانل",
     "sandwichPanelDesc": "پانل\u200cهای عایق دیوار و سقف با هسته عایق حرارتی برای ساختمان\u200cهای صنعتی.",

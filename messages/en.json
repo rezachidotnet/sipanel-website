@@ -23,6 +23,7 @@
   "footer": {
     "navigationLabel": "Footer navigation",
     "systems": "Systems",
+    "systemsAll": "All Systems",
     "systemsSandwich": "Sandwich Panels",
     "systemsStanding": "Standing Seam",
     "systemsCladding": "Aluminium Cladding",
@@ -405,6 +406,8 @@
   "systemsShowcase": {
     "title": "Industrial Envelope Systems",
     "description": "From engineering and shop drawings to procurement and installation, SIPANEL delivers integrated industrial envelope systems.",
+    "introText": "Depending on building type, structural geometry, substructure, and project climate, you can",
+    "introCta": "compare all roof and facade covering systems",
     "learnMore": "Learn More",
     "sandwichPanel": "Sandwich Panel Systems",
     "sandwichPanelDesc": "Insulated wall and roof panels with thermal insulation cores for industrial buildings.",

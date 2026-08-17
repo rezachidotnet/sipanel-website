@@ -25,6 +25,7 @@ export function Footer() {
         <nav className="site-footer__columns" aria-label={footer('navigationLabel')}>
           <div className="site-footer__column">
             <h2>{footer('systems')}</h2>
+            <Link href="/systems" className="site-footer__link">{footer('systemsAll')}</Link>
             <Link href="/systems/sandwich-panel-systems" className="site-footer__link">{footer('systemsSandwich')}</Link>
             <Link href="/systems/standing-seam-zip-tech-roofing" className="site-footer__link">{footer('systemsStanding')}</Link>
             <Link href="/systems/aluminium-cladding-covering" className="site-footer__link">{footer('systemsCladding')}</Link>

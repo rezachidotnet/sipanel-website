@@ -232,6 +232,12 @@ function buildRelatedServices(locale: Locale, links: SeoRelatedServiceLink[]): S
       fa: {title: 'کلادینگ و پوشش آلومینیومی', description: 'برنامه‌ریزی درز نما و متریال'},
       ar: {title: 'الكسوة والتغطية بالألمنيوم', description: 'تخطيط فواصل الواجهة والمواد'},
       ru: {title: 'Алюминиевая облицовка и покрытие', description: 'Планирование фасадных стыков и материалов'}
+    },
+    '/systems': {
+      en: {title: 'Compare Roof & Facade Covering Systems', description: 'Compare sandwich panel, standing seam, aluminium cladding, and daylighting systems'},
+      fa: {title: 'مقایسه سیستم‌های پوشش سقف و نما', description: 'مقایسه و انتخاب بین ساندویچ پانل، ایستادرز، کلادینگ آلومینیومی و نورگیر'},
+      ar: {title: 'مقارنة أنظمة تغطية السقف والواجهة', description: 'قارن بين ألواح الساندويتش والدرز القائم والكسوة الألمنيوم وأنظمة الإضاءة الطبيعية'},
+      ru: {title: 'Сравнить системы покрытия кровли и фасада', description: 'Сравните сэндвич-панели, фальцевую кровлю, алюминиевую облицовку и системы освещения'}
     }
   };
 
@@ -818,6 +824,11 @@ export const seoLandingPages = [
         title: 'Standing Seam & ZIP Tech Roofing',
         path: '/systems/standing-seam-zip-tech-roofing',
         description: 'Roof waterproofing engineering'
+      },
+      {
+        title: 'Compare Roof & Facade Covering Systems',
+        path: '/systems',
+        description: 'Compare all systems before choosing a leakage-prevention approach'
       }
     ],
     qualityCheckpointsTitle: 'industrial roof leakage prevention Quality Checkpoints',
