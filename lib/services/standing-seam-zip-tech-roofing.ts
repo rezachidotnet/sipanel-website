@@ -215,10 +215,6 @@ const fa: LocalizedContent = {
         answer: 'بله. چیدمان ورق، مسیر درز، موقعیت کلیپ، فلاشینگ و ترتیب نصب در شاپ‌دراوینگ پیش از تأمین مستند می‌شود.'
       },
       {
-        question: 'سی‌پانل فقط تأمین‌کننده است یا نصب هم انجام می‌دهد؟',
-        answer: 'سی‌پانل اجرای مهندسی‌شده ارائه می‌دهد — از بررسی هندسه سقف و شاپ‌دراوینگ تا هماهنگی تأمین و نصب کنترل‌شده با چک‌پوینت‌های کیفیت.'
-      },
-      {
         question: 'حرکت حرارتی در سقف‌های دهانه بزرگ چگونه مدیریت می‌شود؟',
         answer: 'کلیپ‌های لغزنده، فاصله درز و جزئیات آگاه از حرکت در شاپ‌دراوینگ تعریف می‌شود تا تنش حرارتی در سطوح بزرگ سقف کنترل شود.'
       },
@@ -369,10 +365,6 @@ const en: LocalizedContent = {
       {
         question: 'Does SIPANEL provide roof shop drawings?',
         answer: 'Yes. Sheet layout, seam paths, clip positions, flashings, and installation sequence are documented in shop drawings before procurement.'
-      },
-      {
-        question: 'Is SIPANEL a supplier only or does it also handle installation?',
-        answer: 'SIPANEL provides engineering-controlled execution — from roof geometry review and shop drawings to procurement coordination and controlled installation with quality checkpoints.'
       },
       {
         question: 'How is thermal movement managed in long-span roofing?',
@@ -527,10 +519,6 @@ const ar: LocalizedContent = {
         answer: 'نعم. يتم توثيق تخطيط الألواح ومسارات الدرزات ومواقع المشابك والفلاشينغ وتسلسل التركيب في رسومات الشوب قبل التوريد.'
       },
       {
-        question: 'هل SIPANEL مورد فقط أم تتولى التركيب أيضاً؟',
-        answer: 'توفر SIPANEL تنفيذاً منضبطاً هندسياً — من مراجعة هندسة السقف ورسومات الشوب إلى تنسيق التوريد والتركيب المنضبط مع نقاط فحص الجودة.'
-      },
-      {
         question: 'كيف تتم إدارة الحركة الحرارية في الأسقف ذات الفتحات الكبيرة؟',
         answer: 'يتم تحديد المشابك المنزلقة وتباعد الدرزات والتفصيل الواعي للحركة في رسومات الشوب للتحكم في الإجهاد الحراري عبر أسطح السقف الكبيرة.'
       },
@@ -681,10 +669,6 @@ const ru: LocalizedContent = {
       {
         question: 'Предоставляет ли SIPANEL монтажные чертежи кровли?',
         answer: 'Да. Раскладка листов, пути фальцев, позиции кляммеров, примыкания и последовательность монтажа документируются в монтажных чертежах до закупки.'
-      },
-      {
-        question: 'SIPANEL — только поставщик или также выполняет монтаж?',
-        answer: 'SIPANEL обеспечивает инженерно-контролируемое исполнение — от проверки геометрии кровли и монтажных чертежей до координации закупок и контролируемого монтажа с контрольными точками качества.'
       },
       {
         question: 'Как управляется тепловое расширение на кровлях большого пролёта?',

@@ -96,9 +96,7 @@ const copy: Record<
     closingText: string;
     closingContactCta: string;
     closingProjectsCta: string;
-    proofTitle: string;
     comparisonTitle: string;
-    proofItems: Array<{title: string; description: string}>;
     comparisonRows: Array<{label: string; typical: string; sipanel: string}>;
     comparisonColumns: {typical: string; sipanel: string};
   }
@@ -222,11 +220,6 @@ const copy: Record<
           'ریسک نشتی با طراحی مسیر آب، کنترل شیب، هماهنگی فلاشینگ، جزئیات اطراف بازشوها و نفوذها، انتخاب اتصال مناسب و کنترل نصب کاهش می\u200Cیابد. این تصمیم\u200Cها باید قبل از خرید متریال و شروع نصب مشخص شوند.'
       },
       {
-        question: 'سی\u200Cپانل فقط متریال تأمین می\u200Cکند یا مهندسی و اجرا هم انجام می\u200Cدهد؟',
-        answer:
-          'تمرکز سی\u200Cپانل فقط فروش متریال نیست. خدمات می\u200Cتواند شامل بررسی فنی، شاپ\u200Cدراوینگ، انتخاب متریال، برنامه تأمین، کنترل کیفیت و اجرای مهندسی\u200Cشده باشد.'
-      },
-      {
         question: 'برای بررسی فنی چه اطلاعاتی لازم است؟',
         answer:
           'نقشه معماری و سازه، کاربری فضا، موقعیت و اقلیم پروژه، ابعاد و دهانه\u200Cها، شیب سقف، محل بازشوها و تجهیزات، انتظار عایق\u200Cکاری، محدودیت زمان اجرا و سطح مورد انتظار ظاهر نما اطلاعات اصلی هستند.'
@@ -242,14 +235,6 @@ const copy: Record<
       'اگر پروژه در مرحله طراحی، برآورد یا تأمین است، بررسی فنی زودهنگام می\u200Cتواند از تغییر سفارش، پرت متریال و ریسک اجرایی جلوگیری کند.',
     closingContactCta: 'ارسال درخواست بررسی فنی',
     closingProjectsCta: 'مشاهده نمونه پروژه\u200Cها',
-    proofTitle: 'زنجیره مهندسی SIPANEL',
-    proofItems: [
-      {title: 'طراحی شاپ', description: 'کنترل کامل جزئیات اجرایی و نقشه\u200Cهای شاپ'},
-      {title: 'منطق آب\u200Cبندی', description: 'طراحی سیستم\u200Cهای آب\u200Cبندی بر اساس عملکرد و اقلیم'},
-      {title: 'BOM و متریال', description: 'لیست کامل متریال با کنترل کیفیت و ردیابی'},
-      {title: 'تأمین هوشمند', description: 'تأمین به\u200Cموقع، کنترل کیفیت و کاهش هزینه\u200Cهای پروژه'},
-      {title: 'نصب مهندسی', description: 'اجرا توسط تیم\u200Cهای متخصص و کنترل\u200Cشده'}
-    ],
     comparisonTitle: 'اجرای معمول را با نصب مهندسی\u200Cشده مقایسه کنید',
     comparisonColumns: {typical: 'رویکرد معمول', sipanel: 'رویکرد مهندسی SIPANEL'},
     comparisonRows: [
@@ -399,11 +384,6 @@ const copy: Record<
           'Leakage risk is reduced by designing the water path, checking roof slope, coordinating flashing, detailing openings and penetrations, selecting the right fixing method, and controlling installation before decisions are left to site interpretation.'
       },
       {
-        question: 'Does SIPANEL only supply material or also handle engineering and execution?',
-        answer:
-          'SIPANEL is not limited to material supply. The scope can include engineering review, shop drawings, material selection, procurement planning, quality control, and engineered installation.'
-      },
-      {
         question: 'What information is needed for an engineering review?',
         answer:
           'Architectural and structural drawings, building use, project location and climate, spans and dimensions, roof slope, openings and equipment locations, insulation expectations, schedule limits, and facade appearance requirements are the key inputs.'
@@ -419,14 +399,6 @@ const copy: Record<
       'If the project is in design, estimation, or procurement, early engineering review can reduce reordering, material waste, and execution risk.',
     closingContactCta: 'Request engineering review',
     closingProjectsCta: 'View project references',
-    proofTitle: 'SIPANEL Engineering Chain',
-    proofItems: [
-      {title: 'Shop Drawing', description: 'Full control over execution details and shop drawings'},
-      {title: 'Waterproofing Logic', description: 'Climate and performance-based waterproofing design'},
-      {title: 'BOM & Materials', description: 'Complete material list with QC and tracking'},
-      {title: 'Smart Procurement', description: 'On-time procurement, QC and project cost reduction'},
-      {title: 'Engineered Installation', description: 'Execution by specialized, controlled teams'}
-    ],
     comparisonTitle: 'Compare typical vs. engineered installation',
     comparisonColumns: {typical: 'Typical Approach', sipanel: 'SIPANEL Engineering'},
     comparisonRows: [
@@ -550,11 +522,6 @@ const copy: Record<
           'يتم تقليل مخاطر التسرب عبر تصميم مسار المياه وفحص ميل السقف وتنسيق الفلاشينغ وتفاصيل الفتحات والاختراقات واختيار طريقة التثبيت المناسبة وضبط التركيب قبل ترك القرارات لتفسير الموقع.'
       },
       {
-        question: 'هل توفر SIPANEL المواد فقط أم تشمل الهندسة والتنفيذ؟',
-        answer:
-          'لا يقتصر نطاق SIPANEL على توريد المواد. يمكن أن يشمل مراجعة هندسية ورسومات ورشة واختيار مواد وتخطيط توريد ومراقبة جودة وتركيباً هندسياً.'
-      },
-      {
         question: 'ما المعلومات المطلوبة للمراجعة الهندسية؟',
         answer:
           'الرسومات المعمارية والإنشائية، استخدام المبنى، موقع المشروع ومناخه، الأبعاد والبحور، ميل السقف، الفتحات ومواقع المعدات، متطلبات العزل، حدود الجدول الزمني ومتطلبات مظهر الواجهة هي المدخلات الأساسية.'
@@ -570,14 +537,6 @@ const copy: Record<
       'إذا كان المشروع في مرحلة التصميم أو التقدير أو التوريد، فإن المراجعة الهندسية المبكرة يمكن أن تقلل إعادة الطلب وهدر المواد ومخاطر التنفيذ.',
     closingContactCta: 'طلب مراجعة هندسية',
     closingProjectsCta: 'عرض مراجع المشاريع',
-    proofTitle: 'سلسلة SIPANEL الهندسية',
-    proofItems: [
-      {title: 'رسومات الورشة', description: 'تحكم كامل في تفاصيل التنفيذ'},
-      {title: 'منطق العزل المائي', description: 'تصميم العزل المائي حسب الأداء والمناخ'},
-      {title: 'BOM والمواد', description: 'قائمة مواد كاملة مع مراقبة الجودة'},
-      {title: 'التوريد الذكي', description: 'توريد في الوقت المناسب وخفض التكاليف'},
-      {title: 'التركيب الهندسي', description: 'تنفيذ بواسطة فرق متخصصة'}
-    ],
     comparisonTitle: 'قارن التنفيذ العادي مع التركيب الهندسي',
     comparisonColumns: {typical: 'النهج العادي', sipanel: 'نهج SIPANEL الهندسي'},
     comparisonRows: [
@@ -706,11 +665,6 @@ const copy: Record<
           'Риск протечек снижается через проектирование пути воды, проверку уклона, координацию примыканий, деталировку проемов и проходок, выбор крепления и контроль монтажа до того, как решения останутся на усмотрение площадки.'
       },
       {
-        question: 'SIPANEL только поставляет материалы или также выполняет инженеринг и монтаж?',
-        answer:
-          'SIPANEL не ограничивается поставкой материалов. Объем может включать инженерную проверку, рабочие чертежи, подбор материалов, планирование поставки, контроль качества и инженерный монтаж.'
-      },
-      {
         question: 'Какая информация нужна для инженерной проверки?',
         answer:
           'Нужны архитектурные и конструктивные чертежи, назначение здания, локация и климат, пролеты и размеры, уклон кровли, проемы и оборудование, требования к изоляции, ограничения графика и требования к виду фасада.'
@@ -726,14 +680,6 @@ const copy: Record<
       'Если проект находится на стадии проектирования, оценки или закупки, ранняя инженерная проверка может снизить повторные заказы, отходы материалов и риск выполнения.',
     closingContactCta: 'Запросить инженерную проверку',
     closingProjectsCta: 'Посмотреть проекты',
-    proofTitle: 'Инженерная цепочка SIPANEL',
-    proofItems: [
-      {title: 'Цеховые чертежи', description: 'Полный контроль деталей исполнения'},
-      {title: 'Логика гидроизоляции', description: 'Проектирование на основе климата и эксплуатации'},
-      {title: 'BOM и материалы', description: 'Полный список материалов с контролем качества'},
-      {title: 'Умные закупки', description: 'Своевременные поставки и снижение затрат'},
-      {title: 'Инженерный монтаж', description: 'Выполнение специализированными бригадами'}
-    ],
     comparisonTitle: 'Сравните обычный и инженерный монтаж',
     comparisonColumns: {typical: 'Обычный подход', sipanel: 'Инженерия SIPANEL'},
     comparisonRows: [
@@ -895,34 +841,6 @@ const heroAlt: Record<Locale, string> = {
   ar: 'نظرة فنية على أنظمة تغطية السقف والواجهة من SIPANEL',
   ru: 'Технический вид систем покрытия кровли и фасадов SIPANEL'
 };
-
-const proofIcons = [
-  /* Shop Drawing */
-  <svg key="icon-0" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M8 10h12M8 14h8M8 18h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>,
-  /* Waterproofing */
-  <svg key="icon-1" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M14 4s-7 8-7 13a7 7 0 0014 0c0-5-7-13-7-13z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    <path d="M11 18a3 3 0 003 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>,
-  /* BOM */
-  <svg key="icon-2" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="6" y="3" width="16" height="22" rx="2" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M10 9h8M10 13h6M10 17h7M10 21h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>,
-  /* Procurement */
-  <svg key="icon-3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M4 8h3l2 14h14l2-10H9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="12" cy="25" r="1.5" stroke="currentColor" strokeWidth="1.5" />
-    <circle cx="21" cy="25" r="1.5" stroke="currentColor" strokeWidth="1.5" />
-  </svg>,
-  /* Installation */
-  <svg key="icon-4" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M16 3l-2 8h6l-8 14 2-8H8l8-14z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-  </svg>
-];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
@@ -1190,26 +1108,6 @@ export default async function SystemsOverviewPage({params}: Props) {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Technical Proof Strip ── */}
-      <section className="systems-proof-strip" aria-labelledby="systems-proof-title">
-        <div className="container-shell">
-          <h2 id="systems-proof-title" className="visually-hidden">
-            {content.proofTitle}
-          </h2>
-          <div className="systems-proof-grid">
-            {content.proofItems.map((item, i) => (
-              <div className="systems-proof-item" key={item.title}>
-                <span className="systems-proof-item__icon">{proofIcons[i]}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </div>
             ))}
           </div>
         </div>

@@ -222,10 +222,6 @@ const fa: LocalizedContent = {
         question: 'آب‌بندی درزهای نما چگونه کنترل می‌شود؟',
         answer: 'نوع سیلانت، عرض درز، عمق پشت‌بند و ترتیب اجرای سیلانت پیش از نصب بررسی و تعریف می‌شود تا ریسک نفوذ آب کاهش یابد.'
       },
-      {
-        question: 'سی‌پانل فقط تأمین‌کننده نما است یا نصب هم انجام می‌دهد؟',
-        answer: 'سی‌پانل اجرای مهندسی‌شده ارائه می‌دهد — از بررسی هندسه نما و شاپ‌دراوینگ تا هماهنگی تأمین و نصب کنترل‌شده با چک‌پوینت‌های کیفیت.'
-      }
     ]
   },
   conversionCta: {
@@ -378,10 +374,6 @@ const en: LocalizedContent = {
         question: 'How is joint waterproofing controlled on the facade?',
         answer: 'Sealant type, joint width, backer rod depth, and sealant application sequence are reviewed and defined before installation to reduce water ingress risk.'
       },
-      {
-        question: 'Is SIPANEL a supplier only or does it also handle installation?',
-        answer: 'SIPANEL provides engineering-controlled execution — from facade geometry review and shop drawings to procurement coordination and controlled installation with quality checkpoints.'
-      }
     ]
   },
   conversionCta: {
@@ -534,10 +526,6 @@ const ar: LocalizedContent = {
         question: 'كيف يتم التحكم في عزل مفاصل الواجهة؟',
         answer: 'تتم مراجعة وتحديد نوع مانع التسرب وعرض المفصل وعمق الحشوة وتسلسل تطبيق مانع التسرب قبل التركيب لتقليل مخاطر تسرب المياه.'
       },
-      {
-        question: 'هل SIPANEL مورد فقط أم تتولى التركيب أيضاً؟',
-        answer: 'توفر SIPANEL تنفيذاً منضبطاً هندسياً — من مراجعة هندسة الواجهة ورسومات الشوب إلى تنسيق التوريد والتركيب المنضبط مع نقاط فحص الجودة.'
-      }
     ]
   },
   conversionCta: {
@@ -690,10 +678,6 @@ const ru: LocalizedContent = {
         question: 'Как контролируется гидроизоляция стыков фасада?',
         answer: 'Тип герметика, ширина стыка, глубина подложки и последовательность нанесения герметика определяются до монтажа для снижения риска проникновения воды.'
       },
-      {
-        question: 'SIPANEL — только поставщик или также выполняет монтаж?',
-        answer: 'SIPANEL обеспечивает инженерно-контролируемое исполнение — от проверки геометрии фасада и монтажных чертежей до координации закупок и контролируемого монтажа с контрольными точками качества.'
-      }
     ]
   },
   conversionCta: {
