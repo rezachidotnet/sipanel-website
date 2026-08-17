@@ -202,6 +202,13 @@ type SeoLandingPageDefinition = {
   faqFocus: string;
   conversionHeadline: string;
   conversionText: string;
+  /**
+   * Optional fully-authored fa content, used instead of the shared generic
+   * fa/ar/ru template. Only set this when the generic template's search
+   * intent genuinely does not fit the page (e.g. to resolve keyword
+   * cannibalization with another page) — it does not affect en/ar/ru.
+   */
+  faOverride?: SeoLandingPageLocaleContent;
 };
 
 function buildLocalizedRoutes(routeSlug: string): Record<Locale, string> {
@@ -390,6 +397,10 @@ const localizedSolutionUi = {
 } satisfies Record<Exclude<Locale, 'en'>, Record<string, string>>;
 
 function localizedSolutionContent(def: SeoLandingPageDefinition, locale: Locale): SeoLandingPageLocaleContent {
+  if (locale === 'fa' && def.faOverride) {
+    return def.faOverride;
+  }
+
   if (locale === 'en') {
     return {
       seo: {
@@ -1082,6 +1093,11 @@ export const seoLandingPages = [
         title: 'Aluminium Cladding & Covering',
         path: '/systems/aluminium-cladding-covering',
         description: 'Facade engineering and cladding control'
+      },
+      {
+        title: 'Compare Roof & Facade Covering Systems',
+        path: '/systems',
+        description: 'Compare and select a covering system before coordinating interfaces'
       }
     ],
     qualityCheckpointsTitle: 'industrial envelope systems Quality Checkpoints',
@@ -1101,7 +1117,173 @@ export const seoLandingPages = [
     faqFocus: 'multi-system coordination, envelope sequencing, and execution control',
     conversionHeadline: 'Review industrial envelope systems Before Execution Starts.',
     conversionText:
-      'SIPANEL can review roof, wall, facade, and interface risks before the envelope package moves into execution.'
+      'SIPANEL can review roof, wall, facade, and interface risks before the envelope package moves into execution.',
+    // fa uses a fully authored override (below) instead of the shared generic
+    // fa/ar/ru template: the generic template made this page's title/H1/meta
+    // read as a near-duplicate of the /systems hub's primary keyword. See
+    // GSC_SYSTEMS_HUB_DEEP_AUDIT_2026-08-17.md, P0-2. en/ar/ru are untouched.
+    faOverride: {
+      seo: {
+        primaryKeyword: 'هماهنگی رابط سیستم‌های پوسته ساختمان صنعتی',
+        title: 'هماهنگی مهندسی رابط‌های پوسته ساختمان صنعتی | SIPANEL',
+        metaDescription:
+          'وقتی سقف، نما، نورگیر یا زیرسازی یک پروژه صنعتی با چند سیستم متفاوت اجرا می‌شود، سی‌پانل هماهنگی محل اتصال، شاپ‌دراوینگ، تأمین و توالی نصب را پیش از شروع کار بررسی می‌کند.',
+        h1: 'هماهنگی چند سیستم در پوسته ساختمان صنعتی',
+        shortIntro:
+          'این بررسی برای پروژه‌هایی است که سقف، نما، نورگیر یا بخش‌های مختلف پوسته را با بیش از یک سیستم پوشش اجرا می‌کنند و باید محل اتصال، تأمین و توالی نصب میان این سیستم‌ها هماهنگ شود.'
+      },
+      hero: {
+        eyebrow: 'هماهنگی پوسته ساختمان',
+        h1: 'هماهنگی چند سیستم در پوسته ساختمان صنعتی',
+        shortIntro: 'سی‌پانل نقاط اتصال میان سیستم‌های مختلف پوسته را پیش از سفارش متریال و شروع اجرا بررسی و هماهنگ می‌کند.',
+        trustMicrocopy: 'بازبینی مهندسی رابط‌ها پیش از تأمین و اجرا، برای پروژه‌هایی با بیش از یک سیستم پوشش.',
+        primaryCta: 'درخواست بررسی فنی رابط‌ها',
+        secondaryCta: 'بررسی هزینه پروژه',
+        heroVisualDirection: 'در انتظار تصویر فنی هماهنگی رابط‌ها',
+        heroVisualAlt: 'در انتظار تصویر فنی هماهنگی رابط‌ها'
+      },
+      searchIntentProblem: {
+        title: 'چرا محل اتصال سیستم‌ها به هماهنگی مهندسی نیاز دارد؟',
+        cards: [
+          {
+            title: 'تفاوت زیرسازی و هندسه',
+            description: 'هر سیستم پوشش زیرسازی، جهت نصب و هندسه اتصال متفاوتی دارد که باید در محل تلاقی دو سیستم هماهنگ شود.'
+          },
+          {
+            title: 'مسیر آب و ترتیب اجرا',
+            description: 'اگر مسیر انتقال آب و ترتیب اجرای سیستم‌های مجاور از قبل هماهنگ نشود، ریسک نشتی در همان نقطه اتصال افزایش می‌یابد.'
+          },
+          {
+            title: 'تلرانس و مرز مسئولیت',
+            description: 'تلرانس‌های ساخت و نصب و مرز مسئولیت میان پیمانکاران مختلف باید پیش از اجرا مشخص باشد تا اختلاف در کارگاه ایجاد نشود.'
+          }
+        ]
+      },
+      technicalContext: {
+        title: 'رابط‌های حساس در پوسته ساختمان',
+        intro: 'برخی نقاط اتصال میان سیستم‌های پوشش بیشتر از بقیه در معرض ریسک اجرایی و نشتی هستند و باید با جزئیات مشخص کنترل شوند.',
+        points: [
+          'اتصال سقف فلزی به نورگیر',
+          'اتصال پوشش سقف به نما',
+          'اتصال کلادینگ آلومینیومی به بازشوها',
+          'تغییر سیستم در لبه‌ها و شکست‌های هندسی سقف یا نما',
+          'اتصال اجزای پوشش به زیرسازی مشترک'
+        ]
+      },
+      sipanelSolution: {
+        title: 'نقش سی‌پانل در هماهنگی رابط‌ها',
+        pillars: [
+          {title: 'طراحی هماهنگ', description: 'جزئیات اتصال میان سیستم‌های مختلف پیش از سفارش متریال بررسی و هماهنگ می‌شود.'},
+          {
+            title: 'تأمین یکپارچه',
+            description: 'برنامه تأمین سیستم‌های مختلف به‌صورت هماهنگ مدیریت می‌شود تا در نقطه اتصال کمبود یا ناهماهنگی ایجاد نشود.'
+          },
+          {title: 'اجرای هماهنگ', description: 'توالی نصب سیستم‌های مجاور طوری تعیین می‌شود که یک اکیپ مانع کار اکیپ دیگر نشود.'}
+        ]
+      },
+      engineeringWorkflow: {
+        title: 'فرآیند هماهنگی از طراحی تا نصب',
+        steps: [
+          {title: 'شناسایی رابط‌ها', description: 'نقاط اتصال میان سیستم‌های مختلف پوسته در نقشه‌ها شناسایی می‌شود.'},
+          {title: 'تطبیق شاپ‌دراوینگ‌ها', description: 'شاپ‌دراوینگ هر سیستم با سیستم مجاور تطبیق داده می‌شود تا جزئیات اتصال هم‌خوان باشد.'},
+          {title: 'کنترل زیرسازی و نقاط اتصال', description: 'زیرسازی و نقاط اتصال سیستم‌های مجاور پیش از تأمین متریال بررسی می‌شود.'},
+          {title: 'هماهنگی تأمین', description: 'برنامه تأمین متریال سیستم‌های مختلف با یکدیگر هماهنگ می‌شود.'},
+          {title: 'تعیین ترتیب نصب', description: 'ترتیب نصب سیستم‌های متصل بر اساس توالی اجرایی کارگاه مشخص می‌شود.'},
+          {title: 'کنترل و تحویل نقاط مشترک', description: 'نقاط اتصال مشترک پیش از تحویل پروژه بازبینی می‌شود.'}
+        ]
+      },
+      technicalProof: {
+        title: 'شواهد فنی پیش از اجرا',
+        description: 'مستندات فنی هماهنگی رابط‌ها برای این صفحه هنوز در انتظار تأیید و انتشار است.',
+        pendingLabel: 'در انتظار سند فنی تاییدشده'
+      },
+      applicationDetails: {
+        title: 'تفاوت این خدمت با انتخاب سیستم پوشش',
+        items: [
+          {
+            title: 'انتخاب سیستم پوشش',
+            description: 'مقایسه و انتخاب میان ساندویچ پانل، ایستادرز، کلادینگ آلومینیومی و نورگیر در هاب سیستم‌های SIPANEL انجام می‌شود.'
+          },
+          {
+            title: 'هماهنگی رابط‌ها',
+            description: 'این صفحه درباره هماهنگی فنی میان سیستم‌هایی است که از قبل برای پروژه انتخاب شده‌اند، در نقاط اتصال، تأمین و توالی اجرا.'
+          }
+        ],
+        relatedServices: buildRelatedServices('fa', [
+          {title: 'Sandwich Panel Systems', path: '/systems/sandwich-panel-systems', description: 'Panel envelope engineering'},
+          {
+            title: 'Standing Seam & ZIP Tech Roofing',
+            path: '/systems/standing-seam-zip-tech-roofing',
+            description: 'Roof waterproofing engineering'
+          },
+          {
+            title: 'Aluminium Cladding & Covering',
+            path: '/systems/aluminium-cladding-covering',
+            description: 'Facade engineering and cladding control'
+          },
+          {
+            title: 'Compare Roof & Facade Covering Systems',
+            path: '/systems',
+            description: 'Compare and select a covering system before coordinating interfaces'
+          }
+        ])
+      },
+      qualityCheckpoints: {
+        title: 'چه اطلاعاتی برای بررسی پروژه لازم است؟',
+        items: [
+          'نقشه‌های معماری',
+          'نقشه‌های سازه و زیرسازی',
+          'نوع سیستم‌های موردنظر برای سقف، نما یا نورگیر',
+          'هندسه و ابعاد پروژه',
+          'شرایط اقلیمی محل اجرا',
+          'برنامه زمانی اجرا',
+          'حدود مسئولیت طراح، تأمین‌کننده و مجری'
+        ]
+      },
+      relatedCaseStudies: {
+        title: 'شواهد پروژه‌ای مرتبط',
+        pendingLabel: 'شواهد پروژه‌ای مرتبط با هماهنگی چندسیستمی هنوز در انتظار انتشار است.',
+        cta: 'مشاهده پروژه‌ها'
+      },
+      relatedResources: {
+        title: 'منابع مهندسی مرتبط',
+        pendingLabel: 'منبع مهندسی اختصاصی برای هماهنگی رابط‌ها هنوز در انتظار انتشار است.',
+        cta: 'مشاهده منبع مهندسی'
+      },
+      faq: {
+        title: 'سوالات متداول',
+        items: [
+          {
+            question: 'رابط یا نقطه اتصال در پوسته ساختمان صنعتی به چه معناست؟',
+            answer:
+              'رابط یا interface به محلی گفته می‌شود که دو سیستم پوشش متفاوت، مانند سقف و نما یا نما و نورگیر، به هم می‌رسند و باید جزئیات اتصال، آب‌بندی و زیرسازی آن‌ها هماهنگ شود.'
+          },
+          {
+            question: 'هماهنگی چندسیستمی برای چه پروژه‌هایی لازم است؟',
+            answer:
+              'وقتی یک پروژه صنعتی بیش از یک سیستم پوشش دارد، مثلاً ترکیب سقف ساندویچ پانل با نمای آلومینیومی یا نورگیر، هماهنگی نقاط اتصال میان این سیستم‌ها پیش از اجرا لازم است.'
+          },
+          {
+            question: 'مسئولیت جزئیات محل اتصال میان دو سیستم بر عهده کیست؟',
+            answer:
+              'بدون هماهنگی صریح، مسئولیت جزئیات محل اتصال ممکن است میان طراح، تأمین‌کننده و مجری نامشخص بماند. سی‌پانل این جزئیات را پیش از اجرا مشخص و مستند می‌کند.'
+          },
+          {
+            question: 'چرا هماهنگی رابط‌ها باید پیش از تأمین متریال انجام شود؟',
+            answer:
+              'اگر جزئیات اتصال بعد از سفارش متریال یا شروع نصب مشخص شود، احتمال تغییر سفارش، توقف کار و اختلاف اجرایی در کارگاه افزایش می‌یابد.'
+          }
+        ]
+      },
+      conversionCta: {
+        headline: 'پیش از اجرا، هماهنگی رابط‌های پروژه را بررسی کنید',
+        text:
+          'نقشه‌های معماری و سازه، نوع سیستم‌های موردنظر و برنامه اجرا را ارسال کنید تا تیم مهندسی سی‌پانل نقاط اتصال و ریسک‌های هماهنگی را پیش از شروع کار بررسی کند.',
+        primaryCta: 'درخواست بررسی فنی رابط‌ها',
+        secondaryCta: 'تماس از طریق واتساپ'
+      },
+      schemas: {service: true, article: true, faq: true, breadcrumb: true}
+    }
   }),
   buildSeoLandingPage({
     slug: 'panel-material-optimization',
