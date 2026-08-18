@@ -214,6 +214,8 @@
 .projects-index-filter:has(#projects-filter-standing:checked) + .projects-index-grid .projects-index-card:not([data-filter~='standing']),
 .projects-index-filter:has(#projects-filter-cladding:checked) + .projects-index-grid .projects-index-card:not([data-filter~='cladding']),
 .projects-index-filter:has(#projects-filter-transparent-roofing:checked) + .projects-index-grid .projects-index-card:not([data-filter~='transparent-roofing']),
+.projects-index-filter:has(#projects-filter-tensile-fabric-membrane-structures:checked) + .projects-index-grid .projects-index-card:not([data-filter~='tensile-fabric-membrane-structures']),
+.projects-index-filter:has(#projects-filter-retractable-roof-covering-systems:checked) + .projects-index-grid .projects-index-card:not([data-filter~='retractable-roof-covering-systems']),
 .projects-index-filter:has(#projects-filter-envelope:checked) + .projects-index-grid .projects-index-card:not([data-filter~='envelope']) {
   display: none;
 }

@@ -103,6 +103,8 @@ const copy: Record<
       standing: string;
       cladding: string;
       'transparent-roofing': string;
+      'tensile-fabric-membrane-structures': string;
+      'retractable-roof-covering-systems': string;
     };
     primaryCta: string;
     costReviewCta: string;
@@ -134,7 +136,9 @@ const copy: Record<
       sandwich: 'Sandwich panel systems',
       standing: 'Standing seam roofing',
       cladding: 'Aluminium cladding',
-      'transparent-roofing': 'Glass & Polycarbonate'
+      'transparent-roofing': 'Glass & Polycarbonate',
+      'tensile-fabric-membrane-structures': 'Tensile fabric & membrane coverings',
+      'retractable-roof-covering-systems': 'Retractable roof coverings'
     },
     primaryCta: 'Get Free Engineering Review',
     costReviewCta: 'Download Technical Catalog',
@@ -165,7 +169,9 @@ const copy: Record<
       sandwich: 'ساندویچ پانل',
       standing: 'سقف ایستادرز',
       cladding: 'کلادینگ آلومینیومی',
-      'transparent-roofing': 'شیشه و پلی‌کربنات'
+      'transparent-roofing': 'شیشه و پلی‌کربنات',
+      'tensile-fabric-membrane-structures': 'پوشش پارچه‌ای و غشایی',
+      'retractable-roof-covering-systems': 'پوشش متحرک'
     },
     primaryCta: 'دریافت بررسی مهندسی رایگان',
     costReviewCta: 'دانلود کاتالوگ فنی',
@@ -197,7 +203,9 @@ const copy: Record<
       sandwich: 'أنظمة ألواح الساندويش',
       standing: 'أسقف ستاندينغ سيم',
       cladding: 'كسوة الألمنيوم',
-      'transparent-roofing': 'الزجاج والبولي كربونات'
+      'transparent-roofing': 'الزجاج والبولي كربونات',
+      'tensile-fabric-membrane-structures': 'التغطيات النسيجية والغشائية',
+      'retractable-roof-covering-systems': 'التغطيات القابلة للسحب'
     },
     primaryCta: 'طلب مراجعة هندسية مجانية',
     costReviewCta: 'تحميل الكتالوج الفني',
@@ -228,7 +236,9 @@ const copy: Record<
       sandwich: 'Системы сэндвич-панелей',
       standing: 'Кровля standing seam',
       cladding: 'Алюминиевая облицовка',
-      'transparent-roofing': 'Стекло и поликарбонат'
+      'transparent-roofing': 'Стекло и поликарбонат',
+      'tensile-fabric-membrane-structures': 'Тканевые и мембранные покрытия',
+      'retractable-roof-covering-systems': 'Раздвижные кровельные покрытия'
     },
     primaryCta: 'Запросить бесплатную инженерную проверку',
     costReviewCta: 'Скачать технический каталог',
@@ -390,7 +400,7 @@ const projectCaseStudies: ProjectCaseStudy[] = [
     projectName: 'Absaar Water Park',
     slug: 'absaar-water-park',
     displayPriority: 9,
-    filters: ['sandwich', 'standing'],
+    filters: ['sandwich', 'standing', 'retractable-roof-covering-systems'],
     secondaryCategory: 'sports-recreation',
     location: 'Iran',
     category: 'Recreational & Hybrid Roofing Systems',
@@ -532,7 +542,7 @@ const projectCaseStudies: ProjectCaseStudy[] = [
     projectName: 'Marun Petrochemical Multipurpose Hall',
     slug: 'marun-petrochemical-visitor-terminal',
     displayPriority: 17,
-    filters: ['sandwich'],
+    filters: ['sandwich', 'tensile-fabric-membrane-structures'],
     secondaryCategory: 'oil-gas-petrochemical',
     location: 'Mahshahr, Iran',
     category: 'Oil, Gas & Petrochemical',

@@ -41,6 +41,8 @@ export function Footer() {
             <ProjectFilterLink filter="standing" className="site-footer__link">{footer('projectsZipRoofing')}</ProjectFilterLink>
             <ProjectFilterLink filter="transparent-roofing" className="site-footer__link">{footer('projectsGlass')}</ProjectFilterLink>
             <ProjectFilterLink filter="cladding" className="site-footer__link">{footer('projectsCladding')}</ProjectFilterLink>
+            <ProjectFilterLink filter="tensile-fabric-membrane-structures" className="site-footer__link">{footer('projectsTensile')}</ProjectFilterLink>
+            <ProjectFilterLink filter="retractable-roof-covering-systems" className="site-footer__link">{footer('projectsRetractable')}</ProjectFilterLink>
             <ProjectFilterLink filter="all" className="site-footer__link">{footer('projectsAll')}</ProjectFilterLink>
           </div>
 

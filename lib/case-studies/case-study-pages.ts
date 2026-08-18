@@ -1614,7 +1614,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     projectName: localized('Absaar Water Park'),
     projectType: localized('Water park roofing and daylight integration system'),
     mainService: zipRoofingService,
-    serviceHref: '/systems/standing-seam-zip-tech-roofing',
+    serviceHref: '/systems/retractable-roof-covering-systems',
     location: 'Iran',
     area: '12,000 m2',
     challenge: 'A large recreational roof required daylight transmission, controlled ventilation, waterproof integration, and coordination between transparent roofing, operable openings, and insulated panels.',
@@ -2109,7 +2109,7 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
       ru: 'Промышленный общественный объект'
     },
     mainService: sandwichPanelService,
-    serviceHref: '/systems/sandwich-panel-systems',
+    serviceHref: '/systems/tensile-fabric-membrane-structures',
     location: 'Mahshahr, Iran',
     area: '5,000 m²',
     challenge: 'A critical engineering challenge was the development of a reliable structural interface between the tensile membrane system and the primary structure while maintaining load transfer integrity and long-term durability.',

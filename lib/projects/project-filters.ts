@@ -3,7 +3,9 @@ export const projectFilterKeys = [
   'sandwich',
   'standing',
   'cladding',
-  'transparent-roofing'
+  'transparent-roofing',
+  'tensile-fabric-membrane-structures',
+  'retractable-roof-covering-systems'
 ] as const;
 
 export type ProjectFilterKey = (typeof projectFilterKeys)[number];

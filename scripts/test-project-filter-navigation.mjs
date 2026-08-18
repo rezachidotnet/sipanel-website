@@ -17,13 +17,19 @@ const filters = [
   {key: 'sandwich', expectedVisible: 22},
   {key: 'standing', expectedVisible: 4},
   {key: 'transparent-roofing', expectedVisible: 8},
-  {key: 'cladding', expectedVisible: 5}
+  {key: 'cladding', expectedVisible: 5},
+  {key: 'tensile-fabric-membrane-structures', expectedVisible: 1, expectedSlugs: ['marun-petrochemical-visitor-terminal']},
+  {key: 'retractable-roof-covering-systems', expectedVisible: 1, expectedSlugs: ['absaar-water-park']}
 ];
 
 let server;
 
 function fail(message) {
   throw new Error(message);
+}
+
+function containsLegacyProductionUrl(value) {
+  return /https?:\/\/(?:www\.)?sipanelco\.ir/.test(value);
 }
 
 async function sleep(ms) {
@@ -48,7 +54,10 @@ async function waitForServer() {
 }
 
 async function gotoRoute(page, path) {
-  await page.goto(`${baseUrl}${path}`, {waitUntil: 'domcontentloaded'});
+  const response = await page.goto(`${baseUrl}${path}`, {waitUntil: 'domcontentloaded'});
+  if (response && response.status() !== 200) {
+    fail(`${path}: expected HTTP 200, received ${response.status()}`);
+  }
   await page.locator('footer a.site-footer__link').first().waitFor({state: 'attached', timeout: 10_000});
 
   if (new URL(path, baseUrl).pathname.endsWith('/projects')) {
@@ -98,6 +107,21 @@ async function expectVisibleCount(page, expected, label) {
   if (actual !== expected) fail(`${label}: expected ${expected} visible cards, received ${actual}`);
 }
 
+async function expectVisibleSlugs(page, expected, label) {
+  const actual = await page.locator('.projects-index-card').evaluateAll((cards) =>
+    cards
+      .filter((card) => getComputedStyle(card).display !== 'none' && getComputedStyle(card).visibility !== 'hidden')
+      .map((card) => card.getAttribute('data-project-slug'))
+      .filter(Boolean)
+      .sort()
+  );
+
+  const sortedExpected = [...expected].sort();
+  if (JSON.stringify(actual) !== JSON.stringify(sortedExpected)) {
+    fail(`${label}: expected visible projects ${sortedExpected.join(', ')}, received ${actual.join(', ')}`);
+  }
+}
+
 async function scrollToFooter(page) {
   await page.locator('footer').scrollIntoViewIfNeeded();
   await page.waitForFunction(() => window.scrollY > 200);
@@ -125,11 +149,15 @@ async function expectCleanSeoSignals(page, canonical) {
     if (value.includes('#filter=') || value.includes('?filter=')) {
       fail(`SEO signal contains filtered project URL: ${value}`);
     }
+    if (containsLegacyProductionUrl(value)) {
+      fail(`SEO signal contains legacy sipanelco.ir URL: ${value}`);
+    }
   }
 
   for (const href of signals.allHrefs) {
     if (href.includes('/fa')) fail(`Rendered href contains /fa: ${href}`);
     if (href.includes('?filter=')) fail(`Rendered href contains project filter query: ${href}`);
+    if (containsLegacyProductionUrl(href)) fail(`Rendered href contains legacy sipanelco.ir URL: ${href}`);
   }
 }
 
@@ -161,12 +189,27 @@ async function testFilterActivation(page, localeConfig) {
     await gotoRoute(page, `${localeConfig.projects}#filter=${filter.key}`);
     await expectFilter(page, filter.key, `${localeConfig.locale} initial hash ${filter.key}`);
     await expectVisibleCount(page, filter.expectedVisible, `${localeConfig.locale} initial hash ${filter.key}`);
+    if (filter.expectedSlugs) {
+      await expectVisibleSlugs(page, filter.expectedSlugs, `${localeConfig.locale} initial hash ${filter.key}`);
+    }
+    await expectCleanSeoSignals(page, canonical);
+  }
+
+  for (const filter of filters.filter(({key}) => key.includes('tensile') || key.includes('retractable'))) {
+    await gotoRoute(page, `${localeConfig.projects}?filter=${filter.key}`);
+    await expectFilter(page, filter.key, `${localeConfig.locale} direct query ${filter.key}`);
+    await expectVisibleCount(page, filter.expectedVisible, `${localeConfig.locale} direct query ${filter.key}`);
+    await expectVisibleSlugs(page, filter.expectedSlugs, `${localeConfig.locale} direct query ${filter.key}`);
     await expectCleanSeoSignals(page, canonical);
   }
 
   await gotoRoute(page, localeConfig.projects);
   await expectFilter(page, 'all', `${localeConfig.locale} missing filter`);
   await expectVisibleCount(page, 35, `${localeConfig.locale} all projects`);
+
+  await gotoRoute(page, `${localeConfig.projects}?filter=unsupported`);
+  await expectFilter(page, 'all', `${localeConfig.locale} invalid query`);
+  await expectVisibleCount(page, 35, `${localeConfig.locale} invalid query`);
 
   await gotoRoute(page, `${localeConfig.projects}#filter=unsupported`);
   await expectFilter(page, 'all', `${localeConfig.locale} invalid hash`);
