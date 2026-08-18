@@ -4,7 +4,7 @@ import process from 'node:process';
 const port = process.env.PORT || '3102';
 const baseUrl = process.env.BASE_URL || `http://127.0.0.1:${port}`;
 const shouldStartServer = !process.env.BASE_URL;
-const productionOrigin = 'https://www.sipanelco.ir';
+const productionOrigin = 'https://www.sipanelco.com';
 const locales = ['fa', 'en', 'ar', 'ru'];
 const languageTags = {fa: 'fa-IR', en: 'en', ar: 'ar', ru: 'ru'};
 const htmlLangTags = {fa: 'fa', en: 'en', ar: 'ar', ru: 'ru'};
@@ -175,8 +175,14 @@ function assertHtmlLocale(path, locale, html) {
 }
 
 function assertNoLegacyPersianLinks(path, html) {
-  if (/href=["']\/fa(?:\/|["'#?])/.test(html) || /https:\/\/www\.sipanelco\.ir\/fa(?:\/|["'#?])/.test(html)) {
+  if (/href=["']\/fa(?:\/|["'#?])/.test(html) || /https:\/\/www\.sipanelco\.com\/fa(?:\/|["'#?])/.test(html)) {
     fail(`${path} contains a crawlable /fa URL`);
+  }
+
+  const nonEmailIrMatches = html.match(/sipanelco\.ir/g)?.length ?? 0;
+  const emailIrMatches = html.match(/info@sipanelco\.ir/g)?.length ?? 0;
+  if (nonEmailIrMatches > emailIrMatches) {
+    fail(`${path} contains a legacy sipanelco.ir URL reference`);
   }
 }
 
@@ -236,7 +242,7 @@ function assertLocalizedSchema(path, locale, html) {
   const combined = scripts.join(' ');
   const expectedLanguage = `"inLanguage":"${languageTags[locale]}"`;
   if (!combined.includes(expectedLanguage)) fail(`${path} schema missing ${expectedLanguage}`);
-  if (/https:\/\/www\.sipanelco\.ir\/fa(?:\/|["'#?])/.test(combined)) fail(`${path} schema contains legacy /fa URL`);
+  if (/https:\/\/www\.sipanelco\.com\/fa(?:\/|["'#?])/.test(combined)) fail(`${path} schema contains legacy /fa URL`);
   if (/placeholder case study|pending verified project data/i.test(combined)) fail(`${path} schema contains placeholder English copy`);
 }
 

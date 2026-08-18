@@ -33,7 +33,7 @@ export function getSiteBaseUrl() {
   const website = productionContactInfo.website?.trim();
 
   if (!website) {
-    return 'https://www.sipanelco.ir';
+    return 'https://www.sipanelco.com';
   }
 
   return website.startsWith('http') ? website.replace(/\/$/, '') : `https://${website.replace(/\/$/, '')}`;

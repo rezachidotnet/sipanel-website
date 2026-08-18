@@ -2,43 +2,43 @@
 
 > SIPANEL is an industrial building envelope engineering company specializing in sandwich panel systems, standing seam & ZIP roofing, aluminium cladding, and glass & polycarbonate daylighting. The site is multilingual (Persian, English, Arabic, Russian); Persian is the primary source of truth.
 
-Canonical host: https://www.sipanelco.ir
+Canonical host: https://www.sipanelco.com
 Localized URL prefixes: `/fa` (default), `/en`, `/ar`, `/ru`. Any English URL below has equivalent pages under the other locale prefixes.
 
 ## Engineering Systems
 
-- [Systems overview](https://www.sipanelco.ir/en/systems): Index of SIPANEL building envelope systems.
-- [Sandwich Panel Systems](https://www.sipanelco.ir/en/systems/sandwich-panel-systems): Insulated wall and roof sandwich panel solutions.
-- [Standing Seam & ZIP Roofing](https://www.sipanelco.ir/en/systems/standing-seam-zip-tech-roofing): Concealed-fix metal roofing systems.
-- [Aluminium Cladding](https://www.sipanelco.ir/en/systems/aluminium-cladding-covering): Aluminium facade and cladding covering systems.
-- [Glass & Polycarbonate Daylighting](https://www.sipanelco.ir/en/systems/daylighting-transparent-roofing): Transparent and translucent daylighting roofing.
+- [Systems overview](https://www.sipanelco.com/en/systems): Index of SIPANEL building envelope systems.
+- [Sandwich Panel Systems](https://www.sipanelco.com/en/systems/sandwich-panel-systems): Insulated wall and roof sandwich panel solutions.
+- [Standing Seam & ZIP Roofing](https://www.sipanelco.com/en/systems/standing-seam-zip-tech-roofing): Concealed-fix metal roofing systems.
+- [Aluminium Cladding](https://www.sipanelco.com/en/systems/aluminium-cladding-covering): Aluminium facade and cladding covering systems.
+- [Glass & Polycarbonate Daylighting](https://www.sipanelco.com/en/systems/daylighting-transparent-roofing): Transparent and translucent daylighting roofing.
 
 ## Projects (Case Studies)
 
-- [Projects overview](https://www.sipanelco.ir/en/projects): Index of delivered SIPANEL projects.
-- [32-Bed Military Hospital](https://www.sipanelco.ir/en/projects/army-hospital)
-- [Mehrabad Airport Aircraft Hangar](https://www.sipanelco.ir/en/projects/mehrabad-aircraft-hangar)
-- [Erbil Eye Hospital Entrance Canopy](https://www.sipanelco.ir/en/projects/erbil-eye-hospital-entrance-canopy)
-- [Tabas Railway Facility](https://www.sipanelco.ir/en/projects/tabas-railway-facility)
-- [Mahshahr Taxi Parking Facility](https://www.sipanelco.ir/en/projects/mahshahr-taxi-parking)
-- [Absaar Water Park](https://www.sipanelco.ir/en/projects/absaar-water-park)
-- [Megapars Mall Atrium](https://www.sipanelco.ir/en/projects/megaparsmall-atrium)
-- [Tehran Mall Roof Garden, Food Court & Cinema Roof](https://www.sipanelco.ir/en/projects/tehran-mall-roof-garden-foodcourt)
-- [Kermanshah Industrial University Petroleum Faculty](https://www.sipanelco.ir/en/projects/kermanshah-industrial-university-petroleum-faculty)
-- [Andimeshk Stadium](https://www.sipanelco.ir/en/projects/andimeshk-stadium)
-- [Parand City Entrance Gate](https://www.sipanelco.ir/en/projects/parand-city-entrance)
+- [Projects overview](https://www.sipanelco.com/en/projects): Index of delivered SIPANEL projects.
+- [32-Bed Military Hospital](https://www.sipanelco.com/en/projects/army-hospital)
+- [Mehrabad Airport Aircraft Hangar](https://www.sipanelco.com/en/projects/mehrabad-aircraft-hangar)
+- [Erbil Eye Hospital Entrance Canopy](https://www.sipanelco.com/en/projects/erbil-eye-hospital-entrance-canopy)
+- [Tabas Railway Facility](https://www.sipanelco.com/en/projects/tabas-railway-facility)
+- [Mahshahr Taxi Parking Facility](https://www.sipanelco.com/en/projects/mahshahr-taxi-parking)
+- [Absaar Water Park](https://www.sipanelco.com/en/projects/absaar-water-park)
+- [Megapars Mall Atrium](https://www.sipanelco.com/en/projects/megaparsmall-atrium)
+- [Tehran Mall Roof Garden, Food Court & Cinema Roof](https://www.sipanelco.com/en/projects/tehran-mall-roof-garden-foodcourt)
+- [Kermanshah Industrial University Petroleum Faculty](https://www.sipanelco.com/en/projects/kermanshah-industrial-university-petroleum-faculty)
+- [Andimeshk Stadium](https://www.sipanelco.com/en/projects/andimeshk-stadium)
+- [Parand City Entrance Gate](https://www.sipanelco.com/en/projects/parand-city-entrance)
 
 ## Resources & Knowledge
 
-- [Engineering Resource Hub](https://www.sipanelco.ir/en/resources): Technical resources and downloadable documentation.
-- [Engineering Insights](https://www.sipanelco.ir/en/insights): Articles on building envelope engineering.
-- [FAQ](https://www.sipanelco.ir/en/faq): Frequently asked questions.
+- [Engineering Resource Hub](https://www.sipanelco.com/en/resources): Technical resources and downloadable documentation.
+- [Engineering Insights](https://www.sipanelco.com/en/insights): Articles on building envelope engineering.
+- [FAQ](https://www.sipanelco.com/en/faq): Frequently asked questions.
 
 ## Company
 
-- [About SIPANEL](https://www.sipanelco.ir/en/about): Company background and engineering capability.
-- [Contact / Request a Quote](https://www.sipanelco.ir/en/contact): RFQ and contact details.
+- [About SIPANEL](https://www.sipanelco.com/en/about): Company background and engineering capability.
+- [Contact / Request a Quote](https://www.sipanelco.com/en/contact): RFQ and contact details.
 
 ## Sitemap
 
-- [XML Sitemap](https://www.sipanelco.ir/sitemap.xml): Full list of indexable URLs across all locales with hreflang alternates.
+- [XML Sitemap](https://www.sipanelco.com/sitemap.xml): Full list of indexable URLs across all locales with hreflang alternates.

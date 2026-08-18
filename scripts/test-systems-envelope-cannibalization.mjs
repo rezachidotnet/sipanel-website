@@ -200,7 +200,7 @@ async function assertCanonicalAndHreflang(locale) {
   const path = envelopePath(locale);
   const html = await fetchHtml(path);
   const canonical = extractCanonical(html);
-  const expectedCanonical = `https://www.sipanelco.ir${path}`;
+  const expectedCanonical = `https://www.sipanelco.com${path}`;
 
   if (canonical !== expectedCanonical) {
     fail(`[${locale}] expected canonical "${expectedCanonical}", got "${canonical}"`);

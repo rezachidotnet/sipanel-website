@@ -51,7 +51,7 @@ function loadPageViewHelpers() {
 
 const {helpers, context} = loadPageViewHelpers();
 const {createPageViewState, getCurrentPageLocation, pushPageView} = helpers;
-const origin = 'https://www.sipanelco.ir';
+const origin = 'https://www.sipanelco.com';
 
 function location(pathname) {
   const parsed = new URL(pathname, origin);

@@ -4,8 +4,8 @@ import {NextResponse} from 'next/server';
 import {routing} from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
-const canonicalHostname = 'www.sipanelco.ir';
-const productionHostnames = new Set(['sipanelco.ir', canonicalHostname]);
+const canonicalHostname = 'www.sipanelco.com';
+const productionHostnames = new Set(['sipanelco.ir', 'www.sipanelco.ir', 'sipanelco.com', canonicalHostname]);
 
 function isLegacyPersianPath(pathname: string) {
   return pathname === '/fa' || pathname.startsWith('/fa/');

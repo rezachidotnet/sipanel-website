@@ -36,7 +36,7 @@ Industrial building-envelope engineering site. Next.js 16 App Router · React 18
 
 - Preserve canonical URLs, hreflang, structured data, and per-page metadata.
 - Build metadata via `lib/seo/metadata.ts`; structured data via `lib/seo/schema.ts`.
-- Production host is `https://www.sipanelco.ir` (apex → www is a 308).
+- Production host is `https://www.sipanelco.com` (apex → www is a 308; the legacy `sipanelco.ir`/`www.sipanelco.ir` hosts also 308 here via `middleware.ts`, preserving path and query string).
 
 ## Analytics (critical)
 

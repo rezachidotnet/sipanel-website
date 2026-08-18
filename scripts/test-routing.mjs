@@ -96,28 +96,32 @@ async function expectHomepageMetadata() {
   const response = await expectStatus('/', 200);
   const html = await response.text();
 
-  expectIncludes(html, '<link rel="canonical" href="https://www.sipanelco.ir"/>', 'homepage canonical');
-  expectIncludes(html, '<link rel="alternate" hrefLang="fa-IR" href="https://www.sipanelco.ir"/>', 'fa alternate');
-  expectIncludes(html, '<link rel="alternate" hrefLang="en" href="https://www.sipanelco.ir/en"/>', 'en alternate');
-  expectIncludes(html, '<link rel="alternate" hrefLang="ar" href="https://www.sipanelco.ir/ar"/>', 'ar alternate');
-  expectIncludes(html, '<link rel="alternate" hrefLang="ru" href="https://www.sipanelco.ir/ru"/>', 'ru alternate');
-  expectIncludes(html, '<link rel="alternate" hrefLang="x-default" href="https://www.sipanelco.ir"/>', 'x-default alternate');
+  expectIncludes(html, '<link rel="canonical" href="https://www.sipanelco.com"/>', 'homepage canonical');
+  expectIncludes(html, '<link rel="alternate" hrefLang="fa-IR" href="https://www.sipanelco.com"/>', 'fa alternate');
+  expectIncludes(html, '<link rel="alternate" hrefLang="en" href="https://www.sipanelco.com/en"/>', 'en alternate');
+  expectIncludes(html, '<link rel="alternate" hrefLang="ar" href="https://www.sipanelco.com/ar"/>', 'ar alternate');
+  expectIncludes(html, '<link rel="alternate" hrefLang="ru" href="https://www.sipanelco.com/ru"/>', 'ru alternate');
+  expectIncludes(html, '<link rel="alternate" hrefLang="x-default" href="https://www.sipanelco.com"/>', 'x-default alternate');
 }
 
 async function expectSitemap() {
   const response = await expectStatus('/sitemap.xml', 200);
   const xml = await response.text();
 
-  if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(xml)) {
+  if (/https:\/\/www\.sipanelco\.com\/fa(?=[/?#"<\s]|$)/.test(xml)) {
     fail('Sitemap contains redirected /fa URL');
   }
 
+  if (xml.includes('sipanelco.ir')) {
+    fail('Sitemap contains a legacy sipanelco.ir URL');
+  }
+
   for (const url of [
-    'https://www.sipanelco.ir/',
-    'https://www.sipanelco.ir/systems',
-    'https://www.sipanelco.ir/en',
-    'https://www.sipanelco.ir/ar',
-    'https://www.sipanelco.ir/ru'
+    'https://www.sipanelco.com/',
+    'https://www.sipanelco.com/systems',
+    'https://www.sipanelco.com/en',
+    'https://www.sipanelco.com/ar',
+    'https://www.sipanelco.com/ru'
   ]) {
     expectIncludes(xml, url, `sitemap URL ${url}`);
   }

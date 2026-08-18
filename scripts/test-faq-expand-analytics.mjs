@@ -45,7 +45,7 @@ function loadAnalyticsEvents() {
     window: {
       dataLayer: [{event: 'page_view'}],
       innerWidth: 1280,
-      location: {origin: 'https://www.sipanelco.ir', pathname: '/faq'}
+      location: {origin: 'https://www.sipanelco.com', pathname: '/faq'}
     },
     require(specifier) {
       if (specifier === '@next/third-parties/google') {

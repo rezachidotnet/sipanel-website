@@ -222,7 +222,7 @@ async function assertCanonicalHreflangNoFaRoute(locale) {
   const html = await fetchHtml(localized(locale, '/systems'));
   const path = localized(locale, '/systems');
   const canonical = html.match(/<link rel="canonical" href="([^"]*)"/)?.[1];
-  const expectedCanonical = `https://www.sipanelco.ir${path}`;
+  const expectedCanonical = `https://www.sipanelco.com${path}`;
 
   if (canonical !== expectedCanonical) {
     fail(`[${locale}] /systems canonical mismatch. Expected "${expectedCanonical}", got "${canonical}"`);
@@ -248,7 +248,7 @@ async function assertSitemapUnchanged() {
   }
   const xml = await response.text();
 
-  const hubMatches = xml.match(/<loc>https:\/\/www\.sipanelco\.ir\/systems<\/loc>/g) ?? [];
+  const hubMatches = xml.match(/<loc>https:\/\/www\.sipanelco\.com\/systems<\/loc>/g) ?? [];
   if (hubMatches.length !== 1) {
     fail(`sitemap.xml: expected exactly 1 entry for /systems, found ${hubMatches.length}`);
   }

@@ -1,5 +1,5 @@
 const baseUrl = process.env.SEO_AUDIT_BASE_URL ?? 'http://127.0.0.1:3000';
-const productionOrigin = 'https://www.sipanelco.ir';
+const productionOrigin = 'https://www.sipanelco.com';
 const locales = ['fa', 'en', 'ar', 'ru'];
 const languageTags = {fa: 'fa-IR', en: 'en', ar: 'ar', ru: 'ru'};
 const requiredSchemaTypes = ['Organization', 'BreadcrumbList', 'Service', 'FAQPage', 'Article', 'CollectionPage', 'ContactPage'];
@@ -154,8 +154,12 @@ if (sitemapXml.includes('http://127.0.0.1') || sitemapXml.includes('localhost'))
   failures.push('sitemap: contains local development host');
 }
 
-if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(sitemapXml)) {
+if (/https:\/\/www\.sipanelco\.com\/fa(?=[/?#"<\s]|$)/.test(sitemapXml)) {
   failures.push('sitemap: contains redirected /fa URL');
+}
+
+if (sitemapXml.includes('sipanelco.ir')) {
+  failures.push('sitemap: contains a legacy sipanelco.ir URL');
 }
 
 if (failures.length > 0) {

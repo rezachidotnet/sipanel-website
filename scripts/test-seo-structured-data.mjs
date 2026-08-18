@@ -4,7 +4,7 @@ import process from 'node:process';
 const port = process.env.PORT || '3101';
 const baseUrl = process.env.BASE_URL || `http://127.0.0.1:${port}`;
 const shouldStartServer = !process.env.BASE_URL;
-const productionOrigin = 'https://www.sipanelco.ir';
+const productionOrigin = 'https://www.sipanelco.com';
 const locales = ['fa', 'en', 'ar', 'ru'];
 const languageTags = {fa: 'fa-IR', en: 'en', ar: 'ar', ru: 'ru'};
 const invalidInLanguageTypes = new Set([
@@ -189,8 +189,12 @@ function assertNoBadUrls(node) {
         fail(`Invalid URL value for ${key}: ${value}`);
       }
 
-      if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#]|$)/.test(value)) {
+      if (/https:\/\/www\.sipanelco\.com\/fa(?=[/?#]|$)/.test(value)) {
         fail(`Persian URL contains /fa: ${value}`);
+      }
+
+      if (value.includes('sipanelco.ir')) {
+        fail(`Schema URL value still references legacy sipanelco.ir: ${value}`);
       }
     }
   });
@@ -299,7 +303,7 @@ async function assertRoute(route) {
     }
   }
 
-  if (!hrefLangs.some((item) => item.lang === 'x-default' && item.href === route.canonical.replace(/^https:\/\/www\.sipanelco\.ir\/(?:en|ar|ru)(?=\/|$)/, productionOrigin))) {
+  if (!hrefLangs.some((item) => item.lang === 'x-default' && item.href === route.canonical.replace(/^https:\/\/www\.sipanelco\.com\/(?:en|ar|ru)(?=\/|$)/, productionOrigin))) {
     fail(`${route.path} missing x-default`);
   }
 
@@ -307,8 +311,17 @@ async function assertRoute(route) {
     fail(`${route.path} contains locale-prefixed sitemap link`);
   }
 
-  if (/\bhref=["']\/fa(?:\/|["'#?])/.test(html) || html.includes('https://www.sipanelco.ir/fa/')) {
+  if (/\bhref=["']\/fa(?:\/|["'#?])/.test(html) || html.includes('https://www.sipanelco.com/fa/') || html.includes('https://www.sipanelco.ir/fa/')) {
     fail(`${route.path} contains legacy /fa internal link`);
+  }
+
+  // The info@sipanelco.ir contact email is intentionally preserved during the
+  // domain migration (mailbox migration is a separate, later step) — only
+  // flag sipanelco.ir occurrences that are NOT part of that email address.
+  const nonEmailIrMatches = html.match(/sipanelco\.ir/g)?.length ?? 0;
+  const emailIrMatches = html.match(/info@sipanelco\.ir/g)?.length ?? 0;
+  if (nonEmailIrMatches > emailIrMatches) {
+    fail(`${route.path} contains a legacy sipanelco.ir URL reference in generated SEO output`);
   }
 
   if (/href=["'][^"']*(?:\/projects\?|\?filter=)/.test(html)) {
@@ -372,7 +385,8 @@ async function assertSitemap() {
   const secondXml = await secondResponse.text();
 
   if (xml !== secondXml) fail('Sitemap output changed across repeated generation');
-  if (/https:\/\/www\.sipanelco\.ir\/fa(?=[/?#"<\s]|$)/.test(xml)) fail('Sitemap contains /fa URL');
+  if (/https:\/\/www\.sipanelco\.com\/fa(?=[/?#"<\s]|$)/.test(xml)) fail('Sitemap contains /fa URL');
+  if (xml.includes('sipanelco.ir')) fail('Sitemap contains a legacy sipanelco.ir URL');
   if (/<loc>[^<]*\?[^<]*<\/loc>/.test(xml)) fail('Sitemap contains a query-string URL');
   if (/<loc>[^<]*#[^<]*<\/loc>/.test(xml)) fail('Sitemap contains a fragment URL');
   if (/\/(?:fa|en|ar|ru)\/sitemap\.xml/.test(xml)) fail('Sitemap contains locale-prefixed sitemap URL');

@@ -155,7 +155,7 @@ async function testFooterHrefs(page, localeConfig) {
 }
 
 async function testFilterActivation(page, localeConfig) {
-  const canonical = `https://www.sipanelco.ir${localeConfig.projects}`;
+  const canonical = `https://www.sipanelco.com${localeConfig.projects}`;
 
   for (const filter of filters) {
     await gotoRoute(page, `${localeConfig.projects}#filter=${filter.key}`);
