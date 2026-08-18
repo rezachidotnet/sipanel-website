@@ -826,7 +826,21 @@ export function getDaylightingTransparentRoofingPage(locale: Locale): ServicePag
     },
     problemContext: content.problemContext,
     engineeringApproach: content.engineeringApproach,
-    independentRecommendations: content.independentRecommendations,
+    independentRecommendations: {
+      ...content.independentRecommendations,
+      contextualLinks: [
+        {
+          label: locale === 'fa'
+            ? 'بررسی تخصصی پوشش ETFE'
+            : locale === 'ar'
+            ? 'مراجعة تخصصية لأنظمة ETFE'
+            : locale === 'ru'
+            ? 'Специализированная проверка систем ETFE'
+            : 'Specialist ETFE system review',
+          href: '/systems/etfe-roof-facade-systems'
+        }
+      ]
+    },
     systemApplications: content.systemApplications,
     technicalProof: {
       title: content.technicalProof.title,

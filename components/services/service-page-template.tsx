@@ -88,6 +88,7 @@ export type ServicePageTemplateData = {
       traditional: {label: string; items: string[]};
       sipanel: {label: string; items: string[]};
     };
+    contextualLinks?: Array<{label: string; href: string}>;
   };
   systemApplications: {
     title: string;
@@ -177,6 +178,30 @@ const serviceFaqIdSuffixesByPage: Record<string, readonly string[]> = {
     'thermal-movement-control',
     'facade-joint-waterproofing',
     'supply-and-installation-scope'
+  ],
+  tensile_fabric_membrane_structures: [
+    'engineered-vs-common-canopy',
+    'form-finding-need',
+    'membrane-material-selection',
+    'rain-performance',
+    'patterning-method',
+    'initial-review-inputs'
+  ],
+  retractable_roof_covering_systems: [
+    'project-fit',
+    'fabric-vs-panel',
+    'rainwater-management',
+    'wind-operation',
+    'power-failure',
+    'pricing-inputs'
+  ],
+  etfe_roof_facade_systems: [
+    'etfe-vs-glass',
+    'single-layer-vs-cushion',
+    'continuous-air-supply',
+    'solar-control',
+    'power-failure',
+    'initial-review-inputs'
   ]
 };
 
@@ -423,6 +448,15 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                 </ul>
               </div>
             </div>
+            {page.independentRecommendations.contextualLinks?.length ? (
+              <nav className="service-inline-links" aria-label={page.independentRecommendations.title}>
+                {page.independentRecommendations.contextualLinks.map((link) => (
+                  <Link key={link.href} href={link.href}>
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            ) : null}
           </div>
         </section>
       ) : null}

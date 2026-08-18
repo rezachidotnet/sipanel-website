@@ -28,6 +28,9 @@
     "systemsStanding": "Standing Seam",
     "systemsCladding": "Aluminium Cladding",
     "systemsDaylighting": "نورگیرها و پوشش‌های شفاف",
+    "systemsTensile": "سازه‌های پارچه‌ای کششی",
+    "systemsRetractable": "سقف‌ها و پوشش‌های متحرک",
+    "systemsEtfe": "پوشش‌های ETFE",
     "projects": "پروژه‌ها",
     "projectsSandwich": "پروژه‌های ساندویچ پانل",
     "projectsZipRoofing": "پروژه‌های ZIP Roofing",
@@ -417,7 +420,13 @@
     "aluminiumCladding": "کلادینگ و پوشش آلومینیومی",
     "aluminiumCladdingDesc": "سیستم\u200cهای نمای آلومینیومی با دیتیل فلاشینگ و حفاظت آب\u200cوهوایی.",
     "daylighting": "نورگیرها و پوشش‌های شفاف",
-    "daylightingDesc": "پلی‌کربنات، نورگیر شیشه‌ای و سیستم‌های سقف شفاف برای نور طبیعی فضاهای صنعتی."
+    "daylightingDesc": "پلی‌کربنات، نورگیر شیشه‌ای و سیستم‌های سقف شفاف برای نور طبیعی فضاهای صنعتی.",
+    "tensileFabric": "سازه‌های پارچه‌ای کششی",
+    "tensileFabricDesc": "پوشش‌های غشایی با کنترل فرم‌یابی، پیش‌تنیدگی، الگوی برش، کابل‌ها، اتصال‌ها و زهکشی.",
+    "retractableRoof": "سقف‌ها و پوشش‌های متحرک",
+    "retractableRoofDesc": "سیستم‌های بازشو با هماهنگی سازه، ریل و درایو، کنترل، آب‌بندی حالت بسته و نگهداری.",
+    "etfe": "پوشش‌های ETFE",
+    "etfeDesc": "پوسته‌های فویلی تک‌لایه و بالشتکی با کنترل پنل‌بندی، فریم، هوا، نور و زهکشی."
   },
   "whySipanel": {
     "title": "چرا SIPANEL",

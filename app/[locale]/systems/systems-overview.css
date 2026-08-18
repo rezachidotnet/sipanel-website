@@ -230,6 +230,35 @@
   object-fit: cover;
 }
 
+.systems-card__pending-visual {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgb(26 33 46 / 0.96), rgb(80 91 107 / 0.72)),
+    var(--color-gray-background);
+}
+
+.systems-card__pending-visual span {
+  position: absolute;
+  inline-size: 58%;
+  block-size: 1px;
+  background: rgb(255 255 255 / 0.32);
+  transform: rotate(-18deg);
+}
+
+.systems-card__pending-visual span:nth-child(2) {
+  inline-size: 72%;
+  transform: rotate(18deg);
+}
+
+.systems-card__pending-visual span:nth-child(3) {
+  inline-size: 46%;
+  transform: translateY(44px);
+}
+
 .systems-card__desktop-img {
   display: none !important;
 }

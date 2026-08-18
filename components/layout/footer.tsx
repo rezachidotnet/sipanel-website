@@ -30,6 +30,9 @@ export function Footer() {
             <Link href="/systems/standing-seam-zip-tech-roofing" className="site-footer__link">{footer('systemsStanding')}</Link>
             <Link href="/systems/aluminium-cladding-covering" className="site-footer__link">{footer('systemsCladding')}</Link>
             <Link href="/systems/daylighting-transparent-roofing" className="site-footer__link">{footer('systemsDaylighting')}</Link>
+            <Link href="/systems/tensile-fabric-membrane-structures" className="site-footer__link">{footer('systemsTensile')}</Link>
+            <Link href="/systems/retractable-roof-covering-systems" className="site-footer__link">{footer('systemsRetractable')}</Link>
+            <Link href="/systems/etfe-roof-facade-systems" className="site-footer__link">{footer('systemsEtfe')}</Link>
           </div>
 
           <div className="site-footer__column">

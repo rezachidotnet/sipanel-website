@@ -24,7 +24,10 @@ const detailHrefs = [
   '/systems/sandwich-panel-systems',
   '/systems/standing-seam-zip-tech-roofing',
   '/systems/aluminium-cladding-covering',
-  '/systems/daylighting-transparent-roofing'
+  '/systems/daylighting-transparent-roofing',
+  '/systems/tensile-fabric-membrane-structures',
+  '/systems/retractable-roof-covering-systems',
+  '/systems/etfe-roof-facade-systems'
 ];
 
 let server;
@@ -118,10 +121,10 @@ async function assertFooterHubLink(locale) {
   const html = await fetchHtml(path);
   const hub = hubPath(locale);
 
-  const footerColumnMatch = html.match(/<h2>[^<]*<\/h2>((?:<a class="site-footer__link"[^>]*>[^<]*<\/a>){5})/);
+  const footerColumnMatch = html.match(/<h2>[^<]*<\/h2>((?:<a class="site-footer__link"[^>]*>[^<]*<\/a>){8})/);
 
   if (!footerColumnMatch) {
-    fail(`${path}: could not locate the footer "systems" column with 5 links (hub + 4 details)`);
+    fail(`${path}: could not locate the footer "systems" column with 8 links (hub + 7 details)`);
   }
 
   const firstLinkMatch = footerColumnMatch[1].match(/^<a class="site-footer__link" href="([^"]+)">/);

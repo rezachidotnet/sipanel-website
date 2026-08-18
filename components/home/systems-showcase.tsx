@@ -34,6 +34,24 @@ const systems = [
     image: daylightingCover,
     nameKey: 'daylighting' as const,
     descKey: 'daylightingDesc' as const
+  },
+  {
+    id: 'tensile-fabric',
+    href: '/systems/tensile-fabric-membrane-structures',
+    nameKey: 'tensileFabric' as const,
+    descKey: 'tensileFabricDesc' as const
+  },
+  {
+    id: 'retractable-roof',
+    href: '/systems/retractable-roof-covering-systems',
+    nameKey: 'retractableRoof' as const,
+    descKey: 'retractableRoofDesc' as const
+  },
+  {
+    id: 'etfe',
+    href: '/systems/etfe-roof-facade-systems',
+    nameKey: 'etfe' as const,
+    descKey: 'etfeDesc' as const
   }
 ] as const;
 
@@ -55,13 +73,21 @@ export function SystemsShowcase() {
           {systems.map((system) => (
             <Link href={system.href} className="systems-showcase__card" key={system.id}>
               <div className="systems-showcase__card-image">
-                <Image
-                  src={system.image}
-                  alt={t(system.nameKey)}
-                  fill
-                  sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="systems-showcase__card-img"
-                />
+                {'image' in system ? (
+                  <Image
+                    src={system.image}
+                    alt={t(system.nameKey)}
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="systems-showcase__card-img"
+                  />
+                ) : (
+                  <div className="systems-showcase__pending-img" aria-label={t(system.nameKey)} role="img">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                )}
               </div>
               <div className="systems-showcase__card-body">
                 <h3>{t(system.nameKey)}</h3>

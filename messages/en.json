@@ -28,6 +28,9 @@
     "systemsStanding": "Standing Seam",
     "systemsCladding": "Aluminium Cladding",
     "systemsDaylighting": "Daylighting & Transparent Roofing",
+    "systemsTensile": "Tensile Fabric Structures",
+    "systemsRetractable": "Retractable Roofs",
+    "systemsEtfe": "ETFE Systems",
     "projects": "Projects",
     "projectsSandwich": "Sandwich Panel Projects",
     "projectsZipRoofing": "ZIP Roofing Projects",
@@ -416,7 +419,13 @@
     "aluminiumCladding": "Aluminium Cladding & Covering",
     "aluminiumCladdingDesc": "Facade cladding systems with flashing details and weatherproofing for industrial envelopes.",
     "daylighting": "Daylighting & Transparent Roofing",
-    "daylightingDesc": "Polycarbonate, glass skylights, and transparent roofing systems for natural daylight in industrial spaces."
+    "daylightingDesc": "Polycarbonate, glass skylights, and transparent roofing systems for natural daylight in industrial spaces.",
+    "tensileFabric": "Tensile Fabric Structures",
+    "tensileFabricDesc": "Membrane coverings coordinated through form-finding, prestress, patterning, cables, connections, and drainage.",
+    "retractableRoof": "Retractable Roof Systems",
+    "retractableRoofDesc": "Opening systems coordinated around structure, rails, drive, controls, closed-state sealing, and maintenance.",
+    "etfe": "ETFE Roof & Facade Systems",
+    "etfeDesc": "Single-layer and cushion foil skins with panelization, frame, air, daylight, and drainage control."
   },
   "whySipanel": {
     "title": "Why SIPANEL",

@@ -1647,6 +1647,35 @@ button[aria-disabled='true'] {
   transition: transform 400ms ease;
 }
 
+.systems-showcase__pending-img {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgb(26 33 46 / 0.96), rgb(80 91 107 / 0.72)),
+    var(--color-gray-background);
+}
+
+.systems-showcase__pending-img span {
+  position: absolute;
+  inline-size: 58%;
+  block-size: 1px;
+  background: rgb(255 255 255 / 0.32);
+  transform: rotate(-18deg);
+}
+
+.systems-showcase__pending-img span:nth-child(2) {
+  inline-size: 72%;
+  transform: rotate(18deg);
+}
+
+.systems-showcase__pending-img span:nth-child(3) {
+  inline-size: 46%;
+  transform: translateY(44px);
+}
+
 .systems-showcase__card:hover .systems-showcase__card-img {
   transform: scale(1.04);
 }

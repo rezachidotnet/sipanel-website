@@ -38,14 +38,20 @@ const systemPagePaths = [
   '/systems/sandwich-panel-systems',
   '/systems/standing-seam-zip-tech-roofing',
   '/systems/aluminium-cladding-covering',
-  '/systems/daylighting-transparent-roofing'
+  '/systems/daylighting-transparent-roofing',
+  '/systems/tensile-fabric-membrane-structures',
+  '/systems/retractable-roof-covering-systems',
+  '/systems/etfe-roof-facade-systems'
 ];
 
 const detailHrefs = [
   '/systems/sandwich-panel-systems',
   '/systems/standing-seam-zip-tech-roofing',
   '/systems/aluminium-cladding-covering',
-  '/systems/daylighting-transparent-roofing'
+  '/systems/daylighting-transparent-roofing',
+  '/systems/tensile-fabric-membrane-structures',
+  '/systems/retractable-roof-covering-systems',
+  '/systems/etfe-roof-facade-systems'
 ];
 
 let server;
@@ -161,8 +167,8 @@ async function assertNoProofStripOnHub(locale) {
   }
 }
 
-// 5. Hub still has its 4 system cards linking to the 4 detail pages.
-async function assertHubHasFourSystemCards(locale) {
+// 5. Hub still has its 7 system cards linking to the 7 detail pages.
+async function assertHubHasSevenSystemCards(locale) {
   const html = await fetchHtml(localized(locale, '/systems'));
 
   for (const href of detailHrefs) {
@@ -279,8 +285,11 @@ async function run() {
     await assertFaqVisibleMatchesSchema(locale, '/systems/standing-seam-zip-tech-roofing');
     await assertFaqVisibleMatchesSchema(locale, '/systems/aluminium-cladding-covering');
     await assertFaqVisibleMatchesSchema(locale, '/systems/daylighting-transparent-roofing');
+    await assertFaqVisibleMatchesSchema(locale, '/systems/tensile-fabric-membrane-structures');
+    await assertFaqVisibleMatchesSchema(locale, '/systems/retractable-roof-covering-systems');
+    await assertFaqVisibleMatchesSchema(locale, '/systems/etfe-roof-facade-systems');
     await assertNoProofStripOnHub(locale);
-    await assertHubHasFourSystemCards(locale);
+    await assertHubHasSevenSystemCards(locale);
     await assertStep1LinksPreserved(locale);
     await assertStep2ContentPreserved(locale);
     await assertCanonicalHreflangNoFaRoute(locale);

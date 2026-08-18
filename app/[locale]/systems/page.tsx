@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import './systems-overview.css';
-import Image from 'next/image';
+import Image, {type StaticImageData} from 'next/image';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
@@ -38,6 +38,17 @@ type SystemSelectionItem = GuidanceItem & {
 type FaqItem = {
   question: string;
   answer: string;
+};
+
+type SystemCard = {
+  id: string;
+  imageDesktop?: StaticImageData;
+  imageMobile?: StaticImageData;
+  alt: Record<Locale, string>;
+  title: Record<Locale, string>;
+  subtitle: Record<Locale, string>;
+  description: Record<Locale, string>;
+  routes: Record<Locale, string>;
 };
 
 const systemsOverviewFaqIds = [
@@ -104,7 +115,7 @@ const copy: Record<
   fa: {
     title: 'سیستم‌های پوشش صنعتی سقف و نما | SIPANEL',
     description:
-      'سیستم‌های پوشش صنعتی سقف و نما برای پروژه‌های صنعتی؛ انتخاب ساندویچ پانل، ایستادرز، نمای آلومینیومی و نورگیر با طراحی شاپ، کنترل متریال و اجرای مهندسی.',
+      'سیستم‌های پوشش صنعتی سقف و نما برای پروژه‌های صنعتی؛ انتخاب ساندویچ پانل، ایستادرز، نمای آلومینیومی، نورگیر، سازه پارچه‌ای، سقف متحرک و ETFE با طراحی شاپ، کنترل متریال و اجرای مهندسی.',
     primaryKeyword: 'سیستم‌های پوشش صنعتی سقف و نما',
     eyebrow: 'پوشانه\u200Cهای سازه\u200Cهای صنعتی',
     headline: 'سیستم\u200Cهای پوشش صنعتی\nبرای سقف و نما',
@@ -126,7 +137,7 @@ const copy: Record<
       'منطق آب\u200Cبندی و جزئیات اجرایی',
       'نصب مهندسی کنترل\u200Cشده'
     ],
-    sectionTitle: 'سه سیستم. یک منطق مهندسی.',
+    sectionTitle: 'هفت سیستم. یک منطق مهندسی.',
     sectionDescription:
       'طراحی، تأمین و اجرای سیستم\u200Cهای پوشش سقف و نما با کنترل کامل بر کیفیت، آب\u200Cبندی و زمان\u200Cبندی.',
     cta: 'مشاهده سیستم',
@@ -179,6 +190,24 @@ const copy: Record<
         title: 'نورگیر و پوشش شفاف برای نور طبیعی کنترل\u200Cشده',
         description:
           'وقتی نور طبیعی بخشی از عملکرد پروژه است، پلی\u200Cکربنات، شیشه یا راهکار ترکیبی بر اساس ایمنی، کنترل حرارت، آب\u200Cبندی و جزئیات اتصال به پوشش اصلی بررسی می\u200Cشود.'
+      },
+      {
+        systemId: 'tensile-fabric',
+        title: 'سازه پارچه‌ای کششی برای فرم‌های سبک و آزاد',
+        description:
+          'وقتی فرم معماری، سایه‌اندازی و دهانه ویژه اهمیت دارد، غشای پارچه‌ای باید با فرم‌یابی، پیش‌تنیدگی، الگوی برش، کابل‌ها، اتصال‌ها و زهکشی کنترل شود.'
+      },
+      {
+        systemId: 'retractable-roof',
+        title: 'سقف متحرک برای بهره‌برداری متغیر فضا',
+        description:
+          'وقتی باز و بسته شدن سقف ارزش عملیاتی دارد، مکانیزم حرکت، ریل و درایو، منطق کنترل، آب‌بندی حالت بسته، ایمنی و برنامه نگهداری قبل از انتخاب متریال بررسی می‌شود.'
+      },
+      {
+        systemId: 'etfe',
+        title: 'ETFE برای پوسته‌های شفاف و فوق‌سبک',
+        description:
+          'وقتی وزن کم و شفافیت معماری اولویت دارد، سیستم ETFE در سطح فویل، پنل‌بندی، فریم، جوش، شبکه هوا، کنترل نور، زهکشی و نگهداری بررسی می‌شود.'
       }
     ],
     engineeringTitle: 'کنترل مهندسی از آب\u200Cبندی تا نصب',
@@ -207,7 +236,7 @@ const copy: Record<
       {
         question: 'کدام سیستم پوشش صنعتی برای پروژه من مناسب است؟',
         answer:
-          'پاسخ به کاربری ساختمان، دهانه و شیب، اقلیم، نیاز عایق\u200Cکاری، ظاهر نما، سرعت اجرا و بودجه چرخه عمر بستگی دارد. سی\u200Cپانل ابتدا نقشه\u200Cها و محدودیت\u200Cهای پروژه را بررسی می\u200Cکند و سپس بین ساندویچ پانل، ایستادرز، نمای آلومینیومی یا نورگیر پیشنهاد فنی می\u200Cدهد.'
+          'پاسخ به کاربری ساختمان، دهانه و شیب، اقلیم، نیاز عایق\u200Cکاری، ظاهر نما، نور طبیعی، حرکت‌پذیری، فرم معماری، نگهداری و بودجه چرخه عمر بستگی دارد. سی\u200Cپانل ابتدا نقشه\u200Cها و محدودیت\u200Cهای پروژه را بررسی می\u200Cکند و سپس بین ساندویچ پانل، ایستادرز، نمای آلومینیومی، نورگیر، سازه پارچه‌ای کششی، سقف متحرک، ETFE یا ترکیبی از آن‌ها پیشنهاد فنی می\u200Cدهد.'
       },
       {
         question: 'تفاوت ساندویچ پانل با سقف ایستادرز یا ZIP چیست؟',
@@ -268,7 +297,7 @@ const copy: Record<
   en: {
     title: 'Industrial Building Envelope Systems | SIPANEL',
     description:
-      'Industrial building envelope systems for roof and facade projects: sandwich panels, standing seam/ZIP roofing, aluminium cladding, and daylighting with engineering review, material control, and installation QA.',
+      'Industrial building envelope systems for roof and facade projects: sandwich panels, standing seam/ZIP roofing, aluminium cladding, daylighting, tensile fabric, retractable roofs, and ETFE with engineering review, material control, and installation QA.',
     primaryKeyword: 'industrial building envelope systems',
     eyebrow: 'Industrial Envelope Systems',
     headline: 'Industrial Building\nEnvelope Systems',
@@ -290,7 +319,7 @@ const copy: Record<
       'Waterproofing logic & details',
       'Controlled installation'
     ],
-    sectionTitle: 'Three Systems. One Engineering Logic.',
+    sectionTitle: 'Seven Systems. One Engineering Logic.',
     sectionDescription:
       'Design, procurement and execution of roof and facade covering systems with full control over quality, waterproofing and scheduling.',
     cta: 'View System',
@@ -343,6 +372,24 @@ const copy: Record<
         title: 'Daylighting systems for controlled natural light',
         description:
           'When daylight is part of building performance, polycarbonate, glass, or hybrid systems are reviewed for safety, heat control, waterproofing, and connection to the main roof.'
+      },
+      {
+        systemId: 'tensile-fabric',
+        title: 'Tensile fabric for lightweight free-form coverings',
+        description:
+          'When shade, architectural form, and special spans matter, the membrane is reviewed through form-finding, prestress, patterning, cables, connections, and drainage.'
+      },
+      {
+        systemId: 'retractable-roof',
+        title: 'Retractable roofs for variable space operation',
+        description:
+          'When opening and closing creates operational value, movement mechanism, rails, drive, controls, closed-state sealing, safety, and maintenance are reviewed before skin selection.'
+      },
+      {
+        systemId: 'etfe',
+        title: 'ETFE for transparent ultra-lightweight skins',
+        description:
+          'When low weight and architectural transparency are priorities, ETFE is reviewed as a full foil, panel, frame, weld, air, daylight, drainage, and maintenance system.'
       }
     ],
     engineeringTitle: 'Engineering control from drainage to installation',
@@ -371,7 +418,7 @@ const copy: Record<
       {
         question: 'Which industrial covering system is suitable for my project?',
         answer:
-          'It depends on the building use, span, slope, climate, insulation needs, facade appearance, execution speed, and lifecycle budget. SIPANEL reviews the drawings and constraints before recommending sandwich panels, standing seam/ZIP, aluminium cladding, daylighting, or a combination.'
+          'It depends on building use, span, slope, climate, insulation, facade appearance, daylight, movement needs, architectural form, maintenance access, and lifecycle budget. SIPANEL reviews the drawings and constraints before recommending sandwich panels, standing seam/ZIP, aluminium cladding, daylighting, tensile fabric, retractable roofing, ETFE, or a combination.'
       },
       {
         question: 'What is the difference between sandwich panels and standing seam or ZIP roofing?',
@@ -429,7 +476,7 @@ const copy: Record<
     primaryCta: 'احصل على استشارة فنية مجانية',
     secondaryCta: 'عرض المشاريع',
     trustPoints: ['تصميم دقيق وهندسي', 'توريد ذكي ومراقبة الجودة', 'منطق العزل المائي', 'تركيب هندسي متحكم'],
-    sectionTitle: 'ثلاثة أنظمة. منطق هندسي واحد.',
+    sectionTitle: 'سبعة أنظمة. منطق هندسي واحد.',
     sectionDescription: 'تصميم وتوريد وتنفيذ أنظمة تغطية السقف والواجهة مع تحكم كامل.',
     cta: 'عرض النظام',
     projectCta: 'مشاريع مرتبطة',
@@ -481,6 +528,24 @@ const copy: Record<
         title: 'أنظمة الإضاءة الطبيعية لضوء مضبوط',
         description:
           'عندما يكون الضوء الطبيعي جزءاً من أداء المبنى، تتم مراجعة البولي كربونات أو الزجاج أو الحلول المختلطة من ناحية السلامة والحرارة والعزل المائي والاتصال بالسقف الرئيسي.'
+      },
+      {
+        systemId: 'tensile-fabric',
+        title: 'الأغشية النسيجية للأشكال الخفيفة والحرة',
+        description:
+          'عندما يكون الظل والشكل المعماري والبحور الخاصة مهمة، يراجع الغشاء عبر إيجاد الشكل والشد ونمط القص والكابلات والوصلات والتصريف.'
+      },
+      {
+        systemId: 'retractable-roof',
+        title: 'الأسقف المتحركة لتشغيل متغير للمساحة',
+        description:
+          'عندما يخلق الفتح والإغلاق قيمة تشغيلية، تتم مراجعة الآلية والريل والدفع والتحكم والعزل في الوضع المغلق والسلامة والصيانة قبل اختيار الغلاف.'
+      },
+      {
+        systemId: 'etfe',
+        title: 'ETFE للأغلفة الشفافة والخفيفة جداً',
+        description:
+          'عندما يكون الوزن المنخفض والشفافية المعمارية أولوية، يراجع ETFE كنظام كامل من الفويل والألواح والإطار واللحام والهواء والضوء والتصريف والصيانة.'
       }
     ],
     engineeringTitle: 'تحكم هندسي من التصريف إلى التركيب',
@@ -509,7 +574,7 @@ const copy: Record<
       {
         question: 'أي نظام تغطية صناعي يناسب مشروعي؟',
         answer:
-          'يعتمد ذلك على استخدام المبنى والبحور والميل والمناخ واحتياجات العزل ومظهر الواجهة وسرعة التنفيذ وميزانية دورة الحياة. تراجع SIPANEL الرسومات والقيود قبل اقتراح ألواح ساندويتش أو درز قائم/ZIP أو كسوة ألمنيوم أو نظام إضاءة طبيعية أو مزيج بينها.'
+          'يعتمد ذلك على استخدام المبنى والبحور والميل والمناخ والعزل ومظهر الواجهة والضوء والحركة والشكل المعماري والصيانة وميزانية دورة الحياة. تراجع SIPANEL الرسومات والقيود قبل اقتراح ألواح ساندويتش أو درز قائم/ZIP أو كسوة ألمنيوم أو إضاءة طبيعية أو غشاء نسيجي أو سقف متحرك أو ETFE أو مزيج بينها.'
       },
       {
         question: 'ما الفرق بين ألواح الساندويتش وسقف الدرز القائم أو ZIP؟',
@@ -572,7 +637,7 @@ const copy: Record<
       'Логика гидроизоляции',
       'Контролируемый монтаж'
     ],
-    sectionTitle: 'Три системы. Одна инженерная логика.',
+    sectionTitle: 'Семь систем. Одна инженерная логика.',
     sectionDescription: 'Проектирование, поставка и монтаж систем покрытия с полным контролем качества.',
     cta: 'Открыть систему',
     projectCta: 'Связанные проекты',
@@ -624,6 +689,24 @@ const copy: Record<
         title: 'Системы естественного освещения для контролируемого света',
         description:
           'Если естественный свет является частью работы здания, поликарбонат, стекло или гибридные решения проверяются по безопасности, тепловому режиму, гидроизоляции и соединению с основной кровлей.'
+      },
+      {
+        systemId: 'tensile-fabric',
+        title: 'Тентовые мембраны для легких свободных форм',
+        description:
+          'Когда важны тень, архитектурная форма и специальные пролеты, мембрана проверяется через формообразование, натяжение, раскрой, тросы, узлы и водоотвод.'
+      },
+      {
+        systemId: 'retractable-roof',
+        title: 'Раздвижные кровли для переменной эксплуатации',
+        description:
+          'Когда открывание и закрывание дает эксплуатационную ценность, механизм, рельсы, привод, управление, герметизация, безопасность и обслуживание проверяются до выбора оболочки.'
+      },
+      {
+        systemId: 'etfe',
+        title: 'ETFE для прозрачных сверхлегких оболочек',
+        description:
+          'Когда важны малый вес и прозрачность, ETFE рассматривается как полная система фольги, панелей, рамы, сварки, воздуха, света, водоотвода и обслуживания.'
       }
     ],
     engineeringTitle: 'Инженерный контроль от водоотвода до монтажа',
@@ -652,7 +735,7 @@ const copy: Record<
       {
         question: 'Какая промышленная система покрытия подходит моему проекту?',
         answer:
-          'Это зависит от назначения здания, пролетов, уклона, климата, требований к изоляции, внешнего вида фасада, скорости работ и бюджета жизненного цикла. SIPANEL проверяет чертежи и ограничения перед рекомендацией сэндвич-панелей, фальцевой/ZIP кровли, алюминиевой облицовки, систем естественного освещения или их комбинации.'
+          'Это зависит от назначения, пролетов, уклона, климата, изоляции, фасада, естественного света, подвижности, формы, обслуживания и бюджета жизненного цикла. SIPANEL проверяет чертежи и ограничения перед рекомендацией сэндвич-панелей, фальцевой/ZIP кровли, алюминиевой облицовки, прозрачных покрытий, тентовых мембран, раздвижной кровли, ETFE или их комбинации.'
       },
       {
         question: 'Чем сэндвич-панели отличаются от фальцевой или ZIP кровли?',
@@ -692,7 +775,7 @@ const copy: Record<
   }
 };
 
-const systems = [
+const systems: SystemCard[] = [
   {
     id: 'sandwich-panel',
     imageDesktop: sandwichDesktop,
@@ -831,6 +914,105 @@ const systems = [
       fa: '/systems/daylighting-transparent-roofing',
       ar: '/systems/daylighting-transparent-roofing',
       ru: '/systems/daylighting-transparent-roofing'
+    }
+  },
+  {
+    id: 'tensile-fabric',
+    alt: {
+      fa: 'وضعیت در انتظار تصویر تخصصی سازه پارچه‌ای کششی',
+      en: 'Pending specialist image for tensile fabric membrane structures',
+      ar: 'صورة تخصصية قيد الانتظار للهياكل النسيجية المشدودة',
+      ru: 'Ожидается профильное изображение тентовых мембранных конструкций'
+    },
+    title: {
+      fa: 'سازه‌های پارچه‌ای کششی',
+      en: 'Tensile Fabric Structures',
+      ar: 'الهياكل النسيجية المشدودة',
+      ru: 'Тентовые мембранные конструкции'
+    },
+    subtitle: {
+      fa: 'مهندسی فرم و پیش‌تنیدگی',
+      en: 'Form and Prestress Engineering.',
+      ar: 'هندسة الشكل والشد',
+      ru: 'Инженерия формы и натяжения.'
+    },
+    description: {
+      fa: 'سی‌پانل پوشش‌های غشایی را با کنترل فرم‌یابی، الگوی برش، کابل‌ها، اتصالات، زهکشی و نصب مرحله‌ای برای فضاهای معماری و دهانه‌های ویژه مهندسی می‌کند.',
+      en: 'SIPANEL engineers membrane coverings through form-finding, cutting pattern, cables, connections, drainage, and staged installation for architectural spaces and special spans.',
+      ar: 'تهندس SIPANEL الأغشية عبر إيجاد الشكل ونمط القص والكابلات والوصلات والتصريف والتركيب المرحلي للمساحات المعمارية والبحور الخاصة.',
+      ru: 'SIPANEL проектирует мембранные покрытия с контролем формообразования, раскроя, тросов, узлов, водоотвода и этапного монтажа для специальных пролетов.'
+    },
+    routes: {
+      en: '/systems/tensile-fabric-membrane-structures',
+      fa: '/systems/tensile-fabric-membrane-structures',
+      ar: '/systems/tensile-fabric-membrane-structures',
+      ru: '/systems/tensile-fabric-membrane-structures'
+    }
+  },
+  {
+    id: 'retractable-roof',
+    alt: {
+      fa: 'وضعیت در انتظار تصویر تخصصی سقف متحرک',
+      en: 'Pending specialist image for retractable roof systems',
+      ar: 'صورة تخصصية قيد الانتظار للأسقف المتحركة',
+      ru: 'Ожидается профильное изображение раздвижных кровель'
+    },
+    title: {
+      fa: 'سقف‌ها و پوشش‌های متحرک',
+      en: 'Retractable Roof Systems',
+      ar: 'الأسقف والتغطيات المتحركة',
+      ru: 'Раздвижные кровельные системы'
+    },
+    subtitle: {
+      fa: 'مهندسی حرکت و بهره‌برداری',
+      en: 'Movement and Operation Engineering.',
+      ar: 'هندسة الحركة والتشغيل',
+      ru: 'Инженерия движения и эксплуатации.'
+    },
+    description: {
+      fa: 'سی‌پانل سیستم‌های متحرک را با هماهنگی سازه، ریل و درایو، منطق کنترل، آب‌بندی حالت بسته، ایمنی و دسترسی نگهداری طراحی و اجرا می‌کند.',
+      en: 'SIPANEL coordinates retractable systems around structure, rails and drives, control logic, closed-state sealing, safety, and maintenance access.',
+      ar: 'تنسق SIPANEL الأنظمة المتحركة حول الهيكل والريل والدفع ومنطق التحكم والعزل في الوضع المغلق والسلامة والوصول للصيانة.',
+      ru: 'SIPANEL координирует подвижные системы с конструкцией, рельсами и приводом, логикой управления, герметизацией, безопасностью и доступом к обслуживанию.'
+    },
+    routes: {
+      en: '/systems/retractable-roof-covering-systems',
+      fa: '/systems/retractable-roof-covering-systems',
+      ar: '/systems/retractable-roof-covering-systems',
+      ru: '/systems/retractable-roof-covering-systems'
+    }
+  },
+  {
+    id: 'etfe',
+    alt: {
+      fa: 'وضعیت در انتظار تصویر تخصصی پوشش ETFE',
+      en: 'Pending specialist image for ETFE roof and facade systems',
+      ar: 'صورة تخصصية قيد الانتظار لأنظمة ETFE',
+      ru: 'Ожидается профильное изображение систем ETFE'
+    },
+    title: {
+      fa: 'پوشش‌های ETFE',
+      en: 'ETFE Roof & Facade Systems',
+      ar: 'تغطيات ETFE',
+      ru: 'Системы ETFE'
+    },
+    subtitle: {
+      fa: 'مهندسی پوسته شفاف و فوق‌سبک',
+      en: 'Transparent Ultra-Light Skin Engineering.',
+      ar: 'هندسة غلاف شفاف وخفيف جداً',
+      ru: 'Инженерия прозрачной сверхлегкой оболочки.'
+    },
+    description: {
+      fa: 'سی‌پانل سیستم‌های ETFE تک‌لایه و بالشتکی را با کنترل پنل‌بندی، فریم، جوش فویل، شبکه هوا، نور، زهکشی و نگهداری مهندسی می‌کند.',
+      en: 'SIPANEL engineers single-layer and cushion ETFE systems through panelization, frame, foil welding, air network, daylight, drainage, and maintenance control.',
+      ar: 'تهندس SIPANEL أنظمة ETFE أحادية الطبقة والوسائد عبر الألواح والإطار ولحام الفويل وشبكة الهواء والضوء والتصريف والصيانة.',
+      ru: 'SIPANEL проектирует однослойные и подушечные ETFE системы с контролем панелей, рамы, сварки фольги, воздуха, света, водоотвода и обслуживания.'
+    },
+    routes: {
+      en: '/systems/etfe-roof-facade-systems',
+      fa: '/systems/etfe-roof-facade-systems',
+      ar: '/systems/etfe-roof-facade-systems',
+      ru: '/systems/etfe-roof-facade-systems'
     }
   }
 ];
@@ -996,26 +1178,36 @@ export default async function SystemsOverviewPage({params}: Props) {
             {systems.map((system) => (
               <article className="systems-card" key={system.id}>
                 <div className="systems-card__image">
-                  <Image
-                    className="systems-card__desktop-img"
-                    src={system.imageDesktop}
-                    alt={system.alt[locale]}
-                    fill
-                    placeholder="blur"
-                    sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    loading="lazy"
-                  />
-                  <Image
-                    className="systems-card__mobile-img"
-                    src={system.imageMobile}
-                    /* Duplicate responsive crop of the desktop card image; decorative to avoid repeated image alt text. */
-                    alt=""
-                    aria-hidden="true"
-                    fill
-                    placeholder="blur"
-                    sizes="100vw"
-                    loading="lazy"
-                  />
+                  {system.imageDesktop && system.imageMobile ? (
+                    <>
+                      <Image
+                        className="systems-card__desktop-img"
+                        src={system.imageDesktop}
+                        alt={system.alt[locale]}
+                        fill
+                        placeholder="blur"
+                        sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        loading="lazy"
+                      />
+                      <Image
+                        className="systems-card__mobile-img"
+                        src={system.imageMobile}
+                        /* Duplicate responsive crop of the desktop card image; decorative to avoid repeated image alt text. */
+                        alt=""
+                        aria-hidden="true"
+                        fill
+                        placeholder="blur"
+                        sizes="100vw"
+                        loading="lazy"
+                      />
+                    </>
+                  ) : (
+                    <div className="systems-card__pending-visual" aria-label={system.alt[locale]} role="img">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  )}
                   <span className="systems-card__badge" aria-hidden="true">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path d="M10 2v16M2 10h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
