@@ -94,13 +94,13 @@ type LocalizedContent = {
 
 const fa: LocalizedContent = {
   seo: {
-    primaryKeyword: 'سقف استندینگ سیم',
-    title: 'سقف استندینگ سیم و ZIP Tech | سیستم سقف ضدآب صنعتی SIPANEL',
-    metaDescription: 'سی‌پانل سیستم‌های سقف استندینگ سیم و ZIP Tech را با منطق زهکشی، هماهنگی فلاشینگ، اتصال مخفی و نصب کنترل‌شده برای پروژه‌های صنعتی طراحی و اجرا می‌کند.'
+    primaryKeyword: 'استندینگ سیم',
+    title: 'استندینگ سیم و ZIP Tech | سیستم سقف صنعتی ضدآب SIPANEL',
+    metaDescription: 'سی‌پانل سیستم استندینگ سیم (سقف ایستادرز) و ZIP Tech را با منطق زهکشی، هماهنگی فلاشینگ، اتصال مخفی و نصب کنترل‌شده برای پروژه‌های صنعتی طراحی و اجرا می‌کند.'
   },
   hero: {
-    eyebrow: 'سقف ضدآب صنعتی',
-    h1: 'سقف استندینگ سیم با منطق مهندسی آب‌بندی',
+    eyebrow: 'سیستم استندینگ سیم و ایستادرز',
+    h1: 'استندینگ سیم برای سقف صنعتی با منطق مهندسی آب‌بندی',
     subheadline: 'سی‌پانل شیب سقف، مسیرهای زهکشی، درزها، فلاشینگ‌ها، ناودان‌ها، نقاط نفوذ و جزئیات اتصال مخفی را پیش از شروع نصب هماهنگ می‌کند تا ریسک نشتی کاهش یابد.',
     primaryCta: 'درخواست بررسی مهندسی سقف',
     secondaryCta: 'مشاهده پروژه‌های سقف',
@@ -158,7 +158,7 @@ const fa: LocalizedContent = {
     }
   },
   systemApplications: {
-    title: 'کاربردهای سیستم سقف استندینگ سیم',
+    title: 'کاربردهای استندینگ سیم',
     applications: [
       'کارخانه‌های صنعتی',
       'انبارهای دهانه بزرگ',
@@ -192,7 +192,7 @@ const fa: LocalizedContent = {
     intro: 'نتایج از پروژه‌های واقعی اجراشده با هماهنگی مهندسی SIPANEL.'
   },
   faq: {
-    title: 'سوالات متداول سقف استندینگ سیم',
+    title: 'سوالات متداول استندینگ سیم و زیپ پانل',
     items: [
       {
         question: 'چرا سقف استندینگ سیم برای پروژه‌های صنعتی مناسب است؟',
@@ -233,7 +233,7 @@ const fa: LocalizedContent = {
   breadcrumbs: [
     {label: 'خانه', href: getLocalizedPath('fa')},
     {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')},
-    {label: 'سقف استندینگ سیم', href: getLocalizedPath('fa', '/systems/standing-seam-zip-tech-roofing')}
+    {label: 'استندینگ سیم', href: getLocalizedPath('fa', '/systems/standing-seam-zip-tech-roofing')}
   ],
   caseStudyLabels: {
     challenge: 'چالش',

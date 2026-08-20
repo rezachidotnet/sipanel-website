@@ -94,13 +94,13 @@ type LocalizedContent = {
 
 const fa: LocalizedContent = {
   seo: {
-    primaryKeyword: 'سیستم‌های نورگیر و پوشش شفاف',
-    title: 'نورگیرها و پوشش‌های شفاف | سیستم‌های نورگیر صنعتی SIPANEL',
-    metaDescription: 'سی‌پانل سیستم‌های نورگیر و پوشش شفاف را با پلی‌کربنات، اسکای‌لایت شیشه‌ای و راهکارهای ترکیبی — همراه با یکپارچگی سازه‌ای، عملکرد حرارتی و مقاومت در برابر آب‌وهوا — برای پروژه‌های صنعتی مهندسی می‌کند.'
+    primaryKeyword: 'نورگیر سقفی',
+    title: 'نورگیر سقفی صنعتی | سیستم‌های نورگیر و پوشش شفاف SIPANEL',
+    metaDescription: 'سی‌پانل نورگیر سقفی صنعتی را برای سوله و ساختمان‌های صنعتی با پلی‌کربنات، اسکای‌لایت شیشه‌ای و راهکارهای ترکیبی — همراه با یکپارچگی سازه‌ای، عملکرد حرارتی و مقاومت در برابر آب‌وهوا — مهندسی می‌کند.'
   },
   hero: {
-    eyebrow: 'سیستم‌های نورگیر و شفاف',
-    h1: 'سیستم‌های پوشش شفاف با مهندسی عملکردی',
+    eyebrow: 'نورگیر سقفی صنعتی',
+    h1: 'نورگیر سقفی صنعتی برای سوله و ساختمان‌های صنعتی',
     subheadline: 'سی‌پانل چیدمان نورگیر، انتخاب پلی‌کربنات، یکپارچگی سازه‌ای، عملکرد حرارتی و مقاومت در برابر آب‌وهوا را پیش از شروع نصب هماهنگ می‌کند.',
     primaryCta: 'درخواست بررسی نورگیر',
     secondaryCta: 'مشاهده پروژه‌های مرتبط',
@@ -158,7 +158,7 @@ const fa: LocalizedContent = {
     }
   },
   systemApplications: {
-    title: 'کاربردهای سیستم نورگیر و پوشش شفاف',
+    title: 'کاربردهای نورگیر سقفی صنعتی',
     applications: [
       'نورگیرهای کارخانه‌های صنعتی',
       'نوارهای نور طبیعی انبارها',
@@ -192,7 +192,7 @@ const fa: LocalizedContent = {
     intro: 'نتایج از پروژه‌های واقعی اجراشده با هماهنگی مهندسی SIPANEL.'
   },
   faq: {
-    title: 'سوالات متداول نورگیر و پوشش شفاف',
+    title: 'سوالات متداول نورگیر سقفی صنعتی',
     items: [
       {
         question: 'سی‌پانل با چه متریال‌هایی کار می‌کند؟',
@@ -237,7 +237,7 @@ const fa: LocalizedContent = {
   breadcrumbs: [
     {label: 'خانه', href: getLocalizedPath('fa')},
     {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')},
-    {label: 'نورگیرها و پوشش‌های شفاف', href: getLocalizedPath('fa', '/systems/daylighting-transparent-roofing')}
+    {label: 'نورگیر سقفی', href: getLocalizedPath('fa', '/systems/daylighting-transparent-roofing')}
   ],
   caseStudyLabels: {
     challenge: 'چالش',
