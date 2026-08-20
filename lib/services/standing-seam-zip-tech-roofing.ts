@@ -246,13 +246,13 @@ const fa: LocalizedContent = {
 
 const en: LocalizedContent = {
   seo: {
-    primaryKeyword: 'standing seam roofing',
-    title: 'Standing Seam & ZIP Tech Roofing | SIPANEL Industrial Waterproof Roofing',
+    primaryKeyword: 'standing seam roof',
+    title: 'Standing Seam Metal Roof Systems | SIPANEL',
     metaDescription: 'SIPANEL designs and executes Standing Seam and ZIP Tech roofing systems with drainage logic, flashing coordination, concealed fastening, and controlled installation for industrial projects.'
   },
   hero: {
     eyebrow: 'Industrial Waterproof Roofing',
-    h1: 'Standing Seam Roofing Built Around Waterproofing Logic',
+    h1: 'Standing Seam Metal Roof Systems',
     subheadline: 'SIPANEL coordinates roof slope, drainage paths, seams, flashings, gutters, penetrations, and concealed fastening details to reduce leakage risk before installation begins.',
     primaryCta: 'Request Roof Engineering Review',
     secondaryCta: 'View Roofing Projects',
@@ -398,13 +398,13 @@ const en: LocalizedContent = {
 
 const ar: LocalizedContent = {
   seo: {
-    primaryKeyword: 'تسقيف ستاندينغ سيم',
-    title: 'تسقيف ستاندينغ سيم و ZIP Tech | أنظمة التسقيف الصناعي المقاوم للماء SIPANEL',
+    primaryKeyword: 'ستاندينغ سيم',
+    title: 'أنظمة ستاندينغ سيم للأسقف المعدنية | SIPANEL',
     metaDescription: 'تصمم SIPANEL وتنفذ أنظمة تسقيف ستاندينغ سيم و ZIP Tech مع منطق الصرف وتنسيق الفلاشينغ والتثبيت المخفي والتركيب المنضبط للمشاريع الصناعية.'
   },
   hero: {
     eyebrow: 'تسقيف صناعي مقاوم للماء',
-    h1: 'تسقيف ستاندينغ سيم مبني على منطق العزل المائي',
+    h1: 'أنظمة تسقيف ستاندينغ سيم',
     subheadline: 'تنسق SIPANEL ميل السقف ومسارات الصرف والدرزات والفلاشينغ والمزاريب والاختراقات وتفاصيل التثبيت المخفي لتقليل مخاطر التسرب قبل بدء التركيب.',
     primaryCta: 'طلب مراجعة هندسية للسقف',
     secondaryCta: 'عرض مشاريع التسقيف',

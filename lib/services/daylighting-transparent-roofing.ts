@@ -250,13 +250,13 @@ const fa: LocalizedContent = {
 
 const en: LocalizedContent = {
   seo: {
-    primaryKeyword: 'daylighting transparent roofing',
-    title: 'Daylighting & Transparent Roofing | SIPANEL Industrial Skylight Systems',
+    primaryKeyword: 'skylight',
+    title: 'Skylight & Daylighting Systems | SIPANEL',
     metaDescription: 'SIPANEL engineers daylighting and transparent roofing systems with polycarbonate, glass skylights, and hybrid solutions — coordinating structural integration, thermal performance, and weather resistance for industrial projects.'
   },
   hero: {
     eyebrow: 'Daylighting & Transparent Systems',
-    h1: 'Transparent Roofing Systems Engineered for Performance',
+    h1: 'Skylight & Industrial Daylighting Systems',
     subheadline: 'SIPANEL coordinates skylight layout, polycarbonate selection, structural integration, thermal performance, and weather resistance before installation begins.',
     primaryCta: 'Request Daylighting Review',
     secondaryCta: 'View Related Projects',
@@ -348,7 +348,7 @@ const en: LocalizedContent = {
     intro: 'Results from real projects executed with SIPANEL engineering coordination.'
   },
   faq: {
-    title: 'Daylighting & Transparent Roofing Questions',
+    title: 'Skylight & Daylighting Questions',
     items: [
       {
         question: 'What materials does SIPANEL work with for daylighting systems?',
@@ -406,14 +406,14 @@ const en: LocalizedContent = {
 
 const ar: LocalizedContent = {
   seo: {
-    primaryKeyword: 'أنظمة الإضاءة الطبيعية والتسقيف الشفاف',
-    title: 'الإضاءة الطبيعية والتسقيف الشفاف | أنظمة المناور الصناعية SIPANEL',
-    metaDescription: 'تهندس SIPANEL أنظمة الإضاءة الطبيعية والتسقيف الشفاف بالبولي كربونات والمناور الزجاجية والحلول الهجينة — مع تنسيق التكامل الهيكلي والأداء الحراري ومقاومة الطقس للمشاريع الصناعية.'
+    primaryKeyword: 'سكاي لايت',
+    title: 'سكاي لايت والأسقف الشفافة | SIPANEL',
+    metaDescription: 'تهندس SIPANEL أنظمة سكاي لايت والإضاءة الطبيعية والتسقيف الشفاف بالبولي كربونات والمناور الزجاجية والحلول الهجينة — مع تنسيق التكامل الهيكلي والأداء الحراري ومقاومة الطقس للمشاريع الصناعية.'
   },
   hero: {
     eyebrow: 'أنظمة الإضاءة الطبيعية والشفافة',
-    h1: 'أنظمة التسقيف الشفاف المهندسة للأداء',
-    subheadline: 'تنسق SIPANEL تخطيط المناور واختيار البولي كربونات والتكامل الهيكلي والأداء الحراري ومقاومة الطقس قبل بدء التركيب.',
+    h1: 'أنظمة سكاي لايت والأسقف الشفافة',
+    subheadline: 'في أنظمة سكاي لايت الصناعية، تنسق SIPANEL تخطيط المناور واختيار البولي كربونات والتكامل الهيكلي والأداء الحراري ومقاومة الطقس قبل بدء التركيب.',
     primaryCta: 'طلب مراجعة الإضاءة الطبيعية',
     secondaryCta: 'عرض المشاريع ذات الصلة',
     visualAlt: 'تركيب مناور صناعية مع تفاصيل هندسية للأداء',
@@ -470,7 +470,7 @@ const ar: LocalizedContent = {
     }
   },
   systemApplications: {
-    title: 'تطبيقات أنظمة الإضاءة الطبيعية والتسقيف الشفاف',
+    title: 'تطبيقات سكاي لايت والإضاءة الطبيعية',
     applications: [
       'مناور المصانع الصناعية',
       'شرائط الإضاءة الطبيعية للمستودعات',
@@ -504,10 +504,10 @@ const ar: LocalizedContent = {
     intro: 'نتائج من مشاريع حقيقية نُفذت بتنسيق هندسي من SIPANEL.'
   },
   faq: {
-    title: 'أسئلة شائعة حول الإضاءة الطبيعية والتسقيف الشفاف',
+    title: 'أسئلة شائعة حول سكاي لايت والأسقف الشفافة',
     items: [
       {
-        question: 'ما المواد التي تعمل بها SIPANEL لأنظمة الإضاءة الطبيعية؟',
+        question: 'ما المواد التي تعمل بها SIPANEL لأنظمة سكاي لايت والإضاءة الطبيعية؟',
         answer: 'تعمل SIPANEL مع البولي كربونات متعدد الجدران والبولي كربونات الصلب والمناور الزجاجية والأنظمة الهجينة. يتم اختيار المواد بناءً على المناخ والظروف الحرارية ومتطلبات الأداء.'
       },
       {
@@ -549,7 +549,7 @@ const ar: LocalizedContent = {
   breadcrumbs: [
     {label: 'الرئيسية', href: '/ar'},
     {label: 'الأنظمة', href: '/ar/systems'},
-    {label: 'الإضاءة الطبيعية والتسقيف الشفاف', href: '/ar/systems/daylighting-transparent-roofing'}
+    {label: 'سكاي لايت والأسقف الشفافة', href: '/ar/systems/daylighting-transparent-roofing'}
   ],
   caseStudyLabels: {
     challenge: 'التحدي',

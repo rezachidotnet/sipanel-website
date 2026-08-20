@@ -246,13 +246,13 @@ const fa: LocalizedContent = {
 
 const en: LocalizedContent = {
   seo: {
-    primaryKeyword: 'aluminium cladding systems',
-    title: 'Aluminium Cladding & Covering | SIPANEL Industrial Facade Systems',
+    primaryKeyword: 'aluminium cladding',
+    title: 'Aluminium Cladding & Facade Systems | SIPANEL',
     metaDescription: 'SIPANEL engineers aluminium cladding systems with shop drawings, substructure coordination, panel layout, and controlled installation for industrial and commercial facade projects.'
   },
   hero: {
     eyebrow: 'Industrial Facade Systems',
-    h1: 'Aluminium Cladding Engineered Before Installation',
+    h1: 'Aluminium Cladding Systems for Industrial Facades',
     subheadline: 'SIPANEL coordinates panel layout, substructure, joints, flashings, edge details, and thermal movement before installation begins to reduce facade risk.',
     primaryCta: 'Request Facade Engineering Review',
     secondaryCta: 'View Facade Projects',
@@ -398,14 +398,14 @@ const en: LocalizedContent = {
 
 const ar: LocalizedContent = {
   seo: {
-    primaryKeyword: 'أنظمة الكسوة الألومنيومية',
-    title: 'الكسوة الألومنيومية | أنظمة الواجهات الصناعية SIPANEL',
-    metaDescription: 'تهندس SIPANEL أنظمة الكسوة الألومنيومية مع رسومات الشوب وتنسيق البنية التحتية وتخطيط الألواح والتركيب المنضبط للمشاريع الصناعية والتجارية.'
+    primaryKeyword: 'كلادينج ألمنيوم',
+    title: 'كلادينج ألمنيوم وأنظمة الواجهات المعدنية | SIPANEL',
+    metaDescription: 'تهندس SIPANEL أنظمة كلادينج ألمنيوم (الكسوة الألومنيومية) مع رسومات الشوب وتنسيق البنية التحتية وتخطيط الألواح والتركيب المنضبط للمشاريع الصناعية والتجارية.'
   },
   hero: {
     eyebrow: 'أنظمة الواجهات الصناعية',
-    h1: 'كسوة ألومنيومية مهندسة قبل التركيب',
-    subheadline: 'تنسق SIPANEL تخطيط الألواح والبنية التحتية والمفاصل والفلاشينغ وتفاصيل الحواف والحركة الحرارية قبل بدء التركيب لتقليل مخاطر الواجهة.',
+    h1: 'أنظمة كلادينج ألمنيوم والواجهات المعدنية',
+    subheadline: 'في مشاريع كلادينج ألمنيوم، تنسق SIPANEL تخطيط الألواح والبنية التحتية والمفاصل والفلاشينغ وتفاصيل الحواف والحركة الحرارية قبل بدء التركيب لتقليل مخاطر الواجهة.',
     primaryCta: 'طلب مراجعة هندسية للواجهة',
     secondaryCta: 'عرض مشاريع الواجهات',
     visualAlt: 'تركيب كسوة ألومنيومية مع بنية تحتية مهندسة وتخطيط ألواح',
@@ -462,7 +462,7 @@ const ar: LocalizedContent = {
     }
   },
   systemApplications: {
-    title: 'تطبيقات نظام الكسوة الألومنيومية',
+    title: 'تطبيقات كلادينج ألمنيوم',
     applications: [
       'المصانع الصناعية',
       'المستودعات',
@@ -496,7 +496,7 @@ const ar: LocalizedContent = {
     intro: 'نتائج من مشاريع حقيقية نُفذت بتنسيق هندسي من SIPANEL.'
   },
   faq: {
-    title: 'أسئلة شائعة حول الكسوة الألومنيومية',
+    title: 'أسئلة شائعة حول كلادينج الألمنيوم',
     items: [
       {
         question: 'لماذا تناسب الكسوة الألومنيومية المشاريع الصناعية والتجارية؟',
@@ -537,7 +537,7 @@ const ar: LocalizedContent = {
   breadcrumbs: [
     {label: 'الرئيسية', href: '/ar'},
     {label: 'الأنظمة', href: '/ar/systems'},
-    {label: 'الكسوة الألومنيومية', href: '/ar/systems/aluminium-cladding-covering'}
+    {label: 'كلادينج ألمنيوم', href: '/ar/systems/aluminium-cladding-covering'}
   ],
   caseStudyLabels: {
     challenge: 'التحدي',

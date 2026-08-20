@@ -383,11 +383,11 @@ function getLocalizedSandwichPanelSystemsPage(locale: Extract<Locale, 'ar' | 'ru
   const isAr = locale === 'ar';
   const labels = isAr
     ? {
-        keyword: 'أنظمة ألواح الساندويتش',
-        title: 'أنظمة ألواح الساندويتش | SIPANEL',
-        description: 'أنظمة ألواح الساندويتش مع مراجعة هندسية للتخطيط والعزل المائي والتوريد وتسلسل التركيب قبل الشراء والتنفيذ.',
+        keyword: 'سندويج بنل',
+        title: 'سندويج بنل للأسقف والجدران الصناعية | SIPANEL',
+        description: 'أنظمة سندويج بنل (ألواح الساندويتش) للأسقف والجدران الصناعية، مع مراجعة هندسية للتخطيط والعزل المائي والتوريد وتسلسل التركيب قبل الشراء والتنفيذ.',
         eyebrow: 'أنظمة أغلفة صناعية',
-        h1: 'أنظمة ألواح الساندويتش مع ضبط هندسي قبل التنفيذ',
+        h1: 'أنظمة سندويج بنل للأسقف والجدران',
         subheadline: 'تراجع SIPANEL نوع اللوح وسماكة العزل والتفاصيل والملحقات وتسلسل التركيب حتى يعمل السقف والجدار كنظام واحد.',
         primaryCta: 'اطلب استشارة فنية',
         secondaryCta: 'عرض المشاريع المرتبطة',
@@ -403,7 +403,7 @@ function getLocalizedSandwichPanelSystemsPage(locale: Extract<Locale, 'ar' | 'ru
         recommendationIntro: 'تتعامل SIPANEL مع النظام كغلاف هندسي كامل، وليس كعملية بيع مواد فقط.',
         traditional: 'توريد تقليدي',
         sipanel: 'منهج SIPANEL',
-        applicationsTitle: 'استخدامات أنظمة ألواح الساندويتش',
+        applicationsTitle: 'استخدامات سندويج بنل',
         applications: ['أسقف وجدران المصانع', 'المستودعات والقاعات الصناعية', 'الغرف الباردة والمناطق المعزولة', 'مشاريع التوسعة والتجديد'],
         proofTitle: 'إثبات هندسي قبل التنفيذ',
         proofItems: ['رسومات الورشة', 'تفاصيل العزل المائي', 'قائمة المواد والكميات'],
@@ -415,7 +415,7 @@ function getLocalizedSandwichPanelSystemsPage(locale: Extract<Locale, 'ar' | 'ru
         result: 'النتيجة',
         viewProject: 'عرض المشروع',
         faqTitle: 'أسئلة شائعة',
-        conversionHeadline: 'راجع نظام ألواح الساندويتش قبل الشراء والتركيب',
+        conversionHeadline: 'راجع نظام سندويج بنل قبل الشراء والتركيب',
         conversionText: 'أرسل الرسومات ومعلومات المشروع حتى يراجع فريق SIPANEL التخطيط والتوريد ومخاطر التركيب.',
         conversionButton: 'اطلب مراجعة هندسية'
       }

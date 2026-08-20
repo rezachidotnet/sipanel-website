@@ -789,7 +789,7 @@ const systems: SystemCard[] = [
     title: {
       fa: 'سیستم ساندویچ پانل',
       en: 'Sandwich Panel Systems',
-      ar: 'أنظمة الألواح المزدوجة',
+      ar: 'سندويج بنل',
       ru: 'Сэндвич-панельные системы'
     },
     subtitle: {
@@ -824,7 +824,7 @@ const systems: SystemCard[] = [
     title: {
       fa: 'سقف ایستادرز و ZIP Tech',
       en: 'Standing Seam Roofing',
-      ar: 'تسقيف الدرز القائم',
+      ar: 'أنظمة ستاندينغ سيم',
       ru: 'Фальцевая кровля'
     },
     subtitle: {
@@ -859,7 +859,7 @@ const systems: SystemCard[] = [
     title: {
       fa: 'سیستم نمای آلومینیومی',
       en: 'Aluminium Cladding Systems',
-      ar: 'أنظمة الكسوة الألمنيوم',
+      ar: 'كلادينج ألمنيوم',
       ru: 'Алюминиевая облицовка'
     },
     subtitle: {
@@ -893,8 +893,8 @@ const systems: SystemCard[] = [
     },
     title: {
       fa: 'نورگیرها و پوشش\u200Cهای شفاف',
-      en: 'Daylighting & Transparent Roofing',
-      ar: 'أنظمة الإضاءة الطبيعية والتغطيات الشفافة',
+      en: 'Skylight & Daylighting Systems',
+      ar: 'سكاي لايت والأسقف الشفافة',
       ru: 'Системы естественного освещения и прозрачных покрытий'
     },
     subtitle: {
@@ -927,7 +927,7 @@ const systems: SystemCard[] = [
     title: {
       fa: 'سازه‌های پارچه‌ای کششی',
       en: 'Tensile Fabric Structures',
-      ar: 'الهياكل النسيجية المشدودة',
+      ar: 'مظلات شد انشائي',
       ru: 'Тентовые мембранные конструкции'
     },
     subtitle: {
@@ -960,7 +960,7 @@ const systems: SystemCard[] = [
     title: {
       fa: 'سقف‌ها و پوشش‌های متحرک',
       en: 'Retractable Roof Systems',
-      ar: 'الأسقف والتغطيات المتحركة',
+      ar: 'سقف متحرك',
       ru: 'Раздвижные кровельные системы'
     },
     subtitle: {
@@ -993,7 +993,7 @@ const systems: SystemCard[] = [
     title: {
       fa: 'پوشش‌های ETFE',
       en: 'ETFE Roof & Facade Systems',
-      ar: 'تغطيات ETFE',
+      ar: 'أنظمة ETFE',
       ru: 'Системы ETFE'
     },
     subtitle: {
