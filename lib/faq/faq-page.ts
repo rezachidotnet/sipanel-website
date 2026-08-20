@@ -507,7 +507,7 @@ const localeCopy: Record<Locale, Omit<FaqLocaleContent, 'categories' | 'items' |
       title: 'FAQ | پرسش‌های صنعتی SIPANEL درباره پنل، سقف و کلادینگ',
       metaDescription:
         'پاسخ سوالات درباره سیستم‌های پنل ساندویچی SIPANEL، سقف Standing Seam، کلادینگ آلومینیومی، آب‌بندی، شاپ‌دراوینگ، تامین و اجرای پوسته صنعتی را پیدا کنید.',
-      h1: 'Industrial Panel, Roofing & Cladding Questions.'
+      h1: 'پرسش‌های صنعتی درباره پنل، سقف و کلادینگ.'
     },
     hero: {
       eyebrow: 'سوالات فنی',
@@ -545,7 +545,7 @@ const localeCopy: Record<Locale, Omit<FaqLocaleContent, 'categories' | 'items' |
       title: 'FAQ | أسئلة SIPANEL حول الألواح والأسقف والكسوة',
       metaDescription:
         'اعثر على إجابات حول أنظمة ألواح SIPANEL، وأسقف Standing Seam، وكسوة الألمنيوم، والعزل المائي، والرسومات التنفيذية، والمشتريات، وتنفيذ الغلاف الصناعي.',
-      h1: 'Industrial Panel, Roofing & Cladding Questions.'
+      h1: 'أسئلة حول الألواح الصناعية والأسقف والكسوة.'
     },
     hero: {
       eyebrow: 'الأسئلة الفنية',
@@ -583,7 +583,7 @@ const localeCopy: Record<Locale, Omit<FaqLocaleContent, 'categories' | 'items' |
       title: 'FAQ | Вопросы SIPANEL по панелям, кровле и облицовке',
       metaDescription:
         'Найдите ответы о системах SIPANEL из сэндвич-панелей, кровле Standing Seam, алюминиевой облицовке, гидроизоляции, рабочих чертежах, закупках и выполнении промышленной оболочки.',
-      h1: 'Industrial Panel, Roofing & Cladding Questions.'
+      h1: 'Вопросы по промышленным панелям, кровле и облицовке.'
     },
     hero: {
       eyebrow: 'Технические вопросы',

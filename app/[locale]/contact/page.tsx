@@ -3,7 +3,7 @@ import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {RfqContactPage} from '@/components/contact/rfq-contact-page';
 import {getLocalizedPath, locales, type Locale} from '@/i18n/routing';
-import {getRfqContactPageData, rfqContactPage} from '@/lib/contact/rfq-contact-page';
+import {getRfqContactPageData, getRfqContactSeo, rfqContactPage} from '@/lib/contact/rfq-contact-page';
 import {buildPageMetadata} from '@/lib/seo/metadata';
 import {
   buildBreadcrumbListSchema,
@@ -26,7 +26,7 @@ function SchemaPlaceholder({schema}: {schema: unknown}) {
 function buildContactPageSchema(locale: Locale) {
   return buildSharedContactPageSchema(locale, `${rfqContactPage.route[locale]}#contact-page`, {
     name: rfqContactPage.seo.h1,
-    description: rfqContactPage.seo.meta_description,
+    description: getRfqContactSeo(locale).metaDescription,
     url: rfqContactPage.route[locale]
   });
 }
@@ -65,10 +65,12 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 
   setRequestLocale(validLocale);
 
+  const seo = getRfqContactSeo(validLocale);
+
   return buildPageMetadata({
     locale: validLocale,
-    title: rfqContactPage.seo.title,
-    description: rfqContactPage.seo.meta_description,
+    title: seo.title,
+    description: seo.metaDescription,
     routes: rfqContactPage.route
   });
 }

@@ -101,6 +101,32 @@ export const rfqContactPage = {
 export const productionContactInfo =
   mergedSpec.Sipanel_website_top_rank_deep_merged.production_contact_info as ProductionContactInfo;
 
+const localizedContactSeo: Record<Locale, {title: string; metaDescription: string}> = {
+  en: {
+    title: rfqContactPage.seo.title,
+    metaDescription: rfqContactPage.seo.meta_description
+  },
+  fa: {
+    title: 'تماس با SIPANEL | درخواست مشاوره ساندویچ پانل، سقف و کلادینگ صنعتی',
+    metaDescription:
+      'درخواست بررسی مهندسی یا RFQ از SIPANEL برای سیستم‌های ساندویچ پانل، سقف استندینگ سیم، کلادینگ آلومینیومی و پروژه‌های پوسته صنعتی.'
+  },
+  ar: {
+    title: 'اتصل بـ SIPANEL | طلب استشارة لألواح الساندويش والأسقف والكسوة الصناعية',
+    metaDescription:
+      'اطلب مراجعة هندسية أو عرض سعر (RFQ) من SIPANEL لأنظمة ألواح الساندويش، وأسقف Standing Seam، وكسوة الألمنيوم، ومشاريع الغلاف الصناعي.'
+  },
+  ru: {
+    title: 'Связаться с SIPANEL | Консультация по промышленным панелям, кровле и облицовке',
+    metaDescription:
+      'Запросите инженерную оценку или коммерческое предложение (RFQ) от SIPANEL для систем сэндвич-панелей, кровли Standing Seam, алюминиевой облицовки и проектов промышленной оболочки.'
+  }
+};
+
+export function getRfqContactSeo(locale: Locale) {
+  return localizedContactSeo[locale];
+}
+
 export function getRfqContactSection<T extends RfqContactSection['id']>(
   id: T
 ): Extract<RfqContactSection, {id: T}> {
