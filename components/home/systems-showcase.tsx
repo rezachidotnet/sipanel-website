@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/routing';
+import {SystemsShowcaseCarousel} from '@/components/home/systems-showcase-carousel';
 import sandwichPanelCover from '@/assets/systems/sandwich-panel/cover-desktop.webp';
 import standingSeamCover from '@/assets/systems/standing-seam/cover-desktop.webp';
 import aluminiumCladdingCover from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
@@ -69,7 +70,7 @@ export function SystemsShowcase() {
           </p>
         </header>
 
-        <div className="systems-showcase__grid">
+        <SystemsShowcaseCarousel previousLabel={t('previousLabel')} nextLabel={t('nextLabel')}>
           {systems.map((system) => (
             <Link href={system.href} className="systems-showcase__card" key={system.id}>
               <div className="systems-showcase__card-image">
@@ -78,7 +79,7 @@ export function SystemsShowcase() {
                     src={system.image}
                     alt={t(system.nameKey)}
                     fill
-                    sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 767px) 78vw, (max-width: 1024px) 40vw, 320px"
                     className="systems-showcase__card-img"
                   />
                 ) : (
@@ -96,7 +97,7 @@ export function SystemsShowcase() {
               </div>
             </Link>
           ))}
-        </div>
+        </SystemsShowcaseCarousel>
       </div>
     </section>
   );

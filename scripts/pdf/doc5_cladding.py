@@ -62,7 +62,7 @@ DATA = {
                 "Order a 5–8% panel overage for cuts and damage, not more."]),
     ("signoff",["Project Name","Elevation / Zone","Date","Reviewed by","Role","Signature"]),
     ("spacer",8),
-    ("p","For facade engineering and fixing design support, contact SIPANEL: info@sipanelco.ir")],
+    ("p","For facade engineering and fixing design support, contact SIPANEL: info@sipanelco.com")],
  ]},
 
 "fa": {
@@ -125,7 +125,7 @@ DATA = {
                 "۵ تا ۸٪ پنل اضافه برای برش و آسیب سفارش دهید، نه بیشتر."]),
     ("signoff",["نام پروژه","نما / زون","تاریخ","بازبینی‌شده توسط","سمت","امضا"]),
     ("spacer",8),
-    ("p","برای پشتیبانی مهندسی نما و طراحی اتصال با SIPANEL تماس بگیرید: info@sipanelco.ir")],
+    ("p","برای پشتیبانی مهندسی نما و طراحی اتصال با SIPANEL تماس بگیرید: info@sipanelco.com")],
  ]},
 
 "ar": {
@@ -188,7 +188,7 @@ DATA = {
                 "اطلب زيادة ٥–٨٪ من الألواح للقص والتلف، لا أكثر."]),
     ("signoff",["اسم المشروع","الواجهة / المنطقة","التاريخ","تمت المراجعة بواسطة","الدور","التوقيع"]),
     ("spacer",8),
-    ("p","لدعم هندسة الواجهات وتصميم التثبيت، تواصل مع SIPANEL: info@sipanelco.ir")],
+    ("p","لدعم هندسة الواجهات وتصميم التثبيت، تواصل مع SIPANEL: info@sipanelco.com")],
  ]},
 
 "ru": {
@@ -251,6 +251,6 @@ DATA = {
                 "Заказывайте 5–8% запаса панелей на раскрой и повреждения, не более."]),
     ("signoff",["Название проекта","Фасад / зона","Дата","Проверено","Должность","Подпись"]),
     ("spacer",8),
-    ("p","За поддержкой по инженерии фасада и расчёту крепления обращайтесь в SIPANEL: info@sipanelco.ir")],
+    ("p","За поддержкой по инженерии фасада и расчёту крепления обращайтесь в SIPANEL: info@sipanelco.com")],
  ]},
 }

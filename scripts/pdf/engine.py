@@ -33,7 +33,7 @@ BRAND = {
     "white": white,
     "tagline": "ENGINEERING POWER. CONTROLLED EXECUTION.",
     "website": "sipanelco.ir",
-    "email": "info@sipanelco.ir",
+    "email": "info@sipanelco.com",
     "phone": "+98 313 675 1101",
 }
 
@@ -376,7 +376,7 @@ def _draw_interior(c, ch, page_num):
     c.rect(0, 0, PAGE_W, 18, fill=1, stroke=0)
     c.setFillColor(white)
     c.setFont("Helvetica", 8)
-    foot = "© 2026 SIPANEL  |  sipanelco.ir  |  info@sipanelco.ir  |  +98 313 675 1101"
+    foot = "© 2026 SIPANEL  |  sipanelco.ir  |  info@sipanelco.com  |  +98 313 675 1101"
     c.drawCentredString(PAGE_W / 2, 6, foot)
     # page number (Persian numerals for fa need the Noto font, not Helvetica)
     pno = "%s / %s" % (localize_num(page_num, lang), localize_num(ch.total, lang))

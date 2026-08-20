@@ -294,7 +294,7 @@ function FieldLabel({label, required = false}: {label: string; required?: boolea
   const t = useTranslations('rfq');
 
   return (
-    <span>
+    <span className="rfq-field__label">
       {label}
       <small className={required ? 'rfq-field__required' : 'rfq-field__optional'}>
         {required ? t('requiredIndicator') : t('optionalIndicator')}

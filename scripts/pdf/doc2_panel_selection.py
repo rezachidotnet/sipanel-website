@@ -127,11 +127,11 @@ DATA = {
                 "Aluminium cladding facade system — architectural, hidden-fix.",
                 "Daylighting / transparent roofing — polycarbonate and GRP."]),
     ("spacer",8),
-    ("p","For project-specific selection support — core, thickness, joint, and load — contact SIPANEL engineering: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","For project-specific selection support — core, thickness, joint, and load — contact SIPANEL engineering: info@sipanelco.com  |  +98 313 675 1101")],
    [("section","Notes & Sign-off"),
     ("signoff",["Project Name","Building Use","Selected Panel","Core / Thickness","Prepared by","Date","Notes"]),
     ("spacer",10),
-    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.ir  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
+    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.com  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
  ]},
 
 "fa": {
@@ -259,11 +259,11 @@ DATA = {
                 "سیستم نمای کلادینگ آلومینیومی — معماری، اتصال مخفی.",
                 "نورگیری / سقف شفاف — پلی‌کربنات و GRP."]),
     ("spacer",8),
-    ("p","برای پشتیبانی انتخاب اختصاصی پروژه — هسته، ضخامت، اتصال و بار — با مهندسی SIPANEL تماس بگیرید: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","برای پشتیبانی انتخاب اختصاصی پروژه — هسته، ضخامت، اتصال و بار — با مهندسی SIPANEL تماس بگیرید: info@sipanelco.com  |  +98 313 675 1101")],
    [("section","یادداشت و امضا"),
     ("signoff",["نام پروژه","کاربری ساختمان","پانل انتخابی","هسته / ضخامت","تهیه‌شده توسط","تاریخ","یادداشت"]),
     ("spacer",10),
-    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.ir  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
+    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.com  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
  ]},
 
 "ar": {
@@ -391,11 +391,11 @@ DATA = {
                 "نظام واجهة كسوة ألومنيوم — معماري، تثبيت مخفي.",
                 "إضاءة نهارية / سقف شفاف — بولي كربونات وGRP."]),
     ("spacer",8),
-    ("p","لدعم اختيار خاص بالمشروع — النواة والسماكة والوصلة والحمل — تواصل مع هندسة SIPANEL: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","لدعم اختيار خاص بالمشروع — النواة والسماكة والوصلة والحمل — تواصل مع هندسة SIPANEL: info@sipanelco.com  |  +98 313 675 1101")],
    [("section","ملاحظات واعتماد"),
     ("signoff",["اسم المشروع","استخدام المبنى","اللوح المختار","النواة / السماكة","أعدّه","التاريخ","ملاحظات"]),
     ("spacer",10),
-    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.ir  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
+    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.com  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
  ]},
 
 "ru": {
@@ -523,10 +523,10 @@ DATA = {
                 "Алюминиевая фасадная система — архитектурная, скрытое крепление.",
                 "Светопрозрачная кровля — поликарбонат и стеклопластик (GRP)."]),
     ("spacer",8),
-    ("p","За поддержкой по выбору под проект — сердечник, толщина, соединение, нагрузка — обращайтесь в инженерию SIPANEL: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","За поддержкой по выбору под проект — сердечник, толщина, соединение, нагрузка — обращайтесь в инженерию SIPANEL: info@sipanelco.com  |  +98 313 675 1101")],
    [("section","Заметки и подписи"),
     ("signoff",["Название проекта","Назначение здания","Выбранная панель","Сердечник / толщина","Подготовил","Дата","Примечания"]),
     ("spacer",10),
-    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.ir  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
+    ("p","SIPANEL  |  sipanelco.ir  |  info@sipanelco.com  |  ENGINEERING POWER. CONTROLLED EXECUTION.")],
  ]},
 }

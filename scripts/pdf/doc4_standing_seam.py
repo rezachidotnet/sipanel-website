@@ -70,7 +70,7 @@ DATA = {
                 "Ridge cap face-fixed — punctures the weather line.",
                 "Clip spacing too wide on exposed sites — seam unzips under uplift.",
                 "Swarf left on the roof — rusts and stains the coating."]),
-    ("p","For seam selection and uplift design on your project, contact SIPANEL engineering: info@sipanelco.ir")],
+    ("p","For seam selection and uplift design on your project, contact SIPANEL engineering: info@sipanelco.com")],
  ]},
 
 "fa": {
@@ -141,7 +141,7 @@ DATA = {
                 "پیچ‌کردن کلاهک تیغه از رو — خط آب‌بندی را سوراخ می‌کند.",
                 "فاصله زیاد گیره در سایت بادخیز — درز زیر مکش باز می‌شود.",
                 "باقی‌ماندن براده روی سقف — زنگ می‌زند و پوشش را لک می‌کند."]),
-    ("p","برای انتخاب درز و طراحی مکش در پروژه شما، با مهندسی SIPANEL تماس بگیرید: info@sipanelco.ir")],
+    ("p","برای انتخاب درز و طراحی مکش در پروژه شما، با مهندسی SIPANEL تماس بگیرید: info@sipanelco.com")],
  ]},
 
 "ar": {
@@ -212,7 +212,7 @@ DATA = {
                 "تثبيت غطاء القمة من الوجه — يخترق خط الماء.",
                 "تباعد مشابك واسع في المواقع المكشوفة — ينفك الدرز تحت الرفع.",
                 "ترك البرادة على السقف — تصدأ وتبقّع الطلاء."]),
-    ("p","لاختيار الدرز وتصميم الرفع في مشروعك، تواصل مع هندسة SIPANEL: info@sipanelco.ir")],
+    ("p","لاختيار الدرز وتصميم الرفع في مشروعك، تواصل مع هندسة SIPANEL: info@sipanelco.com")],
  ]},
 
 "ru": {
@@ -283,6 +283,6 @@ DATA = {
                 "Конёк прикручен насквозь — пробита линия гидроизоляции.",
                 "Слишком большой шаг кляммеров на открытых площадках — фальц расходится при отрыве.",
                 "Стружка оставлена на кровле — ржавеет и пятнает покрытие."]),
-    ("p","По выбору фальца и расчёту ветрового отрыва на вашем проекте обращайтесь в инженерный отдел SIPANEL: info@sipanelco.ir")],
+    ("p","По выбору фальца и расчёту ветрового отрыва на вашем проекте обращайтесь в инженерный отдел SIPANEL: info@sipanelco.com")],
  ]},
 }

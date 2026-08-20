@@ -111,6 +111,14 @@
   margin: 0;
 }
 
+/* FAQ heading matches the System-page FAQ typography (.service-section h2)
+   instead of the larger Contact-page section heading scale above. */
+#contact-faq-title {
+  max-width: 760px;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
 .contact-option-grid,
 .contact-benefit-grid {
   display: grid;
@@ -458,6 +466,14 @@
 @media (min-width: 1025px) {
   .contact-hero {
     padding: 132px 0 72px;
+  }
+
+  .contact-section[data-section='faq_section'] {
+    padding: 96px 0;
+  }
+
+  .contact-section[data-section='faq_section'] .contact-section__inner {
+    gap: 36px;
   }
 
   .contact-hero__inner {

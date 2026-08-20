@@ -107,7 +107,7 @@ DATA = {
     ("p","SIPANEL reviews shop drawings as part of its pre-purchase engineering support. Before you approve a panel package, our engineers can check layout, flashing logic, and quantities against your project geometry and climate."),
     ("p","This reduces the risk of wrong deliveries, late accessory discovery, and post-handover leakage — the three failures this guide is built to prevent."),
     ("spacer",8),
-    ("p","Contact SIPANEL engineering: info@sipanelco.ir  |  +98 313 675 1101  |  sipanelco.ir")],
+    ("p","Contact SIPANEL engineering: info@sipanelco.com  |  +98 313 675 1101  |  sipanelco.ir")],
  ]},
 
 "fa": {
@@ -213,7 +213,7 @@ DATA = {
     ("p","SIPANEL بازبینی نقشه‌های شاپ را به‌عنوان بخشی از پشتیبانی مهندسی پیش از خرید انجام می‌دهد. پیش از تأیید بسته پانل، مهندسان ما می‌توانند چیدمان، منطق فلاشینگ و مقادیر را با هندسه و اقلیم پروژه شما کنترل کنند."),
     ("p","این کار ریسک تحویل اشتباه، کشف دیرهنگام متعلقات و نشتی پس از تحویل را کاهش می‌دهد — همان سه شکستی که این راهنما برای پیشگیری از آن‌ها ساخته شده است."),
     ("spacer",8),
-    ("p","تماس با مهندسی SIPANEL: info@sipanelco.ir  |  +98 313 675 1101  |  sipanelco.ir")],
+    ("p","تماس با مهندسی SIPANEL: info@sipanelco.com  |  +98 313 675 1101  |  sipanelco.ir")],
  ]},
 
 "ar": {
@@ -319,7 +319,7 @@ DATA = {
     ("p","تراجع SIPANEL رسومات الورشة كجزء من دعمها الهندسي قبل الشراء. قبل اعتماد حزمة الألواح، يستطيع مهندسونا فحص التخطيط ومنطق الفلاشينج والكميات مقابل هندسة ومناخ مشروعك."),
     ("p","هذا يقلل خطر التسليمات الخاطئة واكتشاف الملحقات المتأخر والتسرب بعد التسليم — وهي الإخفاقات الثلاثة التي بُني هذا الدليل لمنعها."),
     ("spacer",8),
-    ("p","تواصل مع هندسة SIPANEL: info@sipanelco.ir  |  +98 313 675 1101  |  sipanelco.ir")],
+    ("p","تواصل مع هندسة SIPANEL: info@sipanelco.com  |  +98 313 675 1101  |  sipanelco.ir")],
  ]},
 
 "ru": {
@@ -425,6 +425,6 @@ DATA = {
     ("p","SIPANEL проверяет рабочие чертежи в рамках инженерной поддержки до закупки. До утверждения панельного комплекта наши инженеры проверят раскладку, логику фартуков и количества с учётом геометрии и климата вашего проекта."),
     ("p","Это снижает риск неверных поставок, позднего обнаружения аксессуаров и протечек после сдачи — трёх отказов, ради предотвращения которых создано это руководство."),
     ("spacer",8),
-    ("p","Свяжитесь с инженерией SIPANEL: info@sipanelco.ir  |  +98 313 675 1101  |  sipanelco.ir")],
+    ("p","Свяжитесь с инженерией SIPANEL: info@sipanelco.com  |  +98 313 675 1101  |  sipanelco.ir")],
  ]},
 }

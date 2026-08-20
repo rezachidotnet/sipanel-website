@@ -17,7 +17,7 @@
     "menu": "Menu",
     "home": "Go to SIPANEL homepage",
     "phone": "+983136751101",
-    "email": "info@sipanelco.ir",
+    "email": "info@sipanelco.com",
     "cta": "Get Catalog"
   },
   "footer": {
@@ -427,7 +427,9 @@
     "retractableRoof": "Retractable Roof Systems",
     "retractableRoofDesc": "Opening systems coordinated around structure, rails, drive, controls, closed-state sealing, and maintenance.",
     "etfe": "ETFE Roof & Facade Systems",
-    "etfeDesc": "Single-layer and cushion foil skins with panelization, frame, air, daylight, and drainage control."
+    "etfeDesc": "Single-layer and cushion foil skins with panelization, frame, air, daylight, and drainage control.",
+    "previousLabel": "Previous systems",
+    "nextLabel": "Next systems"
   },
   "whySipanel": {
     "title": "Why SIPANEL",

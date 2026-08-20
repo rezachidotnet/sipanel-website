@@ -315,13 +315,10 @@ async function assertRoute(route) {
     fail(`${route.path} contains legacy /fa internal link`);
   }
 
-  // The info@sipanelco.ir contact email is intentionally preserved during the
-  // domain migration (mailbox migration is a separate, later step) — only
-  // flag sipanelco.ir occurrences that are NOT part of that email address.
-  const nonEmailIrMatches = html.match(/sipanelco\.ir/g)?.length ?? 0;
-  const emailIrMatches = html.match(/info@sipanelco\.ir/g)?.length ?? 0;
-  if (nonEmailIrMatches > emailIrMatches) {
-    fail(`${route.path} contains a legacy sipanelco.ir URL reference in generated SEO output`);
+  // No sipanelco.ir reference of any kind should remain in generated SEO output;
+  // the production host and contact email are both sipanelco.com.
+  if (html.includes('sipanelco.ir')) {
+    fail(`${route.path} contains a legacy sipanelco.ir reference in generated SEO output`);
   }
 
   if (/href=["'][^"']*(?:\/projects\?|\?filter=)/.test(html)) {

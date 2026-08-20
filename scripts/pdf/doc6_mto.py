@@ -59,7 +59,7 @@ DATA = {
    [("section","Project Information & Sign-off"),
     ("signoff",["Project Name","Location","Prepared by","Date","Approved by","PO Reference","Notes"]),
     ("spacer",10),
-    ("p","For engineering review of your MTO before purchase, contact SIPANEL: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","For engineering review of your MTO before purchase, contact SIPANEL: info@sipanelco.com  |  +98 313 675 1101")],
  ]},
 
 "fa": {
@@ -102,7 +102,7 @@ DATA = {
    [("section","اطلاعات پروژه و امضا"),
     ("signoff",["نام پروژه","محل","تهیه‌شده توسط","تاریخ","تأییدشده توسط","شماره سفارش خرید","یادداشت"]),
     ("spacer",10),
-    ("p","برای بررسی مهندسی MTO پیش از خرید با SIPANEL تماس بگیرید: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","برای بررسی مهندسی MTO پیش از خرید با SIPANEL تماس بگیرید: info@sipanelco.com  |  +98 313 675 1101")],
  ]},
 
 "ar": {
@@ -145,7 +145,7 @@ DATA = {
    [("section","معلومات المشروع والاعتماد"),
     ("signoff",["اسم المشروع","الموقع","أعدّه","التاريخ","اعتمده","مرجع أمر الشراء","ملاحظات"]),
     ("spacer",10),
-    ("p","لمراجعة هندسية لـ MTO قبل الشراء، تواصل مع SIPANEL: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","لمراجعة هندسية لـ MTO قبل الشراء، تواصل مع SIPANEL: info@sipanelco.com  |  +98 313 675 1101")],
  ]},
 
 "ru": {
@@ -188,6 +188,6 @@ DATA = {
    [("section","Информация о проекте и подписи"),
     ("signoff",["Название проекта","Местоположение","Подготовил","Дата","Утвердил","Референс заказа (PO)","Примечания"]),
     ("spacer",10),
-    ("p","Для инженерной проверки вашего MTO до закупки свяжитесь с SIPANEL: info@sipanelco.ir  |  +98 313 675 1101")],
+    ("p","Для инженерной проверки вашего MTO до закупки свяжитесь с SIPANEL: info@sipanelco.com  |  +98 313 675 1101")],
  ]},
 }
