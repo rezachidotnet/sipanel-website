@@ -60,6 +60,14 @@ function normalizePathname(pathname) {
   return pathname;
 }
 
+function sameHistoryEntry(url, expectedUrl) {
+  return (
+    normalizePathname(url.pathname) === normalizePathname(expectedUrl.pathname) &&
+    url.search === expectedUrl.search &&
+    url.hash === expectedUrl.hash
+  );
+}
+
 async function processPosition(page) {
   return page.evaluate(() => {
     const section = document.getElementById('process');
@@ -147,19 +155,21 @@ async function runAnchorTests() {
         await expectProcessVisible(page, `${viewport.name} ${locale} keyboard footer click`);
 
         await gotoRoute(page, other, processHref);
+        const expectedBackUrl = new URL(page.url());
         await clickFooterProcess(page, processHref);
         await expectProcessVisible(page, `${viewport.name} ${locale} navigation from another page`);
-      const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
-      const position = await processPosition(page);
-      if (normalizePathname(position.pathname) !== normalizePathname(expectedPathname)) {
-        fail(`${viewport.name} ${locale}: expected pathname ${expectedPathname}, received ${position.pathname}`);
-      }
+        const expectedPathname = processHref.replace(/\/?#process$/, '') || '/';
+        const position = await processPosition(page);
+        if (normalizePathname(position.pathname) !== normalizePathname(expectedPathname)) {
+          fail(`${viewport.name} ${locale}: expected pathname ${expectedPathname}, received ${position.pathname}`);
+        }
 
-      await page.goBack({waitUntil: 'networkidle'});
-      const backPathname = new URL(page.url()).pathname;
-      if (normalizePathname(backPathname) !== normalizePathname(other)) {
-        fail(`${viewport.name} ${locale}: browser back did not return to ${other}, received ${backPathname}`);
-      }
+        await page.goBack({waitUntil: 'domcontentloaded'});
+        await page.waitForURL((url) => sameHistoryEntry(url, expectedBackUrl), {timeout: 10_000});
+        const backUrl = new URL(page.url());
+        if (!sameHistoryEntry(backUrl, expectedBackUrl)) {
+          fail(`${viewport.name} ${locale}: browser back did not return to ${expectedBackUrl.pathname}, received ${backUrl.pathname}`);
+        }
 
         await page.close();
       }
