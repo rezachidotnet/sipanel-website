@@ -1578,9 +1578,19 @@ button[aria-disabled='true'] {
   padding-block: 48px;
 }
 
+.systems-showcase__stage {
+  position: relative;
+}
+
+.systems-showcase__sticky {
+  display: block;
+}
+
 .systems-showcase__inner {
+  --systems-card-gap: 16px;
+  --systems-card-width: 87%;
   display: grid;
-  gap: 28px;
+  gap: 22px;
 }
 
 .systems-showcase__header {
@@ -1612,18 +1622,20 @@ button[aria-disabled='true'] {
   text-underline-offset: 2px;
 }
 
-.systems-showcase__carousel {
-  display: flex;
-  align-items: stretch;
-  gap: 8px;
+.systems-showcase__controls {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 14px;
   position: relative;
+  inline-size: 100%;
 }
 
 .systems-showcase__arrow {
   display: grid;
-  flex: 0 0 auto;
   place-items: center;
-  width: 32px;
+  inline-size: 40px;
+  block-size: 40px;
   border: 1px solid rgba(15, 17, 19, 0.1);
   border-radius: 999px;
   background: var(--color-white);
@@ -1648,13 +1660,18 @@ button[aria-disabled='true'] {
   cursor: default;
 }
 
+.systems-showcase__rail {
+  inline-size: 100%;
+  min-inline-size: 0;
+  overflow: visible;
+}
+
 .systems-showcase__track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(220px, 82%);
-  gap: 14px;
-  flex: 1 1 auto;
+  display: flex;
+  gap: var(--systems-card-gap);
+  inline-size: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -1667,8 +1684,32 @@ button[aria-disabled='true'] {
   display: none;
 }
 
+.systems-showcase__progress-track {
+  position: relative;
+  block-size: 4px;
+  border-radius: 999px;
+  background: rgba(15, 17, 19, 0.14);
+  overflow: hidden;
+}
+
+.systems-showcase__progress-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--color-orange-primary);
+  box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.06);
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
+
+[dir='rtl'] .systems-showcase__progress-fill {
+  transform-origin: right center;
+}
+
 .systems-showcase__card {
   display: grid;
+  flex: 0 0 var(--systems-card-width);
   overflow: hidden;
   min-inline-size: 0;
   scroll-snap-align: start;
@@ -1789,6 +1830,22 @@ button[aria-disabled='true'] {
 
 .systems-showcase__card:hover .systems-showcase__card-img {
     transform: none;
+  }
+
+  /* Defensive: JS already skips activating stage mode when reduced motion
+     is set, this only guards a brief pre-hydration/race-condition window. */
+.systems-showcase__stage.is-stage-active {
+    height: auto !important;
+  }
+
+.systems-showcase__sticky.is-stage-active {
+    position: static !important;
+  }
+
+.systems-showcase__track.is-stage-active {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
   }
 }
 
@@ -3340,8 +3397,48 @@ button[aria-disabled='true'] {
     display: none;
   }
 
+.systems-showcase {
+    padding-block: 0;
+  }
+
+.systems-showcase__inner {
+    --systems-card-gap: 18px;
+    --systems-card-width: 49%;
+    gap: 24px;
+    padding-block: 36px;
+  }
+
 .systems-showcase__track {
-    grid-auto-columns: minmax(220px, 40%);
+    display: flex;
+  }
+
+  /* Scroll-driven stage: applied only once JS confirms viewport + motion
+     preference allow it (see systems-showcase-carousel.tsx). Base markup
+     with no `.is-stage-active` class stays the plain native-scroll carousel
+     — the mobile/reduced-motion/no-JS fallback. */
+.systems-showcase__stage.is-stage-active {
+    /* height set inline via JS from measured content + travel distance */
+  }
+
+.systems-showcase__sticky.is-stage-active {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    /* top set inline via JS from the measured site-header height */
+  }
+
+.systems-showcase__rail.is-stage-active {
+    overflow: hidden;
+  }
+
+.systems-showcase__track.is-stage-active {
+    overflow: visible;
+    scroll-snap-type: none;
+    cursor: default;
+    will-change: transform;
   }
 
 .brand-link__logo {
@@ -3654,28 +3751,26 @@ button[aria-disabled='true'] {
   }
 
 .systems-showcase {
-    padding-block: 72px;
+    padding-block: 0;
   }
 
 .systems-showcase__inner {
-    gap: 36px;
+    --systems-card-gap: 20px;
+    --systems-card-width: 38%;
+    gap: 28px;
   }
 
 .systems-showcase__header h2 {
     font-size: 34px;
   }
 
-.systems-showcase__carousel {
-    gap: 12px;
-  }
-
 .systems-showcase__arrow {
-    width: 40px;
+    inline-size: 40px;
+    block-size: 40px;
   }
 
 .systems-showcase__track {
-    grid-auto-columns: minmax(240px, 27%);
-    gap: 16px;
+    gap: var(--systems-card-gap);
   }
 
 .systems-showcase__card-body h3 {
@@ -3952,6 +4047,20 @@ button[aria-disabled='true'] {
 
 .footer-logo__image {
     width: 148px;
+  }
+}
+
+@media (min-width: 1024px) {
+.systems-showcase__inner {
+    --systems-card-gap: 20px;
+    --systems-card-width: 38%;
+  }
+}
+
+@media (min-width: 1200px) {
+.systems-showcase__inner {
+    --systems-card-gap: 22px;
+    --systems-card-width: 30%;
   }
 }
 

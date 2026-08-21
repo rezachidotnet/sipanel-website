@@ -429,7 +429,8 @@
     "etfe": "ETFE Roof & Facade Systems",
     "etfeDesc": "Single-layer and cushion foil skins with panelization, frame, air, daylight, and drainage control.",
     "previousLabel": "Previous systems",
-    "nextLabel": "Next systems"
+    "nextLabel": "Next systems",
+    "progressLabel": "Systems scroll progress"
   },
   "whySipanel": {
     "title": "Why SIPANEL",
