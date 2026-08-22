@@ -66,29 +66,40 @@ export function CatalogDownloadModal({isOpen, onClose}: {isOpen: boolean; onClos
     setSubmitState('submitting');
     setFeedback('');
 
+    // Lead capture is best-effort CRM/analytics collection only. It must never block
+    // or delay delivery of the file the user already asked for, so the fetch result
+    // is only used for logging/tracking — the download always runs in `finally`,
+    // regardless of whether the request succeeds, fails, times out, or throws.
     try {
       const response = await fetch('/api/lead', {
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({
           name: formData.get('name'),
+          country_code: formData.get('country_code'),
           phone: formData.get('phone'),
+          email: formData.get('email'),
           source_page: '/',
           form_type: 'Catalog Download',
           language: locale
         })
       });
-      const payload = (await response.json()) as {ok?: boolean; message?: string};
+      const payload = (await response.json().catch(() => null)) as {ok?: boolean; message?: string} | null;
 
-      if (!response.ok || !payload.ok) {
-        throw new Error(payload.message ?? 'CATALOG_LEAD_FAILED');
+      if (!response.ok || !payload?.ok) {
+        console.error('Catalog lead submission failed (non-blocking)', {
+          status: response.status,
+          message: payload?.message
+        });
+      } else {
+        trackCatalogEvent('catalog_form_submitted', {
+          component_id: 'catalog_modal',
+          submission_method: 'api_route'
+        });
       }
-
-      trackCatalogEvent('catalog_form_submitted', {
-        component_id: 'catalog_modal',
-        submission_method: 'api_route'
-      });
-
+    } catch (error) {
+      console.error('Catalog lead submission failed (non-blocking)', error);
+    } finally {
       setSubmitState('success');
       setFeedback(t('success'));
 
@@ -104,9 +115,6 @@ export function CatalogDownloadModal({isOpen, onClose}: {isOpen: boolean; onClos
         setFeedback('');
         form.reset();
       }, 2000);
-    } catch {
-      setSubmitState('error');
-      setFeedback(t('error'));
     }
   }
 
@@ -138,19 +146,42 @@ export function CatalogDownloadModal({isOpen, onClose}: {isOpen: boolean; onClos
             <input
               ref={nameRef}
               name="name"
-              required
-              minLength={2}
               autoComplete="name"
               disabled={submitState === 'submitting' || submitState === 'success'}
             />
           </label>
+          <div className="catalog-modal__phone-row">
+            <label className="catalog-modal__field">
+              <span>{t('fieldCountryCode')}</span>
+              <input
+                name="country_code"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel-country-code"
+                dir="ltr"
+                placeholder="+98"
+                maxLength={5}
+                disabled={submitState === 'submitting' || submitState === 'success'}
+              />
+            </label>
+            <label className="catalog-modal__field">
+              <span>{t('fieldPhone')}</span>
+              <input
+                name="phone"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel-national"
+                dir="ltr"
+                disabled={submitState === 'submitting' || submitState === 'success'}
+              />
+            </label>
+          </div>
           <label className="catalog-modal__field">
-            <span>{t('fieldPhone')}</span>
+            <span>{t('fieldEmail')}</span>
             <input
-              name="phone"
-              required
-              type="tel"
-              autoComplete="tel"
+              name="email"
+              type="email"
+              autoComplete="email"
               dir="ltr"
               disabled={submitState === 'submitting' || submitState === 'success'}
             />

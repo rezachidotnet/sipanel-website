@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "npm run test:seo && npm run test:locale && npm run test:systems-hub-links && npm run test:cannibalization && npm run test:faq-duplication && npm run test:anchors && npm run test:project-filters && npm run test:spa-page-view && npm run test:faq-analytics && npm run test:contact-cta && npm run test:rfq-crm-gate",
+    "test": "npm run test:seo && npm run test:locale && npm run test:systems-hub-links && npm run test:cannibalization && npm run test:faq-duplication && npm run test:anchors && npm run test:project-filters && npm run test:spa-page-view && npm run test:faq-analytics && npm run test:contact-cta && npm run test:rfq-crm-gate && npm run test:download-optional",
     "test:routing": "node scripts/test-routing.mjs",
     "test:seo": "node scripts/test-seo-structured-data.mjs",
     "test:locale": "node scripts/test-locale-integrity.mjs",
@@ -21,6 +21,7 @@
     "test:faq-analytics": "node scripts/test-faq-expand-analytics.mjs",
     "test:contact-cta": "node scripts/test-contact-cta-tracking.mjs",
     "test:rfq-crm-gate": "node scripts/test-rfq-crm-delivery-gate.mjs",
+    "test:download-optional": "node scripts/test-download-lead-capture-optional.mjs",
     "seo:audit": "node scripts/production-seo-audit.mjs"
   },
   "dependencies": {

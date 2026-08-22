@@ -22,25 +22,49 @@ const rateLimitWindowMs = 10 * 60 * 1000;
 const rateLimitMaxRequests = 8;
 const rateLimitBuckets = new Map<string, RateLimitBucket>();
 
-const leadPayloadSchema = z.object({
-  name: z.string().trim().min(2).max(120),
-  company: z.string().trim().max(160).optional().default(''),
-  phone: z.string().trim().min(5).max(60),
-  whatsapp: z.string().trim().max(60).optional().default(''),
-  email: z.string().trim().email().optional().or(z.literal('')).default(''),
-  project_type: z.string().trim().max(120).optional().default(''),
-  project_location: z.string().trim().max(160).optional().default(''),
-  estimated_area: z.string().trim().max(80).optional().default(''),
-  project_stage: z.string().trim().max(120).optional().default(''),
-  main_concern: z.array(z.string().trim().max(120)).max(12).optional().default([]),
-  message: z.string().trim().max(5000).optional().default(''),
-  website: z.string().max(0).optional().default(''),
-  source_page: z.string().trim().max(300).optional().default(''),
-  form_type: z.string().trim().max(120).optional().default(''),
-  language: z.string().trim().max(10).optional().default(''),
-  resource_slug: z.string().trim().max(160).optional().default(''),
-  resource_title: z.string().trim().max(220).optional().default('')
-});
+// Gated-download lead forms (catalog / resource downloads) are best-effort CRM
+// collection only — see /api/lead POST handler. No field on them is a technical
+// prerequisite for the file the user requested, so every field stays optional
+// here. RFQ/contact/inquiry submissions (any other form_type) keep requiring a
+// name and phone number via the superRefine check below.
+const downloadFormTypes = new Set(['Resource Download', 'Catalog Download']);
+
+const leadPayloadSchema = z
+  .object({
+    name: z.string().trim().max(120).optional().default(''),
+    company: z.string().trim().max(160).optional().default(''),
+    country_code: z.string().trim().max(6).optional().default(''),
+    phone: z.string().trim().max(60).optional().default(''),
+    whatsapp: z.string().trim().max(60).optional().default(''),
+    email: z.string().trim().email().optional().or(z.literal('')).default(''),
+    project_type: z.string().trim().max(120).optional().default(''),
+    project_location: z.string().trim().max(160).optional().default(''),
+    estimated_area: z.string().trim().max(80).optional().default(''),
+    project_stage: z.string().trim().max(120).optional().default(''),
+    main_concern: z.array(z.string().trim().max(120)).max(12).optional().default([]),
+    message: z.string().trim().max(5000).optional().default(''),
+    website: z.string().max(0).optional().default(''),
+    source_page: z.string().trim().max(300).optional().default(''),
+    form_type: z.string().trim().max(120).optional().default(''),
+    language: z.string().trim().max(10).optional().default(''),
+    resource_slug: z.string().trim().max(160).optional().default(''),
+    resource_title: z.string().trim().max(220).optional().default('')
+  })
+  .superRefine((data, ctx) => {
+    const isDownloadForm = downloadFormTypes.has(data.form_type) || Boolean(data.resource_slug) || Boolean(data.resource_title);
+
+    if (isDownloadForm) {
+      return;
+    }
+
+    if (data.name.length < 2) {
+      ctx.addIssue({code: 'custom', path: ['name'], message: 'Name is required.'});
+    }
+
+    if (data.phone.length < 5) {
+      ctx.addIssue({code: 'custom', path: ['phone'], message: 'Phone is required.'});
+    }
+  });
 
 function getClientIp(request: NextRequest) {
   const forwardedFor = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
@@ -72,6 +96,7 @@ function extractFormDataFields(formData: FormData) {
   return {
     name: String(formData.get('name') ?? ''),
     company: String(formData.get('company') ?? ''),
+    country_code: String(formData.get('country_code') ?? ''),
     phone: String(formData.get('phone') ?? ''),
     whatsapp: String(formData.get('whatsapp') ?? ''),
     email: String(formData.get('email') ?? ''),
@@ -94,6 +119,7 @@ function sanitizePayload(data: z.infer<typeof leadPayloadSchema>): RfqSubmission
   return {
     name: sanitizeInput(data.name),
     company: sanitizeInput(data.company ?? ''),
+    country_code: sanitizeInput(data.country_code ?? ''),
     phone: sanitizeInput(data.phone),
     whatsapp: sanitizeInput(data.whatsapp ?? ''),
     email: sanitizeInput(data.email ?? ''),

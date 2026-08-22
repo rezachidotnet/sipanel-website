@@ -754,8 +754,10 @@ export type ResourceHubUiLabels = {
   pendingBadge: string;
   verifiedBadge: string;
   fieldName: string;
+  fieldCountryCode: string;
   fieldCompany: string;
   fieldPhone: string;
+  fieldEmail: string;
   fieldProjectType: string;
   fieldMessage: string;
   privacyNote: string;
@@ -837,8 +839,10 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     pendingBadge: 'Available upon request',
     verifiedBadge: 'Ready for download',
     fieldName: 'Full name',
+    fieldCountryCode: 'Country code',
     fieldCompany: 'Company',
-    fieldPhone: 'Mobile number',
+    fieldPhone: 'Phone number',
+    fieldEmail: 'Email',
     fieldProjectType: 'Project type',
     fieldMessage: 'Notes',
     privacyNote: 'Your information is used only for sending the resource and technical follow-up.',
@@ -919,8 +923,10 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     pendingBadge: 'قابل دریافت با ارسال درخواست',
     verifiedBadge: 'آماده دانلود',
     fieldName: 'نام و نام خانوادگی',
+    fieldCountryCode: 'کد کشور',
     fieldCompany: 'نام شرکت',
-    fieldPhone: 'شماره موبایل',
+    fieldPhone: 'شماره تلفن',
+    fieldEmail: 'ایمیل',
     fieldProjectType: 'نوع پروژه',
     fieldMessage: 'توضیحات کوتاه',
     privacyNote: 'اطلاعات شما فقط برای ارسال منبع و پیگیری فنی استفاده می\u200cشود.',
@@ -1001,8 +1007,10 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     pendingBadge: 'متاح عند الطلب',
     verifiedBadge: 'جاهز للتحميل',
     fieldName: 'الاسم الكامل',
+    fieldCountryCode: 'رمز الدولة',
     fieldCompany: 'الشركة',
-    fieldPhone: 'رقم الجوال',
+    fieldPhone: 'رقم الهاتف',
+    fieldEmail: 'البريد الإلكتروني',
     fieldProjectType: 'نوع المشروع',
     fieldMessage: 'ملاحظات',
     privacyNote: 'تُستخدم معلوماتك فقط لإرسال المورد والمتابعة الفنية.',
@@ -1083,8 +1091,10 @@ const uiLabels: Record<Locale, ResourceHubUiLabels> = {
     pendingBadge: 'Доступен по запросу',
     verifiedBadge: 'Готов к загрузке',
     fieldName: 'Полное имя',
+    fieldCountryCode: 'Код страны',
     fieldCompany: 'Компания',
-    fieldPhone: 'Мобильный номер',
+    fieldPhone: 'Номер телефона',
+    fieldEmail: 'Электронная почта',
     fieldProjectType: 'Тип проекта',
     fieldMessage: 'Примечания',
     privacyNote: 'Ваши данные используются только для отправки ресурса и технической поддержки.',

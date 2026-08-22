@@ -145,6 +145,10 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
     setSubmitState('submitting');
     setFeedback('');
 
+    // Lead capture is best-effort CRM/analytics collection only. It must never block
+    // or delay delivery of the file the user already asked for, so the fetch result
+    // is only used for logging/tracking — the download always runs in `finally`,
+    // regardless of whether the request succeeds, fails, times out, or throws.
     try {
       /* track: resource_lead_submit */
       const response = await fetch('/api/lead', {
@@ -153,6 +157,7 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         body: JSON.stringify({
           name: formData.get('name') ?? '',
           company: formData.get('company') ?? '',
+          country_code: formData.get('country_code') ?? '',
           phone: formData.get('phone') ?? '',
           email: formData.get('email') ?? '',
           project_type: formData.get('project_type') ?? '',
@@ -166,12 +171,17 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           language: locale
         })
       });
-      const payload = (await response.json()) as {ok?: boolean; message?: string};
+      const payload = (await response.json().catch(() => null)) as {ok?: boolean; message?: string} | null;
 
-      if (!response.ok || !payload.ok) {
-        throw new Error(payload.message ?? 'LEAD_SUBMIT_FAILED');
+      if (!response.ok || !payload?.ok) {
+        console.error('Resource lead submission failed (non-blocking)', {
+          status: response.status,
+          message: payload?.message
+        });
       }
-
+    } catch (error) {
+      console.error('Resource lead submission failed (non-blocking)', error);
+    } finally {
       setSubmitState('success');
 
       if (page.resource.assetStatus === 'available' && page.resource.downloadPath) {
@@ -187,9 +197,6 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
       }
 
       form.reset();
-    } catch {
-      setSubmitState('error');
-      setFeedback(ui.downloadError);
     }
   }
 
@@ -397,11 +404,21 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
             <input className="rfq-form__honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <label>
               <span>{ui.fieldName}</span>
-              <input name="name" required minLength={2} autoComplete="name" />
+              <input name="name" autoComplete="name" />
             </label>
+            <div className="resource-detail-form__phone-row">
+              <label>
+                <span>{ui.fieldCountryCode}</span>
+                <input name="country_code" type="tel" inputMode="tel" autoComplete="tel-country-code" dir="ltr" placeholder="+98" maxLength={5} />
+              </label>
+              <label>
+                <span>{ui.fieldPhone}</span>
+                <input name="phone" type="tel" inputMode="tel" autoComplete="tel-national" dir="ltr" />
+              </label>
+            </div>
             <label>
-              <span>{ui.fieldPhone}</span>
-              <input name="phone" required type="tel" autoComplete="tel" dir="ltr" />
+              <span>{ui.fieldEmail}</span>
+              <input name="email" type="email" autoComplete="email" dir="ltr" />
             </label>
             <label>
               <span>{ui.fieldCompany}</span>

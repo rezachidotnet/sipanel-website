@@ -6,6 +6,7 @@ import {sanitizeInput} from './sanitize';
 export type RfqSubmissionPayload = {
   name: string;
   company?: string;
+  country_code?: string;
   phone: string;
   whatsapp?: string;
   email?: string;

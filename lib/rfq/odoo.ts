@@ -120,18 +120,36 @@ function formatLeadDescription(payload: RfqSubmissionPayload, submissionId: stri
   }
 
   lines.push('Contact');
-  lines.push(`Name: ${payload.name}`);
+
+  const phoneDisplay = [payload.country_code, payload.phone]
+    .map((part) => part?.trim())
+    .filter((part): part is string => Boolean(part))
+    .join(' ');
+
+  const hasContactDetails = Boolean(payload.name || payload.company || phoneDisplay || payload.whatsapp || payload.email);
+
+  if (payload.name) {
+    lines.push(`Name: ${payload.name}`);
+  }
+
   if (payload.company) {
     lines.push(`Company: ${payload.company}`);
   }
 
-  lines.push(`Phone: ${payload.phone}`);
+  if (phoneDisplay) {
+    lines.push(`Phone: ${phoneDisplay}`);
+  }
+
   if (payload.whatsapp) {
     lines.push(`WhatsApp: ${payload.whatsapp}`);
   }
 
   if (payload.email) {
     lines.push(`Email: ${payload.email}`);
+  }
+
+  if (!hasContactDetails) {
+    lines.push('(No contact details provided — lead capture fields were left blank.)');
   }
 
   lines.push('');
@@ -170,15 +188,33 @@ export async function createOdooCrmLead(
   }
 
   const formType = payload.form_type || 'General Inquiry';
-  const leadTitle = `[Website] ${formType} - ${payload.name}`;
+  const contactLabel = payload.name || 'Website visitor';
+  const leadTitle = `[Website] ${formType} - ${contactLabel}`;
 
+  // Lead capture on gated downloads is best-effort: every contact field may be
+  // blank. Only set values Odoo actually received rather than sending empty
+  // strings for fields the visitor left out.
   const leadValues: Record<string, unknown> = {
     name: leadTitle,
     type: 'lead',
-    contact_name: payload.name,
-    phone: payload.phone,
     description: formatLeadDescription(payload, submissionId, upload)
   };
+
+  if (payload.name) {
+    leadValues.contact_name = payload.name;
+  }
+
+  // Odoo's crm.lead model has a single `phone` field — combine country code and
+  // phone into one value here rather than in the shared payload, so the two stay
+  // logically separate everywhere else (local storage, notification webhook).
+  const combinedPhone = [payload.country_code, payload.phone]
+    .map((part) => part?.trim())
+    .filter((part): part is string => Boolean(part))
+    .join(' ');
+
+  if (combinedPhone) {
+    leadValues.phone = combinedPhone;
+  }
 
   if (payload.email) {
     leadValues.email_from = payload.email;

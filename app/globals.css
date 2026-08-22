@@ -1242,6 +1242,37 @@ button[aria-disabled='true'] {
   gap: 6px;
 }
 
+.catalog-modal__phone-row {
+  /* Country code (left) + phone number (right) must keep this fixed visual
+     order in every locale, including RTL (fa/ar) — forcing this row's own
+     direction to ltr stops it from inheriting the page's inherited RTL
+     direction, which would otherwise reverse the two grid tracks. */
+  direction: ltr;
+  display: grid;
+  grid-template-columns: minmax(100px, 120px) minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+/* Grid items default to min-width: auto, and a plain <input> has no explicit
+   width — its intrinsic content size (~170-200px) then refuses to shrink to
+   the narrow country-code track, forcing it to overflow into the phone
+   column. min-width: 0 + width: 100% let both inputs honor their track. */
+.catalog-modal__phone-row .catalog-modal__field {
+  min-width: 0;
+}
+
+.catalog-modal__phone-row input {
+  width: 100%;
+}
+
+@media (max-width: 420px) {
+  .catalog-modal__phone-row {
+    grid-template-columns: minmax(82px, 0.32fr) minmax(0, 0.68fr);
+    gap: 8px;
+  }
+}
+
 .catalog-modal__field span {
   color: var(--color-text-primary);
   font-size: 13px;
