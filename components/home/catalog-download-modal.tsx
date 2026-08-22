@@ -9,9 +9,13 @@ type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
 const catalogPaths: Record<string, string> = {
   fa: '/catalogs/fa/sipanel-catalog.pdf',
   en: '/catalogs/en/sipanel-catalog.pdf',
-  ar: '/catalogs/ar/sipanel-catalog.pdf',
-  ru: '/catalogs/ru/sipanel-catalog.pdf'
+  // AR/RU catalogs are not yet produced; serve the verified English catalog instead
+  // of leaving the download broken. See englishOnlyNotice below.
+  ar: '/catalogs/en/sipanel-catalog.pdf',
+  ru: '/catalogs/en/sipanel-catalog.pdf'
 };
+
+const englishOnlyCatalogLocales = new Set(['ar', 'ru']);
 
 function triggerDownload(locale: string) {
   const path = catalogPaths[locale] ?? catalogPaths.en;
@@ -122,6 +126,10 @@ export function CatalogDownloadModal({isOpen, onClose}: {isOpen: boolean; onClos
         </div>
 
         <p className="catalog-modal__description">{t('description')}</p>
+
+        {englishOnlyCatalogLocales.has(locale) && (
+          <p className="catalog-modal__notice">{t('englishOnlyNotice')}</p>
+        )}
 
         <form className="catalog-modal__form" onSubmit={handleSubmit}>
           <input className="catalog-modal__honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />

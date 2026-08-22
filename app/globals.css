@@ -1213,6 +1213,16 @@ button[aria-disabled='true'] {
   line-height: 1.55;
 }
 
+.catalog-modal__notice {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: var(--radius-button);
+  background: var(--color-orange-soft);
+  color: var(--color-orange-primary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .catalog-modal__form {
   display: grid;
   gap: 14px;
