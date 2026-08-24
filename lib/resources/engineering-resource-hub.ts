@@ -188,6 +188,15 @@ export type ResourceDetailPageData = {
   }>;
   relatedSystems: RelatedSystem[];
   relatedResources: ResourceHubCard[];
+  checklist?: {
+    title: string;
+    items: string[];
+  };
+  faq?: {
+    title: string;
+    items: Array<{question: string; answer: string}>;
+  };
+  relatedSolutions?: Array<{title: string; href: string; description: string}>;
   context: {
     title: string;
     description: string;
@@ -422,6 +431,75 @@ const resourceRelatedProjects: Record<string, string[]> = {
   mto_procurement_planning_sheet: ['army-hospital', 'mahshahr-taxi-parking']
 };
 
+// English-only checklist content for select guides. Undefined for other resources/locales —
+// the template renders nothing when a resource has no entry here.
+const resourceChecklists: Partial<Record<string, Partial<Record<Locale, {title: string; items: string[]}>>>> = {
+  shop_drawing_review_guide: {
+    en: {
+      title: 'Shop Drawing Review Checklist',
+      items: [
+        'Drawing title, revision number, and issue date',
+        'Reference to project specification and applicable drawings',
+        'Gridlines, dimensions, and levels shown clearly',
+        'Panel or module orientation and layout',
+        'Support and fixing point locations',
+        'Openings and penetrations marked and dimensioned',
+        'Corner, edge, and perimeter conditions',
+        'Ridge, eave, and parapet details',
+        'Flashing interfaces and overlap logic',
+        'Drainage path, gutters, and downpipes where applicable',
+        'Joint type and joint arrangement',
+        'Accessory and fixing schedule',
+        'Transitions between materials or systems',
+        'Interfaces with doors, windows, and other openings',
+        'Quantities and cut list references where relevant',
+        'Unresolved RFIs, comments, or conflicts noted',
+        'Coordination against structural, MEP, and architectural drawings',
+        'Revision history and change log'
+      ]
+    }
+  }
+};
+
+// English-only FAQ content for select guides, kept distinct from the paired Solution page's
+// generic auto-FAQ (see buildSeoFaqItems in lib/seo/seo-landing-pages.ts) so the two pages
+// do not duplicate the same questions.
+const resourceFaqs: Partial<Record<string, Partial<Record<Locale, {title: string; items: Array<{question: string; answer: string}>}>>>> = {
+  shop_drawing_review_guide: {
+    en: {
+      title: 'Shop Drawing Review Guide Questions',
+      items: [
+        {
+          question: 'What should a shop drawing review checklist include?',
+          answer: 'A shop drawing review checklist should cover drawing identification (title, revision, date), dimensions and gridlines, panel or module layout, support and fixing locations, openings and penetrations, flashing and drainage interfaces, joint conditions, accessory schedules, transitions between systems, and coordination against structural, MEP, and architectural drawings.'
+        },
+        {
+          question: 'What are common shop drawing review mistakes?',
+          answer: 'Common mistakes include approving a panel layout without a complete accessory or flashing package, checking only dimensions while ignoring joint and interface logic, and releasing drawings before quantities are reconciled against the procurement sheet.'
+        },
+        {
+          question: 'What information should be checked before a shop drawing is approved?',
+          answer: 'Before approval, drawings should be checked against the project specification, structural and MEP coordination, quantities and cut lists, and any open RFIs or comments, so the released set reflects a fully coordinated, buildable package.'
+        }
+      ]
+    }
+  }
+};
+
+// English-only cross-links from a resource guide to its paired Solution (process/service) page.
+// Kept separate from resourceRelatedSystems so anchor text stays distinct between the two pages.
+const resourceRelatedSolutions: Partial<Record<string, Partial<Record<Locale, Array<{title: string; href: string; description: string}>>>>> = {
+  shop_drawing_review_guide: {
+    en: [
+      {
+        title: 'Shop Drawing Review Process',
+        href: '/solutions/shop-drawing-review-panel-projects',
+        description: 'Engineering-led review service for coordinating drawings before procurement and fabrication'
+      }
+    ]
+  }
+};
+
 const resourceProjectReasons: Record<string, Record<string, Record<Locale, string>>> = {
   roof_leakage_prevention_checklist: {
     'shahre-babak-hall': {
@@ -594,6 +672,8 @@ const resourceDetailContent: Record<string, Record<Locale, ResourceDetailContent
       keyPoints: [
         {title: 'Core selection', description: 'Match PIR, PUR, mineral wool, or other cores to insulation, fire, acoustic, and budget requirements.'},
         {title: 'Joint and accessory logic', description: 'Panel choice must include joint behavior, flashings, trims, fasteners, and installation tolerances.'},
+        {title: 'Roof or wall panel selection', description: 'Roof and wall applications impose different requirements for panel profile, joint geometry, support spacing, drainage, fastening, and structural performance. Final selection should be verified against project loads and the selected panel system’s engineering data.'},
+        {title: 'Thickness and panel dimensions', description: 'Insulation-core thickness should be selected for the required thermal and project performance, while panel span, support spacing, length, module width, transport limits, and installation constraints must be coordinated before procurement.'},
         {title: 'Project condition review', description: 'Climate, building use, cleaning needs, humidity, and structural spans all affect the correct specification.'}
       ],
       commonMistakes: [
@@ -1890,6 +1970,9 @@ export function getResourceDetailPage(locale: Locale, slug: string): ResourceDet
     })),
     relatedResources: relatedResources.length > 0 ? relatedResources : content.featuredResources.filter((item) => item.slug !== resource.slug).slice(0, 3),
     relatedProjects,
+    checklist: resourceChecklists[resource.id]?.[locale],
+    faq: resourceFaqs[resource.id]?.[locale],
+    relatedSolutions: resourceRelatedSolutions[resource.id]?.[locale],
     context: {
       title: uiLabels[locale].contextTitle,
       ...technicalContextByCategory[locale][resource.category]

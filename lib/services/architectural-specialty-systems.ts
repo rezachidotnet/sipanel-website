@@ -214,6 +214,7 @@ const records: Record<SpecialtySystemSlug, SpecialtySystemRecord> = {
           },
           contextualLinks: [
             {label: 'Compare retractable covering systems', href: '/systems/retractable-roof-covering-systems'},
+            {label: 'Compare with ETFE foil and cushion systems', href: '/systems/etfe-roof-facade-systems'},
             {label: 'Return to systems guide', href: '/systems'}
           ]
         },
@@ -315,7 +316,118 @@ const records: Record<SpecialtySystemSlug, SpecialtySystemRecord> = {
         breadcrumbs: [{label: 'خانه', href: getLocalizedPath('fa')}, {label: 'پوشانه‌ها', href: getLocalizedPath('fa', '/systems')}, {label: 'پوشش ETFE', href: getLocalizedPath('fa', '/systems/etfe-roof-facade-systems')}],
         caseStudyLabels: commonCaseStudyLabels.fa
       },
-      en: null as never,
+      en: {
+        seo: {
+          primaryKeyword: 'ETFE',
+          title: 'ETFE Roof, Facade & Cushion Systems | SIPANEL',
+          metaDescription: 'Engineering coordination for single-layer and cushion ETFE roof and facade systems with geometry, air pressure, frame, foil welds, daylight, drainage, and maintenance control.'
+        },
+        hero: {
+          eyebrow: 'Transparent Ultra-Lightweight Skins',
+          h1: 'ETFE Roof & Facade Systems',
+          subheadline: 'SIPANEL coordinates ETFE roof and facade systems — from single-layer tensioned foil to multi-layer cushion systems — covering panel geometry, foil layers, perimeter frame, welds, air supply and inflation systems, structural support, edge fixing, sealing, and installation coordination before fabrication begins.',
+          primaryCta: 'Request ETFE Engineering Review',
+          secondaryCta: 'View Transparent Covering Projects',
+          visualDirection: 'Technical review for single-layer, tensioned, or cushion ETFE roofs and facades.',
+          visualAlt: 'Engineering model for an ETFE covering system',
+          trustMicrocopy: 'Technical review for lightweight transparent ETFE systems.'
+        },
+        problemContext: {
+          title: 'ETFE Is Not a Simple Transparent Sheet; It Is a Complete Skin System',
+          cards: [
+            'Single-layer tensioned foil and multi-layer cushions differ in structure, thermal behavior, equipment, and maintenance.',
+            'Panel geometry, size, weld pattern, and perimeter frame must match loads, architectural form, and fabrication limits.',
+            'ETFE cushions need continuous low-pressure air supply and monitoring; one-time inflation is not an operating strategy.',
+            'Layer count, print or frit, and transparency must be coordinated with daylight, glare, and thermal performance.',
+            'Edges, drainage, sealing, and moisture management affect the complete system.'
+          ]
+        },
+        materialSystems: {
+          title: 'Types of ETFE Systems',
+          intro: 'The term "ETFE panel" is often used informally for prefabricated ETFE cushion or framed foil modules, but ETFE is fundamentally a foil-based membrane system rather than a rigid glazing panel.',
+          items: [
+            {
+              title: 'Single-Layer ETFE',
+              description: 'A single ETFE foil membrane is mechanically restrained and tensioned within the supporting frame or cable system. Design depends on geometry, boundary conditions, prestress strategy, support arrangement, wind and snow loads, drainage, fixing details, movement, fabrication limits, and project requirements.'
+            },
+            {
+              title: 'ETFE Cushion Systems',
+              description: 'Cushions consist of multiple ETFE foil layers supported around their perimeter, with controlled low-pressure air maintaining cushion geometry. Pneumatic system design — foil patterning, edge details, structure, and continuous air supply — is coordinated as an integral part of the system, not an add-on.'
+            },
+            {
+              title: 'ETFE Facade Systems',
+              description: 'Facade applications include lightweight building envelopes, atrium enclosures, and transparent or translucent architectural facade zones. Design requires coordination of the primary support structure, edge profiles, wind actions, movement, drainage, interfaces, access and maintenance strategy, and the fabrication and installation sequence.'
+            },
+            {
+              title: 'ETFE Roof Systems',
+              description: 'Typical roof applications include atriums, canopies, and large-span lightweight architectural roof zones. Roof design requires coordinated structural geometry, drainage, edge detailing, penetrations, and installation planning as one system.'
+            }
+          ]
+        },
+        engineeringApproach: {
+          title: 'Engineering Control Before ETFE Execution',
+          steps: [
+            {title: 'System Type and Skin Performance', description: 'Transparency, daylight, solar control, thermal behavior, form, span, environmental loads, and maintenance level are reviewed before selecting single-layer or cushion ETFE and layer arrangement.'},
+            {title: 'Geometry, Frame, and Panel Engineering', description: 'Panel division, curvature, aluminium frame or support structure, tolerances, and connection reactions are coordinated with architecture and structure.'},
+            {title: 'Patterning, Welding, Air, and Procurement', description: 'Foil cutting patterns, weld lines, edge details, profiles, gaskets, air tubes, air supply unit, sensors, and part lists are finalized before fabrication.'},
+            {title: 'Installation, Pressure Setting, and Skin Testing', description: 'Frames and foils are installed, air and sealing paths checked, working pressure set by design, and cushions, edges, drainage, and monitoring tested.'}
+          ]
+        },
+        independentRecommendations: {
+          title: 'Independent Guidance for ETFE Selection',
+          intro: 'ETFE should be compared with glass, polycarbonate, and other transparent coverings at complete-system level: weight, transparency, solar control, thermal behavior, rain acoustics, geometry, support structure, air equipment, repair access, and lifecycle cost.',
+          points: [
+            {title: 'Complete-system comparison', description: 'Low foil weight alone is not enough; frame, air supply, controls, and maintenance are part of the decision.'},
+            {title: 'Single layer or cushion', description: 'Tensioned foil and pneumatic cushion systems have different structural, equipment, and operating requirements.'},
+            {title: 'Distinct from daylighting hub', description: 'The transparent roofing page remains the parent for daylighting choices; ETFE is the specialist page for foil and cushion systems.'}
+          ],
+          comparison: {
+            traditional: {label: 'Typical Execution', items: ['ETFE selected only for transparency and low weight', 'Panelization set after structural design', 'Foil ordered without a defined system', 'Cushion inflated once', 'Drainage and edges resolved on site']},
+            sipanel: {label: 'SIPANEL Engineering Approach', items: ['Selection based on daylight, thermal, load, geometry, and maintenance', 'Panel, frame, and support structure coordinated together', 'Foil, welds, profiles, gaskets, air, and controls defined as one system', 'Continuous low-pressure air supply and monitoring per design', 'Edge, sealing, drainage, and service access designed before fabrication']}
+          },
+          contextualLinks: [
+            {label: 'Review daylighting and transparent roofing systems', href: '/systems/daylighting-transparent-roofing'},
+            {label: 'Compare with tensile fabric membrane structures', href: '/systems/tensile-fabric-membrane-structures'},
+            {label: 'View all systems', href: '/systems'}
+          ]
+        },
+        systemApplications: {
+          title: 'ETFE Covering Applications',
+          applications: ['Atria and central courtyards', 'Stadiums and sports facilities', 'Transport terminals', 'Commercial and public spaces', 'Botanical gardens and controlled environments', 'Long-span transparent canopies and roofs', 'Lightweight transparent facades with special geometry']
+        },
+        technicalProof: {
+          title: 'Technical Deliverables Before Fabrication',
+          description: technicalProofDescription.en,
+          requiredVisuals: [],
+          assets: [
+            {title: 'Panelization and Patterning Drawings', description: 'Panel geometry, layers, weld lines, print pattern, and fabrication IDs.'},
+            {title: 'Frame and Edge Details', description: 'Perimeter profile, gasket, clamp, structural interface, sealing, and drainage.'},
+            {title: 'Air and Control Diagram', description: 'Air supply unit, tubes, zoning, pressure monitoring, alarms, and maintenance access requirements.'}
+          ]
+        },
+        processWorkflow: {title: '', steps: []},
+        qualityCheckpoints: {
+          title: 'Quality Checkpoints',
+          checkpoints: ['Foil type, thickness, and specification match approved documents', 'Cutting pattern, print, and weld quality checked', 'Frame, gasket, clamp, and perimeter connections reviewed', 'Sealing and drainage path tested', 'Air network, zoning, working pressure, and monitoring checked', 'Cushion shape, wrinkles, and unintended layer contact reviewed', 'Operating, inspection, and alarm-response instructions handed over']
+        },
+        relatedCaseStudies: {title: 'Related Projects', intro: 'No project cards are shown until owner-approved matching ETFE records are available.', cases: []},
+        faq: {
+          title: 'ETFE Covering FAQ',
+          items: [
+            {question: 'What is ETFE and how is it different from glass?', answer: 'ETFE is a lightweight transparent polymer foil used as a tensioned single layer or multi-layer cushion. Its structural, thermal, acoustic, connection, and maintenance behavior differs from glass and must be compared as a full system.'},
+            {question: 'What is the difference between single-layer and cushion ETFE?', answer: 'Single-layer foil is usually stabilized by tension and sometimes a cable net. A cushion consists of welded layers and requires continuous low-pressure air to maintain shape.'},
+            {question: 'Can an ETFE cushion be inflated once and left alone?', answer: 'No. Pneumatic cushions remain connected to continuous low-pressure air supply and control to respond to temperature changes, wind, and minor leakage.'},
+            {question: 'How are daylight and solar heat controlled?', answer: 'Layer count, print or frit, coverage percentage, geometry, and in some systems layer movement can be used to tune daylight and solar gain.'},
+            {question: 'What happens during a power failure?', answer: 'Power-loss, pressure-loss, alarm, backup, and response-time scenarios must be defined in the air-unit design and operating documents for the specific project.'},
+            {question: 'What is needed for an initial ETFE review?', answer: 'Plans, sections, geometric model, span and panel dimensions, location, design loads, daylight and solar-control needs, thermal target, support structure, service access, and architectural requirements.'},
+            {question: 'What is a single-layer ETFE system?', answer: 'A single-layer ETFE system uses one ETFE foil membrane that is mechanically restrained and tensioned within the supporting frame or cable arrangement. Its design depends on geometry, boundary conditions, prestress strategy, support arrangement, environmental loads, drainage, fixing details, and project-specific fabrication limits.'},
+            {question: 'Is ETFE a panel system?', answer: 'The term "ETFE panel" is often used informally for prefabricated ETFE cushion modules or framed foil assemblies, but ETFE is fundamentally a foil-based membrane system — used as a tensioned single layer or a multi-layer pneumatic cushion — rather than a rigid glazing panel.'}
+          ]
+        },
+        conversionCta: {headline: 'Engineer the complete ETFE system before ordering foil', text: 'Send project documents to review system type, panelization, frame, air, daylight, drainage, and maintenance planning.', button: 'Request ETFE Engineering Review', secondaryButton: 'View Transparent Covering Projects'},
+        breadcrumbs: [{label: 'Home', href: getLocalizedPath('en')}, {label: 'Systems', href: getLocalizedPath('en', '/systems')}, {label: 'ETFE Roof and Facade Systems', href: getLocalizedPath('en', '/systems/etfe-roof-facade-systems')}],
+        caseStudyLabels: commonCaseStudyLabels.en
+      },
       ar: null as never,
       ru: null as never
     }

@@ -236,11 +236,14 @@ type InitialCaseStudyConfig = {
     poster: string;
     title: LocalizedText;
   };
-  secondaryService?: {
+  // Additional systems genuinely delivered within this project's documented scope,
+  // beyond the primary mainService/serviceHref. Not for SEO cross-linking — only
+  // include a system here when the project's own challenge/solution text verifies it.
+  additionalServices?: Array<{
     title: LocalizedText;
     href: string;
     description: LocalizedText;
-  };
+  }>;
   resourceTitle: LocalizedText;
   relatedSlugs?: string[];
   localeOverrides?: Partial<Record<Locale, CaseStudyLocaleOverrides>>;
@@ -330,6 +333,24 @@ const localizedLocations: Record<string, LocalizedText> = {
     fa: 'اصفهان، ایران',
     ar: 'أصفهان، إيران',
     ru: 'Исфахан, Иран'
+  },
+  'Shahr Babak, Kerman, Iran': {
+    en: 'Shahr Babak, Kerman, Iran',
+    fa: 'شهربابک، کرمان، ایران',
+    ar: 'Shahr Babak, Kerman، إيران',
+    ru: 'Shahr Babak, Kerman, Иран'
+  },
+  'Tabas, Iran': {
+    en: 'Tabas, Iran',
+    fa: 'طبس، ایران',
+    ar: 'Tabas، إيران',
+    ru: 'Tabas, Иран'
+  },
+  'Parand, Tehran, Iran': {
+    en: 'Parand, Tehran, Iran',
+    fa: 'پرند، تهران، ایران',
+    ar: 'Parand, Tehran، إيران',
+    ru: 'Parand, Tehran, Иран'
   }
 };
 
@@ -727,6 +748,20 @@ const claddingService: LocalizedText = {
   fa: 'پوشش و نمای آلومینیومی',
   ar: 'الكسوة والتغطية بالألمنيوم',
   ru: 'Алюминиевая облицовка и покрытия'
+};
+
+const daylightingService: LocalizedText = {
+  en: 'Daylighting & Transparent Roofing',
+  fa: 'نورگیر و پوشش شفاف',
+  ar: 'الإضاءة الطبيعية والتغطية الشفافة',
+  ru: 'Естественное освещение и прозрачная кровля'
+};
+
+const retractableRoofService: LocalizedText = {
+  en: 'Retractable Roof Systems',
+  fa: 'سقف متحرک',
+  ar: 'السقف المتحرك',
+  ru: 'Раздвижная кровля'
 };
 
 const caseStudyLocaleOverrides: Partial<Record<string, Partial<Record<Locale, CaseStudyLocaleOverrides>>>> = {
@@ -1410,7 +1445,12 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
     slug: 'shahr-babak-stadium-entrance',
     projectName: localized('Shahr Babak Stadium Entrance'),
-    projectType: localized('Curved architectural stadium entrance facade'),
+    projectType: {
+      en: 'Curved architectural stadium entrance facade',
+      fa: 'نمای معماری خمیده ورودی ورزشگاه',
+      ar: 'Curved architectural stadium entrance facade',
+      ru: 'Curved architectural stadium entrance facade'
+    },
     mainService: claddingService,
     serviceHref: '/systems/aluminium-cladding-covering',
     location: 'Shahr Babak, Kerman, Iran',
@@ -1423,7 +1463,13 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     riskPrevented: ['Facade alignment errors', 'Water penetration at curved transitions', 'Surface waviness', 'Flashing inconsistencies'],
     cardImage: babakSardarbCard,
     heroImage: babakSardarbHero,
-    resourceTitle: localized('Shop Drawing Review Guide')
+    resourceTitle: localized('Shop Drawing Review Guide'),
+    localeOverrides: {
+      fa: {
+        seoTitle: 'ورودی ورزشگاه شهربابک – پوشش و نمای آلومینیومی | سی‌پانل',
+        metaDescription: 'ورودی خمیده ورزشگاه شهربابک، کرمان، با سیستم پوشش و نمای آلومینیومی سی‌پانل اجرا شد؛ هماهنگی هندسه منحنی، دیتیل فلاشینگ و تداوم آب‌بندی نما مدیریت شد.'
+      }
+    }
   },
   {
     slug: 'andimeshk-stadium',
@@ -1612,9 +1658,46 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
     slug: 'absaar-water-park',
     projectName: localized('Absaar Water Park'),
-    projectType: localized('Water park roofing and daylight integration system'),
-    mainService: zipRoofingService,
+    projectType: {
+      en: 'Water park roofing and daylight integration system',
+      fa: 'سیستم سقف و یکپارچه‌سازی نورگیر پارک آبی',
+      ar: 'Water park roofing and daylight integration system',
+      ru: 'Water park roofing and daylight integration system'
+    },
+    mainService: retractableRoofService,
     serviceHref: '/systems/retractable-roof-covering-systems',
+    additionalServices: [
+      {
+        title: sandwichPanelService,
+        href: '/systems/sandwich-panel-systems',
+        description: {
+          en: 'Insulated sandwich panel roofing scope delivered as part of this project.',
+          fa: 'محدوده اجرای سقف ساندویچ پانل عایق در این پروژه.',
+          ar: 'نطاق تنفيذ سقف ألواح الساندويتش المعزولة ضمن هذا المشروع.',
+          ru: 'Объём выполненной изолированной сэндвич-панельной кровли в рамках этого проекта.'
+        }
+      },
+      {
+        title: daylightingService,
+        href: '/systems/daylighting-transparent-roofing',
+        description: {
+          en: 'Daylight-transmitting transparent roofing sections delivered as part of this project.',
+          fa: 'محدوده اجرای بخش‌های شفاف نورگیر سقفی در این پروژه.',
+          ar: 'نطاق تنفيذ أقسام السقف الشفافة لنقل الضوء الطبيعي ضمن هذا المشروع.',
+          ru: 'Объём выполненных светопрозрачных кровельных секций в рамках этого проекта.'
+        }
+      },
+      {
+        title: zipRoofingService,
+        href: '/systems/standing-seam-zip-tech-roofing',
+        description: {
+          en: 'Standing seam / ZIP roofing sections delivered as part of this project.',
+          fa: 'محدوده اجرای سقف زیپ تک و استندینگ سیم در این پروژه.',
+          ar: 'نطاق تنفيذ تسقيف ستاندينغ سيم / ZIP ضمن هذا المشروع.',
+          ru: 'Объём выполненной кровли Standing Seam / ZIP в рамках этого проекта.'
+        }
+      }
+    ],
     location: 'Iran',
     area: '12,000 m2',
     challenge: 'A large recreational roof required daylight transmission, controlled ventilation, waterproof integration, and coordination between transparent roofing, operable openings, and insulated panels.',
@@ -1630,7 +1713,12 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
     slug: 'megaparsmall-atrium',
     projectName: localized('Megapars Mall Atrium'),
-    projectType: localized('Atrium roofing structure'),
+    projectType: {
+      en: 'Atrium roofing structure',
+      fa: 'سازه سقف آتریوم',
+      ar: 'Atrium roofing structure',
+      ru: 'Atrium roofing structure'
+    },
     mainService: zipRoofingService,
     serviceHref: '/systems/standing-seam-zip-tech-roofing',
     location: 'Iran',
@@ -1677,7 +1765,12 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
     slug: 'parand-city-entrance',
     projectName: localized('Parand City Entrance Gate'),
-    projectType: localized('Architectural city entrance facade'),
+    projectType: {
+      en: 'Architectural city entrance facade',
+      fa: 'نمای معماری ورودی شهر',
+      ar: 'Architectural city entrance facade',
+      ru: 'Architectural city entrance facade'
+    },
     mainService: claddingService,
     serviceHref: '/systems/aluminium-cladding-covering',
     location: 'Parand, Tehran, Iran',
@@ -1695,7 +1788,12 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
   {
     slug: 'tabas-railway-facility',
     projectName: localized('Tabas Railway Facility'),
-    projectType: localized('Large-span railway roofing system'),
+    projectType: {
+      en: 'Large-span railway roofing system',
+      fa: 'سیستم سقف ساندویچ پانل دهانه‌بلند راه‌آهن',
+      ar: 'Large-span railway roofing system',
+      ru: 'Large-span railway roofing system'
+    },
     mainService: sandwichPanelService,
     serviceHref: '/systems/sandwich-panel-systems',
     location: 'Tabas, Iran',
@@ -2025,6 +2123,18 @@ const initialCaseStudies: InitialCaseStudyConfig[] = [
     },
     mainService: sandwichPanelService,
     serviceHref: '/systems/sandwich-panel-systems',
+    additionalServices: [
+      {
+        title: daylightingService,
+        href: '/systems/daylighting-transparent-roofing',
+        description: {
+          en: 'Polycarbonate wall systems integrated for natural daylight as part of this project.',
+          fa: 'محدوده اجرای دیوارهای پلی‌کربنات برای تأمین نور طبیعی در این پروژه.',
+          ar: 'نطاق تنفيذ جدران البولي كربونات لتوفير الإضاءة الطبيعية ضمن هذا المشروع.',
+          ru: 'Объём выполненных поликарбонатных стеновых систем для естественного освещения в рамках этого проекта.'
+        }
+      }
+    ],
     location: 'Tehran, Iran',
     area: '5,000 m²',
     challenge: 'The primary challenge was the extremely compressed schedule between project award and the return of Hajj pilgrims, requiring immediate completion and operational readiness.',
@@ -2577,15 +2687,11 @@ function buildInitialLocaleContent(config: InitialCaseStudyConfig, locale: Local
           href: config.serviceHref,
           description: caseStudyCopy[locale].primaryServiceDescription
         },
-        ...(config.secondaryService
-          ? [
-              {
-                title: config.secondaryService.title[locale],
-                href: config.secondaryService.href,
-                description: config.secondaryService.description[locale]
-              }
-            ]
-          : []),
+        ...(config.additionalServices?.map((service) => ({
+          title: service.title[locale],
+          href: service.href,
+          description: service.description[locale]
+        })) ?? []),
         {
           title: config.resourceTitle[locale],
           href: '/resources',

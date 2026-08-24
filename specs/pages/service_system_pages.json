@@ -109,6 +109,23 @@
           "Logistics centers",
           "Clean industrial spaces"
         ],
+        "material_systems": {
+          "title": "Roof and Wall Sandwich Panel Systems",
+          "items": [
+            {
+              "title": "Roof Sandwich Panels",
+              "description": "Roof panel selection coordinates roof slope, drainage, panel span and support condition, insulation requirements, joint configuration, ridge and eave details, flashings, penetrations, fasteners, waterproofing, and installation sequence as one system."
+            },
+            {
+              "title": "Wall Sandwich Panels",
+              "description": "Wall panel selection coordinates panel orientation, support spacing, joint arrangement, openings, corners, base details, flashings, interfaces with doors and windows, thermal continuity, weather protection, and installation sequencing as one system."
+            },
+            {
+              "title": "Insulation Core Selection",
+              "description": "Core selection (PIR, PUR, mineral wool, EPS, or other systems) depends on project-specific thermal requirements, fire requirements, building use, climate, panel configuration, structural and project constraints, and applicable regulations or specification requirements — not on a single default choice."
+            }
+          ]
+        },
         "technical_proof": {
           "required_visuals": [
             "panel layout preview",
@@ -154,6 +171,10 @@
           {
             "question": "Can SIPANEL coordinate procurement and accessories?",
             "answer": "Yes. Panels, flashings, fasteners, trims, sealants, and ridge/eave accessories are planned together to prevent site delays and missing components."
+          },
+          {
+            "question": "What is the difference between roof and wall sandwich panels?",
+            "answer": "Roof and wall sandwich panels differ in geometry, joint configuration, loading and support conditions, and drainage/waterproofing requirements. Roof panels must manage slope, drainage, and penetration detailing, while wall panels manage vertical loading, openings, corners, and interfaces with doors and windows. Final specification depends on the selected panel system and project requirements."
           }
         ],
         "conversion_cta": {

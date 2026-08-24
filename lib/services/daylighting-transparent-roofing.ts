@@ -43,6 +43,10 @@ type LocalizedContent = {
     title: string;
     cards: string[];
   };
+  materialSystems?: {
+    title: string;
+    items: Array<{title: string; description: string}>;
+  };
   engineeringApproach: {
     title: string;
     steps: Array<{title: string; description: string}>;
@@ -250,14 +254,14 @@ const fa: LocalizedContent = {
 
 const en: LocalizedContent = {
   seo: {
-    primaryKeyword: 'skylight',
-    title: 'Skylight & Daylighting Systems | SIPANEL',
-    metaDescription: 'SIPANEL engineers daylighting and transparent roofing systems with polycarbonate, glass skylights, and hybrid solutions — coordinating structural integration, thermal performance, and weather resistance for industrial projects.'
+    primaryKeyword: 'daylighting panels',
+    title: 'Industrial Daylighting Panels & Skylight Systems | SIPANEL',
+    metaDescription: 'Engineered daylighting panels, polycarbonate skylights and translucent roofing systems for industrial buildings, with structural and waterproofing coordination.'
   },
   hero: {
     eyebrow: 'Daylighting & Transparent Systems',
-    h1: 'Skylight & Industrial Daylighting Systems',
-    subheadline: 'SIPANEL coordinates skylight layout, polycarbonate selection, structural integration, thermal performance, and weather resistance before installation begins.',
+    h1: 'Industrial Daylighting Panels & Skylight Systems',
+    subheadline: 'SIPANEL engineers daylighting panels, polycarbonate skylights, translucent roof and wall systems, structural integration, thermal performance, and weather-resistant detailing before installation begins.',
     primaryCta: 'Request Daylighting Review',
     secondaryCta: 'View Related Projects',
     visualAlt: 'Industrial skylight installation with engineered performance detailing',
@@ -271,6 +275,27 @@ const en: LocalizedContent = {
       'Leakage risk from weak flashing and sealing at transparent panels: skylight-to-metal-roof connection points without precise detailing are prone to water ingress',
       'Inadequate thermal performance and condensation risk: without insulation and ventilation review, condensation forms and thermal performance drops',
       'Reduced light transmission and project delays from unclear detailing: without shop drawings and precise planning, both optical performance and project timelines suffer'
+    ]
+  },
+  materialSystems: {
+    title: 'Daylighting Panels for Industrial Buildings',
+    items: [
+      {
+        title: 'Polycarbonate Daylighting Panels',
+        description: 'Multiwall and solid polycarbonate systems for roof and wall daylighting applications.'
+      },
+      {
+        title: 'Translucent Roof Panels',
+        description: 'Industrial roof daylighting, continuous daylight strips, ridge applications, and transparent or translucent roof zones.'
+      },
+      {
+        title: 'Translucent Wall Panels',
+        description: 'Natural-light wall and facade applications where daylight transmission is required without a conventional glazed facade.'
+      },
+      {
+        title: 'Glass Skylight Systems',
+        description: 'Architectural skylights, atriums, and transparent roofing where glass is technically appropriate.'
+      }
     ]
   },
   engineeringApproach: {
@@ -316,12 +341,13 @@ const en: LocalizedContent = {
   systemApplications: {
     title: 'Where Daylighting & Transparent Roofing Fits',
     applications: [
-      'Industrial factory skylights',
+      'Industrial daylighting roof panels for factory skylights',
       'Warehouse daylighting strips',
       'Commercial atrium roofing',
       'Sports hall transparent roofing',
       'Cold storage controlled-light solutions',
-      'Continuous ridge daylighting systems'
+      'Continuous ridge daylighting systems',
+      'Translucent wall daylighting for facades and elevations'
     ]
   },
   technicalProof: {
@@ -381,6 +407,10 @@ const en: LocalizedContent = {
       {
         question: 'What is the difference between supply-only skylights and engineered execution?',
         answer: 'Supply-only focuses on panel delivery. Engineered execution coordinates the complete skylight system — including material selection, shop drawings, waterproofing, procurement, controlled installation, and quality checkpoints.'
+      },
+      {
+        question: 'What types of daylighting panels are used in industrial buildings?',
+        answer: 'Industrial daylighting panels typically fall into multiwall polycarbonate, solid polycarbonate, translucent roof and wall panel systems, and glass skylights. The right choice depends on the application, climate, thermal requirements, structural conditions, daylight goals, waterproofing, and project requirements.'
       }
     ]
   },
@@ -825,6 +855,7 @@ export function getDaylightingTransparentRoofingPage(locale: Locale): ServicePag
       trustMicrocopy: content.hero.trustMicrocopy
     },
     problemContext: content.problemContext,
+    materialSystems: content.materialSystems,
     engineeringApproach: content.engineeringApproach,
     independentRecommendations: {
       ...content.independentRecommendations,

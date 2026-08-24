@@ -7,6 +7,7 @@ import {Link, getDirection, getLanguageTag, type Locale} from '@/i18n/routing';
 import type {ResourceDetailPageData} from '@/lib/resources/engineering-resource-hub';
 import {formatResourceDate, getResourceTypeLabel} from '@/lib/resources/engineering-resource-hub';
 import {ResourceBreadcrumb} from '@/components/resources/resource-breadcrumb';
+import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
 import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
@@ -30,6 +31,14 @@ function triggerResourceDownload(path: string) {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+}
+
+const resourceFaqIdSuffixesById: Record<string, readonly string[]> = {
+  shop_drawing_review_guide: ['checklist-scope', 'common-review-mistakes', 'pre-approval-checks']
+};
+
+function getResourceFaqAnalyticsId(resourceId: string, index: number): string {
+  return resourceFaqIdSuffixesById[resourceId]?.[index] ?? `faq-${index + 1}`;
 }
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
@@ -79,8 +88,9 @@ function ResourcePreviewGraphic({label}: {label: string}) {
 function ResourceContextLinks({page}: {page: ResourceDetailPageData}) {
   const system = page.relatedSystems[0];
   const project = page.relatedProjects[0];
+  const solutions = page.relatedSolutions ?? [];
 
-  if (!system && !project) {
+  if (!system && !project && solutions.length === 0) {
     return null;
   }
 
@@ -99,6 +109,15 @@ function ResourceContextLinks({page}: {page: ResourceDetailPageData}) {
           <Link href={project.href}>{project.name}</Link>{' '}
           {page.ui.contextualProjectSuffix}
         </p>
+      ) : null}
+      {solutions.length > 0 ? (
+        <nav className="resource-detail-inline-links" aria-label={solutions[0].title}>
+          {solutions.map((solution) => (
+            <Link key={solution.href} href={solution.href}>
+              {solution.title}
+            </Link>
+          ))}
+        </nav>
       ) : null}
     </div>
   );
@@ -371,6 +390,21 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
         </div>
       </section>
 
+      {page.checklist ? (
+        <section className="resource-detail-section" data-section="review_checklist" aria-labelledby="resource-checklist-title">
+          <div className="container-shell resource-detail-section__inner">
+            <header>
+              <h2 id="resource-checklist-title">{page.checklist.title}</h2>
+            </header>
+            <ul className="resource-detail-checklist">
+              {page.checklist.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
       <section className="resource-detail-section" data-section="common_mistakes" aria-labelledby="resource-mistakes-title">
         <div className="container-shell resource-detail-section__inner">
           <header>
@@ -386,6 +420,35 @@ export function ResourceDetailPageTemplate({locale, page}: Props) {
           </div>
         </div>
       </section>
+
+      {page.faq ? (
+        <section className="resource-detail-section resource-detail-section--light" data-section="resource_faq" aria-labelledby="resource-faq-title">
+          <div className="container-shell resource-detail-section__inner">
+            <header>
+              <h2 id="resource-faq-title">{page.faq.title}</h2>
+            </header>
+            <div className="resource-detail-faq-list">
+              {page.faq.items.map((item, index) => (
+                <FaqExpandDetails
+                  analytics={{
+                    faqId: `${page.resource.id}-${getResourceFaqAnalyticsId(page.resource.id, index)}`,
+                    faqQuestion: item.question,
+                    faqCategory: page.resource.id,
+                    faqPosition: index + 1,
+                    pageLanguage: locale
+                  }}
+                  className="resource-detail-faq-item"
+                  key={item.question}
+                  summary={item.question}
+                >
+                  {/* track: faq_expand */}
+                  <p>{item.answer}</p>
+                </FaqExpandDetails>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section
         className="resource-detail-section"

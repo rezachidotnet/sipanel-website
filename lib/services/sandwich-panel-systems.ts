@@ -39,6 +39,10 @@ type ServiceSystemPageSpec = {
     }>;
   };
   applications: string[];
+  material_systems?: {
+    title: string;
+    items: Array<{title: string; description: string}>;
+  };
   technical_proof: {
     required_visuals: string[];
     interaction: string;
@@ -627,12 +631,19 @@ export function getSandwichPanelSystemsPage(locale: Locale): ServicePageTemplate
               label: 'SIPANEL Engineering Approach',
               items: ['Selection based on project conditions', 'Shop drawings before procurement', 'Waterproofing logic reviewed upfront', 'Accessories coordinated with panels', 'Risks identified before site work']
             }
-          }
+          },
+      contextualLinks: isFa
+        ? undefined
+        : [
+            {label: 'Sandwich panel selection guide', href: '/resources/sandwich-panel-selection-guide'},
+            {label: 'Industrial sandwich panel installation', href: '/solutions/industrial-sandwich-panel-installation'}
+          ]
     },
     systemApplications: {
-      title: isFa ? fa.systemApplications.title : `Where ${page.seo.primary_keyword} are used`,
+      title: isFa ? fa.systemApplications.title : 'Where Sandwich Panel Systems Are Used',
       applications: isFa ? fa.systemApplications.applications : page.applications
     },
+    materialSystems: isFa ? undefined : page.material_systems,
     technicalProof: {
       title: isFa ? fa.technicalProof.title : 'Engineering Proof',
       description: '',

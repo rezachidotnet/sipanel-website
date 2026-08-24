@@ -58,6 +58,10 @@ type ProjectCaseStudy = {
   slug: string;
   displayPriority: number;
   filters: string[];
+  // Explicit, documented primary system for multi-filter projects. filters[] is UI category
+  // membership only and must not be used to infer priority — omit this field for single-system
+  // projects, where the existing filters-based fallback in getPrimarySystemKey is unambiguous.
+  primarySystemKey?: keyof ProjectLocalizationTerms['systems'];
   secondaryCategory: string;
   location: string;
   category: string;
@@ -290,6 +294,7 @@ const projectCaseStudies: ProjectCaseStudy[] = [
     slug: 'erbil-eye-hospital-entrance-canopy',
     displayPriority: 3,
     filters: ['cladding', 'polycarbonate'],
+    primarySystemKey: 'polycarbonate',
     secondaryCategory: 'healthcare',
     location: 'Erbil, Kurdistan Region, Iraq',
     category: 'Healthcare Facility',
@@ -400,7 +405,8 @@ const projectCaseStudies: ProjectCaseStudy[] = [
     projectName: 'Absaar Water Park',
     slug: 'absaar-water-park',
     displayPriority: 9,
-    filters: ['sandwich', 'standing', 'retractable-roof-covering-systems'],
+    filters: ['sandwich', 'standing', 'retractable-roof-covering-systems', 'polycarbonate'],
+    primarySystemKey: 'standing',
     secondaryCategory: 'sports-recreation',
     location: 'Iran',
     category: 'Recreational & Hybrid Roofing Systems',
@@ -440,7 +446,8 @@ const projectCaseStudies: ProjectCaseStudy[] = [
     projectName: 'Imam Khomeini Airport Hajj Passenger Terminal',
     slug: 'imam-khomeini-airport-hajj-terminal',
     displayPriority: 11,
-    filters: ['sandwich'],
+    filters: ['sandwich', 'polycarbonate'],
+    primarySystemKey: 'sandwich',
     secondaryCategory: 'transportation-infrastructure',
     location: 'Tehran, Iran',
     category: 'Airport Infrastructure',
@@ -577,6 +584,7 @@ const projectCaseStudies: ProjectCaseStudy[] = [
     slug: 'baharestan-prayer-hall',
     displayPriority: 19,
     filters: ['sandwich', 'cladding'],
+    primarySystemKey: 'sandwich',
     secondaryCategory: 'religious-community',
     location: 'Baharestan, Iran',
     category: 'Public Building',
@@ -1563,6 +1571,12 @@ const projectLocalizationTerms: Record<'ar' | 'ru', ProjectLocalizationTerms> = 
 };
 
 function getPrimarySystemKey(project: ProjectCaseStudy): keyof ProjectLocalizationTerms['systems'] {
+  // Documented primary system takes precedence over filter membership — filters[] represents
+  // UI category membership for multi-system projects, not a priority ranking.
+  if (project.primarySystemKey) return project.primarySystemKey;
+
+  // Fallback for single-system projects only: with exactly one relevant tag present, whichever
+  // branch matches is unambiguously that project's only system.
   if (project.filters.includes('standing')) return 'standing';
   if (project.filters.includes('cladding')) return 'cladding';
   if (project.filters.includes('glass')) return 'glass';

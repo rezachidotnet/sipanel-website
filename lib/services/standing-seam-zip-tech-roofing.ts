@@ -43,6 +43,11 @@ type LocalizedContent = {
     title: string;
     cards: string[];
   };
+  materialSystems?: {
+    title: string;
+    intro?: string;
+    items: Array<{title: string; description: string}>;
+  };
   engineeringApproach: {
     title: string;
     steps: Array<{title: string; description: string}>;
@@ -246,14 +251,14 @@ const fa: LocalizedContent = {
 
 const en: LocalizedContent = {
   seo: {
-    primaryKeyword: 'standing seam roof',
+    primaryKeyword: 'standing seam metal roofing',
     title: 'Standing Seam Metal Roof Systems | SIPANEL',
-    metaDescription: 'SIPANEL designs and executes Standing Seam and ZIP Tech roofing systems with drainage logic, flashing coordination, concealed fastening, and controlled installation for industrial projects.'
+    metaDescription: 'Standing seam metal roofing, engineered for industrial roofs: concealed fastening, drainage, flashing, thermal movement and waterproofing before installation.'
   },
   hero: {
     eyebrow: 'Industrial Waterproof Roofing',
     h1: 'Standing Seam Metal Roof Systems',
-    subheadline: 'SIPANEL coordinates roof slope, drainage paths, seams, flashings, gutters, penetrations, and concealed fastening details to reduce leakage risk before installation begins.',
+    subheadline: 'SIPANEL engineers standing seam metal roofing systems by coordinating roof slope, drainage paths, seam layout, flashings, gutters, penetrations, concealed fastening and thermal movement before installation begins.',
     primaryCta: 'Request Roof Engineering Review',
     secondaryCta: 'View Roofing Projects',
     visualAlt: 'Standing seam roofing system with engineered waterproofing detail',
@@ -267,6 +272,28 @@ const en: LocalizedContent = {
       'Uncontrolled penetrations: skylights, vents, ducts, and service openings create risk when not detailed correctly',
       'Exposed fastener risk: incorrect fastening strategy increases the chance of water ingress and maintenance problems',
       'Thermal movement and installation sequence: large roof surfaces need movement-aware detailing and a controlled installation sequence — without this coordination, even good materials fail'
+    ]
+  },
+  materialSystems: {
+    title: 'How Standing Seam Metal Roofing Works',
+    intro: 'Standing seam and ZIP-type roofing systems use raised seam geometry and concealed fastening principles, but profile geometry, seaming method, clips, and installation requirements vary by system and manufacturer.',
+    items: [
+      {
+        title: 'Raised Seam Geometry',
+        description: 'Metal roof sheets are formed with raised longitudinal seams that run with the slope, giving the profile its primary water-shedding line.'
+      },
+      {
+        title: 'Concealed Fastening & Clips',
+        description: 'Fastening is concealed beneath the finished roof surface. Clips connect the sheet system to the supporting structure without face-fixed penetrations through the panel.'
+      },
+      {
+        title: 'Thermal Movement Accommodation',
+        description: 'Seam geometry and clip configuration are selected to accommodate project-specific thermal movement strategies, particularly across long roof runs.'
+      },
+      {
+        title: 'System-Level Waterproofing',
+        description: 'Waterproofing performance depends on slope, seam configuration, drainage, flashing, penetrations, transitions, and installation quality working together — not on the roof sheet alone.'
+      }
     ]
   },
   engineeringApproach: {
@@ -373,6 +400,14 @@ const en: LocalizedContent = {
       {
         question: 'How are waterproofing transitions at roof-wall connections controlled?',
         answer: 'Flashing details, overlap logic, and sealing at plane-change points are reviewed before installation to reduce leakage risk at transition zones.'
+      },
+      {
+        question: 'Can standing seam roofing be used on low-slope roofs?',
+        answer: 'It depends on the specific standing seam system and profile. Suitability is governed by the manufacturer/system minimum slope requirement, seam geometry, drainage design, roof length, penetrations, and project-specific detailing — low-slope and zero-slope (flat) conditions are not the same, and a low-slope application still requires engineered drainage and detailing review before the system is selected.'
+      },
+      {
+        question: 'How is a standing seam roof profile selected?',
+        answer: 'Profile and seam configuration are selected based on roof geometry, slope, panel/run length, drainage design, wind and uplift requirements where engineering data is available, substrate and support conditions, clip system, thermal movement, architectural requirements, and manufacturer/system limitations — not a single fixed rule.'
       }
     ]
   },
@@ -809,8 +844,17 @@ export function getStandingSeamZipTechRoofingPage(locale: Locale): ServicePageTe
       trustMicrocopy: content.hero.trustMicrocopy
     },
     problemContext: content.problemContext,
+    materialSystems: content.materialSystems,
     engineeringApproach: content.engineeringApproach,
-    independentRecommendations: content.independentRecommendations,
+    independentRecommendations: {
+      ...content.independentRecommendations,
+      contextualLinks: locale === 'en'
+        ? [
+            {label: 'Standing seam roof drainage logic', href: '/insights/standing-seam-roof-drainage-logic'},
+            {label: 'Standing seam roof detail notes', href: '/resources/standing-seam-roof-detail-notes'}
+          ]
+        : undefined
+    },
     systemApplications: content.systemApplications,
     technicalProof: {
       title: content.technicalProof.title,

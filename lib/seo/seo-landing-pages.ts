@@ -599,9 +599,14 @@ export const seoLandingPages = [
         title: 'Sandwich Panel Systems',
         path: '/systems/sandwich-panel-systems',
         description: 'Panel system engineering and installation control'
+      },
+      {
+        title: 'Sandwich Panel Selection Guide',
+        path: '/resources/sandwich-panel-selection-guide',
+        description: 'Core, thickness, and specification selection guidance'
       }
     ],
-    qualityCheckpointsTitle: 'industrial sandwich panel installation Quality Checkpoints',
+    qualityCheckpointsTitle: 'Industrial Sandwich Panel Installation Quality Checkpoints',
     qualityCheckpoints: [
       'Confirm layout and support conditions before unloading.',
       'Check trim, accessory, and fastening quantities against the takeoff.',
@@ -953,7 +958,7 @@ export const seoLandingPages = [
     slug: 'shop-drawing-review-panel-projects',
     routeSlug: 'shop-drawing-review-panel-projects',
     keyword: 'shop drawing review for panel projects',
-    seoTitle: 'Shop Drawing Review for Panel Projects | SIPANEL',
+    seoTitle: 'Shop Drawing Review Process for Panel Projects | SIPANEL',
     metaDescription:
       'Shop drawing review for panel projects helps control layout, quantities, accessories, penetrations, and execution sequencing. SIPANEL reviews the drawings before procurement starts.',
     h1: 'Shop Drawing Review for Panel Projects Before Procurement.',
@@ -986,13 +991,18 @@ export const seoLandingPages = [
       {title: 'Smart Procurement', description: 'Align takeoff, accessories, and packaging with the drawing package.'},
       {title: 'Engineered Installation', description: 'Turn the drawing set into a controlled execution sequence.'}
     ],
-    workflowTitle: 'Engineering Workflow for shop drawing review for panel projects',
+    workflowTitle: 'Shop Drawing Review Process',
     workflowSteps: [
-      {title: 'Brief review', description: 'Check the project scope, constraints, and available base information first.'},
-      {title: 'Layout validation', description: 'Review panel layout, openings, and details for coordination gaps.'},
-      {title: 'Quantity check', description: 'Confirm the takeoff and accessory logic against the layout.'},
-      {title: 'Execution sequence', description: 'Set the installation order and delivery plan before procurement.'},
-      {title: 'Review closure', description: 'Record unresolved items and final approved changes before release.'}
+      {title: 'Drawing and specification intake', description: 'Project drawings, specifications, and base information are collected and checked for completeness before review begins.'},
+      {title: 'Geometry and interface review', description: 'Dimensions, gridlines, and interface conditions are checked against the project brief and other trade drawings.'},
+      {title: 'Structural/support coordination', description: 'Panel and module support points are reviewed against the structural drawings and supporting frame.'},
+      {title: 'Panel/module/layout coordination', description: 'Panel orientation, module direction, and layout are checked for coordination gaps and buildability.'},
+      {title: 'Openings and penetration review', description: 'Openings, penetrations, and service points are checked and coordinated within the panel layout.'},
+      {title: 'Flashing and waterproofing interface review', description: 'Flashing, overlap logic, and waterproofing interfaces are reviewed at edges, transitions, and penetrations.'},
+      {title: 'Accessory and fixing coordination', description: 'Fixings, trims, gaskets, and accessory quantities are checked against the layout and BOM/MTO.'},
+      {title: 'Conflict/comment identification', description: 'Conflicts, missing information, and open items are identified and logged as review comments.'},
+      {title: 'Revision and resubmittal control', description: 'Comments are tracked through revision cycles until open items are resolved and drawings are updated.'},
+      {title: 'Release for procurement/fabrication/installation', description: 'Once open items are closed, the coordinated drawing set is released to support procurement, fabrication, or installation planning.'}
     ],
     technicalProofTitle: 'Technical Proof Before Execution',
     technicalProofDescription:
@@ -1009,6 +1019,11 @@ export const seoLandingPages = [
         title: 'Sandwich Panel Systems',
         path: '/systems/sandwich-panel-systems',
         description: 'Panel execution and takeoff control'
+      },
+      {
+        title: 'Shop Drawing Review Checklist',
+        path: '/resources/shop-drawing-review-guide',
+        description: 'Educational checklist covering what to verify on a shop drawing before approval'
       }
     ],
     qualityCheckpointsTitle: 'shop drawing review for panel projects Quality Checkpoints',

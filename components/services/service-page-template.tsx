@@ -76,6 +76,11 @@ export type ServicePageTemplateData = {
     title: string;
     cards: string[];
   };
+  materialSystems?: {
+    title: string;
+    intro?: string;
+    items: Array<{title: string; description: string}>;
+  };
   engineeringApproach: {
     title: string;
     steps: ServiceStep[];
@@ -147,7 +152,7 @@ const serviceFaqIdSuffixesByPage: Record<string, readonly string[]> = {
     'manufacturer-independence',
     'engineering-review-scope',
     'accessory-procurement-coordination',
-    'supply-and-installation-scope'
+    'roof-vs-wall-difference'
   ],
   standing_seam_zip_tech_roofing: [
     'industrial-roofing-fit',
@@ -157,7 +162,8 @@ const serviceFaqIdSuffixesByPage: Record<string, readonly string[]> = {
     'roof-shop-drawings',
     'supply-and-installation-scope',
     'thermal-movement-control',
-    'roof-wall-waterproofing'
+    'low-slope-suitability',
+    'seam-profile-selection'
   ],
   daylighting_transparent_roofing: [
     'daylighting-materials',
@@ -167,7 +173,8 @@ const serviceFaqIdSuffixesByPage: Record<string, readonly string[]> = {
     'structural-integration',
     'thermal-movement-control',
     'skylight-roof-waterproofing',
-    'engineered-execution-difference'
+    'engineered-execution-difference',
+    'daylighting-panel-types'
   ],
   aluminium_cladding_covering: [
     'industrial-commercial-fit',
@@ -201,7 +208,9 @@ const serviceFaqIdSuffixesByPage: Record<string, readonly string[]> = {
     'continuous-air-supply',
     'solar-control',
     'power-failure',
-    'initial-review-inputs'
+    'initial-review-inputs',
+    'single-layer-definition',
+    'panel-terminology'
   ]
 };
 
@@ -357,6 +366,29 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
         </div>
       </section>
 
+      {page.materialSystems ? (
+        <section
+          className="service-section"
+          data-section="material_systems"
+          aria-labelledby="service-material-systems-title"
+        >
+          <div className="container-shell service-section__inner">
+            <header>
+              <h2 id="service-material-systems-title">{page.materialSystems.title}</h2>
+              {page.materialSystems.intro ? <p>{page.materialSystems.intro}</p> : null}
+            </header>
+            <div className="service-step-grid">
+              {page.materialSystems.items.map((item) => (
+                <article className="service-step" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section
         id="service-related-case-studies"
         className="service-section"
@@ -383,7 +415,13 @@ export function ServicePageTemplate({locale, page}: ServicePageTemplateProps) {
                       </div>
                     )}
                   </div>
-                  <h3>{project.projectName}</h3>
+                  <h3>
+                    {project.href ? (
+                      <a href={normalizeCanonicalPath(project.href)}>{project.projectName}</a>
+                    ) : (
+                      project.projectName
+                    )}
+                  </h3>
                   <p>{project.location}{project.areaM2 ? ` — ${project.areaM2}` : ''}</p>
                   <dl>
                     <dt>{labels.challenge}</dt>
