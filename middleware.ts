@@ -95,6 +95,18 @@ export default function middleware(request: NextRequest) {
   }
 
   const url = new URL(request.url);
+
+  if (url.pathname === '/robots.txt') {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set(markdownInternalHeader, '1');
+
+    return NextResponse.rewrite(new URL('/robots-content', request.url), {
+      request: {
+        headers: requestHeaders
+      }
+    });
+  }
+
   const requestHostname = getRequestHostname(request);
   let shouldRedirect = false;
 
@@ -145,5 +157,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/(fa|en|ar|ru)/sitemap.xml']
+  matcher: ['/robots.txt', '/((?!api|_next|_vercel|.*\\..*).*)', '/(fa|en|ar|ru)/sitemap.xml']
 };
