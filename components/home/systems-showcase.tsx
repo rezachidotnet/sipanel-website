@@ -6,6 +6,9 @@ import sandwichPanelCover from '@/assets/systems/sandwich-panel/cover-desktop.we
 import standingSeamCover from '@/assets/systems/standing-seam/cover-desktop.webp';
 import aluminiumCladdingCover from '@/assets/systems/aluminium-claddin/cover-desktop.webp';
 import daylightingCover from '@/assets/systems/transparent-roofing/cover-desktop.webp';
+import tensileFabricCover from '@/assets/systems/tensile-fabric-structures/cover-desktop.webp';
+import retractableRoofCover from '@/assets/systems/retractable-roof-systems/cover-desktop.webp';
+import etfeCover from '@/assets/systems/etfe-roof/cover-desktop.webp';
 
 const systems = [
   {
@@ -39,18 +42,21 @@ const systems = [
   {
     id: 'tensile-fabric',
     href: '/systems/tensile-fabric-membrane-structures',
+    image: tensileFabricCover,
     nameKey: 'tensileFabric' as const,
     descKey: 'tensileFabricDesc' as const
   },
   {
     id: 'retractable-roof',
     href: '/systems/retractable-roof-covering-systems',
+    image: retractableRoofCover,
     nameKey: 'retractableRoof' as const,
     descKey: 'retractableRoofDesc' as const
   },
   {
     id: 'etfe',
     href: '/systems/etfe-roof-facade-systems',
+    image: etfeCover,
     nameKey: 'etfe' as const,
     descKey: 'etfeDesc' as const
   }
@@ -80,21 +86,13 @@ export function SystemsShowcase() {
         {systems.map((system) => (
           <Link href={system.href} className="systems-showcase__card" key={system.id}>
             <div className="systems-showcase__card-image">
-              {'image' in system ? (
-                <Image
-                  src={system.image}
-                  alt={t(system.nameKey)}
-                  fill
-                  sizes="(max-width: 767px) 78vw, (max-width: 1024px) 40vw, 320px"
-                  className="systems-showcase__card-img"
-                />
-              ) : (
-                <div className="systems-showcase__pending-img" aria-label={t(system.nameKey)} role="img">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              )}
+              <Image
+                src={system.image}
+                alt={t(system.nameKey)}
+                fill
+                sizes="(max-width: 767px) 78vw, (max-width: 1024px) 40vw, 320px"
+                className="systems-showcase__card-img"
+              />
             </div>
             <div className="systems-showcase__card-body">
               <h3>{t(system.nameKey)}</h3>

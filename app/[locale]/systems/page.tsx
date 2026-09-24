@@ -21,6 +21,12 @@ import aluminiumDesktop from '@/assets/systems/aluminium-claddin/cover-desktop.w
 import aluminiumMobile from '@/assets/systems/aluminium-claddin/cover-mobile.webp';
 import daylightingDesktop from '@/assets/systems/transparent-roofing/cover-desktop.webp';
 import daylightingMobile from '@/assets/systems/transparent-roofing/cover-mobile.webp';
+import tensileFabricDesktop from '@/assets/systems/tensile-fabric-structures/cover-desktop.webp';
+import tensileFabricMobile from '@/assets/systems/tensile-fabric-structures/cover-mobile.webp';
+import retractableRoofDesktop from '@/assets/systems/retractable-roof-systems/cover-desktop.webp';
+import retractableRoofMobile from '@/assets/systems/retractable-roof-systems/cover-mobile.webp';
+import etfeDesktop from '@/assets/systems/etfe-roof/cover-desktop.webp';
+import etfeMobile from '@/assets/systems/etfe-roof/cover-mobile.webp';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -918,11 +924,13 @@ const systems: SystemCard[] = [
   },
   {
     id: 'tensile-fabric',
+    imageDesktop: tensileFabricDesktop,
+    imageMobile: tensileFabricMobile,
     alt: {
-      fa: 'وضعیت در انتظار تصویر تخصصی سازه پارچه‌ای کششی',
-      en: 'Pending specialist image for tensile fabric membrane structures',
-      ar: 'صورة تخصصية قيد الانتظار للهياكل النسيجية المشدودة',
-      ru: 'Ожидается профильное изображение тентовых мембранных конструкций'
+      fa: 'جزئیات اتصال غشای پارچه‌ای کششی به کابل، ستون و فونداسیون',
+      en: 'Tensile fabric membrane corner connected to cable, mast, and foundation detail',
+      ar: 'تفصيل ربط الغشاء النسيجي المشدود بالكابل والعمود والأساس',
+      ru: 'Узел крепления тентовой мембраны к тросу, мачте и фундаменту'
     },
     title: {
       fa: 'سازه‌های پارچه‌ای کششی',
@@ -951,11 +959,13 @@ const systems: SystemCard[] = [
   },
   {
     id: 'retractable-roof',
+    imageDesktop: retractableRoofDesktop,
+    imageMobile: retractableRoofMobile,
     alt: {
-      fa: 'وضعیت در انتظار تصویر تخصصی سقف متحرک',
-      en: 'Pending specialist image for retractable roof systems',
-      ar: 'صورة تخصصية قيد الانتظار للأسقف المتحركة',
-      ru: 'Ожидается профильное изображение раздвижных кровель'
+      fa: 'سقف متحرک با پارچه جمع‌شونده روی تیرهای سازه',
+      en: 'Retractable roof with folding fabric between structural beams',
+      ar: 'سقف متحرك بقماش قابل للطي بين العوارض الإنشائية',
+      ru: 'Раздвижная кровля со складывающейся тканью между балками каркаса'
     },
     title: {
       fa: 'سقف‌ها و پوشش‌های متحرک',
@@ -984,11 +994,13 @@ const systems: SystemCard[] = [
   },
   {
     id: 'etfe',
+    imageDesktop: etfeDesktop,
+    imageMobile: etfeMobile,
     alt: {
-      fa: 'وضعیت در انتظار تصویر تخصصی پوشش ETFE',
-      en: 'Pending specialist image for ETFE roof and facade systems',
-      ar: 'صورة تخصصية قيد الانتظار لأنظمة ETFE',
-      ru: 'Ожидается профильное изображение систем ETFE'
+      fa: 'جزئیات فریم و پنل بالشی ETFE با شبکه هوا',
+      en: 'ETFE cushion panel edge frame and air supply detail',
+      ar: 'تفصيل إطار لوح ETFE الوسادي وشبكة الهواء',
+      ru: 'Узел рамы и воздушной сети подушечной панели ETFE'
     },
     title: {
       fa: 'پوشش‌های ETFE',
