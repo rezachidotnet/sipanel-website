@@ -6,9 +6,11 @@ import {HashAnchorLink} from '@/components/navigation/hash-anchor-link';
 import {productionContactInfo} from '@/lib/contact/rfq-contact-page';
 import {ProjectFilterLink} from '@/components/projects/project-filter-link';
 import {FooterContactLinks} from '@/components/layout/footer-contact-links';
+import {groupCompanies} from '@/lib/about/group-companies';
 
 export function Footer() {
   const footer = useTranslations('footer');
+  const group = useTranslations('groupCompanies');
   const localizedAddress = footer.has('address') ? footer('address') : productionContactInfo.address;
 
   return (
@@ -51,6 +53,15 @@ export function Footer() {
             <Link href="/about" className="site-footer__link">{footer('companyAbout')}</Link>
             <HashAnchorLink href="/#process" className="site-footer__link">{footer('companyProcess')}</HashAnchorLink>
             <Link href="/contact" className="site-footer__link">{footer('companyContact')}</Link>
+          </div>
+
+          <div className="site-footer__column">
+            <h2>{footer('group')}</h2>
+            {groupCompanies.map((company) => (
+              <a key={company.id} href={company.href} className="site-footer__link" target="_blank" rel="noopener">
+                {group(`companies.${company.id}.name`)}
+              </a>
+            ))}
           </div>
 
           <div className="site-footer__column site-footer__contact">

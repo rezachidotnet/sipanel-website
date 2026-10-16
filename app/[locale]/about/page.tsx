@@ -3,6 +3,7 @@ import '@/components/about/about.css';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {AboutPage} from '@/components/about/about-page';
+import {GroupCompaniesSection} from '@/components/about/group-companies-section';
 import {ClientLogosSection} from '@/components/trust/client-logos-section';
 import {locales, type Locale} from '@/i18n/routing';
 import {getAboutPageData, getAboutPageMetadata} from '@/lib/about/about-page';
@@ -46,6 +47,7 @@ export default async function AboutPageRoute({params}: Props) {
     <>
       {/* track: about_page_view */}
       <AboutPage locale={validLocale} page={page} />
+      <GroupCompaniesSection />
       <ClientLogosSection />
     </>
   );

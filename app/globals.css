@@ -4053,7 +4053,7 @@ button[aria-disabled='true'] {
   }
 
 .site-footer__columns {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(170px, 1.2fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(170px, 1.2fr);
     gap: 16px;
   }
 

@@ -43,6 +43,7 @@
     "companyAbout": "About Us",
     "companyProcess": "Execution Process",
     "companyContact": "Contact Us",
+    "group": "Group Companies",
     "contact": "Contact",
     "addressLabel": "Address",
     "phoneLabel": "Phone",
@@ -478,5 +479,28 @@
     "scopeTitle": "Scope included:",
     "scopeItems": "Engineering|Procurement|Execution|Internal & External Sandwich Panels",
     "cta": "View Full Case Study"
+  },
+  "groupCompanies": {
+    "eyebrow": "Group companies",
+    "title": "SIPANEL is part of an engineering and industrial group",
+    "description": "Together with its sister companies — from structural design and steel supply to architectural ceilings and smart technology — SIPANEL delivers an integrated chain for industrial and infrastructure projects.",
+    "companies": {
+      "fazasazeh": {
+        "name": "Fazasazeh Naghsh-e-Jahan",
+        "description": "Design, fabrication and installation of space-frame structures and long-span roofs."
+      },
+      "avizsazeh": {
+        "name": "AvizSazeh",
+        "description": "Engineered metal ceiling and architectural ceiling systems, from design to full installation."
+      },
+      "aisanaat": {
+        "name": "Fanasakht",
+        "description": "Technology and intelligent systems that solve real industrial and business problems."
+      },
+      "ahanassa": {
+        "name": "Ahan Asa",
+        "description": "Steel and iron products procurement and supply for industrial and building projects."
+      }
+    }
   }
 }
