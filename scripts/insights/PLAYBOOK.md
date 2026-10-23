@@ -110,9 +110,13 @@ the schema is enforced by `lib/insights/content-schema.ts` and `scripts/insights
 node scripts/insights/build-manifest.mjs
 node scripts/insights/validate.mjs <slug>      # strict gates for the new article + all others
 npm run typecheck
-npm test
-npm run build
+npm run test:faq-analytics
+npm run build          # parses every content file with the Zod schema; must finish with no errors
+git checkout -- next-env.d.ts 2>/dev/null   # build may rewrite it; never commit it
 ```
+
+(The full `npm test` suite starts dev servers and Playwright browsers and takes a long time; it is
+not needed for a content-only change. Run it only if you changed code, which this playbook never does.)
 
 - Fix every error and re-run. Warnings: fix unless there is a clear reason not to.
 
