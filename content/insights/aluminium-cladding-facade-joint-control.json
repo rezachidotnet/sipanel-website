@@ -1,0 +1,199 @@
+{
+  "slug": "aluminium-cladding-facade-joint-control",
+  "category": "cladding_facades",
+  "status": "published",
+  "publishedAt": "2026-05-28",
+  "updatedAt": "2026-10-23",
+  "faqIds": ["cladding-joint-procurement", "facade-quality-timing"],
+  "relatedProjects": ["erbil-eye-hospital-entrance-canopy", "parand-city-entrance"],
+  "relatedInsights": ["sandwich-panel-joint-leakage-risk"],
+  "relatedResources": ["aluminium-cladding-layout-checklist", "shop-drawing-review-guide"],
+  "trend": null,
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "کنترل درز نمای آلومینیومی در ساختمان‌های صنعتی",
+      "metaDescription": "کنترل درز نمای آلومینیومی: چرا کیفیت نما به ریتم درز، منطق اتصال، لبه‌ها و بازشوها وابسته است و سی‌پانل چگونه آن را پیش از ساخت کنترل می‌کند.",
+      "primaryKeyword": "کنترل درز نمای آلومینیومی",
+      "summary": "کیفیت نما به این بستگی دارد که ریتم درز، منطق اتصال، شرایط لبه و هماهنگی بازشوها به‌عنوان یک سیستم اجرایی بازبینی شوند، نه فقط یک انتخاب پرداخت سطح.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "وقتی درزهای نما به تفسیر کارگاه سپرده می‌شوند",
+        "body": "در پروژه‌های نمای آلومینیومی، اگر درزها به تفسیر کارگاه واگذار شوند، هم‌راستایی و کنترل اجرا از دست می‌رود. شبکه بصری نما باید با زیرسازی، نقاط اتصال، بازشوها، لبه‌ها و ابعاد متریال هماهنگ شود تا نتیجه نهایی همان چیزی باشد که در طرح دیده شده است.",
+        "points": [
+          "ریتم کنترل‌نشده درز، عیوب هم‌راستایی قابل مشاهده ایجاد می‌کند.",
+          "ابعاد متریال و منطق اتصال بر پرت و کیفیت نصب اثر می‌گذارند.",
+          "بازشوها و لبه‌ها پیش از ساخت به جزئیات جداگانه نیاز دارند."
+        ]
+      },
+      "cause": {
+        "title": "کنترل درز، هماهنگی بصری و فنی همزمان است",
+        "body": "ریسک نما زمانی افزایش می‌یابد که طرح معماری، مدول پانل، زیرسازی، روش اتصال و تلرانس کارگاهی با هم بازبینی نشوند. کنترل درز همزمان یک وظیفه بصری و یک وظیفه هماهنگی فنی است و تصمیم‌های آن مستقیماً به ابعاد سفارش و برنامه نصب منتقل می‌شود.",
+        "points": [
+          "تصمیم‌های مدول پانل بر برنامه‌ریزی متریال و ریتم نما اثر دارند.",
+          "نقاط اتصال باید با وضعیت زیرسازی و دسترسی نصب منطبق باشند.",
+          "لبه‌ها و بازشوها قابل‌مشاهده‌ترین نقاط کنترل کیفیت هستند."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام درز نما (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید ریتم درز، ناحیه اتصال، کنترل لبه بازشو و منطق مدول متریال را نشان دهد. دارایی فنی واقعی هنوز در انتظار تأیید است.",
+        "callouts": ["ریتم درز", "ناحیه اتصال", "کنترل لبه بازشو"]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای کنترل درز نما",
+        "steps": [
+          {"title": "تعریف شبکه نما", "description": "ریتم بصری، مدول پانل، بازشوها و خطوط لبه پیش از ساخت بازبینی می‌شوند."},
+          {"title": "هماهنگی منطق اتصال", "description": "زیرسازی، روش اتصال، ابعاد پانل و توالی نصب به هم متصل می‌شوند."},
+          {"title": "کنترل برنامه‌ریزی متریال", "description": "مقادیر، میزان پرت و اکسسوری‌های لازم پیش از خرید بررسی می‌شوند."}
+        ]
+      },
+      "faqs": [
+        {"question": "چرا کنترل درز نما پیش از خرید اهمیت دارد؟", "answer": "ریتم درز بر ابعاد پانل، هماهنگی زیرسازی، اکسسوری‌ها و کیفیت ظاهری اثر می‌گذارد. تغییرات دیرهنگام می‌تواند باعث دوباره‌کاری یا پرت متریال شود."},
+        {"question": "آیا کیفیت نما را فقط پس از نصب می‌توان سنجید؟", "answer": "بازرسی نهایی مهم است، اما بسیاری از ریسک‌های کیفیت پیش از نصب و زمانی ایجاد می‌شوند که شبکه، اتصال، لبه و بازشوها حل نشده‌اند."}
+      ],
+      "cta": {
+        "headline": "کنترل درز نما را پیش از ساخت بازبینی کنید",
+        "text": "نقشه‌ها یا محدوده پروژه را ارسال کنید تا شبکه نما، منطق اتصال و محدودیت‌های اجرا بازبینی شود."
+      }
+    },
+    "en": {
+      "title": "Aluminium Cladding Joint Control for Industrial Facades",
+      "metaDescription": "Why aluminium cladding quality depends on joint rhythm, fixing logic, edges, and openings, and how SIPANEL controls them before fabrication.",
+      "primaryKeyword": "aluminium cladding joint control",
+      "summary": "Facade quality depends on joint rhythm, fixing logic, edge conditions, and opening coordination being reviewed as an execution system, not only a finish choice.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "When facade joints are left to site interpretation",
+        "body": "Cladding projects can lose alignment and execution control when facade joints are left to site interpretation. The visual grid must be coordinated with substrate, fixing points, openings, edges, and material sizes so the finished facade matches what was designed.",
+        "points": [
+          "Uncontrolled joint rhythm can create visible alignment defects.",
+          "Material sizing and fixing logic affect waste and installation quality.",
+          "Openings and edge conditions need separate detailing before fabrication."
+        ]
+      },
+      "cause": {
+        "title": "Joint control is a visual and technical task at once",
+        "body": "Facade risk increases when architectural intent, panel module, substructure, fixing method, and site tolerance are not reviewed together. Joint control is both a visual and a technical coordination task, and its decisions flow directly into order dimensions and the installation plan.",
+        "points": [
+          "Panel module decisions affect material planning and facade rhythm.",
+          "Fixing points must match substrate condition and installation access.",
+          "Edges and openings define the most visible quality checkpoints."
+        ]
+      },
+      "visual": {
+        "title": "Facade joint diagram (pending verification)",
+        "description": "A verified facade diagram should show joint rhythm, fixing zone, opening edge control, and material module logic. The real technical proof asset is pending.",
+        "callouts": ["Joint rhythm", "Fixing zone", "Opening edge control"]
+      },
+      "execution": {
+        "title": "SIPANEL facade joint control logic",
+        "steps": [
+          {"title": "Define facade grid", "description": "Review visual rhythm, panel module, openings, and edge lines before fabrication."},
+          {"title": "Coordinate fixing logic", "description": "Connect substructure, fixing method, panel dimensions, and installation sequence."},
+          {"title": "Control material planning", "description": "Check quantities, waste exposure, and accessory requirements before procurement."}
+        ]
+      },
+      "faqs": [
+        {"question": "Why does cladding joint control matter before procurement?", "answer": "Joint rhythm affects panel dimensions, substructure coordination, accessories, and visible quality. Late changes can create rework or material waste."},
+        {"question": "Can facade quality be judged only after installation?", "answer": "Final inspection matters, but many quality risks are created before installation when grid, fixing, edge, and opening details are not resolved."}
+      ],
+      "cta": {
+        "headline": "Review facade joint control before fabrication",
+        "text": "Send project drawings or scope for a technical review of facade grid, fixing logic, and execution constraints."
+      }
+    },
+    "ar": {
+      "title": "ضبط فواصل الكسوة بالألمنيوم في الواجهات الصناعية",
+      "metaDescription": "لماذا تعتمد جودة الكسوة بالألمنيوم على إيقاع الفواصل ومنطق التثبيت والحواف والفتحات، وكيف تضبطها SIPANEL قبل التصنيع.",
+      "primaryKeyword": "ضبط فواصل الكسوة بالألمنيوم",
+      "summary": "تعتمد جودة الواجهة على مراجعة إيقاع الفواصل ومنطق التثبيت وظروف الحواف وتنسيق الفتحات كنظام تنفيذ، لا كخيار تشطيب فقط.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "عندما تُترك فواصل الواجهة لاجتهاد الموقع",
+        "body": "قد تفقد مشاريع الكسوة الاستقامة وضبط التنفيذ عندما تُترك الفواصل لاجتهاد الموقع. يجب تنسيق الشبكة البصرية للواجهة مع الهيكل الحامل ونقاط التثبيت والفتحات والحواف ومقاسات المواد حتى تطابق النتيجة النهائية التصميم.",
+        "points": [
+          "إيقاع الفواصل غير المضبوط يسبب عيوب استقامة ظاهرة.",
+          "مقاسات المواد ومنطق التثبيت تؤثر في الهدر وجودة التركيب.",
+          "الفتحات وظروف الحواف تحتاج تفاصيل مستقلة قبل التصنيع."
+        ]
+      },
+      "cause": {
+        "title": "ضبط الفواصل مهمة بصرية وفنية في آن واحد",
+        "body": "ترتفع مخاطر الواجهة عندما لا تُراجع النية المعمارية ووحدة اللوح والهيكل الفرعي وطريقة التثبيت وتفاوتات الموقع معاً. ضبط الفواصل مهمة تنسيق بصرية وفنية في الوقت نفسه، وتنتقل قراراتها مباشرة إلى مقاسات الطلب وخطة التركيب.",
+        "points": [
+          "قرارات وحدة اللوح تؤثر في تخطيط المواد وإيقاع الواجهة.",
+          "نقاط التثبيت يجب أن تطابق حالة الهيكل الحامل وإمكانية الوصول.",
+          "الحواف والفتحات هي أكثر نقاط ضبط الجودة ظهوراً."
+        ]
+      },
+      "visual": {
+        "title": "مخطط فواصل الواجهة (قيد التوثيق)",
+        "description": "يجب أن يوضح المخطط الموثق إيقاع الفواصل ومنطقة التثبيت وضبط حواف الفتحات ومنطق وحدة المواد. أصل الإثبات الفني الحقيقي قيد الإعداد.",
+        "callouts": ["إيقاع الفواصل", "منطقة التثبيت", "ضبط حواف الفتحات"]
+      },
+      "execution": {
+        "title": "منطق SIPANEL لضبط فواصل الواجهة",
+        "steps": [
+          {"title": "تحديد شبكة الواجهة", "description": "مراجعة الإيقاع البصري ووحدة اللوح والفتحات وخطوط الحواف قبل التصنيع."},
+          {"title": "تنسيق منطق التثبيت", "description": "ربط الهيكل الفرعي وطريقة التثبيت ومقاسات الألواح وتسلسل التركيب."},
+          {"title": "ضبط تخطيط المواد", "description": "فحص الكميات والهدر المتوقع ومتطلبات الملحقات قبل الشراء."}
+        ]
+      },
+      "faqs": [
+        {"question": "لماذا يهم ضبط فواصل الكسوة قبل الشراء؟", "answer": "يؤثر إيقاع الفواصل في مقاسات الألواح وتنسيق الهيكل الفرعي والملحقات والجودة الظاهرة. التغييرات المتأخرة قد تسبب إعادة عمل أو هدراً في المواد."},
+        {"question": "هل يمكن الحكم على جودة الواجهة بعد التركيب فقط؟", "answer": "الفحص النهائي مهم، لكن كثيراً من مخاطر الجودة تنشأ قبل التركيب عندما لا تُحل تفاصيل الشبكة والتثبيت والحواف والفتحات."}
+      ],
+      "cta": {
+        "headline": "راجع ضبط فواصل الواجهة قبل التصنيع",
+        "text": "أرسل مخططات المشروع أو نطاقه لمراجعة فنية لشبكة الواجهة ومنطق التثبيت وقيود التنفيذ."
+      }
+    },
+    "ru": {
+      "title": "Контроль стыков алюминиевой облицовки промышленных фасадов",
+      "metaDescription": "Почему качество алюминиевой облицовки зависит от ритма стыков, логики крепления, кромок и проёмов, и как SIPANEL контролирует их до изготовления.",
+      "primaryKeyword": "контроль стыков алюминиевой облицовки",
+      "summary": "Качество фасада зависит от того, проверены ли ритм стыков, логика крепления, кромки и проёмы как система выполнения, а не только как выбор отделки.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "Когда стыки фасада оставляют на усмотрение площадки",
+        "body": "Облицовочные проекты теряют геометрию и контроль выполнения, когда стыки фасада решаются на площадке. Визуальная сетка фасада должна быть согласована с основанием, точками крепления, проёмами, кромками и размерами материала, чтобы готовый фасад соответствовал проекту.",
+        "points": [
+          "Неконтролируемый ритм стыков создаёт заметные дефекты геометрии.",
+          "Размеры материала и логика крепления влияют на отходы и качество монтажа.",
+          "Проёмы и кромки требуют отдельной проработки до изготовления."
+        ]
+      },
+      "cause": {
+        "title": "Контроль стыков — одновременно визуальная и техническая задача",
+        "body": "Риски фасада растут, когда архитектурный замысел, модуль панели, подсистема, способ крепления и допуски площадки не проверяются вместе. Контроль стыков — это одновременно визуальная и техническая координация, и её решения напрямую переходят в размеры заказа и план монтажа.",
+        "points": [
+          "Решения по модулю панели влияют на планирование материалов и ритм фасада.",
+          "Точки крепления должны соответствовать состоянию основания и доступу для монтажа.",
+          "Кромки и проёмы — самые заметные контрольные точки качества."
+        ]
+      },
+      "visual": {
+        "title": "Схема стыков фасада (ожидает подтверждения)",
+        "description": "Проверенная схема должна показывать ритм стыков, зону крепления, контроль кромок проёмов и логику модуля материала. Реальный технический материал ожидает подтверждения.",
+        "callouts": ["Ритм стыков", "Зона крепления", "Контроль кромок проёмов"]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для контроля стыков фасада",
+        "steps": [
+          {"title": "Определение сетки фасада", "description": "До изготовления проверяются визуальный ритм, модуль панели, проёмы и линии кромок."},
+          {"title": "Согласование логики крепления", "description": "Связываются подсистема, способ крепления, размеры панелей и последовательность монтажа."},
+          {"title": "Контроль планирования материалов", "description": "До закупки проверяются объёмы, ожидаемые отходы и потребность в доборных элементах."}
+        ]
+      },
+      "faqs": [
+        {"question": "Почему контроль стыков облицовки важен до закупки?", "answer": "Ритм стыков влияет на размеры панелей, согласование подсистемы, доборные элементы и внешний вид. Поздние изменения приводят к переделкам или отходам материала."},
+        {"question": "Можно ли оценить качество фасада только после монтажа?", "answer": "Финальная приёмка важна, но многие риски качества возникают до монтажа, когда сетка, крепление, кромки и проёмы не проработаны."}
+      ],
+      "cta": {
+        "headline": "Проверьте стыки фасада до изготовления",
+        "text": "Отправьте чертежи или состав проекта для технической проверки сетки фасада, логики крепления и ограничений выполнения."
+      }
+    }
+  }
+}

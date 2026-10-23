@@ -136,6 +136,8 @@ export function buildArticleSchema(
     headline: string;
     description: string;
     url: string;
+    datePublished?: string;
+    dateModified?: string;
   }
 ) {
   return {
@@ -146,6 +148,8 @@ export function buildArticleSchema(
     description: input.description,
     url: withBaseUrl(input.url),
     inLanguage: getLanguageTag(locale),
+    ...(input.datePublished ? {datePublished: input.datePublished} : {}),
+    ...(input.dateModified ? {dateModified: input.dateModified} : {}),
     author: {
       '@type': 'Organization',
       '@id': withBaseUrl('/#organization'),

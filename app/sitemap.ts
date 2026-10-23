@@ -46,7 +46,6 @@ const routeMaps: LocalizedRouteMap[] = [
   projectsOverviewRoutes,
   rfqContactPage.route,
   engineeringInsightsPage.routes,
-  ...engineeringInsightArticles.map((article) => article.routes),
   engineeringResourceHubPage.routes,
   faqPageData.routes,
   aboutPageData.routes,
@@ -64,7 +63,7 @@ function alternatesFor(routes: LocalizedRouteMap) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routeMaps.flatMap((routes) =>
+  const pages: MetadataRoute.Sitemap = routeMaps.flatMap((routes) =>
     locales.map((locale) => ({
       url: withBaseUrl(routes[locale]),
       changeFrequency: locale === defaultLocale && normalizeCanonicalPath(routes[locale]) === '/' ? 'weekly' : 'monthly',
@@ -72,6 +71,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: alternatesFor(routes)
     }))
   );
+
+  const insightArticles: MetadataRoute.Sitemap = engineeringInsightArticles.flatMap((article) =>
+    locales.map((locale) => ({
+      url: withBaseUrl(article.routes[locale]),
+      lastModified: article.updatedAt,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      alternates: alternatesFor(article.routes)
+    }))
+  );
+
+  return [...pages, ...insightArticles];
 }
 
 export const dynamic = 'force-static';
