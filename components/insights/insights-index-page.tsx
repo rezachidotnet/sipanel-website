@@ -3,8 +3,8 @@
 import './insights.css';
 import {useMemo, useState} from 'react';
 import {Link, getDirection, type Locale} from '@/i18n/routing';
-import type {EngineeringInsightsPageData, InsightCategoryId} from '@/lib/insights/engineering-insights';
-import {getInsightCategoryLabel} from '@/lib/insights/engineering-insights';
+import type {EngineeringInsightsPageData} from '@/lib/insights/engineering-insights';
+import {getInsightCategoryLabel, type InsightCategoryId} from '@/lib/insights/systems';
 
 type Props = {
   locale: Locale;

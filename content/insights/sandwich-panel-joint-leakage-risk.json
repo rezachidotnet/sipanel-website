@@ -1,0 +1,199 @@
+{
+  "slug": "sandwich-panel-joint-leakage-risk",
+  "category": "panel_systems",
+  "status": "published",
+  "publishedAt": "2026-05-28",
+  "updatedAt": "2026-10-23",
+  "faqIds": ["panel-grade-leakage-risk", "joint-logic-review-timing"],
+  "relatedProjects": ["army-hospital", "mehrabad-aircraft-hangar", "tabas-railway-facility"],
+  "relatedInsights": ["standing-seam-roof-drainage-logic"],
+  "relatedResources": ["sandwich-panel-selection-guide", "roof-leakage-prevention-checklist"],
+  "trend": null,
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "نشتی درز ساندویچ پانل؛ چرا منطق درز ریسک را کنترل می‌کند",
+      "metaDescription": "نشتی درز ساندویچ پانل از کجا می‌آید؟ علت مهندسی، نقش فلاشینگ و پیچ و توالی نصب، و منطق کنترل سی‌پانل پیش از خرید متریال.",
+      "primaryKeyword": "نشتی درز ساندویچ پانل",
+      "summary": "ریسک نشتی در پروژه‌های ساندویچ پانل معمولاً با هندسه درز، هماهنگی اکسسوری‌ها و توالی نصب کنترل می‌شود، نه فقط با انتخاب نوع پانل. این بازبینی باید پیش از سفارش متریال انجام شود.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "نشتی از کجا شروع می‌شود؟",
+        "body": "در بسیاری از پروژه‌های صنعتی، پانل تنها آیتم عملکردی پوسته فرض می‌شود. در عمل، کنترل مسیر آب به این بستگی دارد که درزها، فلاشینگ‌ها، پیچ‌ها، بازشوها و محل‌های تغییر جهت پیش از شروع اجرا چگونه با هم هماهنگ شده‌اند. وقتی این هماهنگی به کارگاه سپرده شود، هر نصاب تفسیر خودش را از جزئیات دارد.",
+        "points": [
+          "نوع و ضخامت پانل، مسیر حل‌نشده آب در درز را برطرف نمی‌کند.",
+          "اکسسوری‌های ناهماهنگ در لبه‌ها و بازشوها نقطه نشت ایجاد می‌کنند.",
+          "توالی نصب تعیین می‌کند که هم‌پوشانی‌ها و خطوط آب‌بندی در کارگاه چگونه رفتار کنند."
+        ]
+      },
+      "cause": {
+        "title": "درز، مرز محصول نیست؛ بخشی از سیستم پوسته است",
+        "body": "ریسک نشتی زمانی بالا می‌رود که درز به‌عنوان مرز بین دو محصول دیده شود، نه بخشی از سیستم پوسته. بازبینی فنی باید چیدمان پانل، هندسه فلاشینگ، محل پیچ، تلرانس سازه و دسترسی کارگاهی را به هم وصل کند تا مسیر آب از بالاترین نقطه تا محل تخلیه کنترل‌شده باشد.",
+        "points": [
+          "هندسه درز تعیین می‌کند آب کجا وارد، زهکشی یا متوقف می‌شود.",
+          "محل پیچ و فلاشینگ باید با مدول پانل و وضعیت زیرسازی هماهنگ باشد.",
+          "بازشوها منطق لبه جداگانه می‌خواهند، چون مسیر عادی آب را قطع می‌کنند."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام مقطع درز ساندویچ پانل (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید درگیری پانل‌ها، برگشت فلاشینگ، خط پیچ و مسیر آب را نشان دهد. تا زمانی که دیاگرام واقعی بازبینی‌شده پیوست نشود، این بخش عمداً در وضعیت انتظار می‌ماند.",
+        "callouts": ["کنترل مسیر آب", "بازبینی خط پیچ", "منطق لبه بازشو"]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای کنترل نشتی درز",
+        "steps": [
+          {"title": "بازبینی چیدمان پانل", "description": "جهت مدول، محل بازشوها، شرایط لبه و طول‌های قابل نصب پیش از خرید متریال تأیید می‌شود."},
+          {"title": "هماهنگی اکسسوری‌ها", "description": "فلاشینگ، تریم، پیچ و محل درزگیر به‌عنوان بخشی از سیستم پوسته تعریف می‌شوند، نه اقلام جانبی."},
+          {"title": "کنترل توالی نصب", "description": "اجرای کارگاهی پیش از نصب پانل‌ها با منطق درز و محل‌های اتصال بازبینی‌شده هم‌راستا می‌شود."}
+        ]
+      },
+      "faqs": [
+        {"question": "آیا پانل با کیفیت بالاتر به‌تنهایی ریسک نشتی را از بین می‌برد؟", "answer": "خیر. مشخصات پانل کمک می‌کند، اما ریسک نشتی همچنان به جزئیات درز، پیوستگی فلاشینگ، نفوذهای سقف و کنترل نصب بستگی دارد."},
+        {"question": "منطق درز چه زمانی باید بازبینی شود؟", "answer": "پیش از سفارش متریال؛ چون کمبود اکسسوری و تداخل چیدمان بعد از خرید، هزینه و زمان بیشتری برای اصلاح می‌گیرد."}
+      ],
+      "cta": {
+        "headline": "منطق درز پانل را پیش از خرید بازبینی کنید",
+        "text": "محدوده پروژه را ارسال کنید تا تیم فنی چیدمان، اکسسوری‌ها و ریسک اجرا را بازبینی کند."
+      }
+    },
+    "en": {
+      "title": "Why Sandwich Panel Joint Logic Controls Leakage Risk",
+      "metaDescription": "Engineering explanation of sandwich panel joint leakage risk, the role of flashings, fasteners and installation sequence, and SIPANEL pre-procurement control logic.",
+      "primaryKeyword": "sandwich panel joint leakage risk",
+      "summary": "Panel leakage risk is usually controlled by joint geometry, accessory coordination, and installation sequence before material ordering, not by panel selection alone.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "Where leakage actually starts",
+        "body": "Industrial panel projects can treat the panel as the only performance item. In practice, water path control depends on how joints, trims, fasteners, openings, and transitions are coordinated before execution starts. When that coordination is left to site interpretation, every installer resolves the details differently.",
+        "points": [
+          "Panel type and thickness do not solve an unresolved joint path.",
+          "Uncoordinated accessories can create leakage points at edges and openings.",
+          "Installation sequence affects how overlaps and seal lines behave on site."
+        ]
+      },
+      "cause": {
+        "title": "A joint is part of the envelope system, not a product boundary",
+        "body": "Leakage risk increases when the joint is detailed as a product boundary instead of an envelope system. The technical review must connect panel layout, flashing geometry, fastener position, tolerance, and site access so the water path is controlled from the high point to the discharge point.",
+        "points": [
+          "Joint geometry defines where water can enter, drain, or be blocked.",
+          "Fastener and trim positions must respect the panel module and substrate condition.",
+          "Openings need a separate edge logic because they interrupt the normal water path."
+        ]
+      },
+      "visual": {
+        "title": "Panel joint section diagram (pending verification)",
+        "description": "A verified joint-section diagram should show panel engagement, flashing return, fastening line, and water path. The asset is intentionally pending until a real reviewed diagram is attached.",
+        "callouts": ["Water path control", "Fastener line review", "Opening edge logic"]
+      },
+      "execution": {
+        "title": "SIPANEL logic for joint leakage control",
+        "steps": [
+          {"title": "Review panel layout", "description": "Confirm module direction, opening positions, edge conditions, and installable lengths before procurement."},
+          {"title": "Coordinate accessories", "description": "Define trims, flashings, fasteners, and sealant interfaces as part of the envelope system, not as afterthought items."},
+          {"title": "Control installation sequence", "description": "Align site execution with the reviewed joint and transition logic before panels are fixed."}
+        ]
+      },
+      "faqs": [
+        {"question": "Can a higher-grade panel remove leakage risk by itself?", "answer": "No. Panel specification helps, but leakage risk still depends on joint detailing, flashing continuity, penetrations, and installation control."},
+        {"question": "When should joint logic be reviewed?", "answer": "Before material ordering, because accessory gaps and layout conflicts become more expensive and slower to fix after procurement."}
+      ],
+      "cta": {
+        "headline": "Review panel joint logic before procurement",
+        "text": "Send the project scope for an engineering review focused on layout, accessories, and execution risk."
+      }
+    },
+    "ar": {
+      "title": "لماذا يتحكم منطق وصلات ألواح الساندويتش في مخاطر التسرب",
+      "metaDescription": "شرح هندسي لمخاطر التسرب في وصلات ألواح الساندويتش ودور الفلاشينغ والمثبتات وتسلسل التركيب ومنطق SIPANEL قبل الشراء.",
+      "primaryKeyword": "تسرب وصلات ألواح الساندويتش",
+      "summary": "تُضبط مخاطر التسرب في مشاريع ألواح الساندويتش عادةً عبر هندسة الوصلة وتنسيق الملحقات وتسلسل التركيب قبل طلب المواد، وليس باختيار نوع اللوح وحده.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "من أين يبدأ التسرب فعلاً؟",
+        "body": "تتعامل كثير من المشاريع الصناعية مع اللوح كعنصر الأداء الوحيد في الغلاف. لكن ضبط مسار المياه يعتمد عملياً على تنسيق الوصلات والحواف والمثبتات والفتحات ونقاط الانتقال قبل بدء التنفيذ. وعندما يُترك هذا التنسيق لاجتهاد الموقع، يفسّر كل فريق تركيب التفاصيل بطريقته.",
+        "points": [
+          "نوع اللوح وسماكته لا يعالجان مسار مياه غير محلول في الوصلة.",
+          "الملحقات غير المنسقة تخلق نقاط تسرب عند الحواف والفتحات.",
+          "تسلسل التركيب يحدد سلوك التراكبات وخطوط الإحكام في الموقع."
+        ]
+      },
+      "cause": {
+        "title": "الوصلة جزء من نظام الغلاف وليست حدّاً بين منتجين",
+        "body": "ترتفع مخاطر التسرب عندما تُفصّل الوصلة كحدّ بين منتجين بدلاً من كونها جزءاً من نظام الغلاف. يجب أن تربط المراجعة الفنية بين توزيع الألواح وهندسة الفلاشينغ وموقع المثبتات والتفاوتات وإمكانية الوصول في الموقع، بحيث يُضبط مسار المياه من أعلى نقطة حتى نقطة التصريف.",
+        "points": [
+          "هندسة الوصلة تحدد أين يمكن للمياه أن تدخل أو تُصرَّف أو تُحجب.",
+          "مواقع المثبتات والحواف يجب أن تحترم وحدة اللوح وحالة الهيكل الحامل.",
+          "الفتحات تحتاج منطق حواف مستقلاً لأنها تقطع مسار المياه الطبيعي."
+        ]
+      },
+      "visual": {
+        "title": "مخطط مقطع وصلة الألواح (قيد التوثيق)",
+        "description": "يجب أن يوضح المخطط الموثق تعشيق الألواح وارتداد الفلاشينغ وخط التثبيت ومسار المياه. يبقى هذا الأصل معلقاً عمداً حتى يُرفق مخطط حقيقي تمت مراجعته.",
+        "callouts": ["ضبط مسار المياه", "مراجعة خط التثبيت", "منطق حواف الفتحات"]
+      },
+      "execution": {
+        "title": "منطق SIPANEL لضبط تسرب الوصلات",
+        "steps": [
+          {"title": "مراجعة توزيع الألواح", "description": "تأكيد اتجاه الوحدات ومواقع الفتحات وظروف الحواف والأطوال القابلة للتركيب قبل الشراء."},
+          {"title": "تنسيق الملحقات", "description": "تعريف الحواف والفلاشينغ والمثبتات وواجهات المانع كجزء من نظام الغلاف، لا كبنود ثانوية."},
+          {"title": "ضبط تسلسل التركيب", "description": "مواءمة التنفيذ في الموقع مع منطق الوصلات والانتقالات المراجع قبل تثبيت الألواح."}
+        ]
+      },
+      "faqs": [
+        {"question": "هل يزيل لوح بمواصفات أعلى مخاطر التسرب وحده؟", "answer": "لا. المواصفات تساعد، لكن مخاطر التسرب تبقى مرتبطة بتفاصيل الوصلات واستمرارية الفلاشينغ والاختراقات وضبط التركيب."},
+        {"question": "متى يجب مراجعة منطق الوصلات؟", "answer": "قبل طلب المواد، لأن نقص الملحقات وتعارضات التوزيع تصبح أعلى كلفة وأبطأ في المعالجة بعد الشراء."}
+      ],
+      "cta": {
+        "headline": "راجع منطق وصلات الألواح قبل الشراء",
+        "text": "أرسل نطاق المشروع لمراجعة هندسية تركز على التوزيع والملحقات ومخاطر التنفيذ."
+      }
+    },
+    "ru": {
+      "title": "Почему логика стыков сэндвич-панелей определяет риск протечек",
+      "metaDescription": "Инженерный разбор риска протечек в стыках сэндвич-панелей: роль нащельников, крепежа и последовательности монтажа, логика контроля SIPANEL до закупки.",
+      "primaryKeyword": "протечки в стыках сэндвич-панелей",
+      "summary": "Риск протечек в проектах из сэндвич-панелей обычно контролируется геометрией стыка, согласованием доборных элементов и последовательностью монтажа ещё до заказа материалов, а не только выбором панели.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "Где на самом деле начинается протечка",
+        "body": "В промышленных проектах панель часто считают единственным элементом, отвечающим за работу оболочки. На практике путь воды зависит от того, как стыки, доборные элементы, крепёж, проёмы и примыкания согласованы до начала работ. Если эти решения оставить на площадку, каждый монтажник интерпретирует узлы по-своему.",
+        "points": [
+          "Тип и толщина панели не решают нерешённый путь воды в стыке.",
+          "Несогласованные доборные элементы создают точки протечки на кромках и проёмах.",
+          "Последовательность монтажа влияет на работу нахлёстов и линий герметизации."
+        ]
+      },
+      "cause": {
+        "title": "Стык — часть системы оболочки, а не граница изделия",
+        "body": "Риск протечек растёт, когда стык прорабатывается как граница между изделиями, а не как часть системы оболочки. Техническая проверка должна связать раскладку панелей, геометрию нащельников, положение крепежа, допуски и доступ на площадке, чтобы путь воды был под контролем от верхней точки до точки отвода.",
+        "points": [
+          "Геометрия стыка определяет, где вода может проникнуть, стечь или быть остановлена.",
+          "Положение крепежа и доборов должно учитывать модуль панели и состояние основания.",
+          "Проёмам нужна отдельная логика кромок, так как они прерывают нормальный путь воды."
+        ]
+      },
+      "visual": {
+        "title": "Схема сечения стыка панелей (ожидает подтверждения)",
+        "description": "Проверенная схема должна показывать зацепление панелей, отгиб нащельника, линию крепежа и путь воды. Материал намеренно остаётся в статусе ожидания до прикрепления реальной проверенной схемы.",
+        "callouts": ["Контроль пути воды", "Проверка линии крепежа", "Логика кромок проёмов"]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для контроля протечек в стыках",
+        "steps": [
+          {"title": "Проверка раскладки панелей", "description": "До закупки подтверждаются направление модуля, положение проёмов, условия кромок и монтажные длины."},
+          {"title": "Согласование доборных элементов", "description": "Нащельники, крепёж и зоны герметика определяются как часть системы оболочки, а не как второстепенные позиции."},
+          {"title": "Контроль последовательности монтажа", "description": "Работы на площадке выравниваются с проверенной логикой стыков и примыканий до фиксации панелей."}
+        ]
+      },
+      "faqs": [
+        {"question": "Может ли более качественная панель сама устранить риск протечек?", "answer": "Нет. Характеристики панели помогают, но риск протечек по-прежнему зависит от узлов стыков, непрерывности нащельников, проходок и контроля монтажа."},
+        {"question": "Когда нужно проверять логику стыков?", "answer": "До заказа материалов: нехватка доборных элементов и конфликты раскладки после закупки исправляются дороже и дольше."}
+      ],
+      "cta": {
+        "headline": "Проверьте логику стыков до закупки",
+        "text": "Отправьте состав проекта для инженерной проверки раскладки, доборных элементов и рисков выполнения."
+      }
+    }
+  }
+}

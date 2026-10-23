@@ -156,7 +156,8 @@ for (const [label, source] of [
 
 assertIncludes(contactSource, "'rfq-project-info'", 'contact stable FAQ IDs');
 assertIncludes(resourcesSource, "'resource-panel-selection-start'", 'resource stable FAQ IDs');
-assertIncludes(insightsSource, "'panel-grade-leakage-risk'", 'insight stable FAQ IDs');
+assertIncludes(insightsSource, 'article.faqIds', 'insight FAQ IDs come from content data');
+assertIncludes(read('content/insights/sandwich-panel-joint-leakage-risk.json'), '"panel-grade-leakage-risk"', 'insight stable FAQ IDs');
 assertIncludes(systemsSource, "'systems-selection-fit'", 'systems stable FAQ IDs');
 assertIncludes(serviceSource, "'panel-selection-method'", 'service stable FAQ suffixes');
 assertIncludes(seoSource, "'review-scope'", 'SEO stable FAQ suffixes');

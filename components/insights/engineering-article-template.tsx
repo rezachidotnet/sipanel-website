@@ -3,7 +3,7 @@ import {Link, getDirection, getLocalizedPath, type Locale} from '@/i18n/routing'
 import {FaqExpandDetails} from '@/components/analytics/faq-expand-details';
 import {getRequiredFaqAnalyticsId, normalizeFaqAnalyticsId} from '@/lib/analytics/faq';
 import type {EngineeringInsightArticle} from '@/lib/insights/engineering-insights';
-import {getInsightCategoryLabel} from '@/lib/insights/engineering-insights';
+import {getInsightCategoryLabel} from '@/lib/insights/systems';
 import {
   buildArticleSchema,
   buildBreadcrumbListSchema,
@@ -15,12 +15,6 @@ import {
 type Props = {
   locale: Locale;
   article: EngineeringInsightArticle;
-};
-
-const insightFaqIdSuffixes: Record<string, string[]> = {
-  'sandwich-panel-joint-leakage-risk': ['panel-grade-leakage-risk', 'joint-logic-review-timing'],
-  'standing-seam-roof-drainage-logic': ['seam-quality-boundary', 'pre-execution-proof'],
-  'aluminium-cladding-facade-joint-control': ['cladding-joint-procurement', 'facade-quality-timing']
 };
 
 const labelsByLocale = {
@@ -46,12 +40,7 @@ const labelsByLocale = {
     relatedServices: 'خدمات و بینش‌های مرتبط',
     insightsIndexTitle: 'فهرست بینش‌ها',
     insightsIndexDescription: 'بازگشت به همه بینش‌های مهندسی.',
-    cta: 'اقدام',
-    categories: {
-      panel_systems: 'سیستم‌های پانلی',
-      roofing_waterproofing: 'سقف و آب‌بندی',
-      cladding_facades: 'نما و کلادینگ'
-    }
+    cta: 'اقدام'
   },
   en: {
     home: 'Home',
@@ -75,12 +64,7 @@ const labelsByLocale = {
     relatedServices: 'Related Services and Insights',
     insightsIndexTitle: 'Insights Index',
     insightsIndexDescription: 'Return to all engineering insights.',
-    cta: 'CTA',
-    categories: {
-      panel_systems: 'Panel Systems',
-      roofing_waterproofing: 'Roofing and Waterproofing',
-      cladding_facades: 'Cladding and Facades'
-    }
+    cta: 'CTA'
   },
   ar: {
     home: 'الرئيسية',
@@ -104,12 +88,7 @@ const labelsByLocale = {
     relatedServices: 'خدمات ورؤى مرتبطة',
     insightsIndexTitle: 'فهرس الرؤى',
     insightsIndexDescription: 'العودة إلى جميع الرؤى الهندسية.',
-    cta: 'الإجراء',
-    categories: {
-      panel_systems: 'أنظمة الألواح',
-      roofing_waterproofing: 'الأسقف والعزل المائي',
-      cladding_facades: 'الواجهات والكلادينج'
-    }
+    cta: 'الإجراء'
   },
   ru: {
     home: 'Главная',
@@ -133,12 +112,7 @@ const labelsByLocale = {
     relatedServices: 'Связанные услуги и материалы',
     insightsIndexTitle: 'Индекс материалов',
     insightsIndexDescription: 'Вернуться ко всем инженерным материалам.',
-    cta: 'Действие',
-    categories: {
-      panel_systems: 'Панельные системы',
-      roofing_waterproofing: 'Кровля и гидроизоляция',
-      cladding_facades: 'Фасады и облицовка'
-    }
+    cta: 'Действие'
   }
 } satisfies Record<Locale, {
   home: string;
@@ -163,7 +137,6 @@ const labelsByLocale = {
   insightsIndexTitle: string;
   insightsIndexDescription: string;
   cta: string;
-  categories: Record<string, string>;
 }>;
 
 function SchemaPlaceholder({schema}: {schema: unknown}) {
@@ -220,7 +193,7 @@ function LinkCard({link}: {link: {title: string; href: string; description?: str
 export function EngineeringArticleTemplate({locale, article}: Props) {
   const dir = getDirection(locale);
   const labels = labelsByLocale[locale];
-  const categoryLabel = labels.categories[article.category] ?? getInsightCategoryLabel(article.category);
+  const categoryLabel = getInsightCategoryLabel(article.category, locale);
 
   return (
     <article className="insight-article-page" data-insight-article={article.slug} dir={dir}>
@@ -231,7 +204,9 @@ export function EngineeringArticleTemplate({locale, article}: Props) {
         schema={buildArticleSchema(locale, `${article.routes[locale]}#article`, {
           headline: article.title,
           description: article.metaDescription,
-          url: article.routes[locale]
+          url: article.routes[locale],
+          datePublished: article.publishedAt,
+          dateModified: article.updatedAt
         })}
       />
       <SchemaPlaceholder schema={buildBreadcrumbSchema(locale, article)} />
@@ -341,7 +316,7 @@ export function EngineeringArticleTemplate({locale, article}: Props) {
             {article.faqs.map((faq, index) => (
               <FaqExpandDetails
                 analytics={{
-                  faqId: `${article.slug}-${getRequiredFaqAnalyticsId(insightFaqIdSuffixes[article.slug] ?? [], index, article.slug)}`,
+                  faqId: `${article.slug}-${getRequiredFaqAnalyticsId(article.faqIds, index, article.slug)}`,
                   faqQuestion: faq.question,
                   faqCategory: normalizeFaqAnalyticsId(article.category),
                   faqPosition: index + 1,

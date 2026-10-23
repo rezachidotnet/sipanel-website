@@ -1,0 +1,199 @@
+{
+  "slug": "standing-seam-roof-drainage-logic",
+  "category": "roofing_waterproofing",
+  "status": "published",
+  "publishedAt": "2026-05-28",
+  "updatedAt": "2026-10-23",
+  "faqIds": ["seam-quality-boundary", "pre-execution-proof"],
+  "relatedProjects": ["megaparsmall-atrium"],
+  "relatedInsights": ["sandwich-panel-joint-leakage-risk"],
+  "relatedResources": ["standing-seam-roof-detail-notes", "roof-leakage-prevention-checklist"],
+  "trend": null,
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "منطق زهکشی سقف استندینگ سیم پیش از اجرا",
+      "metaDescription": "زهکشی سقف استندینگ سیم: چرا عملکرد سقف به شیب، مسیر زهکشی، پیوستگی درز، ناودان و نفوذها وابسته است و سی‌پانل چگونه آن را پیش از اجرا کنترل می‌کند.",
+      "primaryKeyword": "زهکشی سقف استندینگ سیم",
+      "summary": "عملکرد سقف استندینگ سیم به این وابسته است که شیب، مسیر زهکشی، پیوستگی درز، ظرفیت ناودان، نفوذها و لبه‌ها پیش از شروع نصب حل شده باشند.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "وقتی زهکشی دیر بازبینی می‌شود",
+        "body": "سقف استندینگ سیم ممکن است با درزهای سالم هم در بهره‌برداری دچار مشکل شود، اگر رفتار زهکشی دیر بررسی شده باشد. سطح سقف، خط ناودان، نفوذها و جزئیات لبه باید مانند یک مسیر آب واحد و کنترل‌شده کار کنند؛ در غیر این صورت آب در نقاط ضعیف جمع می‌شود.",
+        "points": [
+          "نواحی کم‌شیب در صورت ناهماهنگی زهکشی می‌توانند آب را نگه دارند.",
+          "نفوذها پیوستگی درز را قطع می‌کنند و منطق فلاشینگ ویژه می‌خواهند.",
+          "ناودان‌ها و لبه‌ها باید با هندسه واقعی سقف منطبق باشند."
+        ]
+      },
+      "cause": {
+        "title": "سقف یک مسیر آب واحد است، نه مجموعه‌ای از قطعات",
+        "body": "ریسک آب‌بندی زمانی ایجاد می‌شود که سقف به‌صورت قطعات جدا از هم جزئیات‌سازی شود. رفتار زهکشی باید از بالاترین نقطه تا محل تخلیه بررسی شود، شامل درزها، هم‌پوشانی‌ها، نفوذها، ناودان‌ها و مسیر دسترسی نگهداری، به‌ویژه برای شرایط باد و پس‌زدگی آب.",
+        "points": [
+          "شیب، سرعت جریان و مدت ماندگاری آب روی سطح را کنترل می‌کند.",
+          "پیوستگی درز و فلاشینگ تعیین می‌کند آب در باد یا پس‌زدگی کجا نفوذ کند.",
+          "توالی نصب مشخص می‌کند جزئیات در دسترس و قابل کنترل باقی بمانند یا نه."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام زهکشی سقف (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید جهت شیب، پیوستگی درز، جمع‌آوری ناودان، فلاشینگ نفوذها و منطق تخلیه را نشان دهد. دارایی فنی واقعی هنوز در انتظار تأیید است.",
+        "callouts": ["جهت شیب", "فلاشینگ نفوذها", "منطق تخلیه ناودان"]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای زهکشی سقف",
+        "steps": [
+          {"title": "ترسیم مسیر زهکشی", "description": "شیب، حرکت آب، محل ناودان و لبه‌های سقف پیش از تأیید نقشه کارگاهی بازبینی می‌شود."},
+          {"title": "حل نقاط قطع پیوستگی", "description": "نفوذها، دیوارک‌ها، هم‌پوشانی‌ها، فلاشینگ‌ها و مسیر دسترسی سرویس پیش از شروع کار سقف هماهنگ می‌شوند."},
+          {"title": "کنترل نقاط بازرسی اجرا", "description": "برای پیوستگی درز، بستن لبه‌ها، مسیر زهکشی و بازبینی نهایی نقاط کنترل تعریف می‌شود."}
+        ]
+      },
+      "faqs": [
+        {"question": "آیا عملکرد سقف استندینگ سیم فقط به کیفیت درز بستگی دارد؟", "answer": "خیر. کیفیت درز مهم است، اما مسیر زهکشی، شیب، نفوذها، ناودان‌ها و توالی نصب هم ریسک آب‌بندی را کنترل می‌کنند."},
+        {"question": "پیش از اجرا چه مدارکی باید آماده باشد؟", "answer": "منطق زهکشی بازبینی‌شده، جزئیات نفوذها، هماهنگی لبه و ناودان و نقاط کنترل نصب. اگر دیاگرام‌ها آماده نیستند، باید با وضعیت در انتظار علامت‌گذاری شوند."}
+      ],
+      "cta": {
+        "headline": "منطق زهکشی سقف را پیش از اجرا بررسی کنید",
+        "text": "هندسه سقف، نفوذها و مرحله پروژه را ارسال کنید تا تیم فنی ریسک اجرا را بازبینی کند."
+      }
+    },
+    "en": {
+      "title": "Standing Seam Roof Drainage Logic Before Execution",
+      "metaDescription": "Why standing seam roof performance depends on slope, drainage path, seam continuity, gutters, and penetrations, and how SIPANEL controls them before execution.",
+      "primaryKeyword": "standing seam roof drainage logic",
+      "summary": "Roof performance depends on slope, drainage path, seam continuity, gutter capacity, penetrations, and edge transitions being resolved before installation begins.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "When drainage is reviewed too late",
+        "body": "A standing seam roof can fail operationally even with sound seams when drainage behavior is reviewed too late. The roof surface, gutter line, penetrations, and edge details must work as one controlled water path; otherwise water collects at the weakest points.",
+        "points": [
+          "Low-slope areas can hold water when drainage is not coordinated.",
+          "Penetrations interrupt seam continuity and require specific flashing logic.",
+          "Gutters and edge transitions must match the actual roof geometry."
+        ]
+      },
+      "cause": {
+        "title": "A roof is one water path, not a set of parts",
+        "body": "Waterproofing risk is created when the roof is detailed as isolated parts. Drainage behavior must be checked from high point to discharge point, including seams, laps, penetrations, gutters, and maintenance access, with particular attention to wind-driven rain and backflow conditions.",
+        "points": [
+          "Slope controls flow speed and standing-water exposure.",
+          "Seam and flashing continuity controls where water can migrate under wind or backflow conditions.",
+          "Installation sequence controls whether details remain accessible and verifiable."
+        ]
+      },
+      "visual": {
+        "title": "Roof drainage diagram (pending verification)",
+        "description": "A verified drainage diagram should identify slope direction, seam continuity, gutter collection, penetration flashing, and discharge logic. The technical proof asset is pending.",
+        "callouts": ["Slope direction", "Penetration flashing", "Gutter discharge logic"]
+      },
+      "execution": {
+        "title": "SIPANEL roof drainage logic",
+        "steps": [
+          {"title": "Map the drainage path", "description": "Review slope, water movement, gutter position, and roof edges before shop drawing approval."},
+          {"title": "Resolve interruptions", "description": "Coordinate penetrations, upstands, overlaps, flashings, and service access before roof work starts."},
+          {"title": "Verify execution checkpoints", "description": "Use installation checkpoints for seam continuity, edge closure, drainage path, and final review."}
+        ]
+      },
+      "faqs": [
+        {"question": "Is standing seam roof performance only about seam quality?", "answer": "No. Seam quality is important, but drainage path, slope, penetrations, gutters, and installation sequence also control waterproofing risk."},
+        {"question": "What proof should be available before execution?", "answer": "Reviewed drainage logic, penetration details, edge and gutter coordination, and installation checkpoints. If diagrams are not available, they should remain marked pending."}
+      ],
+      "cta": {
+        "headline": "Check roof drainage logic before site work",
+        "text": "Share roof geometry, penetrations, and project stage so the technical team can review execution risk."
+      }
+    },
+    "ar": {
+      "title": "منطق تصريف سقف ستاندينغ سيم قبل التنفيذ",
+      "metaDescription": "لماذا يعتمد أداء سقف ستاندينغ سيم على الميل ومسار التصريف واستمرارية الوصلات والمزاريب والاختراقات، وكيف تضبطها SIPANEL قبل التنفيذ.",
+      "primaryKeyword": "تصريف سقف ستاندينغ سيم",
+      "summary": "يعتمد أداء السقف على حل الميل ومسار التصريف واستمرارية الوصلات وسعة المزاريب والاختراقات والحواف قبل بدء التركيب.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "عندما تتأخر مراجعة التصريف",
+        "body": "قد يتعثر سقف ستاندينغ سيم تشغيلياً حتى مع وصلات سليمة إذا رُوجع سلوك التصريف متأخراً. يجب أن يعمل سطح السقف وخط المزاريب والاختراقات وتفاصيل الحواف كمسار مياه واحد مضبوط، وإلا تتجمع المياه في أضعف النقاط.",
+        "points": [
+          "المناطق قليلة الميل قد تحتجز المياه إذا لم يُنسق التصريف.",
+          "الاختراقات تقطع استمرارية الوصلات وتحتاج منطق فلاشينغ خاصاً.",
+          "المزاريب والحواف يجب أن تطابق هندسة السقف الفعلية."
+        ]
+      },
+      "cause": {
+        "title": "السقف مسار مياه واحد وليس مجموعة أجزاء",
+        "body": "تنشأ مخاطر العزل المائي عندما يُفصّل السقف كأجزاء منفصلة. يجب فحص سلوك التصريف من أعلى نقطة حتى نقطة التصريف، بما في ذلك الوصلات والتراكبات والاختراقات والمزاريب ومسارات الصيانة، مع انتباه خاص للأمطار المدفوعة بالرياح وارتداد المياه.",
+        "points": [
+          "الميل يتحكم في سرعة الجريان ومدة بقاء المياه على السطح.",
+          "استمرارية الوصلات والفلاشينغ تحدد أين يمكن أن تتسرب المياه تحت الرياح أو الارتداد.",
+          "تسلسل التركيب يحدد ما إذا بقيت التفاصيل قابلة للوصول والتحقق."
+        ]
+      },
+      "visual": {
+        "title": "مخطط تصريف السقف (قيد التوثيق)",
+        "description": "يجب أن يحدد المخطط الموثق اتجاه الميل واستمرارية الوصلات وتجميع المزاريب وفلاشينغ الاختراقات ومنطق التصريف. أصل الإثبات الفني قيد الإعداد.",
+        "callouts": ["اتجاه الميل", "فلاشينغ الاختراقات", "منطق تصريف المزاريب"]
+      },
+      "execution": {
+        "title": "منطق SIPANEL لتصريف السقف",
+        "steps": [
+          {"title": "رسم مسار التصريف", "description": "مراجعة الميل وحركة المياه وموقع المزاريب وحواف السقف قبل اعتماد المخططات التنفيذية."},
+          {"title": "حل نقاط الانقطاع", "description": "تنسيق الاختراقات والجدران القائمة والتراكبات والفلاشينغ ومسارات الخدمة قبل بدء أعمال السقف."},
+          {"title": "التحقق من نقاط التفتيش", "description": "اعتماد نقاط تفتيش لاستمرارية الوصلات وإغلاق الحواف ومسار التصريف والمراجعة النهائية."}
+        ]
+      },
+      "faqs": [
+        {"question": "هل يعتمد أداء سقف ستاندينغ سيم على جودة الوصلات فقط؟", "answer": "لا. جودة الوصلات مهمة، لكن مسار التصريف والميل والاختراقات والمزاريب وتسلسل التركيب تتحكم أيضاً في مخاطر العزل المائي."},
+        {"question": "ما الإثباتات المطلوبة قبل التنفيذ؟", "answer": "منطق تصريف مراجع وتفاصيل الاختراقات وتنسيق الحواف والمزاريب ونقاط تفتيش التركيب. وإذا لم تتوفر المخططات فيجب أن تبقى معلّمة كقيد الإعداد."}
+      ],
+      "cta": {
+        "headline": "افحص منطق تصريف السقف قبل أعمال الموقع",
+        "text": "شارك هندسة السقف والاختراقات ومرحلة المشروع ليراجع الفريق الفني مخاطر التنفيذ."
+      }
+    },
+    "ru": {
+      "title": "Логика водоотвода фальцевой кровли до начала монтажа",
+      "metaDescription": "Почему работа фальцевой кровли зависит от уклона, пути водоотвода, непрерывности фальца, желобов и проходок, и как SIPANEL контролирует их до монтажа.",
+      "primaryKeyword": "водоотвод фальцевой кровли",
+      "summary": "Работа кровли зависит от того, решены ли уклон, путь водоотвода, непрерывность фальца, пропускная способность желобов, проходки и примыкания до начала монтажа.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "Когда водоотвод проверяют слишком поздно",
+        "body": "Фальцевая кровля может давать сбои в эксплуатации даже при качественных фальцах, если водоотвод проверен слишком поздно. Поверхность кровли, линия желобов, проходки и узлы кромок должны работать как единый контролируемый путь воды; иначе вода скапливается в самых слабых местах.",
+        "points": [
+          "Участки с малым уклоном могут удерживать воду без согласованного водоотвода.",
+          "Проходки прерывают непрерывность фальца и требуют особой логики нащельников.",
+          "Желоба и примыкания должны соответствовать фактической геометрии кровли."
+        ]
+      },
+      "cause": {
+        "title": "Кровля — единый путь воды, а не набор деталей",
+        "body": "Риск протечек возникает, когда кровлю прорабатывают как отдельные элементы. Водоотвод нужно проверять от верхней точки до точки сброса, включая фальцы, нахлёсты, проходки, желоба и пути обслуживания, с особым вниманием к косому дождю и обратному подпору воды.",
+        "points": [
+          "Уклон определяет скорость стока и время застоя воды.",
+          "Непрерывность фальца и нащельников определяет, куда вода проникнет при ветре или подпоре.",
+          "Последовательность монтажа определяет, останутся ли узлы доступными для проверки."
+        ]
+      },
+      "visual": {
+        "title": "Схема водоотвода кровли (ожидает подтверждения)",
+        "description": "Проверенная схема должна показывать направление уклона, непрерывность фальца, сбор воды желобами, обработку проходок и логику сброса. Технический материал ожидает подтверждения.",
+        "callouts": ["Направление уклона", "Обработка проходок", "Логика сброса из желобов"]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для водоотвода кровли",
+        "steps": [
+          {"title": "Построение пути водоотвода", "description": "До утверждения рабочих чертежей проверяются уклон, движение воды, положение желобов и кромки кровли."},
+          {"title": "Решение мест прерывания", "description": "До начала кровельных работ согласуются проходки, парапеты, нахлёсты, нащельники и пути обслуживания."},
+          {"title": "Контрольные точки монтажа", "description": "Вводятся контрольные точки по непрерывности фальца, закрытию кромок, пути водоотвода и финальной проверке."}
+        ]
+      },
+      "faqs": [
+        {"question": "Зависит ли работа фальцевой кровли только от качества фальца?", "answer": "Нет. Качество фальца важно, но путь водоотвода, уклон, проходки, желоба и последовательность монтажа тоже определяют риск протечек."},
+        {"question": "Какие подтверждения нужны до начала работ?", "answer": "Проверенная логика водоотвода, узлы проходок, согласование кромок и желобов и контрольные точки монтажа. Если схем нет, они должны оставаться в статусе ожидания."}
+      ],
+      "cta": {
+        "headline": "Проверьте водоотвод кровли до начала работ",
+        "text": "Отправьте геометрию кровли, проходки и стадию проекта, чтобы технические специалисты оценили риски выполнения."
+      }
+    }
+  }
+}
