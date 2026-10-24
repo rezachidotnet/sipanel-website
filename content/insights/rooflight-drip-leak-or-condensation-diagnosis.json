@@ -1,0 +1,253 @@
+{
+  "slug": "rooflight-drip-leak-or-condensation-diagnosis",
+  "category": "daylighting_roofing",
+  "status": "published",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "faqIds": [
+    "leak-or-condensation-test",
+    "condensation-without-rain",
+    "silicone-repair-limits",
+    "multiwall-flute-moisture",
+    "single-vs-multiwall-condensation"
+  ],
+  "relatedProjects": [],
+  "relatedInsights": ["standing-seam-roof-drainage-logic", "sandwich-panel-joint-leakage-risk"],
+  "relatedResources": ["roof-leakage-prevention-checklist"],
+  "trend": {
+    "topic": "First autumn rain and snow of 1405 (Aban 1) and drips under industrial rooflights: leak or condensation?",
+    "rationale": "On 1 Aban 1405 (23 October 2026) rainfall began across many provinces and the first snow reached Tehran's heights and Kerman, while seasonal outlooks discuss an above-normal autumn. The first cold, wet days are exactly when owners of sheds, warehouses, halls and atria first notice water under rooflights and default to re-sealing. Separating rain leakage from interior condensation is the decision they face this week, and no existing SIPANEL article covers it.",
+    "observedAt": "2026-10-24",
+    "sources": [
+      "https://www.mehrnews.com/news/6986873",
+      "https://www.tabnak.ir/fa/news/1400063",
+      "https://www.entekhab.ir/fa/news/944671",
+      "https://www.imna.ir/news/994209",
+      "https://skylights.co.uk/how-to-prevent-condensation-on-rooflights-and-skylights/",
+      "https://www.bre.co.uk/page.jsp?id=3084"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "علت چکه کردن نورگیر سقف در پاییز؛ نشتی یا تعریق؟",
+      "metaDescription": "علت چکه کردن نورگیر سقف در پاییز چیست؟ روش تشخیص نشتی از تعریق، نقش پل حرارتی و جزئیات اتصال، و منطق سی‌پانل برای اصلاح پیش از زمستان.",
+      "primaryKeyword": "علت چکه کردن نورگیر سقف",
+      "summary": "اگر چکه زیر نورگیر سقف فقط هم‌زمان با باران یا کمی پس از آن و در خط هم‌پوشانی، محل پیچ یا لبه‌ها دیده شود، معمولاً نشتی است؛ اگر در شب‌ها و صبح‌های سرد و بدون باران به‌صورت قطره‌های پراکنده روی سطح داخلی ظاهر شود، به احتمال زیاد تعریق است. درمان این دو متفاوت است و تشخیص اشتباه، تعمیر را بی‌نتیجه می‌کند.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "با اولین بارش‌های پاییز، چکه زیر نورگیر شروع می‌شود",
+        "body": "با شروع بارش‌ها و افت دمای شبانه در پاییز، بهره‌برداران سوله‌ها، انبارها، سالن‌های ورزشی و آتریوم‌های تجاری معمولاً اولین قطره‌های آب را زیر نوارهای نورگیر می‌بینند. واکنش رایج این است که بگویند نورگیر نشتی دارد و باید دوباره سیلیکون‌کاری شود. اما آبی که از نورگیر می‌چکد همیشه از بیرون نمی‌آید؛ گاهی رطوبت هوای داخل سالن است که روی سطح سرد پوشش شفاف میعان شده است. اگر این دو پدیده از هم جدا نشوند، سیلانت روی درزهای سالم اضافه می‌شود، پیچ‌ها بیش از حد سفت می‌شوند و مشکل اصلی با سردتر شدن هوا شدیدتر برمی‌گردد.",
+        "points": [
+          "چکه‌ای که هم‌زمان با باران یا کمی پس از آن رخ می‌دهد و در خط هم‌پوشانی، محل پیچ یا اتصال نورگیر به ورق سقف متمرکز است، نشانه نشتی است.",
+          "قطره‌های پراکنده روی سطح داخلی در شب‌ها و صبح‌های سرد و بدون باران نشانه تعریق است، نه نفوذ آب از بیرون.",
+          "در پلی‌کربنات چندجداره، آب یا لکه کدر و سبزرنگ داخل کانال‌ها نشان می‌دهد لبه‌های ورق درست بسته یا تهویه نشده‌اند.",
+          "سالن‌هایی که منبع رطوبت داخلی دارند، مانند فرآیندهای شست‌وشو، استخر، آشپزخانه صنعتی یا بخاری گازی بدون دودکش، تعریق شدیدتری را تجربه می‌کنند.",
+          "ترمیم با سیلیکون بدون تشخیص علت، تعریق را حل نمی‌کند و ممکن است مسیر طبیعی تخلیه آب در هم‌پوشانی را هم ببندد."
+        ]
+      },
+      "cause": {
+        "title": "نورگیر اغلب سردترین سطح سقف است و درزهایش پرتحرک‌ترند",
+        "body": "در سقفی که بقیه سطح آن عایق‌کاری شده، نورگیر معمولاً کمترین مقاومت حرارتی را دارد. وقتی دمای سطح داخلی آن از دمای نقطه شبنم هوای داخل پایین‌تر برود، بخار آب روی آن می‌نشیند و پس از جمع شدن، در امتداد شیب حرکت می‌کند و در نقاط پایین می‌چکد. از سوی دیگر، پلی‌کربنات نسبت به ورق فولادی انبساط و انقباض حرارتی بیشتری دارد؛ اگر سوراخ پیچ‌ها، واشرها و هم‌پوشانی‌ها برای این حرکت طراحی نشده باشند، چرخه گرما و سرمای روز و شب در پاییز به‌تدریج درزها را باز می‌کند و باران همراه با باد از همان‌جا وارد می‌شود. به همین دلیل نورگیر هم مستعد تعریق است و هم مستعد نشتی، و علت هر چکه باید جداگانه پیدا شود.",
+        "points": [
+          "پوشش شفاف تک‌لایه در سقف عایق‌دار یک پل حرارتی آشکار است و در هوای سرد معمولاً جزو نخستین سطوحی است که دمایش به زیر نقطه شبنم می‌رسد.",
+          "رطوبت بالای داخل سالن و کمبود تهویه، نقطه شبنم را بالا می‌برد؛ نورگیری که در انبار خشک مشکلی ندارد، ممکن است در سالن مرطوب چکه کند.",
+          "در ورق چندجداره، اگر لبه بالایی با نوار مناسب بسته نشود و لبه پایینی امکان تخلیه نداشته باشد، رطوبت و گرد و غبار در کانال‌ها باقی می‌ماند.",
+          "سوراخ پیچ بدون فضای کافی برای حرکت حرارتی، یا واشری که بیش از حد فشرده شده، پس از چند چرخه گرم و سرد راه نفوذ آب را باز می‌کند.",
+          "اگر هم‌پوشانی نورگیر با ورق سقف با پروفیل ورق، شیب و جهت باد غالب هماهنگ نباشد، در باران همراه با باد آب را به داخل می‌کشد."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام تشخیص نشتی از تعریق در نورگیر (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید مقطع اتصال نورگیر به ورق سقف را نشان دهد: مسیر آب باران در هم‌پوشانی و محل پیچ‌ها، و در کنار آن سطح داخلی سرد نورگیر و محل تشکیل قطره‌های تعریق. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": ["مسیر نشتی در هم‌پوشانی و پیچ", "سطح سرد و محل تعریق", "بستن و تهویه لبه کانال‌ها"]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای تشخیص و رفع چکه نورگیر",
+        "steps": [
+          {"title": "ثبت الگوی چکه", "description": "زمان، محل و شرایط هوای هر چکه ثبت می‌شود: هم‌زمان با باران یا در هوای خشک، در خط درز یا روی سطح ورق، و در کدام بخش سالن. همین الگو اولین مرز میان نشتی و تعریق است."},
+          {"title": "بررسی شرایط داخلی سالن", "description": "منابع رطوبت، نوع گرمایش، وضعیت تهویه و ساعات بهره‌برداری بررسی می‌شود تا روشن شود هوای داخل در شرایط سرد تا چه حد مستعد میعان روی سطوح سرد است."},
+          {"title": "بازبینی جزئیات اتصال نورگیر", "description": "هم‌پوشانی با ورق سقف، فلاشینگ‌ها، نوع و محل پیچ، واشرها، فضای سوراخ‌ها برای حرکت حرارتی و جهت قرارگیری کانال‌های ورق چندجداره نسبت به شیب بازرسی می‌شود."},
+          {"title": "انتخاب راهکار متناسب با علت", "description": "برای نشتی، اصلاح جزئیات هم‌پوشانی، فلاشینگ و اتصال؛ برای تعریق، بازنگری در نوع پوشش شفاف، بستن و تهویه درست لبه‌ها و هماهنگی با تهویه سالن. اقدام ترکیبی فقط وقتی پیشنهاد می‌شود که هر دو علت تأیید شده باشد."},
+          {"title": "کنترل در بارش و سرمای بعدی", "description": "پس از اصلاح، رفتار نورگیر در بارش بعدی و در یک دوره سرد و خشک دوباره کنترل می‌شود تا اطمینان حاصل شود علت واقعی برطرف شده است، نه فقط نشانه آن."}
+        ]
+      },
+      "faqs": [
+        {"question": "چطور بفهمم چکه نورگیر از نشتی است یا از تعریق؟", "answer": "به زمان و محل چکه دقت کنید. اگر فقط در باران یا کمی پس از آن و در خط درز، محل پیچ یا لبه دیده می‌شود، نشتی محتمل است. اگر در هوای سرد و خشک، به‌ویژه شب و صبح زود، قطره‌ها روی سطح نورگیر می‌نشینند، تعریق است. در بسیاری از سالن‌ها هر دو هم‌زمان وجود دارند و باید جداگانه بررسی شوند."},
+        {"question": "چرا وقتی باران نمی‌بارد هم از نورگیر آب می‌چکد؟", "answer": "چون آب از هوای داخل سالن می‌آید. وقتی سطح داخلی نورگیر سردتر از نقطه شبنم هوای داخل باشد، بخار آب روی آن میعان می‌شود و پس از جمع شدن می‌چکد. منابع رطوبت داخلی و تهویه ناکافی این پدیده را تشدید می‌کنند."},
+        {"question": "آیا سیلیکون زدن دور نورگیر مشکل چکه را حل می‌کند؟", "answer": "اگر علت تعریق باشد، خیر. در نشتی هم سیلیکون فقط وقتی کمک می‌کند که جزئیات هم‌پوشانی و اتصال پیچ درست باشد؛ در غیر این صورت سیلانت پس از چند چرخه حرکت حرارتی دوباره جدا می‌شود و گاهی مسیر طبیعی تخلیه آب را هم می‌بندد."},
+        {"question": "چرا داخل کانال‌های پلی‌کربنات چندجداره آب و لکه جمع می‌شود؟", "answer": "معمولاً به این دلیل که لبه بالایی ورق با نوار مناسب بسته نشده، لبه پایینی راه تخلیه و تهویه ندارد، یا کانال‌ها هم‌جهت با شیب نصب نشده‌اند. در این حالت رطوبت و گرد و غبار وارد کانال می‌شوند و راهی برای خروج ندارند."},
+        {"question": "آیا تعویض نورگیر تک‌لایه با چندجداره تعریق را از بین می‌برد؟", "answer": "معمولاً شدت آن را کم می‌کند، چون سطح داخلی گرم‌تر می‌ماند؛ اما اگر رطوبت داخل سالن زیاد و تهویه ضعیف باشد، تعریق ممکن است همچنان رخ دهد. این تصمیم باید بر اساس شرایط داخلی سالن و جزئیات اتصال گرفته شود، نه فقط نوع ورق."}
+      ],
+      "cta": {
+        "headline": "پیش از زمستان، علت چکه نورگیر را مشخص کنید",
+        "text": "عکس یا فیلم محل چکه، زمان وقوع آن نسبت به باران و کاربری سالن را ارسال کنید تا تیم فنی سی‌پانل تشخیص دهد با نشتی سروکار دارید یا تعریق، و مسیر اصلاح را بازبینی کند."
+      }
+    },
+    "en": {
+      "title": "Rooflight Dripping in Autumn: Leak or Condensation?",
+      "metaDescription": "Rooflight dripping after the first autumn rain? How to tell a leak from condensation, why thermal bridges and joints matter, and SIPANEL's pre-winter fix logic.",
+      "primaryKeyword": "rooflight dripping leak or condensation",
+      "summary": "If water drips from a rooflight only during or shortly after rain, and concentrates at laps, fixings or edges, it is usually a leak. If scattered droplets form on the inner surface on cold, dry nights and mornings, it is most likely condensation. The two need different fixes, and a wrong diagnosis makes the repair useless.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "The first autumn rains bring the first drips under rooflights",
+        "body": "When autumn rain starts and night temperatures drop, operators of industrial sheds, warehouses, sports halls and commercial atria often notice the first drops of water under their rooflight strips. The usual reaction is to say the rooflight is leaking and needs fresh silicone. But water dripping from a rooflight has not always come from outside; sometimes it is moisture from the indoor air that has condensed on the cold transparent surface. If the two are not separated, sealant gets added to sound joints, fixings are overtightened, and the real problem returns worse as the weather gets colder.",
+        "points": [
+          "Dripping that coincides with rain or follows shortly after, and concentrates along a lap, at a fixing or where the rooflight meets the roof sheet, points to a leak.",
+          "Scattered droplets on the inner surface on cold, dry nights and mornings point to condensation, not water entering from outside.",
+          "In multiwall polycarbonate, water or cloudy, greenish staining inside the flutes shows that the sheet edges were not properly sealed or vented.",
+          "Halls with indoor moisture sources, such as washing processes, pools, industrial kitchens or flueless gas heaters, experience heavier condensation.",
+          "Sealing with silicone without a diagnosis does not cure condensation and can even block the natural drainage path in a lap."
+        ]
+      },
+      "cause": {
+        "title": "The rooflight is often the coldest surface on the roof, and its joints move the most",
+        "body": "In a roof whose remaining area is insulated, the rooflight usually has the lowest thermal resistance. When its inner surface temperature falls below the dew point of the indoor air, water vapour settles on it, collects, runs along the slope and drips at low points. At the same time, polycarbonate expands and contracts with temperature more than steel sheet does. If fixing holes, washers and laps are not designed for this movement, the autumn cycle of warm days and cold nights gradually opens the joints, and wind-driven rain enters through them. That is why a rooflight is prone to both condensation and leakage, and the cause of each drip has to be found separately.",
+        "points": [
+          "A single-skin rooflight in an insulated roof is an obvious thermal bridge and in cold weather is usually among the first surfaces to fall below the dew point.",
+          "High indoor humidity and poor ventilation raise the dew point; a rooflight that behaves well over a dry warehouse may drip over a humid hall.",
+          "In multiwall sheet, if the top edge is not closed with a suitable tape and the bottom edge cannot drain, moisture and dust stay trapped in the flutes.",
+          "A fixing hole without enough clearance for thermal movement, or an over-compressed washer, opens a water path after a few warm and cold cycles.",
+          "If the rooflight lap with the roof sheet does not match the sheet profile, the slope and the prevailing wind direction, wind-driven rain is drawn inside."
+        ]
+      },
+      "visual": {
+        "title": "Rooflight leak vs. condensation diagnosis diagram (pending verification)",
+        "description": "The verified diagram should show a section through the rooflight-to-roof-sheet junction: the rainwater path through the lap and fixings, and next to it the cold inner surface of the rooflight where condensation droplets form. This technical asset is still pending verification.",
+        "callouts": ["Leak path at lap and fixing", "Cold surface and condensation zone", "Sealing and venting flute ends"]
+      },
+      "execution": {
+        "title": "SIPANEL logic for diagnosing and fixing rooflight drips",
+        "steps": [
+          {"title": "Record the drip pattern", "description": "Time, location and weather for each drip are recorded: during rain or in dry weather, along a joint or on the sheet face, and in which part of the hall. This pattern is the first boundary between a leak and condensation."},
+          {"title": "Review indoor conditions", "description": "Moisture sources, heating type, ventilation and operating hours are reviewed to establish how prone the indoor air is to condensing on cold surfaces in cold weather."},
+          {"title": "Inspect the rooflight junction details", "description": "The lap with the roof sheet, flashings, fixing type and position, washers, hole clearance for thermal movement and the orientation of multiwall flutes relative to the slope are inspected."},
+          {"title": "Match the remedy to the cause", "description": "For a leak, the lap, flashing and fixing details are corrected; for condensation, the type of transparent covering, correct sealing and venting of the edges and coordination with hall ventilation are reviewed. A combined remedy is proposed only when both causes are confirmed."},
+          {"title": "Verify in the next rain and cold spell", "description": "After the correction, the rooflight is checked again in the next rainfall and in a cold, dry period to confirm that the real cause, not just its symptom, has been removed."}
+        ]
+      },
+      "faqs": [
+        {"question": "How can I tell whether a rooflight drip is a leak or condensation?", "answer": "Watch when and where it drips. If it appears only during or shortly after rain, along a joint, at a fixing or at an edge, a leak is likely. If droplets form on the rooflight surface in cold, dry weather, especially at night and early morning, it is condensation. Many halls have both at once, and each must be checked separately."},
+        {"question": "Why does my rooflight drip even when it is not raining?", "answer": "Because the water comes from the indoor air. When the inner surface of the rooflight is colder than the dew point of the indoor air, water vapour condenses on it and drips once it collects. Indoor moisture sources and inadequate ventilation make this worse."},
+        {"question": "Will applying silicone around the rooflight stop the dripping?", "answer": "Not if the cause is condensation. For a leak, silicone only helps when the lap and fixing details are correct; otherwise the sealant debonds again after a few cycles of thermal movement and can even block the natural drainage path."},
+        {"question": "Why do water and stains collect inside multiwall polycarbonate flutes?", "answer": "Usually because the top edge of the sheet was not closed with a suitable tape, the bottom edge has no way to drain and vent, or the flutes were not installed in line with the slope. Moisture and dust then enter the flutes and have no way out."},
+        {"question": "Will replacing a single-skin rooflight with multiwall eliminate condensation?", "answer": "It usually reduces it, because the inner surface stays warmer; but if indoor humidity is high and ventilation is weak, condensation can still occur. The decision should be based on indoor conditions and junction details, not on sheet type alone."}
+      ],
+      "cta": {
+        "headline": "Find the cause of rooflight drips before winter",
+        "text": "Send a photo or video of the drip location, when it happens relative to rain and how the hall is used, so the SIPANEL technical team can tell whether you are dealing with a leak or condensation and review the correction path."
+      }
+    },
+    "ar": {
+      "title": "تقطير مناور السقف في الخريف: تسرّب أم تكاثف؟",
+      "metaDescription": "تقطير مناور السقف بعد أمطار الخريف الأولى: كيف تميّز التسرّب من التكاثف، ودور الجسر الحراري وتفاصيل الوصلات، ومنهج SIPANEL للمعالجة قبل الشتاء.",
+      "primaryKeyword": "تقطير مناور السقف تسرب أم تكاثف",
+      "summary": "إذا ظهر التقطير تحت منور السقف أثناء المطر أو بعده بقليل فقط، وتركّز عند خطوط التراكب أو البراغي أو الحواف، فهو غالباً تسرّب. أما إذا ظهرت قطرات متفرقة على السطح الداخلي في الليالي والصباحات الباردة الجافة، فهو على الأرجح تكاثف. علاج الحالتين مختلف، والتشخيص الخاطئ يجعل الإصلاح بلا جدوى.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "مع أولى أمطار الخريف يبدأ التقطير تحت المناور",
+        "body": "مع بدء الأمطار وانخفاض درجات الحرارة ليلاً في الخريف، يلاحظ مشغّلو المستودعات والهناجر الصناعية والصالات الرياضية والأفنية التجارية المسقوفة أولى قطرات الماء تحت شرائط المناور. وردّ الفعل المعتاد هو القول إن المنور يسرّب ويحتاج إلى سيليكون جديد. لكن الماء المتساقط من المنور لا يأتي دائماً من الخارج؛ فأحياناً يكون رطوبة هواء الصالة التي تكاثفت على السطح الشفاف البارد. وإذا لم يُفصل بين الظاهرتين، يُضاف مانع التسرب إلى وصلات سليمة، وتُشدّ البراغي أكثر من اللازم، ثم تعود المشكلة الأصلية أشد مع اشتداد البرد.",
+        "points": [
+          "التقطير الذي يتزامن مع المطر أو يليه بقليل ويتركّز على خط التراكب أو عند البرغي أو عند التقاء المنور بلوح السقف يدل على تسرّب.",
+          "القطرات المتفرقة على السطح الداخلي في الليالي والصباحات الباردة الجافة تدل على تكاثف، لا على دخول ماء من الخارج.",
+          "في ألواح البولي كربونات متعددة الجدران، يدل وجود ماء أو بقع معتمة مخضرّة داخل القنوات على أن حواف اللوح لم تُغلق أو لم تُهوَّ بشكل صحيح.",
+          "الصالات التي تحتوي على مصادر رطوبة داخلية، مثل عمليات الغسيل أو المسابح أو المطابخ الصناعية أو المدافئ الغازية بلا مدخنة، تعاني تكاثفاً أشد.",
+          "المعالجة بالسيليكون دون تشخيص لا تحل التكاثف، وقد تسدّ أيضاً مسار التصريف الطبيعي للماء في التراكب."
+        ]
+      },
+      "cause": {
+        "title": "المنور غالباً أبرد سطح في السقف، ووصلاته الأكثر حركة",
+        "body": "في سقف معزول في بقية مساحته، يكون المنور عادةً الأقل مقاومة حرارية. وعندما تنخفض حرارة سطحه الداخلي عن نقطة الندى لهواء الصالة، يترسب بخار الماء عليه، ثم يتجمع وينساب مع الميل ويتساقط عند النقاط المنخفضة. وفي الوقت نفسه، يتمدد البولي كربونات وينكمش حرارياً أكثر من ألواح الصلب؛ فإذا لم تُصمَّم ثقوب البراغي والحلقات والتراكبات لاستيعاب هذه الحركة، فإن دورة النهار الدافئ والليل البارد في الخريف تفتح الوصلات تدريجياً، ويدخل منها المطر المصحوب بالرياح. لذلك فالمنور معرّض للتكاثف وللتسرّب معاً، ويجب تحديد سبب كل تقطير على حدة.",
+        "points": [
+          "المنور أحادي الطبقة في سقف معزول جسر حراري واضح، وهو عادةً من أول الأسطح التي تنخفض حرارتها دون نقطة الندى في الطقس البارد.",
+          "ارتفاع رطوبة الصالة وضعف التهوية يرفعان نقطة الندى؛ فالمنور الذي يعمل جيداً فوق مستودع جاف قد يقطر فوق صالة رطبة.",
+          "في الألواح متعددة الجدران، إذا لم تُغلق الحافة العلوية بشريط مناسب ولم يكن للحافة السفلية منفذ للتصريف، تبقى الرطوبة والغبار محتبسة داخل القنوات.",
+          "ثقب البرغي الذي لا يترك خلوصاً كافياً للحركة الحرارية، أو الحلقة المضغوطة أكثر من اللازم، يفتح مساراً للماء بعد عدة دورات من الحر والبرد.",
+          "إذا لم يتوافق تراكب المنور مع لوح السقف مع مقطع اللوح والميل واتجاه الرياح السائدة، فإن المطر المصحوب بالرياح يُسحب إلى الداخل."
+        ]
+      },
+      "visual": {
+        "title": "مخطط تمييز التسرّب من التكاثف في المنور (قيد التوثيق)",
+        "description": "يجب أن يُظهر المخطط المعتمد مقطعاً في وصلة المنور بلوح السقف: مسار مياه المطر عبر التراكب والبراغي، وإلى جانبه السطح الداخلي البارد للمنور حيث تتشكل قطرات التكاثف. هذا الأصل الفني لا يزال قيد التوثيق.",
+        "callouts": ["مسار التسرّب عند التراكب والبرغي", "السطح البارد ومنطقة التكاثف", "إغلاق وتهوية أطراف القنوات"]
+      },
+      "execution": {
+        "title": "منهج SIPANEL لتشخيص تقطير المناور ومعالجته",
+        "steps": [
+          {"title": "تسجيل نمط التقطير", "description": "يُسجَّل وقت كل تقطير وموقعه وحالة الطقس: أثناء المطر أم في طقس جاف، على خط الوصلة أم على سطح اللوح، وفي أي جزء من الصالة. هذا النمط هو الحد الأول بين التسرّب والتكاثف."},
+          {"title": "مراجعة الظروف الداخلية للصالة", "description": "تُراجَع مصادر الرطوبة ونوع التدفئة والتهوية وساعات التشغيل لتحديد مدى قابلية هواء الصالة للتكاثف على الأسطح الباردة في الطقس البارد."},
+          {"title": "فحص تفاصيل وصلة المنور", "description": "يُفحص التراكب مع لوح السقف، وألواح الحماية (الفلاشينغ)، ونوع البراغي ومواضعها، والحلقات، وخلوص الثقوب للحركة الحرارية، واتجاه قنوات الألواح متعددة الجدران بالنسبة إلى الميل."},
+          {"title": "اختيار المعالجة المناسبة للسبب", "description": "في حالة التسرّب تُصحَّح تفاصيل التراكب وألواح الحماية والتثبيت؛ وفي حالة التكاثف تُراجَع نوعية الغطاء الشفاف وإغلاق الحواف وتهويتها بشكل صحيح والتنسيق مع تهوية الصالة. ولا تُقترح معالجة مركّبة إلا عند تأكيد السببين معاً."},
+          {"title": "التحقق في المطر والبرد التاليين", "description": "بعد التصحيح، يُفحص سلوك المنور مجدداً في الهطول التالي وفي فترة باردة وجافة، للتأكد من إزالة السبب الحقيقي لا العَرَض فقط."}
+        ]
+      },
+      "faqs": [
+        {"question": "كيف أعرف إن كان تقطير المنور تسرّباً أم تكاثفاً؟", "answer": "راقب وقت التقطير وموقعه. إذا ظهر فقط أثناء المطر أو بعده بقليل، على خط الوصلة أو عند البرغي أو الحافة، فالتسرّب مرجّح. وإذا تشكلت القطرات على سطح المنور في طقس بارد وجاف، خاصة ليلاً وفي الصباح الباكر، فهو تكاثف. وكثير من الصالات تجمع الحالتين معاً، ويجب فحص كل منهما على حدة."},
+        {"question": "لماذا يقطر المنور حتى عندما لا تمطر؟", "answer": "لأن الماء مصدره هواء الصالة. فعندما يكون السطح الداخلي للمنور أبرد من نقطة الندى للهواء الداخلي، يتكاثف بخار الماء عليه ويتساقط بعد تجمعه. ومصادر الرطوبة الداخلية وضعف التهوية تزيد هذه الظاهرة."},
+        {"question": "هل يوقف وضع السيليكون حول المنور التقطير؟", "answer": "لا، إذا كان السبب تكاثفاً. وفي حالة التسرّب لا يفيد السيليكون إلا إذا كانت تفاصيل التراكب والتثبيت صحيحة؛ وإلا فإن مانع التسرب ينفصل مجدداً بعد عدة دورات من الحركة الحرارية، وقد يسدّ أيضاً مسار التصريف الطبيعي."},
+        {"question": "لماذا يتجمع الماء والبقع داخل قنوات البولي كربونات متعدد الجدران؟", "answer": "غالباً لأن الحافة العلوية للوح لم تُغلق بشريط مناسب، أو لأن الحافة السفلية ليس لها منفذ للتصريف والتهوية، أو لأن القنوات لم تُركَّب في اتجاه الميل. عندها تدخل الرطوبة والغبار إلى القنوات ولا تجد طريقاً للخروج."},
+        {"question": "هل يزيل استبدال المنور أحادي الطبقة بآخر متعدد الجدران التكاثف؟", "answer": "يقلّله عادةً لأن السطح الداخلي يبقى أدفأ؛ لكن إذا كانت رطوبة الصالة مرتفعة والتهوية ضعيفة فقد يستمر التكاثف. ويجب أن يُبنى القرار على الظروف الداخلية للصالة وتفاصيل الوصلة، لا على نوع اللوح وحده."}
+      ],
+      "cta": {
+        "headline": "حدّد سبب تقطير المنور قبل الشتاء",
+        "text": "أرسل صورة أو مقطع فيديو لموقع التقطير، وتوقيته بالنسبة إلى المطر، وطبيعة استخدام الصالة، ليحدد الفريق الفني في SIPANEL إن كنت تواجه تسرّباً أم تكاثفاً ويراجع مسار التصحيح."
+      }
+    },
+    "ru": {
+      "title": "Почему капает с зенитного фонаря осенью: протечка или конденсат?",
+      "metaDescription": "Капает с зенитного фонаря после первых осенних дождей? Как отличить протечку от конденсата, роль мостика холода и узлов примыкания и подход SIPANEL.",
+      "primaryKeyword": "капает с зенитного фонаря протечка или конденсат",
+      "summary": "Если вода капает с зенитного фонаря только во время дождя или вскоре после него и сосредоточена в нахлёстах, у крепежа или по краям, это, как правило, протечка. Если же разрозненные капли появляются на внутренней поверхности холодными сухими ночами и утрами, скорее всего, это конденсат. Лечатся они по-разному, и ошибочный диагноз делает ремонт бесполезным.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "С первыми осенними дождями под фонарями начинает капать",
+        "body": "Когда начинаются осенние дожди и ночная температура падает, эксплуатационники промышленных ангаров, складов, спортивных залов и торговых атриумов нередко замечают первые капли воды под полосами зенитных фонарей. Обычная реакция — решить, что фонарь протекает и его нужно заново промазать силиконом. Но вода, капающая с фонаря, не всегда приходит снаружи: иногда это влага из воздуха помещения, сконденсировавшаяся на холодной светопрозрачной поверхности. Если эти явления не разделить, герметик наносят на исправные швы, крепёж перетягивают, а настоящая проблема возвращается с похолоданием в ещё более острой форме.",
+        "points": [
+          "Капель, совпадающая с дождём или начинающаяся вскоре после него и сосредоточенная по линии нахлёста, у самореза или в месте примыкания фонаря к кровельному листу, указывает на протечку.",
+          "Разрозненные капли на внутренней поверхности холодными сухими ночами и утрами указывают на конденсат, а не на воду снаружи.",
+          "В сотовом поликарбонате вода или мутные зеленоватые разводы внутри каналов показывают, что торцы листа не были правильно закрыты или не проветриваются.",
+          "В залах с внутренними источниками влаги — моечными процессами, бассейнами, промышленными кухнями или газовыми обогревателями без дымохода — конденсат образуется сильнее.",
+          "Герметизация силиконом без диагностики не устраняет конденсат и может даже перекрыть естественный путь отвода воды в нахлёсте."
+        ]
+      },
+      "cause": {
+        "title": "Фонарь — часто самая холодная поверхность кровли, а его узлы подвижнее всего",
+        "body": "В кровле, остальная площадь которой утеплена, зенитный фонарь обычно имеет наименьшее термическое сопротивление. Когда температура его внутренней поверхности опускается ниже точки росы воздуха помещения, водяной пар оседает на ней, собирается, стекает по уклону и капает в нижних точках. Одновременно поликарбонат расширяется и сжимается при изменении температуры сильнее, чем стальной лист. Если отверстия под крепёж, шайбы и нахлёсты не рассчитаны на это движение, осенний цикл тёплых дней и холодных ночей постепенно раскрывает швы, и через них проникает косой дождь. Поэтому фонарь склонен и к конденсату, и к протечкам, и причину каждой капели нужно искать отдельно.",
+        "points": [
+          "Однослойный фонарь в утеплённой кровле — явный мостик холода: в холодную погоду он обычно одним из первых охлаждается ниже точки росы.",
+          "Высокая влажность в помещении и слабая вентиляция повышают точку росы: фонарь, который ведёт себя нормально над сухим складом, может капать над влажным залом.",
+          "Если у сотового листа верхний торец не закрыт подходящей лентой, а нижний не имеет возможности дренажа, влага и пыль остаются запертыми в каналах.",
+          "Отверстие под крепёж без зазора на температурное движение или пережатая шайба через несколько циклов тепла и холода открывают путь воде.",
+          "Если нахлёст фонаря на кровельный лист не согласован с профилем листа, уклоном и направлением преобладающего ветра, косой дождь затягивается внутрь."
+        ]
+      },
+      "visual": {
+        "title": "Схема различения протечки и конденсата в фонаре (ожидает подтверждения)",
+        "description": "Подтверждённая схема должна показывать разрез узла примыкания фонаря к кровельному листу: путь дождевой воды через нахлёст и крепёж, а рядом — холодную внутреннюю поверхность фонаря, где образуются капли конденсата. Этот технический материал пока ожидает подтверждения.",
+        "callouts": ["Путь протечки в нахлёсте и у крепежа", "Холодная поверхность и зона конденсата", "Закрытие и проветривание торцов каналов"]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для диагностики и устранения капели с фонарей",
+        "steps": [
+          {"title": "Фиксация характера капели", "description": "Для каждой капели фиксируются время, место и погода: во время дождя или в сухую погоду, по линии шва или на поверхности листа, в какой части зала. Именно этот характер — первая граница между протечкой и конденсатом."},
+          {"title": "Анализ условий в помещении", "description": "Анализируются источники влаги, тип отопления, вентиляция и режим эксплуатации, чтобы понять, насколько воздух помещения склонен конденсироваться на холодных поверхностях в холодную погоду."},
+          {"title": "Осмотр узлов примыкания фонаря", "description": "Проверяются нахлёст на кровельный лист, нащельники, тип и расположение крепежа, шайбы, зазоры отверстий на температурное движение и ориентация каналов сотового листа относительно уклона."},
+          {"title": "Выбор решения по причине", "description": "При протечке исправляются узлы нахлёста, нащельников и крепления; при конденсате пересматриваются тип светопрозрачного покрытия, правильное закрытие и проветривание торцов и согласование с вентиляцией зала. Комбинированное решение предлагается, только если подтверждены обе причины."},
+          {"title": "Проверка при следующем дожде и похолодании", "description": "После исправления поведение фонаря снова проверяется при следующих осадках и в холодный сухой период, чтобы убедиться, что устранена настоящая причина, а не только симптом."}
+        ]
+      },
+      "faqs": [
+        {"question": "Как понять, протечка это или конденсат, если капает с фонаря?", "answer": "Обратите внимание, когда и где капает. Если только во время дождя или вскоре после него — по шву, у крепежа или по краю, — вероятна протечка. Если капли образуются на поверхности фонаря в холодную сухую погоду, особенно ночью и рано утром, это конденсат. Во многих залах есть и то и другое одновременно, и каждую причину нужно проверять отдельно."},
+        {"question": "Почему с фонаря капает, даже когда нет дождя?", "answer": "Потому что вода берётся из воздуха помещения. Когда внутренняя поверхность фонаря холоднее точки росы внутреннего воздуха, водяной пар конденсируется на ней и, собравшись, капает. Внутренние источники влаги и недостаточная вентиляция усиливают это явление."},
+        {"question": "Поможет ли силикон по периметру фонаря остановить капель?", "answer": "Нет, если причина — конденсат. При протечке силикон помогает, только если узлы нахлёста и крепления выполнены правильно; иначе герметик снова отслаивается после нескольких циклов температурного движения и может даже перекрыть естественный путь отвода воды."},
+        {"question": "Почему внутри каналов сотового поликарбоната скапливаются вода и разводы?", "answer": "Обычно потому, что верхний торец листа не закрыт подходящей лентой, нижний торец не имеет возможности дренажа и проветривания или каналы смонтированы не по направлению уклона. Тогда влага и пыль попадают в каналы и не могут выйти."},
+        {"question": "Устранит ли конденсат замена однослойного фонаря на сотовый?", "answer": "Как правило, уменьшит, потому что внутренняя поверхность остаётся теплее; но при высокой влажности в помещении и слабой вентиляции конденсат может образовываться и дальше. Решение должно опираться на условия в зале и узлы примыкания, а не только на тип листа."}
+      ],
+      "cta": {
+        "headline": "Определите причину капели с фонаря до зимы",
+        "text": "Пришлите фото или видео места капели, укажите, когда она возникает относительно дождя и как используется зал, чтобы технические специалисты SIPANEL определили, протечка это или конденсат, и проработали путь исправления."
+      }
+    }
+  }
+}
