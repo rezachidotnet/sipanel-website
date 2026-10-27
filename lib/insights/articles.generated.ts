@@ -4,10 +4,12 @@ import article0 from '@/content/insights/aluminium-cladding-facade-joint-control
 import article1 from '@/content/insights/rooflight-drip-leak-or-condensation-diagnosis.json';
 import article2 from '@/content/insights/sandwich-panel-joint-leakage-risk.json';
 import article3 from '@/content/insights/standing-seam-roof-drainage-logic.json';
+import article4 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
 
 export const rawInsightArticleFiles: unknown[] = [
   article0,
   article1,
   article2,
-  article3
+  article3,
+  article4
 ];
