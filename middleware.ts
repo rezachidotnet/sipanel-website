@@ -8,6 +8,7 @@ const intlMiddleware = createMiddleware(routing);
 const canonicalHostname = 'www.sipanelco.com';
 const productionHostnames = new Set(['sipanelco.ir', 'www.sipanelco.ir', 'sipanelco.com', canonicalHostname]);
 const markdownInternalHeader = 'x-sipanel-markdown-internal';
+const sitemapLink = '<https://www.sipanelco.com/sitemap.xml>; rel="sitemap"; type="application/xml"';
 
 function isLegacyPersianPath(pathname: string) {
   return pathname === '/fa' || pathname.startsWith('/fa/');
@@ -52,6 +53,11 @@ function addAcceptVary(response: NextResponse) {
   return response;
 }
 
+function addSitemapLink(response: NextResponse) {
+  response.headers.append('Link', sitemapLink);
+  return response;
+}
+
 function isMarkdownEligibleRequest(request: NextRequest) {
   if (request.headers.get(markdownInternalHeader) === '1') {
     return false;
@@ -86,7 +92,7 @@ function rewriteDefaultLocaleRequest(request: NextRequest, url: URL) {
   });
   response.cookies.set('NEXT_LOCALE', 'fa', {path: '/', sameSite: 'lax'});
 
-  return addAcceptVary(response);
+  return addSitemapLink(addAcceptVary(response));
 }
 
 export default function middleware(request: NextRequest) {
@@ -153,7 +159,7 @@ export default function middleware(request: NextRequest) {
     return defaultLocaleResponse;
   }
 
-  return addAcceptVary(intlMiddleware(request));
+  return addSitemapLink(addAcceptVary(intlMiddleware(request)));
 }
 
 export const config = {
