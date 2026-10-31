@@ -1,0 +1,425 @@
+{
+  "slug": "retractable-roof-winter-snow-ice-operation",
+  "category": "retractable_roofs",
+  "status": "published",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "faqIds": [
+    "open-or-closed-in-snow",
+    "frozen-roof-will-not-move",
+    "winter-drip-leak-or-condensation",
+    "moving-roof-to-shed-snow",
+    "rain-wind-sensors-enough"
+  ],
+  "relatedProjects": [
+    "absaar-water-park"
+  ],
+  "relatedInsights": [
+    "tensile-membrane-ponding-pre-winter-check",
+    "rooflight-drip-leak-or-condensation-diagnosis"
+  ],
+  "relatedResources": [],
+  "trend": {
+    "topic": "New rain, wind and mountain-snow system of 7-9 Aban 1405 (late October 2026) and first frosts: operating retractable roofs in snow and frost",
+    "rationale": "After the first snowfall of 1 Aban, Iranian outlets reported a new precipitation system from 7 Aban 1405 with rain, strong wind and snow at altitude, weather warnings for many provinces and school closures on 9 Aban. This is the first period in which operators of retractable roofs over restaurants, terraces, courtyards and pools must decide whether to keep them open or closed and meet stalled drives, iced tracks and drips at closing joints. SIPANEL has no article on retractable roofs yet, and the system page covers rain in the closed state, wind limits and power failure but not snow, icing or winter operating logic. Manufacturer care guides and a documented large retractable roof confirm that operating limits and the states checked for snow are system-specific.",
+    "observedAt": "2026-10-31",
+    "sources": [
+      "https://www.khabaronline.ir/news/2294370",
+      "https://nournews.ir/fa/news/355624",
+      "https://www.irib-news.ir/fa/news/5952430",
+      "https://www.eghtesadonline.com/fa/news/2172274",
+      "https://www.eghtesadonline.com/fa/news/2170701",
+      "https://steelconstruction.info/upload/Wiki-Files/d/d4/L4_article.pdf",
+      "https://marygrove.com/winterize-retractable-awning/",
+      "https://suncoastenclosures.com/wp-content/uploads/2026/04/General-Customer-Care-Guide.pdf",
+      "https://www.coversinplay.com/faqs"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "سقف متحرک در برف و یخبندان؛ منطق بهره‌برداری زمستانی",
+      "metaDescription": "سقف متحرک در برف و یخبندان را کی باز و بسته کنیم؟ اثر برف، یخ‌زدگی ریل و درز و تعریق داخلی، و منطق سی‌پانل برای تعریف سناریوی بهره‌برداری زمستانی.",
+      "primaryKeyword": "سقف متحرک در برف و یخبندان",
+      "summary": "سقف متحرک در زمستان سه وضعیت دارد: بسته، جمع‌شده و در حال حرکت؛ و برف و یخ روی هر کدام اثر متفاوتی می‌گذارند. پرریسک‌ترین لحظه معمولاً خود حرکت است، وقتی برف روی پوسته نشسته یا ریل و درز یخ زده است. پیش از سرما باید روشن شود سیستم در کدام وضعیت برای برف بررسی شده، چه شرایطی حرکت را ممنوع می‌کند و چه کسی پیش از هر حرکت آن را کنترل می‌کند.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "اولین صبح‌های یخبندان؛ سقفی که حرکت نمی‌کند یا بعد از بسته شدن چکه می‌کند",
+        "body": "با رسیدن سامانه‌های بارشی پاییزی، برف در ارتفاعات و افت دمای شبانه، بهره‌برداران سقف‌های متحرک در رستوران‌ها، تراس‌ها، حیاط‌های مرکزی، استخرها و مجموعه‌های تفریحی با پرسش‌هایی روبه‌رو می‌شوند که در تابستان مطرح نبود. صبح یک شب سرد، موتور فرمان می‌گیرد اما پوشش با تأخیر یا با صدای غیرعادی حرکت می‌کند و گاهی محدودکننده‌ها حرکت را قطع می‌کنند. در روزهای بعد از برف، در محل درز بسته‌شدن یا زیر ناودان‌ها قطره دیده می‌شود و معلوم نیست مشکل از نشتی است یا از تعریق. برخی بهره‌برداران برای خلاص شدن از برف، سقف را کمی باز و بسته می‌کنند تا برف بریزد؛ برخی دیگر سقف پارچه‌ای را خیس جمع می‌کنند و تا بهار باز نمی‌کنند. در اغلب این پروژه‌ها مشکل اصلی خرابی یک قطعه نیست؛ مشکل این است که سناریوی بهره‌برداری زمستانی هیچ‌وقت به‌صورت مهندسی تعریف نشده و تصمیم باز یا بسته بودن سقف به سلیقه اپراتور واگذار شده است.",
+        "points": [
+          "موتوری که در صبح سرد زیر بار بیشتری کار می‌کند یا محدودکننده‌ای که حرکت را قطع می‌کند، اغلب نشانه گیر کردن یخ در ریل، چرخ یا درز است، نه ضعف ذاتی موتور.",
+          "قطره‌هایی که فقط پس از شب‌های سرد و در فضاهای گرم و مرطوب دیده می‌شوند، ممکن است تعریق روی سطح سرد پوسته و قاب باشند نه نشت آب باران.",
+          "حرکت دادن سقف برای ریختن برف، برف و آب را به محل جمع‌شدن پوشش، ریل‌ها و مسیر عبور زیر سقف هدایت می‌کند.",
+          "سقف پارچه‌ای که خیس جمع شده، در چین‌ها رطوبت نگه می‌دارد و در یخبندان ممکن است سخت شود و به اجزای مجاور بچسبد.",
+          "ناودان و خروجی آب در محل درزهای حالت بسته اگر یخ بزنند، آب ذوب برف پشت آن‌ها جمع می‌شود و از روی درز سرریز می‌کند.",
+          "نبود یک دستورالعمل مکتوب زمستانی باعث می‌شود هر اپراتور در هر شیفت تصمیم متفاوتی بگیرد."
+        ]
+      },
+      "cause": {
+        "title": "سقف متحرک یک سقف با چند وضعیت است؛ برف و یخ در هر وضعیت رفتار متفاوتی دارند",
+        "body": "سقف ثابت فقط یک وضعیت دارد و برای همان وضعیت در برابر برف و باد طراحی می‌شود. سقف متحرک دست‌کم سه وضعیت دارد: کاملاً بسته، کاملاً جمع‌شده در محل پارک، و حالت گذار که پوشش در حال حرکت است. اینکه کدام‌یک از این وضعیت‌ها برای بار برف و باد بررسی شده، تصمیمی پروژه‌محور است و باید در مدارک طراحی روشن باشد؛ در برخی پروژه‌های شاخص بین‌المللی هم وضعیت پارک و هم وضعیت گسترده برای بارهای طراحی بررسی شده‌اند، اما این را نمی‌توان برای هر سیستمی فرض کرد. حالت گذار حساس‌ترین وضعیت است: در حین حرکت، مسیر انتقال نیرو از پوسته به چرخ‌ها، ریل و سازه ثابت مدام تغییر می‌کند و هر بار اضافه، مانند برف نشسته روی پوسته یا یخی که در مسیر چرخ مقاومت ایجاد می‌کند، مستقیماً به درایو و گیربکس منتقل می‌شود. در کنار این، اجزایی که سقف متحرک را آب‌بند می‌کنند، یعنی برس‌ها، نوارهای لاستیکی، لبه‌های هم‌پوشان و ناودان‌های درز بسته‌شدن، دقیقاً همان نقاطی هستند که آب در آن‌ها می‌ماند و در یخبندان آن را به اجزای متحرک می‌چسباند. عامل سوم، اختلاف دمای داخل و خارج است: فضاهایی مانند استخر، رستوران با آشپزخانه فعال یا آتریوم گرم، رطوبت زیادی دارند و این رطوبت روی سطح سرد پوسته و قاب‌ها، به‌ویژه در محل درزهای متحرک که پیوستگی عایق در آن‌ها کمتر است، به آب و سپس یخ تبدیل می‌شود.",
+        "points": [
+          "بار برف روی پوسته در حین حرکت به چرخ‌ها، ریل و درایو منتقل می‌شود، در حالی که مکانیزم معمولاً برای حرکت با بار کاری تعریف‌شده انتخاب شده است.",
+          "آب باقی‌مانده در ریل، کانال چرخ و درز برس یا نوار لاستیکی در یخبندان، قطعه متحرک را به قطعه ثابت می‌چسباند و درایو ناچار می‌شود در برابر یخ کار کند.",
+          "منطق کنترلی بسیاری از سیستم‌ها فقط سنسور باران و باد دارد و دما، برف نشسته یا یخ‌زدگی را به‌عنوان شرط منع حرکت نمی‌شناسد.",
+          "هوای گرم و مرطوب داخل، روی سطح سرد پوسته و قاب‌ها تعریق ایجاد می‌کند و در درزهای متحرک این آب ممکن است یخ بزند.",
+          "ناودان‌های درز بسته‌شدن معمولاً کم‌عمق و در معرض هوای سرد هستند و ذوب و یخ‌زدن متناوب، مسیر خروج آب را می‌بندد.",
+          "پارچه‌ای که خیس جمع شده، رطوبت را در چین‌ها نگه می‌دارد و چرخه یخ‌زدن و ذوب، پوشش سطحی و درزهای جوش را فرسوده‌تر می‌کند."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام وضعیت‌های زمستانی سقف متحرک (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید سه وضعیت سقف را کنار هم نشان دهد: بسته، جمع‌شده و در حال حرکت؛ و برای هر کدام محل نشستن برف، نقاط مستعد یخ‌زدگی در ریل و درز، مسیر آب ذوب برف و ناحیه تعریق داخلی را مشخص کند. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "وضعیت بسته، جمع‌شده و گذار",
+          "یخ‌زدگی ریل، چرخ و درز",
+          "مسیر آب ذوب و ناودان درز",
+          "تعریق در سطح داخلی سرد"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای تعریف بهره‌برداری زمستانی سقف متحرک",
+        "steps": [
+          {
+            "title": "روشن کردن وضعیت‌های طراحی‌شده برای برف",
+            "description": "مدارک طراحی، محاسبات و دستورالعمل سازنده مکانیزم بررسی می‌شود تا مشخص شود سقف در کدام وضعیت برای بار برف و باد کنترل شده و آیا حرکت با برف نشسته روی پوسته مجاز است. اگر این موضوع در مدارک روشن نیست، وضعیت مجاز باید پیش از سرما از طراح یا سازنده استعلام و مکتوب شود؛ تا آن زمان فرض محافظه‌کارانه این است که سقف در حین بارش یا با برف نشسته روی پوسته حرکت داده نشود و برف به روش مجاز و به‌موقع برداشته شود."
+          },
+          {
+            "title": "بازرسی پیش از سرما",
+            "description": "ریل‌ها، کانال چرخ‌ها، چرخ‌ها، کابل یا تسمه، درایو، محدودکننده‌ها، برس‌ها و نوارهای آب‌بند از نظر آلودگی، فرسودگی، خوردگی و تجمع آب بازرسی می‌شوند. مسیرهایی که آب در آن‌ها می‌ماند تمیز و زهکشی می‌شوند و روان‌کاری فقط با محصولی انجام می‌شود که سازنده مکانیزم برای دمای پایین مجاز دانسته است."
+          },
+          {
+            "title": "بازبینی زهکشی درزهای حالت بسته",
+            "description": "ناودان‌ها و خروجی‌های درز بسته‌شدن، شیب و ظرفیت آن‌ها و نقطه تخلیه آب کنترل می‌شود. جایی که آب ذوب برف دوباره یخ می‌زند و پشت درز جمع می‌شود، راهکار اصلاح هندسه، افزایش خروجی یا گرمایش موضعی با هماهنگی طراح تأسیسات برقی و سازنده بررسی می‌شود."
+          },
+          {
+            "title": "افزودن شرط‌های منع حرکت به منطق کنترل",
+            "description": "در کنار سنسور باد و باران، شرط‌هایی مانند دمای پایین، احتمال یخ‌زدگی یا برف نشسته روی پوسته، با هماهنگی سازنده سیستم کنترل، به منطق توقف یا قفل حرکت اضافه می‌شود. هر جا سنسور کافی نیست، یک بازدید چشمی از پوسته، ریل‌ها و محل جمع‌شدن پیش از هر حرکت در دستورالعمل اپراتور اجباری می‌شود."
+          },
+          {
+            "title": "هماهنگی با تأسیسات برای کنترل تعریق",
+            "description": "در فضاهای گرم و مرطوب، تهویه و رطوبت‌زدایی با طراح تأسیسات هماهنگ می‌شود تا هوای مرطوب پیش از بسته شدن کامل سقف یا در ساعات سرد شب به سطح سرد پوسته نرسد. محل‌هایی که تعریق دیده شده، روی پلان ثبت می‌شوند تا از نشتی واقعی تفکیک شوند."
+          },
+          {
+            "title": "دستورالعمل زمستانی و بازدید پس از هر رویداد",
+            "description": "وضعیت سقف در پیش‌بینی برف، روش برخورد با سقفی که حرکت نمی‌کند، شیوه برداشت برف بدون آسیب به پوسته، و بازدید پس از هر برف، یخبندان یا باد شدید مکتوب می‌شود و هر حرکت غیرعادی، توقف یا چکه در یک دفترچه ثبت می‌شود."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "در زمان بارش برف، سقف متحرک باید باز باشد یا بسته؟",
+          "answer": "پاسخ عمومی وجود ندارد و به این بستگی دارد که سقف در کدام وضعیت برای بار برف طراحی و کنترل شده است. این موضوع باید از مدارک طراحی و دستورالعمل سازنده استخراج شود. آنچه تقریباً همیشه درست است این است که وضعیت سقف پیش از شروع بارش تعیین شود و سقف در حین برف یا با برف نشسته روی پوسته حرکت داده نشود."
+        },
+        {
+          "question": "صبح یک شب یخبندان سقف حرکت نمی‌کند؛ چه کار باید کرد؟",
+          "answer": "فرمان را تکرار نکنید و حرکت را با زور یا کمک دستی ادامه ندهید. سیستم را در وضعیت ایمن متوقف کنید و ریل‌ها، چرخ‌ها، درزها و محل جمع‌شدن را از نظر یخ، برف یا جسم خارجی بازدید کنید. تکرار فرمان روی قطعه‌ای که یخ زده می‌تواند به درایو، گیربکس، چرخ یا نوار آب‌بند آسیب بزند. پس از برطرف شدن علت و تأیید تیم نگهداری، حرکت آزمایشی انجام شود."
+        },
+        {
+          "question": "قطره‌هایی که زمستان در محل درز سقف متحرک دیده می‌شود، نشتی است یا تعریق؟",
+          "answer": "اگر قطره‌ها بدون بارش و پس از شب‌های سرد، در فضاهای گرم و مرطوب و روی سطوح داخلی قاب یا پوسته دیده شوند، احتمال تعریق بالاست. اگر فقط در حین باران یا ذوب برف و در محل مشخصی از درز یا ناودان ظاهر شوند، احتمال نشت یا سرریز آب بیشتر است. ثبت زمان، محل و شرایط آب‌وهوایی هر مشاهده، تفکیک این دو را ممکن می‌کند."
+        },
+        {
+          "question": "آیا می‌شود برای پاک کردن برف، سقف را باز کرد تا برف بریزد؟",
+          "answer": "مگر اینکه سیستم صراحتاً برای این کار طراحی شده باشد، نه. حرکت با برف نشسته بار اضافی به مکانیزم وارد می‌کند و برف و آب را به محل جمع‌شدن، ریل‌ها و مسیر عبور زیر سقف هدایت می‌کند. برداشت برف باید طبق روشی انجام شود که در دستورالعمل نگهداری تعریف شده و به پوسته آسیب نزند."
+        },
+        {
+          "question": "آیا سنسور باران و باد برای بهره‌برداری زمستانی کافی است؟",
+          "answer": "معمولاً نه. این سنسورها برای بستن به‌موقع در باران یا جلوگیری از حرکت در باد طراحی شده‌اند و یخ‌زدگی ریل یا برف نشسته روی پوسته را تشخیص نمی‌دهند. شرط‌های دمایی و یک کنترل چشمی پیش از حرکت باید با هماهنگی سازنده سیستم کنترل به منطق بهره‌برداری اضافه شود."
+        }
+      ],
+      "cta": {
+        "headline": "پیش از یخبندان، سناریوی زمستانی سقف متحرک را تعریف کنید",
+        "text": "مدارک موجود سقف، دستورالعمل سازنده و گزارش هر توقف، صدای غیرعادی یا چکه را ارسال کنید تا تیم فنی سی‌پانل وضعیت‌های طراحی، مکانیزم، زهکشی درزها و منطق کنترل را بازبینی کند و دستورالعمل بهره‌برداری زمستانی را پیشنهاد دهد."
+      }
+    },
+    "en": {
+      "title": "Retractable Roofs in Snow and Frost: Winter Operating Logic",
+      "metaDescription": "When should retractable roofs in snow and frost be opened or closed? Snow, iced tracks and seals, indoor condensation, and SIPANEL's winter operating logic.",
+      "primaryKeyword": "retractable roofs in snow and frost",
+      "summary": "In winter a retractable roof has three states: closed, parked and moving, and snow and ice affect each one differently. The riskiest moment is usually the movement itself, when snow is lying on the skin or the tracks and seals have frozen. Before the cold arrives, it must be clear which state the system was checked in for snow, which conditions prohibit movement and who checks the roof before each operation.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "The first frosty mornings: a roof that will not move, or drips after closing",
+        "body": "As autumn rain systems arrive, snow settles on higher ground and night temperatures drop, operators of retractable roofs over restaurants, terraces, courtyards, pools and leisure complexes face questions that never came up in summer. After a cold night the motor receives the command, but the cover moves late or with an unusual noise, and sometimes the limit switches cut the movement. In the days after snow, drops appear at the closing joint or under the gutters, and nobody is sure whether it is a leak or condensation. Some operators open and close the roof a little to shake the snow off; others retract a fabric roof while it is still wet and leave it folded until spring. In most of these projects the real problem is not a single failed component. The problem is that the winter operating scenario was never defined as an engineering decision, and whether the roof stays open or closed has been left to the operator's judgement.",
+        "points": [
+          "A motor that works harder on a cold morning, or a limit switch that stops the movement, often points to ice in the track, wheel or joint rather than a weak motor.",
+          "Drops that appear only after cold nights in warm, humid spaces may be condensation on the cold skin and frames, not rainwater leaking in.",
+          "Moving the roof to shed snow sends snow and water into the parking zone of the cover, onto the tracks and onto the walkway below.",
+          "A fabric roof retracted while wet holds moisture in its folds and, in frost, may stiffen and stick to adjacent parts.",
+          "If gutters and outlets at the closed-state joints freeze, meltwater collects behind them and overflows across the joint.",
+          "Without a written winter procedure, each operator on each shift makes a different decision."
+        ]
+      },
+      "cause": {
+        "title": "A retractable roof is one roof with several states, and snow and ice behave differently in each",
+        "body": "A fixed roof has one state and is designed against snow and wind for that state. A retractable roof has at least three: fully closed, fully parked, and the transition in which the cover is moving. Which of these states was checked for snow and wind is a project-specific decision that must be stated in the design documents. On some landmark international projects both the parked and the deployed positions were checked for the design loads, but this cannot be assumed for every system. The transition is the most sensitive state: during movement the load path from the skin to the wheels, track and fixed structure keeps changing, and any extra load, such as snow lying on the skin or ice resisting a wheel, goes straight into the drive and gearbox. In addition, the parts that make a retractable roof watertight, the brushes, rubber gaskets, overlapping edges and closing-joint gutters, are exactly the places where water stays and, in frost, glues the moving parts to the fixed ones. The third factor is the temperature difference between inside and outside. Spaces such as pools, restaurants with active kitchens or heated atria carry a lot of moisture, and that moisture turns to water and then ice on the cold skin and frames, especially at the moving joints where the insulation is less continuous.",
+        "points": [
+          "Snow load on the skin is carried into the wheels, track and drive during movement, while the mechanism is usually selected for a defined working load.",
+          "Water left in the track, wheel channel and brush or gasket joint freezes and binds the moving part to the fixed part, so the drive is pulling against ice.",
+          "The control logic of many systems has only rain and wind sensors and does not recognise low temperature, lying snow or icing as a reason to block movement.",
+          "Warm, humid indoor air condenses on the cold skin and frames, and at the moving joints that water can freeze.",
+          "Closing-joint gutters are often shallow and exposed to cold air, and repeated melting and freezing blocks the outlet.",
+          "Fabric retracted while wet keeps moisture in the folds, and freeze-thaw cycles add wear to the coating and welded seams."
+        ]
+      },
+      "visual": {
+        "title": "Diagram of winter states of a retractable roof (pending verification)",
+        "description": "The verified diagram should show the three roof states side by side: closed, parked and moving; and for each, where snow settles, which points of the track and joints are prone to icing, the meltwater path and the zone of indoor condensation. This technical asset is still pending verification.",
+        "callouts": [
+          "Closed, parked and transition states",
+          "Icing of track, wheel and joint",
+          "Meltwater path and joint gutter",
+          "Condensation on cold inner surface"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL logic for defining winter operation of a retractable roof",
+        "steps": [
+          {
+            "title": "Clarify which states were designed for snow",
+            "description": "Design documents, calculations and the mechanism supplier's instructions are reviewed to establish in which state the roof was checked for snow and wind, and whether movement with snow on the skin is permitted. If the documents do not say, the permitted state must be confirmed in writing with the designer or supplier before the cold season; until then, the conservative assumption is that the roof is not moved during precipitation or with snow on the skin, and snow is removed promptly by an approved method."
+          },
+          {
+            "title": "Pre-winter inspection",
+            "description": "Tracks, wheel channels, wheels, cables or belts, the drive, limit switches, brushes and seals are inspected for dirt, wear, corrosion and standing water. Paths where water collects are cleaned and drained, and lubrication uses only a product the mechanism supplier allows for low temperatures."
+          },
+          {
+            "title": "Review drainage of the closed-state joints",
+            "description": "Gutters and outlets at the closing joint, their fall, capacity and discharge point are checked. Where meltwater refreezes and builds up behind the joint, the options of changing the geometry, adding outlets or local trace heating are reviewed together with the electrical designer and the supplier."
+          },
+          {
+            "title": "Add movement-blocking conditions to the controls",
+            "description": "Alongside the wind and rain sensors, conditions such as low temperature, risk of icing or snow on the skin are added to the stop or lockout logic in coordination with the control system supplier. Where sensors are not enough, a visual check of the skin, tracks and parking zone before every movement becomes mandatory in the operator's instructions."
+          },
+          {
+            "title": "Coordinate with building services to control condensation",
+            "description": "In warm, humid spaces, ventilation and dehumidification are coordinated with the mechanical designer so that moist air does not reach the cold skin just before full closure or during cold night hours. Locations where condensation has been observed are marked on the plan to separate them from genuine leaks."
+          },
+          {
+            "title": "Winter instructions and inspection after each event",
+            "description": "The roof position when snow is forecast, what to do with a roof that will not move, how to remove snow without damaging the skin, and the inspection after every snowfall, frost or strong wind are written down, and every abnormal movement, stop or drip is recorded in a log."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Should a retractable roof be open or closed during snowfall?",
+          "answer": "There is no general answer; it depends on the state in which the roof was designed and checked for snow load, and that must be taken from the design documents and the supplier's instructions. What is almost always right is to set the roof position before precipitation starts and not to move it during snowfall or with snow lying on the skin."
+        },
+        {
+          "question": "After a frosty night the roof will not move. What should we do?",
+          "answer": "Do not repeat the command and do not push the movement through by force or by hand. Stop the system in a safe state and inspect the tracks, wheels, joints and parking zone for ice, snow or foreign objects. Repeating the command against a frozen part can damage the drive, gearbox, wheels or seals. Once the cause is removed and the maintenance team approves, run a test movement."
+        },
+        {
+          "question": "Are winter drips at the joint of a retractable roof a leak or condensation?",
+          "answer": "If drops appear without precipitation, after cold nights, in warm and humid spaces and on inner surfaces of frames or skin, condensation is likely. If they appear only during rain or snowmelt and at a specific point of the joint or gutter, a leak or overflow is more likely. Recording the time, location and weather of each observation makes it possible to tell the two apart."
+        },
+        {
+          "question": "Can we open the roof to make the snow slide off?",
+          "answer": "Not unless the system was explicitly designed for it. Moving with snow on the skin puts extra load on the mechanism and sends snow and water into the parking zone, onto the tracks and onto the walkway below. Snow should be removed by a method defined in the maintenance instructions that does not damage the skin."
+        },
+        {
+          "question": "Are rain and wind sensors enough for winter operation?",
+          "answer": "Usually not. These sensors are designed to close the roof in time when it rains or to prevent movement in wind; they do not detect iced tracks or snow lying on the skin. Temperature conditions and a visual check before movement should be added to the operating logic in coordination with the control system supplier."
+        }
+      ],
+      "cta": {
+        "headline": "Define the winter scenario of your retractable roof before the frost",
+        "text": "Send the existing roof documents, the supplier's instructions and a note of any stop, unusual noise or drip, and SIPANEL's technical team will review the design states, mechanism, joint drainage and control logic and propose winter operating instructions."
+      }
+    },
+    "ar": {
+      "title": "السقف المتحرك في الثلج والصقيع: منطق التشغيل الشتوي",
+      "metaDescription": "متى يُفتح السقف المتحرك في الثلج والصقيع ومتى يُغلق؟ أثر الثلج وتجمد السكك والفواصل والتكثف الداخلي، ومنطق SIPANEL لتحديد سيناريو التشغيل الشتوي.",
+      "primaryKeyword": "السقف المتحرك في الثلج والصقيع",
+      "summary": "للسقف المتحرك في الشتاء ثلاث حالات: مغلق، ومطوي في موضع التخزين، وفي أثناء الحركة، ويؤثر الثلج والجليد في كل حالة بشكل مختلف. أخطر لحظة غالباً هي الحركة نفسها، عندما يكون الثلج متراكماً على الغلاف أو تكون السكك والفواصل متجمدة. قبل البرد يجب أن يتضح في أي حالة جرى التحقق من النظام للثلج، وما الشروط التي تمنع الحركة، ومن يفحص السقف قبل كل تشغيل.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "أول صباحات الصقيع: سقف لا يتحرك أو يقطر بعد الإغلاق",
+        "body": "مع وصول المنظومات المطرية الخريفية وتساقط الثلج على المرتفعات وانخفاض حرارة الليل، يواجه مشغلو الأسقف المتحركة في المطاعم والشرفات والأفنية الداخلية والمسابح والمجمعات الترفيهية أسئلة لم تكن مطروحة في الصيف. بعد ليلة باردة يستقبل المحرك الأمر، لكن الغطاء يتحرك متأخراً أو بصوت غير معتاد، وأحياناً توقف مفاتيح الحد الحركة. وفي الأيام التالية للثلج تظهر قطرات عند فاصل الإغلاق أو تحت المزاريب، ولا يُعرف إن كانت تسرباً أم تكثفاً. بعض المشغلين يفتحون السقف ويغلقونه قليلاً للتخلص من الثلج، وآخرون يطوون السقف النسيجي وهو مبلل ويتركونه حتى الربيع. في معظم هذه المشاريع لا تكمن المشكلة في عطل قطعة واحدة، بل في أن سيناريو التشغيل الشتوي لم يُحدد هندسياً، وترك قرار فتح السقف أو إغلاقه لتقدير المشغل.",
+        "points": [
+          "محرك يعمل تحت حمل أكبر في صباح بارد أو مفتاح حد يقطع الحركة يشير غالباً إلى جليد في السكة أو العجلة أو الفاصل، لا إلى ضعف المحرك.",
+          "القطرات التي تظهر بعد الليالي الباردة فقط في الفضاءات الدافئة الرطبة قد تكون تكثفاً على الغلاف والإطارات الباردة، لا تسرباً لمياه المطر.",
+          "تحريك السقف لإسقاط الثلج يوجه الثلج والماء إلى موضع تخزين الغطاء وإلى السكك وممر العبور أسفله.",
+          "السقف النسيجي الذي يُطوى مبللاً يحتفظ بالرطوبة في ثناياه، وقد يتصلب في الصقيع ويلتصق بالأجزاء المجاورة.",
+          "إذا تجمدت المزاريب والمخارج عند فواصل الحالة المغلقة، يتجمع ماء ذوبان الثلج خلفها ويفيض فوق الفاصل.",
+          "غياب تعليمات شتوية مكتوبة يجعل كل مشغل في كل وردية يتخذ قراراً مختلفاً."
+        ]
+      },
+      "cause": {
+        "title": "السقف المتحرك سقف واحد بعدة حالات، والثلج والجليد يتصرفان بشكل مختلف في كل منها",
+        "body": "للسقف الثابت حالة واحدة يُصمم لها في مواجهة الثلج والرياح. أما السقف المتحرك فله ثلاث حالات على الأقل: مغلق تماماً، ومطوي تماماً في موضع التخزين، وحالة انتقالية يكون فيها الغطاء في حركة. أي هذه الحالات جرى التحقق منها لأحمال الثلج والرياح قرار خاص بكل مشروع ويجب أن يكون واضحاً في وثائق التصميم؛ ففي بعض المشاريع الدولية البارزة جرى التحقق من وضعي التخزين والفرد معاً للأحمال التصميمية، لكن لا يمكن افتراض ذلك لكل نظام. الحالة الانتقالية هي الأكثر حساسية: أثناء الحركة يتغير مسار نقل القوى من الغلاف إلى العجلات والسكة والهيكل الثابت باستمرار، وأي حمل إضافي، مثل ثلج متراكم على الغلاف أو جليد يقاوم دوران عجلة، ينتقل مباشرة إلى وحدة الدفع وعلبة التروس. إلى جانب ذلك، فإن الأجزاء التي تحقق إحكام السقف المتحرك، أي الفرش والحشوات المطاطية والحواف المتراكبة ومزاريب فاصل الإغلاق، هي بالضبط المواضع التي يبقى فيها الماء، وفي الصقيع يربط الأجزاء المتحركة بالثابتة. العامل الثالث هو فرق الحرارة بين الداخل والخارج: فالمسابح والمطاعم ذات المطابخ العاملة والأتريومات المدفأة تحمل رطوبة عالية، تتحول على الغلاف والإطارات الباردة إلى ماء ثم إلى جليد، خصوصاً عند الفواصل المتحركة حيث تكون استمرارية العزل أقل.",
+        "points": [
+          "حمل الثلج على الغلاف ينتقل أثناء الحركة إلى العجلات والسكة ووحدة الدفع، بينما تُختار الآلية عادة لحمل تشغيل محدد.",
+          "الماء المتبقي في السكة ومجرى العجلة وفاصل الفرشاة أو الحشوة يتجمد ويربط الجزء المتحرك بالثابت، فتعمل وحدة الدفع ضد الجليد.",
+          "منطق التحكم في كثير من الأنظمة لا يضم إلا حساسات المطر والرياح، ولا يعد انخفاض الحرارة أو الثلج المتراكم أو التجمد سبباً لمنع الحركة.",
+          "الهواء الداخلي الدافئ الرطب يتكثف على الغلاف والإطارات الباردة، وقد يتجمد هذا الماء عند الفواصل المتحركة.",
+          "مزاريب فاصل الإغلاق غالباً ضحلة ومعرضة للهواء البارد، ودورات الذوبان والتجمد المتكررة تسد المخرج.",
+          "النسيج المطوي وهو مبلل يحتفظ بالرطوبة في الثنايا، ودورات التجمد والذوبان تزيد تآكل الطلاء ودرزات اللحام."
+        ]
+      },
+      "visual": {
+        "title": "مخطط الحالات الشتوية للسقف المتحرك (بانتظار التحقق)",
+        "description": "يجب أن يعرض المخطط المعتمد حالات السقف الثلاث جنباً إلى جنب: مغلق ومطوي وفي الحركة، ويحدد لكل منها موضع تراكم الثلج، والنقاط المعرضة للتجمد في السكة والفواصل، ومسار ماء الذوبان، ومنطقة التكثف الداخلي. هذا الأصل الفني ما زال بانتظار التحقق.",
+        "callouts": [
+          "الحالة المغلقة والمطوية والانتقالية",
+          "تجمد السكة والعجلة والفاصل",
+          "مسار ماء الذوبان ومزراب الفاصل",
+          "التكثف على السطح الداخلي البارد"
+        ]
+      },
+      "execution": {
+        "title": "منطق SIPANEL لتحديد التشغيل الشتوي للسقف المتحرك",
+        "steps": [
+          {
+            "title": "توضيح الحالات المصممة للثلج",
+            "description": "تُراجع وثائق التصميم والحسابات وتعليمات مورد الآلية لتحديد الحالة التي جرى فيها التحقق من السقف لأحمال الثلج والرياح، وهل يُسمح بالحركة مع وجود ثلج على الغلاف. إذا لم تحسم الوثائق ذلك، فيجب تأكيد الحالة المسموح بها كتابياً مع المصمم أو المورد قبل موسم البرد؛ وإلى ذلك الحين فالافتراض المتحفظ هو عدم تحريك السقف أثناء الهطول أو مع وجود ثلج على الغلاف، وإزالة الثلج في حينه بطريقة معتمدة."
+          },
+          {
+            "title": "الفحص قبل البرد",
+            "description": "تُفحص السكك ومجاري العجلات والعجلات والكابلات أو السيور ووحدة الدفع ومفاتيح الحد والفرش وحشوات الإحكام من حيث الاتساخ والتآكل والصدأ وتجمع الماء. تُنظف المسارات التي يبقى فيها الماء وتُصرف، ويقتصر التشحيم على منتج يجيزه مورد الآلية للحرارة المنخفضة."
+          },
+          {
+            "title": "مراجعة تصريف فواصل الحالة المغلقة",
+            "description": "تُفحص مزاريب ومخارج فاصل الإغلاق وميلها وسعتها ونقطة تصريف الماء. وحيث يعود ماء الذوبان إلى التجمد ويتجمع خلف الفاصل، تُدرس خيارات تعديل الشكل أو زيادة المخارج أو التدفئة الموضعية بالتنسيق مع مصمم الأنظمة الكهربائية والمورد."
+          },
+          {
+            "title": "إضافة شروط منع الحركة إلى منطق التحكم",
+            "description": "إلى جانب حساسي الرياح والمطر، تُضاف شروط مثل انخفاض الحرارة أو احتمال التجمد أو وجود ثلج على الغلاف إلى منطق الإيقاف أو القفل بالتنسيق مع مورد نظام التحكم. وحيث لا تكفي الحساسات، يصبح الفحص البصري للغلاف والسكك وموضع التخزين قبل كل حركة إلزامياً في تعليمات المشغل."
+          },
+          {
+            "title": "التنسيق مع الأنظمة الميكانيكية للحد من التكثف",
+            "description": "في الفضاءات الدافئة الرطبة تُنسق التهوية وإزالة الرطوبة مع المصمم الميكانيكي حتى لا يصل الهواء الرطب إلى الغلاف البارد قبيل الإغلاق الكامل أو في ساعات الليل الباردة. وتُسجل مواضع التكثف المرصودة على المخطط لفصلها عن التسربات الفعلية."
+          },
+          {
+            "title": "تعليمات شتوية وفحص بعد كل حدث",
+            "description": "تُكتب وضعية السقف عند توقع الثلج، وطريقة التعامل مع سقف لا يتحرك، وأسلوب إزالة الثلج دون الإضرار بالغلاف، والفحص بعد كل تساقط ثلج أو صقيع أو رياح شديدة، ويُسجل كل تحرك غير طبيعي أو توقف أو تقطير في سجل خاص."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "هل يجب أن يكون السقف المتحرك مفتوحاً أم مغلقاً أثناء تساقط الثلج؟",
+          "answer": "لا توجد إجابة عامة؛ فالأمر يعتمد على الحالة التي صُمم فيها السقف وجرى التحقق منه لحمل الثلج، ويجب استخلاص ذلك من وثائق التصميم وتعليمات المورد. ما يصح غالباً هو تحديد وضعية السقف قبل بدء الهطول، وعدم تحريكه أثناء تساقط الثلج أو مع وجود ثلج على الغلاف."
+        },
+        {
+          "question": "بعد ليلة صقيع لا يتحرك السقف، فماذا نفعل؟",
+          "answer": "لا تكرروا الأمر ولا تدفعوا الحركة بالقوة أو يدوياً. أوقفوا النظام في حالة آمنة وافحصوا السكك والعجلات والفواصل وموضع التخزين بحثاً عن جليد أو ثلج أو أجسام غريبة. فتكرار الأمر على قطعة متجمدة قد يتلف وحدة الدفع أو علبة التروس أو العجلات أو حشوات الإحكام. وبعد إزالة السبب وموافقة فريق الصيانة تُجرى حركة تجريبية."
+        },
+        {
+          "question": "هل القطرات الشتوية عند فاصل السقف المتحرك تسرب أم تكثف؟",
+          "answer": "إذا ظهرت القطرات دون هطول، وبعد ليال باردة، في فضاءات دافئة رطبة وعلى الأسطح الداخلية للإطارات أو الغلاف، فالتكثف مرجح. وإذا ظهرت فقط أثناء المطر أو ذوبان الثلج وفي موضع محدد من الفاصل أو المزراب، فالتسرب أو الفيضان أرجح. تسجيل وقت كل ملاحظة وموضعها والأحوال الجوية يتيح التمييز بينهما."
+        },
+        {
+          "question": "هل يمكن فتح السقف لإسقاط الثلج عنه؟",
+          "answer": "لا، ما لم يكن النظام مصمماً لذلك صراحة. فالحركة مع وجود ثلج على الغلاف تضيف حملاً على الآلية، وتوجه الثلج والماء إلى موضع التخزين والسكك وممر العبور أسفل السقف. ويجب إزالة الثلج بطريقة محددة في تعليمات الصيانة لا تضر بالغلاف."
+        },
+        {
+          "question": "هل تكفي حساسات المطر والرياح للتشغيل الشتوي؟",
+          "answer": "غالباً لا. فهذه الحساسات مصممة لإغلاق السقف في الوقت المناسب عند المطر أو لمنع الحركة في الرياح، ولا تكتشف تجمد السكك أو الثلج المتراكم على الغلاف. يجب إضافة شروط الحرارة وفحص بصري قبل الحركة إلى منطق التشغيل بالتنسيق مع مورد نظام التحكم."
+        }
+      ],
+      "cta": {
+        "headline": "حددوا السيناريو الشتوي لسقفكم المتحرك قبل الصقيع",
+        "text": "أرسلوا وثائق السقف الحالية وتعليمات المورد وملاحظة عن أي توقف أو صوت غير معتاد أو تقطير، ليراجع الفريق الفني في SIPANEL حالات التصميم والآلية وتصريف الفواصل ومنطق التحكم ويقترح تعليمات التشغيل الشتوي."
+      }
+    },
+    "ru": {
+      "title": "Раздвижная кровля в снег и мороз: логика зимней эксплуатации",
+      "metaDescription": "Когда открывать и закрывать раздвижную кровлю в снег и мороз? Снег, обледенение рельсов и уплотнений, конденсат внутри и логика SIPANEL для зимнего режима.",
+      "primaryKeyword": "раздвижная кровля в снег и мороз",
+      "summary": "Зимой у раздвижной кровли три состояния: закрытое, сложенное в зоне парковки и движение, и снег со льдом влияют на каждое по-разному. Самый рискованный момент обычно — само движение, когда на оболочке лежит снег или рельсы и уплотнения обледенели. До холодов нужно установить, в каком состоянии система проверена на снег, какие условия запрещают движение и кто осматривает кровлю перед каждым запуском.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "Первые морозные утра: кровля не двигается или капает после закрытия",
+        "body": "С приходом осенних осадков, снега в горах и ночного похолодания операторы раздвижных кровель над ресторанами, террасами, внутренними дворами, бассейнами и развлекательными комплексами сталкиваются с вопросами, которых летом не было. После холодной ночи привод получает команду, но покрытие трогается с задержкой или с необычным шумом, а иногда концевые выключатели прерывают движение. В дни после снегопада у шва закрытия или под желобами появляются капли, и непонятно, протечка это или конденсат. Одни операторы немного открывают и закрывают кровлю, чтобы стряхнуть снег; другие складывают мокрую тканевую кровлю и не раскрывают её до весны. В большинстве таких проектов главная проблема не в отказе отдельной детали, а в том, что зимний сценарий эксплуатации так и не был определён инженерно, и решение держать кровлю открытой или закрытой оставлено на усмотрение оператора.",
+        "points": [
+          "Привод, работающий с повышенной нагрузкой холодным утром, или срабатывание концевика чаще указывают на лёд в рельсе, колесе или шве, а не на слабый двигатель.",
+          "Капли, появляющиеся только после холодных ночей в тёплых влажных помещениях, могут быть конденсатом на холодной оболочке и рамах, а не протечкой дождевой воды.",
+          "Движение кровли ради сброса снега направляет снег и воду в зону парковки покрытия, на рельсы и на проход внизу.",
+          "Тканевая кровля, сложенная мокрой, удерживает влагу в складках и на морозе может затвердеть и примёрзнуть к соседним элементам.",
+          "Если желоба и водосливы у швов закрытого состояния замерзают, талая вода скапливается за ними и переливается через шов.",
+          "Без письменной зимней инструкции каждый оператор в каждой смене принимает своё решение."
+        ]
+      },
+      "cause": {
+        "title": "Раздвижная кровля — одна кровля с несколькими состояниями, и снег и лёд ведут себя в каждом по-разному",
+        "body": "У неподвижной кровли одно состояние, и на снег и ветер она рассчитывается именно для него. У раздвижной кровли их как минимум три: полностью закрытое, полностью сложенное в зоне парковки и переходное, когда покрытие движется. Какие из этих состояний проверены на снеговую и ветровую нагрузку, решается для каждого проекта отдельно и должно быть явно указано в проектной документации. В некоторых известных международных проектах на расчётные нагрузки проверялись и сложенное, и раскрытое положения, но предполагать это для любой системы нельзя. Переходное состояние наиболее чувствительно: при движении путь передачи усилий от оболочки к колёсам, рельсу и неподвижной конструкции постоянно меняется, и любая дополнительная нагрузка, например лежащий на оболочке снег или лёд, тормозящий колесо, напрямую передаётся на привод и редуктор. Кроме того, элементы, обеспечивающие герметичность раздвижной кровли — щётки, резиновые уплотнители, нахлёсты кромок и желоба шва закрытия, — это именно те места, где задерживается вода, а на морозе она связывает подвижные части с неподвижными. Третий фактор — разница температур внутри и снаружи. Бассейны, рестораны с работающей кухней и отапливаемые атриумы отличаются высокой влажностью, и эта влага превращается в воду, а затем в лёд на холодной оболочке и рамах, особенно у подвижных швов, где непрерывность теплоизоляции ниже.",
+        "points": [
+          "Снеговая нагрузка на оболочке при движении передаётся на колёса, рельс и привод, тогда как механизм обычно подбирается под определённую рабочую нагрузку.",
+          "Вода, оставшаяся в рельсе, канале колеса и шве щётки или уплотнителя, замерзает и связывает подвижную часть с неподвижной, и привод работает против льда.",
+          "Логика управления многих систем включает только датчики дождя и ветра и не считает низкую температуру, лежащий снег или обледенение причиной запрета движения.",
+          "Тёплый влажный внутренний воздух конденсируется на холодной оболочке и рамах, и у подвижных швов эта вода может замерзнуть.",
+          "Желоба шва закрытия часто неглубоки и открыты холодному воздуху, а повторяющиеся циклы таяния и замерзания перекрывают водослив.",
+          "Ткань, сложенная мокрой, сохраняет влагу в складках, а циклы замораживания и оттаивания ускоряют износ покрытия и сварных швов."
+        ]
+      },
+      "visual": {
+        "title": "Схема зимних состояний раздвижной кровли (ожидает проверки)",
+        "description": "Проверенная схема должна показать рядом три состояния кровли: закрытое, сложенное и движение, и для каждого отметить, где оседает снег, какие точки рельсов и швов подвержены обледенению, путь талой воды и зону внутреннего конденсата. Этот технический материал пока ожидает проверки.",
+        "callouts": [
+          "Закрытое, сложенное и переходное состояние",
+          "Обледенение рельса, колеса и шва",
+          "Путь талой воды и желоб шва",
+          "Конденсат на холодной внутренней поверхности"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для определения зимней эксплуатации раздвижной кровли",
+        "steps": [
+          {
+            "title": "Выяснить, какие состояния рассчитаны на снег",
+            "description": "Проверяются проектная документация, расчёты и инструкции поставщика механизма, чтобы установить, в каком состоянии кровля проверена на снег и ветер и допускается ли движение со снегом на оболочке. Если документы этого не определяют, допустимое состояние нужно до холодов письменно подтвердить у проектировщика или поставщика; до этого консервативное допущение — не двигать кровлю во время осадков и со снегом на оболочке, а снег своевременно убирать согласованным способом."
+          },
+          {
+            "title": "Осмотр до наступления холодов",
+            "description": "Рельсы, каналы колёс, колёса, тросы или ремни, привод, концевые выключатели, щётки и уплотнители осматриваются на загрязнение, износ, коррозию и застой воды. Места, где скапливается вода, очищаются и дренируются, а смазка применяется только та, которую поставщик механизма допускает для низких температур."
+          },
+          {
+            "title": "Проверка водоотвода швов закрытого состояния",
+            "description": "Проверяются желоба и водосливы шва закрытия, их уклон, пропускная способность и точка сброса воды. Там, где талая вода снова замерзает и скапливается за швом, совместно с проектировщиком электротехнической части и поставщиком рассматриваются изменение геометрии, дополнительные водосливы или локальный электрообогрев."
+          },
+          {
+            "title": "Добавить условия запрета движения в логику управления",
+            "description": "Наряду с датчиками ветра и дождя в логику остановки или блокировки по согласованию с поставщиком системы управления добавляются условия низкой температуры, риска обледенения или снега на оболочке. Где датчиков недостаточно, визуальный осмотр оболочки, рельсов и зоны парковки перед каждым движением становится обязательным в инструкции оператора."
+          },
+          {
+            "title": "Согласование с инженерными системами для контроля конденсата",
+            "description": "В тёплых влажных помещениях вентиляция и осушение согласуются с проектировщиком ОВК, чтобы влажный воздух не попадал на холодную оболочку непосредственно перед полным закрытием или в холодные ночные часы. Места, где наблюдался конденсат, отмечаются на плане, чтобы отличать их от реальных протечек."
+          },
+          {
+            "title": "Зимняя инструкция и осмотр после каждого события",
+            "description": "Письменно фиксируются положение кровли при прогнозе снега, действия при кровле, которая не двигается, способ уборки снега без повреждения оболочки и осмотр после каждого снегопада, мороза или сильного ветра, а каждое нештатное движение, остановка или капание записывается в журнал."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Во время снегопада раздвижная кровля должна быть открыта или закрыта?",
+          "answer": "Общего ответа нет: всё зависит от того, в каком состоянии кровля рассчитана и проверена на снеговую нагрузку, и это нужно взять из проектной документации и инструкций поставщика. Почти всегда верно одно: положение кровли определяется до начала осадков, и во время снегопада или со снегом на оболочке её не двигают."
+        },
+        {
+          "question": "После морозной ночи кровля не двигается. Что делать?",
+          "answer": "Не повторяйте команду и не пытайтесь сдвинуть кровлю силой или вручную. Остановите систему в безопасном состоянии и осмотрите рельсы, колёса, швы и зону парковки на наличие льда, снега или посторонних предметов. Повторная команда против примёрзшей детали может повредить привод, редуктор, колёса или уплотнители. После устранения причины и одобрения службы эксплуатации выполните пробное движение."
+        },
+        {
+          "question": "Зимние капли у шва раздвижной кровли — протечка или конденсат?",
+          "answer": "Если капли появляются без осадков, после холодных ночей, в тёплых влажных помещениях и на внутренних поверхностях рам или оболочки, вероятнее конденсат. Если только во время дождя или таяния снега и в определённой точке шва или желоба, вероятнее протечка или перелив. Запись времени, места и погоды при каждом наблюдении позволяет различить эти случаи."
+        },
+        {
+          "question": "Можно ли открыть кровлю, чтобы снег соскользнул?",
+          "answer": "Нет, если система прямо не рассчитана на это. Движение со снегом на оболочке дополнительно нагружает механизм и направляет снег и воду в зону парковки, на рельсы и на проход под кровлей. Снег следует убирать способом, определённым в инструкции по обслуживанию и не повреждающим оболочку."
+        },
+        {
+          "question": "Достаточно ли датчиков дождя и ветра для зимней эксплуатации?",
+          "answer": "Обычно нет. Эти датчики предназначены для своевременного закрытия при дожде или запрета движения при ветре и не распознают обледенение рельсов или лежащий на оболочке снег. Температурные условия и визуальный осмотр перед движением нужно добавить в логику эксплуатации по согласованию с поставщиком системы управления."
+        }
+      ],
+      "cta": {
+        "headline": "Определите зимний сценарий раздвижной кровли до морозов",
+        "text": "Отправьте имеющуюся документацию по кровле, инструкции поставщика и описание любых остановок, необычного шума или капания, и техническая команда SIPANEL проверит расчётные состояния, механизм, водоотвод швов и логику управления и предложит зимнюю инструкцию по эксплуатации."
+      }
+    }
+  }
+}
