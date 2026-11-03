@@ -3,9 +3,10 @@
 import article0 from '@/content/insights/aluminium-cladding-facade-joint-control.json';
 import article1 from '@/content/insights/retractable-roof-winter-snow-ice-operation.json';
 import article2 from '@/content/insights/rooflight-drip-leak-or-condensation-diagnosis.json';
-import article3 from '@/content/insights/sandwich-panel-joint-leakage-risk.json';
-import article4 from '@/content/insights/standing-seam-roof-drainage-logic.json';
-import article5 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
+import article3 from '@/content/insights/sandwich-panel-building-heat-loss-air-leakage.json';
+import article4 from '@/content/insights/sandwich-panel-joint-leakage-risk.json';
+import article5 from '@/content/insights/standing-seam-roof-drainage-logic.json';
+import article6 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
 
 export const rawInsightArticleFiles: unknown[] = [
   article0,
@@ -13,5 +14,6 @@ export const rawInsightArticleFiles: unknown[] = [
   article2,
   article3,
   article4,
-  article5
+  article5,
+  article6
 ];

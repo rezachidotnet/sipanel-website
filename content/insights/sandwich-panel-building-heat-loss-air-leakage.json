@@ -1,0 +1,439 @@
+{
+  "slug": "sandwich-panel-building-heat-loss-air-leakage",
+  "category": "panel_systems",
+  "status": "published",
+  "publishedAt": "2026-11-03",
+  "updatedAt": "2026-11-03",
+  "faqIds": [
+    "does-thicker-panel-solve-heat-loss",
+    "how-to-find-air-leaks",
+    "best-time-for-thermal-survey",
+    "spray-foam-on-joints",
+    "heat-loss-and-condensation",
+    "estimating-energy-saving"
+  ],
+  "relatedProjects": [
+    "mehrabad-aircraft-hangar",
+    "army-hospital",
+    "kermanshah-industrial-university-petroleum-faculty"
+  ],
+  "relatedInsights": [
+    "sandwich-panel-joint-leakage-risk",
+    "rooflight-drip-leak-or-condensation-diagnosis"
+  ],
+  "relatedResources": [
+    "sandwich-panel-selection-guide",
+    "shop-drawing-review-guide"
+  ],
+  "trend": {
+    "topic": "Early cold and the jump in Iranian gas demand of Aban 1405 (late October 2026): heat loss through occupied sandwich panel buildings",
+    "rationale": "On 8 Aban 1405 the CEO of the National Iranian Gas Company reported a sharp five-day rise in gas use as temperatures fell, warned of pressure on about eleven provinces this winter, and said some industrial units may need alternative fuels on peak days. Owners of heated factories and halls now need ways to cut heating demand. SIPANEL's sandwich panel article covers water at joints, but nothing on the site explains air leakage and thermal weak points, although European research on steel sandwich panels shows joints and openings can downgrade thermal performance. ETFE, first in rotation, was set aside: no fresh Iranian demand signal and no verified SIPANEL project.",
+    "observedAt": "2026-11-03",
+    "sources": [
+      "https://eco.shafaqna.com/FA/336398/%D9%85%D8%B5%D8%B1%D9%81-%DA%AF%D8%A7%D8%B2-%D8%AF%D8%B1-%DB%B5-%D8%B1%D9%88%D8%B2-%DB%B3%DB%B0-%D8%AF%D8%B1%D8%B5%D8%AF-%D8%A8%D8%A7%D9%84%D8%A7-%D8%B1%D9%81%D8%AA/",
+      "https://www.khabaronline.ir/news/2295262/%D9%85%D8%AF%DB%8C%D8%B1%D8%B9%D8%A7%D9%85%D9%84-%D8%B4%D8%B1%DA%A9%D8%AA-%D9%85%D9%84%DB%8C-%DA%AF%D8%A7%D8%B2-%D9%85%D8%B5%D8%B1%D9%81-%DA%AF%D8%A7%D8%B2-%D8%AF%D8%B1-%DB%B5-%D8%B1%D9%88%D8%B2-%DB%B3%DB%B0-%D8%AF%D8%B1%D8%B5%D8%AF-%D8%A8%D8%A7%D9%84%D8%A7-%D8%B1%D9%81%D8%AA",
+      "https://www.mehrnews.com/news/6993526/%D9%85%D8%B5%D8%B1%D9%81-%DA%AF%D8%A7%D8%B2-%D8%A8%D8%AE%D8%B4-%D8%AE%D8%A7%D9%86%DA%AF%DB%8C-%D9%88-%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%DB%B3%DB%B0-%D8%AF%D8%B1%D8%B5%D8%AF-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%DB%8C%D8%A7%D9%81%D8%AA",
+      "https://www.e3s-conferences.org/articles/e3sconf/abs/2020/32/e3sconf_nsb2020_05008/e3sconf_nsb2020_05008.html",
+      "https://www.cordis.europa.eu/docs/results/213/213302/final1-easie-final-report.pdf"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "اتلاف حرارت سوله ساندویچ پانلی؛ گرما از کجا فرار می‌کند؟",
+      "metaDescription": "در اتلاف حرارت سوله ساندویچ پانلی، نقاط ضعف معمولاً درزها و تقاطع‌ها هستند نه وسط پانل. شناسایی نشت هوا و پل حرارتی و ترتیب اصلاح پیش از تعویض پانل را ببینید.",
+      "primaryKeyword": "اتلاف حرارت سوله ساندویچ پانلی",
+      "summary": "در سوله ساندویچ پانلی، وسط پانل معمولاً قوی‌ترین بخش پوسته است و نقاط ضعف در درز پانل‌ها، تقاطع سقف و دیوار، بازشوها و جاهایی است که فلز از لایه عایق عبور می‌کند. پس پیش از تعویض پانل باید سهم نشت هوا و پل‌های حرارتی اندازه‌گیری شود. ترتیب درست: اندازه‌گیری در هوای سرد، آب‌بندی هوایی از سمت گرم و اصلاح جزئیات، و در آخر تصمیم درباره تعویض.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "گرمایش روشن است، اما سالن گرم نمی‌ماند",
+        "body": "با سرد شدن هوا در آبان، مدیرعامل شرکت ملی گاز از جهش مصرف گاز در چند روز خبر داد و گفت برخی واحدهای صنعتی ممکن است در روزهای اوج مصرف ناچار به استفاده از سوخت جایگزین شوند. برای مالک یک کارخانه، انبار یا سالن دارای گرمایش، این خبر یک پرسش عملی دارد: پوسته ساختمان چقدر از گرمای تولیدشده را نگه می‌دارد؟ نشانه‌های مشکل معمولاً آشناست: بالای سالن گرم و کف آن سرد است؛ نزدیک درهای بارگیری کوران حس می‌شود؛ هیترها بیش از انتظار روشن می‌مانند؛ و کارکنان از سرمای کنار دیوارها شکایت دارند. واکنش رایج این است که پانل کم‌ضخامت مقصر دانسته شود و پیشنهاد تعویض یا افزودن عایق مطرح شود. اما پانلی که روی کاغذ مقاومت حرارتی مناسبی دارد، در ساختمان واقعی فقط یکی از اجزای پوسته است. اگر هوای گرم از درزها بیرون برود و هوای سرد از پایین درها وارد شود، عدد خوب روی برگه مشخصات هم تصویر کاملی از رفتار ساختمان نمی‌دهد.",
+        "points": [
+          "اختلاف دمای محسوس بین زیر سقف و سطح کار، نشانه لایه‌بندی هوای گرم است و اگر بالای سالن نشت هوا داشته باشد، هدررفت را بیشتر می‌کند.",
+          "کوران هوای سرد در ارتفاع پایین، حتی با درهای بسته، معمولاً به نشت هوا در پای دیوار، دور درها یا درزهای پانل اشاره دارد.",
+          "خطوط تیره یا لکه در امتداد درزها و تقاطع‌ها می‌تواند نشانه عبور مداوم هوا و رسوب گردوغبار باشد و باید بررسی شود.",
+          "یخ یا برف زودآب‌شده در خطوطی منظم روی سقف، ممکن است مسیر خروج گرما را از زیر پوشش نشان دهد.",
+          "چکه یا رطوبت موضعی زیر درزها در هوای سرد می‌تواند به خروج هوای مرطوب از درز مربوط باشد، نه ورود آب باران."
+        ]
+      },
+      "cause": {
+        "title": "پانل یک لایه پیوسته نیست؛ درزها و تقاطع‌ها رفتار پوسته را تعیین می‌کنند",
+        "body": "رویه فولادی ساندویچ پانل در برابر هوا تقریباً نفوذناپذیر است، پس پرسش اصلی به درز میان پانل‌ها و محل اتصال آن‌ها به اجزای دیگر برمی‌گردد. پژوهش‌های اروپایی روی پانل‌های فولادی نشان داده‌اند که درزها و بازشوها می‌توانند عملکرد حرارتی پوسته را پایین بیاورند و نفوذپذیری هوا به سه عامل وابسته است: هندسه درز، نوار آب‌بند مناسب، و رواداری ساخت و نصب. همین منابع تأکید می‌کنند که دقت در نصب نوار آب‌بند تعیین‌کننده است و با جزئیات درست، آب‌بندی هوایی بسیار خوب دست‌یافتنی است. در محاسبه هم این دو پدیده از هم جدا نیستند: پژوهشگران برای محاسبات تقریبی انرژی، هدررفت انتقالی از پانل و هدررفت ناشی از جریان هوا را در یک ضریب مؤثر انتقال حرارت کنار هم می‌گذارند. تا وقتی سالن گرم است، این جریان هوا نیروی محرک دارد. در فضای بلند و گرم، هوای گرم بالا می‌رود و در بخش فوقانی به بیرون فشار می‌آورد، در حالی که هوای سرد از پایین جایگزین آن می‌شود. باد هم فشار خودش را به این اختلاف اضافه می‌کند و در روزهای بادی گاهی اثرش بیشتر است. هر چه در بالا و پایین پوسته درز باز بیشتری باشد، جریان هوا هم بیشتر می‌شود. عامل دوم پل حرارتی است، یعنی جایی که فلز یا قطعه رسانا گرما را از کنار عایق عبور می‌دهد.",
+        "points": [
+          "درز طولی پانل با فاصله نصب نادرست، پیچ‌وتاب ورق یا نوار جاافتاده یا جابه‌جاشده، مسیر پیوسته‌ای برای عبور هوا می‌سازد.",
+          "تقاطع سقف و دیوار، تاج سقف و پای دیوار معمولاً به فلاشینگ متکی‌اند و اگر پشت فلاشینگ با عایق و آب‌بند هوایی پر نشده باشد، فقط از باران محافظت می‌کنند نه از هوا.",
+          "محل بریدن پانل برای کانال، لوله، هواکش یا نورگیر اگر بدون جزئیات آب‌بندی و عایق بسته شود، هم نشت هوا دارد و هم پیوستگی عایق را قطع می‌کند.",
+          "قطعات فلزی عبوری مانند براکت سایبان، تکیه‌گاه تأسیسات و پیچ‌های بلند، پل حرارتی نقطه‌ای یا خطی ایجاد می‌کنند.",
+          "درهای بارگیری و درهای صنعتی اگر زیاد باز بمانند یا درزگیر فرسوده داشته باشند، گاهی از کل درزهای پوسته هوای بیشتری جابه‌جا می‌کنند.",
+          "نصب شتاب‌زده و نشست سازه با گذشت زمان می‌توانند درزی را که در روز تحویل بسته بوده باز کنند؛ پس بازدید دوره‌ای لازم است."
+        ]
+      },
+      "visual": {
+        "title": "نقشه مسیرهای فرار گرما در سوله ساندویچ پانلی (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید مقطع یک سوله را نشان دهد: جریان هوای گرم به سمت بالا و خروج از تاج و تقاطع‌ها، ورود هوای سرد از پای دیوار و درها، و پل‌های حرارتی در قطعات عبوری. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "درز طولی و نوار آب‌بند",
+          "تاج سقف و تقاطع سقف با دیوار",
+          "پای دیوار و محیط درها",
+          "قطعات فلزی عبوری و پل حرارتی"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای کاهش اتلاف حرارت پیش از تعویض پانل",
+        "steps": [
+          {
+            "title": "جمع‌آوری مدارک و نشانه‌ها",
+            "description": "نقشه‌های اجرایی، مشخصات پانل و هسته، جزئیات تقاطع‌ها، نوع گرمایش و الگوی باز و بسته شدن درها بررسی می‌شود. گزارش بهره‌بردار درباره نقاط سرد، کوران و چکه روی پلان ثبت می‌شود تا بازدید از حدس آغاز نشود."
+          },
+          {
+            "title": "بازدید در شرایط مناسب اندازه‌گیری",
+            "description": "ترموگرافی در هوای سرد و با گرمایش روشن انجام می‌شود تا اختلاف دمای کافی وجود داشته باشد. نقاط مشکوک با دود آزمایشی یا در صورت امکان آزمون فشار با فن تأیید می‌شوند. هر نقطه با عکس و موقعیت روی پلان ثبت می‌شود، چون تصویر حرارتی بدون تفسیر می‌تواند گمراه‌کننده باشد."
+          },
+          {
+            "title": "تفکیک نشت هوا از پل حرارتی و ضعف عایق",
+            "description": "برای هر یافته مشخص می‌شود ریشه آن عبور هوا، قطعه رسانا، هسته آسیب‌دیده یا فقدان عایق پشت فلاشینگ است. این تفکیک تعیین می‌کند راه‌حل، آب‌بندی، اصلاح جزئیات یا تعویض موضعی پانل باشد."
+          },
+          {
+            "title": "اصلاح به ترتیب اثر و ریسک",
+            "description": "اگر اندازه‌گیری نتیجه دیگری نشان ندهد، معمولاً ابتدا درها و بازشوهای بزرگ، سپس تاج سقف و پای دیوار، و بعد درزها و نفوذها اصلاح می‌شوند. اصل کار آب‌بندی هوایی از سمت گرم و حفظ مسیر زهکشی در سمت سرد است. هر مصالح جدید باید با نوع هسته، رویه و الزامات حریق پروژه سازگار باشد."
+          },
+          {
+            "title": "هماهنگی با تأسیسات",
+            "description": "با طراح تأسیسات درباره محل هیترها، جابه‌جایی هوای لایه‌بندی‌شده، پرده هوا و نحوه کارکرد درها تصمیم گرفته می‌شود. آب‌بند کردن پوسته می‌تواند نیاز تهویه و رطوبت داخل را تغییر دهد و اگر هیتر گازی هوای احتراق را از داخل سالن می‌گیرد، تأمین این هوا هم باید کنترل شود؛ پس این موارد هم‌زمان بررسی می‌شوند."
+          },
+          {
+            "title": "تأیید پس از اصلاح و برنامه بازدید",
+            "description": "همان نقاط پس از اصلاح و در شرایط مشابه دوباره کنترل می‌شوند و نتیجه ثبت می‌شود. برای درزها، تقاطع‌ها و درهای پرتردد برنامه بازدید دوره‌ای تعریف می‌شود تا فرسودگی و نشست به‌موقع دیده شود."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "آیا با پانل ضخیم‌تر مشکل اتلاف حرارت حل می‌شود؟",
+          "answer": "نه لزوماً. ضخامت بیشتر هدررفت از وسط پانل را کم می‌کند، اما نشت هوا از درز و تقاطع را اصلاح نمی‌کند. اگر مسیر اصلی فرار گرما جزئیات باشد، تعویض پانل هزینه را بالا می‌برد و ممکن است همان مشکل در جزئیات تازه تکرار شود. ابتدا باید با اندازه‌گیری مشخص شود سهم کدام مسیر بیشتر است."
+        },
+        {
+          "question": "نشت هوا در سوله را چطور پیدا کنیم؟",
+          "answer": "ترکیب ترموگرافی در هوای سرد، بازدید چشمی از درزها و فلاشینگ‌ها و دود آزمایشی بیشترین اطلاعات عملی را می‌دهد. در ساختمان‌هایی که امکانش هست، آزمون فشار با فن تصویر کلی آب‌بندی را نشان می‌دهد. تصویر حرارتی به‌تنهایی کافی نیست، چون سطوح براق بازتاب ایجاد می‌کنند و ممکن است نقطه سرد به پل حرارتی مربوط باشد نه نشت هوا."
+        },
+        {
+          "question": "ترموگرافی سوله را چه زمانی باید انجام داد؟",
+          "answer": "زمانی که گرمایش مدتی روشن بوده و اختلاف دمای داخل و بیرون قابل توجه است؛ معمولاً پیش از طلوع آفتاب یا پس از غروب، وقتی سطح پانل زیر تابش مستقیم گرم نشده و باد کم است. به همین دلیل همین ماه‌های سرد برای برداشت داده مناسب‌اند."
+        },
+        {
+          "question": "آیا می‌شود درزها را با اسپری فوم پر کرد؟",
+          "answer": "به‌عنوان راه‌حل عمومی توصیه نمی‌شود. فوم ممکن است مسیر زهکشی را ببندد، چسبندگی پایداری با رویه و پوشش پانل نداشته باشد، با حرکت حرارتی ترک بخورد و در الزامات حریق مشکل ایجاد کند. انتخاب نوار، ماستیک یا عایق باید بر اساس جزئیات اتصال، نوع هسته و الزامات حریق پروژه انجام شود."
+        },
+        {
+          "question": "اتلاف حرارت چه ربطی به تعریق و چکه دارد؟",
+          "answer": "هوای گرم و مرطوبی که از درز خارج می‌شود، در مسیر به سطح سرد می‌رسد و اگر دمای آن سطح از نقطه شبنم هوا پایین‌تر باشد، رطوبتش میعان می‌شود. این آب ممکن است به شکل چکه ظاهر شود یا در اطراف درز بماند و با نشتی باران اشتباه گرفته شود. به همین دلیل آب‌بندی هوایی از سمت گرم هم انرژی را حفظ می‌کند و هم ریسک رطوبت را کم می‌کند."
+        },
+        {
+          "question": "میزان صرفه‌جویی اصلاح پوسته را می‌توان از قبل گفت؟",
+          "answer": "عدد عمومی قابل اتکایی وجود ندارد، چون نتیجه به اقلیم، ارتفاع سالن، الگوی بهره‌برداری، نوع گرمایش و وضعیت فعلی درزها بستگی دارد. برآورد معتبر پس از اندازه‌گیری وضع موجود و مقایسه مصرف قبل و بعد از اصلاح در شرایط مشابه به دست می‌آید."
+        }
+      ],
+      "cta": {
+        "headline": "پیش از تعویض پانل، مسیر فرار گرما را مشخص کنید",
+        "text": "نقشه‌ها، مشخصات پانل، عکس درزها و تقاطع‌ها و هر گزارش از نقاط سرد، کوران یا چکه را ارسال کنید تا تیم فنی سی‌پانل پوسته سوله را بازبینی کند و اولویت اصلاح جزئیات را پیشنهاد دهد."
+      }
+    },
+    "en": {
+      "title": "Sandwich Panel Building Heat Loss: Where the Heat Escapes",
+      "metaDescription": "Sandwich panel building heat loss: weak points are usually joints and interfaces, not mid-panel. How to find air leaks and thermal bridges and what to fix.",
+      "primaryKeyword": "sandwich panel building heat loss",
+      "summary": "In a sandwich panel building, the middle of the panel is usually the strongest part of the envelope. The weak points are panel joints, roof-wall junctions, openings, and places where metal crosses the insulation layer. Air leakage and thermal bridges should be measured before panels are replaced. The sound order: measure in cold weather, seal on the warm side, correct details, and only then decide on replacement.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "The heating runs, yet the hall does not stay warm",
+        "body": "As temperatures fell in late October, the head of the National Iranian Gas Company reported a sharp jump in gas use within days and said some industrial units may need alternative fuels on peak-demand days. For the owner of a heated factory, warehouse, or hall, that news raises a practical question: how much of the heat being produced does the building envelope actually keep? The symptoms are familiar. The top of the hall is warm while the floor is cold, draughts are felt near loading doors, heaters run longer than expected, and staff complain about cold along the walls. The usual reaction is to blame thin panels and propose replacement or extra insulation. But a panel with good thermal resistance on paper is only one component of the real envelope. If warm air leaves through joints and cold air enters under doors, even a good number on the data sheet does not describe how the building behaves.",
+        "points": [
+          "A noticeable temperature difference between the roof zone and the working level indicates stratified warm air, and any leakage high in the hall makes that loss worse.",
+          "Cold draughts at low level, even with doors shut, usually point to air leakage at the wall base, around doors, or along panel joints.",
+          "Dark lines or staining along joints and junctions can indicate continuous airflow depositing dust and should be investigated.",
+          "Frost or snow melting early in regular lines on the roof may reveal where heat is escaping beneath the covering.",
+          "Local drips or dampness under joints in cold weather may come from humid air leaving through the joint rather than from rain getting in."
+        ]
+      },
+      "cause": {
+        "title": "A panel is not a continuous layer: joints and junctions decide how the envelope behaves",
+        "body": "The steel faces of a sandwich panel are effectively airtight, so the real question lies at the joints between panels and at their connections to other components. European research on steel sandwich panels has shown that joints and openings can downgrade the thermal performance of the envelope, and found that air permeability depends on three factors: joint geometry, the right sealing tape, and fabrication and mounting tolerances. The same work stresses that exact mounting of the tape is decisive, and that excellent airtightness is achievable with correct detailing. In calculations the two effects are not separate either: researchers combine transmission through the panel with losses from air movement in a single effective heat transfer coefficient for approximate energy calculations. While the hall is heated, that airflow always has a driving force. In a high, warm volume, warm air rises and pushes outward at the upper level, while cold air replaces it from below. Wind adds its own pressure on top, and on windy days its effect is sometimes the larger one. The more gaps remain open at top and bottom, the greater the airflow. The second factor is thermal bridging, where metal or another conductive part carries heat past the insulation.",
+        "points": [
+          "A longitudinal joint with incorrect spacing, twisted sheet, or missing or displaced tape creates a continuous path for air.",
+          "Roof-wall junctions, ridges, and wall bases usually rely on flashings, and if the space behind the flashing is not filled and air-sealed, it protects only against rain, not air.",
+          "Panel cut-outs for ducts, pipes, vents, or rooflights that are closed without sealing and insulation details leak air and also break insulation continuity.",
+          "Penetrating metal parts such as canopy brackets, service supports, and long fasteners create point or linear thermal bridges.",
+          "Loading and industrial doors left open too long or fitted with worn seals can sometimes move more air than all the envelope joints together.",
+          "Rushed installation and structural settlement over time can open a joint that was closed on handover day, so periodic inspection is needed."
+        ]
+      },
+      "visual": {
+        "title": "Map of heat escape routes in a sandwich panel building (pending verification)",
+        "description": "The verified diagram should show a building section: warm air rising and leaving at the ridge and junctions, cold air entering at the wall base and doors, and thermal bridges at penetrating parts. This technical asset is still pending verification.",
+        "callouts": [
+          "Longitudinal joint and sealing tape",
+          "Ridge and roof-wall junction",
+          "Wall base and door perimeter",
+          "Penetrating metal parts and thermal bridges"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL logic for reducing heat loss before replacing panels",
+        "steps": [
+          {
+            "title": "Gather documents and symptoms",
+            "description": "As-built drawings, panel and core specifications, junction details, heating type, and door-use patterns are reviewed. Operator reports of cold spots, draughts, and drips are recorded on the plan so the survey does not begin with guesswork."
+          },
+          {
+            "title": "Survey in suitable measurement conditions",
+            "description": "Thermography is carried out in cold weather with the heating on, so that the temperature difference is sufficient. Suspect points are confirmed with smoke testing or, where feasible, a fan pressure test. Each point is logged with a photo and plan location, because a thermal image without interpretation can mislead."
+          },
+          {
+            "title": "Separate air leakage from thermal bridges and weak insulation",
+            "description": "Each finding is traced to its root: airflow, a conductive part, a damaged core, or missing insulation behind a flashing. This distinction decides whether the answer is air sealing, detail correction, or local panel replacement."
+          },
+          {
+            "title": "Correct in order of effect and risk",
+            "description": "Unless the measurements show otherwise, doors and large openings usually come first, then ridges and wall bases, then joints and penetrations. The governing principle is to air-seal on the warm side and keep the drainage path open on the cold side. Any new material must be compatible with the core type, the facings, and the project's fire requirements."
+          },
+          {
+            "title": "Coordinate with building services",
+            "description": "Heater positions, destratification, air curtains, and door operation are decided with the mechanical designer. Tightening the envelope can change ventilation needs and indoor humidity, and where gas heaters draw combustion air from the hall, that supply must also be checked, so these are reviewed at the same time."
+          },
+          {
+            "title": "Verify after correction and plan inspections",
+            "description": "The same points are checked again after correction under similar conditions, and the result is recorded. A periodic inspection plan is defined for joints, junctions, and busy doors so that wear and settlement are caught in time."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Does a thicker panel solve heat loss?",
+          "answer": "Not necessarily. Greater thickness reduces loss through the middle of the panel but does nothing for air leakage at joints and junctions. If details are the main escape route, replacing panels adds cost and may repeat the problem in the new details. Measurement should first show which route matters most."
+        },
+        {
+          "question": "How do we find air leaks in an industrial building?",
+          "answer": "Combining cold-weather thermography, visual inspection of joints and flashings, and smoke testing gives the most practical information. Where possible, a fan pressure test shows overall airtightness. A thermal image alone is not enough, because shiny surfaces reflect and a cold spot may be a thermal bridge rather than a leak."
+        },
+        {
+          "question": "When should a thermal survey be done?",
+          "answer": "When the heating has been on for some time and the indoor-outdoor temperature difference is significant, usually before sunrise or after sunset, when the sun has not been warming the surface and the wind is light. That is why the cold months are the right time to collect data."
+        },
+        {
+          "question": "Can joints be filled with spray foam?",
+          "answer": "It is not recommended as a general fix. Foam may block drainage paths, fail to bond durably to the facing or coating, crack with thermal movement, and create problems with fire requirements. The choice of tape, mastic, or insulation should follow the connection detail, the core type, and the project's fire requirements."
+        },
+        {
+          "question": "What does heat loss have to do with condensation and drips?",
+          "answer": "Warm, humid air leaving through a joint meets a cold surface on its way out, and if that surface is below the air's dew point, its moisture condenses. That water may appear as drips or stay around the joint and be mistaken for a rain leak. So air-sealing on the warm side both saves energy and reduces moisture risk."
+        },
+        {
+          "question": "Can the energy saving be predicted in advance?",
+          "answer": "There is no reliable general figure, because the result depends on climate, hall height, operating pattern, heating type, and the current state of the joints. A credible estimate comes from measuring the existing condition and comparing consumption before and after correction under similar conditions."
+        }
+      ],
+      "cta": {
+        "headline": "Before replacing panels, identify where the heat is going",
+        "text": "Send your drawings, panel specifications, photos of joints and junctions, and any reports of cold spots, draughts, or drips, so the SIPANEL technical team can review the envelope and propose the order of detail corrections."
+      }
+    },
+    "ar": {
+      "title": "فقد الحرارة في مبنى ألواح الساندويتش: من أين تتسرب الحرارة؟",
+      "metaDescription": "في فقد الحرارة بمباني ألواح الساندويتش تكون نقاط الضعف غالباً الوصلات والتقاطعات لا وسط اللوح. تعرف على كشف تسرب الهواء والجسور الحرارية وترتيب الإصلاح.",
+      "primaryKeyword": "فقد الحرارة في مباني ألواح الساندويتش",
+      "summary": "في المبنى المغطى بألواح الساندويتش يكون وسط اللوح عادة أقوى أجزاء الغلاف، أما نقاط الضعف فهي وصلات الألواح، وتقاطع السقف مع الجدار، والفتحات، والمواضع التي يعبر فيها المعدن طبقة العزل. لذلك يجب قياس تسرب الهواء والجسور الحرارية قبل استبدال الألواح. والترتيب السليم: القياس في الطقس البارد، ثم الإحكام من الجانب الدافئ وتصحيح التفاصيل، وأخيراً قرار الاستبدال.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "التدفئة تعمل، لكن القاعة لا تحتفظ بدفئها",
+        "body": "مع انخفاض درجات الحرارة في أواخر أكتوبر، أعلن رئيس الشركة الوطنية الإيرانية للغاز عن قفزة حادة في استهلاك الغاز خلال أيام، وقال إن بعض الوحدات الصناعية قد تضطر إلى استخدام وقود بديل في أيام ذروة الطلب. وبالنسبة إلى مالك مصنع أو مستودع أو قاعة مدفأة، يطرح هذا الخبر سؤالاً عملياً: ما مقدار الحرارة المنتجة الذي يحتفظ به غلاف المبنى فعلاً؟ الأعراض مألوفة عادة: أعلى القاعة دافئ وأرضيتها باردة، وتيارات هواء قرب أبواب التحميل، وسخانات تعمل أطول من المتوقع، وشكاوى العاملين من البرد قرب الجدران. وردّ الفعل الشائع هو تحميل الألواح الرقيقة المسؤولية واقتراح استبدالها أو إضافة عزل. لكن اللوح ذا المقاومة الحرارية الجيدة على الورق ليس سوى مكوّن واحد من الغلاف الحقيقي. فإذا خرج الهواء الدافئ من الوصلات ودخل الهواء البارد من أسفل الأبواب، فإن الرقم الجيد في ورقة المواصفات لا يصف سلوك المبنى الفعلي.",
+        "points": [
+          "الفرق الملحوظ في الحرارة بين منطقة السقف ومستوى العمل يدل على تراكم الهواء الدافئ في الأعلى، وأي تسرب في أعلى القاعة يزيد هذا الفقد.",
+          "تيارات الهواء البارد في المستوى المنخفض، حتى مع إغلاق الأبواب، تشير عادة إلى تسرب عند قاعدة الجدار أو حول الأبواب أو على امتداد الوصلات.",
+          "الخطوط الداكنة أو البقع على امتداد الوصلات والتقاطعات قد تدل على مرور مستمر للهواء يرسّب الغبار، وينبغي فحصها.",
+          "ذوبان الصقيع أو الثلج مبكراً في خطوط منتظمة على السقف قد يكشف مسار خروج الحرارة تحت الغطاء.",
+          "القطرات أو الرطوبة الموضعية تحت الوصلات في الطقس البارد قد تنتج عن خروج هواء رطب من الوصلة لا عن دخول مياه المطر."
+        ]
+      },
+      "cause": {
+        "title": "اللوح ليس طبقة متصلة: الوصلات والتقاطعات تحدد سلوك الغلاف",
+        "body": "الوجه الفولاذي للوح الساندويتش محكم تقريباً أمام الهواء، لذا فالسؤال الحقيقي يتعلق بالوصلات بين الألواح وبنقاط اتصالها بالعناصر الأخرى. وقد بيّنت أبحاث أوروبية على الألواح الفولادية أن الوصلات والفتحات قد تخفض الأداء الحراري للغلاف، ووجدت أن نفاذية الهواء تعتمد على ثلاثة عوامل: هندسة الوصلة، وشريط الإحكام المناسب، وسماحات التصنيع والتركيب. وتؤكد هذه الأعمال أن دقة تركيب الشريط عامل حاسم، وأن إحكاماً هوائياً ممتازاً ممكن بالتفاصيل الصحيحة. وفي الحسابات لا ينفصل الأمران: إذ يجمع الباحثون الفقد عبر اللوح والفقد الناتج عن حركة الهواء في معامل فعّال واحد لانتقال الحرارة لأغراض الحسابات التقريبية للطاقة. وما دامت القاعة مدفأة تبقى لهذا الهواء قوة محركة. ففي الحيز العالي الدافئ يرتفع الهواء الساخن ويضغط نحو الخارج في الجزء العلوي، بينما يحل الهواء البارد محله من الأسفل. وتضيف الرياح ضغطها إلى ذلك، وقد يكون أثرها الأكبر في الأيام العاصفة. وكلما بقيت فتحات أكثر في الأعلى والأسفل، زاد جريان الهواء. والعامل الثاني هو الجسر الحراري، أي الموضع الذي ينقل فيه المعدن أو جزء موصل الحرارة متجاوزاً العزل.",
+        "points": [
+          "الوصلة الطولية ذات المسافة الخاطئة أو الصفيحة الملتوية أو الشريط المفقود أو المنزاح تخلق مساراً متصلاً للهواء.",
+          "تعتمد تقاطعات السقف والجدار وقمة السقف وقاعدة الجدار عادة على قطع الفلاشينغ المعدنية، وإذا لم يُملأ ما خلفها ويُحكم هوائياً فإنها تحمي من المطر فقط لا من الهواء.",
+          "فتحات الألواح للمجاري والأنابيب والمهوّيات والمناور إذا أُغلقت دون تفاصيل إحكام وعزل، فإنها تسرّب الهواء وتقطع استمرارية العزل.",
+          "الأجزاء المعدنية العابرة مثل حوامل المظلات ودعامات التمديدات والمسامير الطويلة تخلق جسوراً حرارية نقطية أو خطية.",
+          "أبواب التحميل والأبواب الصناعية التي تبقى مفتوحة طويلاً أو ذات الإحكام البالي قد تنقل أحياناً هواءً أكثر من جميع وصلات الغلاف معاً.",
+          "التركيب المتعجل وهبوط المنشأ مع الزمن قد يفتحان وصلة كانت مغلقة يوم التسليم، لذا يلزم الفحص الدوري."
+        ]
+      },
+      "visual": {
+        "title": "خريطة مسارات تسرب الحرارة في مبنى ألواح الساندويتش (بانتظار الاعتماد)",
+        "description": "يجب أن يوضح المخطط المعتمد مقطعاً للمبنى: صعود الهواء الدافئ وخروجه عند القمة والتقاطعات، ودخول الهواء البارد عند قاعدة الجدار والأبواب، والجسور الحرارية في الأجزاء العابرة. هذا الأصل الفني ما زال بانتظار الاعتماد.",
+        "callouts": [
+          "الوصلة الطولية وشريط الإحكام",
+          "قمة السقف وتقاطع السقف مع الجدار",
+          "قاعدة الجدار ومحيط الأبواب",
+          "الأجزاء المعدنية العابرة والجسور الحرارية"
+        ]
+      },
+      "execution": {
+        "title": "منهج سي بانل لخفض فقد الحرارة قبل استبدال الألواح",
+        "steps": [
+          {
+            "title": "جمع المستندات والأعراض",
+            "description": "تُراجع المخططات التنفيذية ومواصفات اللوح والقلب وتفاصيل التقاطعات ونوع التدفئة ونمط استخدام الأبواب. وتُسجل على المخطط بلاغات المشغل عن النقاط الباردة وتيارات الهواء والقطرات، حتى لا يبدأ الفحص من التخمين."
+          },
+          {
+            "title": "الفحص في ظروف قياس مناسبة",
+            "description": "يُجرى التصوير الحراري في الطقس البارد مع تشغيل التدفئة لضمان فرق حرارة كافٍ. وتؤكد النقاط المشتبه بها باختبار الدخان أو باختبار الضغط بالمروحة عند الإمكان. وتوثق كل نقطة بصورة وموقع على المخطط، لأن الصورة الحرارية دون تفسير قد تضلل."
+          },
+          {
+            "title": "فصل تسرب الهواء عن الجسور الحرارية وضعف العزل",
+            "description": "يُرد كل اكتشاف إلى سببه: مرور هواء، أو جزء موصل، أو قلب تالف، أو غياب العزل خلف قطعة الفلاشينغ. ويحدد هذا الفصل ما إذا كان الحل إحكاماً هوائياً أو تصحيحاً للتفاصيل أو استبدالاً موضعياً للوح."
+          },
+          {
+            "title": "التصحيح بحسب الأثر والمخاطر",
+            "description": "ما لم تُظهر القياسات خلاف ذلك، تبدأ المعالجة عادة بالأبواب والفتحات الكبيرة، ثم قمة السقف وقاعدة الجدار، ثم الوصلات والاختراقات. والمبدأ الحاكم هو الإحكام الهوائي من الجانب الدافئ والحفاظ على مسار التصريف في الجانب البارد. ويجب أن تتوافق أي مادة جديدة مع نوع القلب والوجوه ومتطلبات الحريق في المشروع."
+          },
+          {
+            "title": "التنسيق مع الأنظمة الميكانيكية",
+            "description": "تُحدد مواقع السخانات وخلط طبقات الهواء والستائر الهوائية وتشغيل الأبواب مع مصمم الأنظمة الميكانيكية. فإحكام الغلاف قد يغير احتياجات التهوية والرطوبة الداخلية، وإذا كانت السخانات الغازية تسحب هواء الاحتراق من القاعة فيجب التحقق من توفره أيضاً، لذا تُراجع هذه الأمور في الوقت نفسه."
+          },
+          {
+            "title": "التحقق بعد التصحيح وخطة الفحص",
+            "description": "تُفحص النقاط نفسها بعد التصحيح في ظروف مشابهة ويُسجل الناتج. وتوضع خطة فحص دوري للوصلات والتقاطعات والأبواب كثيرة الاستخدام لاكتشاف التآكل والهبوط في الوقت المناسب."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "هل يحل اللوح الأكثر سماكة مشكلة فقد الحرارة؟",
+          "answer": "ليس بالضرورة. فالسماكة الأكبر تقلل الفقد عبر وسط اللوح لكنها لا تعالج تسرب الهواء عند الوصلات والتقاطعات. وإذا كانت التفاصيل هي المسار الرئيسي، فإن استبدال الألواح يرفع الكلفة وقد يكرر المشكلة في التفاصيل الجديدة. ولا بد أولاً من القياس لمعرفة المسار الأهم."
+        },
+        {
+          "question": "كيف نكشف تسرب الهواء في مبنى صناعي؟",
+          "answer": "يوفر الجمع بين التصوير الحراري في الطقس البارد والفحص البصري للوصلات وقطع الفلاشينغ واختبار الدخان أكثر المعلومات فائدة. وعند الإمكان يكشف اختبار الضغط بالمروحة الإحكام العام. ولا تكفي الصورة الحرارية وحدها، لأن الأسطح اللامعة تعكس وقد تكون النقطة الباردة جسراً حرارياً لا تسرباً."
+        },
+        {
+          "question": "متى ينبغي إجراء الفحص الحراري؟",
+          "answer": "عندما تعمل التدفئة منذ فترة ويكون فرق الحرارة بين الداخل والخارج كبيراً، وعادة قبل شروق الشمس أو بعد غروبها، حين لا يكون السطح قد سخن بأشعة الشمس وتكون الرياح خفيفة. ولهذا تُعد الأشهر الباردة الوقت المناسب لجمع البيانات."
+        },
+        {
+          "question": "هل يمكن ملء الوصلات برغوة الرش؟",
+          "answer": "لا يوصى بذلك حلاً عاماً. فالرغوة قد تسد مسارات التصريف، ولا تلتصق بثبات بالوجه أو طلائه، وتتشقق مع الحركة الحرارية، وقد تسبب مشكلات مع متطلبات الحريق. ويجب اختيار الشريط أو المعجون أو العزل بحسب تفصيلة الاتصال ونوع القلب ومتطلبات الحريق في المشروع."
+        },
+        {
+          "question": "ما علاقة فقد الحرارة بالتكاثف والقطرات؟",
+          "answer": "الهواء الدافئ الرطب الخارج من الوصلة يلاقي سطحاً بارداً في طريقه، فإذا كانت حرارة السطح دون نقطة ندى الهواء تكثفت رطوبته. وقد يظهر هذا الماء قطرات أو يبقى حول الوصلة فيُظن أنه تسرب مطر. لذا فإن الإحكام الهوائي من الجانب الدافئ يحفظ الطاقة ويقلل مخاطر الرطوبة معاً."
+        },
+        {
+          "question": "هل يمكن توقع مقدار التوفير مسبقاً؟",
+          "answer": "لا يوجد رقم عام موثوق، لأن النتيجة تعتمد على المناخ وارتفاع القاعة ونمط التشغيل ونوع التدفئة وحالة الوصلات الحالية. ويأتي التقدير الموثوق من قياس الوضع القائم ومقارنة الاستهلاك قبل التصحيح وبعده في ظروف مشابهة."
+        }
+      ],
+      "cta": {
+        "headline": "قبل استبدال الألواح، حددوا أين تذهب الحرارة",
+        "text": "أرسلوا المخططات ومواصفات الألواح وصور الوصلات والتقاطعات وأي بلاغات عن نقاط باردة أو تيارات هواء أو قطرات، ليراجع الفريق الفني في سي بانل الغلاف ويقترح أولويات تصحيح التفاصيل."
+      }
+    },
+    "ru": {
+      "title": "Теплопотери здания из сэндвич-панелей: куда уходит тепло",
+      "metaDescription": "Теплопотери здания из сэндвич-панелей: слабые места — обычно стыки и примыкания, а не середина панели. Как найти утечки и мостики холода и что исправить первым.",
+      "primaryKeyword": "теплопотери здания из сэндвич-панелей",
+      "summary": "В здании из сэндвич-панелей середина панели обычно самая сильная часть оболочки. Слабые места — стыки панелей, примыкания кровли к стене, проёмы и места, где металл пересекает слой утеплителя. Поэтому до замены панелей нужно измерить утечки воздуха и мостики холода. Порядок: измерения в холода, герметизация с тёплой стороны, исправление узлов и лишь потом решение о замене.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "Отопление работает, а цех не держит тепло",
+        "body": "С похолоданием в конце октября глава Национальной иранской газовой компании сообщил о резком росте потребления газа за несколько дней и заявил, что некоторым промышленным предприятиям в дни пикового спроса, возможно, придётся перейти на резервное топливо. Для владельца отапливаемого завода, склада или зала эта новость ставит практический вопрос: какую часть произведённого тепла оболочка здания действительно удерживает? Признаки обычно знакомы: под кровлей тепло, а на полу холодно, у погрузочных ворот ощущается сквозняк, обогреватели работают дольше ожидаемого, персонал жалуется на холод у стен. Обычная реакция — обвинить тонкие панели и предложить замену или дополнительное утепление. Но панель с хорошим сопротивлением теплопередаче на бумаге — лишь один элемент реальной оболочки. Если тёплый воздух уходит через стыки, а холодный входит под воротами, даже хорошее значение в паспорте не описывает поведение здания.",
+        "points": [
+          "Заметная разница температур между подкровельной зоной и рабочим уровнем указывает на расслоение тёплого воздуха, а любая утечка в верхней части усиливает потери.",
+          "Холодные сквозняки внизу, даже при закрытых воротах, обычно говорят об утечках у цоколя, вокруг ворот или вдоль стыков панелей.",
+          "Тёмные полосы или пятна вдоль стыков и примыканий могут означать постоянный поток воздуха, оставляющий пыль, и требуют проверки.",
+          "Иней или снег, раньше тающие ровными линиями на кровле, могут показывать, где тепло уходит под покрытием.",
+          "Местная капель или сырость под стыками в холода может быть вызвана выходом влажного воздуха через стык, а не проникновением дождя."
+        ]
+      },
+      "cause": {
+        "title": "Панель — не сплошной слой: поведение оболочки определяют стыки и примыкания",
+        "body": "Стальные облицовки сэндвич-панели практически воздухонепроницаемы, поэтому главный вопрос относится к стыкам между панелями и к их примыканиям к другим элементам. Европейские исследования стальных сэндвич-панелей показали, что стыки и проёмы могут снижать тепловые характеристики оболочки, а воздухопроницаемость зависит от трёх факторов: геометрии стыка, подходящей уплотнительной ленты и допусков изготовления и монтажа. В этих же работах подчёркивается, что точность укладки ленты имеет решающее значение и что при правильных узлах достижима отличная воздухонепроницаемость. В расчётах эти явления тоже не разделены: для приближённых энергетических расчётов исследователи объединяют теплопередачу через панель и потери от движения воздуха в едином эффективном коэффициенте теплопередачи. Пока зал отапливается, у этого потока всегда есть движущая сила. В высоком тёплом объёме нагретый воздух поднимается и давит наружу в верхней зоне, а холодный заменяет его снизу. Ветер добавляет к этому собственное давление, и в ветреные дни его влияние порой сильнее. Чем больше щелей открыто вверху и внизу, тем больше поток воздуха. Второй фактор — мостики холода, то есть места, где металл или другой проводящий элемент переносит тепло в обход утеплителя.",
+        "points": [
+          "Продольный стык с неверным зазором, перекосом листа или отсутствующей либо сместившейся лентой создаёт непрерывный путь для воздуха.",
+          "Примыкания кровли к стене, конёк и цоколь обычно закрываются нащельниками; если пространство за ними не заполнено и не герметизировано, они защищают от дождя, но не от воздуха.",
+          "Вырезы в панелях под воздуховоды, трубы, вентиляцию или зенитные фонари, закрытые без узлов герметизации и утепления, пропускают воздух и нарушают непрерывность утеплителя.",
+          "Сквозные металлические детали — кронштейны навесов, опоры инженерных систем, длинные крепёжные элементы — создают точечные или линейные мостики холода.",
+          "Погрузочные и промышленные ворота, надолго остающиеся открытыми или имеющие изношенные уплотнения, иногда пропускают больше воздуха, чем все стыки оболочки вместе.",
+          "Спешный монтаж и осадка конструкций со временем могут раскрыть стык, закрытый на момент сдачи, поэтому необходимы периодические осмотры."
+        ]
+      },
+      "visual": {
+        "title": "Схема путей утечки тепла в здании из сэндвич-панелей (ожидает подтверждения)",
+        "description": "Подтверждённая схема должна показывать разрез здания: подъём тёплого воздуха и выход у конька и примыканий, вход холодного воздуха у цоколя и ворот, мостики холода в сквозных деталях. Этот технический материал пока ожидает подтверждения.",
+        "callouts": [
+          "Продольный стык и уплотнительная лента",
+          "Конёк и примыкание кровли к стене",
+          "Цоколь и периметр ворот",
+          "Сквозные металлические детали и мостики холода"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL: снизить теплопотери до замены панелей",
+        "steps": [
+          {
+            "title": "Сбор документов и признаков",
+            "description": "Изучаются исполнительные чертежи, характеристики панелей и сердечника, узлы примыканий, тип отопления и режим использования ворот. Сообщения эксплуатации о холодных зонах, сквозняках и капели наносятся на план, чтобы обследование не начиналось с догадок."
+          },
+          {
+            "title": "Обследование в подходящих условиях",
+            "description": "Термография выполняется в холодную погоду при включённом отоплении, чтобы разница температур была достаточной. Подозрительные места подтверждаются дымовым тестом или, где возможно, испытанием давлением с вентилятором. Каждая точка фиксируется фото и положением на плане, поскольку термограмма без интерпретации может ввести в заблуждение."
+          },
+          {
+            "title": "Разделение утечек воздуха, мостиков холода и слабой изоляции",
+            "description": "Для каждой находки определяется первопричина: поток воздуха, проводящая деталь, повреждённый сердечник или отсутствие утеплителя за нащельником. От этого зависит решение: герметизация, исправление узла или местная замена панели."
+          },
+          {
+            "title": "Исправление по эффекту и риску",
+            "description": "Если измерения не показывают иного, обычно сначала ворота и крупные проёмы, затем конёк и цоколь, потом стыки и проходки. Основной принцип — герметизация с тёплой стороны при сохранении пути отвода воды с холодной стороны. Любой новый материал должен быть совместим с типом сердечника, облицовками и требованиями пожарной безопасности проекта."
+          },
+          {
+            "title": "Координация с инженерными системами",
+            "description": "Размещение обогревателей, перемешивание слоёв воздуха, воздушные завесы и режим ворот решаются вместе с проектировщиком инженерных систем. Герметизация оболочки может изменить потребность в вентиляции и влажность внутри, а если газовые обогреватели берут воздух для горения из зала, нужно проверить и его приток; поэтому всё это проверяется одновременно."
+          },
+          {
+            "title": "Проверка после исправления и план осмотров",
+            "description": "Те же точки повторно проверяются после работ в сходных условиях, результат фиксируется. Для стыков, примыканий и часто используемых ворот вводится план периодических осмотров, чтобы вовремя заметить износ и осадку."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Решит ли более толстая панель проблему теплопотерь?",
+          "answer": "Не обязательно. Большая толщина снижает потери через середину панели, но не устраняет утечки воздуха в стыках и примыканиях. Если главный путь потерь — узлы, замена панелей повышает затраты и может повторить проблему в новых узлах. Сначала измерения должны показать, какой путь важнее."
+        },
+        {
+          "question": "Как найти утечки воздуха в промышленном здании?",
+          "answer": "Больше всего практических сведений даёт сочетание термографии в холодную погоду, визуального осмотра стыков и нащельников и дымового теста. Где возможно, общую герметичность показывает испытание давлением с вентилятором. Одной термограммы недостаточно: блестящие поверхности дают отражения, а холодное пятно может быть мостиком холода, а не утечкой."
+        },
+        {
+          "question": "Когда проводить тепловизионное обследование?",
+          "answer": "Когда отопление работает уже некоторое время и разница внутренней и наружной температур значительна, обычно до восхода или после заката, когда солнце не нагревает поверхность, и при слабом ветре. Поэтому для сбора данных подходят холодные месяцы."
+        },
+        {
+          "question": "Можно ли заполнить стыки монтажной пеной?",
+          "answer": "Как общее решение это не рекомендуется. Пена может перекрыть пути отвода воды, плохо сцепиться с облицовкой или покрытием, растрескаться при температурных деформациях и создать проблемы с требованиями пожарной безопасности. Ленту, мастику или утеплитель выбирают по узлу соединения, типу сердечника и требованиям пожарной безопасности проекта."
+        },
+        {
+          "question": "Как связаны теплопотери с конденсатом и капелью?",
+          "answer": "Тёплый влажный воздух, выходящий через стык, встречает холодную поверхность, и если она холоднее точки росы этого воздуха, влага конденсируется. Эта вода может появляться как капель или оставаться у стыка и приниматься за протечку дождя. Поэтому герметизация с тёплой стороны одновременно бережёт энергию и снижает риск увлажнения."
+        },
+        {
+          "question": "Можно ли заранее назвать экономию энергии?",
+          "answer": "Надёжной общей цифры нет: результат зависит от климата, высоты зала, режима эксплуатации, типа отопления и текущего состояния стыков. Достоверная оценка появляется после измерения существующего состояния и сравнения потребления до и после исправления в сходных условиях."
+        }
+      ],
+      "cta": {
+        "headline": "Прежде чем менять панели, выясните, куда уходит тепло",
+        "text": "Пришлите чертежи, характеристики панелей, фотографии стыков и примыканий и любые сообщения о холодных зонах, сквозняках или капели, чтобы техническая команда SIPANEL проверила оболочку и предложила порядок исправления узлов."
+      }
+    }
+  }
+}
