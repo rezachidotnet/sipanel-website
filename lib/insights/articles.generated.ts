@@ -6,7 +6,8 @@ import article2 from '@/content/insights/rooflight-drip-leak-or-condensation-dia
 import article3 from '@/content/insights/sandwich-panel-building-heat-loss-air-leakage.json';
 import article4 from '@/content/insights/sandwich-panel-joint-leakage-risk.json';
 import article5 from '@/content/insights/standing-seam-roof-drainage-logic.json';
-import article6 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
+import article6 from '@/content/insights/standing-seam-roof-wind-uplift-edge-corner-control.json';
+import article7 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
 
 export const rawInsightArticleFiles: unknown[] = [
   article0,
@@ -15,5 +16,6 @@ export const rawInsightArticleFiles: unknown[] = [
   article3,
   article4,
   article5,
-  article6
+  article6,
+  article7
 ];

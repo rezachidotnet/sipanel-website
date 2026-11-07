@@ -1,0 +1,446 @@
+{
+  "slug": "standing-seam-roof-wind-uplift-edge-corner-control",
+  "category": "roofing_waterproofing",
+  "status": "published",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "faqIds": [
+    "why-edges-and-corners-fail-first",
+    "is-thicker-sheet-enough",
+    "adding-face-fixed-screws",
+    "post-storm-roof-check",
+    "open-doors-internal-pressure",
+    "documents-for-existing-roof-review"
+  ],
+  "relatedProjects": [
+    "megaparsmall-atrium",
+    "ahvaz-airport-passenger-terminal"
+  ],
+  "relatedInsights": [
+    "standing-seam-roof-drainage-logic",
+    "sandwich-panel-joint-leakage-risk"
+  ],
+  "relatedResources": [
+    "standing-seam-roof-detail-notes",
+    "shop-drawing-review-guide"
+  ],
+  "trend": {
+    "topic": "Strong-wind, rain and thunderstorm warnings across Iranian provinces in Aban 1405 (late October to early November 2026): wind uplift and edge peel-off on standing seam and ZIP roofs",
+    "rationale": "Through Aban 1405 Iranian outlets reported repeated warnings combining rain, thunderstorms and strong wind (11, 13 and 14-17 Aban), the season when metal roofs on halls, terminals and atria face storm suction and owners ask why roof sheets lift or tear off. ETFE (rotation #1) had no fresh local search or news signal, so the #2 system was chosen. The standing seam system page and drainage article do not cover wind suction zones, clip-seam engagement, trim restraint or post-storm inspection; FEMA, manufacturer and academic sources confirm uplift resistance is an assembly property governed by edge/corner zones.",
+    "observedAt": "2026-11-07",
+    "sources": [
+      "https://www.entekhab.ir/fa/news/946414",
+      "https://www.eghtesadonline.com/fa/news/2172750",
+      "https://www.irib-news.ir/fa/news/5957955",
+      "https://www.eghtesadonline.com/fa/news/2173882",
+      "https://milli.gold/news/%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D9%87%D9%88%D8%A7%D8%B4%D9%86%D8%A7%D8%B3%DB%8C-%DB%B1%DB%B3-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86-%D8%A8%D8%A7%D8%B1%D8%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5/",
+      "https://fararu.com/fa/news/1012175",
+      "https://webarchive.library.unt.edu/web/20161202194719/https://www.fema.gov/media-library-data/20130726-1605-20490-6583/fema549_apndx_e_ra7.pdf",
+      "https://www.mbci.com/tag/wind-loads/",
+      "https://irepose.iitm.ac.in/entities/publication/03016fc2-fa6e-43f6-a508-223cdf494a95"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "مقاومت سقف استندینگ سیم در برابر باد؛ چرا ورق از لبه جدا می‌شود؟",
+      "metaDescription": "مقاومت سقف استندینگ سیم در برابر باد به لبه‌ها، گوشه‌ها، کلیپ و درز وابسته است. بخوانید ورق چرا از لبه جدا می‌شود و پیش و پس از طوفان چه چیزی باید کنترل شود.",
+      "primaryKeyword": "مقاومت سقف استندینگ سیم در برابر باد",
+      "summary": "باد شدید روی سقف فشار رو به بالا یا مکش ایجاد می‌کند و این مکش در لبه‌ها، گوشه‌ها، تاج و پیش‌آمدگی‌ها بسیار بیشتر از میانه سقف است. در سقف استندینگ سیم، ورق فقط با کلیپ‌های پنهانِ درگیر در درز به سازه بند است؛ بنابراین مقاومت در برابر باد خاصیت ضخامت ورق نیست، خاصیت مجموعه ورق، درز، کلیپ، پیچ و پرلین است. جدا شدن ورق معمولاً از یک لبه یا تریم شروع می‌شود و اگر آن نقطه مهار نشود، پیشرونده است.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "پس از تندباد پاییزی؛ تریمی که بلند شده، درزی که باز شده و ورقی که از لبه برگشته",
+        "body": "در روزهای اخیر هشدارهای هواشناسی برای چند استان، در کنار باران و رعدوبرق، از وزش باد شدید خبر داده‌اند. در چنین روزهایی بهره‌برداران سوله‌ها، ترمینال‌ها، سالن‌های ورزشی و آتریوم‌ها اغلب با نشانه‌هایی روبه‌رو می‌شوند که پیش‌تر جدی گرفته نمی‌شد: صدای لرزش و تق‌تق ورق در شب طوفانی، تریم لبه که کمی بلند شده، درزی که در گوشه سقف باز به نظر می‌رسد، یا در بدترین حالت ورقی که از لبه برگشته و روی سقف تا خورده است. مالک معمولاً اولین سؤالش این است که آیا ورق نازک بوده یا پیچ کم خورده؛ اما در سقف استندینگ سیم پاسخ کمتر به یک قطعه و بیشتر به منطق کل سیستم برمی‌گردد. این سقف عمداً بدون پیچ رو طراحی شده تا ورق بتواند با تغییر دما حرکت کند و آب از سوراخ پیچ نفوذ نکند. همین ویژگی یعنی تمام نیروی مکش باد باید از مسیر درز به کلیپ، از کلیپ به پیچ و از پیچ به پرلین برسد. اگر این زنجیره در لبه‌ها و گوشه‌ها، جایی که مکش بیشترین است، با همان آرایش میانه سقف اجرا شده باشد، ضعیف‌ترین حلقه زودتر از بقیه تسلیم می‌شود.",
+        "points": [
+          "صدای لرزش و تق‌تق ورق در باد شدید معمولاً نشانه حرکت ورق روی کلیپ یا لقی تریم است و باید پس از طوفان بررسی شود، نه اینکه عادی تلقی شود.",
+          "بلند شدن تریم لبه، تاج یا پیشانی اغلب اولین مرحله جدا شدن است؛ باد از زیر تریم وارد می‌شود و لبه ورق را در معرض مکش مستقیم قرار می‌دهد.",
+          "درزی که در گوشه یا لبه سقف باز یا تغییرشکل‌یافته دیده می‌شود، ممکن است نشانه بیرون آمدن ورق از زبانه کلیپ باشد.",
+          "خرابی اغلب در پیش‌آمدگی‌ها، سایبان‌ها و لبه‌های آزاد دیده می‌شود، جایی که باد هم از بالا مکش می‌کند و هم از زیر فشار می‌آورد.",
+          "درهای بزرگ باز یا شکسته در زمان طوفان فشار داخل سوله را بالا می‌برند و این فشار به مکش روی سقف اضافه می‌شود.",
+          "یک ورق جداشده در لبه، به باد اجازه می‌دهد زیر ورق بعدی برود و آسیب به‌صورت زنجیره‌ای پیش برود."
+        ]
+      },
+      "cause": {
+        "title": "مکش باد یکنواخت نیست و سقف استندینگ سیم فقط از مسیر کلیپ مقاومت می‌کند",
+        "body": "وقتی باد از روی ساختمان عبور می‌کند، جریان هوا در لبه بام از سطح جدا می‌شود و روی سقف فشار منفی یا مکش ایجاد می‌کند. شدت این مکش در همه جای سقف یکسان نیست: در نوار لبه‌ها، در گوشه‌ها که دو لبه به هم می‌رسند، در اطراف تاج و در پیش‌آمدگی‌ها به‌مراتب بیشتر از میانه سقف است. به همین دلیل بارگذاری باد در آیین‌نامه‌ها، از جمله مبحث ششم مقررات ملی ساختمان (بارهای وارد بر ساختمان)، برای محاسبه بار باد روی پوشش سقف نواحی با ضرایب فشار متفاوت در نظر می‌گیرند و محاسبه نهایی بر عهده طراح سازه پروژه است. در سقف استندینگ سیم، ورق با کلیپ‌هایی به پرلین وصل است که زبانه آن‌ها داخل درز قرار می‌گیرد و با بستن درز درگیر می‌شود. زیر مکش، کف ورق به سمت بالا شکم می‌دهد، ساق‌های درز تحت کشش و چرخش قرار می‌گیرند و اگر درگیری درز و کلیپ کافی نباشد، درز باز می‌شود و ورق از روی کلیپ بیرون می‌آید. پس مقاومت سیستم به چند عامل هم‌زمان بستگی دارد: هندسه و نوع درز و کامل بودن بستن آن، فاصله کلیپ‌ها، نوع کلیپ و پیچ، و ظرفیت پرلین یا بستری که پیچ در آن بسته شده است. این مقاومت را سازنده سیستم معمولاً با آزمون مکش روی مجموعه کامل تعیین می‌کند و به همین دلیل نمی‌توان با عوض کردن یک جزء، مثلاً کلیپ یا پیچ از برند دیگر، همان نتیجه را فرض کرد.",
+        "points": [
+          "فاصله کلیپ‌ها در لبه و گوشه باید بر اساس نواحی بار باد تعیین شود؛ اجرای یکنواخت فاصله میانه سقف در لبه‌ها رایج‌ترین نقطه ضعف است.",
+          "درزی که در بخشی از طول با دستگاه یا دست کامل بسته نشده، درگیری کافی با کلیپ ندارد و زیر مکش زودتر باز می‌شود.",
+          "پیچ کلیپ اگر در پرلین نازک، در لایه عایق یا در بستر نامناسب بسته شود، پیش از خود ورق از جا کنده می‌شود.",
+          "تریم‌های لبه، تاج و پیشانی اگر با فاصله پیچ کافی و هم‌پوشانی درست مهار نشوند، باد را به زیر سیستم راه می‌دهند.",
+          "در سیستم‌های دارای کلیپ لغزنده، نقطه ثابت ورق باید طبق طراحی اجرا شود؛ ورقی که نقطه ثابت ندارد زیر باد و تغییر دما جابه‌جا می‌شود.",
+          "تعویض اجزا یا ترکیب ورق و کلیپ از سیستم‌های مختلف، باعث می‌شود دیگر نتوان به نتیجه آزمون سازنده استناد کرد."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام نواحی مکش باد و آرایش کلیپ در سقف استندینگ سیم (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید پلان سقف را با نوارهای لبه، گوشه‌ها، تاج و پیش‌آمدگی‌ها به‌عنوان نواحی مکش بیشتر نشان دهد و در کنار آن مقطع درز را با کلیپ درگیر، جهت شکم دادن ورق زیر مکش و مسیر انتقال نیرو تا پرلین ترسیم کند. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "نوار لبه، گوشه و تاج",
+          "تراکم بیشتر کلیپ در نواحی پرمکش",
+          "درگیری درز و زبانه کلیپ",
+          "مهار تریم و پیش‌آمدگی"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای کنترل مقاومت باد در سقف استندینگ سیم",
+        "steps": [
+          {
+            "title": "ترسیم نواحی باد روی شاپ‌دراوینگ",
+            "description": "با دریافت فرضیات بار باد از طراح سازه، نوارهای لبه، گوشه‌ها، تاج، پیش‌آمدگی‌ها و سایبان‌ها روی پلان سقف مشخص می‌شوند تا آرایش کلیپ و مهار تریم برای هر ناحیه جداگانه تعریف شود، نه یک فاصله واحد برای کل سقف."
+          },
+          {
+            "title": "انطباق سیستم آزمون‌شده با هر ناحیه",
+            "description": "ترکیب ورق، نوع درز، کلیپ و پیچ از داده‌های سازنده همان سیستم انتخاب می‌شود و برای هر ناحیه فاصله کلیپ متناظر با ظرفیت آزمون‌شده در جدول کلیپ‌گذاری ثبت می‌شود. هر جایگزینی جزء فقط با تأیید سازنده پذیرفته می‌شود."
+          },
+          {
+            "title": "کنترل بستر و مسیر نیرو تا سازه",
+            "description": "ضخامت و فاصله پرلین، نوع بستر، ضخامت لایه عایق زیر کلیپ و نوع پیچ با هم بررسی می‌شوند تا نیروی مکش بدون کنده شدن پیچ یا تغییرشکل پرلین به سازه برسد. هر ناهماهنگی پیش از تأمین مصالح به طراح سازه گزارش می‌شود."
+          },
+          {
+            "title": "جزئیات لبه، تاج، پیش‌آمدگی و بازشوها",
+            "description": "تریم‌ها، فاصله پیچ آن‌ها، هم‌پوشانی‌ها، بستن انتهای درز و مهار لبه آزاد در پیش‌آمدگی جزئیات‌سازی می‌شود. اثر درهای بزرگ و بازشوها بر فشار داخلی به طراح سازه یادآوری می‌شود تا در فرضیات بار دیده شده باشد."
+          },
+          {
+            "title": "کنترل اجرا در سایت",
+            "description": "تعداد و موقعیت کلیپ در هر ناحیه، درگیری زبانه کلیپ، کامل بودن بستن درز در تمام طول، اجرای نقطه ثابت و پیچ‌های تریم پیش از پوشانده شدن کنترل و ثبت می‌شوند. اجرای سقف در روزهای باد شدید متوقف و ورق‌های نیمه‌کاره موقتاً مهار می‌شوند."
+          },
+          {
+            "title": "بازدید پس از طوفان و ارزیابی سقف موجود",
+            "description": "پس از هر باد شدید و پیش از زمستان، لبه‌ها، گوشه‌ها، تریم‌ها و درزها از روی مسیر ایمن بازدید می‌شوند. برای سقف موجود با نشانه ضعف، وضعیت کلیپ‌گذاری و بستر برداشت می‌شود و راهکار تقویت، مانند افزودن کلیپ یا بست‌های تکمیلی درز، فقط از میان راهکارهای مورد تأیید سازنده سیستم انتخاب می‌شود."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "چرا ورق سقف معمولاً از لبه یا گوشه جدا می‌شود و نه از وسط؟",
+          "answer": "چون مکش باد در لبه‌ها و گوشه‌ها بسیار بیشتر از میانه سقف است و تریم‌ها و انتهای ورق‌ها هم در همین نواحی قرار دارند. اگر کلیپ‌گذاری و مهار تریم در این نواحی متراکم‌تر از میانه سقف نباشد، اولین نقطه تسلیم همان‌جاست و پس از آن باد زیر ورق‌های بعدی می‌رود."
+        },
+        {
+          "question": "آیا ورق ضخیم‌تر مشکل باد را حل می‌کند؟",
+          "answer": "به‌تنهایی نه. ورق ضخیم‌تر کمتر شکم می‌دهد، اما نیرو همچنان باید از درز به کلیپ، پیچ و پرلین برسد. اگر فاصله کلیپ در لبه زیاد باشد، درز کامل بسته نشده باشد یا پیچ در بستر ضعیف بسته شده باشد، ضعیف‌ترین حلقه تعیین‌کننده است، نه ضخامت ورق."
+        },
+        {
+          "question": "می‌شود برای محکم‌تر کردن، از روی ورق پیچ زد؟",
+          "answer": "در سقف استندینگ سیم، پیچ رو بدون تأیید سازنده توصیه نمی‌شود. ورق برای حرکت حرارتی آزاد طراحی شده و پیچ رو این حرکت را قفل می‌کند و سوراخ‌های تازه هم مسیر نشت آب می‌شوند. تقویت باید با راهکارهای مورد تأیید همان سیستم، مانند کلیپ اضافه یا بست‌های تکمیلی درز، انجام شود."
+        },
+        {
+          "question": "پس از یک شب طوفانی، روی سقف چه چیزی را باید بررسی کرد؟",
+          "answer": "ابتدا تا آرام شدن کامل باد کسی روی سقف نرود. سپس از مسیر ایمن، لبه‌ها، گوشه‌ها، تاج و تریم‌ها از نظر بلند شدن، درزها از نظر باز شدن یا تغییرشکل، و داخل ساختمان از نظر نشت تازه بررسی شود. هر نشانه‌ای، حتی کوچک، باید عکس‌برداری و ثبت شود چون همین نقاط محتمل‌ترین محل شروع خرابی در طوفان بعدی‌اند."
+        },
+        {
+          "question": "آیا باز بودن درهای سوله در طوفان روی سقف اثر دارد؟",
+          "answer": "بله. دهانه بزرگ باز در سمت رو به باد، فشار داخل ساختمان را بالا می‌برد و این فشار از زیر به سقف وارد می‌شود و با مکش بیرونی جمع می‌شود. به همین دلیل وضعیت درها و بازشوها باید در فرضیات طراحی دیده شود و در دستورالعمل بهره‌برداری، بستن آن‌ها پیش از باد شدید پیش‌بینی شود."
+        },
+        {
+          "question": "برای بررسی مقاومت باد یک سقف موجود چه مدارکی لازم است؟",
+          "answer": "شاپ‌دراوینگ یا نقشه اجرایی سقف، مشخصات سیستم ورق و کلیپ، فاصله و مقطع پرلین‌ها، جزئیات تریم‌ها، عکس از لبه‌ها، گوشه‌ها و نقاط آسیب‌دیده، و موقعیت و ارتفاع ساختمان. اگر مدارک اجرایی موجود نیست، برداشت میدانی چند نقطه از لبه و میانه سقف شروع کار است."
+        }
+      ],
+      "cta": {
+        "headline": "پیش از طوفان بعدی، لبه‌ها و کلیپ‌گذاری سقف را بازبینی کنید",
+        "text": "نقشه یا شاپ‌دراوینگ سقف، مشخصات سیستم و عکس نقاط آسیب‌دیده یا مشکوک را ارسال کنید تا تیم فنی سی‌پانل نواحی باد، کلیپ‌گذاری، مهار تریم‌ها و مسیر نیرو تا سازه را بررسی و راهکار اصلاح یا اجرای درست را پیشنهاد کند."
+      }
+    },
+    "en": {
+      "title": "Standing Seam Roof Wind Uplift: Why Panels Peel From the Edge",
+      "metaDescription": "Standing seam roof wind uplift resistance depends on edges, corners, clips and seams. Why panels peel from the edge and what to check before and after a storm.",
+      "primaryKeyword": "standing seam roof wind uplift resistance",
+      "summary": "Strong wind creates suction on a roof that is much higher along edges, at corners, around the ridge and on overhangs than mid-roof. A standing seam panel is held only by concealed clips engaged in its seam, so wind resistance belongs to the whole assembly of panel, seam, clip, fastener and purlin, not to sheet thickness. Detachment usually starts at an edge or trim and, if not restrained, spreads.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "After an autumn windstorm: a lifted trim, an opened seam, a panel folded back at the edge",
+        "body": "Recent weather warnings for several Iranian provinces have combined rain and thunderstorms with strong wind. On days like these, operators of industrial halls, terminals, sports halls and atria often notice signs that were easy to ignore before: panels rattling and banging through a stormy night, an edge trim that has lifted slightly, a seam that looks open at a roof corner, or, in the worst case, a panel peeled back from the edge and folded over the roof. The owner's first question is usually whether the sheet was too thin or too few screws were used. With a standing seam roof, the answer depends less on a single component and more on the logic of the whole system. The roof is deliberately designed without exposed fasteners so the sheet can move with temperature and water cannot enter through screw holes. That same feature means the entire wind suction must travel from the seam into the clip, from the clip into its fastener and from the fastener into the purlin. If this chain was installed along edges and corners, where suction is highest, with the same layout used in the middle of the roof, the weakest link gives way first.",
+        "points": [
+          "Rattling and banging in strong wind usually means a panel is moving on its clips or a trim is loose; it should be checked after the storm, not treated as normal.",
+          "A lifted edge, ridge or gable trim is often the first stage of detachment: wind gets under the trim and exposes the panel edge to direct suction.",
+          "A seam that looks open or distorted at a corner or edge may indicate the panel has started to slip off the clip tab.",
+          "Damage is frequent at overhangs, canopies and free edges, where wind both sucks from above and pushes from below.",
+          "Large doors left open or broken during a storm raise the internal pressure of the building, and that pressure adds to the suction on the roof.",
+          "One detached panel at the edge lets wind get under the next one, so damage spreads like a chain."
+        ]
+      },
+      "cause": {
+        "title": "Wind suction is not uniform, and a standing seam roof resists it only through its clips",
+        "body": "When wind passes over a building, the airflow separates at the roof edge and creates negative pressure, or suction, on the roof. Its intensity is not the same everywhere: it is considerably higher in the edge strips, at corners where two edges meet, around the ridge and on overhangs than in the middle of the roof. This is why wind load provisions, including Iran's National Building Regulations Part Six on loads, assign different pressure coefficients to different roof zones when calculating wind on roof cladding, and why the final calculation belongs to the project's structural designer. In a standing seam roof, the panel is fixed to the purlins by clips whose tabs sit inside the seam and become engaged when the seam is closed. Under suction, the panel pan bulges upward, the seam legs are pulled and rotated, and if engagement between seam and clip is insufficient the seam opens and the panel comes off the clip. Resistance therefore depends on several factors at once: seam geometry and type and whether it is fully closed, clip spacing, clip and fastener type, and the capacity of the purlin or substrate the fastener goes into. Manufacturers usually determine this resistance by uplift testing of the complete assembly, which is why replacing a single component, such as a clip or screw from another brand, cannot be assumed to give the same result.",
+        "points": [
+          "Clip spacing at edges and corners must follow the wind load zones; carrying the mid-roof spacing into the edges is the most common weakness.",
+          "A seam not fully closed along part of its length, by machine or by hand, has insufficient engagement with the clips and opens earlier under suction.",
+          "If a clip fastener is driven into a thin purlin, through an insulation layer or into an unsuitable substrate, it pulls out before the panel itself fails.",
+          "Edge, ridge and gable trims without enough fasteners or correct overlaps let wind get under the system.",
+          "In systems with sliding clips, the panel's fixed point must be installed as designed; a panel without a fixed point migrates under wind and temperature changes.",
+          "Substituting components, or mixing panels and clips from different systems, means the manufacturer's test result can no longer be relied on."
+        ]
+      },
+      "visual": {
+        "title": "Diagram of wind suction zones and clip layout on a standing seam roof (pending verification)",
+        "description": "The verified diagram should show the roof plan with edge strips, corners, ridge and overhangs as higher-suction zones, alongside a seam section with the engaged clip, the direction in which the panel bulges under suction, and the load path down to the purlin. This technical asset is still pending verification.",
+        "callouts": [
+          "Edge strip, corner and ridge",
+          "Denser clips in high-suction zones",
+          "Seam and clip tab engagement",
+          "Trim and overhang restraint"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL logic for controlling wind uplift on standing seam roofs",
+        "steps": [
+          {
+            "title": "Mapping wind zones on the shop drawings",
+            "description": "Using the wind load assumptions from the structural designer, edge strips, corners, ridge, overhangs and canopies are marked on the roof plan so that clip layout and trim restraint are defined for each zone separately, rather than one spacing for the whole roof."
+          },
+          {
+            "title": "Matching the tested system to each zone",
+            "description": "The combination of panel, seam type, clip and fastener is taken from the manufacturer's data for that system, and for each zone the clip spacing matching the tested capacity is recorded in a clip schedule. Any component substitution is accepted only with the manufacturer's approval."
+          },
+          {
+            "title": "Checking the substrate and load path to the structure",
+            "description": "Purlin thickness and spacing, substrate type, insulation thickness under the clips and fastener type are reviewed together so suction reaches the structure without fastener pull-out or purlin distortion. Any mismatch is reported to the structural designer before procurement."
+          },
+          {
+            "title": "Detailing edges, ridge, overhangs and openings",
+            "description": "Trims, their fastener spacing, overlaps, seam end closures and the restraint of free edges at overhangs are detailed. The effect of large doors and openings on internal pressure is flagged to the structural designer so it is reflected in the load assumptions."
+          },
+          {
+            "title": "Site installation control",
+            "description": "Clip count and position in each zone, clip tab engagement, full seam closure along the entire length, the fixed point and trim fasteners are checked and recorded before they are covered. Roofing work stops on days of strong wind and partly installed panels are temporarily restrained."
+          },
+          {
+            "title": "Post-storm inspection and assessment of existing roofs",
+            "description": "After every strong wind and before winter, edges, corners, trims and seams are inspected from a safe access route. For an existing roof showing weakness, the clip layout and substrate are surveyed, and strengthening, such as additional clips or supplementary seam clamps, is chosen only from measures approved by the system manufacturer."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Why does a roof panel usually detach at the edge or corner rather than in the middle?",
+          "answer": "Because wind suction is much higher along edges and at corners than in the middle of the roof, and trims and panel ends are located in those same zones. If clips and trim restraint are not denser there than mid-roof, that is where the roof gives way first, and then wind gets under the following panels."
+        },
+        {
+          "question": "Does a thicker sheet solve the wind problem?",
+          "answer": "Not on its own. A thicker sheet bulges less, but the force still has to travel from the seam to the clip, fastener and purlin. If clip spacing at the edge is too wide, the seam is not fully closed or the fastener sits in a weak substrate, the weakest link governs, not sheet thickness."
+        },
+        {
+          "question": "Can screws be added through the panel to make it stronger?",
+          "answer": "On a standing seam roof, face-fixing without the manufacturer's approval is not recommended. The panel is designed to move freely with temperature; screws through the face lock that movement, and the new holes become leak paths. Strengthening should use measures approved for that system, such as additional clips or supplementary seam clamps."
+        },
+        {
+          "question": "What should be checked on the roof after a stormy night?",
+          "answer": "First, nobody should go on the roof until the wind has fully calmed. Then, from a safe route, check edges, corners, ridge and trims for lifting, seams for opening or distortion, and the interior for new leaks. Any sign, however small, should be photographed and logged, because these are the most likely starting points for damage in the next storm."
+        },
+        {
+          "question": "Do open hall doors during a storm affect the roof?",
+          "answer": "Yes. A large opening on the windward side raises the pressure inside the building; this pressure acts on the roof from below and adds to the external suction. That is why the status of doors and openings must be considered in the design assumptions, and closing them before strong wind should be part of the operating instructions."
+        },
+        {
+          "question": "What documents are needed to assess the wind resistance of an existing roof?",
+          "answer": "The roof shop drawings or as-built drawings, panel and clip system data, purlin section and spacing, trim details, photos of edges, corners and damaged points, and the building's location and height. If as-built documents are missing, a field survey of several points at the edge and mid-roof is the starting point."
+        }
+      ],
+      "cta": {
+        "headline": "Before the next storm, review the roof edges and clip layout",
+        "text": "Send the roof drawings or shop drawings, system data and photos of damaged or suspect points, and SIPANEL's technical team will review wind zones, clip layout, trim restraint and the load path to the structure, and propose a correction or correct installation approach."
+      }
+    },
+    "ar": {
+      "title": "مقاومة سقف ستاندينغ سيم للرياح: لماذا ينفصل اللوح من الحافة؟",
+      "metaDescription": "تعتمد مقاومة سقف ستاندينغ سيم للرياح على الحواف والزوايا والمشابك والدرزات. تعرّف لماذا ينفصل اللوح من الحافة وما الذي يجب فحصه قبل العاصفة وبعدها.",
+      "primaryKeyword": "مقاومة سقف ستاندينغ سيم للرياح",
+      "summary": "تولّد الرياح الشديدة ضغطًا صاعدًا أو شفطًا على السقف، ويكون هذا الشفط على الحواف والزوايا وحول القمة وعلى البروزات أعلى بكثير منه في وسط السقف. لوح ستاندينغ سيم مثبت فقط بمشابك مخفية متداخلة مع الدرزة، لذلك فإن مقاومة الرياح ليست خاصية سماكة اللوح، بل خاصية المجموعة الكاملة من اللوح والدرزة والمشبك والبرغي والمدادة. يبدأ انفصال اللوح عادةً من حافة أو من قطعة إنهاء، وإذا لم تُثبَّت تلك النقطة يتقدم الضرر تدريجيًا.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "بعد عاصفة خريفية: قطعة إنهاء مرفوعة ودرزة مفتوحة ولوح منثنٍ عند الحافة",
+        "body": "جمعت تحذيرات الأرصاد الجوية الأخيرة لعدة محافظات إيرانية بين الأمطار والعواصف الرعدية والرياح الشديدة. في مثل هذه الأيام يلاحظ مشغلو الهناجر الصناعية والمحطات والصالات الرياضية والأتريومات علامات كان من السهل تجاهلها سابقًا: اهتزاز الألواح وطرقها خلال ليلة عاصفة، أو قطعة إنهاء عند الحافة ارتفعت قليلًا، أو درزة تبدو مفتوحة عند زاوية السقف، أو في أسوأ الحالات لوح انقلب من الحافة وانثنى فوق السقف. عادةً يسأل المالك أولًا: هل كان اللوح رقيقًا أم أن البراغي كانت قليلة؟ في سقف ستاندينغ سيم يعتمد الجواب على منطق النظام بأكمله أكثر من اعتماده على مكوّن واحد. فهذا السقف مصمم عمدًا دون براغٍ ظاهرة حتى يتمدد اللوح ويتقلص مع الحرارة ولا يدخل الماء من ثقوب البراغي. وهذه الميزة نفسها تعني أن كامل قوة الشفط يجب أن تنتقل من الدرزة إلى المشبك، ومن المشبك إلى برغيه، ومن البرغي إلى المدادة. فإذا نُفذت هذه السلسلة على الحواف والزوايا، حيث الشفط في أعلى قيمه، بنفس توزيع وسط السقف، فإن الحلقة الأضعف تستسلم أولًا.",
+        "points": [
+          "الاهتزاز والطرق في الرياح الشديدة يعني غالبًا أن اللوح يتحرك على مشابكه أو أن قطعة الإنهاء مرتخية، ويجب فحصه بعد العاصفة لا اعتباره أمرًا عاديًا.",
+          "ارتفاع قطعة إنهاء الحافة أو القمة أو الجملون غالبًا هو المرحلة الأولى للانفصال، إذ تدخل الرياح تحتها وتعرّض حافة اللوح للشفط المباشر.",
+          "الدرزة التي تبدو مفتوحة أو مشوهة عند زاوية أو حافة قد تدل على بدء انزلاق اللوح عن لسان المشبك.",
+          "يكثر الضرر عند البروزات والمظلات والحواف الحرة، حيث تشفط الرياح من الأعلى وتدفع من الأسفل في آن واحد.",
+          "الأبواب الكبيرة المفتوحة أو المكسورة أثناء العاصفة ترفع الضغط داخل المبنى، ويُضاف هذا الضغط إلى الشفط على السقف.",
+          "لوح واحد منفصل عند الحافة يسمح للرياح بالدخول تحت اللوح التالي، فيتقدم الضرر كالسلسلة."
+        ]
+      },
+      "cause": {
+        "title": "شفط الرياح ليس منتظمًا، وسقف ستاندينغ سيم يقاومه فقط عبر مشابكه",
+        "body": "عندما تمر الرياح فوق المبنى ينفصل تيار الهواء عند حافة السطح ويولّد ضغطًا سالبًا أو شفطًا على السقف. ولا تكون شدته متساوية في كل مكان، فهي أعلى بكثير في شرائط الحواف، وفي الزوايا حيث تلتقي حافتان، وحول القمة وعلى البروزات، منها في وسط السقف. لهذا تقسم أحكام أحمال الرياح، ومنها المبحث السادس من اللوائح الوطنية للبناء في إيران الخاص بالأحمال، السقف عند حساب أحمال الرياح على التغطية إلى مناطق بمعاملات ضغط مختلفة، ويبقى الحساب النهائي مسؤولية المصمم الإنشائي للمشروع. في سقف ستاندينغ سيم يُثبت اللوح على المدادات بمشابك تدخل ألسنتها داخل الدرزة وتتداخل معها عند إغلاقها. وتحت الشفط ينتفخ سطح اللوح إلى الأعلى، وتُشد ساقا الدرزة وتدوران، وإذا لم يكن التداخل بين الدرزة والمشبك كافيًا تنفتح الدرزة ويخرج اللوح عن المشبك. لذلك تعتمد المقاومة على عدة عوامل معًا: شكل الدرزة ونوعها واكتمال إغلاقها، والمسافة بين المشابك، ونوع المشبك والبرغي، وقدرة المدادة أو الطبقة الحاملة التي يُثبت فيها البرغي. وعادةً يحدد المصنّع هذه المقاومة باختبار شفط على المجموعة الكاملة، ولذلك لا يمكن افتراض النتيجة نفسها عند استبدال مكوّن واحد كالمشبك أو البرغي من علامة أخرى.",
+        "points": [
+          "يجب تحديد المسافة بين المشابك عند الحواف والزوايا وفق مناطق حمل الرياح، ونقل مسافة وسط السقف إلى الحواف هو أكثر نقاط الضعف شيوعًا.",
+          "الدرزة غير المغلقة تمامًا في جزء من طولها، آليًا أو يدويًا، لا تتداخل بما يكفي مع المشابك وتنفتح أسرع تحت الشفط.",
+          "إذا ثُبت برغي المشبك في مدادة رقيقة أو عبر طبقة عزل أو في طبقة حاملة غير مناسبة، فإنه يُقتلع قبل أن يفشل اللوح نفسه.",
+          "قطع إنهاء الحافة والقمة والجملون دون براغٍ كافية أو تراكب صحيح تسمح للرياح بالدخول تحت النظام.",
+          "في الأنظمة ذات المشابك المنزلقة يجب تنفيذ النقطة الثابتة للوح كما صُممت، فاللوح بلا نقطة ثابتة يزحف تحت الرياح وتغير الحرارة.",
+          "استبدال المكونات أو خلط ألواح ومشابك من أنظمة مختلفة يعني أنه لم يعد بالإمكان الاستناد إلى نتيجة اختبار المصنّع."
+        ]
+      },
+      "visual": {
+        "title": "مخطط مناطق شفط الرياح وتوزيع المشابك في سقف ستاندينغ سيم (بانتظار التحقق)",
+        "description": "يجب أن يُظهر المخطط المعتمد مسقط السقف مع شرائط الحواف والزوايا والقمة والبروزات كمناطق شفط أعلى، وإلى جانبه مقطعًا للدرزة مع المشبك المتداخل واتجاه انتفاخ اللوح تحت الشفط ومسار انتقال القوة حتى المدادة. هذا الأصل الفني لا يزال بانتظار التحقق.",
+        "callouts": [
+          "شريط الحافة والزاوية والقمة",
+          "مشابك أكثف في مناطق الشفط العالي",
+          "تداخل الدرزة مع لسان المشبك",
+          "تثبيت قطع الإنهاء والبروزات"
+        ]
+      },
+      "execution": {
+        "title": "منطق SIPANEL للتحكم في مقاومة الرياح لسقف ستاندينغ سيم",
+        "steps": [
+          {
+            "title": "رسم مناطق الرياح على المخططات التنفيذية",
+            "description": "بالاعتماد على فرضيات حمل الرياح من المصمم الإنشائي، تُحدد شرائط الحواف والزوايا والقمة والبروزات والمظلات على مسقط السقف، ليُعرّف توزيع المشابك وتثبيت قطع الإنهاء لكل منطقة على حدة بدلًا من مسافة واحدة للسقف كله."
+          },
+          {
+            "title": "مطابقة النظام المختبَر مع كل منطقة",
+            "description": "يُؤخذ تركيب اللوح ونوع الدرزة والمشبك والبرغي من بيانات مصنّع النظام نفسه، وتُسجل لكل منطقة مسافة المشابك المطابقة للقدرة المختبرة في جدول المشابك. ولا يُقبل أي استبدال لمكوّن إلا بموافقة المصنّع."
+          },
+          {
+            "title": "فحص الطبقة الحاملة ومسار القوة حتى الهيكل",
+            "description": "تُراجع سماكة المدادات وتباعدها ونوع الطبقة الحاملة وسماكة العزل تحت المشابك ونوع البرغي معًا، حتى تصل قوة الشفط إلى الهيكل دون اقتلاع البراغي أو تشوه المدادات. ويُبلّغ المصمم الإنشائي بأي تعارض قبل التوريد."
+          },
+          {
+            "title": "تفاصيل الحواف والقمة والبروزات والفتحات",
+            "description": "تُفصّل قطع الإنهاء وتباعد براغيها والتراكبات وإغلاق نهايات الدرزات وتثبيت الحواف الحرة في البروزات. ويُنبَّه المصمم الإنشائي إلى أثر الأبواب الكبيرة والفتحات على الضغط الداخلي ليؤخذ في فرضيات الأحمال."
+          },
+          {
+            "title": "مراقبة التنفيذ في الموقع",
+            "description": "يُفحص ويُسجل عدد المشابك وموقعها في كل منطقة، وتداخل ألسنتها، واكتمال إغلاق الدرزة على كامل طولها، والنقطة الثابتة وبراغي قطع الإنهاء قبل تغطيتها. ويُوقف العمل على السقف في أيام الرياح الشديدة وتُثبت الألواح غير المكتملة مؤقتًا."
+          },
+          {
+            "title": "الفحص بعد العاصفة وتقييم الأسقف القائمة",
+            "description": "بعد كل رياح شديدة وقبل الشتاء تُفحص الحواف والزوايا وقطع الإنهاء والدرزات من مسار وصول آمن. وفي سقف قائم تظهر عليه علامات ضعف، يُوثّق توزيع المشابك والطبقة الحاملة، ويُختار التدعيم، كإضافة مشابك أو مشابك درزات تكميلية، فقط من الحلول المعتمدة من مصنّع النظام."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "لماذا ينفصل لوح السقف عادةً من الحافة أو الزاوية وليس من الوسط؟",
+          "answer": "لأن شفط الرياح على الحواف والزوايا أعلى بكثير منه في وسط السقف، كما تقع قطع الإنهاء ونهايات الألواح في هذه المناطق نفسها. فإذا لم تكن المشابك وتثبيت قطع الإنهاء هناك أكثف من الوسط، تكون هذه أول نقطة استسلام، ثم تدخل الرياح تحت الألواح التالية."
+        },
+        {
+          "question": "هل يحل اللوح الأسمك مشكلة الرياح؟",
+          "answer": "ليس وحده. اللوح الأسمك ينتفخ أقل، لكن القوة يجب أن تنتقل من الدرزة إلى المشبك والبرغي والمدادة. فإذا كانت المسافة بين المشابك عند الحافة كبيرة، أو لم تُغلق الدرزة تمامًا، أو ثُبت البرغي في طبقة ضعيفة، فإن الحلقة الأضعف هي الحاسمة لا سماكة اللوح."
+        },
+        {
+          "question": "هل يمكن تثبيت براغٍ عبر سطح اللوح لزيادة المتانة؟",
+          "answer": "في سقف ستاندينغ سيم لا يُنصح بالتثبيت الظاهر دون موافقة المصنّع. فاللوح مصمم ليتحرك بحرية مع الحرارة، والبراغي الظاهرة تقيد هذه الحركة، والثقوب الجديدة تصبح مسارات لتسرب الماء. ويجب أن يتم التدعيم بحلول معتمدة لذلك النظام، كإضافة مشابك أو مشابك درزات تكميلية."
+        },
+        {
+          "question": "ما الذي يجب فحصه على السقف بعد ليلة عاصفة؟",
+          "answer": "أولًا، لا يصعد أحد إلى السقف حتى تهدأ الرياح تمامًا. ثم تُفحص من مسار آمن الحواف والزوايا والقمة وقطع الإنهاء بحثًا عن الارتفاع، والدرزات بحثًا عن الانفتاح أو التشوه، والداخل بحثًا عن تسرب جديد. وأي علامة مهما صغرت يجب تصويرها وتسجيلها، لأن هذه النقاط هي الأرجح لبدء الضرر في العاصفة التالية."
+        },
+        {
+          "question": "هل تؤثر أبواب الهنجر المفتوحة أثناء العاصفة على السقف؟",
+          "answer": "نعم. الفتحة الكبيرة في الجهة المواجهة للرياح ترفع الضغط داخل المبنى، فيؤثر هذا الضغط على السقف من الأسفل ويُضاف إلى الشفط الخارجي. لذلك يجب أخذ حالة الأبواب والفتحات في فرضيات التصميم، وإدراج إغلاقها قبل الرياح الشديدة في تعليمات التشغيل."
+        },
+        {
+          "question": "ما المستندات اللازمة لتقييم مقاومة الرياح لسقف قائم؟",
+          "answer": "المخططات التنفيذية للسقف أو مخططات ما بعد التنفيذ، وبيانات نظام اللوح والمشبك، ومقطع المدادات وتباعدها، وتفاصيل قطع الإنهاء، وصور الحواف والزوايا والنقاط المتضررة، وموقع المبنى وارتفاعه. وإذا لم تتوفر المستندات التنفيذية، فإن المسح الميداني لعدة نقاط عند الحافة والوسط هو نقطة البداية."
+        }
+      ],
+      "cta": {
+        "headline": "قبل العاصفة التالية، راجع حواف السقف وتوزيع المشابك",
+        "text": "أرسل مخططات السقف أو المخططات التنفيذية وبيانات النظام وصور النقاط المتضررة أو المشكوك فيها، ليراجع الفريق الفني في SIPANEL مناطق الرياح وتوزيع المشابك وتثبيت قطع الإنهاء ومسار القوة حتى الهيكل، ويقترح حلًا تصحيحيًا أو أسلوب تنفيذ سليمًا."
+      }
+    },
+    "ru": {
+      "title": "Ветровая стойкость фальцевой кровли: почему лист отрывается с края",
+      "metaDescription": "Ветровая стойкость фальцевой кровли зависит от краёв, углов, кляммеров и фальцев. Почему лист отрывается с края и что проверить до и после шторма.",
+      "primaryKeyword": "ветровая стойкость фальцевой кровли",
+      "summary": "Сильный ветер создаёт на кровле отсос, который у краёв, в углах, у конька и на свесах значительно выше, чем в середине. Фальцевый лист держится только скрытыми кляммерами в фальце, поэтому ветровая стойкость — свойство всей сборки (лист, фальц, кляммер, крепёж, прогон), а не толщины листа. Отрыв обычно начинается с края или добора и, если его не остановить, распространяется.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "После осеннего шторма: приподнятый добор, раскрытый фальц, загнутый на краю лист",
+        "body": "Недавние метеопредупреждения для ряда провинций Ирана сочетали дожди и грозы с сильным ветром. В такие дни эксплуатирующие службы промышленных зданий, терминалов, спортивных залов и атриумов часто замечают признаки, которые раньше было легко не заметить: листы дребезжат и стучат в штормовую ночь, краевой добор слегка приподнялся, фальц в углу кровли выглядит раскрытым, а в худшем случае лист оторвался с края и завернулся на кровлю. Первый вопрос владельца обычно такой: был ли лист слишком тонким или мало саморезов? Для фальцевой кровли ответ зависит не столько от одной детали, сколько от логики всей системы. Такая кровля намеренно выполняется без открытого крепежа, чтобы лист мог свободно двигаться при изменении температуры, а вода не попадала через отверстия. Именно поэтому весь ветровой отсос должен пройти по цепочке: от фальца к кляммеру, от кляммера к его крепежу и от крепежа к прогону. Если по краям и в углах, где отсос максимален, эта цепочка выполнена с той же раскладкой, что и в середине кровли, первым сдаётся самое слабое звено.",
+        "points": [
+          "Дребезжание и стук при сильном ветре обычно означают, что лист смещается на кляммерах или ослаб добор; это нужно проверить после шторма, а не считать нормой.",
+          "Приподнятый краевой, коньковый или фронтонный добор часто становится первой стадией отрыва: ветер заходит под него и подвергает кромку листа прямому отсосу.",
+          "Раскрытый или деформированный фальц в углу или на краю может говорить о том, что лист начал соскальзывать с язычка кляммера.",
+          "Повреждения часто возникают на свесах, козырьках и свободных кромках, где ветер одновременно отсасывает сверху и давит снизу.",
+          "Большие ворота, открытые или сорванные во время шторма, повышают внутреннее давление в здании, и оно складывается с отсосом на кровле.",
+          "Один оторванный на краю лист позволяет ветру зайти под следующий, и разрушение распространяется цепочкой."
+        ]
+      },
+      "cause": {
+        "title": "Ветровой отсос неравномерен, а фальцевая кровля сопротивляется ему только через кляммеры",
+        "body": "Когда ветер обтекает здание, поток отрывается у края кровли и создаёт на ней разрежение, или отсос. Его интенсивность неодинакова: в краевых полосах, в углах, где сходятся две кромки, у конька и на свесах она значительно выше, чем в середине кровли. Поэтому нормы ветровых нагрузок, включая шестой раздел Национальных строительных правил Ирана о нагрузках, при расчёте ветровой нагрузки на кровельное покрытие делят кровлю на зоны с разными коэффициентами давления, а окончательный расчёт остаётся за конструктором проекта. В фальцевой кровле лист крепится к прогонам кляммерами, язычки которых входят в фальц и защемляются при его закатке. Под отсосом плоская часть листа выгибается вверх, стенки фальца растягиваются и поворачиваются, и если зацепление фальца с кляммером недостаточно, фальц раскрывается и лист сходит с кляммера. Следовательно, стойкость зависит сразу от нескольких факторов: геометрии и типа фальца и полноты его закатки, шага кляммеров, типа кляммера и крепежа, а также несущей способности прогона или основания, в которое входит крепёж. Производители обычно определяют эту стойкость испытаниями на отсос всей сборки, поэтому при замене одного элемента, например кляммера или самореза другой марки, нельзя считать результат прежним.",
+        "points": [
+          "Шаг кляммеров на краях и в углах должен назначаться по зонам ветровой нагрузки; перенос шага средней зоны на края — самая распространённая слабость.",
+          "Фальц, не закатанный полностью на части длины машиной или вручную, недостаточно зацепляет кляммеры и раскрывается под отсосом раньше.",
+          "Если крепёж кляммера установлен в тонкий прогон, через слой утеплителя или в неподходящее основание, он вырывается раньше, чем разрушится сам лист.",
+          "Краевые, коньковые и фронтонные доборы без достаточного крепежа и правильных нахлёстов пропускают ветер под систему.",
+          "В системах с подвижными кляммерами неподвижная точка листа должна быть выполнена по проекту; лист без неё смещается под действием ветра и температуры.",
+          "Замена компонентов или смешение листов и кляммеров разных систем делает результаты испытаний производителя неприменимыми."
+        ]
+      },
+      "visual": {
+        "title": "Схема зон ветрового отсоса и раскладки кляммеров фальцевой кровли (ожидает проверки)",
+        "description": "Проверенная схема должна показать план кровли с краевыми полосами, углами, коньком и свесами как зонами повышенного отсоса, а рядом — разрез фальца с зацепленным кляммером, направлением выгиба листа под отсосом и путём передачи усилия до прогона. Этот технический материал пока ожидает проверки.",
+        "callouts": [
+          "Краевая полоса, угол и конёк",
+          "Более частые кляммеры в зонах высокого отсоса",
+          "Зацепление фальца и язычка кляммера",
+          "Крепление доборов и свесов"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для контроля ветровой стойкости фальцевой кровли",
+        "steps": [
+          {
+            "title": "Нанесение ветровых зон на рабочие чертежи",
+            "description": "На основе исходных данных по ветровой нагрузке от конструктора на плане кровли выделяются краевые полосы, углы, конёк, свесы и козырьки, чтобы раскладка кляммеров и крепление доборов назначались для каждой зоны отдельно, а не единым шагом на всю кровлю."
+          },
+          {
+            "title": "Соответствие испытанной системы каждой зоне",
+            "description": "Сочетание листа, типа фальца, кляммера и крепежа принимается по данным производителя именно этой системы, и для каждой зоны в ведомость кляммеров заносится шаг, соответствующий испытанной несущей способности. Любая замена компонента допускается только с согласия производителя."
+          },
+          {
+            "title": "Проверка основания и пути передачи усилия",
+            "description": "Толщина и шаг прогонов, тип основания, толщина утеплителя под кляммерами и тип крепежа рассматриваются совместно, чтобы отсос передавался на каркас без вырыва крепежа и деформации прогонов. О любом несоответствии конструктору сообщается до закупки."
+          },
+          {
+            "title": "Узлы краёв, конька, свесов и проёмов",
+            "description": "Прорабатываются доборы, шаг их крепления, нахлёсты, закрытие торцов фальцев и закрепление свободных кромок на свесах. Конструктору указывается на влияние больших ворот и проёмов на внутреннее давление, чтобы оно было учтено в нагрузках."
+          },
+          {
+            "title": "Контроль монтажа на площадке",
+            "description": "Количество и положение кляммеров в каждой зоне, зацепление язычков, полная закатка фальца по всей длине, неподвижная точка и крепёж доборов проверяются и фиксируются до их закрытия. В дни сильного ветра кровельные работы останавливаются, а не до конца смонтированные листы временно закрепляются."
+          },
+          {
+            "title": "Осмотр после шторма и оценка существующей кровли",
+            "description": "После каждого сильного ветра и перед зимой края, углы, доборы и фальцы осматриваются с безопасного пути доступа. Для существующей кровли с признаками слабости обследуются раскладка кляммеров и основание, а усиление, например дополнительные кляммеры или фальцевые зажимы, выбирается только из решений, одобренных производителем системы."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Почему лист кровли обычно отрывается с края или угла, а не в середине?",
+          "answer": "Потому что ветровой отсос на краях и в углах значительно выше, чем в середине кровли, а доборы и торцы листов находятся именно там. Если кляммеры и крепление доборов в этих зонах не чаще, чем в середине, там кровля и сдаётся первой, после чего ветер заходит под следующие листы."
+        },
+        {
+          "question": "Решает ли проблему ветра более толстый лист?",
+          "answer": "Сам по себе — нет. Толстый лист меньше выгибается, но усилие всё равно должно пройти от фальца к кляммеру, крепежу и прогону. Если шаг кляммеров на краю слишком велик, фальц закатан не полностью или крепёж стоит в слабом основании, решает самое слабое звено, а не толщина листа."
+        },
+        {
+          "question": "Можно ли для надёжности прикрутить лист саморезами сверху?",
+          "answer": "На фальцевой кровле сквозное крепление без согласия производителя не рекомендуется. Лист рассчитан на свободное температурное движение; саморезы через лицевую поверхность блокируют его, а новые отверстия становятся путями протечек. Усиление следует выполнять одобренными для этой системы средствами, например дополнительными кляммерами или фальцевыми зажимами."
+        },
+        {
+          "question": "Что проверить на кровле после штормовой ночи?",
+          "answer": "Прежде всего никто не должен выходить на кровлю, пока ветер полностью не стихнет. Затем с безопасного пути проверяются края, углы, конёк и доборы на предмет подъёма, фальцы — на раскрытие или деформацию, а помещение — на новые протечки. Любой признак, даже небольшой, нужно сфотографировать и зафиксировать: именно такие места чаще всего становятся началом разрушения в следующий шторм."
+        },
+        {
+          "question": "Влияют ли открытые ворота ангара во время шторма на кровлю?",
+          "answer": "Да. Большой проём с наветренной стороны повышает давление внутри здания; оно действует на кровлю снизу и складывается с внешним отсосом. Поэтому положение ворот и проёмов должно учитываться в расчётных предпосылках, а их закрытие перед сильным ветром — входить в инструкцию по эксплуатации."
+        },
+        {
+          "question": "Какие документы нужны для оценки ветровой стойкости существующей кровли?",
+          "answer": "Рабочие или исполнительные чертежи кровли, данные системы листа и кляммеров, сечение и шаг прогонов, узлы доборов, фотографии краёв, углов и повреждённых мест, а также расположение и высота здания. Если исполнительной документации нет, работа начинается с натурного обследования нескольких точек на краю и в середине кровли."
+        }
+      ],
+      "cta": {
+        "headline": "До следующего шторма проверьте края кровли и раскладку кляммеров",
+        "text": "Отправьте чертежи кровли или рабочую документацию, данные системы и фотографии повреждённых или сомнительных мест, и техническая команда SIPANEL проверит ветровые зоны, раскладку кляммеров, крепление доборов и путь передачи усилия до каркаса, а затем предложит решение по исправлению или правильному монтажу."
+      }
+    }
+  }
+}
