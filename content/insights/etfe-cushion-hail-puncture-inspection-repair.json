@@ -1,0 +1,438 @@
+{
+  "slug": "etfe-cushion-hail-puncture-inspection-repair",
+  "category": "etfe_systems",
+  "status": "published",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "faqIds": [
+    "does-hail-puncture-etfe",
+    "punctured-cushion-what-happens",
+    "why-air-pressure-matters",
+    "can-holes-be-repaired-on-site",
+    "hail-noise-under-etfe",
+    "post-hail-owner-actions"
+  ],
+  "relatedProjects": [],
+  "relatedInsights": [
+    "tensile-membrane-ponding-pre-winter-check",
+    "rooflight-drip-leak-or-condensation-diagnosis"
+  ],
+  "relatedResources": [],
+  "trend": {
+    "topic": "Hail, storm and strong-wind warnings for Tehran and other provinces, 16-18 Aban 1405 (Nov 2026): ETFE cushion behaviour under hail, air pressure, post-hail inspection and repair",
+    "rationale": "Iranian outlets published dated forecasts for 16-18 Aban 1405 warning of showers, lightning, strong wind and hail in Tehran province and rain/snow across most of the country. ETFE is rotation #1 with no article yet. Its system page covers air supply and pressure in general but not hail behaviour, punctures, the pressure-impact link, on-site repair or post-storm inspection. Architen, ETS and Birdair technical sources confirm the mechanisms used (elastic foil, air-unit compensation, standby power, in-situ tape repair, inspection after adverse events). The Persian news pages could not be fetched in full; their dated headlines in search results were the trend signal.",
+    "observedAt": "2026-11-10",
+    "sources": [
+      "https://www.eghtesadonline.com/fa/news/2174128",
+      "https://www.eghtesadonline.com/fa/news/2174339",
+      "https://www.eghtesadonline.com/fa/news/2173882",
+      "https://aftabnews.ir/fa/news/1076101",
+      "https://www.architen.com/wp-content/uploads/2022/01/Architen-ETFE-System-Guide-to-Design-3.pdf",
+      "https://ets-na.com/resources/what-is-etfe/",
+      "https://www.birdair.com/membrane/etfe-film/"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "بالشتک ETFE در برابر تگرگ؛ سوراخ شدن، افت فشار و تعمیر",
+      "metaDescription": "بالشتک ETFE در برابر تگرگ چگونه رفتار می‌کند؟ بخوانید چرا فشار هوا و سلامت واحد دمنده تعیین‌کننده است و پس از تگرگ چه چیزی باید بازدید و ترمیم شود.",
+      "primaryKeyword": "بالشتک ETFE در برابر تگرگ",
+      "summary": "فویل ETFE بسیار کشسان است و بالشتکی که با فشار طراحی باد شده، بخش بزرگی از ضربه تگرگ را با تغییرشکل الاستیک جذب می‌کند. خطر اصلی معمولاً جای دیگری است: بالشتکی که به‌دلیل فیلتر مسدود، دمنده معیوب یا قطع برق نرم شده، سوراخ‌های کوچکی که از پایین دیده نمی‌شوند و تگرگی که در گودی‌ها می‌ماند. پس از هر تگرگ شدید، هشدارهای واحد هوا، شکل بالشتک‌ها و مسیر تخلیه باید بررسی و هر سوراخ پیش از گسترش ترمیم شود.",
+      "readingMinutes": 9,
+      "problem": {
+        "title": "پس از رگبار و تگرگ پاییزی؛ هشدار واحد هوا، بالشتکی که شکلش عوض شده و صدایی که نگران‌کننده بود",
+        "body": "در روزهای اخیر هشدارهای هواشناسی برای تهران و چند استان دیگر از رگبار، رعدوبرق، وزش باد شدید و احتمال تگرگ خبر داده‌اند. برای بهره‌بردار آتریوم، سقف مرکز تجاری، باغ گیاه‌شناسی یا مجموعه ورزشی که پوشش ETFE دارد، تگرگ پرسش‌های مشخصی پیش می‌آورد: آیا فویلی به این نازکی سوراخ می‌شود؟ صدای شدید برخورد تگرگ نشانه آسیب بود؟ چرا پس از طوفان یکی از بالشتک‌ها شل‌تر به نظر می‌رسد یا چراغ هشدار واحد هوا روشن شده است؟ پاسخ این پرسش‌ها با منطق شیشه یا پلی‌کربنات به دست نمی‌آید. بالشتک ETFE یک پوسته پنوماتیک است: چند لایه فویل که در پیرامون داخل پروفیل‌های آلومینیومی مهار شده‌اند و شکل و سختی خود را از هوای کم‌فشاری می‌گیرند که واحد دمنده به‌طور پیوسته تأمین می‌کند. بنابراین رفتار پوشش در برابر تگرگ هم‌زمان به خود فویل، به فشار داخلی در لحظه بارش و به سلامت شبکه هوا بستگی دارد. آسیبی که پس از تگرگ دیده می‌شود، حتی اگر کوچک باشد، باید در همین چارچوب سیستمی ارزیابی شود، نه به‌عنوان یک پارگی ساده در یک ورق.",
+        "points": [
+          "روشن شدن هشدار واحد هوا یا کار کردن هم‌زمان و طولانی هر دو دمنده پس از تگرگ می‌تواند نشانه نشت هوا از یک یا چند بالشتک باشد.",
+          "بالشتکی که نسبت به بالشتک‌های مجاور شل‌تر، کم‌ارتفاع‌تر یا چروک‌دار دیده می‌شود، احتمالاً فشار طراحی را از دست داده است.",
+          "سوراخ‌های کوچک ناشی از تگرگ یا اجسامی که باد پرتاب کرده، معمولاً از پایین دیده نمی‌شوند و فقط با بازدید نزدیک یا بررسی رفتار فشار مشخص می‌شوند.",
+          "تگرگ و یخ در دره‌های بین بالشتک‌ها، ناودان‌ها و کنار پروفیل‌ها جمع می‌شود و اگر مسیر تخلیه بسته باشد، بار موضعی و آب مانده ایجاد می‌کند.",
+          "صدای برخورد تگرگ روی فویل در فضای زیر پوشش بلند شنیده می‌شود؛ این صدا به‌تنهایی نشانه آسیب نیست، اما موضوعی آکوستیک در بهره‌برداری است.",
+          "در پوشش فویل تک‌لایه، سوراخ مستقیماً راه آب و هوا به داخل است؛ در بالشتک چندلایه، لایه‌های زیرین هنوز فضای داخل را جدا نگه می‌دارند."
+        ]
+      },
+      "cause": {
+        "title": "رفتار ETFE زیر تگرگ را کشسانی فویل، فشار هوا و سلامت واحد دمنده با هم تعیین می‌کنند",
+        "body": "فویل ETFE پلیمری بسیار کشسان است و پیش از گسیختگی تغییرشکل زیادی را تحمل می‌کند. بالشتکی که با فشار طراحی باد شده، مانند یک سطح کشیده عمل می‌کند: دانه تگرگ به فویل می‌خورد، فویل موضعی فرو می‌رود و انرژی ضربه با تغییرشکل الاستیک فویل و فشرده شدن هوای داخل پخش می‌شود. منابع فنی سازندگان هم تأکید می‌کنند که با طراحی درست، ETFE می‌تواند ضربه تگرگ را تحمل کند؛ اما طراحی درست یعنی انتخاب ضخامت لایه بیرونی متناسب با بارهای پیش‌بینی‌شده و دهانه، هندسه و انحنای مناسب بالشتک، و حفظ فشار در زمان بارش. وقتی فشار داخلی افت کرده باشد، مثلاً به‌دلیل فیلتر مسدود، دمنده معیوب، شیر یک‌طرفه نشت‌دار، لوله جداشده یا قطع برق بدون برق پشتیبان، بالشتک نرم می‌شود، لایه بیرونی شکم می‌دهد و تگرگ و آب در گودی‌ها جمع می‌شود. در این حالت بار به‌جای پخش شدن در سطحی کشیده، روی نواحی محدود و لبه‌ها متمرکز می‌شود و احتمال چروک، تماس لایه‌ها و آسیب موضعی بیشتر است. موضوع دیگر رفتار پارگی است. ETFE به شیار حساسیت کمی دارد؛ برش کوچک ابتدا کمی پیش می‌رود، اما ماده کشیده می‌شود و لبه آن گرد می‌شود. با این حال سوراخی که ترمیم نشود نشت هوای دائمی ایجاد می‌کند و دمنده‌ها را به کار مداوم وادار می‌کند. واحد هوا در سیستم‌های متعارف با افت فشار، جریان هوا را افزایش می‌دهد و نشت‌های جزئی را جبران می‌کند؛ اما این جبران جایگزین ترمیم نیست و فقط زمان می‌خرد.",
+        "points": [
+          "ضخامت لایه بیرونی بر اساس بارهای پیش‌بینی‌شده، دهانه و کاربرد انتخاب می‌شود؛ لایه‌ای که فقط به‌خاطر شفافیت یا وزن انتخاب شده، ممکن است حاشیه کافی نداشته باشد.",
+          "بالشتک کم‌فشار سختی خود را از دست می‌دهد و تگرگ و آب را در گودی نگه می‌دارد؛ در لحظه بارش، فشار داخلی به اندازه خود فویل تعیین‌کننده است.",
+          "فیلتر مسدود، دمنده بدون پشتیبان، شیر یک‌طرفه معیوب یا اتصال شل لوله، فشار را درست در زمانی پایین می‌آورد که بیشترین نیاز به آن وجود دارد.",
+          "قطع برق در طوفان بدون برق پشتیبان یعنی بالشتک‌ها به‌تدریج فشار از دست می‌دهند و حاشیه ایمنی در برابر بار بعدی کم می‌شود.",
+          "انحنای کم بالشتک یا شیب ناکافی دره‌ها و ناودان‌ها باعث ماندن تگرگ و آب و موضعی شدن بار می‌شود.",
+          "سوراخ کوچک ترمیم‌نشده دمنده‌ها را به کار دائمی وادار می‌کند و در باد یا برف بعدی می‌تواند به آسیب بزرگ‌تری تبدیل شود."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام رفتار بالشتک ETFE زیر تگرگ با فشار طراحی و فشار افت‌کرده (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید مقطع یک بالشتک چندلایه را در دو حالت مقایسه کند: با فشار طراحی، که لایه بیرونی کشیده است و ضربه را پخش می‌کند، و با فشار افت‌کرده، که لایه بیرونی شکم داده و تگرگ و آب در گودی و کنار پروفیل جمع شده است. در کنار آن مسیر هوا از واحد دمنده و فیلتر تا شیر یک‌طرفه و بالشتک و محل هشدار افت فشار نشان داده شود. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "لایه بیرونی کشیده با فشار طراحی",
+          "گودی و تجمع تگرگ در بالشتک کم‌فشار",
+          "واحد دمنده، فیلتر و شیر یک‌طرفه",
+          "دره، ناودان و مسیر تخلیه"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای آماده‌سازی و بازدید پوشش ETFE در فصل تگرگ",
+        "steps": [
+          {
+            "title": "مرور فرضیات طراحی و مشخصات فویل",
+            "description": "برای پوشش جدید، بارهای محیطی محل پروژه از جمله تگرگ، برف و باد همراه با دهانه و هندسه بالشتک بررسی می‌شود تا ضخامت لایه بیرونی، تعداد لایه‌ها و انحنا بر اساس داده‌های سازنده سیستم انتخاب شود. برای پوشش موجود، مدارک فویل و فرضیات طراحی پیش از هر قضاوت درباره آسیب جمع‌آوری می‌شود."
+          },
+          {
+            "title": "شبکه هوا با افزونگی و برق پشتیبان",
+            "description": "واحد هوا با دمنده پشتیبان، شیرهای یک‌طرفه، زون‌بندی و پایش فشار تعریف می‌شود و سناریوی قطع برق، برق پشتیبان و زمان واکنش در دستور بهره‌برداری مشخص می‌گردد. در سیستم‌هایی که برای آن طراحی شده‌اند، افزایش موقت فشار در زمان باد یا برف شدید نیز تعریف می‌شود."
+          },
+          {
+            "title": "آماده‌سازی پیش از فصل بارش",
+            "description": "فیلترها تعویض، عملکرد هر دو دمنده و هشدارها آزمایش، اتصالات لوله‌ها و پروفیل‌ها بازبینی، و دره‌ها، ناودان‌ها و مسیرهای تخلیه از گردوغبار و برگ پاک می‌شوند تا تگرگ و آب روی سطح نماند."
+          },
+          {
+            "title": "واکنش در حین تگرگ و بلافاصله پس از آن",
+            "description": "هشدارها و فشار پایش می‌شوند. هیچ‌کس روی فویل راه نمی‌رود و ناحیه‌ای که ضربه دیده تا زمان بازدید، شکننده در نظر گرفته می‌شود. اگر زونی افت فشار مداوم دارد، دسترسی زیر آن محدود و موضوع ثبت می‌شود."
+          },
+          {
+            "title": "بازدید نظام‌مند پس از طوفان",
+            "description": "از مسیرهای دسترسی ایمن یا با دسترسی طنابی، بالشتک‌ها از نظر سوراخ، خراش، چروک و تغییر شکل، لبه‌ها و کلمپ‌ها از نظر جابه‌جایی، و دره‌ها از نظر تجمع یخ بررسی می‌شوند. سوابق کارکرد دمنده‌ها با وضعیت پیش از طوفان مقایسه می‌شود تا نشت‌های پنهان پیدا شود."
+          },
+          {
+            "title": "ترمیم متناسب با اندازه آسیب",
+            "description": "سوراخ‌ها و پارگی‌های کوچک در محل و با نوار ترمیم مخصوص ETFE یا روش مورد تأیید سازنده ترمیم می‌شوند؛ آسیب بزرگ‌تر با وصله جوشی یا تعویض بالشتک برطرف می‌شود. پس از ترمیم، فشار و رفتار زون دوباره کنترل و نتیجه در سابقه نگهداری ثبت می‌شود."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "آیا تگرگ فویل ETFE را سوراخ می‌کند؟",
+          "answer": "فویل ETFE بسیار کشسان است و بالشتکی که با فشار طراحی باد شده، بیشتر ضربه‌ها را با تغییرشکل جذب می‌کند. با این حال سوراخ شدن ناممکن نیست و به اندازه و سرعت تگرگ، ضخامت لایه بیرونی، هندسه بالشتک و به‌ویژه فشار داخلی در لحظه بارش بستگی دارد. به همین دلیل پس از تگرگ شدید بازدید لازم است، حتی اگر از پایین آسیبی دیده نشود."
+        },
+        {
+          "question": "اگر یک لایه بالشتک سوراخ شود، پوشش فرو می‌ریزد؟",
+          "answer": "معمولاً نه. در بالشتک چندلایه، سوراخ کوچک معمولاً به نشت هوا منجر می‌شود و واحد هوا با افزایش جریان، افت فشار را جبران می‌کند؛ لایه‌های زیرین هم فضای داخل را جدا نگه می‌دارند. اما این جبران موقت است: دمنده‌ها دائم زیر بار کار می‌کنند و حاشیه ایمنی در باد و برف بعدی کم می‌شود. پس سوراخ باید ترمیم شود، نه اینکه به دمنده سپرده شود."
+        },
+        {
+          "question": "چرا فشار هوای بالشتک در زمان تگرگ این‌قدر مهم است؟",
+          "answer": "چون سختی بالشتک از فشار داخلی می‌آید. بالشتک با فشار طراحی کشیده است و ضربه را پخش می‌کند؛ بالشتک کم‌فشار شکم می‌دهد، تگرگ و آب را در گودی نگه می‌دارد و بار را موضعی می‌کند. فیلتر مسدود، دمنده معیوب یا قطع برق بدون پشتیبان دقیقاً همین وضعیت را در بدترین زمان ایجاد می‌کند."
+        },
+        {
+          "question": "سوراخ فویل ETFE را می‌شود در محل تعمیر کرد؟",
+          "answer": "بله، سوراخ‌ها و پارگی‌های کوچک معمولاً در محل و با نوار ترمیم مخصوص ETFE ترمیم می‌شوند. این ترمیم برای آسیب کوچک مناسب است و استحکام جوش اصلی را ندارد؛ برای پارگی بزرگ‌تر، وصله جوشی در محل یا تعویض کل بالشتک لازم است. روش و مصالح ترمیم باید با تأیید سازنده سیستم انتخاب شود."
+        },
+        {
+          "question": "صدای تگرگ زیر پوشش ETFE طبیعی است؟",
+          "answer": "بله. فویل سبک و کشیده صدای برخورد باران و تگرگ را به‌خوبی به فضای زیرین منتقل می‌کند و این صدا به‌تنهایی نشانه آسیب نیست. اگر صدا برای کاربری فضا مشکل‌ساز است، راهکارهایی مانند لایه کاهنده صدای باران روی بالشتک وجود دارد که باید پس از ارزیابی آکوستیک و با در نظر گرفتن اثر آن بر نظافت و نگهداری انتخاب شود."
+        },
+        {
+          "question": "پس از تگرگ، بهره‌بردار چه کاری می‌تواند انجام دهد و چه کاری نباید بکند؟",
+          "answer": "هشدارهای واحد هوا و وضعیت دمنده‌ها را بررسی و ثبت کند، از پایین از بالشتک‌های شل یا تغییرشکل‌یافته عکس بگیرد و ناودان‌ها و خروجی آب را کنترل کند. هرگز روی فویل راه نرود، یخ را با جسم تیز جدا نکند و بالشتک آسیب‌دیده را خودش وصله نکند؛ بازدید نزدیک و ترمیم باید توسط تیم آموزش‌دیده و با دسترسی ایمن انجام شود."
+        }
+      ],
+      "cta": {
+        "headline": "پیش از تگرگ و برف بعدی، بالشتک‌ها و شبکه هوای ETFE را بازبینی کنید",
+        "text": "مدارک پوشش، مشخصات فویل و واحد هوا، سوابق هشدار و عکس بالشتک‌های مشکوک را ارسال کنید تا تیم فنی سی‌پانل فشار، افزونگی شبکه هوا، تخلیه و نقاط آسیب‌دیده را بررسی و راهکار ترمیم یا اصلاح را پیشنهاد کند."
+      }
+    },
+    "en": {
+      "title": "ETFE Cushions and Hail: Punctures, Pressure Loss and Repair",
+      "metaDescription": "How do ETFE cushions and hail interact? Learn why inflation pressure and air-unit health decide the outcome, and what to inspect and repair after a hailstorm.",
+      "primaryKeyword": "ETFE cushions and hail",
+      "summary": "ETFE foil is highly elastic, and a cushion at design pressure absorbs most hail impact by elastic deformation. The main risk lies elsewhere: a cushion gone soft from a blocked filter, a faulty fan or a power cut, small holes invisible from below, and hail held in low spots. After heavy hail, check air-unit alarms, cushion shape and drainage from safe access, and repair any hole before it grows.",
+      "readingMinutes": 9,
+      "problem": {
+        "title": "After an autumn hailstorm: an air-unit alarm, a cushion that changed shape, and a noise that worried everyone",
+        "body": "In recent days, weather warnings for Tehran and several other provinces have forecast showers, thunderstorms, strong wind and possible hail. For anyone operating an atrium, a mall roof, a botanical enclosure or a sports venue covered with ETFE, hail raises specific questions. Can foil this thin be punctured? Did the loud drumming of hail mean damage? Why does one cushion look slacker after the storm, or why is the air-unit warning light on? These questions cannot be answered with the logic of glass or polycarbonate. An ETFE cushion is a pneumatic skin: several foil layers clamped around their perimeter in aluminium extrusions, taking their shape and stiffness from low-pressure air that an inflation unit supplies continuously. Its behaviour under hail therefore depends at the same time on the foil itself, on the internal pressure at the moment of impact, and on the health of the air network. Any damage found after a hailstorm, however small, should be assessed within that system logic, not as a simple tear in a sheet.",
+        "points": [
+          "An air-unit alarm, or both fans running together for long periods after a hailstorm, can indicate air leaking from one or more cushions.",
+          "A cushion that looks slacker, lower or more wrinkled than its neighbours has probably lost its design pressure.",
+          "Small holes caused by hail or wind-blown debris are usually invisible from below and only show up through close inspection or the behaviour of the pressure readings.",
+          "Hail and ice collect in the valleys between cushions, in gutters and along the extrusions; if drainage is blocked, they create local load and standing water.",
+          "Hail impact on foil is clearly audible in the space below; the noise alone is not a sign of damage, but it is an operational acoustic issue.",
+          "In a single-layer foil roof a hole is a direct path for water and air; in a multi-layer cushion the inner layers still separate the interior."
+        ]
+      },
+      "cause": {
+        "title": "Foil elasticity, inflation pressure and air-unit health together decide how ETFE behaves under hail",
+        "body": "ETFE is a highly elastic polymer that tolerates large deformation before it breaks. A cushion inflated to its design pressure acts like a taut surface: the hailstone strikes, the foil dips locally, and the impact energy is spread through elastic deformation of the foil and compression of the air inside. Manufacturers' technical sources also stress that, with proper design, ETFE can withstand hail strikes. Proper design here means an outer-layer thickness chosen for the anticipated loads and span, suitable cushion geometry and curvature, and pressure maintained while the hail is falling. When internal pressure has dropped, for example because of a blocked filter, a faulty fan, a leaking non-return valve, a disconnected air pipe or a power cut without standby power, the cushion goes soft, the outer layer sags, and hail and water collect in the hollows. Load is then concentrated on small areas and edges instead of being spread over a taut surface, and creasing, contact between layers and local damage become more likely. Tear behaviour matters too. ETFE has little notch sensitivity: a small cut first runs a little, then the material stretches and its edge rounds out. Even so, an unrepaired hole causes a permanent air leak and keeps the fans running continuously. In typical systems the air unit raises airflow when pressure drops and compensates for minor leaks, but that compensation only buys time; it is not a repair.",
+        "points": [
+          "Outer-layer thickness is selected for anticipated loads, span and application; a layer chosen only for transparency or weight may lack margin.",
+          "A soft cushion loses stiffness and holds hail and water in a hollow; at the moment of impact, internal pressure matters as much as the foil itself.",
+          "A blocked filter, a fan without backup, a faulty non-return valve or a loose pipe joint lowers pressure exactly when it is needed most.",
+          "A power cut during a storm without standby power means cushions slowly lose pressure and the safety margin against the next load shrinks.",
+          "Shallow cushion curvature or insufficient fall in valleys and gutters lets hail and water stay on the roof and concentrates load.",
+          "A small unrepaired hole keeps the fans running continuously and can grow into larger damage in the next wind or snow event."
+        ]
+      },
+      "visual": {
+        "title": "Diagram of an ETFE cushion under hail at design pressure versus reduced pressure (pending verification)",
+        "description": "The verified diagram should compare a section through a multi-layer cushion in two states: at design pressure, with a taut outer layer spreading the impact, and at reduced pressure, with a sagging outer layer and hail and water collected in the hollow and along the extrusion. Beside it, the air path from the inflation unit and filter through the non-return valve to the cushion, and the location of the low-pressure alarm, should be shown. This technical asset is still pending verification.",
+        "callouts": [
+          "Taut outer layer at design pressure",
+          "Hollow and hail build-up in a soft cushion",
+          "Inflation unit, filter and non-return valve",
+          "Valley, gutter and drainage path"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL's logic for preparing and inspecting ETFE roofs in the hail season",
+        "steps": [
+          {
+            "title": "Review design assumptions and foil specification",
+            "description": "For a new roof, site environmental loads including hail, snow and wind are reviewed together with span and cushion geometry, so that outer-layer thickness, layer count and curvature are selected from the system manufacturer's data. For an existing roof, foil records and design assumptions are collected before any judgement about damage."
+          },
+          {
+            "title": "An air network with redundancy and standby power",
+            "description": "The air unit is defined with a backup fan, non-return valves, zoning and pressure monitoring, and the power-cut scenario, standby power and response time are written into the operating instructions. Where the system is designed for it, a temporary pressure increase during high wind or heavy snow is also defined."
+          },
+          {
+            "title": "Preparation before the wet season",
+            "description": "Filters are replaced, both fans and the alarms are tested, pipe connections and extrusions are checked, and valleys, gutters and drainage paths are cleared of dust and leaves so that hail and water do not stay on the surface."
+          },
+          {
+            "title": "Response during and immediately after hail",
+            "description": "Alarms and pressure are monitored. Nobody walks on the foil, and any area that took impacts is treated as fragile until inspected. If a zone shows a persistent pressure drop, access beneath it is restricted and the event is logged."
+          },
+          {
+            "title": "Systematic post-storm inspection",
+            "description": "From safe access routes or by rope access, cushions are checked for holes, scratches, wrinkles and distortion, edges and clamps for displacement, and valleys for ice build-up. Fan running records are compared with the pre-storm condition to reveal hidden leaks."
+          },
+          {
+            "title": "Repair matched to the size of the damage",
+            "description": "Small holes and tears are repaired in place with dedicated ETFE repair tape or a method approved by the manufacturer; larger damage is resolved with a welded patch or cushion replacement. After repair, the zone's pressure and behaviour are checked again and the result is recorded in the maintenance log."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Does hail puncture ETFE foil?",
+          "answer": "ETFE foil is very elastic, and a cushion at design pressure absorbs most impacts by deforming. A puncture is still possible, depending on hailstone size and speed, outer-layer thickness, cushion geometry and above all the internal pressure at the moment of impact. That is why an inspection is needed after heavy hail, even if nothing is visible from below."
+        },
+        {
+          "question": "If one cushion layer is punctured, will the roof collapse?",
+          "answer": "Usually not. In a multi-layer cushion, a small hole usually causes an air leak, and the air unit compensates by increasing airflow; the inner layers also keep the interior separated. But this compensation is temporary: the fans run continuously and the safety margin in the next wind or snow event falls. The hole has to be repaired, not left to the fans."
+        },
+        {
+          "question": "Why does cushion air pressure matter so much during hail?",
+          "answer": "Because the cushion's stiffness comes from its internal pressure. At design pressure the cushion is taut and spreads the impact; a soft cushion sags, holds hail and water in a hollow and concentrates load. A blocked filter, a faulty fan or a power cut without backup creates exactly this condition at the worst possible moment."
+        },
+        {
+          "question": "Can holes in ETFE foil be repaired on site?",
+          "answer": "Yes. Small holes and tears are usually repaired in place with dedicated ETFE repair tape. This suits minor damage and does not match the strength of the original weld; larger tears need a welded patch on site or replacement of the whole cushion. The repair method and materials should be approved by the system manufacturer."
+        },
+        {
+          "question": "Is the noise of hail under an ETFE roof normal?",
+          "answer": "Yes. Light, taut foil transmits the impact noise of rain and hail clearly to the space below, and the noise alone is not a sign of damage. Where it is a problem for the use of the space, options such as a rain-noise suppression layer over the cushions exist, but they should be chosen after an acoustic assessment and with their effect on cleaning and maintenance in mind."
+        },
+        {
+          "question": "After a hailstorm, what should an owner do, and what should they avoid?",
+          "answer": "Check and record the air-unit alarms and fan status, photograph any slack or distorted cushions from below, and check gutters and water outlets. Never walk on the foil, never chip ice off with a sharp tool and never patch a damaged cushion yourself; close inspection and repair should be carried out by a trained team with safe access."
+        }
+      ],
+      "cta": {
+        "headline": "Before the next hail or snow, review your ETFE cushions and air network",
+        "text": "Send the roof documents, the foil and air-unit specifications, the alarm history and photos of suspect cushions, and SIPANEL's technical team will review pressure, air-network redundancy, drainage and damaged areas and propose a repair or correction approach."
+      }
+    },
+    "ar": {
+      "title": "وسائد ETFE في مواجهة البَرَد: الثقوب وانخفاض الضغط والإصلاح",
+      "metaDescription": "كيف تتصرف وسائد ETFE في مواجهة البَرَد؟ تعرّف لماذا يحدد ضغط الهواء وسلامة وحدة النفخ النتيجة، وما الذي يجب فحصه وإصلاحه بعد عاصفة البَرَد.",
+      "primaryKeyword": "وسائد ETFE في مواجهة البرد",
+      "summary": "رقائق ETFE مادة عالية المرونة، والوسادة المنفوخة بضغط التصميم تمتص معظم صدمة حبات البَرَد عبر تشوه مرن. أما الخطر الحقيقي فيأتي عادة من مصدر آخر: وسادة أصبحت رخوة بسبب مرشح مسدود أو مروحة معطلة أو انقطاع الكهرباء، وثقوب صغيرة لا تُرى من الأسفل، وبَرَد وماء يبقيان في المناطق المنخفضة. بعد كل عاصفة بَرَد شديدة يجب فحص إنذارات وحدة الهواء وشكل الوسائد ومسارات التصريف من نقاط وصول آمنة، وإصلاح أي ثقب قبل أن يتسع.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "بعد زخات البَرَد الخريفية: إنذار في وحدة الهواء، ووسادة تغير شكلها، وصوت أثار القلق",
+        "body": "خلال الأيام الأخيرة حذّرت نشرات الأرصاد في طهران وعدة محافظات أخرى من زخات مطر وعواصف رعدية ورياح شديدة واحتمال تساقط البَرَد. وبالنسبة لمشغل أتريوم أو سقف مركز تجاري أو حديقة نباتية أو منشأة رياضية مغطاة بـ ETFE، يطرح البَرَد أسئلة محددة: هل يمكن لرقاقة بهذه النحافة أن تُثقب؟ هل كان صوت ارتطام البَرَد العالي علامة على ضرر؟ لماذا تبدو إحدى الوسائد أكثر ارتخاء بعد العاصفة، أو لماذا أضاء مصباح إنذار وحدة الهواء؟ لا يمكن الإجابة عن هذه الأسئلة بمنطق الزجاج أو البولي كربونات. وسادة ETFE غلاف هوائي: عدة طبقات من الرقائق مثبتة على محيطها داخل مقاطع ألومنيوم، تستمد شكلها وصلابتها من هواء منخفض الضغط تزوده وحدة نفخ بشكل مستمر. لذلك يعتمد سلوك الغلاف تحت البَرَد في آن واحد على الرقاقة نفسها، وعلى الضغط الداخلي لحظة الارتطام، وعلى سلامة شبكة الهواء. وأي ضرر يُكتشف بعد عاصفة بَرَد، مهما كان صغيرا، يجب تقييمه ضمن هذا المنطق المتكامل، لا بوصفه تمزقا بسيطا في صفيحة.",
+        "points": [
+          "إن إنذار وحدة الهواء، أو تشغيل المروحتين معا لفترات طويلة بعد عاصفة البَرَد، قد يشير إلى تسرب الهواء من وسادة أو أكثر.",
+          "الوسادة التي تبدو أكثر ارتخاء أو أقل ارتفاعا أو أكثر تجعدا من جاراتها فقدت على الأرجح ضغط التصميم.",
+          "الثقوب الصغيرة الناتجة عن البَرَد أو عن أجسام حملتها الرياح لا تُرى عادة من الأسفل، ولا تظهر إلا بالفحص القريب أو من سلوك قراءات الضغط.",
+          "يتجمع البَرَد والجليد في الوديان بين الوسائد وفي المزاريب وعلى امتداد المقاطع، وإذا كان التصريف مسدودا فإنه يولد حملا موضعيا ومياها راكدة.",
+          "صوت ارتطام البَرَد بالرقاقة مسموع بوضوح في الفراغ أسفلها؛ والصوت وحده ليس علامة ضرر، لكنه مسألة صوتية تخص التشغيل.",
+          "في سقف الرقاقة أحادية الطبقة يكون الثقب مسارا مباشرا للماء والهواء، أما في الوسادة متعددة الطبقات فلا تزال الطبقات الداخلية تفصل الفراغ الداخلي."
+        ]
+      },
+      "cause": {
+        "title": "مرونة الرقاقة وضغط النفخ وسلامة وحدة الهواء تحدد معا سلوك ETFE تحت البَرَد",
+        "body": "ETFE بوليمر عالي المرونة يتحمل تشوها كبيرا قبل الانقطاع. والوسادة المنفوخة بضغط التصميم تعمل كسطح مشدود: تصطدم حبة البَرَد، فتنخفض الرقاقة موضعيا، وتتوزع طاقة الصدمة عبر التشوه المرن للرقاقة وانضغاط الهواء داخلها. وتؤكد المصادر الفنية للمصنعين أيضا أن ETFE المصمم بشكل صحيح يمكنه تحمل ضربات البَرَد. والتصميم الصحيح هنا يعني سماكة للطبقة الخارجية مختارة وفق الأحمال المتوقعة والبحر، وهندسة وانحناء مناسبين للوسادة، والحفاظ على الضغط أثناء تساقط البَرَد. وعندما ينخفض الضغط الداخلي، مثلا بسبب مرشح مسدود أو مروحة معطلة أو صمام عدم رجوع يسرّب أو أنبوب هواء منفصل أو انقطاع الكهرباء من دون تغذية احتياطية، تصبح الوسادة رخوة وتتدلى الطبقة الخارجية ويتجمع البَرَد والماء في التجاويف. عندئذ يتركز الحمل على مساحات صغيرة وعلى الحواف بدلا من توزعه على سطح مشدود، ويزداد احتمال التجعد وتلامس الطبقات والضرر الموضعي. ويهم سلوك التمزق أيضا؛ فحساسية ETFE للحزوز منخفضة، والقطع الصغير يمتد قليلا في البداية ثم تتمدد المادة ويستدير طرفه. ومع ذلك فإن الثقب غير المُصلح يسبب تسربا دائما للهواء ويبقي المراوح في تشغيل مستمر. وفي الأنظمة المعتادة ترفع وحدة الهواء التدفق عند انخفاض الضغط وتعوض التسربات الطفيفة، لكن هذا التعويض يشتري الوقت فقط ولا يُعد إصلاحا.",
+        "points": [
+          "تُختار سماكة الطبقة الخارجية وفق الأحمال المتوقعة والبحر والاستخدام، والطبقة المختارة للشفافية أو الوزن وحدهما قد تفتقر إلى هامش كاف.",
+          "الوسادة الرخوة تفقد صلابتها وتحتجز البَرَد والماء في تجويف، ولحظة الارتطام يكون الضغط الداخلي حاسما بقدر الرقاقة نفسها.",
+          "المرشح المسدود أو المروحة بلا بديل احتياطي أو صمام عدم الرجوع المعطل أو وصلة الأنبوب المرتخية تخفض الضغط تماما حين تشتد الحاجة إليه.",
+          "انقطاع الكهرباء أثناء العاصفة من دون تغذية احتياطية يعني أن الوسائد تفقد ضغطها تدريجيا ويتقلص هامش الأمان أمام الحمل التالي.",
+          "الانحناء الضحل للوسادة أو الميل غير الكافي في الوديان والمزاريب يُبقي البَرَد والماء على السقف ويركز الحمل.",
+          "الثقب الصغير غير المُصلح يبقي المراوح في تشغيل دائم وقد يتحول إلى ضرر أكبر في الرياح أو الثلوج التالية."
+        ]
+      },
+      "visual": {
+        "title": "مخطط سلوك وسادة ETFE تحت البَرَد بضغط التصميم مقابل ضغط منخفض (بانتظار التحقق)",
+        "description": "يجب أن يقارن المخطط المعتمد مقطعا لوسادة متعددة الطبقات في حالتين: بضغط التصميم مع طبقة خارجية مشدودة توزع الصدمة، وبضغط منخفض مع طبقة خارجية متدلية وبَرَد وماء متجمعين في التجويف وعلى امتداد المقطع. وإلى جانبه يُعرض مسار الهواء من وحدة النفخ والمرشح عبر صمام عدم الرجوع إلى الوسادة، وموقع إنذار انخفاض الضغط. هذا الأصل الفني لا يزال بانتظار التحقق.",
+        "callouts": [
+          "طبقة خارجية مشدودة بضغط التصميم",
+          "تجويف وتراكم البَرَد في وسادة رخوة",
+          "وحدة النفخ والمرشح وصمام عدم الرجوع",
+          "الوادي والمزراب ومسار التصريف"
+        ]
+      },
+      "execution": {
+        "title": "منهج SIPANEL لتجهيز أسقف ETFE وفحصها في موسم البَرَد",
+        "steps": [
+          {
+            "title": "مراجعة فرضيات التصميم ومواصفات الرقاقة",
+            "description": "في السقف الجديد تُراجع الأحمال البيئية للموقع، ومنها البَرَد والثلوج والرياح، مع البحر وهندسة الوسادة، لاختيار سماكة الطبقة الخارجية وعدد الطبقات والانحناء استنادا إلى بيانات مصنع النظام. وفي السقف القائم تُجمع وثائق الرقاقة وفرضيات التصميم قبل أي حكم على الضرر."
+          },
+          {
+            "title": "شبكة هواء مع بديل احتياطي وتغذية كهربائية احتياطية",
+            "description": "تُعرّف وحدة الهواء بمروحة احتياطية وصمامات عدم رجوع وتقسيم إلى مناطق ومراقبة للضغط، ويُدوَّن سيناريو انقطاع الكهرباء والتغذية الاحتياطية وزمن الاستجابة في تعليمات التشغيل. وحيث يكون النظام مصمما لذلك، تُعرّف أيضا زيادة مؤقتة للضغط أثناء الرياح الشديدة أو الثلوج الكثيفة."
+          },
+          {
+            "title": "التجهيز قبل موسم الأمطار",
+            "description": "تُستبدل المرشحات، وتُختبر المروحتان والإنذارات، وتُفحص وصلات الأنابيب والمقاطع، وتُنظف الوديان والمزاريب ومسارات التصريف من الغبار والأوراق حتى لا يبقى البَرَد والماء على السطح."
+          },
+          {
+            "title": "الاستجابة أثناء البَرَد وبعده مباشرة",
+            "description": "تُراقب الإنذارات والضغط. لا يسير أحد على الرقاقة، وتُعامل أي منطقة تعرضت للارتطام على أنها هشة حتى يتم فحصها. وإذا أظهرت منطقة انخفاضا مستمرا في الضغط، يُقيَّد الوصول أسفلها ويُسجَّل الحدث."
+          },
+          {
+            "title": "فحص منهجي بعد العاصفة",
+            "description": "من مسارات وصول آمنة أو بالوصول بالحبال، تُفحص الوسائد بحثا عن الثقوب والخدوش والتجعد والتشوه، والحواف والمشابك بحثا عن الإزاحة، والوديان بحثا عن تراكم الجليد. وتُقارن سجلات تشغيل المراوح بحالتها قبل العاصفة لكشف التسربات الخفية."
+          },
+          {
+            "title": "إصلاح يتناسب مع حجم الضرر",
+            "description": "تُصلح الثقوب والتمزقات الصغيرة في الموقع بشريط إصلاح مخصص لـ ETFE أو بطريقة يعتمدها المصنع، أما الضرر الأكبر فيُعالج برقعة ملحومة أو باستبدال الوسادة. وبعد الإصلاح يُعاد التحقق من ضغط المنطقة وسلوكها وتُسجَّل النتيجة في سجل الصيانة."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "هل يثقب البَرَد رقاقة ETFE؟",
+          "answer": "رقاقة ETFE مرنة جدا، والوسادة المنفوخة بضغط التصميم تمتص معظم الصدمات بالتشوه. ومع ذلك يبقى الثقب ممكنا، تبعا لحجم حبات البَرَد وسرعتها وسماكة الطبقة الخارجية وهندسة الوسادة، وقبل كل شيء الضغط الداخلي لحظة الارتطام. لذلك يلزم الفحص بعد البَرَد الشديد حتى لو لم يظهر شيء من الأسفل."
+        },
+        {
+          "question": "إذا ثُقبت إحدى طبقات الوسادة، فهل ينهار السقف؟",
+          "answer": "عادة لا. في الوسادة متعددة الطبقات يؤدي الثقب الصغير عادة إلى تسرب الهواء، فتعوضه وحدة الهواء بزيادة التدفق، كما تبقي الطبقات الداخلية الفراغ الداخلي مفصولا. لكن هذا التعويض مؤقت؛ إذ تعمل المراوح باستمرار ويتراجع هامش الأمان في الرياح أو الثلوج التالية. يجب إصلاح الثقب لا تركه للمراوح."
+        },
+        {
+          "question": "لماذا يكتسب ضغط هواء الوسادة كل هذه الأهمية أثناء البَرَد؟",
+          "answer": "لأن صلابة الوسادة تأتي من ضغطها الداخلي. فبضغط التصميم تكون الوسادة مشدودة وتوزع الصدمة، أما الوسادة الرخوة فتتدلى وتحتجز البَرَد والماء في تجويف وتركز الحمل. والمرشح المسدود أو المروحة المعطلة أو انقطاع الكهرباء من دون بديل يخلق هذه الحالة بالضبط في أسوأ لحظة."
+        },
+        {
+          "question": "هل يمكن إصلاح ثقوب رقاقة ETFE في الموقع؟",
+          "answer": "نعم. تُصلح الثقوب والتمزقات الصغيرة عادة في الموقع بشريط إصلاح مخصص لـ ETFE. ويناسب ذلك الضرر البسيط ولا يبلغ متانة اللحام الأصلي، أما التمزقات الأكبر فتحتاج إلى رقعة ملحومة في الموقع أو إلى استبدال الوسادة كاملة. ويجب أن يعتمد مصنع النظام طريقة الإصلاح ومواده."
+        },
+        {
+          "question": "هل صوت البَرَد تحت سقف ETFE أمر طبيعي؟",
+          "answer": "نعم. فالرقاقة الخفيفة المشدودة تنقل صوت ارتطام المطر والبَرَد بوضوح إلى الفراغ أسفلها، والصوت وحده ليس علامة ضرر. وإذا كان يمثل مشكلة لاستخدام الفراغ، فهناك حلول مثل طبقة مخففة لضجيج المطر فوق الوسائد، لكن يجب اختيارها بعد تقييم صوتي ومع مراعاة أثرها في التنظيف والصيانة."
+        },
+        {
+          "question": "بعد عاصفة البَرَد، ما الذي ينبغي للمالك فعله وما الذي يجب تجنبه؟",
+          "answer": "يفحص إنذارات وحدة الهواء وحالة المراوح ويسجلها، ويصوّر من الأسفل أي وسائد مرتخية أو مشوهة، ويتحقق من المزاريب ومخارج المياه. ولا يسير أبدا على الرقاقة، ولا يزيل الجليد بأداة حادة، ولا يرقع الوسادة المتضررة بنفسه؛ فالفحص القريب والإصلاح من مهام فريق مدرب يعمل من نقاط وصول آمنة."
+        }
+      ],
+      "cta": {
+        "headline": "قبل البَرَد أو الثلوج المقبلة، راجعوا وسائد ETFE وشبكة الهواء",
+        "text": "أرسلوا وثائق السقف ومواصفات الرقاقة ووحدة الهواء وسجل الإنذارات وصور الوسائد المشتبه بها، ليراجع الفريق الفني في SIPANEL الضغط والبدائل الاحتياطية لشبكة الهواء والتصريف والمناطق المتضررة ويقترح أسلوب الإصلاح أو التصحيح."
+      }
+    },
+    "ru": {
+      "title": "Подушки ETFE и град: проколы, потеря давления и ремонт",
+      "metaDescription": "Как подушки ETFE выдерживают град? Почему исход определяют давление наддува и исправность воздушной установки и что осмотреть и отремонтировать после града.",
+      "primaryKeyword": "подушки ETFE и град",
+      "summary": "Плёнка ETFE очень эластична, и подушка при проектном давлении поглощает большую часть удара градины упругой деформацией. Главный риск в другом: подушка обмякла из-за забитого фильтра, неисправного вентилятора или отключения питания, мелкие проколы не видны снизу, град задерживается в углублениях. После сильного града проверьте сигналы установки, форму подушек и водоотвод и устраните проколы.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "После осеннего града: сигнал воздушной установки, подушка изменила форму, а шум всех встревожил",
+        "body": "В последние дни метеослужбы предупреждали Тегеран и ряд других провинций о ливнях, грозах, сильном ветре и возможном граде. Для эксплуатанта атриума, кровли торгового центра, ботанического павильона или спортивного объекта с покрытием ETFE град порождает конкретные вопросы. Может ли такая тонкая плёнка быть пробита? Был ли громкий стук градин признаком повреждения? Почему одна из подушек после бури выглядит менее натянутой, или почему горит аварийная лампа воздушной установки? Логика стекла или поликарбоната здесь не работает. Подушка ETFE — это пневматическая оболочка: несколько слоёв плёнки, закреплённых по контуру в алюминиевых профилях, которые получают форму и жёсткость от воздуха низкого давления, непрерывно подаваемого установкой наддува. Поэтому поведение покрытия при граде одновременно зависит от самой плёнки, от внутреннего давления в момент удара и от исправности воздушной сети. Любое повреждение, найденное после града, даже небольшое, нужно оценивать в этой системной логике, а не как простой разрыв листа.",
+        "points": [
+          "Сигнал воздушной установки или длительная одновременная работа обоих вентиляторов после града могут указывать на утечку воздуха из одной или нескольких подушек.",
+          "Подушка, которая выглядит более провисшей, низкой или морщинистой, чем соседние, вероятно, потеряла проектное давление.",
+          "Мелкие проколы от града или принесённых ветром предметов обычно не видны снизу и выявляются только при близком осмотре или по поведению показаний давления.",
+          "Град и лёд скапливаются в ендовах между подушками, в желобах и вдоль профилей; при засорённом водоотводе они создают местную нагрузку и стоячую воду.",
+          "Удары града по плёнке хорошо слышны в помещении под ней; сам по себе шум не означает повреждения, но это акустический вопрос эксплуатации.",
+          "В однослойном плёночном покрытии прокол — прямой путь для воды и воздуха; в многослойной подушке внутренние слои всё ещё отделяют внутреннее пространство."
+        ]
+      },
+      "cause": {
+        "title": "Поведение ETFE при граде определяют вместе эластичность плёнки, давление наддува и исправность воздушной установки",
+        "body": "ETFE — очень эластичный полимер, выдерживающий большие деформации до разрыва. Подушка, накачанная до проектного давления, работает как натянутая поверхность: градина ударяет, плёнка локально прогибается, а энергия удара распределяется через упругую деформацию плёнки и сжатие воздуха внутри. Технические источники производителей также подчёркивают, что при правильном проектировании ETFE способен выдерживать удары града. Правильное проектирование здесь означает толщину наружного слоя, подобранную под ожидаемые нагрузки и пролёт, подходящую геометрию и кривизну подушки и поддержание давления во время града. Когда внутреннее давление упало — например, из-за забитого фильтра, неисправного вентилятора, негерметичного обратного клапана, отсоединившейся воздушной трубки или отключения питания без резерва, — подушка обмякает, наружный слой провисает, а град и вода собираются в углублениях. Нагрузка тогда концентрируется на малых участках и кромках вместо распределения по натянутой поверхности, и растёт вероятность складок, контакта слоёв и местных повреждений. Важно и поведение при разрыве. ETFE мало чувствителен к надрезам: небольшой разрез сначала немного распространяется, затем материал вытягивается и край надреза скругляется. Тем не менее неустранённый прокол даёт постоянную утечку воздуха и заставляет вентиляторы работать без перерыва. В типовых системах воздушная установка увеличивает подачу при падении давления и компенсирует небольшие утечки, но такая компенсация лишь выигрывает время и не заменяет ремонт.",
+        "points": [
+          "Толщина наружного слоя выбирается по ожидаемым нагрузкам, пролёту и назначению; слой, выбранный только по прозрачности или весу, может не иметь достаточного запаса.",
+          "Обмякшая подушка теряет жёсткость и удерживает град и воду в углублении; в момент удара внутреннее давление так же важно, как сама плёнка.",
+          "Забитый фильтр, вентилятор без резерва, неисправный обратный клапан или ослабленное соединение трубки снижают давление именно тогда, когда оно нужнее всего.",
+          "Отключение питания во время бури без резервного источника означает, что подушки постепенно теряют давление и запас надёжности перед следующей нагрузкой уменьшается.",
+          "Малая кривизна подушки или недостаточный уклон ендов и желобов оставляют град и воду на кровле и концентрируют нагрузку.",
+          "Небольшой неустранённый прокол заставляет вентиляторы работать постоянно и при следующем ветре или снегопаде может перерасти в более серьёзное повреждение."
+        ]
+      },
+      "visual": {
+        "title": "Схема поведения подушки ETFE при граде: проектное и пониженное давление (ожидает проверки)",
+        "description": "Утверждённая схема должна сравнивать разрез многослойной подушки в двух состояниях: при проектном давлении, когда натянутый наружный слой распределяет удар, и при пониженном давлении, когда наружный слой провис, а град и вода собрались в углублении и вдоль профиля. Рядом нужно показать путь воздуха от установки наддува и фильтра через обратный клапан к подушке и место сигнала падения давления. Этот технический материал пока ожидает проверки.",
+        "callouts": [
+          "Натянутый наружный слой при проектном давлении",
+          "Углубление и скопление града в обмякшей подушке",
+          "Установка наддува, фильтр и обратный клапан",
+          "Ендова, желоб и путь водоотвода"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL: подготовка и осмотр покрытий ETFE в сезон града",
+        "steps": [
+          {
+            "title": "Проверка проектных допущений и спецификации плёнки",
+            "description": "Для нового покрытия климатические нагрузки площадки, включая град, снег и ветер, рассматриваются вместе с пролётом и геометрией подушки, чтобы толщина наружного слоя, число слоёв и кривизна были подобраны по данным производителя системы. Для существующего покрытия документы по плёнке и проектные допущения собираются до любых выводов о повреждении."
+          },
+          {
+            "title": "Воздушная сеть с резервированием и резервным питанием",
+            "description": "Воздушная установка проектируется с резервным вентилятором, обратными клапанами, зонированием и контролем давления, а сценарий отключения питания, резервный источник и время реакции фиксируются в инструкции по эксплуатации. Там, где система это предусматривает, задаётся и временное повышение давления при сильном ветре или снегопаде."
+          },
+          {
+            "title": "Подготовка до сезона осадков",
+            "description": "Заменяются фильтры, проверяются оба вентилятора и сигнализация, осматриваются соединения трубок и профили, а ендовы, желоба и пути водоотвода очищаются от пыли и листвы, чтобы град и вода не задерживались на поверхности."
+          },
+          {
+            "title": "Действия во время града и сразу после него",
+            "description": "Ведётся контроль сигналов и давления. По плёнке никто не ходит, а участок, получивший удары, до осмотра считается хрупким. Если в зоне сохраняется падение давления, доступ под неё ограничивается, а событие фиксируется."
+          },
+          {
+            "title": "Системный осмотр после бури",
+            "description": "С безопасных путей доступа или методами промышленного альпинизма подушки проверяются на проколы, царапины, складки и деформации, кромки и прижимы — на смещение, ендовы — на скопление льда. Журнал работы вентиляторов сравнивается с состоянием до бури, чтобы выявить скрытые утечки."
+          },
+          {
+            "title": "Ремонт по масштабу повреждения",
+            "description": "Небольшие проколы и разрывы устраняются на месте специальной ремонтной лентой для ETFE или методом, одобренным производителем; более серьёзные повреждения — сварной заплатой или заменой подушки. После ремонта давление и поведение зоны проверяются повторно, а результат вносится в журнал обслуживания."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Пробивает ли град плёнку ETFE?",
+          "answer": "Плёнка ETFE очень эластична, и подушка при проектном давлении поглощает большинство ударов за счёт деформации. Тем не менее прокол возможен — в зависимости от размера и скорости градин, толщины наружного слоя, геометрии подушки и прежде всего внутреннего давления в момент удара. Поэтому после сильного града осмотр нужен, даже если снизу ничего не видно."
+        },
+        {
+          "question": "Если один слой подушки проколот, обрушится ли покрытие?",
+          "answer": "Как правило, нет. В многослойной подушке небольшой прокол обычно приводит к утечке воздуха, и воздушная установка компенсирует её, увеличивая подачу; внутренние слои при этом продолжают отделять помещение. Но компенсация временная: вентиляторы работают непрерывно, а запас надёжности при следующем ветре или снегопаде снижается. Прокол нужно устранить, а не оставлять на вентиляторы."
+        },
+        {
+          "question": "Почему давление в подушке так важно во время града?",
+          "answer": "Потому что жёсткость подушки создаётся её внутренним давлением. При проектном давлении подушка натянута и распределяет удар; обмякшая подушка провисает, удерживает град и воду в углублении и концентрирует нагрузку. Забитый фильтр, неисправный вентилятор или отключение питания без резерва создают именно такое состояние в самый неподходящий момент."
+        },
+        {
+          "question": "Можно ли отремонтировать прокол плёнки ETFE на месте?",
+          "answer": "Да. Небольшие проколы и разрывы обычно устраняют на месте специальной ремонтной лентой для ETFE. Это подходит для мелких повреждений и не равно по прочности заводскому сварному шву; для более крупных разрывов нужна сварная заплата на месте или замена всей подушки. Метод и материалы ремонта должны быть одобрены производителем системы."
+        },
+        {
+          "question": "Нормален ли шум града под покрытием ETFE?",
+          "answer": "Да. Лёгкая натянутая плёнка хорошо передаёт звук ударов дождя и града в помещение, и сам по себе шум не говорит о повреждении. Если он мешает использованию пространства, существуют решения, например слой подавления шума дождя над подушками, но выбирать их нужно после акустической оценки и с учётом влияния на очистку и обслуживание."
+        },
+        {
+          "question": "Что владельцу делать после града и чего избегать?",
+          "answer": "Проверить и записать сигналы воздушной установки и состояние вентиляторов, сфотографировать снизу провисшие или деформированные подушки, проверить желоба и водосточные выпуски. Никогда не ходить по плёнке, не скалывать лёд острым инструментом и не латать повреждённую подушку самостоятельно: близкий осмотр и ремонт должна выполнять обученная бригада с безопасным доступом."
+        }
+      ],
+      "cta": {
+        "headline": "До следующего града или снега проверьте подушки ETFE и воздушную сеть",
+        "text": "Отправьте документацию по покрытию, спецификации плёнки и воздушной установки, историю сигналов и фото подозрительных подушек — технический отдел SIPANEL проверит давление, резервирование воздушной сети, водоотвод и повреждённые участки и предложит решение по ремонту или исправлению."
+      }
+    }
+  }
+}
