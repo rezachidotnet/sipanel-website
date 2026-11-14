@@ -1,0 +1,448 @@
+{
+  "slug": "aluminium-cladding-rain-penetration-behind-facade",
+  "category": "cladding_facades",
+  "status": "published",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "faqIds": [
+    "is-water-behind-cladding-normal",
+    "does-resealing-stop-leak",
+    "open-vs-sealed-joints",
+    "leak-or-condensation-stain",
+    "where-to-inspect-after-heavy-rain",
+    "repair-without-removing-facade"
+  ],
+  "relatedProjects": [
+    "parand-city-entrance",
+    "erbil-eye-hospital-entrance-canopy"
+  ],
+  "relatedInsights": [
+    "aluminium-cladding-facade-joint-control",
+    "rooflight-drip-leak-or-condensation-diagnosis"
+  ],
+  "relatedResources": [
+    "aluminium-cladding-layout-checklist"
+  ],
+  "trend": {
+    "topic": "Heavy Aban 1405 (Nov 2026) rain in Tehran with reported damage and further rain/snow forecast for 23-29 Aban: wind-driven rain getting behind aluminium cladding and into buildings",
+    "rationale": "Dated Iranian headlines report rain damage in Tehran on 16 Aban 1405 and flooding from intense showers, and weekly forecasts announce more rain and snow from 23 Aban. Persian searches about water penetrating facades return mostly generic damp-repair pages, with no engineering explanation for cladded buildings. Aluminium cladding is rotation #1; its only article covers the visual joint grid and the system page mentions sealant water ingress only in one line, so the rainscreen water path (cavity drainage, flashings, backing-wall water-resistive layer, leak vs condensation diagnosis) is new. Mechanisms follow NBS, BRANZ, CMHC and MCA rainscreen guidance. News pages could not be fetched; their dated headlines in search results were the trend signal. No figures are used.",
+    "observedAt": "2026-11-14",
+    "sources": [
+      "https://shahraranews.ir/fa/news/458028",
+      "https://www.mehrnews.com/news/7003998",
+      "https://www.hamshahrionline.ir/news/1084224",
+      "https://betacup.net/weather-forecast-10-cities-2026-11-14/trip",
+      "https://www.thenbs.com/knowledge/rainscreen-cladding-letting-air-in-to-keep-rain-out",
+      "https://d39d3mj7qio96p.cloudfront.net/media/documents/BRANZ-Facts-Mid-rise-3-Water-management.pdf",
+      "https://publications.gc.ca/collections/collection_2022/schl-cmhc/NH17-310-1990-eng.pdf",
+      "https://metalconstruction.org/view/download.php/online-education/education-materials/walls-educational-files/materials/understanding-rain-screen-wall-systems"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "نفوذ آب باران پشت نمای آلومینیومی؛ آب از کجا راه پیدا می‌کند؟",
+      "metaDescription": "نفوذ آب باران پشت نمای آلومینیومی از کجا شروع می‌شود؟ بخوانید چرا پانل خط آب‌بندی نهایی نیست و فلاشینگ، حفره و دیوار پشتی را چگونه باید کنترل کرد.",
+      "primaryKeyword": "نفوذ آب باران پشت نمای آلومینیومی",
+      "summary": "پانل آلومینیومی نما در اصل یک پوسته باران‌گیر است، نه آخرین لایه آب‌بندی. در باران همراه با باد، مقداری آب از درزها و لبه‌ها به پشت پانل می‌رسد و اگر حفره پشت نما مسیر تخلیه نداشته باشد، دیوار پشتی لایه مقاوم در برابر آب نداشته باشد یا فلاشینگ بازشوها و جان‌پناه درست حل نشده باشد، همین آب به داخل ساختمان می‌رسد. درمان پایدار، اصلاح مسیر آب است نه سیلیکون‌کاری بیشتر.",
+      "readingMinutes": 8,
+      "problem": {
+        "title": "پس از رگبارهای پاییزی؛ لکه نم کنار پنجره، آب در پای نما و سیلیکونی که هر بار جای دیگری نشت می‌کند",
+        "body": "با بارش‌های پیاپی آبان و باران‌هایی که همراه با باد به نما می‌خورند، بسیاری از بهره‌برداران ساختمان‌های اداری، تجاری، بیمارستانی و صنعتی با نمای آلومینیومی تازه متوجه نشانه‌هایی می‌شوند که در تابستان دیده نمی‌شد: لکه نم روی دیوار داخلی زیر پنجره، تاول رنگ کنار قاب بازشو، آبی که از پای نما بیرون می‌ریزد یا رد زنگ‌زدگی روی پیاده‌رو. واکنش رایج این است که پیمانکار دوباره دور پانل‌ها سیلیکون بزند. گاهی نشتی برای مدتی قطع می‌شود و در بارش بعدی از نقطه دیگری سر درمی‌آورد. علت این است که مشکل معمولاً در خود سطح پانل نیست. نمای آلومینیومی یک سیستم چندلایه است: پوسته بیرونی، زیرسازی و براکت‌ها، حفره هوا، عایق و دیوار پشتی، و جزئیات لبه‌ها و بازشوها. آب وقتی به داخل می‌رسد که در یکی از این لایه‌ها مسیر تخلیه یا لایه کنترل آب قطع شده باشد. تا این مسیر شناخته نشود، هر وصله‌ای روی سطح فقط محل بروز نشتی را جابه‌جا می‌کند.",
+        "points": [
+          "لکه نم یا تاول رنگ روی دیوار داخلی، به‌ویژه زیر کف‌پنجره و کنار قاب بازشو، پس از باران‌هایی که با باد به همان جبهه خورده‌اند.",
+          "آبی که از پای نما یا بالای سردر بیرون می‌ریزد؛ در نمای دارای حفره تهویه‌شده این می‌تواند تخلیه طبیعی باشد و به‌تنهایی نشانه عیب نیست.",
+          "عایق خیس، فشرده یا افتاده پشت پانل که با برداشتن یک پانل دیده می‌شود و کارایی حرارتی دیوار را هم پایین آورده است.",
+          "رد زنگ‌زدگی از براکت‌ها، پیچ‌ها یا قطعات فولادی زیرسازی که نشان می‌دهد آب مدت طولانی پشت پانل مانده است.",
+          "نشتی در طبقه زیر بام که منشأ آن درپوش جان‌پناه یا لبه بالای نماست، نه بام.",
+          "تکرار نشتی پس از هر بار سیلیکون‌کاری، که نشان می‌دهد آب از مسیری غیر از درز ظاهری عبور می‌کند."
+        ]
+      },
+      "cause": {
+        "title": "پانل باران‌گیر است؛ آب‌بندی واقعی در حفره، فلاشینگ و دیوار پشتی رقم می‌خورد",
+        "body": "آب باران با چند سازوکار از پوسته بیرونی عبور می‌کند: سرعت قطره‌ها در باران همراه با باد، جاری شدن ثقلی روی سطوحی که به سمت داخل شیب دارند، کشش سطحی که آب را زیر لبه‌ها می‌کشد، مویینگی در درزهای باریک و اختلاف فشار هوا بین بیرون و پشت پانل. در رویکرد نمای کاملاً درزگیری‌شده، همه این نیروها فقط با یک خط سیلانت مهار می‌شوند و کافی است این خط در یک نقطه پیوستگی‌اش را از دست بدهد تا آب راه پیدا کند، مثلاً در اثر حرکت حرارتی، اجرای بدون پشت‌بند یا چسبندگی ضعیف روی سطح آلوده. در رویکرد نمای باران‌گیر با حفره تهویه‌شده، پذیرفته می‌شود که مقداری آب وارد حفره شود؛ این آب باید روی سطح دیوار پشتی پایین بیاید و در پای نما و بالای هر بازشو به بیرون هدایت شود. بیشتر نشتی‌ها از جایی می‌آیند که این منطق نیمه‌کاره مانده است: دیوار پشتی بلوکی یا عایق بدون لایه مقاوم در برابر آب اجرا شده، پای حفره با ملات، نخاله یا پروفیل بسته شده، قاب پنجره به لایه آب‌بندی دیوار پشتی متصل نشده و کف‌پنجره لبه برگشتی و انتهای بسته ندارد، یا درپوش جان‌پناه شیب و هم‌پوشانی کافی ندارد. سوراخ‌های مهار براکت‌ها و تأسیسات روی نما هم اگر در دیوار پشتی آب‌بندی نشوند، مسیر مستقیمی برای آب می‌سازند. یک نکته تشخیصی هم مهم است: همه لکه‌های داخلی نشتی نیستند؛ تعریق روی سطح سرد دیوار یا قاب‌ها در شب‌های سرد، وقتی هوای داخل مرطوب است، می‌تواند نشانه مشابهی بسازد.",
+        "points": [
+          "سیلانت سطحی خط اول است، نه تنها خط دفاع؛ یک گسستگی کوچک در آن کافی است تا آب به حفره برسد.",
+          "دیوار پشتی بدون لایه مقاوم در برابر آب، آبی را که وارد حفره شده جذب می‌کند و به داخل می‌رساند.",
+          "پای حفره و بالای بازشوها اگر مسیر خروج آب نداشته باشند، آب پشت نما جمع می‌شود و به نقطه ضعف بعدی می‌رسد.",
+          "کف‌پنجره و نعل‌درگاه بدون شیب رو به بیرون، لبه آب‌چکان و انتهای بسته، آب حفره را مستقیم به قاب بازشو هدایت می‌کنند.",
+          "براکت، ریل افقی یا قطعه زیرسازی که مثل طاقچه عمل کند، آب را نگه می‌دارد و آن را به سمت دیوار پشتی و مهارها می‌برد.",
+          "درپوش جان‌پناه بدون شیب به سمت بام یا با هم‌پوشانی ناکافی، آب را از بالا وارد حفره کل نما می‌کند."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام مسیر آب باران پشت نمای آلومینیومی (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید مقطع قائم نما را از درپوش جان‌پناه تا پای دیوار نشان دهد: پانل، درز، حفره تهویه‌شده، عایق، لایه مقاوم در برابر آب روی دیوار پشتی، فلاشینگ بالای پنجره و کف‌پنجره با انتهای بسته، و خروجی آب در پای نما. مسیرهای نفوذ آب با فلش و نقاط شکست رایج با علامت مشخص شوند. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "درپوش جان‌پناه و هم‌پوشانی",
+          "حفره تهویه‌شده و مسیر تخلیه",
+          "لایه مقاوم در برابر آب روی دیوار پشتی",
+          "فلاشینگ بالا و پایین بازشو",
+          "خروجی آب در پای نما"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای کنترل نفوذ آب در نمای آلومینیومی",
+        "steps": [
+          {
+            "title": "تعیین راهبرد آب پیش از نقشه کارگاهی",
+            "description": "پیش از تهیه نقشه‌های کارگاهی مشخص می‌شود نما درزبسته است یا باران‌گیر با حفره تهویه‌شده، خط واقعی آب‌بندی روی کدام لایه قرار دارد و اجرای آن لایه بر عهده کدام پیمانکار است. بدون این تصمیم، هر گروه فرض می‌کند لایه دیگر آب را نگه می‌دارد."
+          },
+          {
+            "title": "نقشه گسستگی‌ها و جزئیات فلاشینگ",
+            "description": "هر جا که حفره قطع می‌شود، یعنی بالای بازشوها، کف‌پنجره، خط سقف طبقات، گوشه‌ها، جان‌پناه، پای نما و محل عبور تأسیسات، جزئیات جداگانه می‌گیرد: شیب رو به بیرون، لبه آب‌چکان، انتهای بسته و هم‌پوشانی به ترتیبی که آب همیشه روی لایه پایینی بریزد، نه پشت آن."
+          },
+          {
+            "title": "هماهنگی دیوار پشتی و بازشوها با سایر پیمانکاران",
+            "description": "پیوستگی لایه مقاوم در برابر آب روی دیوار پشتی، اتصال آن به قاب پنجره‌ها و آب‌بندی سوراخ‌های مهار براکت با پیمانکار سفت‌کاری و پنجره هماهنگ می‌شود و پیش از بسته شدن پانل‌ها یک نقطه توقف بازرسی برای آن تعریف می‌شود."
+          },
+          {
+            "title": "کنترل حفره و زیرسازی",
+            "description": "مسیر تخلیه در پای نما و بالای بازشوها باز می‌ماند و با توری محافظ از ورود حشرات و نخاله حفظ می‌شود. ریل‌ها و براکت‌ها طوری جانمایی می‌شوند که آب روی آن‌ها نماند، و بین فلزات غیرهم‌جنس جداساز پیش‌بینی می‌شود تا رطوبت حفره خوردگی ایجاد نکند."
+          },
+          {
+            "title": "تعریف درز و سیلانت به‌عنوان خط اول",
+            "description": "در درزهای بسته، نوع سیلانت، عرض و عمق درز، پشت‌بند و آماده‌سازی سطح بر اساس حرکت حرارتی پانل تعریف می‌شود؛ اما طراحی طوری است که اگر سیلانت در گذر زمان ضعیف شد، آب هنوز مسیر خروج داشته باشد."
+          },
+          {
+            "title": "تشخیص و صحت‌سنجی",
+            "description": "در نمای جدید، نواحی نمونه پیش از تحویل با آزمون پاشش آب بررسی می‌شوند. در نمای موجود، محل لکه‌ها با جهت باران و زمان بروز مقایسه می‌شود تا نشتی از تعریق جدا شود، سپس پانل‌های منتخب باز و علت در لایه درست اصلاح می‌شود، نه فقط لکه سطح."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "آیا رسیدن آب به پشت پانل‌های نمای آلومینیومی طبیعی است؟",
+          "answer": "در نمای باران‌گیر با حفره تهویه‌شده، بله؛ طراحی می‌پذیرد که مقداری آب از درزها عبور کند و آن را روی دیوار پشتی پایین می‌آورد و از پای نما و بالای بازشوها بیرون می‌دهد. مشکل وقتی ایجاد می‌شود که این آب مسیر خروج نداشته باشد یا دیوار پشتی لایه مقاوم در برابر آب نداشته باشد."
+        },
+        {
+          "question": "اگر دوباره دور پانل‌ها سیلیکون بزنیم، نشتی برطرف می‌شود؟",
+          "answer": "معمولاً نه به‌طور پایدار. اگر آب از درپوش جان‌پناه، کف‌پنجره، سوراخ مهار براکت یا حفره بسته‌شده وارد شود، سیلیکون سطحی فقط محل بروز نشتی را جابه‌جا می‌کند. در نمای باران‌گیر، بستن درزهای باز حتی می‌تواند تهویه حفره را مختل کند و رطوبت را پشت پانل حبس کند."
+        },
+        {
+          "question": "نمای درزباز بهتر است یا درزبسته؟",
+          "answer": "هیچ‌کدام به‌تنهایی بهتر نیست. نمای درزبسته به پیوستگی کامل و نگهداری منظم سیلانت وابسته است. نمای درزباز به دیوار پشتی مقاوم در برابر آب، فلاشینگ دقیق و حفره تخلیه‌پذیر وابسته است. انتخاب باید با شرایط باد و باران محل، نوع دیوار پشتی و امکان بازرسی و نگهداری هماهنگ باشد."
+        },
+        {
+          "question": "از کجا بفهمیم لکه داخل دیوار از نشتی است یا از تعریق؟",
+          "answer": "لکه‌ای که در جریان باران یا کمی پس از آن و روی جبهه‌ای که باد باران را به آن زده ظاهر می‌شود، بیشتر به نشتی اشاره دارد. لکه‌ای که در شب‌های سرد و بدون باران، روی سطوح سرد مانند کنار قاب‌ها یا خط سقف طبقات و در هر جبهه‌ای دیده می‌شود، احتمالاً تعریق است. ثبت تاریخ، جهت و شرایط هوا در هر بار بروز، تشخیص را دقیق‌تر می‌کند."
+        },
+        {
+          "question": "پس از یک بارش شدید کجای نما را باید بازدید کرد؟",
+          "answer": "درپوش جان‌پناه و لبه بالای نما، بالای پنجره‌ها و کف‌پنجره‌ها، گوشه‌ها، محل عبور تأسیسات و تابلوها، و پای نما که خروجی آب است. بسته بودن پای حفره، زنگ‌زدگی اطراف براکت‌ها و لکه‌های داخلی هم‌راستا با این نقاط باید ثبت شوند."
+        },
+        {
+          "question": "آیا بدون برداشتن کل نما می‌توان مشکل را برطرف کرد؟",
+          "answer": "در بسیاری از موارد بله. با مقایسه محل نشانه‌ها و مسیر احتمالی آب، چند پانل منتخب باز می‌شود تا علت دیده شود؛ سپس فلاشینگ، انتهای کف‌پنجره، درپوش یا آب‌بندی دیوار پشتی در همان ناحیه اصلاح می‌شود. اگر دیوار پشتی در کل نما لایه مقاوم در برابر آب نداشته باشد، دامنه اصلاح بزرگ‌تر خواهد بود."
+        }
+      ],
+      "cta": {
+        "headline": "مسیر آب پشت نمای آلومینیومی خود را پیش از بارش‌های بعدی بازبینی کنید",
+        "text": "نقشه‌ها یا جزئیات نما، عکس لکه‌ها و محل نشتی و زمان بروز آن را بفرستید تا تیم فنی سی‌پانل مسیر احتمالی آب، فلاشینگ‌ها، حفره و دیوار پشتی را بررسی و رویکرد اصلاح را پیشنهاد کند."
+      }
+    },
+    "en": {
+      "title": "Rain penetration behind aluminium cladding: where water gets in",
+      "metaDescription": "Rain penetration behind aluminium cladding: why the panel is not the final waterproofing line, and how to control flashings, the cavity and the backing wall.",
+      "primaryKeyword": "rain penetration behind aluminium cladding",
+      "summary": "An aluminium cladding panel is essentially a rain-deflecting skin, not the last waterproofing layer. In wind-driven rain some water passes joints and edges. If the cavity has no drainage path, the backing wall has no water-resistive layer, or the flashings at openings and parapets are not resolved, that water reaches the interior. The durable fix is correcting the water path, not adding more silicone.",
+      "readingMinutes": 8,
+      "problem": {
+        "title": "After the autumn downpours: damp patches by the windows, water at the base of the facade and silicone that leaks somewhere new every time",
+        "body": "With successive autumn rain systems and rain driven against the walls by wind, many operators of office, retail, hospital and industrial buildings with aluminium cladding notice signs that were invisible in summer: damp patches on the inner wall below windows, blistered paint beside opening frames, water running out of the base of the facade or rust streaks on the pavement. The usual reaction is to have the contractor run more silicone around the panels. Sometimes the leak stops for a while, then reappears at another point in the next rain. The reason is that the problem is usually not in the panel face itself. An aluminium facade is a multi-layer system: the outer skin, the substructure and brackets, the air cavity, insulation and the backing wall, and the details at edges and openings. Water reaches the interior when the drainage path or the water-control layer is interrupted in one of these layers. Until that path is understood, every surface patch only moves the place where the leak shows up.",
+        "points": [
+          "Damp patches or blistered paint on the inner wall, especially below sills and beside opening frames, after rain driven by wind onto that elevation.",
+          "Water running out of the base of the facade or above a canopy; in a ventilated cavity facade this can be normal drainage and is not a defect on its own.",
+          "Wet, compressed or slumped insulation behind the panels, seen when a panel is removed, which has also reduced the wall's thermal performance.",
+          "Rust streaks from brackets, screws or steel substructure parts, showing that water has stayed behind the panels for a long time.",
+          "Leaks on the top floor that originate at the parapet coping or the top edge of the facade, not at the roof.",
+          "Leaks that return after every round of sealant work, showing that water is travelling by a route other than the visible joint."
+        ]
+      },
+      "cause": {
+        "title": "The panel deflects rain; real waterproofing is decided in the cavity, the flashings and the backing wall",
+        "body": "Rain crosses the outer skin by several mechanisms: the momentum of drops in wind-driven rain, gravity flow along surfaces that slope inward, surface tension that draws water under edges, capillary action in narrow joints, and the air-pressure difference between outside and the back of the panel. In a fully face-sealed approach, all of these forces are resisted by a single sealant line, and it only takes one break in its continuity for water to find a way in, for example from thermal movement, application without backer rod or poor adhesion to a contaminated surface. In a ventilated rainscreen approach, it is accepted that some water enters the cavity; that water must run down the face of the backing wall and be directed out at the base of the facade and above each opening. Most leaks come from places where this logic was left half-finished: block or insulation backing walls built without a water-resistive layer, the base of the cavity closed by mortar, debris or a profile, window frames not tied into the backing wall's water-control layer and sills without upstands and end dams, or a parapet coping without enough slope and overlap. Bracket anchor holes and services penetrations through the facade also create a direct path for water if they are not sealed at the backing wall. One diagnostic point matters too: not every interior stain is a leak; condensation on cold wall surfaces or frames on cold nights, when the indoor air is humid, can produce similar signs.",
+        "points": [
+          "Face sealant is the first line, not the only line of defence; one small break in it is enough for water to reach the cavity.",
+          "A backing wall without a water-resistive layer absorbs the water that entered the cavity and carries it inside.",
+          "If the base of the cavity and the heads of openings have no outlet, water collects behind the facade and finds the next weak point.",
+          "Sills and heads without an outward slope, a drip edge and end dams direct cavity water straight into the opening frame.",
+          "A bracket, horizontal rail or substructure part that acts as a ledge holds water and leads it towards the backing wall and the anchors.",
+          "A parapet coping without a fall towards the roof, or with insufficient overlap, feeds water from the top into the cavity of the entire facade."
+        ]
+      },
+      "visual": {
+        "title": "Diagram of the rainwater path behind aluminium cladding (pending verification)",
+        "description": "The verified diagram should show a vertical section of the facade from the parapet coping to the base of the wall: panel, joint, ventilated cavity, insulation, water-resistive layer on the backing wall, head flashing and sill with end dams, and the water outlet at the base. Water entry routes should be marked with arrows and common failure points with symbols. This technical asset is still pending verification.",
+        "callouts": [
+          "Parapet coping and overlap",
+          "Ventilated cavity and drainage path",
+          "Water-resistive layer on the backing wall",
+          "Head and sill flashing",
+          "Water outlet at the facade base"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL's logic for controlling water penetration in aluminium cladding",
+        "steps": [
+          {
+            "title": "Set the water strategy before shop drawings",
+            "description": "Before shop drawings are prepared, it is decided whether the facade is face-sealed or a ventilated rainscreen, which layer carries the real waterproofing line, and which contractor builds that layer. Without this decision, each trade assumes another layer will hold the water."
+          },
+          {
+            "title": "Map interruptions and detail the flashings",
+            "description": "Wherever the cavity is interrupted, at opening heads, sills, floor slab lines, corners, the parapet, the base of the facade and services penetrations, it gets its own detail: an outward fall, a drip edge, end dams, and laps arranged so water always lands on the lower layer, never behind it."
+          },
+          {
+            "title": "Coordinate the backing wall and openings with other trades",
+            "description": "Continuity of the water-resistive layer on the backing wall, its connection to window frames and the sealing of bracket anchor holes are coordinated with the masonry and window contractors, and an inspection hold point is set for them before the panels close the wall."
+          },
+          {
+            "title": "Control the cavity and substructure",
+            "description": "The drainage path at the base and above openings is kept open and protected by mesh against insects and debris. Rails and brackets are positioned so water does not sit on them, and separators are provided between dissimilar metals so cavity moisture does not cause corrosion."
+          },
+          {
+            "title": "Define joints and sealant as the first line",
+            "description": "For sealed joints, sealant type, joint width and depth, backer rod and surface preparation are defined according to the panel's thermal movement; but the design ensures that if the sealant weakens over time, water still has a way out."
+          },
+          {
+            "title": "Diagnose and verify",
+            "description": "On a new facade, sample areas are checked with a water spray test before handover. On an existing facade, stain locations are compared with rain direction and timing to separate leaks from condensation; selected panels are then opened and the cause is corrected in the right layer, not just the surface stain."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Is it normal for water to get behind aluminium cladding panels?",
+          "answer": "In a ventilated rainscreen facade, yes; the design accepts that some water passes the joints, runs it down the backing wall and releases it at the base of the facade and above openings. The problem starts when that water has no way out or the backing wall has no water-resistive layer."
+        },
+        {
+          "question": "If we reseal around the panels, will the leak stop?",
+          "answer": "Usually not for long. If water enters at the parapet coping, a sill, a bracket anchor hole or a blocked cavity, surface silicone only moves the place where the leak appears. In a rainscreen facade, sealing open joints can even disrupt cavity ventilation and trap moisture behind the panels."
+        },
+        {
+          "question": "Are open-joint or sealed-joint facades better?",
+          "answer": "Neither is better on its own. A sealed-joint facade depends on complete continuity and regular maintenance of the sealant. An open-joint facade depends on a water-resistive backing wall, accurate flashings and a drainable cavity. The choice should match the site's wind and rain exposure, the type of backing wall and the possibility of inspection and maintenance."
+        },
+        {
+          "question": "How can we tell whether an interior stain is a leak or condensation?",
+          "answer": "A stain that appears during or shortly after rain, on the elevation the wind drove the rain against, points to a leak. A stain that appears on cold nights without rain, on cold surfaces such as frame edges or slab lines and on any elevation, is more likely condensation. Recording the date, orientation and weather each time it appears makes the diagnosis more reliable."
+        },
+        {
+          "question": "Where should the facade be inspected after heavy rain?",
+          "answer": "The parapet coping and top edge, the heads and sills of windows, corners, services and signage penetrations, and the base of the facade where water exits. A blocked cavity base, rust around brackets and interior stains aligned with these points should all be recorded."
+        },
+        {
+          "question": "Can the problem be fixed without removing the whole facade?",
+          "answer": "In many cases, yes. By comparing where the symptoms appear with the likely water path, a few selected panels are opened to see the cause; the flashing, sill end, coping or backing-wall seal in that area is then corrected. If the backing wall lacks a water-resistive layer across the whole facade, the scope of the repair will be larger."
+        }
+      ],
+      "cta": {
+        "headline": "Review the water path behind your aluminium cladding before the next rains",
+        "text": "Send the facade drawings or details, photos of the stains and leak locations and when they appear, and SIPANEL's technical team will review the likely water path, flashings, cavity and backing wall and propose a correction approach."
+      }
+    },
+    "ar": {
+      "title": "تسرب مياه الأمطار خلف واجهات الألمنيوم: من أين تدخل المياه؟",
+      "metaDescription": "تسرب مياه الأمطار خلف واجهات الألمنيوم: لماذا لا يُعد اللوح خط العزل المائي الأخير، وكيف تُضبط الفلاشينغ والتجويف والجدار الخلفي لمنع وصول المياه إلى الداخل.",
+      "primaryKeyword": "تسرب مياه الأمطار خلف واجهات الألمنيوم",
+      "summary": "لوح واجهة الألمنيوم هو في الأساس قشرة تصد المطر، وليس الطبقة الأخيرة للعزل المائي. مع المطر المصحوب بالرياح تصل كمية من المياه إلى خلف الألواح عبر الفواصل والحواف. فإذا لم يكن للتجويف مسار تصريف، أو افتقر الجدار الخلفي إلى طبقة مقاومة للمياه، أو لم تُحل تفاصيل الفلاشينغ عند الفتحات والدروة، تصل هذه المياه إلى الداخل. والعلاج الدائم هو تصحيح مسار المياه لا إضافة المزيد من السيليكون.",
+      "readingMinutes": 8,
+      "problem": {
+        "title": "بعد أمطار الخريف: بقع رطوبة بجوار النوافذ، ومياه عند قاعدة الواجهة، وسيليكون يتسرب من مكان جديد في كل مرة",
+        "body": "مع توالي المنخفضات الخريفية والأمطار التي تدفعها الرياح نحو الجدران، يلاحظ كثير من مشغلي المباني الإدارية والتجارية والمستشفيات والمنشآت الصناعية ذات واجهات الألمنيوم علامات لم تكن ظاهرة في الصيف: بقع رطوبة على الجدار الداخلي أسفل النوافذ، وانتفاخ الطلاء بجوار إطارات الفتحات، ومياه تخرج من قاعدة الواجهة أو آثار صدأ على الرصيف. ورد الفعل المعتاد هو أن يعيد المقاول وضع السيليكون حول الألواح. أحياناً يتوقف التسرب لفترة، ثم يعود في المطرة التالية من نقطة أخرى. والسبب أن المشكلة لا تكون عادة في سطح اللوح نفسه. فواجهة الألمنيوم نظام متعدد الطبقات: القشرة الخارجية، والهيكل الحامل والكوابيل، والتجويف الهوائي، والعزل والجدار الخلفي، وتفاصيل الحواف والفتحات. وتصل المياه إلى الداخل عندما ينقطع مسار التصريف أو طبقة التحكم بالمياه في إحدى هذه الطبقات. وما لم يُفهم هذا المسار، فإن كل ترقيع سطحي لا يفعل سوى نقل مكان ظهور التسرب.",
+        "points": [
+          "بقع رطوبة أو انتفاخ في الطلاء على الجدار الداخلي، خاصة أسفل عتبات النوافذ وبجوار إطارات الفتحات، بعد أمطار دفعتها الرياح نحو تلك الواجهة.",
+          "مياه تخرج من قاعدة الواجهة أو فوق مظلة؛ في الواجهة ذات التجويف المهوّى قد يكون هذا تصريفاً طبيعياً، ولا يُعد عيباً بحد ذاته.",
+          "عزل مبتل أو منضغط أو منزلق خلف الألواح يظهر عند فك أحد الألواح، وقد خفّض أيضاً الأداء الحراري للجدار.",
+          "آثار صدأ من الكوابيل أو البراغي أو قطع الهيكل الفولاذي، تدل على أن المياه بقيت خلف الألواح مدة طويلة.",
+          "تسرب في الطابق الأخير مصدره غطاء الدروة أو الحافة العلوية للواجهة، لا السطح.",
+          "تكرار التسرب بعد كل جولة من أعمال السيليكون، ما يدل على أن المياه تسلك مساراً غير الفاصل الظاهر."
+        ]
+      },
+      "cause": {
+        "title": "اللوح يصد المطر؛ أما العزل المائي الحقيقي فيتحدد في التجويف والفلاشينغ والجدار الخلفي",
+        "body": "تعبر مياه المطر القشرة الخارجية بعدة آليات: اندفاع القطرات في المطر المصحوب بالرياح، والجريان بفعل الجاذبية على الأسطح المائلة نحو الداخل، والتوتر السطحي الذي يسحب المياه تحت الحواف، والخاصية الشعرية في الفواصل الضيقة، وفرق ضغط الهواء بين الخارج وخلف اللوح. في نهج الواجهة المحكمة السطح تُقاوَم كل هذه القوى بخط واحد من مانع التسرب، ويكفي أن تنقطع استمراريته في نقطة واحدة لتجد المياه طريقها، كأن يحدث ذلك بسبب الحركة الحرارية، أو التنفيذ بدون حشوة خلفية، أو ضعف الالتصاق على سطح ملوث. أما في نهج الواجهة الساترة للمطر ذات التجويف المهوّى، فيُقبل دخول بعض المياه إلى التجويف؛ ويجب أن تنزل هذه المياه على سطح الجدار الخلفي وتُوجَّه إلى الخارج عند قاعدة الواجهة وفوق كل فتحة. ومعظم حالات التسرب تأتي من مواضع بقي فيها هذا المنطق ناقصاً: جدار خلفي من البلوك أو العزل نُفذ بدون طبقة مقاومة للمياه، أو قاعدة تجويف أُغلقت بالمونة أو المخلفات أو بمقطع معدني، أو إطارات نوافذ لم تُربط بطبقة التحكم بالمياه في الجدار الخلفي وعتبات بلا حافة مرفوعة ونهايات مغلقة، أو غطاء دروة بلا ميل وتراكب كافيين. كما أن ثقوب تثبيت الكوابيل وفتحات مرور الخدمات تشكل مساراً مباشراً للمياه إذا لم تُعزل عند الجدار الخلفي. وهناك ملاحظة تشخيصية مهمة: ليست كل بقعة داخلية تسرباً؛ فالتكاثف على أسطح الجدران أو الإطارات الباردة في الليالي الباردة، عندما يكون الهواء الداخلي رطباً، قد يعطي علامات مشابهة.",
+        "points": [
+          "مانع التسرب السطحي هو خط الدفاع الأول وليس الوحيد؛ انقطاع صغير فيه يكفي لوصول المياه إلى التجويف.",
+          "الجدار الخلفي الذي يفتقر إلى طبقة مقاومة للمياه يمتص المياه الداخلة إلى التجويف وينقلها إلى الداخل.",
+          "إذا لم يكن لقاعدة التجويف وأعلى الفتحات مخرج، تتجمع المياه خلف الواجهة وتصل إلى نقطة الضعف التالية.",
+          "العتبات والأعتاب العلوية التي تفتقر إلى ميل نحو الخارج وحافة تقطير ونهايات مغلقة توجّه مياه التجويف مباشرة إلى إطار الفتحة.",
+          "الكابول أو المجرى الأفقي أو قطعة الهيكل التي تعمل كرف تحتجز المياه وتقودها نحو الجدار الخلفي ونقاط التثبيت.",
+          "غطاء الدروة الذي لا يميل نحو السطح أو تراكبه غير كافٍ يُدخل المياه من الأعلى إلى تجويف الواجهة بأكملها."
+        ]
+      },
+      "visual": {
+        "title": "مخطط مسار مياه الأمطار خلف واجهة الألمنيوم (بانتظار التحقق)",
+        "description": "يجب أن يُظهر المخطط المعتمد مقطعاً رأسياً للواجهة من غطاء الدروة حتى قاعدة الجدار: اللوح، والفاصل، والتجويف المهوّى، والعزل، والطبقة المقاومة للمياه على الجدار الخلفي، وفلاشينغ أعلى النافذة والعتبة ذات النهايات المغلقة، ومخرج المياه عند القاعدة. وتُحدَّد مسارات دخول المياه بأسهم ونقاط الفشل الشائعة برموز. هذا الأصل الفني لا يزال بانتظار التحقق.",
+        "callouts": [
+          "غطاء الدروة والتراكب",
+          "التجويف المهوّى ومسار التصريف",
+          "الطبقة المقاومة للمياه على الجدار الخلفي",
+          "فلاشينغ أعلى الفتحة وأسفلها",
+          "مخرج المياه عند قاعدة الواجهة"
+        ]
+      },
+      "execution": {
+        "title": "منهج SIPANEL للتحكم في تسرب المياه في واجهات الألمنيوم",
+        "steps": [
+          {
+            "title": "تحديد استراتيجية المياه قبل المخططات التنفيذية",
+            "description": "قبل إعداد المخططات التنفيذية يُحدَّد ما إذا كانت الواجهة محكمة السطح أم ساترة للمطر بتجويف مهوّى، وأي طبقة تحمل خط العزل المائي الحقيقي، وأي مقاول ينفذ هذه الطبقة. بدون هذا القرار يفترض كل طرف أن طبقة أخرى ستوقف المياه."
+          },
+          {
+            "title": "حصر الانقطاعات وتفصيل الفلاشينغ",
+            "description": "حيثما ينقطع التجويف، أي أعلى الفتحات والعتبات وخطوط البلاطات والزوايا والدروة وقاعدة الواجهة ومواضع مرور الخدمات، يُعطى تفصيلاً مستقلاً: ميل نحو الخارج، وحافة تقطير، ونهايات مغلقة، وتراكب مرتب بحيث تسقط المياه دائماً على الطبقة السفلى لا خلفها."
+          },
+          {
+            "title": "تنسيق الجدار الخلفي والفتحات مع المقاولين الآخرين",
+            "description": "تُنسَّق استمرارية الطبقة المقاومة للمياه على الجدار الخلفي، ووصلها بإطارات النوافذ، وعزل ثقوب تثبيت الكوابيل، مع مقاولي الأعمال الإنشائية والنوافذ، وتُحدَّد نقطة توقف للفحص قبل أن تغلق الألواح الجدار."
+          },
+          {
+            "title": "ضبط التجويف والهيكل الحامل",
+            "description": "يبقى مسار التصريف عند القاعدة وفوق الفتحات مفتوحاً ومحمياً بشبكة ضد الحشرات والمخلفات. وتوضع المجاري والكوابيل بحيث لا تستقر المياه عليها، وتُركَّب فواصل بين المعادن المختلفة كي لا تسبب رطوبة التجويف التآكل."
+          },
+          {
+            "title": "تعريف الفواصل ومانع التسرب كخط أول",
+            "description": "في الفواصل المغلقة يُحدَّد نوع مانع التسرب وعرض الفاصل وعمقه والحشوة الخلفية وتحضير السطح وفق الحركة الحرارية للوح؛ لكن التصميم يضمن أنه إذا ضعف مانع التسرب مع الزمن، يبقى للمياه مخرج."
+          },
+          {
+            "title": "التشخيص والتحقق",
+            "description": "في الواجهة الجديدة تُفحص مناطق نموذجية باختبار رش المياه قبل التسليم. وفي الواجهة القائمة تُقارن مواضع البقع باتجاه المطر وتوقيته لفصل التسرب عن التكاثف، ثم تُفك ألواح مختارة ويُصحَّح السبب في الطبقة الصحيحة، لا البقعة السطحية فقط."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "هل من الطبيعي أن تصل المياه إلى خلف ألواح واجهة الألمنيوم؟",
+          "answer": "في الواجهة الساترة للمطر ذات التجويف المهوّى، نعم؛ فالتصميم يقبل أن تعبر بعض المياه الفواصل، ثم ينزلها على الجدار الخلفي ويخرجها عند قاعدة الواجهة وفوق الفتحات. تبدأ المشكلة عندما لا يكون لهذه المياه مخرج أو عندما يفتقر الجدار الخلفي إلى طبقة مقاومة للمياه."
+        },
+        {
+          "question": "إذا أعدنا وضع السيليكون حول الألواح، هل يتوقف التسرب؟",
+          "answer": "غالباً ليس لفترة طويلة. فإذا دخلت المياه من غطاء الدروة أو العتبة أو ثقب تثبيت كابول أو تجويف مسدود، فإن السيليكون السطحي لا يفعل سوى نقل مكان ظهور التسرب. وفي الواجهة الساترة للمطر قد يؤدي إغلاق الفواصل المفتوحة إلى تعطيل تهوية التجويف وحبس الرطوبة خلف الألواح."
+        },
+        {
+          "question": "أيهما أفضل: واجهة بفواصل مفتوحة أم بفواصل مغلقة؟",
+          "answer": "لا أفضلية لأي منهما بذاته. الواجهة ذات الفواصل المغلقة تعتمد على الاستمرارية الكاملة لمانع التسرب وصيانته المنتظمة. والواجهة ذات الفواصل المفتوحة تعتمد على جدار خلفي مقاوم للمياه وفلاشينغ دقيق وتجويف قابل للتصريف. ويجب أن يتوافق الاختيار مع تعرض الموقع للرياح والأمطار ونوع الجدار الخلفي وإمكانية الفحص والصيانة."
+        },
+        {
+          "question": "كيف نعرف إن كانت البقعة الداخلية ناتجة عن تسرب أم عن تكاثف؟",
+          "answer": "البقعة التي تظهر أثناء المطر أو بعده بقليل، وعلى الواجهة التي دفعت الرياح المطر نحوها، تشير إلى تسرب. أما البقعة التي تظهر في الليالي الباردة دون مطر، على أسطح باردة كحواف الإطارات أو خطوط البلاطات وعلى أي واجهة، فالأرجح أنها تكاثف. وتسجيل التاريخ والاتجاه وحالة الطقس عند كل ظهور يجعل التشخيص أدق."
+        },
+        {
+          "question": "أين يجب فحص الواجهة بعد مطر غزير؟",
+          "answer": "غطاء الدروة والحافة العلوية، وأعلى النوافذ وعتباتها، والزوايا، ومواضع مرور الخدمات واللوحات الإعلانية، وقاعدة الواجهة حيث تخرج المياه. ويجب تسجيل انسداد قاعدة التجويف والصدأ حول الكوابيل والبقع الداخلية المحاذية لهذه النقاط."
+        },
+        {
+          "question": "هل يمكن حل المشكلة دون فك الواجهة بالكامل؟",
+          "answer": "في حالات كثيرة نعم. بمقارنة مواضع الأعراض بمسار المياه المحتمل، تُفك ألواح مختارة لرؤية السبب، ثم يُصحَّح الفلاشينغ أو نهاية العتبة أو غطاء الدروة أو عزل الجدار الخلفي في تلك المنطقة. أما إذا افتقر الجدار الخلفي إلى طبقة مقاومة للمياه في الواجهة كلها، فسيكون نطاق الإصلاح أكبر."
+        }
+      ],
+      "cta": {
+        "headline": "راجعوا مسار المياه خلف واجهة الألمنيوم قبل الأمطار المقبلة",
+        "text": "أرسلوا مخططات الواجهة أو تفاصيلها وصور البقع ومواضع التسرب وتوقيت ظهورها، ليراجع الفريق الفني في SIPANEL مسار المياه المحتمل والفلاشينغ والتجويف والجدار الخلفي ويقترح أسلوب التصحيح."
+      }
+    },
+    "ru": {
+      "title": "Проникновение дождевой воды за алюминиевый фасад: откуда она идёт?",
+      "metaDescription": "Проникновение дождевой воды за алюминиевый фасад: почему панель не последняя линия гидроизоляции и как контролировать отливы, воздушный зазор и стену основания.",
+      "primaryKeyword": "проникновение дождевой воды за алюминиевый фасад",
+      "summary": "Алюминиевая фасадная панель — это прежде всего экран, отводящий дождь, а не последний гидроизоляционный слой. При косом дожде с ветром часть воды проходит за панели через швы и кромки. Если у воздушного зазора нет пути отвода, у стены основания нет водостойкого слоя или не решены отливы у проёмов и парапета, эта вода попадает внутрь. Надёжное решение — исправить путь воды, а не добавить герметик.",
+      "readingMinutes": 8,
+      "problem": {
+        "title": "После осенних ливней: влажные пятна у окон, вода у цоколя фасада и герметик, который каждый раз протекает в новом месте",
+        "body": "С чередой осенних дождей и косым дождём, который ветер бросает на стены, многие эксплуатанты офисных, торговых, больничных и промышленных зданий с алюминиевыми фасадами замечают признаки, которых летом не было: влажные пятна на внутренней стене под окнами, вздувшуюся краску у оконных рам, воду, вытекающую из низа фасада, или ржавые потёки на тротуаре. Обычная реакция — попросить подрядчика заново пройти герметиком вокруг панелей. Иногда протечка на время прекращается, а при следующем дожде появляется в другом месте. Причина в том, что проблема, как правило, не в самой лицевой поверхности панели. Алюминиевый фасад — многослойная система: наружный экран, подсистема и кронштейны, воздушный зазор, утеплитель и стена основания, а также узлы кромок и проёмов. Вода попадает внутрь, когда в одном из этих слоёв прерван путь отвода или слой защиты от воды. Пока этот путь не понят, любая заплатка на поверхности лишь переносит место появления протечки.",
+        "points": [
+          "Влажные пятна или вздувшаяся краска на внутренней стене, особенно под подоконниками и у рам проёмов, после дождя, который ветер нёс на этот фасад.",
+          "Вода, вытекающая из низа фасада или над козырьком; в вентилируемом фасаде это может быть нормальным отводом и само по себе не является дефектом.",
+          "Мокрый, сжатый или сползший утеплитель за панелями, видимый при снятии панели, который заодно снизил теплозащиту стены.",
+          "Ржавые потёки от кронштейнов, саморезов или стальных деталей подсистемы, показывающие, что вода долго стояла за панелями.",
+          "Протечки на верхнем этаже, источник которых — парапетная крышка или верхняя кромка фасада, а не кровля.",
+          "Протечки, возвращающиеся после каждого цикла герметизации, — признак того, что вода идёт иным путём, чем видимый шов."
+        ]
+      },
+      "cause": {
+        "title": "Панель отводит дождь; настоящая гидроизоляция решается в зазоре, отливах и стене основания",
+        "body": "Дождевая вода проходит через наружный экран за счёт нескольких механизмов: инерции капель при косом дожде, стекания под действием силы тяжести по поверхностям с уклоном внутрь, поверхностного натяжения, затягивающего воду под кромки, капиллярного подсоса в узких швах и разницы давления воздуха снаружи и за панелью. В полностью загерметизированном фасаде все эти силы сдерживает одна линия герметика, и достаточно одного разрыва её непрерывности, чтобы вода нашла путь, — например, из-за температурных деформаций, нанесения без уплотнительного шнура или плохой адгезии к загрязнённой поверхности. В вентилируемом фасаде с воздушным зазором допускается, что часть воды попадает в зазор; эта вода должна стекать по поверхности стены основания и выводиться наружу у низа фасада и над каждым проёмом. Большинство протечек возникает там, где эта логика осталась незавершённой: стена из блоков или утеплитель без водостойкого слоя, низ зазора перекрыт раствором, строительным мусором или профилем, оконные рамы не связаны со слоем защиты от воды стены основания, а отливы не имеют бортиков и торцевых заглушек, либо парапетная крышка не имеет достаточного уклона и нахлёста. Отверстия анкеров кронштейнов и проходки инженерных систем через фасад также дают воде прямой путь, если они не загерметизированы на стене основания. Важен и диагностический момент: не каждое пятно внутри — протечка; конденсат на холодных поверхностях стен или рам в холодные ночи при влажном воздухе в помещении может давать похожие признаки.",
+        "points": [
+          "Лицевой герметик — первая, а не единственная линия защиты; небольшого разрыва в нём достаточно, чтобы вода попала в зазор.",
+          "Стена основания без водостойкого слоя впитывает воду, попавшую в зазор, и передаёт её внутрь.",
+          "Если у низа зазора и над проёмами нет выхода, вода скапливается за фасадом и находит следующее слабое место.",
+          "Подоконные и надоконные отливы без уклона наружу, капельника и торцевых заглушек направляют воду из зазора прямо в раму проёма.",
+          "Кронштейн, горизонтальная направляющая или деталь подсистемы, работающая как полка, задерживает воду и ведёт её к стене основания и анкерам.",
+          "Парапетная крышка без уклона в сторону кровли или с недостаточным нахлёстом подаёт воду сверху в зазор всего фасада."
+        ]
+      },
+      "visual": {
+        "title": "Схема пути дождевой воды за алюминиевым фасадом (ожидает проверки)",
+        "description": "Проверенная схема должна показать вертикальный разрез фасада от парапетной крышки до низа стены: панель, шов, вентилируемый зазор, утеплитель, водостойкий слой на стене основания, верхний отлив над окном и подоконный отлив с торцевыми заглушками, а также выход воды у цоколя. Пути проникновения воды обозначаются стрелками, типичные места отказа — значками. Этот технический материал пока ожидает проверки.",
+        "callouts": [
+          "Парапетная крышка и нахлёст",
+          "Вентилируемый зазор и путь отвода",
+          "Водостойкий слой на стене основания",
+          "Отливы над проёмом и под ним",
+          "Выход воды у низа фасада"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL по контролю проникновения воды в алюминиевых фасадах",
+        "steps": [
+          {
+            "title": "Определить стратегию защиты от воды до рабочих чертежей",
+            "description": "До разработки рабочих чертежей решается, будет ли фасад герметизированным или вентилируемым с воздушным зазором, какой слой несёт настоящую линию гидроизоляции и какой подрядчик его выполняет. Без этого решения каждый участник считает, что воду остановит другой слой."
+          },
+          {
+            "title": "Составить карту разрывов и разработать отливы",
+            "description": "Везде, где зазор прерывается — над проёмами, на подоконниках, по линиям перекрытий, на углах, у парапета, у низа фасада и в местах проходок, — нужен отдельный узел: уклон наружу, капельник, торцевые заглушки и нахлёсты, при которых вода всегда попадает на нижний слой, а не за него."
+          },
+          {
+            "title": "Согласовать стену основания и проёмы со смежниками",
+            "description": "Непрерывность водостойкого слоя на стене основания, его примыкание к оконным рамам и герметизация отверстий под анкеры кронштейнов согласуются с подрядчиками по кладке и окнам, а перед закрытием стены панелями назначается точка обязательной приёмки."
+          },
+          {
+            "title": "Контролировать зазор и подсистему",
+            "description": "Путь отвода у низа фасада и над проёмами остаётся открытым и защищается сеткой от насекомых и мусора. Направляющие и кронштейны располагаются так, чтобы на них не задерживалась вода, а между разнородными металлами предусматриваются разделительные прокладки, чтобы влага в зазоре не вызывала коррозию."
+          },
+          {
+            "title": "Рассматривать швы и герметик как первую линию",
+            "description": "Для закрытых швов тип герметика, ширина и глубина шва, уплотнительный шнур и подготовка поверхности задаются по температурным деформациям панели; но проект предусматривает, что при старении герметика у воды всё равно остаётся путь наружу."
+          },
+          {
+            "title": "Диагностика и проверка",
+            "description": "На новом фасаде характерные участки до сдачи проверяются испытанием водяным орошением. На существующем фасаде места пятен сопоставляются с направлением и временем дождя, чтобы отличить протечку от конденсата; затем вскрываются выбранные панели, и причина устраняется в нужном слое, а не только пятно на поверхности."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Нормально ли, что вода попадает за панели алюминиевого фасада?",
+          "answer": "В вентилируемом фасаде с воздушным зазором — да: проект допускает, что часть воды проходит через швы, отводит её по стене основания и выпускает у низа фасада и над проёмами. Проблема начинается, когда у этой воды нет выхода или у стены основания нет водостойкого слоя."
+        },
+        {
+          "question": "Если заново загерметизировать швы вокруг панелей, протечка прекратится?",
+          "answer": "Обычно ненадолго. Если вода входит через парапетную крышку, подоконный отлив, отверстие анкера или перекрытый зазор, герметик на поверхности лишь переносит место протечки. В вентилируемом фасаде заделка открытых швов может даже нарушить проветривание зазора и запереть влагу за панелями."
+        },
+        {
+          "question": "Что лучше: фасад с открытыми или с закрытыми швами?",
+          "answer": "Ни один вариант сам по себе не лучше. Фасад с закрытыми швами зависит от полной непрерывности герметика и его регулярного обслуживания. Фасад с открытыми швами зависит от водостойкой стены основания, точных отливов и дренируемого зазора. Выбор должен соответствовать ветровой и дождевой нагрузке на площадке, типу стены основания и возможности осмотра и обслуживания."
+        },
+        {
+          "question": "Как понять, пятно внутри — это протечка или конденсат?",
+          "answer": "Пятно, появляющееся во время дождя или вскоре после него на фасаде, на который ветер нёс дождь, указывает на протечку. Пятно, появляющееся в холодные ночи без дождя на холодных поверхностях — у краёв рам или по линиям перекрытий — и на любой стороне здания, скорее всего, конденсат. Запись даты, ориентации и погоды при каждом появлении делает диагноз точнее."
+        },
+        {
+          "question": "Что осматривать на фасаде после сильного дождя?",
+          "answer": "Парапетную крышку и верхнюю кромку, верх окон и подоконные отливы, углы, проходки инженерных систем и вывесок, а также низ фасада, где выходит вода. Нужно фиксировать перекрытый низ зазора, ржавчину вокруг кронштейнов и внутренние пятна, совпадающие с этими точками."
+        },
+        {
+          "question": "Можно ли устранить проблему без демонтажа всего фасада?",
+          "answer": "Во многих случаях да. Сопоставив места проявлений с вероятным путём воды, вскрывают несколько выбранных панелей, чтобы увидеть причину, а затем исправляют отлив, торец подоконника, парапетную крышку или герметизацию стены основания на этом участке. Если водостойкого слоя нет на стене основания всего фасада, объём работ будет больше."
+        }
+      ],
+      "cta": {
+        "headline": "Проверьте путь воды за алюминиевым фасадом до следующих дождей",
+        "text": "Отправьте чертежи или узлы фасада, фото пятен и мест протечек и время их появления — технический отдел SIPANEL проанализирует вероятный путь воды, отливы, воздушный зазор и стену основания и предложит решение по исправлению."
+      }
+    }
+  }
+}
