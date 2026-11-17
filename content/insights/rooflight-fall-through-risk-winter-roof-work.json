@@ -1,0 +1,421 @@
+{
+  "slug": "rooflight-fall-through-risk-winter-roof-work",
+  "category": "daylighting_roofing",
+  "status": "published",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "faqIds": [
+    "can-you-walk-on-polycarbonate-rooflight",
+    "non-fragile-vs-walkable",
+    "clearing-snow-near-rooflights",
+    "old-rooflight-looks-sound",
+    "existing-roof-immediate-and-permanent-measures"
+  ],
+  "relatedProjects": [],
+  "relatedInsights": [
+    "rooflight-drip-leak-or-condensation-diagnosis",
+    "standing-seam-roof-drainage-logic"
+  ],
+  "relatedResources": [],
+  "trend": {
+    "topic": "Late-Aban 1405 (Nov 2026) snow and rain and the winter rise in roof access for snow clearing and repairs: falls through rooflights on industrial roofs",
+    "rationale": "Dated Iranian forecasts from 23 to 26 Aban 1405 announce new rain and snow waves, after earlier Aban systems already brought snow. Each snowfall and leak sends people onto shed, warehouse and hall roofs, where rooflight sheets are hidden under snow and look like the surrounding metal sheets. Persian news in recent weeks again reported fatal falls from shed roofs, while Persian search results for walking on polycarbonate roofs return only product pages. Neither the daylighting system page nor the existing rooflight article covers fragility, layout, permanent protection or safe access. Controls follow UK HSE and NARM guidance. Iranian news pages could not be fetched; their dated titles in search results were the signal. No figures or incident details are used.",
+    "observedAt": "2026-11-17",
+    "sources": [
+      "https://nournews.ir/fa/news/361477",
+      "https://www.entekhab.ir/fa/news/948304",
+      "https://shahraranews.ir/fa/news/459967",
+      "https://www.mehrnews.com/news/7003788",
+      "https://www.hse.gov.uk/construction/safetytopics/fragile.htm",
+      "https://www.hse.gov.uk/agriculture/experience/falls-rooflight.htm",
+      "https://specificationonline.co.uk/articles/2016-08-16/understanding-the-difference-between-non-fragile-and-walkable-grp-rooflights-"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "خطر سقوط از نورگیر سقف سوله در برف‌روبی و تعمیرات زمستانی",
+      "metaDescription": "خطر سقوط از نورگیر سقف سوله در زمستان از کجا می‌آید؟ شکنندگی ورق شفاف، پنهان شدن آن زیر برف، و منطق سی‌پانل برای چیدمان، حفاظ و دسترسی ایمن.",
+      "primaryKeyword": "خطر سقوط از نورگیر سقف سوله",
+      "summary": "ورق نورگیر در اغلب سقف‌های صنعتی برای عبور نور طراحی شده است، نه برای تحمل وزن انسان؛ و در زمستان زیر برف، گردوغبار یا رنگ، از ورق فلزی کناری قابل تشخیص نیست. به همین دلیل خطر سقوط از نورگیر باید در مرحله طراحی و اجرا کنترل شود: چیدمان دور از مسیرهای تردد، حفاظ یا توری دائمی، مسیر عبور مشخص و برنامه دسترسی ایمن، نه با احتیاط لحظه‌ای هنگام برف‌روبی.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "زمستان، فصل بیشترین رفت‌وآمد روی سقف و کمترین دید به نورگیرها",
+        "body": "با هر موج برف و باران، رفتن روی سقف سوله‌ها، انبارها و سالن‌ها بیشتر می‌شود: برف‌روبی برای کم کردن بار سقف، باز کردن ناودان‌ها و آبروهای یخ‌زده، پیدا کردن محل نشتی، سفت کردن پیچ‌ها پس از باد یا بازدید تأسیسات روی بام. این کارها اغلب با عجله، توسط نیروی خدماتی یا پیمانکار کوچک و بدون برنامه دسترسی انجام می‌شود. در همین زمان، نوارهای نورگیر زیر لایه برف کاملاً پنهان می‌شوند و حتی بدون برف، ورق شفاف کهنه که گردوغبار یا رنگ رویش نشسته، با ورق فلزی هم‌پروفیل کنارش یکی به نظر می‌رسد. کسی که برای رسیدن به ناودان چند قدم کج می‌رود، ممکن است بی‌آنکه بداند پا روی سطحی بگذارد که برای وزن انسان ساخته نشده است. اخبار تکراری سقوط از سقف سوله نشان می‌دهد این خطر نظری نیست؛ اما بیشتر عوامل آن پیش از زمستان و حتی پیش از نصب نورگیر قابل کنترل است.",
+        "points": [
+          "نوارهای نورگیر زیر برف دیده نمی‌شوند و مرز آن‌ها با ورق فلزی از روی سطح برف قابل تشخیص نیست.",
+          "ورق شفاف هم‌پروفیل با ورق سقف، به‌ویژه وقتی کدر یا رنگ‌شده باشد، حتی در روز آفتابی با ورق فلزی اشتباه گرفته می‌شود.",
+          "نورگیرها اغلب کنار ناودان، در دره سقف یا نزدیک تأسیسات قرار گرفته‌اند؛ یعنی دقیقاً همان جاهایی که برای برف‌روبی و تعمیر باید رفت.",
+          "در بسیاری از سوله‌های موجود نه توری زیر نورگیر هست، نه حفاظ روی آن، نه مسیر تردد مشخص و نه نقطه اتصال ایمنی.",
+          "تعمیرات اضطراری زمستانی معمولاً بدون نقشه سقف انجام می‌شود و کسی که روی بام می‌رود جای نورگیرها را نمی‌داند."
+        ]
+      },
+      "cause": {
+        "title": "چرا ورق نورگیر وزن انسان را تحمل نمی‌کند و چرا این خطر با زمان بیشتر می‌شود",
+        "body": "ورق فلزی سقف بین لاپه‌ها به‌عنوان یک عضو سازه‌ای کار می‌کند و تا حدی بار متمرکز را پخش می‌کند، اما ورق پلی‌کربنات، فایبرگلاس یا شیشه نورگیر برای عبور نور، تحمل باد و برف گسترده و آب‌بندی انتخاب می‌شود. وزن کسی که روی آن قدم می‌گذارد، لیز می‌خورد یا زانو می‌زند، بار ضربه‌ای متمرکز است و رفتار ورق در برابر آن به ضخامت و نوع متریال، فاصله تکیه‌گاه‌ها، تعداد و نوع پیچ‌ها و جزئیات هم‌پوشانی بستگی دارد. حتی وقتی سازنده برای یک ترکیب مشخص ادعای «غیرشکننده» بودن دارد، این ادعا فقط برای همان ترکیب ورق، پیچ و فاصله لاپه و در وضعیت نو معتبر است؛ کافی است پیچ کمتری بسته شود، فاصله لاپه بیشتر باشد یا ورق از یک تأمین‌کننده دیگر جایگزین شود تا این ادعا دیگر قابل استناد نباشد. با گذشت زمان، تابش فرابنفش، تغییرات دمایی و آلودگی هوا ورق‌های پلاستیکی را کدر و شکننده می‌کند و ترک‌های ریز در محل پیچ‌ها ظرفیت باقیمانده را کم می‌کند. در نهایت، خطر بیش از متریال در چیدمان است: وقتی نورگیر در مسیری قرار گرفته که برای رسیدن به ناودان یا تجهیزات باید از آن عبور کرد، احتمال سقوط از طراحی وارد ساختمان شده است.",
+        "points": [
+          "ورق شفاف برای بار گسترده برف و باد طراحی می‌شود، نه برای بار ضربه‌ای متمرکز بدن انسان.",
+          "غیرشکننده بودن ویژگی کل مجموعه نصب‌شده است، نه فقط ورق؛ تغییر پیچ، فاصله لاپه یا جزئیات هم‌پوشانی می‌تواند آن را بی‌اعتبار کند.",
+          "غیرشکننده به معنای قابل راه رفتن نیست؛ چنین ورقی قرار است سقوط را مهار کند، نه اینکه مسیر تردد باشد.",
+          "پیر شدن ورق‌های پلاستیکی زیر آفتاب و ترک‌های اطراف پیچ‌ها، ظرفیت ورق را بدون نشانه ظاهری واضح کم می‌کند.",
+          "قرار گرفتن نورگیر کنار ناودان، در دره سقف یا سر راه تجهیزات، رفتن روی آن یا کنار آن را عملاً اجتناب‌ناپذیر می‌کند.",
+          "تعویض‌های موضعی با ورق نامشخص، یک سقف یکنواخت را به مجموعه‌ای از ورق‌ها با رفتار ناشناخته تبدیل می‌کند."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام پلان سقف با نورگیر، مسیر تردد و حفاظ (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید پلان یک سقف سوله را نشان دهد: نوارهای نورگیر با رنگ متمایز، ناودان‌ها و دره‌ها، مسیر تردد مشخص از نقطه دسترسی تا ناودان و تجهیزات، توری یا شبکه دائمی زیر نورگیرها، حفاظ در کنار نوارهای مجاور مسیر، و نقاط اتصال ایمنی. یک برش کوچک هم باید ترکیب ورق، پیچ و لاپه را نشان دهد. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "نوار نورگیر دور از ناودان",
+          "مسیر تردد مشخص",
+          "توری دائمی زیر نورگیر",
+          "حفاظ کنار مسیر",
+          "نقطه دسترسی و اتصال ایمنی"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای کنترل خطر سقوط از نورگیر",
+        "steps": [
+          {
+            "title": "شناسایی و نقشه‌برداری نورگیرها",
+            "description": "در سقف موجود، همه نوارها و تک‌نورگیرها روی پلان سقف ثبت می‌شوند؛ نوع ورق، وضعیت ظاهری، تعویض‌های قبلی، وجود یا نبود توری و حفاظ، و فاصله آن‌ها از ناودان و تجهیزات. این نقشه پیش از هر برف‌روبی یا تعمیر زمستانی باید در اختیار کسی باشد که روی بام می‌رود."
+          },
+          {
+            "title": "چیدمان نورگیر با در نظر گرفتن مسیرهای دسترسی",
+            "description": "در طراحی جدید، چیدمان نورگیر هم‌زمان با مسیر دسترسی به ناودان‌ها، دره‌ها و تأسیسات بام بررسی می‌شود. نوارها تا حد امکان از لبه ناودان و مسیرهای تعمیر فاصله می‌گیرند تا برای انجام کارهای روزمره نیازی به عبور از کنار آن‌ها نباشد."
+          },
+          {
+            "title": "تعریف ترکیب نصب به‌عنوان یک سیستم",
+            "description": "نوع و ضخامت ورق، فاصله لاپه، نوع و تعداد پیچ و جزئیات هم‌پوشانی به‌صورت یک ترکیب واحد در شاپ‌دراوینگ ثبت می‌شود. اگر غیرشکننده بودن در مشخصات پروژه خواسته شده باشد، مدرک آن برای همین ترکیب از تأمین‌کننده درخواست و در اجرا کنترل می‌شود."
+          },
+          {
+            "title": "حفاظت دائمی به‌جای احتیاط لحظه‌ای",
+            "description": "بسته به کاربری و تعداد دفعات دسترسی، توری یا شبکه فلزی دائمی زیر یا روی نورگیر، حفاظ در کنار نوارهای مجاور مسیر و مسیر تردد مشخص روی سقف پیش‌بینی می‌شود. این تمهیدات با سازه و آب‌بندی نورگیر هماهنگ می‌شوند تا خودشان منشأ نشتی یا سایه نامطلوب نشوند."
+          },
+          {
+            "title": "برنامه دسترسی ایمن برای برف و تعمیرات",
+            "description": "برای بهره‌بردار مشخص می‌شود که برف‌روبی و تعمیر از کدام مسیر و با چه تجهیزات اتصال ایمنی انجام شود، کدام کارها از زیر سقف یا از لبه قابل انجام است، و اینکه روی ورق شفاف یا سطح نامشخص زیر برف قدم گذاشته نشود. کار روی بام باید طبق ضوابط ایمنی و حفاظت کار و با مسئول ایمنی مشخص انجام شود."
+          },
+          {
+            "title": "تحویل، علامت‌گذاری و بازرسی دوره‌ای",
+            "description": "در تحویل، پلان سقف با جای نورگیرها، مسیرها و نقاط اتصال به بهره‌بردار داده می‌شود و در ورودی‌های بام علامت هشدار نصب می‌شود. وضعیت ورق‌ها، پیچ‌ها و توری‌ها پیش از هر زمستان بازرسی می‌شود و هر تعویض با همان ترکیب تأییدشده انجام می‌گیرد."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "آیا می‌توان روی ورق پلی‌کربنات نورگیر راه رفت؟",
+          "answer": "نه. ورق پلی‌کربنات نورگیر، چه تک‌جداره و چه چندجداره، برای عبور نور و تحمل بار گسترده برف و باد انتخاب می‌شود، نه برای وزن و ضربه بدن انسان. حتی اگر ورقی زیر فشار دست محکم به نظر برسد، ممکن است زیر بار متمرکز قدم یا لیز خوردن بشکند یا از روی پیچ‌ها جدا شود. نورگیر نباید هیچ‌وقت بخشی از مسیر تردد باشد."
+        },
+        {
+          "question": "نورگیر «غیرشکننده» یعنی می‌شود روی آن راه رفت؟",
+          "answer": "خیر. غیرشکننده یعنی مجموعه نصب‌شده در آزمون مشخص، سقوط یک نفر را مهار کرده است؛ نه اینکه برای راه رفتن مکرر یا ایستادن طراحی شده باشد. این ویژگی هم فقط برای همان ترکیب ورق، پیچ و فاصله لاپه در وضعیت نو معتبر است و با پیر شدن ورق یا تغییر جزئیات ممکن است از بین برود."
+        },
+        {
+          "question": "برف روی سقف سوله‌ای که نورگیر دارد را چطور ایمن برداریم؟",
+          "answer": "پیش از رفتن روی بام، جای نورگیرها از روی پلان یا از داخل سالن مشخص و روی سقف علامت‌گذاری می‌شود. برف‌روبی فقط از مسیر تردد مشخص یا با تجهیزات اتصال ایمنی و حفاظ انجام می‌شود و هیچ‌کس روی سطحی که زیر برف نامشخص است قدم نمی‌گذارد. اگر چنین مسیر و تجهیزاتی وجود ندارد، تصمیم درباره برف‌روبی باید با بررسی مهندسی و مسئول ایمنی گرفته شود، نه با عجله."
+        },
+        {
+          "question": "نورگیری که چند سال کار کرده و ظاهرش سالم است، ایمن است؟",
+          "answer": "ظاهر سالم دلیل کافی نیست. ورق‌های پلاستیکی زیر آفتاب به‌تدریج کدر و شکننده می‌شوند و ترک‌های ریز اطراف پیچ‌ها از دور دیده نمی‌شوند. هر نورگیری که مدرک ترکیب نصب و وضعیت آن معلوم نیست، باید شکننده فرض شود تا یک فرد صلاحیت‌دار خلاف آن را تأیید کند."
+        },
+        {
+          "question": "در سوله موجود که نورگیرها نه توری دارند نه حفاظ، چه باید کرد؟",
+          "answer": "در کوتاه‌مدت، دسترسی به بام محدود و کنترل‌شده می‌شود، جای نورگیرها روی پلان و روی سقف مشخص می‌شود و کارهای ضروری فقط با حفاظ موقت یا تجهیزات اتصال ایمنی انجام می‌شود. برای راهکار دائمی، نصب توری یا شبکه زیر یا روی نورگیر، ایجاد مسیر تردد مشخص و در صورت نیاز تعویض ورق‌های فرسوده با یک ترکیب تأییدشده بررسی می‌شود."
+        }
+      ],
+      "cta": {
+        "headline": "پیش از برف‌روبی بعدی، خطر نورگیرهای سقف خود را بررسی کنید",
+        "text": "پلان یا عکس سقف، نوع و وضعیت ورق‌های نورگیر و مسیرهایی که برای برف‌روبی و تعمیر استفاده می‌شوند را بفرستید تا تیم فنی سی‌پانل چیدمان نورگیر، نیاز به توری و حفاظ و منطق دسترسی ایمن را بررسی کند."
+      }
+    },
+    "en": {
+      "title": "Falls through rooflights on industrial roofs in winter work",
+      "metaDescription": "Falls through rooflights on industrial roofs: why rooflight sheets are fragile, why snow hides them, and SIPANEL's logic for layout, guarding and safe access.",
+      "primaryKeyword": "falls through rooflights on industrial roofs",
+      "summary": "On most industrial roofs, rooflight sheets are made to let light in, not to carry a person, and in winter they vanish under snow, dust or paint beside similar metal sheets. The fall risk must be controlled in design and installation: layout away from access routes, permanent mesh or guarding, a defined walkway and a safe access plan, not momentary caution while clearing snow.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "Winter brings the most roof traffic and the least visibility of rooflights",
+        "body": "With every wave of snow and rain, people go onto the roofs of sheds, warehouses and halls more often: clearing snow to reduce roof load, freeing frozen gutters and outlets, finding a leak, tightening fixings after wind or checking rooftop equipment. This work is often done in a hurry, by maintenance staff or a small contractor, without an access plan. At the same time, rooflight strips are completely hidden under a layer of snow, and even without snow an old translucent sheet covered in dust or paint looks the same as the metal sheet of the same profile beside it. Someone who steps a little off line to reach a gutter may put their weight on a surface that was never made for a person without knowing it. Repeated news of falls from shed roofs shows this risk is not theoretical, but most of its causes can be controlled before winter and even before the rooflight is installed.",
+        "points": [
+          "Rooflight strips cannot be seen under snow, and their boundary with the metal sheets cannot be found from the snow surface.",
+          "A translucent sheet with the same profile as the roof sheet, especially when dull or painted, is mistaken for metal even on a sunny day.",
+          "Rooflights often sit beside gutters, in valleys or near equipment, exactly where people must go to clear snow or make repairs.",
+          "Many existing sheds have no mesh under the rooflights, no guarding over them, no defined walkway and no anchor point.",
+          "Emergency winter repairs are usually done without a roof plan, so the person on the roof does not know where the rooflights are."
+        ]
+      },
+      "cause": {
+        "title": "Why rooflight sheets cannot carry a person, and why the risk grows with time",
+        "body": "A metal roof sheet works as a structural element between purlins and spreads a concentrated load to some extent, but a polycarbonate, GRP or glass rooflight sheet is chosen for light transmission, distributed wind and snow load and weathertightness. The weight of someone stepping, slipping or kneeling on it is a concentrated impact load, and the sheet's response depends on material type and thickness, support spacing, the number and type of fixings and the overlap detail. Even when a manufacturer claims an assembly is non-fragile, that claim only holds for that specific combination of sheet, fixings and purlin spacing, in new condition; fewer fixings, wider purlin spacing or a replacement sheet from another supplier can be enough to invalidate that claim. Over time, ultraviolet exposure, temperature cycling and air pollution make plastic sheets cloudy and brittle, and fine cracks at fixing holes reduce the remaining capacity. Finally, the risk lies in the layout more than in the material: when a rooflight is placed on the route people must take to reach a gutter or equipment, the fall risk has been designed into the building.",
+        "points": [
+          "A translucent sheet is designed for distributed snow and wind load, not for the concentrated impact of a human body.",
+          "Non-fragility is a property of the whole installed assembly, not the sheet alone; changing fixings, purlin spacing or the overlap detail can invalidate it.",
+          "Non-fragile does not mean walkable; such a sheet is meant to stop a fall, not to serve as a walkway.",
+          "Sun ageing of plastic sheets and cracks around fixings reduce capacity without an obvious visible sign.",
+          "A rooflight beside a gutter, in a valley or in the way of equipment makes walking on or next to it practically unavoidable.",
+          "Local replacements with unknown sheets turn a uniform roof into a set of sheets with unknown behaviour."
+        ]
+      },
+      "visual": {
+        "title": "Roof plan diagram with rooflights, walkway and guarding (pending verification)",
+        "description": "The verified diagram should show a shed roof plan: rooflight strips in a distinct colour, gutters and valleys, a defined walkway from the access point to gutters and equipment, permanent mesh or grid under the rooflights, guarding along strips next to the walkway, and anchor points. A small section should also show the sheet, fixing and purlin combination. This technical asset is still pending verification.",
+        "callouts": [
+          "Rooflight strip away from the gutter",
+          "Defined walkway",
+          "Permanent mesh under the rooflight",
+          "Guarding beside the walkway",
+          "Access point and anchorage"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL's logic for controlling falls through rooflights",
+        "steps": [
+          {
+            "title": "Identify and map the rooflights",
+            "description": "On an existing roof, every strip and individual rooflight is recorded on the roof plan: sheet type, visible condition, previous replacements, whether mesh or guarding exists, and distance from gutters and equipment. Before any snow clearing or winter repair, this plan must be in the hands of whoever goes onto the roof."
+          },
+          {
+            "title": "Lay out rooflights with access routes in mind",
+            "description": "In new design, the rooflight layout is reviewed together with access routes to gutters, valleys and rooftop services. Strips are kept as far as practical from gutter edges and repair routes so that routine work does not require passing beside them."
+          },
+          {
+            "title": "Define the installed assembly as a system",
+            "description": "Sheet type and thickness, purlin spacing, fixing type and number, and the overlap detail are recorded as one combination in the shop drawings. If the project specification requires non-fragility, evidence for that exact combination is requested from the supplier and checked during installation."
+          },
+          {
+            "title": "Permanent protection instead of momentary caution",
+            "description": "Depending on use and how often the roof is accessed, permanent mesh or a metal grid under or over the rooflights, guarding along strips next to routes and a defined walkway on the roof are provided. These measures are coordinated with the rooflight's structure and sealing so they do not become a source of leaks or unwanted shading."
+          },
+          {
+            "title": "A safe access plan for snow and repairs",
+            "description": "The operator is told which route and which fall-protection equipment to use for snow clearing and repairs, which tasks can be done from below or from the edge, and that nobody steps on a translucent sheet or an unidentified surface under snow. Roof work must follow occupational safety rules with a named person responsible for safety."
+          },
+          {
+            "title": "Handover, marking and periodic inspection",
+            "description": "At handover, a roof plan showing rooflights, walkways and anchor points is given to the operator, and warning signs are fixed at roof access points. The condition of sheets, fixings and mesh is inspected before every winter, and any replacement uses the same approved combination."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Can you walk on a polycarbonate rooflight sheet?",
+          "answer": "No. A polycarbonate rooflight sheet, solid or multiwall, is chosen to transmit light and carry distributed snow and wind load, not the weight and impact of a person. Even if a sheet feels firm under hand pressure, it can break or pull off its fixings under the concentrated load of a step or a slip. A rooflight should never be part of a walkway."
+        },
+        {
+          "question": "Does a 'non-fragile' rooflight mean you can walk on it?",
+          "answer": "No. Non-fragile means the installed assembly stopped a person's fall in a defined test, not that it is designed for repeated walking or standing. The property also only applies to that combination of sheet, fixings and purlin spacing in new condition, and can be lost as the sheet ages or details change."
+        },
+        {
+          "question": "How can snow be cleared safely from a shed roof with rooflights?",
+          "answer": "Before going onto the roof, the rooflight positions are identified from the plan or from inside the hall and marked on the roof. Snow is cleared only from a defined walkway or with fall-protection equipment and guarding, and nobody steps on a surface that is hidden under snow. If no such route or equipment exists, the decision to clear snow should be taken with an engineering review and the person responsible for safety, not in a hurry."
+        },
+        {
+          "question": "Is a rooflight that has been in service for years and looks sound safe?",
+          "answer": "Looking sound is not enough. Plastic sheets gradually become cloudy and brittle in the sun, and fine cracks around fixings are not visible from a distance. Any rooflight whose installed assembly and condition are not documented should be treated as fragile until a competent person confirms otherwise."
+        },
+        {
+          "question": "What should be done on an existing shed where rooflights have no mesh or guarding?",
+          "answer": "In the short term, roof access is restricted and controlled, rooflight positions are marked on the plan and on the roof, and essential work is done only with temporary guarding or fall-protection equipment. As a permanent solution, mesh or a grid under or over the rooflights, a defined walkway and, where needed, replacing aged sheets with an approved combination are reviewed."
+        }
+      ],
+      "cta": {
+        "headline": "Review the rooflight risk on your roof before the next snow clearing",
+        "text": "Send the roof plan or photos, the type and condition of the rooflight sheets and the routes used for snow clearing and repairs, and SIPANEL's technical team will review the rooflight layout, the need for mesh and guarding and the logic for safe access."
+      }
+    },
+    "ar": {
+      "title": "خطر السقوط عبر فتحات الإنارة في أسقف المنشآت الصناعية شتاءً",
+      "metaDescription": "خطر السقوط عبر فتحات الإنارة السقفية في المنشآت الصناعية: لماذا تكون الألواح الشفافة هشة، ولماذا يخفيها الثلج، ومنهج سي‌بانل للتوزيع والحماية والوصول الآمن.",
+      "primaryKeyword": "خطر السقوط عبر فتحات الإنارة السقفية",
+      "summary": "في معظم الأسقف الصناعية صُممت ألواح فتحات الإنارة لإدخال الضوء لا لتحمّل وزن الإنسان، وفي الشتاء تختفي تحت الثلج أو الغبار أو الطلاء بجوار ألواح معدنية مشابهة. لذلك يجب ضبط خطر السقوط عبرها في مرحلة التصميم والتنفيذ: توزيع بعيد عن مسارات الحركة، وشبكة أو حاجز دائم، وممر محدد، وخطة وصول آمن، لا الاكتفاء بالحذر لحظة إزالة الثلج.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "الشتاء موسم أكثر حركة على السطح وأقل رؤية لفتحات الإنارة",
+        "body": "مع كل موجة ثلج ومطر يزداد صعود الأشخاص إلى أسطح المستودعات والهناجر والصالات: إزالة الثلج لتخفيف الحمل عن السقف، وفتح المزاريب ومخارج المياه المتجمدة، والبحث عن موضع التسرب، وشد البراغي بعد الرياح، أو تفقد المعدات على السطح. وغالباً ما يُنجز هذا العمل على عجل، من قبل عمال الصيانة أو مقاول صغير، ودون خطة وصول. وفي الوقت نفسه تختفي شرائط فتحات الإنارة تماماً تحت طبقة الثلج، وحتى من دون ثلج يبدو اللوح الشفاف القديم المغطى بالغبار أو الطلاء مثل اللوح المعدني المماثل في المقطع بجانبه. ومن ينحرف بضع خطوات للوصول إلى المزراب قد يضع وزنه على سطح لم يُصنع لتحمّل الإنسان دون أن يعلم. وتكرار أخبار السقوط من أسطح الهناجر يبيّن أن هذا الخطر ليس نظرياً، لكن معظم أسبابه يمكن ضبطها قبل الشتاء بل قبل تركيب فتحة الإنارة نفسها.",
+        "points": [
+          "لا تُرى شرائط فتحات الإنارة تحت الثلج، ولا يمكن تمييز حدودها مع الألواح المعدنية من سطح الثلج.",
+          "اللوح الشفاف ذو المقطع المماثل للوح السقف، خاصة إذا كان باهتاً أو مطلياً، يُظن أنه معدني حتى في يوم مشمس.",
+          "توضع فتحات الإنارة غالباً بجوار المزاريب أو في الأودية أو قرب المعدات، أي في الأماكن ذاتها التي يجب الذهاب إليها لإزالة الثلج أو الإصلاح.",
+          "في كثير من المنشآت القائمة لا توجد شبكة أسفل فتحات الإنارة ولا حاجز فوقها ولا ممر محدد ولا نقطة تثبيت للسلامة.",
+          "تُنفذ إصلاحات الشتاء الطارئة عادة دون مخطط للسقف، فلا يعرف من يصعد إلى السطح مواقع فتحات الإنارة."
+        ]
+      },
+      "cause": {
+        "title": "لماذا لا تتحمل ألواح فتحات الإنارة وزن الإنسان، ولماذا يزداد الخطر مع الزمن",
+        "body": "يعمل لوح السقف المعدني كعنصر إنشائي بين المدادات ويوزع الحمل المركز إلى حد ما، أما لوح البولي كربونات أو الألياف الزجاجية أو الزجاج في فتحة الإنارة فيُختار لنفاذية الضوء وتحمّل أحمال الرياح والثلج الموزعة وإحكام العزل المائي. ووزن من يخطو عليه أو ينزلق أو يجثو هو حمل صدمي مركز، واستجابة اللوح له تعتمد على نوع المادة وسماكتها، والمسافة بين المساند، وعدد البراغي ونوعها، وتفصيلة التراكب. وحتى عندما يدّعي المصنّع أن تجميعاً معيناً غير هش، فإن هذا الادعاء لا يصح إلا لذلك التركيب المحدد من اللوح والبراغي وتباعد المدادات وفي حالته الجديدة؛ ويكفي تقليل البراغي أو زيادة التباعد أو استبدال اللوح بلوح من مورد آخر كي لا يعود هذا الادعاء صالحاً. ومع الزمن تجعل الأشعة فوق البنفسجية والتغيرات الحرارية وتلوث الهواء الألواح البلاستيكية معتمة وهشة، وتقلل الشقوق الدقيقة عند ثقوب البراغي القدرة المتبقية. وأخيراً، يكمن الخطر في التوزيع أكثر من المادة: فعندما توضع فتحة الإنارة في المسار الذي يجب سلوكه للوصول إلى المزراب أو المعدات، يكون خطر السقوط قد صُمم داخل المبنى.",
+        "points": [
+          "يُصمم اللوح الشفاف لأحمال الثلج والرياح الموزعة، لا للصدمة المركزة لجسم الإنسان.",
+          "عدم الهشاشة خاصية للتجميع المركّب كاملاً لا للوح وحده؛ وتغيير البراغي أو تباعد المدادات أو تفصيلة التراكب قد يُبطلها.",
+          "غير الهش لا يعني صالحاً للمشي؛ فالغرض منه إيقاف السقوط لا أن يكون ممراً.",
+          "تقادم الألواح البلاستيكية تحت الشمس والشقوق حول البراغي يقللان القدرة دون علامة ظاهرة واضحة.",
+          "وجود فتحة الإنارة بجوار المزراب أو في الوادي أو في طريق المعدات يجعل المشي عليها أو بجانبها أمراً لا مفر منه عملياً.",
+          "الاستبدالات الموضعية بألواح مجهولة تحوّل السقف المتجانس إلى مجموعة ألواح ذات سلوك غير معروف."
+        ]
+      },
+      "visual": {
+        "title": "مخطط سقف يبين فتحات الإنارة والممر والحواجز (بانتظار التحقق)",
+        "description": "يجب أن يُظهر المخطط المعتمد مسقط سقف منشأة صناعية: شرائط فتحات الإنارة بلون مميز، والمزاريب والأودية، وممراً محدداً من نقطة الوصول إلى المزاريب والمعدات، وشبكة دائمة أسفل فتحات الإنارة، وحواجز بجوار الشرائط المحاذية للممر، ونقاط التثبيت. كما يجب أن يبيّن مقطع صغير تركيب اللوح والبراغي والمدادات. هذا الأصل الفني ما زال بانتظار التحقق.",
+        "callouts": [
+          "شريط إنارة بعيد عن المزراب",
+          "ممر حركة محدد",
+          "شبكة دائمة أسفل فتحة الإنارة",
+          "حاجز بجوار الممر",
+          "نقطة الوصول والتثبيت"
+        ]
+      },
+      "execution": {
+        "title": "منهج سي‌بانل لضبط خطر السقوط عبر فتحات الإنارة",
+        "steps": [
+          {
+            "title": "حصر فتحات الإنارة وتوثيقها على المخطط",
+            "description": "في السقف القائم تُسجل كل الشرائط والفتحات المفردة على مخطط السقف: نوع اللوح، والحالة الظاهرة، والاستبدالات السابقة، ووجود الشبكة أو الحاجز من عدمه، والمسافة من المزاريب والمعدات. ويجب أن يكون هذا المخطط بيد من يصعد إلى السطح قبل أي إزالة للثلج أو إصلاح شتوي."
+          },
+          {
+            "title": "توزيع فتحات الإنارة مع مراعاة مسارات الوصول",
+            "description": "في التصميم الجديد يُراجع توزيع فتحات الإنارة بالتوازي مع مسارات الوصول إلى المزاريب والأودية وتجهيزات السطح. وتُبعد الشرائط قدر الإمكان عن حافة المزراب ومسارات الإصلاح حتى لا تتطلب الأعمال الروتينية المرور بجانبها."
+          },
+          {
+            "title": "تعريف التجميع المركّب كنظام واحد",
+            "description": "يُسجل نوع اللوح وسماكته وتباعد المدادات ونوع البراغي وعددها وتفصيلة التراكب كتركيب واحد في المخططات التنفيذية. وإذا اشترطت مواصفات المشروع عدم الهشاشة، يُطلب من المورد دليل على ذلك لهذا التركيب تحديداً ويُراقب أثناء التنفيذ."
+          },
+          {
+            "title": "حماية دائمة بدلاً من الحذر اللحظي",
+            "description": "بحسب الاستخدام وتكرار الوصول تُوفر شبكة دائمة أو مشبك معدني أسفل فتحات الإنارة أو فوقها، وحواجز بجوار الشرائط المحاذية للمسارات، وممر محدد على السطح. وتُنسق هذه الإجراءات مع إنشاء فتحة الإنارة وعزلها المائي حتى لا تصبح مصدراً للتسرب أو لظل غير مرغوب."
+          },
+          {
+            "title": "خطة وصول آمن للثلج والإصلاحات",
+            "description": "يُحدد للمشغّل المسار ومعدات الحماية من السقوط المستخدمة لإزالة الثلج والإصلاح، والأعمال الممكن تنفيذها من الأسفل أو من الحافة، وأنه لا يجوز أن يخطو أحد على لوح شفاف أو سطح غير محدد تحت الثلج. ويجب أن يتم العمل على السطح وفق قواعد السلامة المهنية وبوجود مسؤول سلامة محدد."
+          },
+          {
+            "title": "التسليم والتعليم والفحص الدوري",
+            "description": "عند التسليم يُعطى المشغّل مخطط سقف يبين فتحات الإنارة والممرات ونقاط التثبيت، وتُثبت لافتات تحذير عند منافذ الوصول إلى السطح. وتُفحص حالة الألواح والبراغي والشبكات قبل كل شتاء، ويتم أي استبدال بالتركيب المعتمد نفسه."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "هل يمكن المشي على لوح البولي كربونات في فتحة الإنارة؟",
+          "answer": "لا. لوح البولي كربونات في فتحة الإنارة، مصمتاً كان أو متعدد الجدران، يُختار لنفاذية الضوء وتحمّل أحمال الثلج والرياح الموزعة، لا لوزن الإنسان وصدمته. وحتى إن بدا اللوح متيناً تحت ضغط اليد، فقد ينكسر أو ينفصل عن براغيه تحت الحمل المركز لخطوة أو انزلاق. ولا يجوز أن تكون فتحة الإنارة جزءاً من ممر الحركة."
+        },
+        {
+          "question": "هل تعني فتحة الإنارة «غير الهشة» أنه يمكن المشي عليها؟",
+          "answer": "لا. عدم الهشاشة يعني أن التجميع المركّب أوقف سقوط شخص في اختبار محدد، لا أنه مصمم للمشي أو الوقوف المتكرر. كما أن هذه الخاصية لا تنطبق إلا على ذلك التركيب من اللوح والبراغي وتباعد المدادات في حالته الجديدة، وقد تُفقد مع تقادم اللوح أو تغيير التفاصيل."
+        },
+        {
+          "question": "كيف تُزال الثلوج بأمان عن سقف منشأة فيه فتحات إنارة؟",
+          "answer": "قبل الصعود إلى السطح تُحدد مواقع فتحات الإنارة من المخطط أو من داخل الصالة وتُعلَّم على السقف. ولا تُزال الثلوج إلا من ممر محدد أو باستخدام معدات الحماية من السقوط والحواجز، ولا يخطو أحد على سطح مخفي تحت الثلج. وإذا لم يتوفر هذا الممر أو المعدات، فيجب أن يُتخذ قرار إزالة الثلج بمراجعة هندسية ومع مسؤول السلامة، لا على عجل."
+        },
+        {
+          "question": "هل فتحة الإنارة التي تعمل منذ سنوات ويبدو مظهرها سليماً آمنة؟",
+          "answer": "المظهر السليم ليس كافياً. فالألواح البلاستيكية تصبح تدريجياً معتمة وهشة تحت الشمس، والشقوق الدقيقة حول البراغي لا تُرى من بعيد. وأي فتحة إنارة لا يُعرف تركيبها المنفذ وحالتها يجب اعتبارها هشة إلى أن يؤكد شخص مختص خلاف ذلك."
+        },
+        {
+          "question": "ما العمل في منشأة قائمة لا توجد في فتحات إنارتها شبكة أو حاجز؟",
+          "answer": "على المدى القصير يُقيّد الوصول إلى السطح ويُضبط، وتُعلَّم مواقع فتحات الإنارة على المخطط وعلى السقف، ولا تُنفذ الأعمال الضرورية إلا بحواجز مؤقتة أو معدات حماية من السقوط. وكحل دائم تُدرس إضافة شبكة أو مشبك أسفل فتحات الإنارة أو فوقها، وإنشاء ممر محدد، واستبدال الألواح المتقادمة عند الحاجة بتركيب معتمد."
+        }
+      ],
+      "cta": {
+        "headline": "راجعوا خطر فتحات الإنارة في سقفكم قبل إزالة الثلج القادمة",
+        "text": "أرسلوا مخطط السقف أو صوره، ونوع ألواح فتحات الإنارة وحالتها، والمسارات المستخدمة لإزالة الثلج والإصلاح، وسيراجع الفريق الفني في سي‌بانل توزيع فتحات الإنارة والحاجة إلى الشبكات والحواجز ومنطق الوصول الآمن."
+      }
+    },
+    "ru": {
+      "title": "Риск падения через зенитные фонари промышленной кровли зимой",
+      "metaDescription": "Риск падения через зенитные фонари промышленной кровли: почему светопрозрачные листы хрупкие, почему снег их скрывает и как SIPANEL планирует ограждения и доступ.",
+      "primaryKeyword": "риск падения через зенитные фонари",
+      "summary": "Как правило, листы зенитных фонарей на промышленной кровле рассчитаны на пропуск света, а не на вес человека, а зимой скрываются под снегом, пылью или краской рядом с похожими металлическими листами. Риск падения нужно контролировать при проектировании и монтаже: раскладка вдали от маршрутов, постоянная сетка или ограждение, дорожка и план безопасного доступа, а не разовая осторожность при уборке снега.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "Зимой на кровлю выходят чаще всего, а фонари видны хуже всего",
+        "body": "С каждой волной снега и дождя люди чаще поднимаются на кровли ангаров, складов и залов: убирают снег, чтобы снизить нагрузку, освобождают замёрзшие водостоки и воронки, ищут место протечки, подтягивают крепёж после ветра или осматривают кровельное оборудование. Часто это делается в спешке, силами эксплуатационного персонала или небольшого подрядчика, без плана доступа. В это же время полосы зенитных фонарей полностью скрываются под снегом, и даже без снега старый светопрозрачный лист, покрытый пылью или краской, выглядит так же, как соседний металлический лист того же профиля. Человек, отступивший на пару шагов в сторону, чтобы дотянуться до водостока, может, не зная того, перенести вес на поверхность, не рассчитанную на человека. Повторяющиеся новости о падениях с кровель ангаров показывают, что этот риск не теоретический, но большинство его причин можно устранить до зимы и даже до установки фонаря.",
+        "points": [
+          "Полосы фонарей под снегом не видны, и их границу с металлическими листами невозможно определить по поверхности снега.",
+          "Светопрозрачный лист того же профиля, что и кровельный, особенно помутневший или окрашенный, принимают за металл даже в солнечный день.",
+          "Фонари часто расположены у водостоков, в ендовах или рядом с оборудованием, то есть именно там, куда нужно идти для уборки снега или ремонта.",
+          "На многих существующих зданиях нет ни сетки под фонарями, ни ограждения над ними, ни обозначенной дорожки, ни анкерной точки.",
+          "Срочный зимний ремонт обычно выполняют без плана кровли, и человек наверху не знает, где находятся фонари."
+        ]
+      },
+      "cause": {
+        "title": "Почему лист фонаря не выдерживает человека и почему риск со временем растёт",
+        "body": "Металлический кровельный лист работает как несущий элемент между прогонами и в какой-то мере распределяет сосредоточенную нагрузку, а лист фонаря из поликарбоната, стеклопластика или стекла подбирают по светопропусканию, распределённой ветровой и снеговой нагрузке и герметичности. Вес человека, который наступает, поскальзывается или встаёт на колено, — это сосредоточенная ударная нагрузка, и реакция листа на неё зависит от типа и толщины материала, шага опор, количества и типа крепежа и узла нахлёста. Даже если производитель заявляет, что сборка «нехрупкая», это верно только для конкретного сочетания листа, крепежа и шага прогонов в новом состоянии; достаточно поставить меньше крепежа, увеличить шаг прогонов или заменить лист изделием другого поставщика, и это заявление уже нельзя считать действительным. Со временем ультрафиолет, температурные циклы и загрязнение воздуха делают пластиковые листы мутными и хрупкими, а микротрещины у отверстий крепежа снижают остаточную несущую способность. Наконец, риск заложен скорее в раскладке, чем в материале: если фонарь стоит на пути к водостоку или оборудованию, риск падения встроен в здание ещё на стадии проекта.",
+        "points": [
+          "Светопрозрачный лист рассчитан на распределённую снеговую и ветровую нагрузку, а не на сосредоточенный удар тела человека.",
+          "Нехрупкость — свойство всей смонтированной сборки, а не одного листа; изменение крепежа, шага прогонов или узла нахлёста может сделать его недействительным.",
+          "Нехрупкий не значит проходимый: такой лист должен остановить падение, а не служить дорожкой.",
+          "Старение пластика на солнце и трещины вокруг крепежа снижают несущую способность без явных внешних признаков.",
+          "Фонарь у водостока, в ендове или на пути к оборудованию делает хождение по нему или рядом с ним практически неизбежным.",
+          "Локальные замены случайными листами превращают однородную кровлю в набор листов с неизвестным поведением."
+        ]
+      },
+      "visual": {
+        "title": "План кровли с фонарями, дорожкой и ограждениями (ожидает проверки)",
+        "description": "Проверенная схема должна показать план кровли ангара: полосы фонарей выделенным цветом, водостоки и ендовы, обозначенную дорожку от точки доступа к водостокам и оборудованию, постоянную сетку под фонарями, ограждения вдоль полос рядом с дорожкой и анкерные точки. Небольшой разрез должен показать сочетание листа, крепежа и прогона. Этот технический материал ещё ожидает проверки.",
+        "callouts": [
+          "Полоса фонаря вдали от водостока",
+          "Обозначенная дорожка",
+          "Постоянная сетка под фонарём",
+          "Ограждение вдоль дорожки",
+          "Точка доступа и анкеровка"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL по контролю риска падения через фонари",
+        "steps": [
+          {
+            "title": "Выявить фонари и нанести их на план",
+            "description": "На существующей кровле все полосы и отдельные фонари фиксируются на плане: тип листа, видимое состояние, прежние замены, наличие сетки или ограждения и расстояние до водостоков и оборудования. Перед любой уборкой снега или зимним ремонтом этот план должен быть у того, кто выходит на кровлю."
+          },
+          {
+            "title": "Раскладка фонарей с учётом маршрутов доступа",
+            "description": "В новом проекте раскладку фонарей проверяют одновременно с маршрутами доступа к водостокам, ендовам и кровельному оборудованию. Полосы по возможности отодвигают от кромки водостока и ремонтных маршрутов, чтобы повседневные работы не требовали проходить рядом с ними."
+          },
+          {
+            "title": "Описать смонтированную сборку как систему",
+            "description": "Тип и толщина листа, шаг прогонов, тип и количество крепежа и узел нахлёста фиксируются в рабочих чертежах как одно сочетание. Если спецификация проекта требует нехрупкости, у поставщика запрашивают подтверждение именно для этого сочетания и контролируют его при монтаже."
+          },
+          {
+            "title": "Постоянная защита вместо разовой осторожности",
+            "description": "В зависимости от назначения и частоты доступа предусматриваются постоянная сетка или металлическая решётка под фонарями или над ними, ограждения вдоль полос у маршрутов и обозначенная дорожка на кровле. Эти меры согласуются с конструкцией и герметизацией фонаря, чтобы сами не стали источником протечек или нежелательной тени."
+          },
+          {
+            "title": "План безопасного доступа для снега и ремонта",
+            "description": "Эксплуатирующей организации указывают, по какому маршруту и с какими средствами защиты от падения убирать снег и выполнять ремонт, какие работы можно сделать снизу или с края кровли, и что нельзя наступать на светопрозрачный лист или неопознанную поверхность под снегом. Работы на кровле выполняются по правилам охраны труда с назначенным ответственным за безопасность."
+          },
+          {
+            "title": "Передача, маркировка и периодический осмотр",
+            "description": "При сдаче объекта эксплуатирующей организации передают план кровли с фонарями, дорожками и анкерными точками, а у выходов на кровлю устанавливают предупреждающие знаки. Состояние листов, крепежа и сеток проверяют перед каждой зимой, а любые замены выполняют тем же утверждённым сочетанием."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Можно ли ходить по поликарбонатному листу зенитного фонаря?",
+          "answer": "Нет. Поликарбонатный лист фонаря, монолитный или сотовый, подбирают для пропуска света и восприятия распределённой снеговой и ветровой нагрузки, а не веса и удара человека. Даже если лист кажется прочным при нажатии рукой, он может сломаться или сорваться с крепежа под сосредоточенной нагрузкой шага или при поскальзывании. Фонарь никогда не должен быть частью маршрута."
+        },
+        {
+          "question": "Означает ли «нехрупкий» фонарь, что по нему можно ходить?",
+          "answer": "Нет. Нехрупкость означает, что смонтированная сборка в определённом испытании удержала падающего человека, а не то, что она рассчитана на регулярное хождение или стояние. Кроме того, это свойство относится только к конкретному сочетанию листа, крепежа и шага прогонов в новом состоянии и может быть утрачено при старении листа или изменении узлов."
+        },
+        {
+          "question": "Как безопасно убрать снег с кровли ангара с фонарями?",
+          "answer": "Перед выходом на кровлю положение фонарей определяют по плану или изнутри здания и обозначают на кровле. Снег убирают только с обозначенной дорожки или с использованием средств защиты от падения и ограждений, и никто не наступает на поверхность, скрытую под снегом. Если такой дорожки или оборудования нет, решение об уборке снега принимают после инженерной оценки и вместе с ответственным за безопасность, а не в спешке."
+        },
+        {
+          "question": "Безопасен ли фонарь, который служит несколько лет и выглядит целым?",
+          "answer": "Внешней целостности недостаточно. Пластиковые листы на солнце постепенно мутнеют и становятся хрупкими, а микротрещины вокруг крепежа издалека не видны. Любой фонарь, для которого не известны смонтированная сборка и состояние, следует считать хрупким, пока компетентный специалист не подтвердит обратное."
+        },
+        {
+          "question": "Что делать на существующем здании, где у фонарей нет ни сетки, ни ограждения?",
+          "answer": "В краткосрочной перспективе доступ на кровлю ограничивают и контролируют, положение фонарей отмечают на плане и на кровле, а необходимые работы выполняют только с временными ограждениями или средствами защиты от падения. В качестве постоянного решения рассматривают сетку или решётку под фонарями или над ними, обозначенную дорожку и при необходимости замену состарившихся листов утверждённым сочетанием."
+        }
+      ],
+      "cta": {
+        "headline": "Оцените риск фонарей на вашей кровле до следующей уборки снега",
+        "text": "Пришлите план или фотографии кровли, тип и состояние листов фонарей и маршруты, которыми пользуются для уборки снега и ремонта, и технический отдел SIPANEL проанализирует раскладку фонарей, необходимость сеток и ограждений и логику безопасного доступа."
+      }
+    }
+  }
+}

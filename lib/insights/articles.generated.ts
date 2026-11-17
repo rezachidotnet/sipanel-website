@@ -5,11 +5,12 @@ import article1 from '@/content/insights/aluminium-cladding-rain-penetration-beh
 import article2 from '@/content/insights/etfe-cushion-hail-puncture-inspection-repair.json';
 import article3 from '@/content/insights/retractable-roof-winter-snow-ice-operation.json';
 import article4 from '@/content/insights/rooflight-drip-leak-or-condensation-diagnosis.json';
-import article5 from '@/content/insights/sandwich-panel-building-heat-loss-air-leakage.json';
-import article6 from '@/content/insights/sandwich-panel-joint-leakage-risk.json';
-import article7 from '@/content/insights/standing-seam-roof-drainage-logic.json';
-import article8 from '@/content/insights/standing-seam-roof-wind-uplift-edge-corner-control.json';
-import article9 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
+import article5 from '@/content/insights/rooflight-fall-through-risk-winter-roof-work.json';
+import article6 from '@/content/insights/sandwich-panel-building-heat-loss-air-leakage.json';
+import article7 from '@/content/insights/sandwich-panel-joint-leakage-risk.json';
+import article8 from '@/content/insights/standing-seam-roof-drainage-logic.json';
+import article9 from '@/content/insights/standing-seam-roof-wind-uplift-edge-corner-control.json';
+import article10 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
 
 export const rawInsightArticleFiles: unknown[] = [
   article0,
@@ -21,5 +22,6 @@ export const rawInsightArticleFiles: unknown[] = [
   article6,
   article7,
   article8,
-  article9
+  article9,
+  article10
 ];
