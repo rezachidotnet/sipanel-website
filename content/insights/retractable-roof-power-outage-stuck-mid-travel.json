@@ -1,0 +1,438 @@
+{
+  "slug": "retractable-roof-power-outage-stuck-mid-travel",
+  "category": "retractable_roofs",
+  "status": "published",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "faqIds": [
+    "stuck-half-open-what-now",
+    "manual-closing-safety",
+    "power-return-restart",
+    "generator-or-ups",
+    "close-before-announced-outage",
+    "rain-sensor-during-outage"
+  ],
+  "relatedProjects": [
+    "absaar-water-park"
+  ],
+  "relatedInsights": [
+    "retractable-roof-winter-snow-ice-operation",
+    "etfe-cushion-hail-puncture-inspection-repair"
+  ],
+  "relatedResources": [],
+  "trend": {
+    "topic": "Scheduled power outages for household and commercial users in Iran resumed from 1 Azar 1405 (Nov 2026) amid new rain and snow: retractable roofs stopping half open",
+    "rationale": "On 30 Aban 1405 (21 Nov 2026) outlets reported, citing Tavanir, that planned outages for household and commercial users would start on 1 Azar with advance notice, followed by daily timetable coverage and reporting on a winter power and gas imbalance, while new rain and snow systems hit several provinces. Retractable roofs over restaurants, cafes, courtyards and pools are mostly commercial installations driven only electrically, so a rare emergency is becoming a scheduled, repeated event. The existing retractable article covers snow and ice and the system page answers power failure in one line; this article covers mid-travel stops, restart risk, generator/UPS coordination, manual recovery and an operating rule for announced outages.",
+    "observedAt": "2026-11-24",
+    "sources": [
+      "https://andishemoaser.ir/%D8%AE%D8%A7%D9%85%D9%88%D8%B4%DB%8C-%D8%A8%D8%B1%D9%82-%D8%A7%D8%B2-%D9%81%D8%B1%D8%AF%D8%A7-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B1-%D8%A2%D8%B0%D8%B1-%D8%A2%D8%BA%D8%A7%D8%B2-%D9%85%DB%8C/",
+      "https://andishemoaser.ir/%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%AE%D8%A7%D9%85%D9%88%D8%B4%DB%8C-%D8%A8%D8%B1%D9%82-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5%D8%9B-%D8%AC%D8%AF%D9%88/",
+      "https://www.eghtesadonline.com/fa/news/2174948/%D8%B2%D9%85%D8%B3%D8%AA%D8%A7%D9%86-1405-%D8%AF%D8%B1-%D9%85%D8%AD%D8%A7%D8%B5%D8%B1%D9%87-%D9%86%D8%A7%D8%AA%D8%B1%D8%A7%D8%B2%DB%8C-%D8%B9%D8%B6%D9%88-%D8%A7%D8%AA%D8%A7%D9%82-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D8%A7%D9%85%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%A7%D9%85%D8%B3%D8%A7%D9%84-%D8%AA%D9%88%D9%84%DB%8C%D8%AF-%D8%B1%D8%A7-%D9%85%D8%AA%D9%88%D9%82%D9%81-%D9%85%DB%8C-%DA%A9%D9%86%D8%AF",
+      "https://www.sharghdaily.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-12/1132504-%D8%AC%D8%B2%D8%A6%DB%8C%D8%A7%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84-%D8%AE%D8%A7%D9%85%D9%88%D8%B4%DB%8C-%D8%AF%D8%B1-%D8%B2%D9%85%D8%B3%D8%AA%D8%A7%D9%86",
+      "https://nournews.ir/fa/news/364446/%D9%BE%DB%8C%D8%B4-%D8%A8%DB%8C%D9%86%DB%8C-%D9%87%D9%88%D8%A7%D8%B4%D9%86%D8%A7%D8%B3%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%D8%A7%D9%88%D9%84-%D8%A2%D8%B0%D8%B1-%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D8%A8%D8%A7%D8%B1%D8%B4-%D8%A8%D8%B1%D9%81-%D8%A8%D8%A7%D8%B1%D8%A7%D9%86-%D8%AF%D8%B1-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86-%DA%A9%D8%B4%D9%88%D8%B1"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "سقف متحرک هنگام قطع برق؛ اگر سقف نیمه‌باز بماند چه باید کرد؟",
+      "metaDescription": "سقف متحرک هنگام قطع برق چرا در وضعیت نیمه‌باز می‌ماند و بازگشت برق چه خطری دارد؟ منطق مهندسی سی‌پانل برای بهره‌برداری ایمن در خاموشی‌های برنامه‌ریزی‌شده.",
+      "primaryKeyword": "سقف متحرک هنگام قطع برق",
+      "summary": "در بیشتر سقف‌های متحرک، درایو برقی تنها راه حرکت روزمره است و با قطع برق، ترمز معمولاً سقف را در همان نقطه نگه می‌دارد؛ اگر قطعی وسط حرکت رخ دهد، سقف نه آب‌بند بسته است و نه کاملاً جمع شده. خطر اصلی وضعیت نیمه‌باز در باران و برف، بازیابی دستی بدون روش مکتوب و حرکت ناخواسته هنگام بازگشت برق است و سناریوی قطع برق باید جزو دستورالعمل روزانه شود.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "خاموشی‌های اعلام‌شده، سقف متحرک را در بدترین وضعیت متوقف می‌کند",
+        "body": "از ابتدای آذر، محدودیت‌های برنامه‌ریزی‌شده برق برای مشترکان خانگی و تجاری دوباره اجرا شده و هم‌زمان سامانه‌های بارشی تازه، باران، برف و باد را به چند استان آورده‌اند. سقف‌های متحرک رستوران‌ها، کافه‌ها، حیاط‌های سرپوشیده هتل، استخرها و فضاهای تفریحی معمولاً روی برق تجاری کار می‌کنند و ساعت قطعی را بهره‌بردار انتخاب نمی‌کند. نتیجه این است که سقفی که سال‌ها فقط گاهی با قطع برق روبه‌رو می‌شد، حالا ممکن است به‌طور مکرر در وضعیتی متوقف شود که برای آن برنامه‌ای ندارد. در این شرایط دو سناریو بیش از بقیه محتمل است: سقف وسط حرکت ایستاده، باران شروع شده و کسی نمی‌داند می‌تواند آن را با دست ببندد یا نه؛ یا برق برگشته و سقف بدون فرمان تازه شروع به حرکت کرده است.",
+        "points": [
+          "اگر قطعی هنگام باز یا بسته شدن رخ دهد، سقف بین دو وضعیت می‌ماند؛ لبه‌ها و درزهای حالت بسته درگیر نیستند و پوشش هم در محل جمع‌شدن خود قرار ندارد.",
+          "سقف نیمه‌باز در باران یا برف، آب را از لبه‌های باز و درزهای نیمه‌درگیر به داخل می‌رساند، چون ناودان و آب‌بندی برای وضعیت کاملاً بسته طراحی شده‌اند.",
+          "با بازگشت برق، برخی سیستم‌ها آخرین فرمان را ادامه می‌دهند یا موقعیت خود را درست تشخیص نمی‌دهند و ممکن است در حالی که زیر سقف افراد نشسته‌اند حرکت کنند.",
+          "سوئیچ دستی یا خودکار به ژنراتور، اگر با سازنده درایو هماهنگ نشده باشد، می‌تواند افت ولتاژ، توقف‌های پی‌درپی یا حتی جابه‌جایی ترتیب فاز و حرکت معکوس موتور ایجاد کند.",
+          "کارکنان برای بستن سقف به آزادسازی ترمز یا هندل دستی متوسل می‌شوند، بدون آنکه بدانند در باد، با بار برف یا در کدام بخش از مسیر این کار مجاز است.",
+          "سنسور باران و باد و هشدارها هم به همان برق وابسته‌اند؛ در زمان قطعی، بسته شدن خودکار هنگام شروع باران اتفاق نمی‌افتد."
+        ]
+      },
+      "cause": {
+        "title": "سناریوی قطع برق معمولاً برای یک رویداد نادر طراحی شده، نه برای قطعی تکرارشونده",
+        "body": "در طراحی رایج سقف متحرک، درایو برقی، تابلو کنترل، سنسورها و محدودکننده‌ها یک زنجیره واحدند و قطع برق به‌عنوان رویدادی اضطراری و کم‌تکرار دیده می‌شود. در بسیاری از مکانیزم‌ها ترمز موتور در نبود برق درگیر می‌ماند؛ این رفتار برای جلوگیری از حرکت کنترل‌نشده درست است، اما یعنی سقف دقیقاً در همان نقطه‌ای که برق رفته متوقف می‌شود. روش بازیابی دستی، اگر در مدارک تعریف شده باشد، معمولاً برای یک وضعیت استثنایی و با حضور نیروی آموزش‌دیده نوشته شده و برای استفاده مکرر کارکنان سالن یا آشپزخانه پیش‌بینی نشده است. در سمت کنترل هم، تشخیص موقعیت در برخی سیستم‌ها پس از قطع برق نیاز به بازتعریف دارد و تنظیم شروع مجدد خودکار، که در شرایط عادی کار را ساده می‌کند، در لحظه بازگشت برق به یک ریسک ایمنی تبدیل می‌شود. منبع پشتیبان هم اغلب فقط برای روشن ماندن تابلو یا روشنایی انتخاب شده و ظرفیت راه‌اندازی درایو، شیوه سوئیچ و ترتیب فاز در آن بررسی نشده است.",
+        "points": [
+          "قطع برق در مدارک بهره‌برداری به‌عنوان وضعیت اضطراری نادر تعریف شده و دستورالعملی برای قطعی‌های اعلام‌شده و تکرارشونده وجود ندارد.",
+          "ترمزی که در نبود برق درگیر می‌شود، سقف را ایمن نگه می‌دارد اما آن را در هر نقطه‌ای از مسیر که باشد متوقف می‌کند، از جمله وضعیت نیمه‌باز.",
+          "در برخی سیستم‌ها حافظه موقعیت یا مرجع حرکت پس از قطع برق از بین می‌رود و بدون بازتعریف، محدودکننده‌ها و توقف‌ها درست تفسیر نمی‌شوند.",
+          "تنظیم ادامه خودکار آخرین فرمان یا فرمانی که هنگام قطعی روی تابلو مانده، سقف را بدون حضور ناظر و بدون بازبینی مسیر به حرکت درمی‌آورد.",
+          "منبع پشتیبان معمولاً فقط برای کنترل یا روشنایی در نظر گرفته شده و جریان راه‌اندازی درایو، زمان سوئیچ و کنترل ترتیب فاز در آن دیده نشده است.",
+          "سنسورها، هشدارها و منطق بسته شدن خودکار به همان تغذیه وابسته‌اند و در قطعی، حفاظت آب‌وهوایی سقف عملاً از کار می‌افتد."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام رفتار سقف متحرک در یک بازه خاموشی (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید یک خط زمانی ساده از پیش از قطعی، حین قطعی و پس از بازگشت برق نشان دهد: وضعیت پارک ایمن پیش از خاموشی اعلام‌شده، درگیر شدن ترمز و محل توقف در صورت قطع وسط حرکت، مسیر نفوذ آب در وضعیت نیمه‌باز، مسیر بازیابی دستی و نقطه‌های تصمیم پس از بازگشت برق شامل بازتعریف موقعیت و بازبینی چشمی پیش از هر فرمان. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "وضعیت پارک پیش از قطعی",
+          "توقف نیمه‌باز و مسیر آب",
+          "بازیابی دستی مجاز",
+          "بازگشت برق بدون حرکت خودکار"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای بهره‌برداری سقف متحرک در خاموشی‌ها",
+        "steps": [
+          {
+            "title": "تعریف وضعیت پارک ایمن برای فصل",
+            "description": "با مدارک طراحی و دستورالعمل سازنده روشن می‌شود سقف در کدام وضعیت برای باران، برف و باد فصل بررسی شده است. همین وضعیت به‌عنوان وضعیت پارک در خاموشی‌ها تعریف می‌شود تا سقف هیچ‌گاه در ساعت خاموشی در وضعیتی که برای آن کنترل نشده رها نشود. اگر مدارک این موضوع را روشن نمی‌کند، پاسخ پیش از ادامه بهره‌برداری از طراح یا سازنده استعلام و مکتوب می‌شود."
+          },
+          {
+            "title": "قاعده بهره‌برداری برای خاموشی‌های اعلام‌شده",
+            "description": "زمان قطعی هر روز از مجاری رسمی اطلاع‌رسانی شرکت توزیع گرفته می‌شود و یک نفر مسئول آن است. در فاصله کوتاهی پیش از شروع خاموشی، حرکت تازه‌ای آغاز نمی‌شود و سقف از قبل به وضعیت پارک برده می‌شود. اگر پیش‌بینی هوا باران یا برف است، تصمیم بسته ماندن پیش از شروع خاموشی گرفته می‌شود، نه وسط آن."
+          },
+          {
+            "title": "بازبینی منبع پشتیبان با سازنده درایو",
+            "description": "تغذیه کنترل، سنسورها و هشدار از تغذیه درایو جدا بررسی می‌شود. اگر قرار است ژنراتور سقف را حرکت دهد، ظرفیت آن برای راه‌اندازی درایو، روش سوئیچ، حفاظت ترتیب فاز و افت ولتاژ با سازنده مکانیزم هماهنگ می‌شود. نتیجه باید در یک سوئیچ واقعی آزمایش شود، نه فقط روی کاغذ."
+          },
+          {
+            "title": "حذف حرکت خودکار پس از بازگشت برق",
+            "description": "منطق کنترل طوری بازبینی می‌شود که پس از بازگشت برق هیچ فرمانی خودبه‌خود ادامه پیدا نکند و حرکت فقط پس از تأیید اپراتور و بازبینی چشمی مسیر آغاز شود. اگر سیستم پس از قطعی به بازتعریف موقعیت نیاز دارد، روش آن مرحله‌به‌مرحله در دستورالعمل نوشته و به کارکنان آموزش داده می‌شود."
+          },
+          {
+            "title": "مکتوب کردن روش بازیابی دستی",
+            "description": "اگر مکانیزم امکان آزادسازی ترمز یا حرکت دستی دارد، شرایط مجاز آن، مسئول اجرا، ابزار لازم، مسیر دسترسی به درایو و شرایطی که این کار در آن ممنوع است، مانند باد شدید یا برف نشسته روی پوسته، از سازنده گرفته و مکتوب می‌شود. هنگام بازیابی دستی، ناحیه زیر سقف از افراد خالی می‌شود."
+          },
+          {
+            "title": "آزمون قطعی کنترل‌شده و ثبت رویدادها",
+            "description": "در یک آزمون برنامه‌ریزی‌شده، برق وسط حرکت قطع می‌شود تا نگه‌داشتن ترمز، رفتار کنترل در بازگشت برق، بازتعریف موقعیت و هشدارها بررسی شود. پس از هر قطعی واقعی هم وضعیت سقف، هر توقف یا صدای غیرعادی و هر نشت آب ثبت می‌شود تا روند فرسایش یا ایراد تکرارشونده دیده شود."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "برق وسط حرکت رفت و سقف نیمه‌باز مانده؛ الان چه کار کنیم؟",
+          "answer": "اول ناحیه زیر سقف و مسیر حرکت را از افراد خالی کنید و کلید فرمان را در وضعیت خاموش یا توقف بگذارید تا با بازگشت برق حرکتی شروع نشود. اگر باران یا برف در راه است و روش بازیابی دستی مکتوب و نیروی آموزش‌دیده دارید، طبق همان روش عمل کنید؛ در غیر این صورت از ریختن آب به نقاط حساس زیر لبه‌های باز جلوگیری کنید و منتظر برق و تأیید فنی بمانید. سقف را با زور، کشیدن یا ابزار نامناسب جابه‌جا نکنید."
+        },
+        {
+          "question": "آیا می‌شود سقف متحرک را در قطع برق با دست بست؟",
+          "answer": "فقط اگر سازنده برای آن روشی تعریف کرده باشد. برخی مکانیزم‌ها هندل یا آزادسازی ترمز دارند، اما این کار معمولاً برای وضعیت اضطراری و با شرایط مشخص طراحی شده است. آزاد کردن ترمز روی سقفی که شیب دارد، برف رویش نشسته یا در باد است، می‌تواند حرکت کنترل‌نشده ایجاد کند. اگر روش مکتوب ندارید، پیش از خاموشی‌های بعدی آن را از سازنده بگیرید."
+        },
+        {
+          "question": "وقتی برق برگشت، می‌توانیم بلافاصله دکمه بستن را بزنیم؟",
+          "answer": "بهتر است نه. پس از بازگشت برق ابتدا مسیر حرکت، ریل و لبه‌ها را چشمی بازبینی کنید، مطمئن شوید هیچ فرمانی خودبه‌خود فعال نشده و اگر سیستم به بازتعریف موقعیت نیاز دارد، آن را انجام دهید. نوسان برق در دقایق اول بازگشت هم ممکن است دوباره حرکت را قطع کند؛ حرکت را وقتی شروع کنید که تغذیه پایدار است و کسی ناظر حرکت است."
+        },
+        {
+          "question": "ژنراتور یا یوپی‌اس برای سقف متحرک کافی است؟",
+          "answer": "بستگی دارد که از منبع پشتیبان چه انتظاری دارید. یوپی‌اس معمولاً فقط برای روشن ماندن تابلو، سنسورها و هشدار مناسب است و برای حرکت دادن درایو انتخاب نمی‌شود. ژنراتور اگر قرار است سقف را حرکت دهد، باید ظرفیت راه‌اندازی درایو را داشته باشد و روش سوئیچ و حفاظت ترتیب فاز آن با سازنده مکانیزم هماهنگ و در عمل آزمایش شود؛ اتصال یک ژنراتور بدون این بررسی خودش می‌تواند منشأ خرابی باشد."
+        },
+        {
+          "question": "آیا باید پیش از هر خاموشی اعلام‌شده سقف را ببندیم؟",
+          "answer": "لزوماً بسته نه؛ باید به وضعیت پارکی برود که برای شرایط آب‌وهوایی همان فصل بررسی شده است. در بسیاری از پروژه‌ها در زمستان این وضعیت بسته است، اما برخی سیستم‌ها برای برف در وضعیت جمع‌شده کنترل شده‌اند. اصل این است که سقف هیچ‌گاه در ساعت خاموشی در وضعیت میانی یا در حال حرکت نباشد."
+        },
+        {
+          "question": "سنسور باران سقف در زمان قطع برق از آن محافظت می‌کند؟",
+          "answer": "خیر، مگر اینکه سنسور، کنترل و درایو هر سه به منبع پشتیبان متصل باشند. در بیشتر سیستم‌ها سنسور باران فقط فرمان بستن می‌دهد و اجرای آن به برق درایو وابسته است. به همین دلیل در روزهای بارانی با خاموشی اعلام‌شده، تصمیم بستن باید پیش از شروع خاموشی و به‌صورت دستی گرفته شود."
+        }
+      ],
+      "cta": {
+        "headline": "سناریوی قطع برق سقف متحرک خود را پیش از خاموشی بعدی بازبینی کنید",
+        "text": "مدارک موجود سقف، دستورالعمل سازنده مکانیزم، مشخصات منبع پشتیبان و گزارش هر توقف یا حرکت ناخواسته در قطعی‌ها را ارسال کنید تا تیم فنی سی‌پانل وضعیت پارک، منطق کنترل، بازیابی دستی و هماهنگی ژنراتور را بازبینی کند و قاعده بهره‌برداری در خاموشی‌ها را پیشنهاد دهد."
+      }
+    },
+    "en": {
+      "title": "Retractable roof during power outages: what if it stops half open?",
+      "metaDescription": "Why does a retractable roof stop half open during power outages, and what are the risks when power returns? SIPANEL's engineering logic for scheduled outages.",
+      "primaryKeyword": "retractable roof during power outages",
+      "summary": "On most retractable roofs the electric drive is the only routine means of movement, and on power loss the brake usually holds the roof where it is, so a cut during travel leaves it neither sealed closed nor fully stacked. The real risks are the half-open state in rain or snow, manual recovery without a written method, and unintended movement when power returns.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "Announced outages stop retractable roofs in the worst possible position",
+        "body": "Since the start of Azar (late November), planned electricity restrictions for household and commercial consumers in Iran have been applied again, while new precipitation systems have brought rain, snow and wind to several provinces. Retractable roofs over restaurants, cafes, hotel courtyards, pools and leisure spaces usually run on commercial supply, and the operator does not choose the outage time. A roof that used to meet a power cut only occasionally may now stop repeatedly in a state nobody planned for. Two scenarios are more likely than the rest: the roof stopped mid-travel, rain started, and nobody knew whether it could be closed by hand; or power came back and the roof started moving without a new command.",
+        "points": [
+          "If the cut happens while the roof is opening or closing, it stays between two states: the closed-position edges and seals are not engaged, and the covering is not in its stacked position either.",
+          "A half-open roof in rain or snow lets water in through open edges and partly engaged joints, because gutters and seals are designed for the fully closed state.",
+          "When power returns, some systems resume the last command or misread their position, and may move while people are seated underneath.",
+          "Manual or automatic changeover to a generator that was not coordinated with the drive supplier can cause voltage dips, repeated trips or even a swapped phase sequence and reversed motor direction.",
+          "Staff resort to releasing the brake or using a hand crank without knowing whether this is allowed in wind, under snow, or at that point of travel.",
+          "Rain and wind sensors and alarms depend on the same supply; during an outage, automatic closing when rain starts simply does not happen."
+        ]
+      },
+      "cause": {
+        "title": "The power-loss scenario is usually designed for a rare event, not a recurring one",
+        "body": "In a typical retractable roof, the electric drive, control panel, sensors and limit switches form one chain, and a power cut is treated as a rare emergency. In many mechanisms the motor brake stays engaged without power; this is correct for preventing uncontrolled movement, but it means the roof stops exactly where it was when power was lost. A manual recovery method, if documented at all, is usually written for an exceptional situation with trained personnel present, not for repeated use by restaurant or kitchen staff. On the control side, position detection in some systems needs re-referencing after a cut, and an auto-restart setting that is convenient in normal operation becomes a safety risk at the moment power returns. Backup supply is often sized only to keep the panel or lighting alive; drive starting demand, changeover method and phase sequence were never checked.",
+        "points": [
+          "Operating documents define power loss as a rare emergency and contain no procedure for announced, recurring outages.",
+          "A brake that engages without power holds the roof safely but stops it wherever it happens to be, including half open.",
+          "In some systems the position memory or travel reference is lost after a cut, and without re-referencing, limit switches and stops are not interpreted correctly.",
+          "An auto-resume setting, or a command left active on the panel during the outage, sets the roof moving with no observer and no check of the travel path.",
+          "Backup supply is usually planned for controls or lighting only; drive starting current, changeover time and phase-sequence control were not considered.",
+          "Sensors, alarms and automatic-closing logic share the same supply, so the roof's weather protection effectively stops during an outage."
+        ]
+      },
+      "visual": {
+        "title": "Diagram of retractable roof behaviour across an outage window (pending verification)",
+        "description": "The verified diagram should show a simple timeline before, during and after the outage: the safe parking position before the announced window, brake engagement and stopping point if power is lost mid-travel, the water entry path in the half-open state, the manual recovery path, and decision points after power returns, including position re-referencing and a visual check before any command. This technical asset is still pending verification.",
+        "callouts": [
+          "Parking position before the cut",
+          "Half-open stop and water path",
+          "Permitted manual recovery",
+          "Power return without auto-movement"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL logic for operating retractable roofs through outages",
+        "steps": [
+          {
+            "title": "Define a safe parking position for the season",
+            "description": "Design documents and the supplier's manual are reviewed to establish in which position the roof was checked for the season's rain, snow and wind. That position becomes the parking position for outages, so the roof is never left during an outage window in a state it was not checked for. If the documents do not settle this, the answer is requested in writing from the designer or supplier before operation continues."
+          },
+          {
+            "title": "An operating rule for announced windows",
+            "description": "The daily outage time is taken from the distribution company's official notification channels, with one person responsible for it. Close to the start of a window no new movement is started, and the roof is moved to its parking position in advance. If rain or snow is forecast, the decision to keep it closed is made before the window, not in the middle of it."
+          },
+          {
+            "title": "Review backup supply with the drive supplier",
+            "description": "Supply for controls, sensors and alarms is reviewed separately from drive power. If a generator is expected to move the roof, its capacity to start the drive, the changeover method, phase-sequence protection and voltage dip are coordinated with the mechanism supplier. The result must be tested in a real changeover, not only on paper."
+          },
+          {
+            "title": "Remove automatic movement after power returns",
+            "description": "The control logic is reviewed so that no command resumes by itself after power returns and movement starts only after operator confirmation and a visual check of the travel path. If the system needs position re-referencing after an outage, the method is written step by step in the procedure and taught to staff."
+          },
+          {
+            "title": "Write down the manual recovery method",
+            "description": "If the mechanism allows brake release or manual movement, the permitted conditions, the responsible person, required tools, access route to the drive, and conditions in which it is forbidden, such as strong wind or snow lying on the roof, are obtained from the supplier and documented. During manual recovery the area under the roof is cleared of people."
+          },
+          {
+            "title": "Controlled outage test and event log",
+            "description": "In a planned test, power is cut mid-travel to check brake holding, control behaviour on power return, position re-referencing and alarms. After every real outage the roof state, any stop or unusual noise, and any water ingress are logged, so wear trends or recurring faults become visible."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Power went off mid-travel and the roof is half open. What should we do now?",
+          "answer": "First clear people from under the roof and from the travel path, and set the command switch to off or stop so nothing starts when power returns. If rain or snow is coming and you have a written manual recovery method and trained staff, follow that method; otherwise keep water away from sensitive areas under the open edges and wait for power and a technical check. Do not move the roof by force, pulling or improvised tools."
+        },
+        {
+          "question": "Can a retractable roof be closed by hand during a power cut?",
+          "answer": "Only if the supplier has defined a method for it. Some mechanisms have a hand crank or brake release, but these are usually designed for emergencies under specific conditions. Releasing the brake on a roof that is sloped, carries snow, or is in wind can cause uncontrolled movement. If you have no written method, obtain one from the supplier before the next outages."
+        },
+        {
+          "question": "When power comes back, can we press close straight away?",
+          "answer": "Better not. After power returns, first check the travel path, rails and edges visually, make sure no command has activated by itself, and carry out position re-referencing if the system requires it. Supply fluctuation in the first minutes after restoration may also cut the movement again; start moving once supply is stable and someone is watching the roof."
+        },
+        {
+          "question": "Is a generator or UPS enough for a retractable roof?",
+          "answer": "It depends on what you expect from the backup. A UPS is usually suitable only for keeping the panel, sensors and alarms alive and is not selected to move the drive. If a generator is to move the roof, it must be able to start the drive, and its changeover method and phase-sequence protection must be coordinated with the mechanism supplier and tested in practice; connecting a generator without this review can itself cause damage."
+        },
+        {
+          "question": "Should we close the roof before every announced outage?",
+          "answer": "Not necessarily closed; it should go to the parking position that was checked for that season's weather. On many projects this is the closed position in winter, but some systems were checked for snow in the stacked position. The principle is that the roof is never in an intermediate or moving state during an outage window."
+        },
+        {
+          "question": "Does the roof's rain sensor protect it during a power cut?",
+          "answer": "No, unless sensor, control and drive are all on backup supply. In most systems the rain sensor only issues a close command, and executing it depends on drive power. That is why on rainy days with an announced outage the decision to close must be taken manually before the window starts."
+        }
+      ],
+      "cta": {
+        "headline": "Review your retractable roof's power-loss scenario before the next outage",
+        "text": "Send the roof's existing documents, the mechanism supplier's manual, backup supply details and a record of any stop or unintended movement during outages, so SIPANEL's technical team can review the parking position, control logic, manual recovery and generator coordination and propose an operating rule for outages."
+      }
+    },
+    "ar": {
+      "title": "السقف المتحرك عند انقطاع الكهرباء؛ ماذا لو توقف نصف مفتوح؟",
+      "metaDescription": "لماذا يتوقف السقف المتحرك نصف مفتوح عند انقطاع الكهرباء، وما خطر عودة التيار؟ منطق SIPANEL الهندسي للتشغيل الآمن خلال الانقطاعات المجدولة.",
+      "primaryKeyword": "السقف المتحرك عند انقطاع الكهرباء",
+      "summary": "في معظم الأسقف المتحركة يكون محرك الدفع الكهربائي الوسيلة الوحيدة للحركة اليومية، وعند انقطاع الكهرباء يثبّت المكبح السقف عادة في مكانه، فإذا وقع الانقطاع أثناء الحركة بقي السقف لا مغلقاً محكماً ولا مطوياً بالكامل. والخطر الفعلي هو الوضع نصف المفتوح في المطر أو الثلج، والتشغيل اليدوي دون طريقة مكتوبة، والحركة غير المقصودة عند عودة التيار.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "الانقطاعات المعلنة توقف الأسقف المتحركة في أسوأ وضع ممكن",
+        "body": "منذ بداية شهر آذر الإيراني، أي أواخر نوفمبر، عادت قيود الكهرباء المبرمجة للمشتركين المنزليين والتجاريين في إيران، وفي الوقت نفسه جلبت منظومات هطول جديدة المطر والثلج والرياح إلى عدة محافظات. الأسقف المتحركة فوق المطاعم والمقاهي وأفنية الفنادق والمسابح والمرافق الترفيهية تعمل عادة على التغذية التجارية، ولا يختار المشغّل وقت الانقطاع. والنتيجة أن سقفاً كان يواجه انقطاع الكهرباء نادراً قد يتوقف الآن مراراً في وضع لم يخطط له أحد. وفي هذه الظروف يبرز سيناريوهان أكثر من غيرهما: توقف السقف في منتصف الحركة وبدأ المطر ولم يعرف أحد هل يمكن إغلاقه يدوياً؛ أو عاد التيار فبدأ السقف يتحرك دون أمر جديد.",
+        "points": [
+          "إذا وقع الانقطاع أثناء الفتح أو الإغلاق يبقى السقف بين وضعين، فلا تكون حواف الوضع المغلق وموانع التسرب معشّقة، ولا يكون الغطاء في موضع طيّه.",
+          "السقف نصف المفتوح في المطر أو الثلج يُدخل الماء من الحواف المفتوحة والفواصل المعشّقة جزئياً، لأن المزاريب والإحكام مصممة للوضع المغلق تماماً.",
+          "عند عودة التيار تستأنف بعض الأنظمة آخر أمر أو تخطئ في تحديد موقعها، وقد تتحرك بينما يجلس الناس تحتها.",
+          "التحويل اليدوي أو الآلي إلى مولد غير منسق مع مورد وحدة الدفع قد يسبب هبوطاً في الجهد أو توقفات متكررة، بل وانعكاس تتابع الأطوار ودوران المحرك في الاتجاه المعاكس.",
+          "يلجأ العاملون إلى تحرير المكبح أو استخدام المقبض اليدوي دون معرفة ما إذا كان ذلك مسموحاً في الرياح أو تحت الثلج أو في تلك النقطة من المسار.",
+          "حساسات المطر والرياح والإنذارات تعتمد على التغذية نفسها، فلا يحدث الإغلاق التلقائي عند بدء المطر أثناء الانقطاع."
+        ]
+      },
+      "cause": {
+        "title": "سيناريو انقطاع الكهرباء مصمم غالباً لحدث نادر لا لانقطاع متكرر",
+        "body": "في التصميم الشائع للسقف المتحرك تشكل وحدة الدفع الكهربائية ولوحة التحكم والحساسات ومفاتيح الحد سلسلة واحدة، ويُنظر إلى انقطاع الكهرباء كحالة طوارئ نادرة. وفي كثير من الآليات يبقى مكبح المحرك معشّقاً عند غياب التيار؛ وهذا صحيح لمنع الحركة غير المضبوطة، لكنه يعني أن السقف يتوقف تماماً حيث انقطعت الكهرباء. أما طريقة الاستعادة اليدوية، إن وُثّقت أصلاً، فتكون عادة مكتوبة لحالة استثنائية وبحضور فنيين مدرّبين، لا للاستخدام المتكرر من قبل عاملي الصالة أو المطبخ. ومن جهة التحكم، يحتاج تحديد الموقع في بعض الأنظمة إلى إعادة مرجعية بعد الانقطاع، وخيار إعادة التشغيل التلقائي الذي يسهل العمل في الظروف العادية يصبح خطراً على السلامة لحظة عودة التيار. كما تُختار مصادر الطاقة الاحتياطية غالباً لإبقاء اللوحة أو الإنارة فقط، دون دراسة طلب بدء تشغيل المحرك وطريقة التحويل وتتابع الأطوار.",
+        "points": [
+          "وثائق التشغيل تعرّف انقطاع الكهرباء كطوارئ نادرة ولا تتضمن إجراءً للانقطاعات المعلنة والمتكررة.",
+          "المكبح الذي يتعشق عند غياب التيار يثبّت السقف بأمان لكنه يوقفه أينما كان، بما في ذلك الوضع نصف المفتوح.",
+          "في بعض الأنظمة تُفقد ذاكرة الموقع أو مرجع الحركة بعد الانقطاع، ودون إعادة المرجعية لا تُفسَّر مفاتيح الحد ونقاط التوقف بشكل صحيح.",
+          "خيار الاستئناف التلقائي، أو أمر بقي فعالاً على اللوحة أثناء الانقطاع، يحرك السقف دون مراقب ودون فحص مسار الحركة.",
+          "المصدر الاحتياطي يُخطط عادة للتحكم أو الإنارة فقط، ولا يؤخذ في الحسبان تيار بدء تشغيل المحرك وزمن التحويل وضبط تتابع الأطوار.",
+          "الحساسات والإنذارات ومنطق الإغلاق التلقائي تتشارك التغذية نفسها، فتتوقف حماية السقف من الطقس فعلياً أثناء الانقطاع."
+        ]
+      },
+      "visual": {
+        "title": "مخطط سلوك السقف المتحرك خلال نافذة الانقطاع (بانتظار التحقق)",
+        "description": "ينبغي أن يُظهر المخطط المعتمد خطاً زمنياً بسيطاً قبل الانقطاع وأثناءه وبعد عودة التيار: وضع الركن الآمن قبل النافذة المعلنة، وتعشق المكبح ونقطة التوقف إذا انقطع التيار أثناء الحركة، ومسار دخول الماء في الوضع نصف المفتوح، ومسار الاستعادة اليدوية، ونقاط القرار بعد عودة التيار بما فيها إعادة مرجعية الموقع والفحص البصري قبل أي أمر. هذا الأصل الفني ما زال بانتظار التحقق.",
+        "callouts": [
+          "وضع الركن قبل الانقطاع",
+          "التوقف نصف المفتوح ومسار الماء",
+          "الاستعادة اليدوية المسموحة",
+          "عودة التيار دون حركة تلقائية"
+        ]
+      },
+      "execution": {
+        "title": "منطق SIPANEL لتشغيل الأسقف المتحركة خلال الانقطاعات",
+        "steps": [
+          {
+            "title": "تحديد وضع ركن آمن للموسم",
+            "description": "تُراجع وثائق التصميم ودليل المورد لتحديد الوضع الذي فُحص فيه السقف لأمطار الموسم وثلوجه ورياحه. ويُعتمد هذا الوضع وضعاً للركن خلال الانقطاعات، حتى لا يُترك السقف أبداً في نافذة الانقطاع في وضع لم يُفحص له. وإذا لم تحسم الوثائق ذلك، يُطلب الجواب كتابياً من المصمم أو المورد قبل متابعة التشغيل."
+          },
+          {
+            "title": "قاعدة تشغيل للنوافذ المعلنة",
+            "description": "يُؤخذ وقت الانقطاع يومياً من قنوات الإعلان الرسمية لشركة التوزيع، ويكون شخص واحد مسؤولاً عن ذلك. وقرب بداية النافذة لا تبدأ أي حركة جديدة، ويُنقل السقف مسبقاً إلى وضع الركن. وإذا كانت التوقعات تشير إلى مطر أو ثلج، يُتخذ قرار إبقائه مغلقاً قبل النافذة لا في منتصفها."
+          },
+          {
+            "title": "مراجعة المصدر الاحتياطي مع مورد وحدة الدفع",
+            "description": "تُراجع تغذية التحكم والحساسات والإنذار بشكل منفصل عن تغذية المحرك. وإذا كان المولد سيحرك السقف، تُنسَّق قدرته على بدء تشغيل المحرك وطريقة التحويل وحماية تتابع الأطوار وهبوط الجهد مع مورد الآلية. ويجب اختبار النتيجة في تحويل فعلي، لا على الورق فقط."
+          },
+          {
+            "title": "إلغاء الحركة التلقائية بعد عودة التيار",
+            "description": "يُراجع منطق التحكم بحيث لا يُستأنف أي أمر تلقائياً بعد عودة التيار، ولا تبدأ الحركة إلا بعد تأكيد المشغّل وفحص بصري لمسار الحركة. وإذا احتاج النظام إلى إعادة مرجعية الموقع بعد الانقطاع، تُكتب الطريقة خطوة بخطوة في التعليمات ويُدرَّب عليها العاملون."
+          },
+          {
+            "title": "توثيق طريقة الاستعادة اليدوية",
+            "description": "إذا كانت الآلية تسمح بتحرير المكبح أو الحركة اليدوية، تؤخذ من المورد وتوثَّق الشروط المسموحة والشخص المسؤول والأدوات اللازمة ومسار الوصول إلى وحدة الدفع والحالات التي يُمنع فيها ذلك، مثل الرياح الشديدة أو وجود ثلج على السقف. وأثناء الاستعادة اليدوية تُخلى المنطقة تحت السقف من الناس."
+          },
+          {
+            "title": "اختبار انقطاع مضبوط وسجل للأحداث",
+            "description": "في اختبار مخطط له يُقطع التيار أثناء الحركة لفحص تثبيت المكبح وسلوك التحكم عند عودة التيار وإعادة مرجعية الموقع والإنذارات. وبعد كل انقطاع فعلي تُسجَّل حالة السقف وأي توقف أو صوت غير طبيعي وأي تسرب للماء، لتظهر اتجاهات التآكل أو الأعطال المتكررة."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "انقطعت الكهرباء أثناء الحركة وبقي السقف نصف مفتوح؛ ماذا نفعل الآن؟",
+          "answer": "أولاً أخلوا المنطقة تحت السقف ومسار الحركة من الناس، وضعوا مفتاح الأوامر على وضع الإيقاف حتى لا تبدأ أي حركة عند عودة التيار. وإذا كان المطر أو الثلج قادماً ولديكم طريقة استعادة يدوية مكتوبة وعاملون مدرّبون فاتبعوها؛ وإلا فامنعوا وصول الماء إلى المناطق الحساسة تحت الحواف المفتوحة وانتظروا عودة التيار والفحص الفني. لا تحركوا السقف بالقوة أو بالسحب أو بأدوات مرتجلة."
+        },
+        {
+          "question": "هل يمكن إغلاق السقف المتحرك يدوياً عند انقطاع الكهرباء؟",
+          "answer": "فقط إذا حدد المورد طريقة لذلك. بعض الآليات مزودة بمقبض يدوي أو بتحرير للمكبح، لكنها مصممة عادة للطوارئ وضمن شروط محددة. تحرير المكبح في سقف مائل أو عليه ثلج أو معرض للرياح قد يسبب حركة غير مضبوطة. وإذا لم تكن لديكم طريقة مكتوبة، فاحصلوا عليها من المورد قبل الانقطاعات القادمة."
+        },
+        {
+          "question": "عند عودة التيار، هل يمكن الضغط على زر الإغلاق فوراً؟",
+          "answer": "الأفضل لا. بعد عودة التيار افحصوا أولاً مسار الحركة والسكك والحواف بصرياً، وتأكدوا من أن أي أمر لم ينشط تلقائياً، ونفذوا إعادة مرجعية الموقع إذا تطلبها النظام. وقد يؤدي تذبذب التغذية في الدقائق الأولى بعد العودة إلى قطع الحركة مجدداً؛ لذا ابدأوا الحركة عندما تستقر التغذية ويكون هناك من يراقب السقف."
+        },
+        {
+          "question": "هل يكفي المولد أو جهاز UPS للسقف المتحرك؟",
+          "answer": "يعتمد ذلك على ما تنتظرونه من المصدر الاحتياطي. جهاز UPS يناسب عادة إبقاء اللوحة والحساسات والإنذار فقط ولا يُختار لتحريك المحرك. وإذا كان المولد سيحرك السقف، فيجب أن يقدر على بدء تشغيل المحرك، وأن تُنسَّق طريقة التحويل وحماية تتابع الأطوار مع مورد الآلية وتُختبر عملياً؛ فتوصيل مولد دون هذه المراجعة قد يكون بحد ذاته سبباً للعطل."
+        },
+        {
+          "question": "هل يجب إغلاق السقف قبل كل انقطاع معلن؟",
+          "answer": "ليس بالضرورة مغلقاً؛ بل يجب أن ينتقل إلى وضع الركن الذي فُحص لطقس ذلك الموسم. وفي كثير من المشاريع يكون هذا الوضع هو المغلق في الشتاء، لكن بعض الأنظمة فُحصت للثلج في الوضع المطوي. والمبدأ ألا يكون السقف أبداً في وضع وسطي أو في حالة حركة خلال نافذة الانقطاع."
+        },
+        {
+          "question": "هل يحمي حساس المطر السقف أثناء انقطاع الكهرباء؟",
+          "answer": "لا، إلا إذا كان الحساس والتحكم والمحرك جميعها موصولة بمصدر احتياطي. ففي معظم الأنظمة يُصدر حساس المطر أمر الإغلاق فقط، وتنفيذه يعتمد على تغذية المحرك. لذلك في الأيام الممطرة مع انقطاع معلن يجب اتخاذ قرار الإغلاق يدوياً قبل بدء النافذة."
+        }
+      ],
+      "cta": {
+        "headline": "راجعوا سيناريو انقطاع الكهرباء لسقفكم المتحرك قبل الانقطاع القادم",
+        "text": "أرسلوا وثائق السقف الحالية ودليل مورد الآلية ومواصفات المصدر الاحتياطي وسجل أي توقف أو حركة غير مقصودة خلال الانقطاعات، ليراجع الفريق الفني في SIPANEL وضع الركن ومنطق التحكم والاستعادة اليدوية والتنسيق مع المولد، ويقترح قاعدة تشغيل للانقطاعات."
+      }
+    },
+    "ru": {
+      "title": "Раздвижная кровля при отключении электричества: что делать?",
+      "metaDescription": "Почему раздвижная кровля при отключении электричества застревает полуоткрытой и чем опасна подача питания? Инженерная логика SIPANEL для плановых отключений.",
+      "primaryKeyword": "раздвижная кровля при отключении электричества",
+      "summary": "У большинства раздвижных кровель электропривод единственный штатный способ движения, а при потере питания тормоз обычно удерживает кровлю на месте, и отключение посреди хода оставляет ее ни закрытой, ни сложенной. Реальные риски: полуоткрытое положение под дождем или снегом, ручной возврат без методики и непреднамеренное движение при возврате питания.",
+      "readingMinutes": 6,
+      "problem": {
+        "title": "Объявленные отключения останавливают раздвижную кровлю в самом неудачном положении",
+        "body": "С начала иранского месяца азар, то есть с конца ноября, в Иране снова вводятся плановые ограничения электроснабжения для бытовых и коммерческих абонентов, а новые системы осадков одновременно принесли дождь, снег и ветер в ряд провинций. Раздвижные кровли над ресторанами, кафе, дворами отелей, бассейнами и развлекательными пространствами обычно питаются от коммерческой сети, и время отключения выбирает не эксплуатант. В результате кровля, которая раньше лишь изредка сталкивалась с отключением питания, теперь может регулярно останавливаться в положении, к которому никто не готовился. В таких условиях наиболее вероятны два сценария: кровля встала посреди хода, начался дождь, и никто не знал, можно ли закрыть ее вручную; или питание вернулось, и кровля поехала без новой команды.",
+        "points": [
+          "Если отключение происходит во время открытия или закрытия, кровля остается между двумя положениями: кромки и уплотнения закрытого положения не задействованы, а покрытие не находится в зоне складывания.",
+          "Полуоткрытая кровля под дождем или снегом пропускает воду через открытые кромки и частично сомкнутые стыки, поскольку желоба и герметизация рассчитаны на полностью закрытое положение.",
+          "При восстановлении питания некоторые системы продолжают последнюю команду или неверно определяют свое положение и могут двинуться, когда под ними сидят люди.",
+          "Ручное или автоматическое переключение на генератор без согласования с поставщиком привода может вызвать просадки напряжения, повторные отключения и даже смену порядка фаз с обратным вращением двигателя.",
+          "Персонал прибегает к растормаживанию или ручному вороту, не зная, допустимо ли это при ветре, под снегом или в данной точке хода.",
+          "Датчики дождя и ветра и сигнализация зависят от того же питания; во время отключения автоматическое закрытие при начале дождя просто не срабатывает."
+        ]
+      },
+      "cause": {
+        "title": "Сценарий потери питания обычно рассчитан на редкое событие, а не на регулярное",
+        "body": "В типовой раздвижной кровле электропривод, шкаф управления, датчики и концевые выключатели образуют одну цепь, а отключение питания рассматривается как редкая авария. Во многих механизмах тормоз двигателя без питания остается замкнутым; это правильно для предотвращения неконтролируемого движения, но означает, что кровля останавливается ровно там, где пропало питание. Методика ручного возврата, если она вообще задокументирована, обычно написана для исключительной ситуации с участием обученного персонала, а не для регулярного применения сотрудниками зала или кухни. Со стороны управления определение положения в некоторых системах после отключения требует повторной привязки, а функция автоматического перезапуска, удобная в обычной работе, становится риском для безопасности в момент возврата питания. Резервное питание часто подбирается лишь для шкафа или освещения, без проверки пусковой нагрузки привода, способа переключения и порядка фаз.",
+        "points": [
+          "Эксплуатационная документация описывает потерю питания как редкую аварию и не содержит процедуры для объявленных повторяющихся отключений.",
+          "Тормоз, замыкающийся без питания, надежно удерживает кровлю, но останавливает ее в любой точке хода, в том числе в полуоткрытом положении.",
+          "В некоторых системах после отключения теряется память положения или опорная точка хода, и без повторной привязки концевые выключатели и остановки интерпретируются неверно.",
+          "Функция автоматического продолжения или команда, оставшаяся активной на шкафу во время отключения, запускают движение без наблюдателя и без проверки пути.",
+          "Резервное питание обычно предусмотрено только для управления или освещения; пусковой ток привода, время переключения и контроль порядка фаз не учитывались.",
+          "Датчики, сигнализация и логика автоматического закрытия питаются от той же сети, поэтому погодная защита кровли во время отключения фактически не работает."
+        ]
+      },
+      "visual": {
+        "title": "Схема поведения раздвижной кровли в окне отключения (ожидает проверки)",
+        "description": "Проверенная схема должна показать простую временную линию до, во время и после отключения: безопасное парковочное положение перед объявленным окном, срабатывание тормоза и точку остановки при отключении посреди хода, путь проникновения воды в полуоткрытом положении, путь ручного возврата и точки принятия решений после восстановления питания, включая повторную привязку положения и визуальный осмотр перед любой командой. Этот технический материал еще ожидает проверки.",
+        "callouts": [
+          "Парковочное положение до отключения",
+          "Остановка в полуоткрытом положении и путь воды",
+          "Допустимый ручной возврат",
+          "Возврат питания без автодвижения"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для эксплуатации раздвижных кровель при отключениях",
+        "steps": [
+          {
+            "title": "Определить безопасное парковочное положение на сезон",
+            "description": "По проектной документации и инструкции поставщика устанавливается, в каком положении кровля проверена на дождь, снег и ветер текущего сезона. Это положение назначается парковочным на время отключений, чтобы кровля никогда не оставалась в окне отключения в состоянии, для которого она не проверялась. Если документация этого не определяет, ответ письменно запрашивается у проектировщика или поставщика до продолжения эксплуатации."
+          },
+          {
+            "title": "Правило эксплуатации для объявленных окон",
+            "description": "Время отключения ежедневно берется из официальных каналов оповещения распределительной компании, и за это отвечает один человек. Незадолго до начала окна новое движение не начинается, а кровля заранее переводится в парковочное положение. Если прогнозируется дождь или снег, решение держать ее закрытой принимается до окна, а не посреди него."
+          },
+          {
+            "title": "Проверка резервного питания с поставщиком привода",
+            "description": "Питание управления, датчиков и сигнализации рассматривается отдельно от питания привода. Если генератор должен двигать кровлю, его способность запустить привод, способ переключения, защита порядка фаз и просадка напряжения согласуются с поставщиком механизма. Результат должен быть проверен при реальном переключении, а не только на бумаге."
+          },
+          {
+            "title": "Исключить автоматическое движение после возврата питания",
+            "description": "Логика управления пересматривается так, чтобы после возврата питания ни одна команда не продолжалась сама, а движение начиналось только после подтверждения оператора и визуального осмотра пути. Если системе после отключения нужна повторная привязка положения, порядок ее выполнения пошагово записывается в инструкцию и доводится до персонала."
+          },
+          {
+            "title": "Задокументировать методику ручного возврата",
+            "description": "Если механизм допускает растормаживание или ручное перемещение, у поставщика запрашиваются и документируются допустимые условия, ответственный, необходимый инструмент, путь доступа к приводу и условия, при которых это запрещено, например сильный ветер или лежащий на кровле снег. Во время ручного возврата зона под кровлей освобождается от людей."
+          },
+          {
+            "title": "Контролируемое испытание отключением и журнал событий",
+            "description": "В плановом испытании питание отключается посреди хода, чтобы проверить удержание тормозом, поведение управления при возврате питания, повторную привязку положения и сигнализацию. После каждого реального отключения фиксируются состояние кровли, любые остановки или необычный шум и любые протечки, чтобы были видны тенденции износа и повторяющиеся неисправности."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Питание пропало посреди хода, и кровля осталась полуоткрытой. Что делать сейчас?",
+          "answer": "Сначала уберите людей из-под кровли и с пути движения и переведите переключатель команд в положение стоп или выкл., чтобы при возврате питания ничего не запустилось. Если приближается дождь или снег и у вас есть письменная методика ручного возврата и обученный персонал, действуйте по ней; иначе отведите воду от чувствительных зон под открытыми кромками и дождитесь питания и технической проверки. Не двигайте кровлю силой, рывками или подручным инструментом."
+        },
+        {
+          "question": "Можно ли закрыть раздвижную кровлю вручную при отключении питания?",
+          "answer": "Только если поставщик определил для этого методику. У некоторых механизмов есть ручной ворот или растормаживание, но они обычно рассчитаны на аварийные ситуации при определенных условиях. Растормаживание кровли с уклоном, со снегом или на ветру может вызвать неконтролируемое движение. Если письменной методики нет, получите ее у поставщика до следующих отключений."
+        },
+        {
+          "question": "Когда питание вернулось, можно сразу нажать кнопку закрытия?",
+          "answer": "Лучше нет. После возврата питания сначала визуально осмотрите путь движения, рельсы и кромки, убедитесь, что ни одна команда не активировалась сама, и выполните повторную привязку положения, если система этого требует. Колебания питания в первые минуты после восстановления могут снова прервать движение; начинайте движение, когда питание стабильно и кто-то наблюдает за кровлей."
+        },
+        {
+          "question": "Достаточно ли генератора или ИБП для раздвижной кровли?",
+          "answer": "Это зависит от того, чего вы ждете от резерва. ИБП обычно подходит только для поддержания шкафа, датчиков и сигнализации и не подбирается для движения привода. Если генератор должен двигать кровлю, он должен быть способен запустить привод, а способ переключения и защита порядка фаз должны быть согласованы с поставщиком механизма и проверены на практике; подключение генератора без такой проверки само по себе может стать причиной поломки."
+        },
+        {
+          "question": "Нужно ли закрывать кровлю перед каждым объявленным отключением?",
+          "answer": "Не обязательно закрывать; она должна перейти в парковочное положение, проверенное для погоды данного сезона. На многих объектах зимой это закрытое положение, но некоторые системы проверены на снег в сложенном положении. Принцип в том, что во время окна отключения кровля никогда не находится в промежуточном положении или в движении."
+        },
+        {
+          "question": "Защищает ли датчик дождя кровлю во время отключения питания?",
+          "answer": "Нет, если только датчик, управление и привод не подключены к резервному питанию. В большинстве систем датчик дождя лишь подает команду на закрытие, а ее выполнение зависит от питания привода. Поэтому в дождливые дни с объявленным отключением решение о закрытии нужно принимать вручную до начала окна."
+        }
+      ],
+      "cta": {
+        "headline": "Проверьте сценарий потери питания вашей раздвижной кровли до следующего отключения",
+        "text": "Пришлите имеющуюся документацию кровли, инструкцию поставщика механизма, данные резервного питания и записи о любых остановках или непреднамеренном движении при отключениях, чтобы технический отдел SIPANEL проверил парковочное положение, логику управления, ручной возврат и согласование генератора и предложил правило эксплуатации при отключениях."
+      }
+    }
+  }
+}
