@@ -1,0 +1,442 @@
+{
+  "slug": "tensile-membrane-wind-damage-inspection-after-storm",
+  "category": "tensile_membranes",
+  "status": "published",
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "faqIds": [
+    "first-actions-after-strong-wind",
+    "flapping-noise-meaning",
+    "small-tear-wait-or-repair",
+    "retension-after-storm",
+    "release-before-wind-warning",
+    "repair-or-replace-membrane"
+  ],
+  "relatedProjects": [
+    "marun-petrochemical-visitor-terminal"
+  ],
+  "relatedInsights": [
+    "tensile-membrane-ponding-pre-winter-check",
+    "etfe-cushion-hail-puncture-inspection-repair"
+  ],
+  "relatedResources": [],
+  "trend": {
+    "topic": "Strong-wind warnings and reported gust damage in Iran in early Azar 1405 (late November 2026): inspecting tensile fabric canopies for wind damage, flapping and tear growth after a storm",
+    "rationale": "In the days up to 7 Azar 1405 (28 Nov 2026) Iranian outlets carried strong-wind warnings for Tehran (with a temperature drop and blizzard risk), Kurdistan and Semnan, alongside reports of gust damage to cars and commercial and residential units in Ardabil. Wind episodes like these are when operators of entrance canopies, car-park covers, stands and shade structures first see flapping, loose fittings and small tears. The existing tensile article covers ponding of water and snow, and the system page mentions wind only in passing; this article explains why wind damage starts at corners, edges and wear points, why small tears grow in tensioned fabric, and a post-storm inspection, classification and retensioning sequence, supported by membrane wind research and tensile-structure O&M guidance.",
+    "observedAt": "2026-11-28",
+    "sources": [
+      "https://www.irib-news.ir/fa/news/5978102/%D9%BE%DB%8C%D8%B4-%D8%A8%DB%8C%D9%86%DB%8C-%D9%87%D9%88%D8%A7%DB%8C-%D9%87%D9%81%D8%AA%D9%85-%D8%A2%D8%B0%D8%B1-%D8%AF%D8%B1-%D8%B3%D9%85%D9%86%D8%A7%D9%86-%D9%88%D8%B2%D8%B4-%D8%A8%D8%A7%D8%AF-%D8%B4%D8%AF%DB%8C%D8%AF",
+      "https://www.irib-news.ir/fa/news/5976950/%D8%AA%D9%86%D8%AF%D8%A8%D8%A7%D8%AF-%D8%AF%D8%B1-%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84-%D8%AE%D8%B3%D8%A7%D8%B1%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%AC%D8%A7-%DA%AF%D8%B0%D8%A7%D8%B4%D8%AA",
+      "https://donya-e-eqtesad.com/%D8%A8%D8%AE%D8%B4-%D8%B3%D8%A7%DB%8C%D8%AA-%D8%AE%D9%88%D8%A7%D9%86-62/4310716-%D9%88%D8%B2%D8%B4-%D8%A8%D8%A7%D8%AF-%D8%B4%D8%AF%DB%8C%D8%AF-%D8%AF%D8%B1-%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84-%D8%AE%D8%B3%D8%A7%D8%B1%D8%AA-%D8%A8%D9%87-%D8%A8%D8%A7%D8%B1-%D8%A2%D9%88%D8%B1%D8%AF-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%D9%88%D8%A7%D8%AD%D8%AF%D9%87%D8%A7%DB%8C-%D8%AA%D8%AC%D8%A7%D8%B1%DB%8C-%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D8%A2%D8%B3%DB%8C%D8%A8-%D8%AF%DB%8C%D8%AF%D9%86%D8%AF",
+      "https://eghtesademoaser.ir/fa/news/66882/%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D9%87%D9%88%D8%A7%D8%B4%D9%86%D8%A7%D8%B3%DB%8C-%D8%AA%D9%87%D8%B1%D8%A7%D9%86-%D9%88%D8%B2%D8%B4-%D8%A8%D8%A7%D8%AF-%D8%B4%D8%AF%DB%8C%D8%AF-%DA%A9%D9%88%D9%84%D8%A7%DA%A9-%D8%A8%D8%B1%D9%81-%D9%88-%DA%A9%D8%A7%D9%87%D8%B4-5-%D8%AF%D8%B1%D8%AC%D9%87-%D8%A7%DB%8C-%D8%AF%D9%85%D8%A7",
+      "https://www.yjc.ir/fa/news/9152264/%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D9%87%D9%88%D8%A7%D8%B4%D9%86%D8%A7%D8%B3%DB%8C-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D9%86%D8%B3%D8%A8%D8%AA-%D8%A8%D9%87-%D9%88%D8%B2%D8%B4-%D8%A8%D8%A7%D8%AF-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%88-%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84-%D8%AE%D8%B3%D8%A7%D8%B1%D8%AA",
+      "https://www.dlubal.com/en/support-and-learning/support/knowledge-base/001951",
+      "https://link.springer.com/article/10.1631/jzus.A1400340",
+      "https://www.broxap.com/media/pdfs/Broxap_Tensile_Structures_and_Shade_Sails.pdf",
+      "https://www.architen.com/articles/tensile-fabric-structures-and-performance/"
+    ]
+  },
+  "citedFigures": [],
+  "locales": {
+    "fa": {
+      "title": "بازدید سقف پارچه‌ای پس از باد شدید؛ پارگی از کجا شروع می‌شود؟",
+      "metaDescription": "بازدید سقف پارچه‌ای پس از باد شدید از کدام نقاط شروع شود و چرا یک پارگی کوچک در تندباد بعدی بزرگ می‌شود؟ منطق مهندسی سی‌پانل برای ارزیابی و اصلاح.",
+      "primaryKeyword": "بازدید سقف پارچه‌ای پس از باد شدید",
+      "summary": "در سازه پارچه‌ای کششی، آسیب باد معمولاً از گوشه‌ها، لبه‌ها، صفحات مهاری و نقاط سایش شروع می‌شود، نه از وسط پارچه. پارچه‌ای که کشش خود را از دست داده در باد بال می‌زند و همین حرکت تکراری، درزها و اتصالات را خسته می‌کند. یک پارگی کوچک در پارچه تحت کشش، در تندباد بعدی سریع رشد می‌کند؛ پس پس از هر باد شدید باید بدون ایستادن روی پارچه، یراق‌آلات، کابل‌ها، پایه دکل‌ها و خود غشا بازدید و آسیب‌ها دسته‌بندی شوند.",
+      "readingMinutes": 8,
+      "problem": {
+        "title": "پس از تندباد، صدای ضربه پارچه، شل‌شدگی یا یک پارگی کوچک دیده می‌شود",
+        "body": "با گذر سامانه‌های بادی پاییز و هشدارهای وزش باد شدید در چند استان، بهره‌برداران سایبان‌های ورودی، پوشش پارکینگ‌ها، سکوهای ورزشی، حیاط‌های سرپوشیده و سایه‌بان‌های تفریحی معمولاً با چند نشانه آشنا روبه‌رو می‌شوند: پارچه‌ای که پیش‌تر ساکت بود حالا در باد صدای ضربه می‌دهد، یک گوشه کمی پایین‌تر از قبل به نظر می‌رسد، روی لبه یک خط سایش یا یک بریدگی کوتاه پیدا شده یا یکی از پیچ‌های کشش آزاد شده است. واکنش رایج این است که آسیب را جزئی بدانیم و تا فصل گرم صبر کنیم، یا اینکه کسی با نردبان بالا برود و همان نقطه را سفت کند. اما در سازه کششی، آسیب موضعی، موضعی باقی نمی‌ماند؛ هر تغییر در یک گوشه یا لبه، توزیع کشش کل سطح را عوض می‌کند و نقطه ضعیف بعدی را در تندباد بعدی به‌وجود می‌آورد. اگر پارچه در یک ناحیه آزاد شود، مانند بادبان عمل می‌کند و باری را به دکل، کابل‌ها و مهارها می‌دهد که برای آن طراحی نشده‌اند. افتادن قطعات یراق‌آلات یا تکه‌های پارچه بر سر مسیر عبور هم خطر جانی دارد.",
+        "points": [
+          "صدای ضربه و بال زدن پارچه در بادی که قبلاً بی‌صدا تحمل می‌شد، نشانه کاهش کشش در آن ناحیه است.",
+          "بریدگی یا سوراخ کوچک، به‌ویژه نزدیک لبه یا گوشه، در پارچه تحت کشش ساکن نمی‌ماند و با هر وزش رشد می‌کند.",
+          "خط‌های سایش روی پارچه در محل تماس با کابل، لوله، لبه صفحه یا سازه فلزی، محل حرکت تکراری پارچه در باد را نشان می‌دهند.",
+          "پین شگل، پیچ‌های کشش و مهره‌های صفحات گوشه ممکن است در اثر لرزش شل شوند، بدون آنکه از پایین آشکارا دیده شوند.",
+          "چروک‌های تازه و کج شدن خط درزها نشان می‌دهد کشش از یک ناحیه به ناحیه دیگر منتقل شده است.",
+          "ایستادن روی پارچه یا تکیه دادن نردبان به لبه آن برای تعمیر فوری، خود می‌تواند پوشش سطحی و درزهای جوش را آسیب بزند."
+        ]
+      },
+      "cause": {
+        "title": "غشا فقط با انحنا و پیش‌تنیدگی در برابر باد مقاومت می‌کند",
+        "body": "پارچه سازه کششی تقریباً هیچ سختی خمشی ندارد. پایداری آن در برابر باد از فرم دوانحنایی و کشش اولیه‌ای می‌آید که هنگام نصب به آن داده شده است. باد روی این سطوح سبک هم فشار رو به پایین ایجاد می‌کند و هم مکش رو به بالا، و جهت بار در یک تندباد بارها عوض می‌شود. وقتی پیش‌تنیدگی در اثر خزش متریال، شل شدن یراق‌آلات یا جابه‌جایی تکیه‌گاه کم شده باشد، تغییرشکل پارچه زیر باد بزرگ‌تر می‌شود و سطح به‌جای رفتار آرام، نوسان می‌کند. هر نوسان یعنی یک چرخه بارگذاری روی درزها، سوراخ‌های اتصال و صفحات گوشه. مطالعات تخصصی روی غشاهای کششی نشان داده‌اند این سازه‌های سبک و کم‌میرایی می‌توانند در باد دچار نوسان و ناپایداری شوند و ساختمان‌های بلند مجاور می‌توانند بار باد روی آن‌ها را تشدید کنند. از سوی دیگر، پارچه تحت کشش در برابر رشد پارگی حساس است: تنشی که از محل بریدگی نمی‌تواند عبور کند، دور نوک آن متمرکز می‌شود و پارگی در جهت الیاف پیش می‌رود. به همین دلیل آسیب باد معمولاً در جایی شروع می‌شود که تنش ذاتاً متمرکز است، یعنی گوشه‌ها، لبه‌های کابلی، محل گیره‌ها و هر نقطه‌ای که پارچه با جسم سخت تماس دارد.",
+        "points": [
+          "کاهش پیش‌تنیدگی، تغییرشکل زیر باد را بیشتر می‌کند و پارچه را از رفتار پایدار به نوسان و بال زدن می‌برد.",
+          "مکش باد جهت بار را برعکس می‌کند و نقاطی را درگیر می‌کند که در حالت عادی کم‌بار هستند.",
+          "گوشه‌ها، صفحات مهاری و لبه‌های کابلی محل تمرکز تنش‌اند و معمولاً اولین نقطه آسیب در تندباد به شمار می‌روند.",
+          "تماس پارچه با کابل، لوله یا لبه تیز فلزی، در هر نوسان یک چرخه سایش ایجاد می‌کند و لایه پوشش را می‌ساید.",
+          "لرزش‌های تکراری، پین‌ها و پیچ‌های بدون قفل را آرام آرام باز می‌کنند و کشش موضعی را از بین می‌برند.",
+          "ساختمان‌های بلند، دیوارهای مجاور و گوشه‌های ساختمان باد را متمرکز یا متلاطم می‌کنند و بار واقعی را از فرض ساده دور می‌کنند."
+        ]
+      },
+      "visual": {
+        "title": "دیاگرام نقاط بحرانی سقف پارچه‌ای در باد (در انتظار تأیید)",
+        "description": "دیاگرام تأییدشده باید پلان و مقطع یک سایبان کششی نمونه را نشان دهد: جهت فشار و مکش باد، ناحیه‌های کم‌کشش که در آن نوسان رخ می‌دهد، گوشه‌ها و صفحات مهاری به‌عنوان محل تمرکز تنش، نقاط تماس پارچه با کابل یا سازه که سایش ایجاد می‌کنند، و مسیر رشد یک پارگی کوچک از لبه به سمت میانه پارچه. این دارایی فنی هنوز در انتظار تأیید است.",
+        "callouts": [
+          "فشار و مکش باد",
+          "ناحیه کم‌کشش و نوسان",
+          "گوشه و صفحه مهاری",
+          "نقطه سایش و رشد پارگی"
+        ]
+      },
+      "execution": {
+        "title": "منطق سی‌پانل برای ارزیابی سقف پارچه‌ای پس از تندباد",
+        "steps": [
+          {
+            "title": "ایمن‌سازی پیش از هر اقدام",
+            "description": "اگر پارچه آزاد شده، گوشه‌ای جدا شده یا قطعه‌ای از یراق‌آلات افتاده است، زیر سایبان و مسیر سقوط احتمالی تخلیه و محصور می‌شود. هیچ‌کس روی پارچه نمی‌ایستد و تعمیر فوری با نردبان تکیه‌داده به لبه انجام نمی‌شود؛ دسترسی فقط با تجهیزات کار در ارتفاع و نیروی آموزش‌دیده انجام می‌شود."
+          },
+          {
+            "title": "ثبت و نقشه‌برداری آسیب",
+            "description": "از زمین و در صورت امکان از بالابر، همه گوشه‌ها، لبه‌ها، درزها و نقاط تماس عکاسی و روی پلان سایبان علامت‌گذاری می‌شوند. بریدگی‌های ریز با نگاه کردن به پارچه در برابر نور روز بهتر دیده می‌شوند. این نقشه روشن می‌کند آسیب موضعی است یا الگوی آن به کاهش کشش در کل سطح اشاره دارد."
+          },
+          {
+            "title": "بازرسی یراق‌آلات و سازه پشتیبان",
+            "description": "پین شگل‌ها، پیچ‌های کشش، صفحات گوشه، گیره‌های لبه، سرکابل‌ها، اتصال به دکل‌ها، پایه دکل‌ها و مهارهای زمینی از نظر شل‌شدگی، تغییر شکل، خوردگی و جابه‌جایی بررسی می‌شوند. هر قطعه‌ای که تغییر شکل دائمی داده یا قفل آن از بین رفته، جایگزین می‌شود، نه اینکه دوباره سفت شود."
+          },
+          {
+            "title": "دسته‌بندی آسیب و تصمیم تعمیر",
+            "description": "آسیب‌ها به سه دسته تقسیم می‌شوند: سایش سطحی که فقط پایش می‌خواهد، بریدگی یا پارگی محدود که با وصله و جوش تخصصی متناسب با نوع پارچه قابل تعمیر است، و آسیب در گوشه، لبه یا ناحیه بزرگ که بررسی تعویض بخشی از غشا یا کل آن را لازم می‌کند. تا تعمیر اصلی، انتهای پارگی به روش موقت و مستند مهار می‌شود تا رشد نکند."
+          },
+          {
+            "title": "کشش مجدد با توالی مستند",
+            "description": "اگر کاهش کشش علت نوسان بوده، کشش مجدد فقط طبق دستورالعمل یا نقشه نصب و به‌صورت متقارن و مرحله‌ای انجام می‌شود. کشش بیش از حد هم به غشا و درزها آسیب دائمی می‌زند؛ بنابراین کشش مجدد بدون مدرک طراحی یا بدون بررسی مهندسی انجام نمی‌شود."
+          },
+          {
+            "title": "رفع علت و برنامه بهره‌برداری در باد",
+            "description": "در نقاط سایش، فاصله پارچه با سازه اصلاح یا لایه محافظ اضافه می‌شود و جزئیات گوشه و لبه با بار واقعی باد محل بازبینی می‌شود. برای بهره‌بردار مکتوب می‌شود که پیش از هشدار باد چه چیزی کنترل شود، کدام سایه‌بان‌های قابل برچیدن طبق دستور سازنده شل یا جمع شوند و پس از هر تندباد چه بازدیدی لازم است."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "پس از باد شدید، اولین کاری که باید برای سایبان پارچه‌ای انجام داد چیست؟",
+          "answer": "اول ایمنی: اگر پارچه آزاد شده، گوشه‌ای جدا شده یا قطعه‌ای افتاده، زیر سایبان را تخلیه و محصور کنید. سپس از روی زمین همه گوشه‌ها، لبه‌ها و یراق‌آلات را نگاه و عکاسی کنید. تا روشن شدن وضعیت، روی پارچه نروید و چیزی را با حدس سفت نکنید."
+        },
+        {
+          "question": "صدای ضربه و بال زدن پارچه در باد طبیعی است؟",
+          "answer": "پارچه کششی سالم در باد کمی جابه‌جا می‌شود، اما صدای ضربه تکراری و بال زدن آشکار معمولاً یعنی کشش در آن ناحیه کم شده است. این حرکت به درزها و اتصالات چرخه بار می‌دهد و باید قبل از تندباد بعدی علت آن، یعنی یراق شل، کابل جابه‌جاشده یا افت پیش‌تنیدگی، پیدا شود."
+        },
+        {
+          "question": "یک پارگی کوچک را می‌شود تا فصل گرم رها کرد؟",
+          "answer": "نه. در پارچه تحت کشش، تنش دور نوک پارگی متمرکز می‌شود و پارگی با هر وزش باد بزرگ‌تر می‌شود، به‌ویژه اگر نزدیک لبه یا گوشه باشد. باید بلافاصله انتهای آن به روش موقت و مستند مهار شود و تعمیر اصلی با وصله یا جوش متناسب با نوع پارچه برنامه‌ریزی شود."
+        },
+        {
+          "question": "آیا خودمان می‌توانیم پس از طوفان پارچه را دوباره سفت کنیم؟",
+          "answer": "کشش مجدد باید طبق نقشه نصب و توالی مستند و به‌صورت متقارن انجام شود. سفت کردن یک گوشه به‌تنهایی کشش را در سطح جابه‌جا می‌کند و کشش بیش از حد می‌تواند به غشا و درزها آسیب دائمی بزند. اگر مدرک نصب در دسترس نیست، پیش از هر تنظیم بررسی مهندسی لازم است."
+        },
+        {
+          "question": "آیا باید پیش از هشدار باد، پارچه سایبان را باز یا شل کرد؟",
+          "answer": "پاسخ به نوع سازه بستگی دارد. برخی سایه‌بان‌های سبک و قابل برچیدن طبق دستور سازنده پیش از هشدار هواشناسی شل یا جمع می‌شوند، اما سازه‌های کششی دائمی برای بار باد محل طراحی شده‌اند و شل کردن بی‌برنامه آن‌ها می‌تواند رفتار سطح را بدتر کند. این تصمیم باید در دستورالعمل بهره‌برداری همان سازه تعریف شود."
+        },
+        {
+          "question": "چه زمانی پارچه آسیب‌دیده تعمیر می‌شود و چه زمانی باید تعویض شود؟",
+          "answer": "سایش سطحی و بریدگی‌های محدود دور از گوشه معمولاً قابل تعمیرند. پارگی در گوشه یا لبه، آسیب گسترده، پارچه‌ای که بارها وصله شده یا پوشش سطحی آن در اثر پیرشدگی از بین رفته، تعویض بخش یا کل غشا را مطرح می‌کند. تصمیم نهایی پس از بررسی نوع پارچه، عمر آن و سلامت سازه پشتیبان گرفته می‌شود."
+        }
+      ],
+      "cta": {
+        "headline": "آسیب باد سقف پارچه‌ای خود را پیش از تندباد بعدی ارزیابی کنید",
+        "text": "عکس‌های گوشه‌ها، لبه‌ها، یراق‌آلات و محل هر پارگی یا سایش، همراه با نقشه‌ها و مدارک نصب موجود را ارسال کنید تا تیم فنی سی‌پانل وضعیت کشش، اتصالات و سازه پشتیبان را بازبینی کند و مسیر تعمیر، کشش مجدد یا اصلاح جزئیات را پیشنهاد دهد."
+      }
+    },
+    "en": {
+      "title": "Fabric roof inspection after high winds: where do tears start?",
+      "metaDescription": "Fabric roof inspection after high winds: what to check first and why a small tear grows in the next gust. SIPANEL's logic for assessment and repair.",
+      "primaryKeyword": "fabric roof inspection after high winds",
+      "summary": "On a tensile fabric structure, wind damage usually starts at corners, edges, clamp plates and wear points, not mid-fabric. A membrane that has lost tension flaps, and that repeated movement fatigues seams and fittings. A small tear in tensioned fabric grows in the next gust, so after every strong wind the fittings, cables, mast bases and membrane should be inspected without standing on the fabric.",
+      "readingMinutes": 8,
+      "problem": {
+        "title": "After a windstorm, the fabric bangs, looks slack or shows a small tear",
+        "body": "As autumn wind systems pass and strong-wind warnings are issued for several provinces, operators of entrance canopies, car-park covers, stadium stands, covered courtyards and leisure shade structures tend to see the same signs: fabric that used to be quiet now bangs in the wind, one corner looks slightly lower than before, a wear line or short cut has appeared on an edge, or a tensioning bolt has backed off. The usual temptation is to treat the damage as minor and wait for the warm season, or to send someone up a ladder to tighten that one point. On a tensile structure, however, local damage does not stay local. Any change at a corner or edge alters how tension is distributed across the whole surface and creates the next weak point for the next gust. If the fabric is released in one zone it behaves like a sail and delivers loads to masts, cables and anchors that they were not designed for. Falling hardware or fabric pieces over a walkway are also a direct safety hazard.",
+        "points": [
+          "Banging and flapping in winds the canopy used to take silently indicate a loss of tension in that zone.",
+          "A small cut or hole, especially near an edge or corner, does not stay still in tensioned fabric; it grows with every gust.",
+          "Wear lines where the fabric touches a cable, pipe, plate edge or steel member show where the fabric moves repeatedly in the wind.",
+          "Shackle pins, turnbuckles and corner-plate nuts can work loose under vibration without being obvious from the ground.",
+          "New wrinkles and seams that have drifted off line show that tension has shifted from one zone to another.",
+          "Standing on the fabric or resting a ladder against its edge for a quick fix can itself damage the topcoat and welded seams."
+        ]
+      },
+      "cause": {
+        "title": "A membrane resists wind only through curvature and prestress",
+        "body": "Tensile fabric has almost no bending stiffness. Its stability in wind comes from its double-curved form and the initial tension applied during installation. Wind on these light surfaces produces both downward pressure and upward suction, and the direction of load changes many times during a single storm. When prestress has dropped through material creep, loose fittings or support movement, the fabric deforms more under wind, and instead of responding calmly the surface oscillates. Every oscillation is one load cycle on seams, fixing holes and corner plates. Specialist studies of tensile membranes show that these light, lightly damped structures can oscillate and become unstable in wind, and that neighbouring tall buildings can intensify the wind load on them. Tensioned fabric is also sensitive to tear growth: stress that cannot pass through a cut concentrates around its tip, and the tear runs along the yarns. That is why wind damage usually begins where stress is concentrated by nature: corners, cable edges, clamp positions and any point where the fabric touches a hard object.",
+        "points": [
+          "Lower prestress means larger deformation under wind and pushes the fabric from stable behaviour into oscillation and flapping.",
+          "Wind suction reverses the load direction and engages zones that are lightly loaded under normal conditions.",
+          "Corners, clamp plates and cable edges are stress concentrations and are usually the first points to fail in a storm.",
+          "Contact between fabric and a cable, pipe or sharp steel edge creates one abrasion cycle per oscillation and wears through the coating.",
+          "Repeated vibration slowly undoes unlocked pins and bolts and removes local tension.",
+          "Tall buildings, adjacent walls and building corners concentrate or disturb the wind and move the real load away from simple assumptions."
+        ]
+      },
+      "visual": {
+        "title": "Diagram of critical points on a fabric roof in wind (pending verification)",
+        "description": "The verified diagram should show the plan and section of a typical tensile canopy: the direction of wind pressure and suction, low-tension zones where oscillation occurs, corners and clamp plates as stress concentrations, contact points between fabric and cables or steel that cause abrasion, and the growth path of a small tear from an edge toward the middle of the fabric. This technical asset is still pending verification.",
+        "callouts": [
+          "Wind pressure and suction",
+          "Low-tension zone and oscillation",
+          "Corner and clamp plate",
+          "Wear point and tear growth"
+        ]
+      },
+      "execution": {
+        "title": "SIPANEL logic for assessing a fabric roof after a windstorm",
+        "steps": [
+          {
+            "title": "Make the area safe before anything else",
+            "description": "If the fabric has been released, a corner has detached or a piece of hardware has fallen, the area under the canopy and the likely fall zone are cleared and cordoned off. No one stands on the fabric and no quick repair is made from a ladder resting on an edge; access is only with working-at-height equipment and trained personnel."
+          },
+          {
+            "title": "Record and map the damage",
+            "description": "From the ground, and from a lift where possible, every corner, edge, seam and contact point is photographed and marked on the canopy plan. Fine cuts are easier to spot by looking at the fabric against daylight. The map shows whether the damage is local or whether its pattern points to a loss of tension across the whole surface."
+          },
+          {
+            "title": "Inspect fittings and the supporting structure",
+            "description": "Shackle pins, turnbuckles, corner plates, edge clamps, cable terminations, mast connections, mast bases and ground anchors are checked for loosening, deformation, corrosion and movement. Any part that has deformed permanently or lost its locking is replaced rather than simply retightened."
+          },
+          {
+            "title": "Classify the damage and decide on repair",
+            "description": "Damage falls into three groups: surface abrasion that only needs monitoring; a limited cut or tear that can be repaired with a patch and specialist welding suited to the fabric type; and damage at a corner, an edge or over a large area that calls for assessing replacement of part or all of the membrane. Until the permanent repair, the end of the tear is arrested with a documented temporary method so it does not grow."
+          },
+          {
+            "title": "Retension with a documented sequence",
+            "description": "If loss of tension caused the flapping, retensioning is done only to the installation method statement or drawings, symmetrically and in stages. Over-tensioning also damages the membrane and seams permanently, so retensioning is never done without design documents or an engineering review."
+          },
+          {
+            "title": "Remove the cause and set a wind operating plan",
+            "description": "At wear points, the clearance between fabric and structure is corrected or a protective layer is added, and corner and edge details are reviewed against the real wind exposure of the site. The operator receives written guidance on what to check before a wind warning, which demountable shade sails are de-tensioned or taken down according to the manufacturer's instructions, and what inspection is needed after every storm."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What should be done first for a fabric canopy after a strong wind?",
+          "answer": "Safety first: if the fabric is loose, a corner has detached or a part has fallen, clear and cordon off the area under the canopy. Then look at and photograph every corner, edge and fitting from the ground. Until the situation is clear, do not climb onto the fabric and do not tighten anything on a guess."
+        },
+        {
+          "question": "Is it normal for the fabric to bang and flap in the wind?",
+          "answer": "A healthy tensile membrane moves slightly in wind, but repeated banging and visible flapping usually mean that tension in that zone has dropped. The movement puts load cycles on seams and fittings, so the cause, whether a loose fitting, a displaced cable or lost prestress, should be found before the next storm."
+        },
+        {
+          "question": "Can a small tear be left until the warm season?",
+          "answer": "No. In tensioned fabric, stress concentrates around the tip of a tear and the tear grows with every gust, especially near an edge or corner. Its end should be arrested at once with a documented temporary method, and a permanent patch or weld suited to the fabric type should be scheduled."
+        },
+        {
+          "question": "Can we retighten the fabric ourselves after a storm?",
+          "answer": "Retensioning should follow the installation drawings and a documented, symmetrical sequence. Tightening one corner alone shifts tension across the surface, and over-tensioning can permanently damage the membrane and seams. If installation documents are not available, an engineering review is needed before any adjustment."
+        },
+        {
+          "question": "Should the fabric be released or taken down before a wind warning?",
+          "answer": "It depends on the structure. Some light, demountable shade sails are de-tensioned or taken down before a weather warning according to the manufacturer's instructions, but permanent tensile structures are designed for the site's wind load, and releasing them without a plan can make the surface behave worse. The decision belongs in that structure's operating manual."
+        },
+        {
+          "question": "When is damaged fabric repaired and when must it be replaced?",
+          "answer": "Surface abrasion and limited cuts away from corners are usually repairable. A tear at a corner or edge, widespread damage, fabric that has been patched many times or whose topcoat has worn away with age raise the question of replacing part or all of the membrane. The final decision follows a review of the fabric type, its age and the condition of the supporting structure."
+        }
+      ],
+      "cta": {
+        "headline": "Assess wind damage to your fabric roof before the next storm",
+        "text": "Send photos of the corners, edges, fittings and any tear or wear point, together with the available drawings and installation documents, so SIPANEL's technical team can review tension, connections and the supporting structure and propose the route for repair, retensioning or detail correction."
+      }
+    },
+    "ar": {
+      "title": "فحص السقف القماشي بعد الرياح الشديدة: من أين يبدأ التمزق؟",
+      "metaDescription": "فحص السقف القماشي بعد الرياح الشديدة: ما النقاط التي يبدأ بها الفحص، ولماذا يتسع تمزق صغير في العاصفة التالية؟ منطق SIPANEL الهندسي للتقييم والإصلاح.",
+      "primaryKeyword": "فحص السقف القماشي بعد الرياح الشديدة",
+      "summary": "في المنشآت الغشائية المشدودة يبدأ ضرر الرياح عادةً من الأركان والحواف وألواح التثبيت ونقاط الاحتكاك، لا من وسط القماش. والغشاء الذي فقد شدّه يرفرف في الرياح، وهذه الحركة المتكررة تُجهد اللحامات والوصلات. والتمزق الصغير في قماش مشدود يتسع بسرعة مع الهبّة التالية، لذلك يجب بعد كل رياح شديدة فحص التجهيزات والكابلات وقواعد الصواري والغشاء نفسه دون الوقوف على القماش، ثم تصنيف الأضرار.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "بعد العاصفة: صوت ارتطام القماش أو ارتخاؤه أو تمزق صغير",
+        "body": "مع مرور منظومات الرياح الخريفية وصدور تحذيرات من رياح شديدة في عدة مناطق، يلاحظ مشغلو مظلات المداخل وأغطية مواقف السيارات ومدرجات الملاعب والأفنية المسقوفة ومظلات الترفيه علامات متشابهة: قماش كان هادئاً صار يُصدر صوت ارتطام في الريح، أو ركن يبدو أخفض قليلاً من قبل، أو خط احتكاك أو قطع قصير ظهر على إحدى الحواف، أو مسمار شدّ قد انفك. والإغراء المعتاد هو اعتبار الضرر بسيطاً وانتظار الموسم الدافئ، أو إرسال شخص على سلّم لشدّ تلك النقطة وحدها. لكن الضرر الموضعي في المنشأة المشدودة لا يبقى موضعياً؛ فأي تغيير في ركن أو حافة يغيّر توزيع الشد على السطح كله ويصنع نقطة الضعف التالية للعاصفة القادمة. وإذا انفلت القماش في منطقة ما فإنه يتصرف كالشراع وينقل إلى الصواري والكابلات والمراسي أحمالاً لم تُصمَّم لها. كما أن سقوط قطع التجهيزات أو أجزاء القماش فوق ممرات المشاة خطر مباشر على السلامة.",
+        "points": [
+          "الارتطام والرفرفة في رياح كانت المظلة تتحملها بصمت يدلان على فقدان الشد في تلك المنطقة.",
+          "القطع أو الثقب الصغير، خاصة قرب حافة أو ركن، لا يبقى ثابتاً في قماش مشدود بل يتسع مع كل هبّة.",
+          "خطوط الاحتكاك في مواضع تلامس القماش مع كابل أو أنبوب أو حافة لوح أو عنصر فولاذي تكشف أين يتحرك القماش مراراً في الريح.",
+          "قد ترتخي مسامير الأقفال الحلقية ومشدات الكابلات وصواميل ألواح الأركان بفعل الاهتزاز دون أن يظهر ذلك بوضوح من الأرض.",
+          "التجاعيد الجديدة وانحراف خطوط اللحام عن مسارها تعني أن الشد انتقل من منطقة إلى أخرى.",
+          "الوقوف على القماش أو إسناد سلّم إلى حافته لإصلاح سريع قد يتلف الطبقة السطحية واللحامات بحد ذاته."
+        ]
+      },
+      "cause": {
+        "title": "الغشاء يقاوم الرياح بالانحناء والشد المسبق فقط",
+        "body": "قماش المنشآت المشدودة يكاد لا يملك صلابة انحناء. واستقراره في الرياح يأتي من شكله مزدوج الانحناء ومن الشد الأولي الذي أُعطي له عند التركيب. والرياح على هذه الأسطح الخفيفة تولّد ضغطاً نحو الأسفل وسحباً نحو الأعلى، ويتغير اتجاه الحمل مرات كثيرة خلال عاصفة واحدة. وعندما ينخفض الشد المسبق بسبب زحف المادة أو ارتخاء التجهيزات أو حركة الركائز، يزداد تشوه القماش تحت الريح، وبدلاً من أن يستجيب السطح بهدوء فإنه يتذبذب. وكل تذبذب دورة تحميل على اللحامات وثقوب التثبيت وألواح الأركان. وتُظهر دراسات متخصصة على الأغشية المشدودة أن هذه المنشآت الخفيفة قليلة التخميد قد تتذبذب وتفقد استقرارها في الرياح، وأن المباني العالية المجاورة قد تزيد حمل الرياح عليها. كما أن القماش المشدود حساس لاتساع التمزق؛ فالإجهاد الذي لا يستطيع العبور خلال القطع يتركز حول طرفه، فيمتد التمزق على طول الخيوط. لهذا يبدأ ضرر الرياح عادةً حيث يتركز الإجهاد بطبيعته: الأركان وحواف الكابلات ومواضع المشابك وكل نقطة يلامس فيها القماش جسماً صلباً.",
+        "points": [
+          "انخفاض الشد المسبق يعني تشوهاً أكبر تحت الريح وينقل القماش من السلوك المستقر إلى التذبذب والرفرفة.",
+          "سحب الرياح يعكس اتجاه الحمل ويُشرك مناطق تكون قليلة التحميل في الظروف العادية.",
+          "الأركان وألواح التثبيت وحواف الكابلات مواضع تركّز إجهاد، وهي غالباً أول ما يتضرر في العاصفة.",
+          "تلامس القماش مع كابل أو أنبوب أو حافة فولاذية حادة يولّد دورة احتكاك مع كل تذبذب ويُبلي الطلاء.",
+          "الاهتزاز المتكرر يفك تدريجياً المسامير والأقفال غير المؤمَّنة ويُفقد الشد الموضعي.",
+          "المباني العالية والجدران المجاورة وزوايا المباني تركّز الرياح أو تُحدث فيها اضطراباً، فتبتعد الأحمال الفعلية عن الافتراضات البسيطة."
+        ]
+      },
+      "visual": {
+        "title": "مخطط النقاط الحرجة في السقف القماشي تحت الرياح (بانتظار التحقق)",
+        "description": "يجب أن يُظهر المخطط المعتمد مسقطاً ومقطعاً لمظلة مشدودة نموذجية: اتجاه ضغط الرياح وسحبها، ومناطق الشد المنخفض التي يحدث فيها التذبذب، والأركان وألواح التثبيت بوصفها مواضع تركّز إجهاد، ونقاط تلامس القماش مع الكابلات أو الفولاذ التي تسبب الاحتكاك، ومسار اتساع تمزق صغير من الحافة نحو وسط القماش. هذا الأصل الفني لا يزال بانتظار التحقق.",
+        "callouts": [
+          "ضغط الرياح وسحبها",
+          "منطقة شد منخفض وتذبذب",
+          "الركن ولوح التثبيت",
+          "نقطة احتكاك واتساع التمزق"
+        ]
+      },
+      "execution": {
+        "title": "منطق SIPANEL لتقييم السقف القماشي بعد العاصفة",
+        "steps": [
+          {
+            "title": "تأمين الموقع قبل أي إجراء",
+            "description": "إذا انفلت القماش أو انفصل ركن أو سقطت قطعة من التجهيزات، تُخلى المنطقة تحت المظلة ومنطقة السقوط المحتملة وتُطوَّق. لا يقف أحد على القماش ولا يُجرى إصلاح سريع من سلّم مسنود إلى الحافة؛ ويكون الوصول فقط بمعدات العمل على المرتفعات وبأفراد مدرَّبين."
+          },
+          {
+            "title": "توثيق الأضرار ورسم خريطتها",
+            "description": "من الأرض، ومن رافعة عند الإمكان، تُصوَّر جميع الأركان والحواف واللحامات ونقاط التلامس وتُعلَّم على مسقط المظلة. والقطوع الدقيقة تظهر بشكل أوضح عند النظر إلى القماش مقابل ضوء النهار. وتبيّن هذه الخريطة هل الضرر موضعي أم أن نمطه يشير إلى فقدان الشد على السطح كله."
+          },
+          {
+            "title": "فحص التجهيزات والهيكل الحامل",
+            "description": "تُفحص مسامير الأقفال الحلقية ومشدات الكابلات وألواح الأركان ومشابك الحواف ونهايات الكابلات ووصلات الصواري وقواعدها والمراسي الأرضية من حيث الارتخاء والتشوه والتآكل والإزاحة. وأي قطعة تشوهت تشوهاً دائماً أو فقدت قفلها تُستبدل ولا يُكتفى بإعادة شدّها."
+          },
+          {
+            "title": "تصنيف الضرر وتحديد الإصلاح",
+            "description": "تنقسم الأضرار إلى ثلاث فئات: احتكاك سطحي يحتاج إلى المراقبة فقط، وقطع أو تمزق محدود يمكن إصلاحه برقعة ولحام متخصص يناسب نوع القماش، وضرر في ركن أو حافة أو على مساحة كبيرة يستدعي دراسة استبدال جزء من الغشاء أو كله. وحتى الإصلاح الدائم يُوقف طرف التمزق بطريقة مؤقتة موثقة كي لا يتسع."
+          },
+          {
+            "title": "إعادة الشد بتسلسل موثق",
+            "description": "إذا كان فقدان الشد سبب الرفرفة، فلا تتم إعادة الشد إلا وفق بيان طريقة التركيب أو مخططاته، وبشكل متماثل وعلى مراحل. فالشد الزائد أيضاً يتلف الغشاء واللحامات تلفاً دائماً، ولذلك لا تُجرى إعادة الشد دون مستندات التصميم أو مراجعة هندسية."
+          },
+          {
+            "title": "معالجة السبب ووضع خطة تشغيل في الرياح",
+            "description": "في نقاط الاحتكاك تُصحَّح المسافة بين القماش والهيكل أو تُضاف طبقة حماية، وتُراجَع تفاصيل الأركان والحواف وفق تعرض الموقع الفعلي للرياح. ويحصل المشغل على تعليمات مكتوبة بما يجب فحصه قبل تحذير الرياح، وأي مظلات قابلة للفك تُرخى أو تُنزَل وفق تعليمات الصانع، وأي فحص مطلوب بعد كل عاصفة."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "ما أول ما يجب فعله للمظلة القماشية بعد رياح شديدة؟",
+          "answer": "السلامة أولاً: إذا كان القماش منفلتاً أو انفصل ركن أو سقطت قطعة، أخلِ المنطقة تحت المظلة وطوّقها. ثم انظر من الأرض إلى جميع الأركان والحواف والتجهيزات وصوّرها. وإلى أن يتضح الوضع لا تصعد على القماش ولا تشدّ شيئاً بالتخمين."
+        },
+        {
+          "question": "هل من الطبيعي أن يرتطم القماش ويرفرف في الريح؟",
+          "answer": "الغشاء المشدود السليم يتحرك قليلاً في الريح، أما الارتطام المتكرر والرفرفة الواضحة فيعنيان عادةً أن الشد في تلك المنطقة قد انخفض. وهذه الحركة تحمّل اللحامات والوصلات دورات إجهاد، لذا يجب تحديد السبب، سواء كان تجهيزاً مرتخياً أو كابلاً منزاحاً أو فقداناً للشد المسبق، قبل العاصفة التالية."
+        },
+        {
+          "question": "هل يمكن ترك تمزق صغير حتى الموسم الدافئ؟",
+          "answer": "لا. في القماش المشدود يتركز الإجهاد حول طرف التمزق فيتسع مع كل هبّة، خاصة قرب حافة أو ركن. يجب إيقاف طرفه فوراً بطريقة مؤقتة موثقة، وجدولة رقعة أو لحام دائم يناسب نوع القماش."
+        },
+        {
+          "question": "هل يمكننا إعادة شد القماش بأنفسنا بعد العاصفة؟",
+          "answer": "يجب أن تتبع إعادة الشد مخططات التركيب وتسلسلاً موثقاً ومتماثلاً. فشدّ ركن واحد وحده ينقل الشد عبر السطح، والشد الزائد قد يتلف الغشاء واللحامات تلفاً دائماً. وإذا لم تتوفر مستندات التركيب فلا بد من مراجعة هندسية قبل أي ضبط."
+        },
+        {
+          "question": "هل يجب إرخاء القماش أو إنزاله قبل تحذير الرياح؟",
+          "answer": "يعتمد ذلك على نوع المنشأة. بعض مظلات الظل الخفيفة القابلة للفك تُرخى أو تُنزَل قبل التحذير الجوي وفق تعليمات الصانع، أما المنشآت المشدودة الدائمة فمصممة لحمل رياح الموقع، وإرخاؤها دون خطة قد يجعل سلوك السطح أسوأ. ومكان هذا القرار هو دليل تشغيل المنشأة نفسها."
+        },
+        {
+          "question": "متى يُصلَح القماش المتضرر ومتى يجب استبداله؟",
+          "answer": "الاحتكاك السطحي والقطوع المحدودة البعيدة عن الأركان قابلة للإصلاح عادةً. أما التمزق في ركن أو حافة، أو الضرر الواسع، أو القماش الذي رُقِّع مرات كثيرة أو تآكلت طبقته السطحية مع التقادم، فيطرح مسألة استبدال جزء من الغشاء أو كله. ويُتخذ القرار النهائي بعد مراجعة نوع القماش وعمره وحالة الهيكل الحامل."
+        }
+      ],
+      "cta": {
+        "headline": "قيّموا أضرار الرياح في سقفكم القماشي قبل العاصفة التالية",
+        "text": "أرسلوا صور الأركان والحواف والتجهيزات وأي موضع تمزق أو احتكاك، مع المخططات ومستندات التركيب المتاحة، ليراجع الفريق الفني في SIPANEL حالة الشد والوصلات والهيكل الحامل ويقترح مسار الإصلاح أو إعادة الشد أو تصحيح التفاصيل."
+      }
+    },
+    "ru": {
+      "title": "Осмотр тентовой кровли после ветра: где начинается разрыв?",
+      "metaDescription": "Осмотр тентовой кровли после сильного ветра: что проверять первым и почему разрыв растёт при следующем порыве. Логика SIPANEL для оценки и ремонта.",
+      "primaryKeyword": "осмотр тентовой кровли после сильного ветра",
+      "summary": "На тентовой конструкции ветровые повреждения обычно начинаются в углах, на кромках, у угловых пластин и в точках истирания. Мембрана, потерявшая натяжение, хлопает, и это вызывает усталость швов и креплений. Небольшой разрыв растёт при следующем порыве, поэтому после сильного ветра нужно осмотреть фурнитуру, тросы, базы мачт и полотно, не вставая на него.",
+      "readingMinutes": 7,
+      "problem": {
+        "title": "После шторма полотно хлопает, провисает или на нём появился небольшой разрыв",
+        "body": "Когда проходят осенние ветровые системы и в ряде регионов объявляют предупреждения о сильном ветре, эксплуатанты входных навесов, укрытий парковок, трибун, крытых дворов и теневых навесов в зонах отдыха обычно замечают одни и те же признаки: полотно, которое раньше было тихим, теперь хлопает на ветру; один угол выглядит чуть ниже, чем прежде; на кромке появилась полоса истирания или короткий надрез; ослаб натяжной болт. Обычное искушение — счесть повреждение мелким и дождаться тёплого сезона или отправить кого-нибудь по лестнице подтянуть именно эту точку. Однако на тентовой конструкции локальное повреждение не остаётся локальным. Любое изменение в углу или на кромке меняет распределение натяжения по всей поверхности и создаёт следующее слабое место для следующего порыва. Если полотно освобождается на каком-то участке, оно работает как парус и передаёт на мачты, тросы и анкеры нагрузки, на которые они не рассчитаны. Падение фурнитуры или кусков ткани над проходом — прямая угроза безопасности.",
+        "points": [
+          "Хлопки и трепетание при ветре, который навес раньше переносил беззвучно, указывают на потерю натяжения на этом участке.",
+          "Небольшой надрез или отверстие, особенно у кромки или угла, не остаётся неизменным в натянутой ткани и растёт с каждым порывом.",
+          "Полосы истирания там, где ткань касается троса, трубы, края пластины или стального элемента, показывают места многократного движения полотна на ветру.",
+          "Пальцы такелажных скоб, талрепы и гайки угловых пластин могут ослабнуть от вибрации, и с земли это не всегда заметно.",
+          "Новые складки и смещение линий швов показывают, что натяжение перераспределилось с одного участка на другой.",
+          "Если встать на полотно или опереть лестницу о его кромку ради быстрого ремонта, можно повредить защитное покрытие и сварные швы."
+        ]
+      },
+      "cause": {
+        "title": "Мембрана сопротивляется ветру только за счёт кривизны и преднатяжения",
+        "body": "Тентовая ткань почти не имеет изгибной жёсткости. Её устойчивость на ветру обеспечивают форма двоякой кривизны и начальное натяжение, заданное при монтаже. Ветер на этих лёгких поверхностях создаёт как давление вниз, так и отсос вверх, и направление нагрузки многократно меняется за один шторм. Когда преднатяжение снизилось из-за ползучести материала, ослабления фурнитуры или смещения опор, деформации полотна под ветром растут, и вместо спокойной реакции поверхность начинает колебаться. Каждое колебание — это цикл нагружения швов, крепёжных отверстий и угловых пластин. Специальные исследования тентовых мембран показывают, что такие лёгкие и слабо демпфированные конструкции могут колебаться и терять устойчивость на ветру, а соседние высотные здания способны усиливать ветровую нагрузку на них. Натянутая ткань также чувствительна к росту разрыва: напряжение, которое не может пройти через надрез, концентрируется у его вершины, и разрыв идёт вдоль нитей. Поэтому ветровые повреждения обычно начинаются там, где напряжения концентрируются по самой природе конструкции: в углах, на тросовых кромках, в местах зажимов и в любой точке контакта ткани с твёрдым предметом.",
+        "points": [
+          "Меньшее преднатяжение означает большие деформации под ветром и переводит полотно из устойчивого поведения в колебания и трепетание.",
+          "Ветровой отсос меняет направление нагрузки и вовлекает участки, которые в обычных условиях нагружены слабо.",
+          "Углы, угловые пластины и тросовые кромки — зоны концентрации напряжений, и именно они обычно повреждаются первыми.",
+          "Контакт ткани с тросом, трубой или острым стальным краем даёт цикл истирания при каждом колебании и стирает покрытие.",
+          "Многократная вибрация постепенно откручивает незастопоренные пальцы и болты и снимает локальное натяжение.",
+          "Высотные здания, соседние стены и углы зданий концентрируют или турбулизируют ветер и уводят реальную нагрузку от упрощённых допущений."
+        ]
+      },
+      "visual": {
+        "title": "Схема критических точек тентовой кровли на ветру (ожидает проверки)",
+        "description": "Утверждённая схема должна показать план и разрез типового тентового навеса: направление ветрового давления и отсоса, зоны низкого натяжения, где возникают колебания, углы и угловые пластины как зоны концентрации напряжений, точки контакта ткани с тросами или сталью, вызывающие истирание, и путь роста небольшого разрыва от кромки к середине полотна. Этот технический материал ещё ожидает проверки.",
+        "callouts": [
+          "Ветровое давление и отсос",
+          "Зона низкого натяжения и колебания",
+          "Угол и угловая пластина",
+          "Точка истирания и рост разрыва"
+        ]
+      },
+      "execution": {
+        "title": "Логика SIPANEL для оценки тентовой кровли после шторма",
+        "steps": [
+          {
+            "title": "Обеспечить безопасность до любых действий",
+            "description": "Если полотно освободилось, угол оторвался или упала деталь фурнитуры, зона под навесом и вероятная зона падения освобождаются от людей и ограждаются. Никто не встаёт на полотно, и быстрый ремонт с лестницы, опёртой на кромку, не выполняется; доступ — только со снаряжением для работ на высоте и обученным персоналом."
+          },
+          {
+            "title": "Зафиксировать и нанести повреждения на план",
+            "description": "С земли, а при возможности с подъёмника, фотографируются все углы, кромки, швы и точки контакта и отмечаются на плане навеса. Мелкие надрезы лучше видны, если смотреть на ткань против дневного света. Такая карта показывает, локально ли повреждение или его характер указывает на потерю натяжения по всей поверхности."
+          },
+          {
+            "title": "Проверить фурнитуру и несущую конструкцию",
+            "description": "Пальцы скоб, талрепы, угловые пластины, кромочные зажимы, концевые заделки тросов, узлы крепления к мачтам, базы мачт и грунтовые анкеры проверяются на ослабление, деформацию, коррозию и смещение. Деталь с остаточной деформацией или утраченным стопорением заменяется, а не просто подтягивается."
+          },
+          {
+            "title": "Классифицировать повреждения и выбрать ремонт",
+            "description": "Повреждения делятся на три группы: поверхностное истирание, требующее только наблюдения; ограниченный надрез или разрыв, который ремонтируется заплатой и специализированной сваркой под тип ткани; повреждение в углу, на кромке или на большой площади, требующее оценки замены части мембраны или всего полотна. До постоянного ремонта конец разрыва останавливается документированным временным способом, чтобы он не рос."
+          },
+          {
+            "title": "Повторное натяжение по документированной последовательности",
+            "description": "Если причиной трепетания была потеря натяжения, повторное натяжение выполняется только по технологической карте или чертежам монтажа, симметрично и поэтапно. Перетяжка тоже необратимо повреждает мембрану и швы, поэтому повторное натяжение без проектной документации или инженерной проверки не выполняется."
+          },
+          {
+            "title": "Устранить причину и задать порядок эксплуатации при ветре",
+            "description": "В точках истирания исправляется зазор между тканью и конструкцией или добавляется защитный слой, а узлы углов и кромок пересматриваются с учётом реальной ветровой обстановки площадки. Эксплуатант получает письменные указания: что проверять перед штормовым предупреждением, какие сборно-разборные теневые паруса ослаблять или снимать по инструкции производителя и какой осмотр нужен после каждого шторма."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что нужно сделать в первую очередь с тентовым навесом после сильного ветра?",
+          "answer": "Сначала безопасность: если полотно освободилось, угол оторвался или упала деталь, освободите и оградите зону под навесом. Затем осмотрите с земли и сфотографируйте все углы, кромки и фурнитуру. Пока ситуация не ясна, не поднимайтесь на полотно и ничего не подтягивайте наугад."
+        },
+        {
+          "question": "Нормально ли, что полотно хлопает и трепещет на ветру?",
+          "answer": "Исправная натянутая мембрана немного движется на ветру, но повторяющиеся хлопки и заметное трепетание обычно означают, что натяжение на этом участке снизилось. Такое движение даёт циклы нагрузки на швы и крепления, поэтому причину — ослабленную фурнитуру, сместившийся трос или потерю преднатяжения — нужно найти до следующего шторма."
+        },
+        {
+          "question": "Можно ли оставить небольшой разрыв до тёплого сезона?",
+          "answer": "Нет. В натянутой ткани напряжение концентрируется у вершины разрыва, и он растёт с каждым порывом, особенно у кромки или угла. Конец разрыва нужно сразу остановить документированным временным способом и запланировать постоянную заплату или сварку под тип ткани."
+        },
+        {
+          "question": "Можно ли самим подтянуть полотно после шторма?",
+          "answer": "Повторное натяжение должно выполняться по чертежам монтажа в документированной симметричной последовательности. Подтяжка одного угла перераспределяет натяжение по поверхности, а перетяжка может необратимо повредить мембрану и швы. Если монтажной документации нет, перед любой регулировкой нужна инженерная проверка."
+        },
+        {
+          "question": "Нужно ли ослаблять или снимать полотно перед штормовым предупреждением?",
+          "answer": "Зависит от конструкции. Некоторые лёгкие сборно-разборные теневые паруса ослабляют или снимают перед метеопредупреждением по инструкции производителя, но постоянные тентовые конструкции рассчитаны на ветровую нагрузку площадки, и их бесплановое ослабление может ухудшить поведение поверхности. Такое решение должно быть прописано в инструкции по эксплуатации конкретной конструкции."
+        },
+        {
+          "question": "Когда повреждённое полотно ремонтируют, а когда его нужно заменить?",
+          "answer": "Поверхностное истирание и ограниченные надрезы вдали от углов обычно ремонтопригодны. Разрыв в углу или на кромке, обширное повреждение, полотно с многочисленными заплатами или со стёршимся от старения покрытием ставят вопрос о замене части мембраны или всего полотна. Окончательное решение принимается после оценки типа ткани, её возраста и состояния несущей конструкции."
+        }
+      ],
+      "cta": {
+        "headline": "Оцените ветровые повреждения тентовой кровли до следующего шторма",
+        "text": "Пришлите фотографии углов, кромок, фурнитуры и мест разрывов или истирания вместе с имеющимися чертежами и монтажной документацией, чтобы техническая команда SIPANEL проверила натяжение, узлы и несущую конструкцию и предложила путь ремонта, повторного натяжения или корректировки узлов."
+      }
+    }
+  }
+}

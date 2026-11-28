@@ -12,6 +12,7 @@ import article8 from '@/content/insights/sandwich-panel-joint-leakage-risk.json'
 import article9 from '@/content/insights/standing-seam-roof-drainage-logic.json';
 import article10 from '@/content/insights/standing-seam-roof-wind-uplift-edge-corner-control.json';
 import article11 from '@/content/insights/tensile-membrane-ponding-pre-winter-check.json';
+import article12 from '@/content/insights/tensile-membrane-wind-damage-inspection-after-storm.json';
 
 export const rawInsightArticleFiles: unknown[] = [
   article0,
@@ -25,5 +26,6 @@ export const rawInsightArticleFiles: unknown[] = [
   article8,
   article9,
   article10,
-  article11
+  article11,
+  article12
 ];
